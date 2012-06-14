@@ -1,0 +1,27 @@
+@media screen {
+.c	{ background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='/i/corner24.png', sizingMethod='crop'); }
+body, .ie6center	{ text-align: center;	}
+#layout, .banner	{ text-align: left; }
+.contacts	{ height: 22px; }
+.close, td.r img, .banner	{ cursor: hand; }
+
+
+.fie { position: absolute; top: expression(eval(document.documentElement.scrollTop)+'px'); left: 0; width: 100%; text-align: center; z-index: 1; display: none; }
+.fie .shadow { text-align: left; }
+.fie div	{ overflow: hidden; position: relative; }
+.fie .tl div, .fie .br div	{ height: 54px; }
+.fie .tr div, .fie .bl div	{ width: 54px; height: 100%; }
+.fie .tl div div, .fie .br div div	{ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/shadow_h.png',sizingMethod='crop'); width: 1000px; height: 108px; }
+.fie .tr div div, .fie .bl div div	{ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/shadow_v.png',sizingMethod='crop'); width: 108px; height: 1000px; }
+.fie .inner	{ width: 100%; background-color: #fff; }
+.fie .tr div img	{ position: absolute; top: 34px; left: 0; cursor: pointer; cursor: hand; }
+.fie div div	{ position: absolute; }
+.fie .tl div div	{ top: 0; left: 0; }
+.fie .tr div div	{ top: 0; left: -54px; }
+.fie .br div div	{ top: -54px; right: 0; }
+.fie .bl div div	{ bottom: 0; left: 0; }
+
+}
+
+@media print {
+}

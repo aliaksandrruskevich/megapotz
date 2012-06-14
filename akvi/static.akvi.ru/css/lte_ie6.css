@@ -1,0 +1,15 @@
+.box	{ width: 194px !important; }
+
+
+.price	{ zoom: 1; }
+.price .br	{ bottom: -3px!important; }
+.price td a	{ line-height: 1.6em; }
+
+.png24	{ display: none; }
+.logo_ie6	{ position: absolute; top: 45px!important; left: 16px!important; z-index: 1; width: 81px; height: 39px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='/i/logo.png', sizingMethod='crop'); z-index: 3; }
+.abonent img.png24_ie6	{ width: 56px; height: 109px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='/i/wit/wit2_24.png', sizingMethod='crop'); }
+.virus img.png24_ie6	{ width: 65px; height: 115px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='/i/wit/wit4_24.png', sizingMethod='crop'); }
+.guru	{ height: auto !important; }
+
+#brands img	{ margin-top: 0!important; }
+p.question	{ padding-bottom: 5px; }

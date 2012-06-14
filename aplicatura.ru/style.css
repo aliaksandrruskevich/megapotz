@@ -1,0 +1,28 @@
+﻿body	{ position: relative; padding: 0; margin: 0; background: url('bg.jpg'); }
+div	{ position: absolute; }
+
+div.piano	{ width: 618px; height: 634px; background: #fff url('piano_bg.gif') repeat-x; }
+div.card	{ font: normal 16px Arial, sans-serif; text-align: center; padding-top: 15px; top: 50px; left: 15px; width: 230px; height: 115px; background: url('card.png') no-repeat; //background: none; //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=card.png,sizingMethod=crop); z-index: 5; }
+div.left	{ top: 25px; width: 207px; height: 597px; background: transparent url('book_left.png') no-repeat; }
+div.right	{ left: 207px; top: 25px; width: 411px; height: 597px; background: transparent url('book_right.png') no-repeat; z-index: 1; }
+div.ramka	{ width: 374px; height: 575px; background: url('ramka.gif') no-repeat; }
+div.right div.ramka	{ left: 9px; top: 15px; background-color: #ffffff; }
+div.left div.ramka	{ right: 9px; top: 15px; }
+#page5	{ display: none; }
+div.keyboard	{ top: 634px; width: 775px; height: 284px; background: url('keybrd.png') no-repeat; }
+div.keys_right	{ top: 0; left: 668px; width: 107px; height: 284px; background: url('keyboard_right.jpg') no-repeat; }
+div.keys	{ top: 101px; left: 0; width: 669px; height: 143px; }
+div.keys div.l	{ width: 594px; height: 143px; background: url('keys.png') repeat-x right; }
+div.keys div.r	{ width: 75px; height: 143px; right: 0; background: url('keys_right.png') no-repeat; }
+div.kb_shadow	{ top: 634px; left: -1px; padding-bottom: 50px; width: 846px; height: 318px; background: url('shadow_bottom.png') no-repeat; //background: none; //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=shadow_bottom.png,sizingMethod=crop); }
+
+div.ill	{ left: 618px; width: 520px; height: 720px; background: url('ill.jpg') no-repeat; }
+div.page	{ margin: 60px 40px; position: absolute; background-color: transparent; width: 315px; height: 480px; z-index: 2; }
+div.page p	{ font: normal 14px Times New Roman; margin: 0 0 20px 0; line-height: 130%; }
+
+div.pages_string	{ top: 470px; text-align: center; width: 100%; font: normal 13px Arial; }
+div.pages_string span	{ padding: 6px; margin: 0 8px;}
+span.current	{ background-color: #ddd; }
+span.link	{ cursor: pointer; color: #0074c5; text-decoration: underline; }
+
+img.thumb	{ position: absolute; top: 609px; z-index: 1; cursor: pointer; }

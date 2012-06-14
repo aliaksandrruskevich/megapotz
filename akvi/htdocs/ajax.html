@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+<meta name="robots" content="index, follow"/>
+<title>AJAX: С чего начать?</title>
+<link rel="shortcut icon" href="https://developer.mozilla.org/skins/mozilla/Fox3/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://developer.mozilla.org/skins/common/css.php" /> <!--[if IE 7]><style type="text/css">@import "/skins/common/_ie7.css";</style><![endif]--><!--[if IE 6]><style type="text/css">@import "/skins/common/_ie.css";</style><![endif]-->
+<link rel="stylesheet" type="text/css" media="screen,projection" href="https://developer.mozilla.org/skins/mozilla/Fox3/css.php" title="Default Style" />
+<link rel="stylesheet" type="text/css" media="print" href="https://developer.mozilla.org/skins/mozilla/print.css" />
+<!--[if IE]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="screen" href="https://developer.mozilla.org/skins/mozilla/Fox3/ie7.css" /><!endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" media="screen" href="https://developer.mozilla.org/skins/mozilla/Fox3/ie6.css" /><![endif]-->
+<link href="https://developer.mozilla.org/skins/common/custom_css.php" rel="stylesheet" type="text/css" /> 
+</head>
+
+<body class="yui-skin-sam en ">
+<div class="globalWrap">
+<div class="header">
+<div class="siteLogo"><h4><a rel="external nofollow" href="https://developer.mozilla.org/" title="Go to the main page"><img src="https://developer.mozilla.org/skins/mozilla/Fox3/img/mdc-logo.png" alt="Mozilla Developer Center" /></a></h4></div>
+<p id="moztab"><a rel="external nofollow" href="http://www.mozilla.com" title="Go to mozilla.com">Mozilla.com</a></p>
+<div class="hierarchy">
+<ol class="dw-hierarchy deki-hierarchy"><li class="first"><a rel="external nofollow" href="https://developer.mozilla.org/" class="deki-ns">MDC</a></li>
+<li><a rel="external nofollow" href="https://developer.mozilla.org/en" class="deki-ns">Mozilla Developer Center</a></li>
+<li><a rel="external nofollow" href="https://developer.mozilla.org/en/AJAX" class="deki-ns">Ajax</a></li>
+<li class="last"><a rel="external nofollow" href="https://developer.mozilla.org/en/AJAX/Getting_Started" class="deki-ns current">Getting Started</a></li></ol>
+</div>
+</div>
+
+<div class="body">
+<div id="pageContent" class="pageContent PageDW-enAJAXGettingStarted">
+<div id="article-nav">
+<div class="pageToc"><h5>Содержание</h5><ol style="list-style-type:none; margin-left:0px; padding-left:0px;"><li><span>1.</span> <a href="#What's_AJAX.3f" rel="internal">Что такое AJAX?</a></li><li><span>2.</span> <a href="#Step_1_.e2.80.93_How_to_Make_an_HTTP_Request" rel="internal">Шаг 1 — Как сделать HTTP запрос</a></li><li><span>3.</span> <a href="#Step_2_.e2.80.93_Handling_the_Server_Response" rel="internal">Шаг 2 — Обрабатываем ответ сервера</a></li><li><span>4.</span> <a href="#Step_3_.e2.80.93_A_Simple_Example" rel="internal">Шаг 3 — Простой пример</a></li><li><span>5.</span> <a href="#Step_4_.e2.80.93_Working_with_the_XML_Response" rel="internal">Шаг 4 — Работа с XML ответом</a></li></ol></div>
+</div>
+<div class="pageTitle">
+<h1 id="title">С чего начать</h1>
+</div>
+
+
+
+<div id="page-top">
+
+<div class="pageText" id="pageText">
+
+<p>&nbsp;</p>
+<p>В этой статье рассмотрены основные принципы работы AJAX и приведены два простых примера, использующих эту технологию.</p>
+<div id="section_1"><span id="What.27s_AJAX.3F"></span><span id="What's_AJAX.3f"></span><h3 class="editable">Что такое AJAX?</h3>
+<p>Ajax основан на Асинхронном JavaScript и XML. В основе технологии лежит использование нестандартного объекта <code><a rel="external nofollow" href="https://developer.mozilla.org/en/XMLHttpRequest">XMLHttpRequest</a></code> для взаимодействия со скриптами на стороне сервера. Объект может, как отправлять, так и получать информацию в различных форматах включая XML, HTML и даже обычный текст. Самое привлекательное в Ajax — это его «асинхронная» природа, которая означает возможность производить любые манипуляции со страницей без необходимости её полной перезагрузки. Такой подход позволяет обновлять части страницы в зависимости от действий пользователя.</p>
+<p>Рассмотрим две основные возможности, которые дает вам технология:</p>
+<ul><li>Отправка запросов на сервер без перезагрузки страницы</li><li>Работа с XML документами</li></ul>
+
+
+</div><div id="section_2"><span id="Step_1_.E2.80.93_How_to_Make_an_HTTP_Request"></span><span id="Step_1_.e2.80.93_How_to_Make_an_HTTP_Request"></span><h3 class="editable">Шаг 1 — Как сделать HTTP запрос</h3>
+<p>Для того, чтобы послать HTTP запрос на сервер используя JavaScript, вам потребуется экземпляр класса, который позволит это сделать. Такой класс изначально был введен в Internet Explorer как объект ActiveX, называемый XMLHTTP. Позже за ним последовали Mozilla, Safari и другие браузеры, в которых был реализован класс <code>XMLHttpRequest</code>, который поддерживает методы и свойства изначального объекта ActiveX.</p>
+<p>В результате, чтобы создать кросс-броузерный экземпляр (объект) требуемого класса, вы можете сделать следующее:</p>
+<pre>var httpRequest;
+if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+    httpRequest = new XMLHttpRequest();
+} else if (window.ActiveXObject) { // IE
+    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+}
+</pre>
+
+<p>(В целях наглядности, приведенный код является немного упрощенной версией кода, необходимого для создания экземпляра XMLHTTP. Более жизненный пример будет рассмотрен на шаге 3 этой статьи)</p>
+<p>Некоторые версии некоторых броузеров Mozilla не будут корректно работать, если ответ сервера не содержит <code>mime</code>-заголовка XML. Чтобы решить эту проблему, вы можете использовать вызовы дополнительных методов для переопределения заголовка полученного от сервера, в случае, если он отличен от <code>text/xml</code>.</p>
+<pre>httpRequest = new XMLHttpRequest();
+httpRequest.overrideMimeType('text/xml');</pre>
+<p>Далее вам необходимо решить, что вы будете делать после получения ответа сервера. На этом этапе вам необходимо указать объекту, какая JavaScript функция будет обрабатывать ответ. Это делается путем присваивания свойству <code>onreadystatechange</code> объекта имени JavaScript функции, которую вы планируете использовать:</p>
+
+<p><code>httpRequest.onreadystatechange = nameOfTheFunction;</code></p>
+<p>Заметьте, что после названия функции нет скобок и не указано параметров, потому что вы просто присваиваете ссылку на функцию, а не вызываете ее. К тому же, вместо указания имени функции, вы можете воспользоваться возможностью JavaScript объявлять функции на лету (так называемые «анонимные функции») и указывать в ней действия, которые будут обрабатывать ответ:</p>
+<pre>httpRequest.onreadystatechange = function(){
+// код обработчика
+};
+</pre>
+<p>Далее, после того как вы объявили что будет происходить после получения ответа, вам необходимо сделать запрос. Вы необходимо вызвать методы <code>open()</code> и <code>send()</code> класса:</p>
+<pre>httpRequest.open('GET', 'http://www.example.org/some.file', true);
+httpRequest.send(null);</pre>
+<ul>
+<li>Первый параметр функции <code>open()</code> — метод запроса HTTP (GET, POST, HEAD или любой другой метод, поддерживаемый сервером, который вы хотите использовать). Указывайте методы заглавными буквами в соответствии с HTTP стандартом; иначе некоторые браузеры (такие как Firefox) могут не обработать запрос. Информация о допустимых HTTP запросах доступна по адресу <a class="external" rel="external nofollow" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html" target="_blank">спецификации W3C</a></li>
+<li>Второй параметр — URL запрашиваемой страницы. Из соображений безопасности вы не можете запрашивать страницы сторонних доменов. Убедитесь, что вы используете одинаковое доменное имя на всех страницах, в противном случае вы получите ошибку 'доступ запрещен' при вызове функции <code>open()</code>. Типичной ошибкой является отправка запроса на <code>domain.tld</code> в то время, как вы находитесь на странице сайта <code>www.domain.tld</code>.</li>
+<li>Третий параметр указывает, является ли запрос асинхронным. Если он <code>TRUE</code>, то выполнение JavaScript продолжится в то время, пока ответ от сервера еще не получен. В этом и заключается асинхронность технологии.</li>
+</ul>
+<p>Параметром метода <code>send()</code> могут быть любые данные, которые вы хотите послать на сервер, если вы делаете <code>POST</code>-запрос.  Данные должны быть сформированы в строку запроса:</p>
+<p><code>name=value&amp;anothername=othervalue&amp;so=on</code></p>
+<p>Заметьте, что если вы хотите отправить данные методом <code>POST</code>, вы должны изменить MIME-тип запроса с помощью следующей строки:</p>
+<pre>httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');</pre>
+<p>В противном случае сервер проигнорирует данные, отправленные методом <code>POST</code>.</p>
+
+
+
+
+</div><div id="section_3"><span id="Step_2_.E2.80.93_Handling_the_Server_Response"></span><span id="Step_2_.e2.80.93_Handling_the_Server_Response"></span><h3 class="editable">Шаг 2 — Обрабатываем ответ сервера</h3>
+<p>Отправляя запрос, вы указали имя функции JavaScript для обработки ответа.</p>
+<pre class="eval">httpRequest.onreadystatechange = <em>nameOfTheFunction</em>;
+</pre>
+<p>Давайте посмотрим, что эта функция должна делать. Во-первых, функция должна проверять статус запроса. Если значение переменной статуса равно 4, то это означает, что ответ от сервера получен полностью, с ним все в порядке и его можно обрабатывать.</p>
+
+<pre>if (httpRequest.readyState == 4) {
+	// everything is good, the response is received
+} else {
+	// still not ready
+}
+</pre>
+<p>Полный список значений кодов <code>readyState</code>:</p>
+<ul><li>0 (Неинициализирован)</li><li>1 (Инициализирован)</li><li>2 (Отправлен)</li><li>3 (Загружается)</li><li>4 (Загружен)</li></ul>
+<p>(<a class="external" title="http://msdn.microsoft.com/de-de/library/ms534361(en-us,VS.85).aspx" rel="external nofollow" href="http://msdn.microsoft.com/de-de/library/ms534361(en-us,VS.85).aspx" target="_blank">Источник</a>)</p>
+
+<p>Далее нужно проверить статус HTTP-ответа. Полный список кодов ответа сервера можно посмотреть на <a class="external" rel="external nofollow" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" target="_blank">сайте W3C</a>. Нам интересен только код ответа <code>200 OK</code>.</p>
+<pre>if (httpRequest.status == 200) {
+	// perfect!
+} else {
+	// there was a problem with the request,
+	// for example the response may be a 404 (Not Found)
+	// or 500 (Internal Server Error) response codes
+}</pre>
+<p>Теперь, после проверки состояния запроса и статуса HTTP-ответа, вы можете делать все что угодно с данными, полученными от сервера. Есть два способа получить эти данные:</p>
+<ul>
+<li><code>httpRequest.responseText</code> &ndash; возвращает ответ сервера в виде строки текста.</li>
+<li><code>httpRequest.responseXML</code> &ndash; возвращает ответ сервера в виде объекта <code>XMLDocument</code>, который вы можете обходить, используя функции JavaScript DOM</li>
+</ul>
+
+
+
+</div><div id="section_4"><span id="Step_3_.E2.80.93_A_Simple_Example"></span><span id="Step_3_.e2.80.93_A_Simple_Example"></span><h3 class="editable">Шаг 3 — Простой пример</h3>
+<p>Давайте соберем все вместе и сделаем простой HTTP запрос. Наш JavaScript запросит HTML документ <code>test.html</code>, который содержит текст "I'm a test." и выведет содержимое файла <code>test.html</code> в диалоговом окне.</p>
+<pre><strong>&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;</strong>
+function makeRequest(url) {
+	var httpRequest;
+
+	if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+		httpRequest = new XMLHttpRequest();
+		if (httpRequest.overrideMimeType) {
+			httpRequest.overrideMimeType('text/xml');
+			// See note below about this line
+		}
+	} 
+	else if (window.ActiveXObject) { // IE
+		try {
+			httpRequest = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+		} 
+		catch (e) {
+			try {
+				httpRequest = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+			} 
+			catch (e) {}
+		}
+	}
+
+	if (!httpRequest) {
+		alert('Giving up&nbsp;:( Cannot create an XMLHTTP instance');
+		return false;
+	}
+	httpRequest.onreadystatechange = function() { alertContents(httpRequest); };
+	httpRequest.open('GET', url, true);
+	httpRequest.send('');
+
+}
+
+function alertContents(httpRequest) {
+	if (httpRequest.readyState == 4) {
+		if (httpRequest.status == 200) {
+			alert(httpRequest.responseText);
+		} else {
+			alert('There was a problem with the request.');
+		}
+	}
+}
+&lt;/script&gt;
+&lt;span style=&quot;cursor: pointer; text-decoration: underline&quot; onclick=&quot;makeRequest('test.html')&quot;&gt;Make a request&lt;/span&gt;
+</pre>
+
+
+<p><br />В этом примере:</p>
+<ul>
+<li>Пользователь нажимает на ссылку "Сделать запрос" в браузере;</li>
+<li>Происходит вызов функции <code>makeRequest()</code> с параметром <code>test.html</code> — именем HTML файла;</li>
+<li>Посылается запрос, после чего (когда <code>onreadystatechange</code> становится равным 4) выполнение передается функции <code>alertContents()</code>;</li>
+<li><code>alertContents()</code> проверяет, получен ли ответ и все ли с ним в порядке, после чего содержимое файла <code>test.html</code> выводится в диалоговом окне.</li>
+</ul>
+
+<p><strong>Замечание</strong>: Строка <code>httpRequest.overrideMimeType('text/xml');</code> вызовет ошибки в консоли JavaScript в Firefox 1.5 или более позднем, как задокументировано в <span class="lang lang-*"><a rel="external nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=311724" title="https://bugzilla.mozilla.org/show_bug.cgi?id=311724" target="_blank" class=" link-https">баге 311724</a></span>, если страница, полученная с помощью XMLHttpRequest не является правильным XML (например, если это обычный текст). На самом деле это корректное поведение.</p>
+<p><strong>Замечание 2</strong>: если вы посылаете запрос не на статический XML-файл, а на серверный скрипт, возвращающий XML, то нужно установить некоторые заголовки ответа, если вы планируете сделать вашу страницу работоспособной в Internet Explorer помимо Mozilla. Если вы не установите заголовок <code>Content-Type: application/xml</code>, IE сообщит об ошибке JavaScript, 'Object Expected' на следующей строке, после той, на которой вы пытались получить доступ к XML элементу. Если вы не установите заголовок <code>Cache-Control: no-cache</code>, то браузер будет кэшировать ответ, и никогда не будет повторно отправлять запрос, что может сделать отладку весьма «забавной».</p>
+<p><strong>Замечание 3</strong>: Если переменная <code>httpRequest</code> объявлена глобально, то в ситуации, когда запросы делаются сразу друг за другом, первый запрос будет «затёрт» вторым. Чтобы избежать такого эффекта состязаний, объявляйте переменную httpRequest локально в функции и передавайте ее в <code>alertContent()</code>.</p>
+<p><strong>Замечание 4</strong>: При привязывании функции к событию <code>onreadystatechange</code>, нельзя указывать аргументов. По этой причине не работает следующий код:</p>
+<pre>httpRequest.onreadystatechange = alertContents(httpRequest); // (не работает)
+</pre>
+<p>Таким образом, если вам необходимо передать httpRequest функции-обработчику, вы должны сделать это косвенно через анонимную функцию или использовать httpRequest как глобальную переменную. Вот пример:</p>
+<pre>httpRequest.onreadystatechange = function() { alertContents(httpRequest); }; //1 (для конкурирующих запросов)
+httpRequest.onreadystatechange = alertContents; //2 (глобальное определение)
+</pre>
+<p>Первый способ позволяет делать несколько запросов одновременно, а второй используется, когда переменная <code>httpRequest</code> является глобальной.</p>
+<p><br />
+<strong>Замечание 5</strong>: В случае ошибки (например, если сервер упал), при попытке доступа к переменной .status будет сгенерировано исключение в методе <code>onreadystatechange</code>. Убедитесь, что if...then заключено в try...catch. См. (<span class="lang lang-*"><a rel="external nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=238559" title="https://bugzilla.mozilla.org/show_bug.cgi?id=238559" target="_blank" class=" link-https">баг 238559</a></span>).</p>
+<pre>function alertContents(httpRequest) {
+	try {
+		if (httpRequest.readyState == 4) {
+			if (httpRequest.status == 200) {
+				alert(httpRequest.responseText);
+			} else {
+				alert('There was a problem with the request.');
+			}
+		}
+	}
+	catch( e ) {
+		alert('Caught Exception: ' + e.description);
+	}
+}
+</pre>
+</div><div id="section_5"><span id="Step_4_.E2.80.93_Working_with_the_XML_Response"></span><span id="Step_4_.e2.80.93_Working_with_the_XML_Response"></span><h3 class="editable">Шаг 4 — Работа с XML ответом</h3>
+<p>В предыдущем примере, после того как был получен ответ на HTTP-запрос мы использовали свойство <code>responseText</code> объекта, который содержал данные файла <code>test.html</code>. Теперь давайте попробуем свойство <code>responseXML</code>.</p>
+
+<p>Прежде всего, давайте создадим правильный XML документ, который мы будем запрашивать. Документ (<code>test.xml</code>) содержит следующее:</p>
+<pre>&lt;?xml version=&quot;1.0&quot;&nbsp;?&gt;
+&lt;root&gt;
+	I'm a test.
+&lt;/root&gt;
+</pre>
+<p>В скрипте нам всего лишь нужно заменить строку запроса на:</p>
+
+<pre>...
+onclick=&quot;makeRequest('test.xml')&quot;&gt;
+...
+</pre>
+<p>Далее в <code>alertContents()</code> нам нужно заменить строку <code>alert(httpRequest.responseText);</code> на:</p>
+<pre>var xmldoc = httpRequest.responseXML;
+var root_node = xmldoc.getElementsByTagName('root').item(0);
+alert(root_node.firstChild.data);
+</pre>
+<p>Этот код берет объект <code>XMLDocument</code>, получаемый из <code>responseXML</code> и использует методы DOM для доступа к некоторым данным, содержащимся в документе XML. Посмотреть <code>test.xml</code> можно <a href="http://www.akvi.ru/mozdev/test.xml" target="_blank">здесь</a>, а обновленный скрипт <a href="http://www.akvi.ru/mozdev/httprequest_test_xml.html" target="_blank">здесь</a>.</p>
+
+<p>Чтобы узнать больше о методах DOM, посмотрите <a class="external" rel="external nofollow" href="http://www.mozilla.org/docs/dom/" title="http://www.mozilla.org/docs/dom/" target="_blank">реализацию DOM в Mozilla</a>.</p>
+<p></p></div></div></div></div></div>
+<div id="siteFooter">
+<p id="license">Перевод статьи с английского - <a href="http://www.akvi.ru/">компьютерная помощь AKVI</a></p>
+<p id="footabout"><a rel="external nofollow" href="https://developer.mozilla.org/en/AJAX/Getting_Started">Оригинал на английском</a></p>
+
+</div>
+</div>
+</body>
+</html>

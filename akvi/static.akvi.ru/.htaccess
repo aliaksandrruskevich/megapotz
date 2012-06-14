@@ -1,0 +1,20 @@
+AddDefaultCharset windows-1251
+DefaultLanguage ru
+AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document .docx
+AddType application/msword .doc
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/x-icon A31536000
+ExpiresByType text/css A31536000
+ExpiresByType image/gif A31536000
+ExpiresByType image/png A31536000
+ExpiresByType image/jpeg A31536000
+</IfModule>
+
+<ifModule mod_headers.c>
+	Header unset ETag
+	Header unset Last-Modified
+	Header set Cache-Control "max-age=2592000, public"
+</ifModule>
+FileETag None

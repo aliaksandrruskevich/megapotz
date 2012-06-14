@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+	<title>Добавление</title>
+	<script type="text/javascript" src="/js/scr.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<style type="text/css" id="internalStyle">
+		span	{ border-bottom: dashed 1px darkgreen; cursor: hand; cursor: pointer; font: normal 70% Arial; }
+	</style>
+</head>
+
+<body onload="showcat()">
+
+	<form name="add_form" method="post" action="/cgi-bin/add.pl">
+		<p>
+			Раздел:<br />
+			<input name="cat" id="categ_field" />
+			<div class="comment" id="categ"></div>
+		</p>
+		<p>
+			Подраздел:<br />
+			<input name="subcat" id="subcateg_field" size="39" />
+			<div class="comment" id="subcateg"></div>
+		</p>
+		<p>
+			Наименования:<br />
+			<textarea name="numbers" rows="10" cols="75"></textarea>
+		</p>
+		<p>
+			<input type="button" value="Преобразовать" onclick="parse_text()" style="width: 200px;" />
+			<input type="button" value="Добавить" onclick="before_submit();" style="margin-left: 223px; width: 200px;" />
+		</p>
+	</form>
+
+</body>
+</html>

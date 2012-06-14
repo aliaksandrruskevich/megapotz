@@ -1,0 +1,3 @@
+﻿.shadow,.price tfoot td{background:none!important}
+.ie6sucks{width:472px;height:472px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/order.png',sizingMethod='crop');}
+.ie6mustdie{position:absolute;z-index:1;width:596px;height:350px;bottom:0;left:0;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/price_bg.png',sizingMethod='crop');}

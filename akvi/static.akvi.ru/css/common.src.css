@@ -1,0 +1,217 @@
+@media all {
+img	{ border: 0; }
+}
+
+@media screen {
+body	{ min-width: 1000px; }
+:focus	{outline-style:none;}
+*	{ padding: 0; margin: 0; line-height: 1em; }
+.print	{ display: none; }
+.rel	{ position: relative; }
+table	{ border-collapse: collapse; }
+td	{ vertical-align: top; }
+strong	{ font-weight: normal; }
+
+.red	{ color: #b30505; }
+.green	{ color: #060; }
+#layout	{ width: 100%; }
+
+#tags	{ background-color: #333; color: #aaa; font: normal 10px Tahoma; padding: 0 20px 3px 20px; white-space: nowrap; overflow: hidden; height: 9px; }
+#tags a	{ color: #aaa!important; }
+#tags a:hover	{ color: #fff!important; }
+
+a	{ color: #444; }
+
+a:visited	{ color: #000; }
+h1, .txt  .h1	{ font: italic 1.9em "Trebuchet MS"; color: #b30505; padding-left: 65px; margin-top: 30px; background: url('/i/h1.png') 0 0 no-repeat; line-height: 38px; }
+.promo, h2, .h2	{ font: italic 1.3em "Trebuchet MS"!important; }
+
+
+.txt h2, .txt .h2	{ margin: 20px 50px 0 65px; }
+.txt .h1	{ margin: 30px 0 0 0!important; padding-left: 65px; line-height: 38px; }
+.txt p, .txt li, #menu li, .we_are	{ line-height: 1.5em; font: normal 0.9em "Trebuchet MS"; color: #444; }
+.txt p	{ margin: 10px 30px 0 65px; }
+.txt ul, .txt ol	{ margin: 25px 80px 25px 120px; }
+.txt li	{ margin-top: 10px; padding-left: 10px; }
+.highlight	{ background-color: #ecf1f8; margin: 20px 0 20px 40px; padding: 10px 25px 10px 25px; }
+.highlight p, .highlight ul, .highlight ol	{ margin-left: 30px; }
+.guru	{ min-height: 152px; padding: 20px 0 20px 140px; margin: 20px 0; overflow: auto; }
+.g1	{ background: #ecf1f8 url('/i/guru1.jpg') 30px 0 no-repeat; }
+.g2	{ background: #ecf1f8 url('/i/guru2.jpg') 30px 20px no-repeat; }
+.best	{ margin: 20px 0 20px 30px; }
+
+.col2	{ width: 250px; }
+.col3	{ width: 222px; }
+.col3, #body .col2, #footer .col2	{ background-color: #f1efef; }
+#body .col2, #footer .col2	{ border-left: dashed 1px #ccc; border-right: dashed 1px #ccc; }
+.box	{ padding: 16px 26px; }
+
+div.num	{ position: relative; }
+div.num img	{ width: 53px; height: 90px; background-image: url('/i/num.png'); position: absolute; left: 8px; top: 0px; }
+
+#header .col1	{ height: 336px; background: url('/i/sky.png'); }
+#city	{  width: 100%; height: 100%; overflow: hidden; }
+#city_bg	{ background-image: url('/i/city.png'); background-position: -554px 0; width: 4000px; height: 100%; position: absolute; top: 0; left: 0; }
+#city_bg img	{ margin: 186px 0 0 245px; width: 100px; height: 150px; }
+.logo	{ position: absolute; top: 45px!important; left: 16px!important; z-index: 4; width: 81px; height: 39px; }
+.notice	{ position: absolute; top: 0; left: -600px; width: 528px; height: 336px; background: url('/i/transp.png') 0 28px no-repeat; }
+.notice div	{ padding-left: 280px; padding-top: 20px; position: absolute; top: 36px; left: 7px; height: 267px; width: 233px; }
+.logo_pic	{ width: 81px; height: 39px; }
+
+.index img.bond	{ position: absolute; left: 0; top: 127px; width: 278px; height: 209px; }
+.index .ball	{ position: absolute; left: 150px; top: 30px; height: 144px; width: 400px; padding: 16px 0 0 20px; display: none; }
+#bond_bad	{ display: none; width: 278px; height: 209px; }
+#b1	{ background: url('/i/balloon1.png') 0 0 no-repeat; }
+#b2	{ background: url('/i/balloon2.png') 0 0 no-repeat; }
+.index .logo, .coupon .logo	{ top: 16px!important; }
+.index i	{ color: #2e60b3; font-size: 1.2em!important; }
+
+.wifi div	{ background: url('/i/wit/wit1.jpg') 0 0 no-repeat; }
+.abonent div	{ background: url('/i/wit/wit2.jpg') 0 0 no-repeat; }
+.data div	{ background: url('/i/wit/wit3.jpg') 0 0 no-repeat; }
+.virus div	{ background: url('/i/wit/wit4.jpg') 0 0 no-repeat; }
+.software div	{ background: url('/i/wit/wit5.jpg') 0 0 no-repeat; }
+.windows div	{ background: url('/i/wit/wit6.jpg') 0 0 no-repeat; }
+.hardware div	{ background: url('/i/wit/wit7.jpg') 0 0 no-repeat; }
+.device .wit8	{ margin: 36px 0 0 7px; }
+
+.wifi big	{ color: #f70; }
+.abonent big	{ color: #44637a; }
+.data big	{ color: #258805; }
+.virus big	{ color: #911; }
+.software big	{ color: #2a72c6; }
+.windows big	{ color: #2496d8; }
+.hardware big	{ color: #1d3764; }
+.device big	{ color: #7588d9; }
+
+.abonent img	{ position: absolute; top: 110px; left: -48px; }
+.virus img	{ position: absolute; top: 149px; left: -57px; }
+
+#city big	{ font: normal 1.5em "Trebuchet MS"; line-height: 1.3em; }
+#city i	{ font: italic 1.5em "Trebuchet MS"; }
+#city ul	{ margin-top: 20px; list-style: none; }
+#city li	{ color: #000; font: normal 1em "Trebuchet MS"; line-height: 1.8em; }
+
+#header .col2	{ background-color: #ccc; }
+#menu	{ list-style: none; }
+#menu li	{ height: 41px; overflow: hidden; margin-bottom: 1px; background-color: #fff; }
+#menu li a	{ padding: 0 30px; line-height: 41px; display: block; }
+#menu .curr a	{ text-decoration: none; cursor: text; padding-left: 27px; border-width: 0 3px 0 3px; font-weight: bold; }
+
+.curr a.m1	{ color: #f70; border: solid #f70; background-color: #ffefe1; }
+.curr a.m2	{ color: #44637a; border: solid #44637a; background-color: #cedfec; }
+.curr a.m3 	{ color: #258805; border: solid #258805; background-color: #e8ffe0; }
+.curr a.m4	{ color: #911; border: solid #911; background-color: #fee; }
+.curr a.m5	{ color: #2a72c6; border: solid #2a72c6; background-color: #e6f0ff; }
+.curr a.m6	{ color: #2496d8; border: solid #2496d8; background-color: #e6f6ff; }
+.curr a.m7	{ color: #1d3764; border: solid #1d3764; background-color: #d8e1f0; }
+.curr a.m8	{ color: #7588d9; border: solid #7588d9; background-color: #dee4fb; }
+
+
+#header .phone	{ font: italic 1.7em "Trebuchet MS"; white-space: nowrap; margin: 20px 0 10px 0; text-align: center; }
+#brands	{ background: #fff url('/i/brands.png') 0 100% no-repeat; height: 110px; overflow: hidden; margin-top: 50px; }
+#brands img	{ float: left; padding: 0 15px 0 28px; margin-top: -5px; }
+#brands  a	{ display: block; margin: 20px 5px 20px 0; font: italic 1.1em "Trebuchet MS"; }
+
+.we_are	{ margin: 0 20px; }
+
+form	{ margin: 12px 0; }
+#ask	{ border-bottom: 1px dashed #ccc; border-top: 1px dashed #ccc; background-color: #dae4f2; }
+.box div	{ margin-bottom: 7px; }
+#ask .submit	{ text-align: center; }
+#ask .submit input	{ width: 100px; height: 25px; }
+input, textarea	{ width: 100%; }
+textarea	{ height: 100px; }
+label	{ font: normal 0.7em Arial; line-height: 16px; }
+
+#footer td	{ vertical-align: middle; color: #3f3f3f; }
+
+.dev	{ overflow: hidden; font: normal 0.7em "Trebuchet MS"; }
+.dev p	{ width: 150px; }
+.dev a	{ color: #43649c; }
+.dev img	{ margin: 5px 10px 0 0; float: left; width: 32px; height: 40px; }
+.copy p	{ margin-top: 6px; font: normal 0.7em "Trebuchet MS"; }
+.b88x31	{ padding: 0 5px 20px 0; }
+
+.pad	{ margin: 50px 10px; }
+.pad ul	{ list-style: none; height: 2.6em; margin-left: 3%; }
+.pad li	{ float: left; height: 100%; border-right: 1px dotted #666; width: 10%; padding: 0 1.6%; font: normal 0.7em "Trebuchet MS";  text-align: center; overflow: hidden; }
+.pad li a	{ line-height: 1.6em; }
+.pad li.m7	{ border: 0 ! important; }
+
+/*PRICE*/
+.price	{ border: solid 2px #d4dce7; margin: 20px 50px 40px 65px; }
+.price div	{ margin: 5px 25px 0 25px; }
+.price table	{  width: 100%; font: normal 0.9em "Trebuchet MS"; }
+.price td, .price th	{ padding: 20px 0 5px 0; text-align: left; vertical-align: bottom; }
+.price th	{ border-bottom: none; }
+.price td	{ border-bottom: dashed 1px #d4dce7; line-height: 1.6em; }
+.price .p	{ width: 120px; text-align: right!important; }
+.price .b td	{ border-bottom: 0; padding-bottom: 20px; }
+.price .sum td	{ font-weight: bold; }
+.price .compare td, .price .compare th.c	{ vertical-align: middle; text-align: center; }
+.price .compare td.l	{ text-align: left; }
+
+.price img.tl, .price img.br	{ position: absolute; width: 20px; height: 20px; background-image: url('/i/pcorn.png'); }
+.price img.tl	{ top: -2px; left: -2px; }
+.price img.br	{ bottom: -2px; right: -2px; background-position: top right; }
+
+.txt .back	{ background: #fef8c6 url('/i/back.gif') 0 50% no-repeat; padding: 20px 0; border-bottom: 1px dashed #ccc; margin-top: 0; }
+.txt .back a	{ padding-left: 65px; font: italic 1.1em "Trebuchet MS"; }
+
+.back	{ background: url('/i/back.gif') 0 0.15em no-repeat; margin-top: 10px; }
+.back a	{ padding-left: 65px; font: italic 0.9em "Trebuchet MS"; }
+
+.ad	{ background: #fff url('/i/brands.png') 0 100% no-repeat; margin-bottom: 20px; }
+.ad div	{ padding: 20px 20px 35px 35px; }
+.ad a	{ font: italic 1.1em "Trebuchet MS"; color: #b30505; }
+.ad p	{ font: normal 0.9em "Trebuchet MS"; color: #333; margin-top: 10px; }
+
+#nav	{ border-bottom: 1px dashed #ccc; background-color: #fff; }
+#nav ul	{ list-style: none; padding: 0 10px; font: normal 1em "Trebuchet MS"; }
+#nav li	{ padding: 10px 0; }
+#nav a	{ color: #666; }
+#nav i	{ color: #b30505; }
+
+/* FAQ */
+.editor	{ margin: 30px 0 30px 64px; }
+.editor img	{ float: left; }
+.editor p	{ margin-left: 80px; width: 50%; }
+.editor p big	{ padding-top: 10px; display: block; }
+p.question	{ padding-left: 30px; background: url(/i/q.png) 0 0.2em no-repeat; font: italic 1em "Trebuchet MS"; margin-top: 20px; }
+p.question span	{ cursor: pointer; }
+p.answer	{ background-color: #eff4f9; padding: 10px 30px; }
+
+.faq	{ height: 240px; margin-top: 80px; }
+.pic1	{ background: url('/i/faq/faq1.jpg') 0 0 no-repeat; }
+.pic2	{ background: url('/i/faq/faq2.jpg') 0 0 no-repeat; }
+.pic3	{ background: url('/i/faq/faq3.jpg') 0 0 no-repeat; }
+
+.faq p	{ padding: 100px 0 0 240px; font: italic 1.1em "Trebuchet MS"; }
+.ask_faq	{ background-color: #ecf1f8; padding: 10px 100px; }
+.ask_faq div	{ margin: 10px 0; }
+.ask_faq label	{ display: block; }
+.ask_faq input	{ width: 200px; }
+
+
+
+.coupon .back	{ position: absolute; right: 10px; top: 5px; }
+.coupon .txt	{ margin-top: 100px; }
+.coupon #coupon	{ width: 100%; }
+.coupon #coupon td	{ vertical-align: middle; text-align: center; }
+.coupon #coupon .frame	{ width: 500px; height: 420px; margin: 0 auto; position: relative; text-align: left; }
+
+}
+
+@media print {
+.noprint	{ display: none; }
+*	{ background: none; color: #000; font-family: Tahoma; }
+.col2, .col3, .notice, #footer, #city	{ display: none; }
+.phone	{ float: right; width: 40%; margin: 0; }
+h1	{ margin: 1.5em 0 0 0!important; line-height: 1em; }
+h2	{ margin: 0!important; line-height: 1em; }
+p	{ line-height: 1.4em; }
+
+.price table	{  width: 100%; border-collapse: collapse; margin-bottom: 25px; }
+.price td, .price th	{ border: 1px solid #aaa; text-align: left; padding: 10px; }
+}

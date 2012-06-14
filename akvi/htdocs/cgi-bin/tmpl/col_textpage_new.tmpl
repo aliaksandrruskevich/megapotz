@@ -1,0 +1,13 @@
+<div id="nav" class="box">
+<h2>Оглавление</h2><br/>
+<ul>
+<tmpl_loop menu_loop>
+<tmpl_if curr>
+<li><i><b><tmpl_var menu_title></b></i></li>
+<tmpl_else>
+<li><a href="<tmpl_var url>"><tmpl_var menu_title></a></li>
+</tmpl_if>
+</tmpl_loop>
+<li><a href="http://www.akvi.ru/price/"><b>Прайс-лист</b></a></li>
+</ul>
+</div>

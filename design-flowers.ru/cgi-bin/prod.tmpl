@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+	<head>
+		<title><tmpl_var doc_title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<link rel="stylesheet" type="text/css" href="/css/common.css"/>
+		<link rel="shortcut icon" href="/favicon.ico"/>
+		<!--[if IE 8]><style type="text/css">.item input[type=button] { padding: 3px }</style><![endif]-->
+		<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/css/lte_ie7.css"/><![endif]-->
+		<!--[if lte IE 6]><meta http-equiv="imagetoolbar" content="no"/><link rel="stylesheet" type="text/css" href="/css/lte_ie6.css"/><![endif]-->
+		<script type="text/javascript" src="http://yandex.st/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/global.js"></script>
+		<meta name="keywords" content="<tmpl_var keywords>"/>
+		<meta name="description" content="<tmpl_var description>"/>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+	</head>
+<body>
+		<div id="fly">
+			<table class="shadow">
+				<tr><td colspan="2" class="tl"></td><td rowspan="2" class="tr"><div><img src="/i/x_big.png" alt="Закрыть" onclick="close_pic()"/></div></td></tr>
+				<tr><td rowspan="2" class="bl"></td><td class="inner"><img src="/i/wait.gif" alt="" id="big"/></td></tr>
+				<tr><td class="br" colspan="2"></td></tr>
+			</table>
+		</div>
+<!--[if lte IE 6]>
+	<div id="fly_ie6" class="fie">
+		<table class="shadow">
+			<tr>
+				<td class="tl" colspan="2"><div><div></div></div></td>
+				<td class="tr" rowspan="2" id="tr"><div><div></div><img src="/i/x_big.png" alt="Закрыть" onclick="close_pic()"/></div></td>
+			</tr>
+			<tr>
+				<td rowspan="2" class="bl" id="bl"><div><div></div></div></td>
+				<td class="inner"><img src="/i/wait.gif" alt="" id="big_ie6"/></td>
+			</tr>
+			<tr><td class="br" colspan="2"><div><div></div></div></td></tr>
+		</table>
+	</div>
+<![endif]-->
+
+
+		<div id="layout">
+			<div id="header">
+				<div class="logo"><h2><a href="/">Дизайн-Цветы ЛП</a></h2><p>оптовая и мелкооптовая продажа искусственных растений</p></div>
+				<div class="tel"><h2>+7 (495) 462-22-23<br/>+7 (926) 521-19-18</h2></div>
+				<div class="contacts"><a href="/contacts.html"><img src="/i/compass.png" alt=""/>Контактная информация</a></div>
+			</div>
+<div id="menu">
+	<ul>
+		<tmpl_loop cat_loop>
+			<li<tmpl_if NAME="__last__"> class="r"</tmpl_if>><tmpl_if curr><strong><tmpl_var title></strong><tmpl_else><a href="/<tmpl_loop subcat_loop><tmpl_if NAME="__first__"><tmpl_var url></tmpl_if></tmpl_loop>/"><tmpl_var title></a></tmpl_if></li>
+		</tmpl_loop>
+	</ul>
+</div>
+			<table id="body"><tr>
+				<td class="left">
+					<div class="sub_top"><div class="sub_bottom">
+					<ul class="submenu">
+<tmpl_loop cat_loop><tmpl_if curr><tmpl_loop subcat_loop>
+<li><tmpl_if curr><strong><tmpl_var title></strong><tmpl_else><a href="/<tmpl_var url>/"><tmpl_var title></a></tmpl_if></li>
+</tmpl_loop></tmpl_if></tmpl_loop>
+					</ul>
+					</div></div>
+
+				</td>
+				<td class="right">
+<div class="subline" style="padding: 14px 10px"><a href="mailto:flowerslp@yandex.ru" class="feedback"><img src="/i/0.gif" alt=""/>Напишите нам</a><a href="/cgi-bin/basket.cgi" class="basket" id="basket"><img src="/i/0.gif" alt=""/>Корзина</a></div>
+<h1><tmpl_var doc_title></h1>
+<div class="txt">
+<!--<div style="border: 2px; padding: 10px; color: #f00; font-size: bold;">Фирма не работает с 30.11.2011 г. по 9.01.2012 г.</div>-->
+
+<tmpl_var text>
+</div>
+<tmpl_loop items_loop>
+	<div class="item">
+		<div class="i_l"><div class="i_r"><div class="p">
+			<a href="/img/big/<tmpl_var id>.jpg" onclick="enlarge(<tmpl_var id>);return false;"><img src="/img/<tmpl_var id>.jpg" alt="<tmpl_var title>"/></a>
+			<tmpl_if new><img src="/i/new.png" alt="Новинка" class="new"/></tmpl_if>
+			<p><b><tmpl_var title></b><tmpl_if comment><br/>Арт.: <b><tmpl_var comment></b></tmpl_if><tmpl_if min_part><br/>Мин. партия: <b><tmpl_var min_part> шт.</b></tmpl_if></p>
+			<div class="c"><p class="price"><tmpl_if price><tmpl_var price> руб.</tmpl_if>&nbsp;</p><p class="id">№<tmpl_var id></p></div>
+		</div></div></div>
+		<tmpl_if price><div class="buy"><img src="/i/0.gif" alt="Положить в корзину"/><input maxlength="3" value="<tmpl_var min_part>" type="text" class="num" id="id<tmpl_var id>"/><input type="button" value="В корзину" onclick="buy('id<tmpl_var id>')"/></div></tmpl_if>
+	</div>
+</tmpl_loop>
+<div style="clear: left"></div>
+<tmpl_if pages_loop>
+<div class="pages"><b>Страницы: </b>
+<tmpl_loop pages_loop>
+<tmpl_if curr><span><tmpl_var counter></span><tmpl_else><a href="<tmpl_var url>"><tmpl_var counter></a></tmpl_if>
+</tmpl_loop>
+</div>
+</tmpl_if pages_loop>
+					<div class="alert_t"><div class="alert_b"><div class="alert"><p>Товары из этого каталога делаются по заказу, поэтому их конечный вид может несколько отличаться от изображений на картинках.</p><p>Также следует отметить что фотография не может дать полного представления о качестве работы и материалов. Приглашаем вас посетить наш <a href="/contacts.html">выставочный зал</a> где вы сможете получить более полное представление о нашей продукции.</p></div></div></div>
+				</td>
+			</tr>
+			<tr><td id="copy" colspan="2"><p>&copy;&nbsp;<span>2005</span> Дизайн Цветы ЛП</p></td></tr>
+			</table>
+		</div>
+<script type="text/javascript">count();</script>
+<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">var gaJsHost="http://www.";var pageTracker=_gat._getTracker("UA-2900270-1");pageTracker._trackPageview();</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter47049 = new Ya.Metrika({id:47049, clickmap:true, accurateTrackBounce:true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/47049" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

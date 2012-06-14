@@ -1,0 +1,29 @@
+AddDefaultCharset windows-1251
+DefaultLanguage ru
+AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document .docx
+AddType application/pdf .pdf
+AddType application/msword .doc
+AddType 'application/javascript; charset=windows-1251' .js
+
+ErrorDocument 404 /404.html
+FileETag None
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^akvi\.ru
+RewriteRule ^(.*)$ http://www.akvi.ru/$1 [R=permanent,L]
+
+<ifModule mod_headers.c>
+	Header unset ETag
+	Header unset Last-Modified
+	Header set Cache-Control "public, max-age=592200"
+</ifModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 4 hours"
+	ExpiresByType application/javascript A592200
+	ExpiresByType application/x-javascript A592200
+	ExpiresByType text/html A592200
+</IfModule>
+
+Redirect 301 /abonent http://www.akvi.ru/abonentskoe

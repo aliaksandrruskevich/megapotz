@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: *index.html
+Disallow: *?
+Host: www.design-flowers.ru

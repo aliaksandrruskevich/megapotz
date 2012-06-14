@@ -1,0 +1,7 @@
+@media screen {
+#menu li	{ background: url('/i/btn_shade.png') 0 0 no-repeat; }
+#portrait	{ background: url('/i/frame_shade.png') 0 0 no-repeat; }
+#descr	{ background: url('/i/v_shade.png') 0 0 no-repeat; }
+
+#text	{ filter:progid:DXImageTransform.Microsoft.Shadow(color='#555555', Direction=135, Strength=6)"> }
+}

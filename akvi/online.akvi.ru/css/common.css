@@ -1,0 +1,96 @@
+@media all {
+img	{ border: 0; }
+}
+
+@media screen {
+body	{ min-width: 1000px; }
+:focus	{ outline-style: none; }
+*	{ padding: 0; margin: 0; line-height: 1em; }
+.print	{ display: none; }
+.rel	{ position: relative; }
+h1	{ font: italic 1.9em "Trebuchet MS"; margin: 30px 0 0 0; }
+h2	{ font: italic 1.3em "Trebuchet MS"; margin: 20px 0 0 0; }
+p, .txt li	{ line-height: 1.5em; font: normal 0.9em "Trebuchet MS"; color: #444; }
+table	{ border-collapse: collapse; }
+td	{ vertical-align: top; }
+#logo	{ position: absolute; top: 25px; left: 35px; }
+
+/* AUTH */
+#auth	{ width: 100%; }
+#auth td	{ vertical-align: middle; text-align: center; }
+#auth div.stop	{ width: 580px; height: 360px; margin: 0 auto; background: url('/i/auth.png') 80px 0 no-repeat; text-align: left; }
+#auth div.form	{ background: url('/i/stop.jpg') 0 100% no-repeat; width: 100%; height: 100%; }
+#auth .field	{ position: absolute; left: 190px; width: 210px; }
+#auth .login	{ top: 155px; }
+#auth .pass	{ top: 227px; }
+#auth .field label	{ font: italic 18px "Trebuchet MS"; margin: 0 0 5px 8px; display: inline-block; }
+#auth .field input	{ font-size: 1.6em; text-align: center; background-color: transparent; border: 0; }
+#auth input	{ width: 100%; }
+#auth .submit	{ width: 110px; position: absolute; left: 430px; top: 180px; }
+#auth .submit input	{ height: 105px; font-size: 1.1em; }
+#auth .dialog	{ font: italic 36px "Trebuchet MS"; padding: 25px; width: 300px; position: absolute; top: 0; left: 70px; }
+
+/* LAYOUT */
+#layout	{ width: 100%; }
+#menu	{ list-style: none; margin: 50px 0; }
+#menu li	{ display: inline-block; font: italic 18px "Trebuchet MS"; margin-right: 40px; }
+#menu li a	{ color: #099903; }
+
+p.back	{ padding: 20px 0; white-space: nowrap; }
+p.back a, .back	{ color: #900; }
+p.back a	{ font: italic 18px "Trebuchet MS"; }
+p.phone	{ font: italic 24px "Trebuchet MS"; }
+p.line	{ font: italic 14px "Trebuchet MS"; }
+.m2 .pic_holder	{ background: url('/i/aol4.jpg') 40% 15px no-repeat; }
+.m3 .pic_holder	{ background: url('/i/aol2.jpg') 40% 15px no-repeat; }
+
+#footer	{ vertical-align: middle; border-top: 1px dashed #ccc; }
+#footer div.pad	{ margin: 20px 50px; }
+.dev	{ overflow: hidden; font: normal 0.7em Arial; }
+.dev p	{ width: 150px; }
+.dev a	{ color: #43649c; }
+.dev img	{ margin: 5px 10px 0 0; float: left; }
+.copy p	{ margin-top: 6px; font: normal 0.7em Arial; }
+
+/* PRICE */
+.price	{ border: solid 2px #d4dce7; margin: 20px 20px 40px 0px; }
+.price div	{ margin: 5px 25px 0 25px; }
+.price table	{  width: 100%; font: normal 0.9em "Trebuchet MS"; }
+.price td, .price th	{ padding: 20px 10px 5px 0; text-align: left; vertical-align: bottom!important; }
+.price th	{ border-bottom: none; }
+.price td	{ border-bottom: dashed 1px #d4dce7; line-height: 1.6em; }
+.price .p	{ width: 150px; text-align: right!important; }
+.price .b td	{ border-bottom: 0; padding-bottom: 20px; }
+.price .sum td	{ font-weight: bold; }
+.price img	{ position: absolute; width: 20px; height: 20px; background-image: url('/i/pcorn.png'); }
+.price img.tl	{ top: -2px; left: -2px; }
+.price img.br	{ bottom: -2px; right: -2px; background-position: top right; }
+
+/* FAQ */
+.faq	{ height: 427px; background-image: url('/i/faq.png'); }
+.l	{ padding-left: 120px; margin: 30px 100px 110px 140px; position: relative; }
+.r	{ padding-right: 80px; background-position: 100% 0; }
+.txt h2	{ padding-top: 45px; }
+.txt p, .txt li	{ margin: 15px 0 0 0; }
+
+#next, #prev, #next_grey, #prev_grey	{ position: absolute; top: 10px; background-image: url('/i/lr.png'); width: 38px; height: 38px; }
+#prev	{ left: 0; }
+#next	{ right: -35px; background-position: 38px 0; }
+#prev_grey	{ left: 0; background-position: 0 -38px; display: none; }
+#next_grey	{ right: -35px; background-position: 38px -38px; display: none; }
+
+.txt ul, .txt ol	{ margin: 20px; }
+}
+
+@media print {
+.noprint	{ display: none; }
+*	{ background: none; color: #000; font-family: Tahoma; }
+#auth	{ display: none; }
+.phone	{ float: right; width: 40%; margin: 0; }
+h1	{ margin: 1.5em 0 0 0!important; line-height: 1em; }
+h2	{ margin: 0!important; line-height: 1em; }
+p	{ line-height: 1.4em; }
+
+.price table	{  width: 100%; border-collapse: collapse; margin-bottom: 25px; }
+.price td, .price th	{ border: 1px solid #aaa; text-align: left; padding: 10px; }
+}

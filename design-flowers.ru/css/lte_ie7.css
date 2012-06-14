@@ -1,0 +1,8 @@
+@media screen {
+*:focus { outline: none; }
+div.field	{ display: inline-block; }
+
+}
+
+@media print {
+}

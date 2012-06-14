@@ -1,0 +1,55 @@
+﻿
+var req=new XMLHttpRequest();
+
+/*http://suggest.yandex.ru/suggest-ya.cgi?v=3&callback=parser&lr=213&part=shit*/
+/*
+parser(["shit",["shit happens","shit перевод","shituf.net.ua","shit happens перевод","shit happends","shit парад","shit bricks","shitnikovo.ru","shitty","shitless.ru"],{r:1,n:0}])
+parser(["ффффффффф",[],{bli:1,r:1,n:0}])
+не более 10 подсказок
+
+var arr = [9, 9, 111, 2, 3, 4, 4, 5, 7];
+var sorted_arr = arr.sort(); // You can define the comparing function here. JS default uses a crappy string compare.
+var results = [];
+for (var i = 0; i < arr.length - 1; i += 1) {
+        if (sorted_arr[i + 1] == sorted_arr[i]) {
+                results.push(sorted_arr[i]);
+        }
+}
+
+
+*/
+
+function Suggest(){
+	this.cache = new Array();
+	this.query_string="http://suggest.yandex.ru/suggest-ya.cgi?v=3&callback=parser&lr=213&part=";
+	this.alphabet=[' ','а','б','в','г','д','е','ё','ж','з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я'];
+	this.base=document.getElementById('base').value;
+}
+
+Suggest.prototype.apply = function(text,items,blitem){
+	if(items.length==10&&this.cache[this.cache.length-1]!=items[0]){this.cache[this.cache.length]=items[0];}
+	else if(items.length!=0){this.cache.push(items);}
+	document.getElementById('r').innerHTML=this.cache;
+	return items.length;
+}
+
+
+function parser(add_str){
+	netscape.security.PrivilegeManager.enablePrivilege('UniversalBrowserRead');
+	req.open("GET",this.query_string+this.base_str+add_str+trail,false);
+	req.send(null);
+	var len=eval(req.responseText);
+	if(len==10){
+		var start=0;
+		if(add_str!=''&&add_str.charAt(add_str.length-1)==' ')
+			start=1;
+		
+		for(var i=start;i<alphabet.length;i++){
+			parser(add_str+alphabet[i]);
+//alert(i+'-'+base_str+add_str+'-');
+		}
+	}
+	else{
+		return;
+	}
+}

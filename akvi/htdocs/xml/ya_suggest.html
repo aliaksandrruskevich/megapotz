@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Парсер Яндекс саджестов</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="ya_suggest.js" type="text/javascript"></script>
+	<style>
+	table	{width:100%}
+	td	{ width:25% }
+	textarea	{ height: 600px; width: 100% }
+	</style>
+</head>
+
+<body>
+<fieldset>
+<label for="base">Запрос</label><br/><input type="text" id="base" name="base"/>
+<hr>
+<input type="checkbox" id="yandex_cbx"> <label for="yandex_cbx">Яндекс</label><br>
+<input type="checkbox" id="google_cbx"> <label for="google_cbx">Google</label><br>
+<input type="checkbox" id="mail_cbx"> <label for="mail_cbx">Mail</label><br>
+<input type="checkbox" id="rambler_cbx"> <label for="rambler_cbx">Рамблер</label><br>
+<input type="button" value="Начать" onclick="start()"/>
+</fieldset>
+
+<p>Варианты</p>
+
+<table>
+<tr>
+<td><p>yandex</p><textarea id="yandex" rows="10" cols="10"></textarea></td>
+<td><p>google</p><textarea id="google" rows="10" cols="10"></textarea></td>
+<td><p>mail</p><textarea id="mail" rows="10" cols="10"></textarea></td>
+<td><p>rambler</p><textarea id="rambler" rows="10" cols="10"></textarea></td>
+</tr>
+</table>
+
+</body>
+
+</html>

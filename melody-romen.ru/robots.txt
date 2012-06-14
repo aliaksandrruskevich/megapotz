@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: *index.html
+Disallow: *?
+Disallow: /cig.mp4
+Host: www.melody-romen.ru

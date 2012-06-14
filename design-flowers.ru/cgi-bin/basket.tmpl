@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<title>Корзина</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT"/>
+<link rel="stylesheet" type="text/css" href="/css/common.css"/>
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/css/lte_ie7.css"/><![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/css/lte_ie6.css"/><![endif]-->
+<script type="text/javascript" src="/js/global.js"></script>
+
+<style type="text/css">
+.al	{ padding-left: 30px; background: url('/i/ico_alert.png') 0 50% no-repeat; margin: 20px 0; padding: 10px 45px; display: inline-block; }
+</style>
+</head>
+<body>
+<div id="layout">
+<div id="header">
+<div class="logo"><h2><a href="/">Дизайн-Цветы ЛП</a></h2><p>оптовая и мелкооптовая продажа искусственных растений</p></div>
+<div class="tel"><h2>+7 (926) 521-19-18<br/>+7 (495) 462-22-23</h2></div>
+<div class="contacts"><a href="/contacts.html"><img src="/i/compass.png" alt=""/>Контактная информация</a></div>
+</div>
+<div id="menu"><ul><li><a href="/flowers/">Искусственные цветы</a></li><li><a href="/green/">Зелень и деревья</a></li><li><a href="/composition/">Композиции и коллажи</a></li><li><a href="/fruit/">Товары для флористов</a></li><li><a href="/vase/">Вазы, керамика</a></li><li class="r"><a href="/zakaz/">Дизайнерские работы</a></li></ul></div>
+<div class="subline"><a href="mailto:flowerslp@yandex.ru" class="feedback"><img src="/i/0.gif" alt=""/>Напишите нам</a><a href="/cgi-bin/basket.cgi" class="basket" id="basket"><img src="/i/0.gif" alt=""/>Корзина</a></div>
+
+<div id="body">
+
+<div style="text-align: center;">
+<h1>Корзина</h1>
+<p style="margin-bottom: 20px">Если вы испытываете трудности при работе с корзиной, попробуйте воспользоваться другим браузером (Firefox, Opera)</p>
+<tmpl_if good_loop><p id="noorder" style="display: none">Ваша корзина пуста</p>
+<div id="order_form"><form method="post" id="form" action="/cgi-bin/basket.cgi" onsubmit="f.submit();return false;">
+<table id="order_list">
+<tr><th class="l">Наименование</th><th style="width: 60px">Цена</th><th style="width: 60px">Количество</th><th class="r" style="width: 60px">Удалить</th></tr>
+<tmpl_loop good_loop>
+<tr<tmpl_if __last__> class="b"</tmpl_if>><td class="l"><tmpl_var good_title></td><td><tmpl_var good_price></td><td><input type="text" maxlength="3" name="id<tmpl_var good_id>" value="<tmpl_var amount>" onblur="calculate()"/></td><td class="r"><img src="/i/x.gif" alt="Удалить" onclick="del(this)"/></td></tr>
+</tmpl_loop>
+</table>
+<div class="sum">Общая сумма заказа: <b id="total"></b></div>
+<p class="al" id="min_sum" style="display: none"><big>Опт от: <b>1000 руб. (1-2 модели)</b></big></p>
+<div class="box reg"><div class="t"><div class="r"><div class="b"><div class="l"><div class="in">
+<input type="hidden" name="do" value="set_request"/>
+<div class="field short"><label for="f1">Имя<span>*</span></label><input value="" id="f1" name="request_name" type="text" required="1"/></div>
+<div class="field short"><label for="f2">Электронная почта<span>*</span></label><input value="" id="f2" name="request_email" type="text" required="1" regexp="^[\w\d\-_\.]+\@[\w\d\-_\.]+\.\w+$"/></div>
+<div class="field short"><label for="f3">Телефон<span>*</span></label><input value="" id="f3" name="request_phone" type="text" required="1"/></div>
+<div class="field long"><label for="f4">Адрес</label><input value="" id="f4" name="request_address" type="text"/></div>
+<div class="field long"><label for="f5">Комментарии</label><textarea rows="" cols="" id="f5" name="request_comment"></textarea></div>
+<div class="remark">* &#151; поля, обязательные для заполнения</div>
+</div></div></div></div></div></div>
+<p class="al">Мы работаем с юридическими лицами и индивидуальными предпринимателями</p>
+<div class="iholder"><input type="submit" value="" class="submit"/></div></form>
+</div>
+<tmpl_else>
+<p>Ваша корзина пуста</p>
+</tmpl_if>
+</div>
+<div id="copy"><p>&copy;&nbsp;<span>2005</span> Дизайн Цветы ЛП</p></div>
+</div>
+</div>
+<script type="text/javascript">count();calculate();frm=document.getElementsByTagName('form')[0];if(frm)f=new Form(frm);</script>
+<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">var gaJsHost="http://www.";var pageTracker=_gat._getTracker("UA-2900270-1");pageTracker._trackPageview();</script>
+<script type="text/javascript">var ya_cid=47049;</script>
+<script src="http://bs.yandex.ru/resource/watch.js" type="text/javascript"></script>
+<noscript><div><img src="http://bs.yandex.ru/watch/47049" width="1" height="1" alt=""/></div></noscript>
+</body>
+</html>

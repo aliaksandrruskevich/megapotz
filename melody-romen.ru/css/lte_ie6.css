@@ -1,0 +1,8 @@
+@media screen {
+#menu .shade	{ background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/btn_shade.png',sizingMethod='crop'); }
+#portrait .shade	{ background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/frame_shade.png',sizingMethod='crop'); }
+#descr .shade	{ background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/v_shade.png',sizingMethod='crop'); }
+
+#menu .btn img	{ display: none; }
+#stamp	{ display: none; }
+}

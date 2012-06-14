@@ -1,0 +1,114 @@
+@media all {
+img	{ border: 0; }
+body	{ counter-reset: tn; -khtml-user-select: none; -moz-user-select: none; }
+caption:before { content: "Таблица " counter(tn) ": "; counter-increment: tn; }
+
+.price table	{ width: 100%; max-width: 1200px; margin: 50px 0 0 0; }
+.price th	{ background-color: #555; color: #fff; }
+.price td	{ border-bottom: solid 1px #ccc; }
+.text th, .text td	{ padding: 10px; text-align: left; }
+.text caption	{ text-align: right; margin-bottom: 20px; }
+}
+
+@media screen {
+html, body	{ height: 100%; }
+#wrapper	{ min-height: 100%; height: auto; }
+*	{ padding: 0; margin: 0; line-height: 1em; }
+:focus	{outline-style:none;}
+.print	{ display: none; }
+table	{ border-collapse: collapse; }
+td	{ vertical-align: top; padding: 0; }
+
+body	{ font-family: "Times New Roman"; }
+ol, ul	{ margin-left: 50px; }
+p, li	{ line-height: 1.5em; }
+a	{ color: #05c; }
+a:hover	{ color: #f00; }
+a:visited	{ color: #909; }
+
+#menu	{ width: 100%; }
+#menu td	{ font-size: 0.8em; font-family: Arial; }
+#menu a { display: block; color: #eee; background-color: #555; padding: 6px 10px; }
+#menu a:hover	{ color: #fff; background-color: #666; }
+#menu b	{ display: block; padding: 6px 10px; background-color: #eee; }
+#menu .c a	{ background-color: #eee; color: #000; font-weight: bold; text-decoration: none; }
+
+
+.overflowbox	{ padding: 40px 60px; overflow: hidden; }
+.see_all	{ text-align: right; }
+.slogan	{ margin: 60px 60px 0 60px; }
+
+#latest	{ width: 100%; }
+#latest td	{ padding: 0 10px; }
+#latest td div	{ position: relative; width: 300px; height: 200px; overflow: hidden; margin: 0 auto; }
+#latest div p	{ position: absolute; bottom: 0.8em; left: 0; color: #fff; font-family: Arial; font-size: 0.8em; text-align: center; width: 100%; line-height: 1.0em; }
+#latest div p a	{ text-decoration: none; color: #fff; }
+
+#mgmt	{ width: 100%; }
+#mgmt td	{ padding: 60px; text-align: center; }
+
+table.separator	{ background-color: #f5f5ea; width: 100%; }
+table.separator td	{ width: 50%; padding: 20px; }
+table.separator ul	{ margin: 5px 0 10px 5px; list-style: none; }
+table.separator li	{ margin-top: 8px; }
+
+
+.text	{ margin: 30px 40px 100px 40px; padding-bottom: 30px; }
+.text h1	{ margin-bottom: 20px; font-size: 1.6em; line-height: 1.4em; }
+.text h2	{ margin-top: 25px; font-size: 1.2em; line-height: 1.4em; }
+.text p, .text ul	{ margin-top: 20px; margin-bottom: 20px; }
+ul.dash	{ margin-left: 40px; list-style: none; }
+ul.dash li:before	{ content: '\2014\a0'; float: left; margin-left: -1.25em; }
+
+div.reference	{ margin-top: 30px; }
+blockquote	{ background:url('http://www.otdelkalux.ru/i/laquo.png') 0 0 no-repeat; padding: 5px 50px; margin-bottom: 20px; }
+blockquote p	{ margin-bottom: 10px; }
+blockquote p img	{ margin: 0 0 -15px 20px; }
+div.reference .author	{  text-align: right; margin-right: 50px; }
+div.reference .author img	{ border: solid 1px #666; margin-top: 20px; }
+
+.promo	{ border: solid 2px #c1c1b4; background-color: #f5f5ea; padding: 20px 30px; margin: 20px; width: 30%; }
+.box	{ float: right; }
+
+.form	{ width: 400px; margin-top: 30px; }
+.field	{ margin-bottom: 15px; }
+.field label	{ line-height: 1.4em; }
+.field input, .field textarea	{ width: 100%; }
+.form textarea 	{ height: 150px; }
+
+
+#footer	{ padding: 0 20px; margin-top: -25px; background-color: #555; color: #fff; font: normal 0.8em Arial; height: 25px; overflow: hidden; }
+#footer p	{ line-height: 25px; }
+#footer a	{ color: #fff; }
+
+.news small	{ display: block; color: #666; font: normal 0.7em Arial; line-height: 0.7em; }
+.text p	{ margin-bottom: 20px; }
+
+#articles	{ width: 100%; }
+#articles p	{ margin-bottom: 5px; }
+#articles td	{ padding-bottom: 50px; }
+#articles hr	{ width: 80%; border: 0; height: 1px; background-color: #666; margin-bottom: 10px; }
+#articles ul	{ list-style-type: none; margin-left: 0px; }
+#articles li	{ margin-bottom: 5px; }
+
+.text table.bg	{ background-color: #f5f5ea; max-width: 1000px; border: 20px solid #f5f5ea; }
+
+#gallery	{ width: 100%;  padding: 20px; }
+
+#gallery img	{ margin: 30px;  padding: 1px; border: solid 1px #ccc; }
+
+p.switch	{ margin-bottom: 30px; font-size: 0.9em; }
+p.switch span	{ background-color: #ebebcf; }
+p.switch *	{ margin: 0 10px 0 0; padding: 3px 8px; }
+
+
+.open span	{ color: #05c; border-bottom: 1px dashed #05c; cursor: pointer; }
+.descr	{ background: #f5f5ea; padding: 10px; margin: 10px 0; }
+.descr li	{ list-style-type: none; }
+
+}
+
+@media print {
+.noprint	{ display: none; }
+
+}

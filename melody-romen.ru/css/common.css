@@ -1,0 +1,37 @@
+@media all {
+img	{ border: 0; }
+}
+
+@media screen {
+*	{ margin: 0; padding: 0; }
+body	{ min-width: 1000px; }
+html, body	{ height: 100%; }
+h1, h2	{ line-height: 2.5em; margin: 20px 0 15px 0; }
+h1	{ font: normal 24px Arial; }
+h2	{ font: normal 20px Arial; }
+
+body	{ background: url('/i/bg.png') -270px 0; }
+#layout	{ min-height: 100%; padding: 100px 0; background: url('/i/uzor.png'); }
+#text	{ background-color: #fff5d5; width: 700px; padding: 30px; font: normal 14px Verdana; margin: 0 auto; -webkit-box-shadow: 5px 5px 30px #333; -moz-box-shadow: 5px 5px 30px #333; box-shadow: 5px 5px 30px #333; }
+
+#text ul, #text ol	{ margin: 0 35px 20px 35px; }
+#text ul	{ list-style: none; font: normal 14px Verdana; }
+#text li	{ margin-top: 10px; }
+#text, a	{ color: #000; }
+#text a:visited	{ color: #551a8b; }
+#text ul>li:before	{ content: '\2014\a0'; margin-left: -1.35em; }
+#text p, #text li	{ line-height: 1.5em; }
+#text p	{ margin-bottom: 15px; }
+
+.frame	{ width: 209px; height: 209px; float: left; background: url('/i/frame.png') 0 0 no-repeat; -webkit-box-shadow: 5px 5px 30px #333; -moz-box-shadow: 5px 5px 15px #333; box-shadow: 5px 5px 30px #333; margin: 0 30px 30px 0; }
+.frame img	{ width: 176px; height: 176px; padding: 16px 17px; }
+
+#slogan	{ color: #febf70; font: bold 18px "Times New Roman"; /*width: 690px;*/ margin: 20px 60px 40px 0; }
+#slogan p	{ margin-bottom: 10px; }
+
+}
+
+@media print {
+.noprint	{ display: none; }
+*	{ background: none; color: #000; font-family: Tahoma; }
+}

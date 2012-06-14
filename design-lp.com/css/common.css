@@ -1,0 +1,107 @@
+﻿@media screen {
+* { padding: 0; margin: 0; line-height: 1em; }
+*:focus { outline: none; }
+.print	{ display: none }
+
+body { behavior: url("/css/iehover.htc"); }
+
+/*Глобальные определения*/
+body	{ min-width: 1000px; -khtml-user-select: none; -moz-user-select: none; background: #dd3ab5 url('/i/bg.png') 50% 100% no-repeat; background-attachment: fixed; font-family: Tahoma; }
+img	{ border: 0; }
+ul	{ list-style-type: none; }
+h1	{ font: normal 1.9em "Trebuchet MS"; color: #060; }
+.body h2	{ font: normal 1.2em Tahoma; color: #666; margin: 30px 0  0; }
+.body h2 a	{ color: #666; text-decoration: none; }
+.body h2 a:hover	{ text-decoration: underline; }
+h3	{ font: normal 1.5em "Trebuchet MS"; color: #060; }
+p	{ line-height: 1.5em; font-size: 0.8em; }
+.body p	{ margin-top: 15px; }
+
+.textholder	{ padding: 25px; background-color: #fff; }
+.dip img	{ vertical-align: top; padding-top: 10px; padding-right: 4px; }
+.dip_s img	{ margin-right: 20px; padding: 1px; border: 1px solid #666; }
+
+
+
+/* Разметка страницы */
+#uzor	{  text-align: center; }
+.layout	{ margin: 0 auto; width: 960px; text-align: left; }
+.header	{ height: 80px; color: #fff; }
+.body	{ background: #fff url('/i/bottom.gif') 0 100% repeat-x; border-left: solid 1px #e9e9e9; border-right: solid 1px #e9e9e9; padding: 40px 60px; }
+#copy	{ font-size: 0.7em; text-align: right; line-height: 2em; margin: 5px 30px; }
+
+.header div	{ float: left; }
+.logo h2	{ font: normal 1.5em Tahoma; }
+.logo a	{ color: #fff }
+.logo p	{ font: normal 0.7em Tahoma; margin-left: 12.75em; }
+.logo	{ margin: 15px 0; width: 400px; }
+.tel	{ margin: 22px 10px 0 0; font: normal 1.5em Tahoma; width: 340px; text-align: right; }
+.contacts	{ margin: 6px 0; border-left: solid 1px #e87acd; }
+.contacts p	{ margin: 6px 0; }
+.contacts img	{ height: 25px; width: 32px; margin: 0 7px 0 -40px; vertical-align: middle; }
+.contacts a	{ padding-left: 50px; color: #fff; }
+
+.menu	{ height: 37px; background: url('/i/btns.png') 0 0 repeat-x; }
+.menu li	{ float: left; background: url('/i/btns.png') 238px -37px no-repeat; height: 37px; }
+.menu li a	{ color: #fff; font: normal 0.9em Arial; line-height: 37px; display: block; width: 240px; text-align: center; text-decoration: none; }
+.menu li#m4	{ background: none; }
+
+.submenu	{ clear: left; background: #fff url('/i/btns.png') 0 -76px repeat-x; height: 50px; overflow: hidden; }
+.submenu li	{ float: left; font: normal 12px Arial; margin: 13px 0 0 25px; }
+.submenu li a	{ color: #000; }
+
+.banner	{ height: 200px; width: 193px; margin: 10px auto; }
+.b1	{ background: url('/i/banner1.jpg') no-repeat; }
+.b2	{ background: url('/i/banner2.jpg') no-repeat; }
+.b3	{ background: url('/i/banner3.jpg') no-repeat; }
+.b4	{ background: url('/i/banner4.jpg') no-repeat; }
+.banner p	{ padding: 120px 10px 10px 10px; font-size: 0.75em; color: #fff; line-height: 1em; }
+.banner p a	{ color: #fff; font-weight: bold; display: block; padding-bottom: 5px; line-height: 1.3em; }
+
+.m1 #m1 a, .m2 #m2 a, .m3 #m3 a, .m4 #m4 a	{ font-weight: bold; cursor: default; background: #fff; color: #000; }
+
+/* ГЛАВНАЯ */
+.flowarea	{  }
+.flowbox	{ width: 182px; margin: 26px 26px 0 0; height: 144px; float: left; position: relative; cursor: pointer; //cursor: hand; }
+.flowbox .rosebox	{ font-size: 0.7em; text-align: center; position: absolute; top: 0; left: 0; height: 12px; padding: 6px 0; width: 182px; background: #f9dcf2 url('/i/rose.gif') 0 0 no-repeat; }
+.flowbox a	{ color: #000; }
+
+.kollaj	{ float: left; border-right: solid 20px #fff; border-top: solid 20px #fff; }
+
+/* ГАЛЛЕРЕЯ */
+#slideshow	{ clear: left; margin-top: 50px; position: relative; height: 1%; overflow: hidden;padding-top: 350px; }
+#slideshow #nav	{ position: absolute; top: 30px; }
+#slideshow .gallery	{ background-color: #fde; overflow: hidden; height: 1%; display: none; }
+#slideshow .gallery a.s	{ padding: 9px; float: left; }
+#slideshow .pic a.s img	{ height: 100px; }
+#slideshow div.pic div	{ position: absolute; top: -350px; right: 0; height: 350px; width: 500px; text-align: center; background-color: #fff; }
+#slideshow div.pic div p	{ display: none; }
+
+
+#slideshow ul	{ margin-top: 15px; }
+#slideshow li	{ padding: 5px 30px; }
+#slideshow li span 	{ font: normal 18px "Trebuchet MS"; color: #09f; border-bottom: dashed 1px #09f; cursor: pointer; }
+#slideshow li span.c 	{ color: #000; border-bottom: solid 1px #fff; cursor: default; }
+
+.flowtree	{ margin: 30px 0; }
+.tree	{ float: left; width: 50%; overflow: hidden; }
+.tree img	{ float: left; padding: 0 20px; }
+.tree a	{ font: normal 1.15em "Trebuchet MS"; color: #000; padding-top: 10px; }
+.tree div	{ margin: 20px 0; }
+
+.contact td	{ padding: 20px 20px 0 0; }
+.contact p.b	{ font: normal 1.15em "Trebuchet MS"; text-align: left; }
+.contact p	{ margin: 5px 0; text-align: right; }
+
+
+#YMapsID td	{ margin: 0; padding: 0; }
+
+}
+
+@media print {
+.print	{ display: block; }
+*	{ background: none; color: #000; font-family: Tahoma; }
+.menu, .left, .pages, .subline, .contacts, .buy	{ display: none; }
+.item	{ float: left; border-bottom: solid 2px #666; margin: 30px; }
+.alert_t	{ clear: left; }
+}

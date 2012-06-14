@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-RU" lang="ru-RU">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Веб-доступность: Взгляд на WCAG 2.0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="Инициатива по Веб-доступности, Веб-доступность, WAI, W3C, World Wide Web, Web, WWW, Консорциум, компьютер, доступ, доступность, ограниченные возможности, международный, W3, стандарт, технология, бесплатная, с открытым исходным кодом, программное обеспечение" name="Keywords" />
+<link href="http://www.w3.org/WAI/wai-main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+.review {
+background-color: #CCCCFF;
+}
+#headQuicktips {
+font-size: 85%;
+font-weight: normal;
+text-transform: uppercase;
+font-family: "Trebuchet MS", sans-serif;
+}
+.version {
+font-size: 95%;
+color: #666666;
+text-align: right;
+}
+-->
+</style>
+<!--[if IE 7]><link rel="stylesheet" href="http://www.w3.org/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
+</head>
+
+
+<body>
+<div id="controls"><ul><li><a href="#main" shape="rect"><img src="http://www.w3.org/Icons/downinpage.png" alt=""/> К содержанию</a></li><li>| <a rel="external nofollow" href="http://www.w3.org/WAI/changedesign.html" shape="rect">Изменить цвета или размер шрифта</a></li></ul></div>
+<div id="masthead"><p id="logos"><a rel="external nofollow" href="http://www.w3.org/" shape="rect"><img alt="W3C" height="48" src="http://www.w3.org/Icons/w3c_home" width="72"/></a><a rel="external nofollow" href="http://www.w3.org/WAI/" shape="rect"><img alt="Инициатива по Веб-доступности" height="48" src="http://www.w3.org/WAI/images/wai-temp" /></a></p></div>
+<div id="tagline"><p>WAI: Статегии, указания и ресурсы для создания Сети, доступной для людей с ограниченными возможностями</p></div>
+<div id="nav">
+<h2>Навигация</h2>
+<p id="w3cnav"><a rel="external nofollow" href="http://www.w3.org/">Главная W3C</a></p>
+<p id="subhomenav"><a rel="external nofollow" href="http://www.w3.org/WAI/">Инициатива по Веб-доступности (WAI)</a></p>
+<ol id="nav1" type="A">
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/gettingstarted/Overview.html" shape="rect">Введение в Веб-доступность</a></li>
+<li class="current-nav"><a rel="external nofollow" href="http://www.w3.org/WAI/guid-tech.html" shape="rect">Указания и техники</a>
+<ol class="anno">
+<li class="current-nav"><a href="http://www.akvi.ru/WAI/intro/wcag.html" shape="rect">Веб-контент (WCAG)</a>
+<ul>
+<li class="nav-head">Техническая информация WCAG 2.0
+<ol type="i"><li class="external"><a rel="external nofollow" href="http://www.w3.org/WAI/WCAG20/quickref/" shape="rect">Как соответствовать WCAG 2.0 (Краткий справочник) <img src="http://www.w3.org/Icons/tr.png" alt="в другом формате" /></a></li>
+<li><a href="http://accessibility.ru/docs/WCAG20Russian031109.html" shape="rect">WCAG 2.0 <img src="http://www.w3.org/Icons/tr.png" alt="технический отчёт" /></a></li>
+<li class="external"><a rel="external nofollow" href="http://www.w3.org/TR/WCAG20-TECHS/" shape="rect">Техники <img src="http://www.w3.org/Icons/tr.png" alt="технический отчёт"/></a></li>
+<li class="external"><a rel="external nofollow" href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/" shape="rect">Понимание <img src="http://www.w3.org/Icons/tr.png" alt="технический отчёт"/></a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/WCAG2-Conformance.html" shape="rect">Логотипы соответствия</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/WCAG20/translations.html" shape="rect">Переводы</a></li>
+</ol>
+</li>
+<li class="nav-head">Обучающие материалы по WCAG 2.0
+<ol type="i"><li class="external"><a rel="external nofollow" href="http://www.w3.org/WAI/intro/wcag20" shape="rect">Документы WCAG <img src="http://www.w3.org/Icons/tr.png" alt="в другом формате" /></a></li>
+<li><span class="label"><span id="current-icon">»</span>Краткое введение во WCAG</span></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/WCAG20/wcag2faq.html" shape="rect">WCAG 2 FAQ</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/presentations/WCAG20/Overview.php" shape="rect">Презентации</a></li>
+</ol>
+</li>
+<li class="nav-head">Переход к 2.0
+<ol type="i"><li><a rel="external nofollow" href="http://www.w3.org/WAI/WCAG20/from10/diff.php" shape="rect">Чем 2.0 отличается от 1.0</a></li>
+<li class="external"><a rel="external nofollow" href="http://www.w3.org/WAI/WCAG20/from10/comparison/" shape="rect">Сравнение 1.0 и 2.0 <img src="http://www.w3.org/Icons/tr.png" alt="в другом формате" /></a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/WCAG20/from10/websites.html" shape="rect">Обновите ваш сайт</a></li></ol></li>
+<li class="nav-head">Формы отправки
+<ol type="i"><li class="external"><a rel="external nofollow" href="http://www.w3.org/WAI/GL/WCAG20/TECHS-SUBMIT/" shape="rect">Отправка техник <img src="http://www.w3.org/Icons/tr.png" alt="в другом формате" /></a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/WCAG20/comments/Overview.html" shape="rect">Комментировать WCAG</a></li></ol></li><li><a rel="external nofollow" href="http://www.w3.org/WAI/WCAG20/docslist.html" shape="rect">Другие документы WCAG 2.0</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/intro/wcag10docs.php" shape="rect">Документы WCAG 1.0</a></li>
+</ul>
+</li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/intro/atag.php" shape="rect">Инструменты авторинга (ATAG)</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/intro/uaag.html" shape="rect">Браузеры (UAAG)</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/intro/earl.php" shape="rect">Язык оценки и отчетов (EARL)</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/intro/aria.php" shape="rect">WAI-ARIA (Веб приложения)</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/specific-techs.html" shape="rect">Специальные технологии</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/intro/linking.html" shape="rect">Ссылки и связывание документов</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/intro/w3c-process.php" shape="rect">Процесс разработки</a></li>
+</ol>
+</li><li><a rel="external nofollow" href="http://www.w3.org/WAI/managing.html" shape="rect">Управление доступностью</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/eval/Overview.html" shape="rect">Оценка доступности</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/groups.html" shape="rect">Группы WAI</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/about-links.html" shape="rect">О WAI</a></li>
+</ol>
+
+<div id="nav-static">
+<ul>
+<li><a shape="rect" href="http://www.w3.org/WAI/sitemap.html">Карта сайта WAI</a></li>
+<li><a shape="rect" href="http://www.w3.org/WAI/sitehelp.html">Помощь по сайту WAI</a></li>
+<li><a shape="rect" href="http://www.w3.org/WAI/wai-translations.html"><img src="http://www.w3.org/WAI/images/translations-small-1.png" alt="" />Переводы</a></li>
+<li><a shape="rect" href="http://www.w3.org/WAI/highlights/about-rss.html"><img src="http://www.w3.org/Icons/rss1.gif" alt="" />Об RSS</a></li>
+<li><a rel="external nofollow" href="http://www.w3.org/WAI/search.php" shape="rect"><img src="http://www.w3.org/WAI/images/search-icon.png" alt="" />Поиск</a></li>
+</ul>
+</div>
+</div>
+
+<div id="main">
+
+<br>
+<hr>
+<p>Данный документ является переводом статьи "<b>Web Accessibility: WCAG 2.0 at a Glance</b>".</p>
+<p>Официальная версия документа существует только на сайте <acronym title="World Wide Web Consortium">W3C</acronym> <a href="http://www.w3.org/WAI/WCAG20/glance/Overview.html">http://www.w3.org/WAI/WCAG20/glance/Overview.html</a></p>
+<p>Данный перевод НЕ является официальным документом <acronym title="World Wide Web Consortium">W3C</acronym>. Все авторские права принадлежат <acronym title="World Wide Web Consortium">W3C</acronym>. Данный документ может содержать ошибки перевода и опечатки.</p>
+<p>Автор перевода: Михаил Шестаков</p>
+<p>Русский перевод: <a href="http://www.akvi.ru/WAI/WCAG20/glance/Overview.html">http://www.akvi.ru/WAI/WCAG20/glance/Overview.html</a></p>
+<hr>
+
+<h1><span id="headQuicktips">Маленькие хитрости по Веб-доступности</span><br clear="none" />Краткое введение во WCAG 2.0</h1>
+<p>Эта страница содержит краткое изложение принципов Доступности Веб-контента <a href="http://accessibility.ru/docs/WCAG20Russian031109.html" shape="rect">WCAG 2.0</a>; однако <strong>она является лишь изложением и не является точной версией</strong>. Пожалуйста, смотрите следующие ключевые ресурсы для изучения и использования WCAG 2:</p>
+<ul>
+  <li><span class="style1"><a href="http://www.akvi.ru/WAI/intro/wcag.html" shape="rect">Обзор WCAG</a></span></li>
+  <li><strong><a href="http://www.w3.org/WAI/WCAG20/quickref/" shape="rect">Как соответствовать WCAG 2.0: Быстрое руководство</a> по требованиям (критериям успеха) WCAG 2.0 и техникам</strong></li>
+</ul>
+
+
+<div class="border1c60">
+<p><strong>Воспринимаемость</strong></p>
+<ul class="listwithp">
+  <li>Предоставить <strong>альтернативный текст</strong> для нетекстового контента.</li>
+  <li>Предоставить <strong>подписи</strong> и <strong>альтернативы</strong> для аудио и видео контента.</li>
+  <li>Сделать контент <strong>адаптируемым</strong> и сделать его <strong>доступным</strong> для вспомогательных технологий.<br clear="none" />
+  </li>
+  <li>Использовать <strong>достаточный контраст</strong>, чтобы все было разборчиво слышно и видно.</li>
+</ul>
+
+<p class="listintro"><strong>Управляемость</strong></p>
+<ul class="listwithp">
+  <li>Сделать функционал <strong>доступным с клавиатуры</strong>.</li>
+  <li>Дать пользователям <strong>достаточно времени</strong> для прочтения и использования контента.</li>
+  <li>Не использовать контент, который использует <strong>силой притягивает на себя внимание пользователя</strong>.</li>
+  <li>Помогать пользователям <strong>осуществлять навигацию и находить</strong> контент.</li>
+</ul>
+
+<p class="listintro"><strong>Понятность</strong></p>
+<ul class="listwithp">
+  <li>Сделать текст <strong>читаемым и понятным</strong>.</li>
+  <li>Сделать так, чтобы контент появлялся и работал так, <strong>как этого ожидает</strong> пользователь.</li>
+  <li>Помогаль пользователям <strong>избегать и исправлять ошибки</strong>.</li>
+</ul>
+
+<p class="listintro"><strong>Надежность</strong></p>
+<ul class="listwithp">
+  <li>Максимизировать <strong>совместимость</strong> с текущими и будущими технологиями.</li>
+</ul>
+</div>
+<p class="version">© 2008 W3C (MIT, ERCIM, Keio)</p>
+<br clear="none" />
+
+
+<p>Эта страница на английском языке, отформатированная для печати (без навигации), в PDF файлах для бумаги формата A4 и 8,5" х 11":</p>
+<ul>
+  <li><a href="http://www.w3.org/WAI/WCAG20/glance/WCAG2-at-a-Glance-a4.pdf" shape="rect">Взгляд на WCAG 2 PDF A4</a></li>
+  <li><a href="http://www.w3.org/WAI/WCAG20/glance/WCAG2-at-a-Glance.pdf" shape="rect">Взгляд на WCAG 2 PDF 8.5x11</a></li>
+</ul>
+</div>
+
+<div id="footer">
+<h2>О документе</h2>
+
+<p><strong>Содержание обновлялось:</strong> 17 октября 2008, ссылки на документы для печати добавлены 25 февраля 2009 [<a href="http://www.w3.org/WAI/EO/changelogs/cl-quicktips" shape="rect">список изменений</a>]<br clear="none" />
+Редакторы: Shawn Lawton Henry и Wayne Dick. Разработано совместно с Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/" shape="rect">EOWG</a>) и Рабочей группы WCAG
+(<a href="http://www.w3.org/WAI/GL/" shape="rect">РГ WCAG</a>).</p>
+
+<p>[<a href="/WAI/contacts" shape="rect">Связь с WAI</a>] Обратная связь приветствуется по <a href="mailto:wai-eo-editors@w3.org" shape="rect">wai-eo-editors@w3.org</a>.</p>
+
+<div class="copyright"><p><a rel="Copyright" href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" shape="rect">Copyright</a> © 1994-2008
+<a rel="external nofollow" href="http://www.w3.org/" shape="rect"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a rel="external nofollow" href="http://www.csail.mit.edu/" shape="rect"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a rel="external nofollow" href="http://www.ercim.org/" shape="rect"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>,
+<a rel="external nofollow" href="http://www.keio.ac.jp/" shape="rect">Keio</a>), все права защищены. К документу применимы правила W3C, касающиеся 
+<a rel="external nofollow" href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer" shape="rect">ответственности</a>,
+<a rel="external nofollow" href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks" shape="rect">торговых марок</a>,
+<a rel="Copyright" href="http://www.w3.org/Consortium/Legal/copyright-documents" shape="rect">использования документов</a> и <a rel="Copyright" href="http://www.w3.org/Consortium/Legal/copyright-software" shape="rect">лицензии на программное обеспечение</a>. 
+Пользуясь данным сайтом вы подтверждаете согласие с теми, что будете соблюдать <a rel="external nofollow" href="http://www.w3.org/Consortium/Legal/privacy-statement#Public" shape="rect">публичную</a> и <a rel="external nofollow" href="http://www.w3.org/Consortium/Legal/privacy-statement#Members" shape="rect">личную</a> конфиденциальность участников.</p>
+
+<p>Переведено при поддержке компании AKVI - <a href="http://www.akvi.ru/">компьютерная помощь на дому</a>.</p>
+
+</div>
+</div>
+</body>
+</html>

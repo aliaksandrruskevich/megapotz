@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+    <title>Проверка НПС на Яндексе</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <script src="ya_xml.js" type="text/javascript"></script> 
+	<link rel="stylesheet" type="text/css" href="ya_xml.css"/> 
+</head>  
+ 
+ 
+<body> 
+<!-- Шаг 1 --> 
+<fieldset id="step1"> 
+<legend>Проверка работоспособности ссылок</legend> 
+<p>Необходимо скопировать из Excel колонки с экспортом из биржи в формате</p> 
+<p><code>URL	Текст ссылки	URL страницы	запрос</code></p> 
+<p><textarea id="sape_export" cols="80" rows="20"></textarea></p> 
+<p><input id="parse" type="button" value="Синтаксический анализ данных"/><input id="yandex" type="button" value="Проверка в Яндексе"/></p> 
+</fieldset> 
+ 
+<!-- Шаг 2 --> 
+<fieldset id="step2"> 
+<legend>Результат проверки</legend> 
+<p><textarea id="result" cols="80" rows="20"></textarea></p> 
+</fieldset> 
+ 
+<!-- Прогресс --> 
+<div id="progress"><div id="bar_holder"><div id="bar"></div></div></div> 
+ 
+<script type="text/javascript">init();</script> 
+</body> 
+</html>

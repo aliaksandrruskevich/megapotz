@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+	<title>Вход в AKVI.Online</title>
+	<link rel="stylesheet" type="text/css" href="/css/common.css"/>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<style type="text/css" media="screen">html, body, #auth	{ height: 100%; }</style>
+</head>
+<body>
+	<div><a href="/" id="logo"><img src="/i/logo.png" alt=""/></a></div>
+	<div style="position: absolute; right: 20px;">
+		<p class="back"><a href="http://www.akvi.ru/">Вернуться на AKVI.ru</a> &rarr;</p>
+		<p class="phone">(495) 646-01-26</p>
+		<p class="line">служба поддержки</p>
+	</div>
+	<table id="auth">
+		<tr>
+			<td><div class="stop"><div class="form rel">
+				<div class="dialog">Стой, кто идет?</div>
+				<form action="/cgi-bin/auth.cgi" method="post">
+					<div class="field login">
+						<label for="num">Номер карточки</label>
+						<input type="text" id="num" name="num"/>
+					</div>
+					<div class="field pass">
+						<label for="pin">PIN</label>
+						<input type="password" id="pin" name="pin"/>
+					</div>
+					<div class="submit"><input type="submit" value="Войти"/></div>
+				</form>
+			</div></div></td>
+		</tr>
+	</table>
+<!--[if lte IE 6]><img src="/i/0.gif" width="1000" height="1"/><![endif]-->
+</body>
+</html>

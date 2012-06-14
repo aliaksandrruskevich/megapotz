@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: *index.html
+Disallow: *?
+Host: www.otdelkalux.ru

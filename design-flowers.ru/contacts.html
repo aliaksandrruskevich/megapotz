@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<title>Контактная информация</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="/css/common.css"/>
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/css/lte_ie7.css"/><![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/css/lte_ie6.css"/><![endif]-->
+<script type="text/javascript" src="/js/global.js"></script>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту  (начало) -->
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту  (начало) -->
+<script src="http://api-maps.yandex.ru/1.1/?key=AP5LNkoBAAAAgJ4hDwIAT_ci0cZKiyMuOrULFHHQi1pejgUAAAAAAAAAAACNx_biDi1g2Y6uIxuOaRjYeUbeUQ==&wizard=constructor" type="text/javascript"></script>
+<script type="text/javascript">
+    YMaps.jQuery(window).load(function () {
+        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-289")[0]);
+        map.setCenter(new YMaps.GeoPoint(37.791528,55.814967), 15, YMaps.MapType.MAP);
+        map.addControl(new YMaps.Zoom());
+        map.addControl(new YMaps.ToolBar());
+        map.addControl(new YMaps.TypeControl());
+
+        YMaps.Styles.add("constructor#pmrdlPlacemark", {
+            iconStyle : {
+                href : "http://api-maps.yandex.ru/i/0.3/placemarks/pmrdl.png",
+                size : new YMaps.Point(36,41),
+                offset: new YMaps.Point(-13,-40)
+            }
+        });
+
+
+        YMaps.Styles.add("constructor#006CFFc85Polyline", {
+            lineStyle : {
+                strokeColor : "006CFFc8",
+                strokeWidth : 5
+            }
+        });
+       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.787623,55.818108), "constructor#pmrdlPlacemark", "Дизайн-Цветы ЛП"));
+       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.798212,55.810327), "constructor#pmrdlPlacemark", "1й вагон из центра, выход налево, из стеклянных дверей направо"));
+       map.addOverlay(createObject("Polyline", [new YMaps.GeoPoint(37.798362,55.81058),new YMaps.GeoPoint(37.798062,55.816694),new YMaps.GeoPoint(37.785573,55.816573),new YMaps.GeoPoint(37.785445,55.817636),new YMaps.GeoPoint(37.787419,55.817588),new YMaps.GeoPoint(37.787483,55.818059)], "constructor#006CFFc85Polyline", ""));
+        
+        function createObject (type, point, style, description) {
+            var allowObjects = ["Placemark", "Polyline", "Polygon"],
+                index = YMaps.jQuery.inArray( type, allowObjects),
+                constructor = allowObjects[(index == -1) ? 0 : index];
+                description = description || "";
+            
+            var object = new YMaps[constructor](point, {style: style, hasBalloon : !!description});
+            object.description = description;
+            
+            return object;
+        }
+    });
+</script>
+</head>
+<body>
+<div id="layout">
+<div id="header">
+<div class="logo"><h2><a href="/">Дизайн-Цветы ЛП</a></h2><p>оптовая и мелкооптовая продажа искусственных растений</p></div>
+<div class="tel"><h2>+7 (495) 462-22-23<br/>+7 (926) 521-19-18</h2></div>
+<div class="contacts"><a href="/contacts.html"><img src="/i/compass.png" alt=""/>Контактная информация</a></div>
+</div>
+<div id="menu"><ul><li><a href="/flowers/">Искусственные цветы</a></li><li><a href="/green/">Зелень</a></li><li><a href="/tree/">Искусственные деревья</a></li><li><a href="/fruit/">Фрукты, овощи и пр.</a></li><li><a href="/composition/">Композиции, коллажи</a></li><li><a href="/vase/">Вазы, керамика</a></li><li class="r"><a href="/zakaz/">Дизайнерские работы</a></li></ul></div>
+<div class="subline"><a href="mailto:flowerslp@yandex.ru" class="feedback"><img src="/i/0.gif" alt=""/>Напишите нам</a><a href="/cgi-bin/basket.cgi" class="basket" id="basket"><img src="/i/0.gif" alt=""/>Корзина</a></div>
+<div id="body"><div class="textholder">
+<h1 style="padding: 0">Условия продажи</h1>
+
+
+
+
+<div class="txt">
+<p>Мы работаем с юридическими лицами и индивидуальными предпринимателями. Мы продаем только оптом от 1 000-2 000 рублей (1-2 модели). Товар отпускается  в ассортименте цвета: все цвета (см.минимальную партию.)</p>
+<p>Оплата может производиться как по безналичному, так и за наличный расчёт. С отсрочкой платежа и под реализацию товара мы не работаем.</p>
+<p>У нас есть возможность доставки до транспортной компании – стоимость доставки по Москве 1&nbsp;500 руб., кроме транспортной компании Грузовозофф (доставка бесплатная).</p>
+<h2>Необходимый пакет документов:</h2>
+<p><b>Для юридических лиц:</b></p>
+<ul class="list">
+<li>Паспорт</li>
+<li>Карточка организации (реквизиты фирмы)</li>
+<li>Копия свидетельства ОГРН</li>
+<li>Доверенность по форме М2 или М2А, заверенная реестровой печатью (для доверенного лица) или печать (для генерального директора)</li>
+<li>Копия устава</li>
+</ul>
+<p><b>Для индивидуальных предпринимателей:</b></p>
+<ul class="list">
+<li>Копия свидетельства ОГРН</li>
+<li>Копия свидетельства ИНН</li>
+<li>Юридический и фактический адрес, контактные телефоны</li>
+<li>паспорт</li>
+</ul>
+<p>Также для ИП необходимо иметь:</p>
+<ul class="list">
+<li>ИП с печатью
+<ul><li>Лично: реестровую печать</li><li>Через доверенное лицо: доверенность по форме М2 или М2А, заверенную реестровой печатью</li></ul>
+</li>
+<li>ИП без печати
+<ul><li>Лично: копию свидетельства о регистрации ИП</li><li>Через доверенное лицо: копию свидетельства о регистрации ИП <b>и</b> нотариально заверенную доверенность от ИП на получение товара
+</li></ul>
+</li>
+</ul>
+
+<p>Скачать шаблон <a href="/dov.xls">доверенности</a></p>
+</div>
+
+<h1>Контактная информация</h1>
+<div class="txt"></div>
+<table class="contact">
+<tr><td><p>Телефоны:</p></td><td><p class="b">+7 (926) 521-19-18<br/>+7 (495) 462-22-23</p></td></tr>
+<tr><td><p>Электронная почта:</p></td><td><p class="b"><a href="mailto:flowerslp@yandex.ru">flowerslp@yandex.ru</a></p></td></tr>
+<tr><td><p>Наш адрес:</p></td><td><p class="b">Москва, ул. Байкальская, 7</p></td></tr>
+<tr><td><p>График работы:</p></td><td><p class="b">пн-пт: 9<sup>00</sup>—18<sup>00</sup><br/>сб, вс — <span style="color: #f00">выходные</span></p></td></tr>
+
+<style>
+#YMapsID-289 td	{ margin: 0; padding: 0; }
+</style>
+<tr><td><p>Карта проезда:</p></td><td><div id="YMapsID-289" style="width:600px;height:450px"></div></td></tr>
+</table>
+</div><div id="copy"><p>&copy;&nbsp;<span>2005</span> Дизайн Цветы ЛП</p></div></div></div><script type="text/javascript">count();</script><script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">var gaJsHost="http://www.";var pageTracker=_gat._getTracker("UA-2900270-1");pageTracker._trackPageview();</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter47049 = new Ya.Metrika({id:47049, clickmap:true, accurateTrackBounce:true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/47049" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+</body></html>

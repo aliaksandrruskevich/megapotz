@@ -1,0 +1,118 @@
+﻿@media screen {
+body	{  margin: 0; padding: 0; text-align: center; background: #408ad1 url('/i/bg.png') 0 0 repeat-x; }
+table	{ border-collapse: collapse; }
+td	{ padding: 0; }
+h1	{ font: normal 1.5em Tahoma, sans-serif; color: #fff; margin: 0; padding: 0; line-height: 1em; }
+h3	{ font: normal 1.2em Tahoma, sans-serif; color: #39f; margin: 5px 0 20px 0; padding: 0; line-height: 1em; }
+p, li	{ font: normal 0.75em Tahoma, sans-serif; padding: 0; line-height: 1.3em; }
+p	{ margin: 15px 0 0 0; }
+li	{ margin-top: 3px; }
+hr	{ margin: 20px 0 0 0; border: 0; background-color: #333; height: 1px; }
+
+img	{ vertical-align: middle; border: 0; }
+.layout	{ width: 975px; height: 100%; text-align: left; margin: 0 auto; }
+
+.left	{ float: left }
+.right	{ float: right; }
+
+.white	{ color: #fff }
+.black	{ color: #000 }
+
+td.header	{ font: normal 1.15em Tahoma, sans-serif; color: #fff; line-height: 58px; padding: 0 10px; }
+div.oh	{ background: url('/i/list.png') 0 50% no-repeat; }
+td.header a	{ color: #fff; padding: 0; margin-left: 50px; }
+.dashed	{ text-decoration: none; border-bottom: 1px dashed #fff; }
+
+ul.menu	{ margin: 0; list-style-type: none; padding: 0;  }
+ul.menu li	{ float: left; background: #79b6e7 url('/i/menu.png') -164px 0 no-repeat; font: normal 0.95em "Trebuchet MS", sans-serif; }
+ul.menu li a	{ display: block; width: 162px; line-height: 42px; text-align: center; color: #fff; }
+.m1 li#m1 a, .m2 li#m2 a, .m3 li#m3 a, .m4 li#m4 a, .m5 li#m5 a, .m6 li#m6 a	{ text-decoration: none; cursor: default; }
+li#m1	{ background-position: 0 0; width: 163px; }
+.m2 li#m2, .m3 li#m3, .m4 li#m4, .m5 li#m5	{ background-position: -164px -42px; }
+.m1	li#m1	{ background-position: 0 -42px; }
+.m6	li#m6	{ background-position: -326px -42px; }
+li#m6	{ background-position: -326px 0; width: 164px; }
+
+.content	{ height: 630px; }
+.frame	{ width: 100%; height: 100%; background: url('/i/frame.png') 0 0 no-repeat; position: relative; }
+.m1 .content	{ background: url('/i/bg1.jpg') 0 0 no-repeat; }
+.m2 .content	{ background: url('/i/bg2.jpg') 0 0 no-repeat; }
+.m3 .content	{ background: url('/i/bg3.jpg') 0 0 no-repeat; }
+.m4 .content	{ background: url('/i/bg5.jpg') 0 0 no-repeat; }
+.m5 .content	{ background: url('/i/bg1.jpg') 0 0 no-repeat; }
+.m6 .content	{ background: url('/i/bg4.jpg') 0 0 no-repeat; }
+
+.m1 .text	{ position: absolute; top: 55px; left: 30px; width: 700px }
+
+.m2 h1, .m3 h1, .m4 h1	{ position: absolute; top: 25px; left: 40px; }
+.m2 .text	{ position: absolute; top: 85px; left: 70px; width: 570px }
+.m2 img	{ position: absolute; top: 311px; width: 146px; height: 108px; border: 0; }
+.m2 #f1	{ left: 214px }
+.m2 #f2	{ left: 376px }
+.m2 #f3	{ left: 536px }
+
+.m3 .text	{ position: absolute; top: 80px; left: 70px; width: 570px }
+
+.m6 h1	{ text-align: center; padding: 25px 0; color: #39f; }
+.m6 .text	{ text-align: center; }
+
+.m4 .text	{  width: 540px; height: 400px color: #000; left: 60px; top: 85px; position: absolute; }
+
+.copy	{ width: 240px; height: 48px; background: url('/i/truck.png') 0 0 no-repeat; margin: 20px 0; position: relative; }
+.copy div	{ position: absolute; top: 6px; left: 150px; font: normal 0.85em Tahoma; color: #06c; }
+
+/*Цены*/
+.price	{ margin: 0 auto; width: 596px; font-family: Verdana, sans-serif; text-align: left; }
+.price th	{ background-color: #68c3ff; font-weight: normal ! important; font-size: 0.75em; }
+.price th.l	{ background: url('/i/price_top.png') 0 0 no-repeat; }
+.price th.r	{ background: url('/i/price_top.png') 100% 0 no-repeat; }
+.price tbody td, .price th	{ color: #fff; text-align: center; position: relative; z-index: 2; }
+.price th	{ padding: 10px 0; }
+.price tbody td	{ background-color: #fff; color: #06c; padding: 10px 0; font-size: 0.75em; }
+.price tbody tr.bg_blue td	{ background-color: #c1e9fe; }
+.price tfoot td	{ background: url('/i/price_bg.png') 0 100% repeat-y ! important; padding: 20px 0; background: none; position: relative; overflow: hidden; }
+.price li	{ margin: 8px 0 0 0; position: relative; z-index: 2; }
+.footer	{ height: 100%; }
+
+div.shadow	{ visibility: hidden; background: url('/i/order.png') 50% 0 no-repeat; width: 100%; height: 472px; position: absolute; z-index: 100; top: 150px; left: 0; }
+div.box	{ width: 360px; height: 360px; margin: 56px auto; text-align: left; padding-top: 10px;position: relative; }
+div.field	{ margin: 0 0 10px 0; padding: 0 35px; clear: both; }
+div.top	{ padding: 0 10px 0 35px; overflow: hidden; _height: 25px; }
+div.top img	{cursor: pointer; //cursor: hand;}
+label	{ display: block; font: normal 0.75em Tahoma, sans-serif; margin: 0 0 3px 0; }
+input, textarea	{ width: 280px; }
+textarea	{ height: 75px }
+#submit, #ok	{ width: 99px; height: 30px; border: 0; }
+#submit	{ background: url('/i/btns.png') 0 -30px no-repeat; }
+#ok	{ border: 0; background: url('/i/btns.png') 0 0 no-repeat; }
+
+/*Photo*/
+.slideshow 	{ height: 100%; }
+.slideshow .nav	{ vertical-align: middle; width: 195px; }
+.slideshow .nav ul	{ list-style-type: none; margin: 0; padding: 0; }
+.slideshow .nav li	{ margin: 0; padding: 0; border-bottom: 1px solid #bbb; border-top: 1px solid #eee; }
+.slideshow .nav li a	{ margin: 0; font: normal 16px Tahoma, sans-serif; color: #666; display: block; padding: 10px 0 12px 40px; }
+.slideshow .nav li.sel  a	{ margin: 0; color: #fff; background-color: #6face3; text-decoration: none; }
+
+.m5 .content	{ background-color: #ccc; background-position: 100% 0; background-repeat: no-repeat; background-image: none; }
+
+div.navi	{ position: absolute; left: 390px; top: 555px; width: 389px; height: 62px; background: url('/i/nav.png') 0 0 no-repeat; z-index: 4; }
+div.navi img	{ cursor: pointer ! important; position: absolute; top: 10px; z-index: 99; }
+div.navi img#l	{ left: 10px; }
+div.navi img#r	{ right: 10px; }
+div.navi p	{ text-align: center; margin: 20px 0; padding: 0 30px; font: normal 1.2em Arial; color: #2465a3; }
+
+
+.promote	{ font: normal 11px Tahoma; color: #fff; margin: 30px 10px; }
+.promote a	{ color: #fff; }
+}
+
+@media print {
+.shadow, .oh, .menu, .footer, #f1, #f2, #f3	{display: none}
+.price	{border-collapse: collapse; }
+th	{text-align: left}
+}
+
+@media handheld {
+.shadow, .oh, #f1, #f2, #f3	{display: none}
+}

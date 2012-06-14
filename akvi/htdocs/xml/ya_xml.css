@@ -1,0 +1,5 @@
+textarea	{ width: 100%; }
+#yandex	{ display: none }
+#progress	{ display: none; position: fixed; top: 200px; left: 10%; width: 80%; border: solid 1px #ccc; -moz-box-shadow: 0 0 10px #ccc; -moz-border-radius: 5px; background-color: #fff; }
+#bar_holder	{ border: #3d7098; background-color: #c7d5e1; padding: 1px; margin: 30px; }
+#bar	{ background-color: #3d7098; width: 0%; height: 20px; }

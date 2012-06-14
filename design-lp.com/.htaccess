@@ -1,0 +1,22 @@
+AddDefaultCharset windows-1251
+ErrorDocument 404 /404.html
+DefaultLanguage ru
+FileETag None
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^design-lp\.com
+RewriteRule ^(.*)$ http://www.design-lp.com/$1 [R=permanent,L]
+
+<ifModule mod_headers.c>
+	Header unset ETag
+	Header unset Last-Modified
+	Header set Cache-Control "public, max-age=592200"
+</ifModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 4 hours"
+	ExpiresByType application/javascript A592200
+	ExpiresByType application/x-javascript A592200
+	ExpiresByType text/html A592200
+</IfModule>

@@ -1,0 +1,1 @@
+window.onload=function(){var body=document.getElementsByTagName('body')[0];body.oncopy=function(){return false;};body.oncontextmenu=function(){return false;};body.ondragstart=function(){return false;};if(body.attachEvent){body.attachEvent("onselectstart",function(){return false});}if(window.opera){body.onmousedown=function(){return false;}};}

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+<!--[if lte IE 6]><meta http-equiv="imagetoolbar" content="no"/><![endif]-->
+<title>Контактная информация</title>
+<link rel="stylesheet" type="text/css" href="http://static.akvi.ru/css/common.css"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+</head>
+<body class="coupon">
+<div class="noprint"><a href="http://www.akvi.ru/"><img src="http://static.akvi.ru/i/logo.png" alt="Скорая компьютерная помощь AKVI" class="png24 logo"><!--[if lte IE 6]><img src="http://static.akvi.ru/i/0.gif" alt="Скорая компьютерная помощь AKVI" class="logo_ie6"/><![endif]--></a><div class="back"><a href="javascript:history.back(1)">Вернуться на сайт</a></div></div>
+
+	
+<div class="txt">
+<h1>Контактная информация</h1>
+<p><b>Телефон</b>: +7 (495) 646-01-26</p>
+<p><b>Режим работы</b>: круглосуточно, без выходных</p>
+<p><b>Электронная почта</b>: <a href="mailto:info@akvi.ru">info@akvi.ru</a></p>
+
+
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту  (начало) -->
+<script src="http://api-maps.yandex.ru/1.1/?key=ABJOmksBAAAAD7AMMQIAFMA_Jbsm5kK5cBp-ipddlhwjstIAAAAAAAAAAAB1kUmX4jojTBen42EJ6SlcFiJoDg==&modules=pmap&wizard=constructor" type="text/javascript"></script>
+<script type="text/javascript">
+    YMaps.jQuery(window).load(function () {
+        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-5431")[0]);
+        map.setCenter(new YMaps.GeoPoint(37.593233,55.795813), 16, YMaps.MapType.MAP);
+        map.addControl(new YMaps.Zoom());
+        map.addControl(new YMaps.ToolBar());
+        YMaps.MapType.PMAP.getName = function () { return "Народная"; };
+        map.addControl(new YMaps.TypeControl([
+            YMaps.MapType.MAP,
+            YMaps.MapType.SATELLITE,
+            YMaps.MapType.HYBRID,
+            YMaps.MapType.PMAP
+        ], [0, 1, 2, 3]));
+
+        YMaps.Styles.add("constructor#pmrdmPlacemark", {
+            iconStyle : {
+                href : "http://api-maps.yandex.ru/i/0.3/placemarks/pmrdm.png",
+                size : new YMaps.Point(28,29),
+                offset: new YMaps.Point(-8,-27)
+            }
+        });
+
+
+        YMaps.Styles.add("constructor#FF3732c85Polyline", {
+            lineStyle : {
+                strokeColor : "FF3732c8",
+                strokeWidth : 5
+            }
+        });
+       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.595528,55.795039), "constructor#pmrdmPlacemark", "AKVI"));
+       map.addOverlay(createObject("Polyline", [new YMaps.GeoPoint(37.590335,55.79354),new YMaps.GeoPoint(37.590507,55.793793),new YMaps.GeoPoint(37.592309,55.793225),new YMaps.GeoPoint(37.593532,55.79441),new YMaps.GeoPoint(37.594004,55.794253),new YMaps.GeoPoint(37.595206,55.794374),new YMaps.GeoPoint(37.595034,55.795039)], "constructor#FF3732c85Polyline", ""));
+        
+        function createObject (type, point, style, description) {
+            var allowObjects = ["Placemark", "Polyline", "Polygon"],
+                index = YMaps.jQuery.inArray( type, allowObjects),
+                constructor = allowObjects[(index == -1) ? 0 : index];
+                description = description || "";
+            
+            var object = new YMaps[constructor](point, {style: style, hasBalloon : !!description});
+            object.description = description;
+            
+            return object;
+        }
+    });
+</script>
+
+<p><div id="YMapsID-5431" style="width:600px;height:450px;margin-left: 70px;"></div></p>
+</div>
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
+
+<div id='cloudim_widget'></div>
+<script src='http://static.cloudim.ru/js/chat.js' type='text/javascript'></script>
+<script type="text/javascript" charset="utf-8">Cloudim.Chat.init({uid:839});</script>
+
+</body>
+</html>

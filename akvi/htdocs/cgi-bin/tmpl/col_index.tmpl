@@ -1,0 +1,11 @@
+<div class="box" id="ask">
+	<h2>Задавайте вопросы</h2>
+	<form action="/cgi-bin/bin/send.pl" method="post">
+		<div><label for="name">Имя</label><input type="text" name="name" value="" id="name"/></div>
+		<div><label for="email">Электропочта</label><input type="text" name="email" value="" id="email"/></div>
+		<div><label for="phone">Телефон</label><input type="text" name="phone" value="" id="phone"/></div>
+		<div><label for="text">Вопрос</label><textarea name="text" id="text" rows="" cols=""></textarea></div>
+		<div id="check_me"><label for="crc"><img src="http://static.akvi.ru/i/dig.gif" alt="Введите число на картинке"/></label><input type="text" name="check" value="" id="crc" maxlength="2"/></div>
+		<div class="submit"><input type="submit" value="Отправить"/></div>
+	</form>
+</div>

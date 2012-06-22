@@ -39,6 +39,8 @@ sub get_links($) {
     return '';
 }
 
+print "Content-type: text/html\n\n";
+print "<html><body>\n";
 print "Generating..\n";
 
 # открываем файл с индексом

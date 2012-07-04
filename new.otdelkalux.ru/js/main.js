@@ -1,12 +1,19 @@
+/* 
+ресайз кривой + картинки
+вылезаюша€ подсказка про калькул€ьор
+годы 2006-2011
+нельз€ отправить форму без номера телефона
+ */
+
 $(window).resize(function() {
-	var timeout = setTimeout(function(){set_cover();}, 500);
+	//var timeout = setTimeout(function(){set_cover();}, 500);
+	// IE8 update bg on index no background-size support...
 });
 
 
 function set_cover(){
-	var ww=$(window).width();
-	var wh=$(window).height();
-	$('#cover').css({'height':(wh-78)+'px','background':'url(\'https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+ww+'-h'+(wh-78)+'-n/i.jpg\') 0 0 no-repeat'});
+
+	$('#bg').css({'background':'url(\'https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg\') 0 0 no-repeat'});
 }
 
 $(document).ready(function() {

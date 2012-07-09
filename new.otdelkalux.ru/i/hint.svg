@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="255px" height="87px" viewBox="0 0 255 87" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter id="dropshadow">
+<feColorMatrix type="matrix" in="SourceGraphic" result="gray" values=".2 .2 .2 0 0 .2 .2 .2 0 0 .2 .2 .2 0 0 .2 .2 .2 1 0"/>
+<feGaussianBlur result="blur" in="gray" stdDeviation="2" />
+<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+</filter>
+</defs>
+<path filter="url(#dropshadow)" fill="#fff" style="shape-rendering:crispEdges;stroke: #a7a7a7; stroke-width:1px;stroke-linecap: round;" d="m 6,18 h108 l14,-14 14,14h108v64h-244v-64z" />
+</svg>

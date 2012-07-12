@@ -1,77 +1,71 @@
-/* 
-ресайз кривой + картинки
-вылезаюша€ подсказка про калькул€ьор
-годы 2006-2011
-нельз€ отправить форму без номера телефона
- */
-
-$(window).resize(function() {
-	//var timeout = setTimeout(function(){set_cover();}, 500);
-	// IE8 update bg on index no background-size support...
-});
-
-
-function set_cover(){
-
-	$('#bg').css({'background':'url(\'https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg\') 0 0 no-repeat'});
+//////////////////////////
+// Cover View. G+ style //
+//////////////////////////
+function AlbumView(node){
+	this.container=node;
+	this.init();
 }
 
-$(document).ready(function() {
-	set_cover();
-	// Set main BG
+AlbumView.prototype.init = function(){
+	this.covers=$(this.container).find('.image_stack');
 
-	$('#show_form_btn').click(function(){
-		$('#contact')[0].className='callback_shown';
-	});
-	$('#callback_form input[type=reset]').click(function(){
-		$('#contact')[0].className='callback_hidden';
-	});
-	
-	// Album view
-	//Calculate image size.
-	var new_ag_width = $('#album_grid').width()-100;
-	$('#album_grid').width(new_ag_width);
-	
-	var pic_side=Math.round(new_ag_width/4-30);
-	$('#album_grid .image_stack').css({'height':pic_side+60+'px','width':pic_side+25+'px'});
-	$('#album_grid .image_stack img').css({'height':pic_side+'px','width':pic_side+'px'});
-	$('#objects .image_stack p').width(pic_side-10);
-	$('#album_grid .image_stack img').each(function() {
-		var new_src = this.src.substring(0,83)+'s'+pic_side+'-c/';
-		this.src = new_src;
-	});
-	$('#album_grid .link').css({'top': (pic_side+20)+'px'});
-	$('#album_grid .count').css({'top': (pic_side+40)+'px'});
-	
-	$(".image_stack")
-		.delegate('img', 'mouseenter', function() {
-			$(this).parent().addClass('rotated');
-		})
-		.delegate('img', 'mouseleave', function() {
-			$(this).parent().removeClass('rotated');
-		})
-		.delegate('img', 'click', function() {
+	$(this.covers).find('img')
+		.hover(
+			function() {
+				$(this).parent().addClass('rotated');
+			}, function() {
+				$(this).parent().removeClass('rotated');
+			}
+		)
+		.click(function() {
 			document.location=$(this).parent().find('a').attr('href');
 		});
-	
-	// Gallery
-	var MIN_RATIO=4, MARGIN=6;
-	
-	var new_gal_width = $('#gallery_grid').width()-100;
-	$('#gallery_grid').width(new_ag_width+6);
-	
-	var rows=[];
-	rows[0]={};
-	rows[0].photos=[];
-	rows[0].line_ratio=0;
-	var row=0;
+}
 
-	// objects: Row, Photo
-	$('#gallery_grid img').each(function(i) {
+AlbumView.prototype.show = function(){
+	var pic_side=Math.round($(this.container).width()/4-30);
+
+	$(this.covers).css({'height':pic_side+60+'px','width':pic_side+25+'px'});
+	$(this.covers).find('img')
+		.css({'height':pic_side+'px','width':pic_side+'px'})
+		.each(function() {
+			var new_src = this.src.substring(0,83)+'s'+pic_side+'-c/';
+			this.src = new_src;
+		}
+	);
+	$(this.container).find('p').width(pic_side-10);
+	$(this.container).find('.link').css({'top': (pic_side+20)+'px'});
+	$(this.container).find('.count').css({'top': (pic_side+40)+'px'});
+}
+
+
+////////////////////////
+// Gallery. G+ style ///
+////////////////////////
+
+function Row(){
+	this.photos=[];
+	this.line_ratio=0;
+}
+	
+function GalleryView(node){
+	this.container=node;
+	this.MIN_RATIO=4; 
+	this.MARGIN=6;
+	this.rows=[];
+	this.init();
+}
+
+GalleryView.prototype.init = function(){
+	// Grouping images into rows
+	var _this=this;
+	this.rows.push(new Row());
+	
+	$(this.container).find('img').each(function(i) {
 		var ratio = $(this).width()/$(this).height();
-		rows[row].line_ratio+=ratio;
+		_this.rows[_this.rows.length-1].line_ratio+=ratio;
 
-		rows[row].photos.push(
+		_this.rows[_this.rows.length-1].photos.push(
 			{
 				index: i,
 				src: this.src.substring(0,83),
@@ -79,48 +73,118 @@ $(document).ready(function() {
 			}
 		);	
 
-		if(rows[row].line_ratio > MIN_RATIO){
-			// create
-			row++;
-			rows[row]={};
-			rows[row].line_ratio=0;
-			rows[row].photos=[];
+		if(_this.rows[_this.rows.length-1].line_ratio > _this.MIN_RATIO){
+			_this.rows.push(new Row());
 		}
 	});
-	
-	var img_elems = $('#gallery_grid img');
-	//onresize!!
-	for(var i=0;i<rows.length;i++) {
-		// —читаем высоту
-		var divider=rows[i].line_ratio > MIN_RATIO?rows[i].line_ratio : MIN_RATIO;
-		rows[i].height=Math.floor((new_gal_width-MARGIN*(rows[i].photos.length-1))/divider);
+}
 
-		// —читаем ширины
+
+GalleryView.prototype.show = function(){console.log('show');
+	var width = $('#gallery_grid').width();
+	
+	for(var i=0; i < this.rows.length; i++) {
+		// Calculating height of the row
+		// Correcting line_ratio in case when line is short
+		var line_ratio = this.rows[i].line_ratio > this.MIN_RATIO ? this.rows[i].line_ratio : this.MIN_RATIO;
+		var fractional_height=(width-this.MARGIN*(this.rows[i].photos.length-1))/line_ratio;
+
+		// Calculating widths of photos in row
 		var summed_width=0;
-		for(var j=0;j<rows[i].photos.length;j++){
-			var pic_width=Math.floor(rows[i].photos[j].ratio*rows[i].height);
+		for(var j=0;j<this.rows[i].photos.length;j++){
+			var pic_width=Math.floor(this.rows[i].photos[j].ratio*fractional_height);
 			summed_width+=pic_width;
-			rows[i].photos[j].width=pic_width;
+			this.rows[i].photos[j].width=pic_width;
 		}
-		var actual_width=summed_width+MARGIN*(rows[i].photos.length-1);
+		var current_width=summed_width+this.MARGIN*(this.rows[i].photos.length-1);
+		this.rows[i].height=Math.floor(fractional_height);
 		
 		// distribute rest of pixels
-		var pixels_to_distribute=new_gal_width-actual_width;
-		for(var j=0;j<rows[i].photos.length&&pixels_to_distribute>0;j++){
-			rows[i].photos[j].width++;
+		var pixels_to_distribute=width-current_width;
+		for(var j=0;j<this.rows[i].photos.length&&pixels_to_distribute>0;j++){
+			this.rows[i].photos[j].width++;
 			pixels_to_distribute--;
-
 		}
-		
+
 		//show images
-		for(var j=0;j<rows[i].photos.length;j++){
-			var oImg= img_elems[rows[i].photos[j].index];
-			oImg.style.width = rows[i].photos[j].width+'px';
-			oImg.style.height = rows[i].height+'px';
-			oImg.src=rows[i].photos[j].src+'w'+rows[i].photos[j].width+'-h'+rows[i].height+'-n/';
-			if(j==rows[i].photos.length-1)
+		var img_elems = $(this.container).find('img');
+		for(var j=0;j<this.rows[i].photos.length;j++){
+			var oImg= img_elems[this.rows[i].photos[j].index];
+			oImg.style.width = this.rows[i].photos[j].width+'px';
+			oImg.style.height = this.rows[i].height+'px';
+			oImg.src=this.rows[i].photos[j].src+'w'+this.rows[i].photos[j].width+'-h'+this.rows[i].height+'-n/';
+			if(j==this.rows[i].photos.length-1)
 				oImg.parentNode.parentNode.style.marginRight=0;
 			
 		}
 	}
+}
+
+
+////////////////////////
+// Initializing pages //
+////////////////////////
+$(document).ready(function() {
+var page_name = $('body').attr('id');
+
+switch (page_name) {
+	// Initializing main page
+	case 'page-index':
+		// Set cover background
+		$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
+	
+		// Tooltip
+		$(window).bind('scroll', function(){
+			if($(this).scrollTop() > 3500) {
+				window.setTimeout(function(){$("#calc_hint").addClass('shown');}, 1000);
+			}
+		});
+
+		$('#calc input').one('focus',function(){
+			$("#calc_hint").removeClass('shown');
+			$(window).unbind('scroll');
+		});
+		
+		// Years in footer
+		var today = new Date();
+		var this_year = today.getFullYear(); 
+		var el=$('#year span')[0];
+		var established=parseInt(el.textContent);
+		if(this_year>established)
+			el.textContent=established+'вАФ'+this_year;
+		
+		// Show / hide call-me-back form
+		$('#callback_form .opacity').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function () {
+			if(!$(this).hasClass('o1')){
+				$('#contact').toggleClass('callback_shown');
+			}
+		});
+		$('#show_form_btn').click(function(){
+			$('#contact').toggleClass('callback_shown');
+			window.setTimeout(function(){$('#callback_form .opacity').toggleClass('o1');},100);
+		});
+		$('#callback_form input[type=reset]').click(function(){
+			$('#callback_form .opacity').toggleClass('o1');
+		});
+
+		// Resize event
+		function on_resize() {
+			album.show();
+			gallery.show();
+			/*@cc_on
+			@if (@_jscript_version <= 5.8)			// a little help for ie8
+				$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
+			@end
+			@*/
+		}
+		var TO = false;
+		$(window).resize(function(){
+			if(TO !== false)
+			clearTimeout(TO);
+			TO = setTimeout(on_resize, 500);
+		});
+
+		break;
+}
+
 });

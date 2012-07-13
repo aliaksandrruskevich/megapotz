@@ -21,8 +21,8 @@ input.button	{ padding: 10px 20px; }
 .button.red a	{ color: #fff; }
 .button.white a	{ color: #000; }
 
-input[type=text]	{ text-align: center; border: 0; height: 40px; -moz-box-shadow: inset 0 0 4px #555; -webkit-box-shadow: inset 0 0 4px #555; box-shadow: inset 0 0 4px #555; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
-input[type=text]:hover	{ -moz-box-shadow: inset 0 0 4px #cb7a00; -webkit-box-shadow: inset 0 0 4px #cb7a00; box-shadow: inset 0 0 4px #cb7a00; }
+input[type=text], input[type=number]	{ text-align: center; border: 0; height: 40px; -moz-box-shadow: inset 0 0 4px #555; -webkit-box-shadow: inset 0 0 4px #555; box-shadow: inset 0 0 4px #555; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+input[type=text]:hover, input[type=number]:hocer	{ -moz-box-shadow: inset 0 0 4px #cb7a00; -webkit-box-shadow: inset 0 0 4px #cb7a00; box-shadow: inset 0 0 4px #cb7a00; }
 
 /* menu */
 
@@ -129,25 +129,22 @@ input[type=text]:hover	{ -moz-box-shadow: inset 0 0 4px #cb7a00; -webkit-box-sha
 /* price */
 #price p.h1	{ margin: 30px 0; }
 #price .column	{ width: 980px; }
-/*/i/sep.png*/
 #calc	{ display: table; position: relative; width: 100%; background-color: #363636; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzcAAABfBAMAAAAnsCRDAAAAMFBMVEU2NjY9PT0lJSVMTEwqKio6OjotLS0yMjJERERISEhKSkpCQkIoKChGRkY/Pz9RUVFtT8szAAAAAXRSTlMAQObYZgAAAaRJREFUeF7t20Ftw1AQRdGpokhOoqZdFIBBFIAhdFEAhhAQgVAIgRAABmEIhVAAxeBIHY2m5xLw4ur9976dRCIvU2TwHigr5ydATg6ONewk5wF0Do7Wms4JkJMDOdjVlQNyyLkFJCcHbwhwJEdyCCCHHIOAHBzqysFQt3Nw6CXnI+EBOqeqnFedIzmZcr4ih0vJB7iE6hzHWt3P1ORcJEfnkNOxcyTHlCZn6CVnbiXnOalzusiZGybnpnNC5zjWcuQ41nbkbGJpOKVXcgyCP5czRSLHXp0zJSSn3SC4dknOmJqcXnLGutH0G4KxzZTWOduZGnbOWleOY+2mc3wyWFxC6x5rS6spLTnkXOvKMQjuOsfHtrFV5xx6HWuTzjEIcjjVvYQaBIN3ay6hBoF7js5xCZUcck5tOse7Na9vGsrROZITo7VmSpNjrf37Y03nrNaa5Eyt5Jx9bNvELDnkZCbn7s9TpnQC/dbad6Bsct6iFeRgX3cQ4KxzEiCHnH6dQ85nbAf7BnLIMaXzeSInBXLIMaWtNRgE5EiO5JBDjmMN7jnb+QVtYHRQ9H4bNwAAAABJRU5ErkJggg=='), url('/i/noize.png'); -moz-border-radius: 7px 7px 0 0; -webkit-border-radius: 7px 7px 0 0; border-radius: 7px 7px 0 0; }
 #calc>div	{ display: table-cell; height: 95px; vertical-align: middle; }
 
 #calc .selector	{ font-weight: bold; font-size: 18px; color: #fff; text-transform: uppercase; }
-/*/i/icos.png*/
-/*data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZYAAAC+CAMAAAAhrtlLAAAANlBMVEU2Njb/5ADu7u6pmQ2BdhTHsgXmzgJgWBjYwgiPj4////92dnaZmZmwsLDQ0NBLS0glJCDl5eVf1UPoAAAAAXRSTlMAQObYZgAABIlJREFUeF7s2cuOIkEMRNFah5/5/z87ghTTQxe0NBtoo3s2iKhlyOksOP4FAAAAAAAAAAAAAAAAAAAA9NXxu6D84pis+5OmZDNdTJ6XPe0fMvShO2tuKbVk3W1mPXtGPqiWbpek6JJU8zeJ552Y2krqalVINX2TfMi0dC3dmKvmb5LQcZTiOEx2HLFGjorpH17U8gt0h+7kuKvYeZOEulvRbbLugbV0pZShTZHSqp4/LWamNAu5Wa6RB1h0ma6syiVZ96xaMlMrc2llap2TifdiqyWvJa0yyXZRc3o5b5JzMvBeHC5JaZKHbt9XNbW8+V5c5ZW6lmG2w0EH2XnBj1757drkHrZrMXdb2mJQLe6h5Z5K97UeJHNUROwKzM7TEhHGyn+TfHaIvWns2S19kXpi9QW1vONuHL70jIe8m5X/llvYz7Kalf/ql/ss/7mTmHJLDt1Z52TOr5PeXrb0xH485HU/VGWKKpdX5XqQDNC2tK6VeKce2o+t8mWv+6z8ipBFWFnkk3mx0EXayqgRK7/uFvwpGaG0qq9Sqo5uSd3RJaVZ6iu1Y8YhVvvIsqpcD5IRSh6RJlsmWUWVpKosu/Zg+kqNlf/KWo7NJLd0l+Se5rdadvq+Wqil27t1+9y1fKU25k9jPw7LizgnA2tZqVz6+7lr2emoaYk95tJ6kAzQXfLeTN/ZfWjd1PISFqGMLfVd3ocZPu0QywfJAB7/4+daAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCvjt8Ff9gzg1XHdSCIqqjqbu1S//+1D9tc84ImDLNx6IvOQgnl5aFVslw8GJ2xf9uU2IUDu/e8X6tHe4g3sq+USsh2Vbn3jPwiLbYAgC4A1b9JFO90tRI4mRVAdW+SXzItrsQPJVT/JiHGeIFjCBojsu0GdsN6bS3fxybeCHv0Ym0SwjZoC2U31GJPYN5mGECW+0+LJIREUJrZTkoBoKtworIAyO6lZc6JnDPPJdek4wamStAJZAmoaraRrU2yJg3PxSQATAEKAKAApL21fPlcXMWK001Jd9hFzFrwrSvfwgUkagJAilTigo20kMQkA0Fmrkmzq4r8OC0ktSv/S8SPFp//0j9acnyF3S0+CHwgfbC1PI1NkIlPMEB7V/6z2BN/Zdq78p++nQwTn7key254+bImfV4jZboSH7geo8dGRlQVoopQVeSadHmNzKoE9Knz5/XY87F7y135LwZEqsSpxJ/QpSuUwdeu/IcoZPlkAi/TBmDTLyCqAncKNTmJFcIWZEcuSRstJKegFFAVVbh/NYZwp9Cu/Ce1jAsB1JQASCHdWu50fIWtxf/bxHxrcaNNTHGgMSpO1qShlgzMCRxL5K3lTFtNC68xB3JNunwppi+0HsLew7K3lkcQA5MXsWiJ9zAa3O9zHhwS5kGsSQ8t/8Z/7c+hEQNBEAQx17LLP2HDgU8bSBkomQAAAAAAAAAAAACeUNC7XkPo3XUaQkt0GkJLdBpCS3QaQkt0GkJLdBpCS3QaQkt0GkJL5BpCS3w3hP5TB3pT1S9eEwAAAABJRU5ErkJggg==*/
 #calc .selector 	{ background-image: url('/i/icos.svg'); cursor: pointer; }
 #calc .cott	{ background-position: 0 0; width: 120px; padding-left: 96px; }
 #calc .appt	{ background-position: -215px 0; width: 125px; padding-left: 80px; }
 #calc .active	{ color: #ffe400; cursor: default; }
-#calc .appt.active	{ background-position: -225px -95px; }
-#calc .cott.active	{ background-position: 0 -95px; }
+#price.appt .appt	{ background-position: -215px -95px; color: #ffe400; }
+#price.cott .cott	{ background-position: 0 -95px; color: #ffe400; }
 #calc .input	{ color: #fff; width: 200px; text-align: center; width: 203px; }
 #calc .input label	{ font-weight: bold; font-size: 11px; padding-right: 30px; text-transform: uppercase; }
-#calc .input input	{ font-size: 22px; width: 50px; line-height: 40px; }
+#calc .input input	{ font-size: 22px; width: 70px; line-height: 30px; }
 #calc .calculate	{ text-align: center; }
 #calc .red.button:hover	{ border: 1px solid #fff; }
-#calc_hint	{ position: absolute; width: 255px; top: 138px; left: 448px; background: url('/i/hint.svg') 0 0 no-repeat; opacity: 0; -webkit-transition: opacity 1s linear; -moz-transition: opacity 1s linear; -o-transition: opacity 1s linear; transition: opacity 1s linear; }
+#calc_hint	{ position: absolute; width: 255px; top: 138px; left: 448px; background: url('/i/hint.svg') 0 0 no-repeat; opacity: 0; -ms-transition: opacity 1s linear; -webkit-transition: opacity 1s linear; -moz-transition: opacity 1s linear; -o-transition: opacity 1s linear; transition: opacity 1s linear; }
 #calc_hint.shown	{ opacity: 1; }
 #calc_hint p	{ margin: 32px; text-align: center; font-size: 13px; line-height: 1.2em; }
 
@@ -156,7 +153,11 @@ input[type=text]:hover	{ -moz-box-shadow: inset 0 0 4px #cb7a00; -webkit-box-sha
 #price tbody td	{ border-bottom: 1px solid #bbb; padding: 12px; font-size: 14px; color: #919191; }
 #price thead th	{ font-size: 11px; padding: 20px 0; color: #383838; text-transform: uppercase; }
 #price tfoot td	{ font-size: 17px; color: #383838; padding: 30px 0; }
-#price tr.hr td	{ border-color: #000; }
+
+#price.appt #san-pk td,#price.appt #san-m td	{ border-color: #000; }
+#price.appt #oto-pk,#price.appt #oto-m	{ display: none; }
+#price.cott #oto-pk td, #price.cott #oto-m td	{ border-color: #000; }
+
 #price td:nth-child(n+1)	{ text-align: center; }
 #price td:nth-child(1)	{ text-align: left; width: 320px; }
 #price td:nth-child(even), #price th:nth-child(even)	{ background-color: #f7f7f7; }

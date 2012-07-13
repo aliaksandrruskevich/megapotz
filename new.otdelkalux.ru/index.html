@@ -170,30 +170,32 @@
 </div>
 </section>
 
-<section id="price">
+<section id="price" class="cott">
 <div class="column">
 <p class="h1 center">Сколько стоит ремонт?</p>
 <div id="calc">
-<div class="selector cott active">Коттедж</div>
+<div class="selector cott">Коттедж</div>
 <div class="selector appt">Квартира</div>
-<div class="input"><label for="area">Площадь, м²</label><input type="text" id="area" maxlength="3" value="200"/></div>
-<div class="input"><label for="wc">Санузлы</label><input type="text" id="wc" maxlength="1" value="3"/></div>
-<div class="calculate"><div class="button red"><span>Пересчитать</span></div></div>
+<div class="input"><label for="area">Площадь, м²</label><input type="number" id="area" maxlength="3" value="200"/></div>
+<div class="input"><label for="wc">Санузлы</label><input type="number" id="wc" maxlength="1" value="3"/></div>
+<div class="calculate"><div class="button red" id="do_calc"><span>Пересчитать</span></div></div>
 
 </div><div id="calc_hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
 <div id="priceholder">
 <table>
 <thead><tr><th></th><th>Стандарт</th><th>Бизнес</th><th>Люкс</th></tr></thead>
 <tfoot>
-<tr><td>Общая сумма (работа + материал)</td><td>1 252 000</td><td>1 252 000</td><td>1 252 000</td></tr>
+<tr><td>Общая сумма (работа + материал)</td><td></td><td></td><td></td></tr>
 </tfoot>
 <tbody>
-<tr><td>Отделка под «ключ»</td><td>336 000</td><td>462 000</td><td>510 000</td></tr>
-<tr><td>Электрика под «ключ»</td><td>80 000</td><td>100 000</td><td>110 000</td></tr>
-<tr class="hr"><td>Сантехника под «ключ»</td><td>80 000</td><td>90 000</td><td>100 000</td></tr>
-<tr><td>Черновой материал отделка</td><td>252 000</td><td>288 000</td><td>304 000</td></tr>
-<tr><td>Черновой материал сантехника</td><td>40 000</td><td>50 000</td><td>60 000</td></tr>
-<tr class="hr"><td>Черновой материал электрика</td><td>70 000</td><td>80 000</td><td>90 000</td></tr>
+<tr id="otd-pk"><td>Отделка под «ключ»</td><td></td><td></td><td></td></tr>
+<tr id="ele-pk"><td>Электрика под «ключ»</td><td></td><td></td><td></td></tr>
+<tr id="san-pk"><td>Сантехника под «ключ»</td><td></td><td></td><td></td></tr>
+<tr id="oto-pk"><td>Отопление под «ключ»</td><td></td><td></td><td></td></tr>
+<tr id="otd-m"><td>Черновой материал отделка</td><td></td><td></td><td></td></tr>
+<tr id="ele-m"><td>Черновой материал электрика</td><td></td><td></td><td></td></tr>
+<tr id="san-m"><td>Черновой материал сантехника</td><td></td><td></td><td></td></tr>
+<tr id="oto-m"><td>Черновой материал отопление</td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
@@ -217,7 +219,7 @@
 </div>
 <div class="cholder"><div class="circle">
 <p><b><br/><br/>Страхование</b></p>
-<p>Бесплатное страхование <br/>гражданской ответственности перед <br/>третьими лицами на период <br/>проведения ремонта на сумму <br/>1 000 000 рублей *</p>
+<p>Бесплатное страхование <br/>гражданской ответственности перед <br/>третьими лицами на период <br/>проведения ремонта на сумму <br/>1 рублей *</p>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAfBAMAAAB3z9yXAAAAGFBMVEUpgueszvZop+5Qmes1iejQ5PqKu/L3+v7V5W7OAAAAAXRSTlMAQObYZgAAAo1JREFUeF6V0E2TojoYhuEHEl2PtsoWEZtt/GDcRvzaNjbKFrsF1hHD+/cPYyHqZs70XVAF4SKE4DXWDyX+PRYP8l8/8HkP5vXfubkH2P/49VqumxC4lZ8KcEfweoiv5e2y9rkOqBdfPJoQlW0iN/JJybFWCyLtE72xOOLV86L2i9IgN4+WKiCnXESLyyp2vRHNc++k8t96qNdxAa9YnGu/KXYk8g+jZCQyK2lrQ8GYlDCGRmkEmtOcqhvVR+O9xnMSjPwLsCsAGCVMLeOpUmBUPHyn8jqufIUlp7zyi+vdm7Tck4T10fhyX/mw/+K9u6e4bH2TgPeYX38267kdiwv4ogCXN5+JnaYEsW48nRvPY9vUGwVjXMIQt/UA45n1YV7IbvyK5n/2c0UuvGhzMUl4TnWKpZKmlrwDr9gkVlT7XLWoR6VHEyrQ1pTA01rkWkuPxI4SU1fESuKy9lOXOXPHDZyV4wLDL4B1zjCrM3Bk4Ag+wnQ0FdMR1gDHUw4A7uI1M0LdtiN5J8GjEwAjwmu7u+Dhu/QzG498CXgCdavZLWs2r/ele+bHdzy1ScDV4+3DLa3rKdNMbo72s2cXGFe81gprwpSN/K2xXALwu3l3NAJ3ZtjaGIrtL265bQE+mmGzB1f2wx8G34CvTrqPcac0w942/p1+ni4sPcpqgFmp8NUVTXk2B/Kk1TsuVevT+hi8pV/G0e+d5uVWtaKhyoJ4nLz8LJYl+u3P09UbeNt9EPI08Ya2sc+u+fs4nmdl6qCJhe5EC7NoHVeltjcd+d5tp8I6Y1cNxN+5H06iwxmPlofQBhOmjfEVzMY2YV+YAoGNWSBn7GxKB89xiVtmauMnZcMfcdbt/cwP5N/Af4yvvbqw6+DyAAAAAElFTkSuQmCC" alt="Страхование ответственности в Ингосстрах"/></p>
 </div>
 <p class="comment">* — Страховой договор заключает собственник помещения, а после проведения ремонта мы компенсируем страховую премию.</p>

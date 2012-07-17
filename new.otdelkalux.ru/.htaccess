@@ -19,3 +19,6 @@ FileETag None
 	ExpiresByType application/x-javascript A592200
 	ExpiresByType text/html A592200
 </IfModule>
+
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz

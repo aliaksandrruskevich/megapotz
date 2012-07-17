@@ -1,4 +1,5 @@
-#calc .selector 	{ background-image: url('/i/icos.png'); }
-#calc_hint	{ background-image: url('/i/hint.png'); }
-#contact .call	{ background-image: url('/i/phone.png'); }
-#contact .phone	{ background-image: url('/i/phone_button.png'); }
+#calc .selector 	{ background-image: url('/i/icos.png')!important; }
+#calc_hint	{ background-image: url('/i/hint.png')!important; }
+#contact .call	{ background-image: url('/i/phone.png')!important; }
+#contact .phone	{ background-image: url('/i/phone_button.png')!important; }
+#whatwedo .stage li	{ background-image: url('/i/icons.png')!important; }

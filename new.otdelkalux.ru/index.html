@@ -25,8 +25,7 @@
 <body id="page-index">
 <!-- Yandex.Metrika counter !!!!!!!!!!!!!!!!!!!!!! <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, trackHash:true, webvisor:true}); } catch(e) {} }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!- - /Yandex.Metrika counter -->
 <!--[if lt IE 8]>
-<p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в браузерах Internet Explorer 6 и 7.<br/>Пожалуйста, воспользуйтесь любым современным браузером, например <a href="http://www.google.ru/chrome/">Google Chrome</a>.</p>
-<p>Кстати, вот очень хорошая статья о том, зачем нужно обновлять браузер: <a href="http://inwebwetrust.org/trust/Zachem_obnovlyat_brauzer_.html">http://inwebwetrust.org/trust/Zachem_obnovlyat_brauzer_.html</a>.</p>
+<p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
 <![endif]-->
 
 <section id="title">
@@ -176,8 +175,8 @@
 <div id="calc">
 <div class="selector cott">Коттедж</div>
 <div class="selector appt">Квартира</div>
-<div class="input"><label for="area">Площадь, м²</label><input type="number" id="area" maxlength="3" value="200"/></div>
-<div class="input"><label for="wc">Санузлы</label><input type="number" id="wc" maxlength="1" value="3"/></div>
+<div class="input"><label for="area">Площадь, м²</label><input type="number" id="area" value="200" min="70" max="1200" step="1"/></div>
+<div class="input"><label for="wc">Санузлы</label><input type="number" id="wc" value="3" min="1" max="8" step="1"/></div>
 <div class="calculate"><div class="button red" id="do_calc"><span>Пересчитать</span></div></div>
 
 </div><div id="calc_hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
@@ -220,7 +219,7 @@
 <div class="cholder"><div class="circle">
 <p><b><br/><br/>Страхование</b></p>
 <p>Бесплатное страхование <br/>гражданской ответственности перед <br/>третьими лицами на период <br/>проведения ремонта на сумму <br/>1 рублей *</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAfBAMAAAB3z9yXAAAAGFBMVEUpgueszvZop+5Qmes1iejQ5PqKu/L3+v7V5W7OAAAAAXRSTlMAQObYZgAAAo1JREFUeF6V0E2TojoYhuEHEl2PtsoWEZtt/GDcRvzaNjbKFrsF1hHD+/cPYyHqZs70XVAF4SKE4DXWDyX+PRYP8l8/8HkP5vXfubkH2P/49VqumxC4lZ8KcEfweoiv5e2y9rkOqBdfPJoQlW0iN/JJybFWCyLtE72xOOLV86L2i9IgN4+WKiCnXESLyyp2vRHNc++k8t96qNdxAa9YnGu/KXYk8g+jZCQyK2lrQ8GYlDCGRmkEmtOcqhvVR+O9xnMSjPwLsCsAGCVMLeOpUmBUPHyn8jqufIUlp7zyi+vdm7Tck4T10fhyX/mw/+K9u6e4bH2TgPeYX38267kdiwv4ogCXN5+JnaYEsW48nRvPY9vUGwVjXMIQt/UA45n1YV7IbvyK5n/2c0UuvGhzMUl4TnWKpZKmlrwDr9gkVlT7XLWoR6VHEyrQ1pTA01rkWkuPxI4SU1fESuKy9lOXOXPHDZyV4wLDL4B1zjCrM3Bk4Ag+wnQ0FdMR1gDHUw4A7uI1M0LdtiN5J8GjEwAjwmu7u+Dhu/QzG498CXgCdavZLWs2r/ele+bHdzy1ScDV4+3DLa3rKdNMbo72s2cXGFe81gprwpSN/K2xXALwu3l3NAJ3ZtjaGIrtL265bQE+mmGzB1f2wx8G34CvTrqPcac0w942/p1+ni4sPcpqgFmp8NUVTXk2B/Kk1TsuVevT+hi8pV/G0e+d5uVWtaKhyoJ4nLz8LJYl+u3P09UbeNt9EPI08Ya2sc+u+fs4nmdl6qCJhe5EC7NoHVeltjcd+d5tp8I6Y1cNxN+5H06iwxmPlofQBhOmjfEVzMY2YV+YAoGNWSBn7GxKB89xiVtmauMnZcMfcdbt/cwP5N/Af4yvvbqw6+DyAAAAAElFTkSuQmCC" alt="Страхование ответственности в Ингосстрах"/></p>
+<p><img id="ingos" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAfBAMAAAB3z9yXAAAAGFBMVEUpgueszvZop+5Qmes1iejQ5PqKu/L3+v7V5W7OAAAAAXRSTlMAQObYZgAAAo1JREFUeF6V0E2TojoYhuEHEl2PtsoWEZtt/GDcRvzaNjbKFrsF1hHD+/cPYyHqZs70XVAF4SKE4DXWDyX+PRYP8l8/8HkP5vXfubkH2P/49VqumxC4lZ8KcEfweoiv5e2y9rkOqBdfPJoQlW0iN/JJybFWCyLtE72xOOLV86L2i9IgN4+WKiCnXESLyyp2vRHNc++k8t96qNdxAa9YnGu/KXYk8g+jZCQyK2lrQ8GYlDCGRmkEmtOcqhvVR+O9xnMSjPwLsCsAGCVMLeOpUmBUPHyn8jqufIUlp7zyi+vdm7Tck4T10fhyX/mw/+K9u6e4bH2TgPeYX38267kdiwv4ogCXN5+JnaYEsW48nRvPY9vUGwVjXMIQt/UA45n1YV7IbvyK5n/2c0UuvGhzMUl4TnWKpZKmlrwDr9gkVlT7XLWoR6VHEyrQ1pTA01rkWkuPxI4SU1fESuKy9lOXOXPHDZyV4wLDL4B1zjCrM3Bk4Ag+wnQ0FdMR1gDHUw4A7uI1M0LdtiN5J8GjEwAjwmu7u+Dhu/QzG498CXgCdavZLWs2r/ele+bHdzy1ScDV4+3DLa3rKdNMbo72s2cXGFe81gprwpSN/K2xXALwu3l3NAJ3ZtjaGIrtL265bQE+mmGzB1f2wx8G34CvTrqPcac0w942/p1+ni4sPcpqgFmp8NUVTXk2B/Kk1TsuVevT+hi8pV/G0e+d5uVWtaKhyoJ4nLz8LJYl+u3P09UbeNt9EPI08Ya2sc+u+fs4nmdl6qCJhe5EC7NoHVeltjcd+d5tp8I6Y1cNxN+5H06iwxmPlofQBhOmjfEVzMY2YV+YAoGNWSBn7GxKB89xiVtmauMnZcMfcdbt/cwP5N/Af4yvvbqw6+DyAAAAAElFTkSuQmCC" alt="Страхование ответственности в Ингосстрах"/></p>
 </div>
 <p class="comment">* — Страховой договор заключает собственник помещения, а после проведения ремонта мы компенсируем страховую премию.</p>
 </div>
@@ -355,6 +354,5 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <div id="year">© <span>2006</span></div>
 </footer>
 </section>
-
 </body>
 </html>

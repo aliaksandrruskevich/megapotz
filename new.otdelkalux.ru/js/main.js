@@ -86,13 +86,13 @@ Calculator.prototype.update_values = function(){
 		
 		for(var i=0;i<3;i++)
 			itog[i]+=vals[i];
-		
+
 		$(this).find('td:nth-child(n+2)').each(function(i){
-			this.textContent=vals[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+			$(this).text(vals[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
 		});
 	});
 	$('tfoot td:nth-child(n+2)').each(function(i){
-		this.textContent=itog[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+		$(this).text(itog[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
 	});
 }
 
@@ -224,19 +224,24 @@ GalleryView.prototype.show = function(){
 ////////////////////////
 $(document).ready(function() {
 var page_name = $('body').attr('id');
-
 switch (page_name) {
 	// Initializing main page
 	case 'page-index':
 		// Set cover background
 		$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
 	
+		// Ingosstrakh logo
+		if (window.devicePixelRatio == 2) {
+			var logo=$('#ingos')[0];
+			logo.src='/i/ingos-2x.png';
+		}
+	
 		// Tooltip
 		var hint_pos=find_pos($('#calc_hint')[0]);
 		
 		$(window).bind('scroll', function(){
-			if($(this).scrollTop() > hint_pos-300) {
-				window.setTimeout(function(){$("#calc_hint").addClass('shown');}, 1000);
+			if($(this).scrollTop() > hint_pos-500) {
+				window.setTimeout(function(){$("#calc_hint").addClass('shown');}, 300);
 			}
 		});
 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+#map_canvas { height: 100% }
+</style>
+<script type="text/javascript"
+src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBm5umJanOaNNHGtcO3OY8wlTtZ-Z9Xw5o&sensor=false">
+</script>
+<script type="text/javascript">
+function initialize() {
+	var point = new google.maps.LatLng(55.787674, 37.511282);
+	
+	var mapOptions = {
+		center: point,
+		zoom: 15,
+		disableDefaultUI: true,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+
+	var styles = [{
+		stylers: [
+			{ saturation: -100 },
+			{ lightness: 50 }
+		]
+	}];
+
+	var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+	map.setOptions({styles: styles});
+
+	var icon = new google.maps.MarkerImage('/i/marker.png',
+		new google.maps.Size(68, 96),
+		new google.maps.Point(0,0),
+		new google.maps.Point(34, 0)
+	);
+	var shadow = new google.maps.MarkerImage('/i/marker-shadow.png',
+		new google.maps.Size(146, 96),
+		new google.maps.Point(0,0),
+		new google.maps.Point(34, 0)
+	);
+	  
+	var marker = new google.maps.Marker({
+		position: point,
+		map: map,
+		animation: google.maps.Animation.DROP,
+		icon: icon,
+		shadow: shadow
+	});
+	
+}
+</script>
+</head>
+<body onload="initialize()">
+<div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+</html>
+
+
+<!--
+
+function initMap() {
+var map;
+var MY_MAPTYPE_ID = 'hp';
+var stylez = [{
+featureType: "all",
+elementType: "all",
+stylers: [
+{ visibility: "on" },
+{ hue: "#000" },
+{ saturation: -100 },
+{ gamma: 2.21 },
+{ lightness: 20 }
+]
+}];
+var mapOptions = {
+zoom: 15, //увеличение карты
+center: new google.maps.LatLng(55.797979,37.5797979), //координаты центра
+disableDefaultUI: true,
+mapTypeControlOptions: {
+mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+},
+mapTypeId: MY_MAPTYPE_ID
+};
+
+map = new google.maps.Map(document.getElementById("map"),mapOptions);
+
+var jayzMapType = new google.maps.StyledMapType(stylez);
+
+map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
+
+var image = '../images/map-pointer.png';
+var myLatLng = new google.maps.LatLng(55.7979,37.5985);  //координаты точки
+var beachMarker = new google.maps.Marker({
+position: myLatLng,
+map: map,
+icon: image
+});
+
+return false;
+} 
+
+-->

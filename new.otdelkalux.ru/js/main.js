@@ -253,10 +253,10 @@ switch (page_name) {
 		// Years in footer
 		var today = new Date();
 		var this_year = today.getFullYear(); 
-		var el=$('#year span')[0];
-		var established=parseInt(el.textContent);
+		var el=$('#year span');
+		var established=parseInt(el.text());
 		if(this_year>established)
-			el.textContent=established+'—'+this_year;
+			el.text(established+'—'+this_year);
 		
 		// Show / hide call-me-back form
 		$('#callback_form .opacity').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function () {

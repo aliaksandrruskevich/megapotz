@@ -3,3 +3,15 @@
 #contact .call	{ background-image: url('/i/phone.png')!important; }
 #contact .phone	{ background-image: url('/i/phone_button.png')!important; }
 #whatwedo .stage li	{ background-image: url('/i/icons.png')!important; }
+
+#calc_hint	{display: none}
+#calc_hint.shown	{display: block}
+
+.hover .inner	{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"}
+.inner	{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)"}
+
+#fs-tip	{display: block}
+#fs-tip.hidden	{display: none}
+
+#controls	{display: block}
+#controls.hidden	{display: none}

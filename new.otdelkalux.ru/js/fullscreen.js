@@ -1,6 +1,8 @@
-function Fullscreen(arr){
+/*Mikhail Shestakov mike.shestakov@gmail.com*/
+
+function Fullscreen(){
 	this.current=0;
-	this.photos=arr;
+	this.photos=[];
 	this.ticker=0;
 	this.state='';
 	
@@ -9,17 +11,30 @@ function Fullscreen(arr){
 	this.screen_ratio=1;
 
 	this.init_events();
-	this.init();
+	
+	// Loading images form JSON
+	var _this=this;
+	if(document.location.hash!='')	{
+		var hash = document.location.hash.substr(1);
+		var vars=hash.split(':');
+
+		$.getJSON(vars[0]+'fullscreen.json', function(data) {
+			_this.photos=data.photos;
+			_this.current=vars[1]===undefined?0:parseInt(vars[1]);
+			if(_this.current >= _this.photos.length)
+				_this.current=0;
+			document.title=data.title;
+			_this.init();
+		});
+
+
+	}
 }
 
 Fullscreen.prototype.init = function(){
 	var _this=this;
 	this.state='play';
 	this.set_size();
-	
-	// fullscreen.html#3 to start from 3rd image
-	if(document.location.hash!='')
-		this.current = document.location.hash.substr(1);
 	
 	this.show();
 	
@@ -85,6 +100,7 @@ Fullscreen.prototype.init_events = function()	{
 		switch (e.keyCode){
 		case 13:
 			_this.toggle_fullscreen();
+			$('#fs-tip').hide();
 			break;
 		case 37:
 			_this.prev();
@@ -144,28 +160,27 @@ Fullscreen.prototype.show = function(){
 Fullscreen.prototype.prev = function(){
 	if(this.current>0)	{
 		this.current--;
+		$('#go_left')[0].style.visibility = this.current==0?'hidden':'visible';
 		$('#go_right')[0].style.visibility = 'visible';
-		this.show();
 	}
-	else	{
-		$('#go_left')[0].style.visibility = 'hidden';
-	}
+	this.show();
 }
 
 Fullscreen.prototype.next = function(){
 	if(this.current<this.photos.length-1){
 		this.current++;
 		$('#go_left')[0].style.visibility = 'visible';
-		this.show();
+
+		if(this.current==this.photos.length-1)	{
+			this.state='replay';
+			$('#go_right')[0].style.visibility = 'hidden';
+			// Show controls
+			$('#controls').removeClass('hidden');
+			$('#fullscreen')[0].style.cursor='auto';
+		}
 	}
-	else	{
-		this.state='replay';
-		$('#go_right')[0].style.visibility = 'hidden';
-		
-		// Show controls
-		$('#controls').removeClass('hidden');
-		$('#fullscreen')[0].style.cursor='auto';
-	}
+
+	this.show();
 }
 
 Fullscreen.prototype.play = function(){
@@ -201,13 +216,6 @@ Fullscreen.prototype.toggle_fullscreen = function(){
 	}
 }
 
-
-////////////////////
-
 $(document).ready(function() {
-	// Window size
-	var fs = new Fullscreen(photos);
-	/mobile/i.test(navigator.userAgent) && !location.hash && window.setTimeout(function () {
-		if (!pageYOffset) window.scrollTo(0, 1);
-	}, 200);
+	var fs = new Fullscreen();
 });

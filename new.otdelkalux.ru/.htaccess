@@ -21,4 +21,6 @@ FileETag None
 </IfModule>
 
 AddType image/svg+xml svg svgz
+AddType application/json json
+
 AddEncoding gzip svgz

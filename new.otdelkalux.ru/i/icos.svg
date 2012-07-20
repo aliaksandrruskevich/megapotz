@@ -3,9 +3,8 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="406px" height="190px" viewBox="0 0 598 280">
 <defs>
 <style type="text/css"><![CDATA[
-#white path	{ fill: #fff }
-#yellow path	{ fill: #ffe400 }
-#yellow path	{ fill: #eee }
+#yellow path	{ fill: #ffe400; }
+#white path	{ fill: #eeeeee; }
 ]]></style>
 </defs>
 <g id="white">

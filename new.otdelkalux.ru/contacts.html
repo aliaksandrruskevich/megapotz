@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
+<html lang="ru" itemscope itemtype="http://schema.org/GeneralContractor">
 <head>
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<style type="text/css">
-html { height: 100% }
-body { height: 100%; margin: 0; padding: 0 }
-#map_canvas { height: 100% }
-</style>
-<script type="text/javascript"
-src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBm5umJanOaNNHGtcO3OY8wlTtZ-Z9Xw5o&sensor=false">
-</script>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta name="viewport" content="width=1000"/>
+<meta name="keywords" content="контактная информация, адрес, телефон, email, артель строительных бригад Сергея Петунина"/>
+<meta name="description" content="Контактная информация. Тел.: +7 495 99-88-347, email: rso2000@mail.ru. Сергей Петунин."/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Контактная информация</title>
+<link rel="stylesheet" type="text/css" href="/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+<link rel="stylesheet" type="text/css" href="/css/common.css"/>
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie8.css"/><![endif]-->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="http://yandex.st/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBm5umJanOaNNHGtcO3OY8wlTtZ-Z9Xw5o&sensor=false"></script>
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?49"></script>
+<script type="text/javascript">VK.init({apiId: 2956871, onlyWidgets: true});</script>
+<!--!!!!!!!!!!!!!!!!!!!!!!!!!!<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>-->
 <script type="text/javascript">
-function initialize() {
+function init_maps() {
 	var point = new google.maps.LatLng(55.787674, 37.511282);
 	
 	var mapOptions = {
@@ -42,64 +50,126 @@ function initialize() {
 		new google.maps.Point(34, 0)
 	);
 	  
-	var marker = new google.maps.Marker({
+	window.setTimeout(function(){var marker = new google.maps.Marker({
 		position: point,
 		map: map,
 		animation: google.maps.Animation.DROP,
 		icon: icon,
 		shadow: shadow
-	});
-	
+	});},1000);
 }
 </script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5shiv.js"></script>
+<![endif]-->
 </head>
-<body onload="initialize()">
-<div id="map_canvas" style="width:100%; height:100%"></div>
+
+<body id="page-contacts">
+<!-- Yandex.Metrika counter !!!!!!!!!!!!!!!!!!!!!! <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, trackHash:true, webvisor:true}); } catch(e) {} }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!- - /Yandex.Metrika counter -->
+<!--[if lt IE 8]>
+<p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
+<![endif]-->
+
+<section>
+<div class="column">
+<div class="td" id="nav">
+<a href="/" id="logo"><!--[if lte IE 8]><img src="/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
+<nav>
+<a class="index" href="/">Главная</a>
+<a class="portfolio" href="/portfolio/">Объекты</a>
+<a class="price" href="/price/calculator.html">Цены</a>
+<a class="docs" href="/docs.html">Документы</a>
+<a class="articles" href="/warranty.html">Гарантия</a>
+<a class="articles" href="/articles/">Статьи</a>
+<a class="contacts" href="/contacts.html">Контакты</a>
+</nav>
+</div>
+</div>
+</section>
+<section class="map">
+<div id="map_canvas" style="width:100%; height:400px"></div>
+<div id="text">
+<p class="h1">Москва,<br/>Куусинена 19А</p>
+<p class="redline"><span>Работаем: пн—сб с 9:00 до 20:00</span></p>
+<p class="redline"><span>Телефон: +7 495 99-88-347</span></p>
+<p class="redline"><a href="mailto:rso2000@mail.ru">rso2000@mail.ru</a></p>
+</div>
+</section>
+
+<section id="contact">
+	<div class="call">
+		<p class="w">Есть вопросы? <br/>Или вы хотите согласовать осмотр объекта, <br/>на котором мы сейчас работаем? <br/>Звоните:</p>
+		<p class="y">+7 (495) 99-88-347</p>
+		<div class="button red phone" id="show_form_btn"><span>Позвонить вам?</span></div>
+	</div>
+	<div id="callback_form">
+	<div class="opacity">
+		<form method="post" action="/cgi-bin/sendsms.pl">
+			<div class="field"><label for="name">Имя</label><input type="text" name="name" id="name" required placeholder="Иван"/></div>
+			<div class="field"><label for="tel">Номер телефона</label><input type="text" name="tel" id="tel" required placeholder="+79051234567"/></div>
+			<div class="buttons">
+				<input type="reset" value="Отменить" class="black button"/>
+				<input type="submit" value="Отправить" class="red button"/>
+			</div>
+		</form>
+	</div>
+	</div>
+	<p class="cb_comment">Оставьте свой телефон, и я обязательно перезвоню вам!</p><hr/>
+	<div class="email">
+		<p class="w">Если у вас есть проект, и вы хотите <br/>узнать, сколько будет стоить ремонт, пишите:</p>
+		<p class="y"><a href="mailto:rso2000@mail.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">rso2000@mail.ru</a></p>
+		<p>Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
+		<hr/>
+	</div>
+	<div class="ready">Готов <b>оперативно</b> приехать к вам на объект для знакомстка и обсуждения деталей предстоящего ремонта!</div>
+</section>
+
+<section id="counters">
+<div class="like_holder">
+<div class="like">
+<div class="g-plusone"></div>
+<script type="text/javascript">
+window.___gcfg = {lang: 'ru'};
+(function() {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+</div>
+<div class="like">
+<div id="vk_like"></div>
+<script type="text/javascript">
+VK.Widgets.Like("vk_like", {type: "button"});
+</script>
+</div>
+</div>
+</section>
+
+<section id="footer">
+<footer>
+<p itemprop="name" class="title">Артель строительных бригад Сергея Петунина</p>
+<div class="info">
+<div>
+<p itemprop="description">Полный комплекс работ по элитному ремонту коттеджей и загородных домов «под ключ»</p>
+</div>
+<div>
+<p itemprop="telephone">+7 (495) 998-83-47</p>
+<p><a itemprop="email" href="mailto:rso2000@mail.ru">rso2000@mail.ru</a></p>
+<p itemprop="address">Москва, ул. Куусинена 19 А</p>
+<p><a itemprop="map" href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
+</div>
+<div>
+<p class="social flickr"><a href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
+<p class="social gplus"><a href="https://plus.google.com/104094916837036848285/">Сергей Петунин на Google+</a></p>
+<p><a itemprop="url" href="http://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
+</div>
+<div class="qr"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABdElEQVR4Xu3HoYGAIBQA0E+RFT4FVsOiK2BBKLICFFgNiq4ARS5c/Ybr99qDv/qnpvf1cHDMTh5ZBCu1ag7Ji1HaC9qyEj9+yQXM2T5fulzv9evIUnEqtOaQvJrp1+zkARAWy1MFIC/XJ7Su5TEqeZQqeWfX+RryoFpdNt551OTFpdl7Pi2zTl6erer9cdxX8tyBNiCy5p38Iu41RMtToS+luLdNRNRAf32B39sZuibPX2mPdB/x7OSlKj4F32aI5BfJU8lm9y+QZ35G5VPmtyEvtT1nX5A5TZ7N2+5ZpbpX8rgsZ7qEv4UjL1q3+/MEpzV52CxvzUfUQF6e6XESz7p28iwf0ehtvxHJA782ZBE1r+R5PkI1R+SNvniSd9yJkjp5QFHtssc1G/K4z+GLv9So5AGQzzBGRySvZlSpW3OUSh6Zv9lzoVGRvBh+jPTu8zUfT/PJyOumPx5S37QK2ZBHlqUqFUTX5NVMbV5spIv43/z7AZHRqkZ0yRK6AAAAAElFTkSuQmCC" alt="Контактная информация на QR коде"/></div>
+</div>
+<div id="year">© <span>2006</span></div>
+</footer>
+</section>
+
 </body>
 </html>
 
-
-<!--
-
-function initMap() {
-var map;
-var MY_MAPTYPE_ID = 'hp';
-var stylez = [{
-featureType: "all",
-elementType: "all",
-stylers: [
-{ visibility: "on" },
-{ hue: "#000" },
-{ saturation: -100 },
-{ gamma: 2.21 },
-{ lightness: 20 }
-]
-}];
-var mapOptions = {
-zoom: 15, //���������� �����
-center: new google.maps.LatLng(55.797979,37.5797979), //���������� ������
-disableDefaultUI: true,
-mapTypeControlOptions: {
-mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
-},
-mapTypeId: MY_MAPTYPE_ID
-};
-
-map = new google.maps.Map(document.getElementById("map"),mapOptions);
-
-var jayzMapType = new google.maps.StyledMapType(stylez);
-
-map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
-
-var image = '../images/map-pointer.png';
-var myLatLng = new google.maps.LatLng(55.7979,37.5985);  //���������� �����
-var beachMarker = new google.maps.Marker({
-position: myLatLng,
-map: map,
-icon: image
-});
-
-return false;
-} 
-
--->

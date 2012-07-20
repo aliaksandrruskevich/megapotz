@@ -1,7 +1,7 @@
 /* General Styling */
 ::-webkit-scrollbar {width: 8px; height: 8px; }
 ::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background: #fff; }
-::-webkit-scrollbar-thumb {background: #f00; box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
+::-webkit-scrollbar-thumb {background: #ee1c24; box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
 
 *	{ padding: 0; margin: 0; line-height: 1em; font-family: Helvetica, Arial, Sans-Serif; -webkit-text-size-adjust:none; -webkit-appearance: none; }
 html, body	{ height: 100%; }
@@ -9,7 +9,7 @@ table	{ border-collapse: collapse; }
 img	{ border: 0; }
 .column	{ margin: 0 auto; max-width: 1500px; min-width: 980px; position: relative; }
 
-.red	{ color: #f00; }
+.red	{ color: #ee1c24; }
 .center	{ text-align: center; }
 
 p.h2	{ font-weight: bold; font-size: 32px; }
@@ -24,6 +24,8 @@ input.button	{ padding: 10px 20px; }
 .button.black	{ background-color: #000; color: #fff; border: solid 1px transparent; }
 .button.red a	{ color: #fff; }
 .button.white a	{ color: #000; }
+
+.button.white:hover	{ background-color: #ffe400; border-color: #ffe400; }
 
 input[type=text], input[type=number]	{ text-align: center; border: 0; height: 40px; box-shadow: inset 0 0 4px #555; border-radius: 3px; }
 input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb7a00; }
@@ -63,14 +65,14 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #page-docs .docs,
 #page-warranty.warranty,
 #page-articles .articles,
-#page-contacts .contacts	{ cursor: default; color: #f00; }
+#page-contacts .contacts	{ cursor: default; color: #ee1c24; }
 
 
 #text_holder	{ position: absolute; top: 50px; left: 90px; }
 #bg	{ position: relative; background-size: cover; }
 #bg h1	{ font-weight: bold; font-size: 40px; margin: 40px 0; }
 #bg h1 span.u	{ display: inline-block; border-bottom: solid 2px #000; padding: 5px 0 10px 0; white-space: nowrap; }
-#bg p.since	{ color: #fff; font-weight: bold; font-size: 16px; background-color: #f00; display: inline-block; padding: 3px 7px; margin: -7px; }
+#bg p.since	{ color: #fff; font-weight: bold; font-size: 16px; background-color: #ee1c24; display: inline-block; padding: 3px 7px; margin: -7px; }
 
 /* whatwedo */
 #whatwedo .wwd	{ width: 860px; margin: 80px auto; }
@@ -204,13 +206,9 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #contact .w	{ color: #fff; }
 #contact .y, #contact .y a	{ color: #ffe400; font-weight: bold; }
 
-/*'/i/phone.png'*/
-/*'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAA8BAMAAADvfEWpAAAAGFBMVEUZGRk6NxVhWBGJfA2wnwnTvQXw1gL/5ABSn7EXAAABJ0lEQVR4Xp3SP2+DMBAFcBvczihKyor6j5VUpawMkVibdGBt2oE1cYD39auLVCzbb6h640+nx/kOJbV6beutCutxwKmZi0DXAD4bHH1NBgDnBtbnEoz1QNngymXAOeeGc8e5/wdbzjb/G3e/3FL+VoS/tED4yilTjOUEZN0t5yLinPOdcBXxDc82fJJUeIw4EZ6zkPXAw3vhc8QdDy+FEYXfgoYbUVg6IUY+Cgp6CLzTHcLSrWDi4aj4g45kcjfiPR1xjUOQIiMawH0kXVKSHhgzP+Wwqitp3/svgnQ2wFx465LaJwNw8fcC6dzAxRgsMaqD20TnYlJgdv+ci3l2rPvFL7p369wsjNZYkTB9yrbhNeIdPy3d/rnfqCpdi35kKqyH3e7lCj+Z1NSUoOJ/8gAAAABJRU5ErkJggg=='*/
 #contact .call	{ background: url('/i/phone.svg') 50% 46px no-repeat; padding-top: 130px; }
 #contact .call .w	{ margin-bottom: 30px; font-size: 30px; }
 #contact .call .y	{ font-size: 42px; }
-/*'/i/phone_button.png'*/
-/*'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAyBAMAAAApYw8TAAAAMFBMVEXtHCT////xSVDuKTH5tLbvOD/7z9H96en+8vPyWF7zYWf82Nr0dnv4oaX7xcf2j5P/2S1/AAAApElEQVR42mNgwAAKDKNi+MSYF2OIsZZsAZJmC5DFAsWeGzAzJ0oiizmKOwbwhQmKIIttFHScwNgo6ICiTjDXgBGqDCZ2UHACA6NgM4qYhXgAUEzOAFmMT/ADhvu4BCUx/dEooYAhdlBwM4YYG9AhXLtQ7GBgLRS8OidxJ2pYmQlKSNzZaIAafo6CguJeAahiPIWCgkXo4RybKG+AEfYGo+mPOmIAsOwgE8X2FEUAAAAASUVORK5CYII='*/
 #contact .phone	{ padding-left: 28px; margin: 30px auto; border: solid 1px transparent; background: #ed1c24 url('/i/phone_button.svg') 0 50% no-repeat; }
 #contact .phone:hover	{ border-color: #fff; }
 
@@ -249,7 +247,7 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #other .block p.yellow a	{ text-decoration: none; background-color: #ffe400; padding: 3px 7px; font-size: 9px; font-weight: bold; }
 
 /*counters*/
-#counters .like_holder	{ margin: 0 auto; display: table; }
+#counters .like_holder	{ margin: 80px auto; display: table; }
 #counters .like	{ display: table-cell; }
 
 /*footer*/
@@ -312,3 +310,10 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 
 #fs-tip	{ position: absolute; left: 50%; top: 400px; padding: 40px; font: normal 30px Arial; margin: -100px; background-color: #fff; opacity: 1;-webkit-transition: opacity 500ms linear; -moz-transition: opacity 500ms linear; -ms-transition: opacity 500ms linear; -o-transition: opacity 500ms linear; transition: opacity 500ms linear; }
 #fs-tip.hidden	{ opacity: 0; }
+
+/* CONTACTS */
+#page-contacts .map	{ position: relative; }
+#page-contacts #text	{ width: 400px; height: 400px; left: 90px; position: absolute; top: 0; left: 100px; }
+#page-contacts .h1	{ margin: 30px 0; }
+#page-contacts .redline	{ margin: 16px 0; }
+#page-contacts .redline span, #page-contacts .redline a	{ background-color: #ee1c24; color: #fff; padding: 2px 7px; font-weight: bold; font-size: 16px; }

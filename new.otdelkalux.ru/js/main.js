@@ -250,32 +250,8 @@ switch (page_name) {
 			$(window).unbind('scroll');
 		});
 		
-		// Years in footer
-		var today = new Date();
-		var this_year = today.getFullYear(); 
-		var el=$('#year span');
-		var established=parseInt(el.text());
-		if(this_year>established)
-			el.text(established+'—'+this_year);
-		
 		// Show / hide call-me-back form
-		$('#callback_form .opacity').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function () {
-			if(!$(this).hasClass('o1')){
-				$('#contact').toggleClass('callback_shown');
-			}
-		});
-		$('#show_form_btn').click(function(){
-			$('#contact').toggleClass('callback_shown');
-			window.setTimeout(function(){$('#callback_form .opacity').toggleClass('o1');},100);
-		});
-		$('#callback_form input[type=reset]').click(function(){
-			$('#callback_form .opacity').toggleClass('o1');
-/*@cc_on
-@if (@_jscript_version <= 9)
-$('#contact').toggleClass('callback_shown');
-@end
-@*/
-		});
+		init_callback();
 
 		// Resize event
 		function on_resize() {
@@ -297,7 +273,22 @@ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuN
 
 		var calc=new Calculator();
 		break;
+		
+		
+		
+	case 'page-contacts':
+		init_maps();
+		init_callback();
+		break;
 }
+
+	// Years in footer
+	var today = new Date();
+	var this_year = today.getFullYear(); 
+	var el=$('#year span');
+	var established=parseInt(el.text());
+	if(this_year>established)
+		el.text(established+'—'+this_year);
 
 });
 
@@ -309,4 +300,25 @@ function find_pos(obj) {
 		curtop += obj.offsetTop;
 		} while (obj = obj.offsetParent);
 	return curtop;
+}
+
+
+function init_callback()	{
+$('#callback_form .opacity').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function () {
+	if(!$(this).hasClass('o1')){
+		$('#contact').toggleClass('callback_shown');
+	}
+});
+$('#show_form_btn').click(function(){
+	$('#contact').toggleClass('callback_shown');
+	window.setTimeout(function(){$('#callback_form .opacity').toggleClass('o1');},100);
+});
+$('#callback_form input[type=reset]').click(function(){
+	$('#callback_form .opacity').toggleClass('o1');
+/*@cc_on
+@if (@_jscript_version <= 9)
+$('#contact').toggleClass('callback_shown');
+@end
+@*/
+});
 }

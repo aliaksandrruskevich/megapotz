@@ -15,3 +15,6 @@
 
 #controls	{display: block}
 #controls.hidden	{display: none}
+
+#page-warranty .t	{ background-image: url('/i/curve.png')!important; }
+#page-warranty .b	{ background-image: url('/i/curve.svg')!important; }

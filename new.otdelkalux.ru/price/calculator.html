@@ -4,10 +4,10 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 <meta name="viewport" content="width=1000"/>
-<meta name="keywords" content="гарантия"/>
-<meta name="description" content="Гарантия на все выполненные работы - 2 года. Выдержка из текста договора, относящаяся к гарантийным обяхательствам."/>
+<meta name="keywords" content="цены, стоимость, ремонт, калькулятор, сколько стоит, отеделка, коттедж, квартира, загородный дом"/>
+<meta name="description" content="Укажите площадь помещения и количество санузлов, и получите прикидку по стоимости ремонта различных уровней."/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>Гарантия на выполненные работы - 2 года!</title>
+<title>Калькулятор ремонта</title>
 <link rel="stylesheet" type="text/css" href="/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
 <link rel="stylesheet" type="text/css" href="/css/common.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie8.css"/><![endif]-->
@@ -22,7 +22,7 @@
 <![endif]-->
 </head>
 
-<body id="page-warranty">
+<body id="page-price">
 <!-- Yandex.Metrika counter !!!!!!!!!!!!!!!!!!!!!! <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, trackHash:true, webvisor:true}); } catch(e) {} }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!- - /Yandex.Metrika counter -->
 <!--[if lt IE 8]>
 <p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
@@ -45,24 +45,55 @@
 </div>
 </section>
 
-<div class="center">
-<h1>Гарантия на все работы — 2 года!</h1>
-<p class="small">(фрагмент договора, касающийся гарантийных обязательств)</p>
+<section id="price" class="cott">
+<div class="column">
+
+<div id="selector" class="left">
+<div class="current"></div>
+<span class="left"><a href="/price/calculator.html">Калькулятор</a></span>
+<span class="right"><a href="/price/price-list.html">Прайс-лист</a></span>
+<div id="button"></div>
 </div>
 
-<article>
-<div class="t"></div>
-<ol>
-<li>Срок гарантии на результат работ, предусмотренный настоящим договором, устанавливается продолжительностью 2 года. Гарантийный срок начинает исчисляться с момента подписания Сторонами Акта приемки выполненных работ по Объекту в целом.</li>
-<li>Подрядчик гарантирует высокий уровень качества выполненных работ и соответствие требованиям Заказчика, СНиП, техническими условиями и другой нормативной документацией, относящейся к данному типу работ в соответствии с законодательством РФ.</li>
-<li>Подрядчик несет ответственность за недостатки, обнаруженные в пределах гарантийного срока, если они не произошли вследствие нормального износа Объекта, ненадлежащего ремонта Объекта произведенного самим Заказчиком или привлеченными им третьими лицами, а также вследствие наступления обстоятельств непреодолимой силы.</li>
-<li>При обнаружении в течение гарантийного срока недостатков (дефектов), допущенных по вине Подрядчика (в том числе некачественное выполнение Подрядчиком работ; некачественные строительные материалы и оборудование, предоставленные Подрядчиком), Заказчик должен заявить о них Подрядчику в течение 5 (пяти) календарных дней со дня, когда ему стало известно о них.</li>
-<li>Подрядчик получив заявление Заказчика, в течение гарантийного срока о недостатках (дефектах), обязан в течение 5 (пяти) рабочих дней, со дня его получения, обеспечить явку на Объект своего представителя для составления Акта выявленных недостатков и устранить их своими силами и за свой счет, указанные в акте недостатки, в срок не более одного месяца, с момента их обнаружения и постановки Подрядчика в известность.</li>
-</ol>
-<div class="b"></div>
-</article>
 
-<div class="center"><p class="button red"><a href="/files/dogovor.doc">Скачать договор</a></p></div>
+<div id="calc">
+<div class="selector cott">Коттедж</div>
+<div class="selector appt">Квартира</div>
+<div class="input"><label for="area">Площадь, м²</label><input type="number" id="area" value="200" min="70" max="1200" step="1"/></div>
+<div class="input"><label for="wc">Санузлы</label><input type="number" id="wc" value="3" min="1" max="8" step="1"/></div>
+<div class="calculate"><div class="button red" id="do_calc"><span>Пересчитать</span></div></div>
+
+</div><div id="calc_hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
+<div id="priceholder">
+<table>
+<thead><tr><th></th><th>Стандарт</th><th>Бизнес</th><th>Люкс</th></tr></thead>
+<tfoot>
+<tr><td>Общая сумма (работа + материал)</td><td></td><td></td><td></td></tr>
+</tfoot>
+<tbody>
+<tr id="otd-pk"><td>Отделка под «ключ»</td><td></td><td></td><td></td></tr>
+<tr id="ele-pk"><td>Электрика под «ключ»</td><td></td><td></td><td></td></tr>
+<tr id="san-pk"><td>Сантехника под «ключ»</td><td></td><td></td><td></td></tr>
+<tr id="oto-pk"><td>Отопление под «ключ»</td><td></td><td></td><td></td></tr>
+<tr id="otd-m"><td>Черновой материал отделка</td><td></td><td></td><td></td></tr>
+<tr id="ele-m"><td>Черновой материал электрика</td><td></td><td></td><td></td></tr>
+<tr id="san-m"><td>Черновой материал сантехника</td><td></td><td></td><td></td></tr>
+<tr id="oto-m"><td>Черновой материал отопление</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<div class="center" style="margin: 40px 0">
+<p><!--[if lte IE 8]><img src="/i/alert.png" /><![endif]--><img src="/i/alert.svg" alt=""/></p>
+<p style="margin: 20px; line-height: 1.2em; font-size: 14px;">В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса. Более точную информацию по ценам мы сможем дать только после ознакомления с дизайн-проектом.</p>
+</div>
+
+<p>Если у вас уже есть проект ремонта, и вы хотите узнать, сколько стоит его реализация, пишите:</p>
+<p><a href="mailto:rso2000@mail.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">rso2000@mail.ru</a></p>
+<p class="small">Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
+
+</div>
+</section>
+
 
 <section id="counters">
 <div class="like_holder">

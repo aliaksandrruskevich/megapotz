@@ -17,8 +17,8 @@ img	{ border: 0; }
 .table	{ display: table; }
 
 h1	{ font-size: 36px; margin: 30px 0; }
-p.h2	{ font-weight: bold; font-size: 32px; }
-p.h1	{ font-weight: bold; font-size: 36px; }
+.h2	{ font-weight: bold; font-size: 32px; }
+.h1	{ font-weight: bold; font-size: 36px; margin: 30px 0; }
 
 .button	{ display: inline-block; cursor: pointer; text-transform: uppercase; font-weight: bold; font-size: 13px; border-radius: 3px; }
 .button a, .button span	{ text-decoration: none; line-height: 40px; padding: 10px 20px; }
@@ -50,8 +50,8 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #page-index .index,
 #page-portfolio .portfolio,
 #page-price .price,
-#page-docs .docs,
-#page-warranty.warranty,
+#page-docs nav .docs,
+#page-warranty nav .warranty,
 #page-articles .articles,
 #page-contacts .contacts	{ cursor: default; color: #ee1c24; }
 
@@ -121,7 +121,6 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #gallery_grid .pic	{ margin: 0 6px 6px 0; display: inline-block; font-size: 0; }
 
 /* price */
-#price p.h1	{ margin: 30px 0; }
 #price .column	{ width: 980px; }
 #calc	{ display: table; position: relative; width: 100%; background-color: #363636; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzcAAABfBAMAAAAnsCRDAAAAMFBMVEU2NjY9PT0lJSVMTEwqKio6OjotLS0yMjJERERISEhKSkpCQkIoKChGRkY/Pz9RUVFtT8szAAAAAXRSTlMAQObYZgAAAaRJREFUeF7t20Ftw1AQRdGpokhOoqZdFIBBFIAhdFEAhhAQgVAIgRAABmEIhVAAxeBIHY2m5xLw4ur9976dRCIvU2TwHigr5ydATg6ONewk5wF0Do7Wms4JkJMDOdjVlQNyyLkFJCcHbwhwJEdyCCCHHIOAHBzqysFQt3Nw6CXnI+EBOqeqnFedIzmZcr4ih0vJB7iE6hzHWt3P1ORcJEfnkNOxcyTHlCZn6CVnbiXnOalzusiZGybnpnNC5zjWcuQ41nbkbGJpOKVXcgyCP5czRSLHXp0zJSSn3SC4dknOmJqcXnLGutH0G4KxzZTWOduZGnbOWleOY+2mc3wyWFxC6x5rS6spLTnkXOvKMQjuOsfHtrFV5xx6HWuTzjEIcjjVvYQaBIN3ay6hBoF7js5xCZUcck5tOse7Na9vGsrROZITo7VmSpNjrf37Y03nrNaa5Eyt5Jx9bNvELDnkZCbn7s9TpnQC/dbad6Bsct6iFeRgX3cQ4KxzEiCHnH6dQ85nbAf7BnLIMaXzeSInBXLIMaWtNRgE5EiO5JBDjmMN7jnb+QVtYHRQ9H4bNwAAAABJRU5ErkJggg=='), url('/i/noize.png'); border-radius: 7px 7px 0 0; }
 #calc>div	{ display: table-cell; height: 95px; vertical-align: middle; }
@@ -304,7 +303,6 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 /* CONTACTS */
 #page-contacts .map	{ position: relative; }
 #page-contacts #text	{ width: 400px; height: 400px; left: 90px; position: absolute; top: 0; left: 100px; }
-#page-contacts .h1	{ margin: 30px 0; }
 #page-contacts .redline	{ margin: 16px 0; }
 #page-contacts .redline span, #page-contacts .redline a	{ background-color: #ee1c24; color: #fff; padding: 2px 7px; font-weight: bold; font-size: 16px; }
 
@@ -344,3 +342,23 @@ article table.bg caption	{ margin: 30px 0; }
 #page-warranty .yellow	{ text-transform: uppercase; }
 #page-warranty .yellow a	{ text-decoration: none; color: #000; background-color: #ffe400; padding: 3px 7px; font-size: 9px; font-weight: bold; }
 #page-warranty .small	{ font-size: 11px; }
+
+/* DOCS */
+#page-docs section h2	{ text-align: center; margin: 20px 0 40px 0; }
+#page-docs .docs h2	{ display: table-caption; }
+#page-docs a.yellow	{ text-transform: uppercase; text-decoration: none; background-color: #ffe400; padding: 3px 7px; font-size: 10px; font-weight: bold; color: #000; }
+#page-docs .multicol	{ -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; }
+#page-docs .multicol div { break-inside: avoid-column; margin-bottom: 50px; }
+#page-docs .multicol p	{ line-height: 1.4em; font-size: 13px; margin-bottom: 10px; }
+#page-docs #official	{ margin-top: 30px; }
+
+/* PRICE */
+#selector	{ margin: 30px auto; background-color: #383838; width: 300px; height: 40px; position: relative; box-shadow: inset 0 0 8px #000; border-radius: 3px; }
+#selector .current	{ background-color: #2b88e8; width: 150px; height: 40px; position: absolute; top: -1px; left: -1px; border-radius: 3px; z-index: 1; -ms-transition: left 0.2s ease-in-out; -webkit-transition: left 0.5s ease-in-out; -moz-transition: left 0.2s ease-in-out; -o-transition: left 1s ease-in-out; transition: left 1s ease-in-out; }
+#selector.left .current	{ left: 0; }
+#selector.right .current	{ left: 151px; }
+#selector .left, .right	{ position: absolute; z-index: 2; font-size: 13px; text-transform: uppercase; font-weight: bold; width: 150px; text-align: center; line-height: 40px; cursor: pointer; }
+#selector .left	{ left: 0; }
+#selector .right	{ left: 150px; }
+#selector a	{ color: #aaa; text-decoration: none; }
+#selector.left .left a, #selector.right .right a	{ color: #fff; cursor: default; }

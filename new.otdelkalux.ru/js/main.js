@@ -20,6 +20,20 @@ Calculator.prototype.init = function(){
 		_this.update_values();
 	});
 	
+	// Tooltip
+	var hint_pos=find_pos($('#calc_hint')[0]);
+	
+	$(window).bind('scroll', function(){
+		if($(this).scrollTop() > hint_pos-500) {
+			window.setTimeout(function(){$("#calc_hint").addClass('shown');}, 300);
+		}
+	});
+
+	$('#calc input').one('focus',function(){
+		$("#calc_hint").removeClass('shown');
+		$(window).unbind('scroll');
+	});
+	
 	$('#calc .cott').click();
 }
 
@@ -235,20 +249,6 @@ switch (page_name) {
 			var logo=$('#ingos')[0];
 			logo.src='/i/ingos-2x.png';
 		}
-	
-		// Tooltip
-		var hint_pos=find_pos($('#calc_hint')[0]);
-		
-		$(window).bind('scroll', function(){
-			if($(this).scrollTop() > hint_pos-500) {
-				window.setTimeout(function(){$("#calc_hint").addClass('shown');}, 300);
-			}
-		});
-
-		$('#calc input').one('focus',function(){
-			$("#calc_hint").removeClass('shown');
-			$(window).unbind('scroll');
-		});
 		
 		// Show / hide call-me-back form
 		init_callback();
@@ -273,12 +273,29 @@ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuN
 
 		var calc=new Calculator();
 		break;
-		
-		
-		
+
 	case 'page-contacts':
 		init_maps();
 		init_callback();
+		break;
+
+	case 'page-price':
+		// CALC
+		if($("#calc").length > 0)
+			var calc=new Calculator();
+		
+		// selector
+		$('#selector .right, #selector .left').click(function(e){
+			e.preventDefault();
+			this.parentNode.className = this.className;
+			var _this=this;
+			$('#selector .current').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function(){
+				document.location = $(_this).find('a').attr('href');
+			});
+		});
+		
+
+		
 		break;
 }
 
@@ -302,7 +319,7 @@ function find_pos(obj) {
 	return curtop;
 }
 
-
+//
 function init_callback()	{
 $('#callback_form .opacity').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function () {
 	if(!$(this).hasClass('o1')){

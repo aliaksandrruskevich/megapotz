@@ -5,6 +5,7 @@ function Fullscreen(){
 	this.photos=[];
 	this.ticker=0;
 	this.state='';
+	this.spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
 	
 	this.screen_height=0;
 	this.screen_width=0;
@@ -40,7 +41,7 @@ Fullscreen.prototype.init = function(){
 	
 	var last_move=0, last_pageX=0, last_pageY=0;
 	var resize_ticker=0;
-	
+		
 	// Timer
 	var timer = window.setInterval(function(){
 		_this.ticker++;
@@ -114,6 +115,12 @@ Fullscreen.prototype.init_events = function()	{
 		}
 	});
 	
+	// Image load event
+	$('#photoholder').load(function(){
+		_this.spinner.stop();
+		_this.ticker=0;
+	});
+	
 	// Animating  controls
 	$('#go_left, #go_right').hover(function(){$(this).toggleClass('hover')},function(){$(this).toggleClass('hover')});
 	$('#text_caption').hover(function(){$('#text_button').toggleClass('hover')},function(){$('#text_button').toggleClass('hover')});
@@ -153,7 +160,11 @@ Fullscreen.prototype.show = function(){
 	else
 		src+='h'+this.screen_height+'/';
 
-	photoholder.src=src;
+	if(photoholder.src!=src){
+		photoholder.src=src;
+		this.spinner.spin($('#loading')[0]);
+	}
+
 	$('#text_caption').removeClass().addClass(this.state);
 }
 

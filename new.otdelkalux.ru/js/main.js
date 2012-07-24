@@ -272,6 +272,13 @@ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuN
 		});
 
 		var calc=new Calculator();
+		
+		// Mouse hint
+		$('#mouse')[0].style.opacity=1;
+		$(window).bind('scroll', function(){
+			$('#mouse')[0].style.opacity=0;
+		});
+		
 		break;
 
 	case 'page-contacts':

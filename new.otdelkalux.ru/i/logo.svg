@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20px" height="30px" viewBox="0 0 20 30">
-<path fill="#ee1c24" d="m0,10L10,0,20,10,20,30,0,30" />
-<text style="font-size:19px;fill:#fff;font-family:Sans-serif;text-anchor: middle;font-weight:bold" x="10" y="25">A</text>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="30px" viewBox="0 0 20 30">
+<path fill="#EE1C24" d="M20,30L20,10.5L10,0L0,10.5V30H20z"/>
+<path fill="#FFFFFF" d="M8.41,11.633h2.946l5.244,12.734h-3.071l-0.952-2.568h-5.28l-0.934,2.568H3.399L8.41,11.633z
+	 M11.697,19.393L10.619,16.5c-0.119-0.322-0.242-0.676-0.368-1.059c-0.125-0.383-0.242-0.767-0.35-1.15
+	c-0.108,0.396-0.222,0.781-0.342,1.158c-0.119,0.378-0.239,0.734-0.358,1.069l-1.042,2.874H11.697z"/>
 </svg>

@@ -4,7 +4,7 @@ function Fullscreen(){
 	this.current=0;
 	this.photos=[];
 	this.ticker=0;
-	this.state='';
+	this.state='play';
 	this.spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
 	
 	this.screen_height=0;
@@ -24,17 +24,17 @@ function Fullscreen(){
 			_this.current=vars[1]===undefined?0:parseInt(vars[1]);
 			if(_this.current >= _this.photos.length)
 				_this.current=0;
+			else if(_this.current == _this.photos.length-1){
+				_this.state='replay';
+			}
 			document.title=data.title;
 			_this.init();
 		});
-
-
 	}
 }
 
 Fullscreen.prototype.init = function(){
 	var _this=this;
-	this.state='play';
 	this.set_size();
 	
 	this.show();
@@ -148,6 +148,10 @@ Fullscreen.prototype.init_events = function()	{
 }
 
 Fullscreen.prototype.show = function(){
+	// Show/hide navigation controls
+	$('#go_left')[0].style.visibility = this.current==0?'hidden':'visible';
+	$('#go_right')[0].style.visibility = this.current==this.photos.length-1?'hidden':'visible';
+
 	var photoholder = $('#photoholder')[0];
 	var w=this.photos[this.current].width;
 	var h=this.photos[this.current].height;
@@ -171,20 +175,17 @@ Fullscreen.prototype.show = function(){
 Fullscreen.prototype.prev = function(){
 	if(this.current>0)	{
 		this.current--;
-		$('#go_left')[0].style.visibility = this.current==0?'hidden':'visible';
-		$('#go_right')[0].style.visibility = 'visible';
+		this.show();
 	}
-	this.show();
+	
 }
 
 Fullscreen.prototype.next = function(){
 	if(this.current<this.photos.length-1){
 		this.current++;
-		$('#go_left')[0].style.visibility = 'visible';
 
 		if(this.current==this.photos.length-1)	{
 			this.state='replay';
-			$('#go_right')[0].style.visibility = 'hidden';
 			// Show controls
 			$('#controls').removeClass('hidden');
 			$('#fullscreen')[0].style.cursor='auto';

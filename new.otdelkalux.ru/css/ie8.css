@@ -10,12 +10,14 @@
 .hover .inner	{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"}
 .inner	{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)"}
 
-#fs-tip	{display: block}
-#fs-tip.hidden	{display: none}
+#fs-tip	{ display: block; }
+#fs-tip.hidden	{ display: none; }
 
 #controls	{display: block}
-#controls.hidden	{display: none}
+#controls.hidden	{ display: none; }
 
 #page-warranty .t	{ background-image: url('/i/curve.png')!important; }
 #page-warranty .b	{ background-image: url('/i/curve.png')!important; }
-#mouse	{ background-image: url('/i/mouse.png')!important; display: none; }
+#mouse	{ background-image: url('/i/mouse.png')!important; }
+
+#selector_hint	{ background-image: url('/i/hint-1.png')!important; }

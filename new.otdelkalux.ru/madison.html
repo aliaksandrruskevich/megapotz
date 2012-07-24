@@ -19,46 +19,231 @@
 <script type="text/javascript">VK.init({apiId: 2956871, onlyWidgets: true});</script>
 <!--!!!!!!!!!!!!!!!!!!!!!!!!!!<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>-->
 <script type="text/javascript">
-function init_maps() {
-	var point = new google.maps.LatLng(55.787674, 37.511282);
-	
-	var mapOptions = {
-		center: point,
-		zoom: 15,
-		disableDefaultUI: false,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	};
 
-	var styles = [{
-		stylers: [
-			{ saturation: -100 },
-			{ lightness: 50 }
-		]
-	}];
+function GMapVillageInitialize() {
 
-	var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
-	map.setOptions({styles: styles});
+    var polylineVillage=false,gMapImage=false;
 
-	var icon = new google.maps.MarkerImage('/i/marker.png',
-		new google.maps.Size(68, 96),
-		new google.maps.Point(0,0),
-		new google.maps.Point(34, 0)
-	);
-	var shadow = new google.maps.MarkerImage('/i/marker-shadow.png',
-		new google.maps.Size(146, 96),
-		new google.maps.Point(0,0),
-		new google.maps.Point(34, 0)
-	);
-	  
-	window.setTimeout(function(){var marker = new google.maps.Marker({
-		position: point,
-		map: map,
-		animation: google.maps.Animation.DROP,
-		icon: icon,
-		shadow: shadow
-	});},1000);
-}
+            
+
+			var polyline = [
+
+			new google.maps.LatLng(55.789508042220056, 37.37282752990723),
+
+			new google.maps.LatLng(55.78972519812341, 37.37306356430054),
+
+			new google.maps.LatLng(55.79228272100399, 37.360875606536865),
+
+			new google.maps.LatLng(55.794285192452804, 37.355103492736816),
+
+			new google.maps.LatLng(55.797276644746404, 37.34845161437988),
+
+			new google.maps.LatLng(55.798133026279714, 37.346134185791016),
+
+			new google.maps.LatLng(55.79890495969149, 37.34330177307129),
+
+			new google.maps.LatLng(55.799640694481404, 37.338430881500244),
+
+			new google.maps.LatLng(55.80106387970244, 37.32574939727783),
+
+			new google.maps.LatLng(55.803512119000565, 37.313475608825684),
+
+			new google.maps.LatLng(55.80384979509831, 37.31038570404053),
+
+			new google.maps.LatLng(55.804066871043126, 37.306222915649414),
+
+			new google.maps.LatLng(55.80403069180306, 37.29849815368652),
+
+			new google.maps.LatLng(55.802366410414585, 37.28982925415039),
+
+			new google.maps.LatLng(55.79648055488129, 37.27060317993164),
+
+			new google.maps.LatLng(55.79430931798716, 37.26489543914795),
+
+			new google.maps.LatLng(55.789146113024266, 37.2566556930542),
+
+			new google.maps.LatLng(55.78518880110676, 37.24588394165039),
+
+			new google.maps.LatLng(55.77985544613229, 37.23609924316406),
+
+			new google.maps.LatLng(55.77724883515888, 37.23013401031494),
+
+			new google.maps.LatLng(55.77609028542741, 37.225069999694824),
+
+			new google.maps.LatLng(55.775317899805834, 37.217302322387695),
+
+			new google.maps.LatLng(55.774666187531146, 37.20352649688721),
+
+			new google.maps.LatLng(55.77510066359177, 37.1976900100708),
+
+			new google.maps.LatLng(55.77845562117285, 37.182583808898926),
+
+			new google.maps.LatLng(55.77942102307777, 37.17644691467285),
+
+			new google.maps.LatLng(55.7815448230836, 37.158164978027344),
+
+			new google.maps.LatLng(55.78494748859636, 37.14271545410156),
+
+			new google.maps.LatLng(55.78731228674957, 37.13258743286133),
+
+			new google.maps.LatLng(55.788012046434744, 37.12696552276611),
+
+			new google.maps.LatLng(55.788060305260046, 37.12348937988281),
+
+			new google.maps.LatLng(55.78774662182692, 37.11975574493408),
+
+			new google.maps.LatLng(55.78581620663887, 37.107439041137695),
+
+			new google.maps.LatLng(55.784971619914636, 37.10035800933838),
+
+			new google.maps.LatLng(55.78470617459128, 37.09177494049072),
+
+			new google.maps.LatLng(55.78470617459128, 37.087998390197754),
+
+			new google.maps.LatLng(55.78591272967009, 37.06860065460205),
+
+			new google.maps.LatLng(55.78639534123915, 37.06465244293213),
+
+			new google.maps.LatLng(55.78728815688104, 37.06160545349121),
+
+			new google.maps.LatLng(55.78907372678154, 37.05864429473877),
+
+			new google.maps.LatLng(55.808757827692574, 37.03246593475342),
+
+			new google.maps.LatLng(55.809336621211926, 37.032551765441894),
+
+			new google.maps.LatLng(55.80996363781258, 37.03358173370361),
+
+			new google.maps.LatLng(55.811121180385584, 37.04049110412598),
+
+			new google.maps.LatLng(55.81121764071278, 37.04036235809326),
+
+			new google.maps.LatLng(55.80914369099508, 37.02765941619873),
+
+			new google.maps.LatLng(55.8088542938768, 37.021307945251465),
+
+			new google.maps.LatLng(55.809505434367246, 37.01538562774658),
+
+			new google.maps.LatLng(55.810445951401554, 37.011566162109375),
+
+			new google.maps.LatLng(55.81085591325316, 37.00547218322754),
+
+			new google.maps.LatLng(55.81100060464041, 37.000064849853516),
+
+			new google.maps.LatLng(55.809360737421784, 36.97440147399902),
+
+			new google.maps.LatLng(55.808830177353144, 36.96993827819824),
+
+			new google.maps.LatLng(55.80733492370606, 36.962900161743164),
+
+			new google.maps.LatLng(55.8015221825142, 36.94431781768799),
+
+			new google.maps.LatLng(55.79861548645531, 36.94397449493408),
+
+			new google.maps.LatLng(55.78734848152428, 36.941936016082764),
+
+			new google.maps.LatLng(55.786998597293156, 36.94206476211548),
+
+			new google.maps.LatLng(55.78680555637222, 36.94234371185303),
+
+			new google.maps.LatLng(55.780932, 36.943145)
+
+            ];
+
+            var gMapCenter=[55.784489,36.972942];
+
+
+
+			gMapImage = [[[55.77036,36.938939],[55.780787,36.959882]],"http://www.villagio.ru/img/map/genplan_madison.png"];
+
+            
+
+		
+
+       var myOptions = {
+
+	       center: new google.maps.LatLng(gMapCenter[0],gMapCenter[1]),
+
+	       zoom: 12,
+
+	       mapTypeId: google.maps.MapTypeId.ROADMAP
+
+       };
+
+
+
+       var map = new google.maps.Map(document.getElementById("map_canvas"),
+
+	    myOptions);
+
+
+
+	    var polyOptions = {
+
+		    path: polyline,
+
+		    strokeColor: "#FF0000",
+
+		    strokeOpacity: 0.5,
+
+		    strokeWeight: 5
+
+	    }
+
+	    var it = new google.maps.Polyline(polyOptions);
+
+	    it.setMap(map);
+
+
+
+        if (polylineVillage) {
+
+	        var polyOptions = {
+
+		        path: polylineVillage,
+
+		        strokeColor: "#00FF00",
+
+		        strokeOpacity: 0.5,
+
+		        strokeWeight: 5
+
+	        }
+
+	        var it = new google.maps.Polyline(polyOptions);
+
+	        it.setMap(map);
+
+        }
+
+
+
+        if (gMapImage) {
+
+            var mapImage = new google.maps.GroundOverlay(gMapImage[1], 
+
+            	new google.maps.LatLngBounds(
+
+			       new google.maps.LatLng(gMapImage[0][0][0],gMapImage[0][0][1]),
+
+			        new google.maps.LatLng(gMapImage[0][1][0],gMapImage[0][1][1])
+
+		        )
+
+            );
+
+            mapImage.setMap(map);
+
+        }
+
+    }//GMapVillageInitialize
+
+
+
+    $(GMapVillageInitialize);
+function init_maps(){}
 </script>
+
 <!--[if lt IE 9]>
 <script type="text/javascript" src="/js/html5shiv.js"></script>
 <![endif]-->
@@ -156,9 +341,19 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <div>
 <p itemprop="telephone">+7 (495) 998-83-47</p>
 <p><a itemprop="email" href="mailto:rso2000@mail.ru">rso2000@mail.ru</a></p>
+</div>
+
+<div>
+<p><b>Стационарный офис</b></p>
+<p itemprop="address">Московская область, посёлок Madison Park, владение 15</p>
+<p><a itemprop="map" href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
+<br/>
+<p><b>Мобильный офис</b></p>
 <p itemprop="address">Москва, ул. Куусинена 19 А</p>
 <p><a itemprop="map" href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
+
 </div>
+
 <div>
 <p class="social flickr"><a href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
 <p class="social gplus"><a href="https://plus.google.com/104094916837036848285/">Сергей Петунин на Google+</a></p>

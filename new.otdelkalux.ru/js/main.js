@@ -290,20 +290,14 @@ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuN
 		// CALC
 		if($("#calc").length > 0)
 			var calc=new Calculator();
-		
-		// selector
-		$('#selector .right, #selector .left').click(function(e){
-			e.preventDefault();
-			this.parentNode.className = this.className;
-			var _this=this;
-			$('#selector .current').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function(){
-				document.location = $(_this).find('a').attr('href');
-			});
-		});
-		
+		init_selector();
 
-		
 		break;
+	case 'page-portfolio':
+		window.setTimeout(function(){$("#selector_hint").css({'opacity':1});}, 2000);
+		init_selector();
+		break;
+		
 }
 
 	// Years in footer
@@ -345,4 +339,22 @@ $('#contact').toggleClass('callback_shown');
 @end
 @*/
 });
+}
+
+function init_selector()	{
+	// selector
+/*@cc_on
+@if (@_jscript_version <= 9)
+return;
+@end
+@*/
+	$('#selector .right, #selector .left').click(function(e){
+		e.preventDefault();
+		this.parentNode.className = this.className;
+		var _this=this;
+		$('#selector .current').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function(){
+			document.location = $(_this).find('a').attr('href');
+		});
+
+	});
 }

@@ -222,7 +222,8 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 
 #contact .email .w	{ font-size: 24px; }
 #contact .email .y	{ font-size: 27px; margin: 20px 0; }
-#contact .ready	{ font: italic 15px Georgia, Arial, Sans-Serif; padding: 0 0 50px 80px; background: url('/i/mini.jpg') 0 0 no-repeat; width: 300px; margin: 0 auto; text-align: left; }
+#contact .ready	{ font: italic 15px Georgia, Arial, Sans-Serif; padding: 0 0 50px 80px; width: 300px; margin: 0 auto; text-align: left; }
+#contact .ready img	{ float: left; margin-left: -70px; border-radius: 28px; width: 56px; height: 56px; }
 
 /*other*/
 #other	{ margin: 80px auto; }
@@ -359,8 +360,16 @@ article table.bg caption	{ margin: 30px 0; }
 #selector .current	{ background-color: #2b88e8; width: 150px; height: 40px; position: absolute; top: -1px; left: -1px; border-radius: 3px; z-index: 1; -ms-transition: left 0.2s ease-in-out; -webkit-transition: left 0.5s ease-in-out; -moz-transition: left 0.2s ease-in-out; -o-transition: left 1s ease-in-out; transition: left 1s ease-in-out; }
 #selector.left .current	{ left: 0; }
 #selector.right .current	{ left: 151px; }
-#selector .left, .right	{ position: absolute; z-index: 2; font-size: 13px; text-transform: uppercase; font-weight: bold; width: 150px; text-align: center; line-height: 40px; cursor: pointer; }
+#selector .left, #selector .right	{ position: absolute; z-index: 2; font-size: 13px; text-transform: uppercase; font-weight: bold; width: 150px; text-align: center; line-height: 40px; cursor: pointer; }
 #selector .left	{ left: 0; }
 #selector .right	{ left: 150px; }
 #selector a	{ color: #aaa; text-decoration: none; }
 #selector.left .left a, #selector.right .right a	{ color: #fff; cursor: default; }
+
+#price .call	{ width: 450px; text-align: center; margin: 0 auto; }
+#price .call p	{ font-size: 24px; font-weight: bold; line-height: 1.4em; margin: 20px 0; }
+#price .call a	{ background-color: #ffe400; color: #000; padding: 4px 8px; text-decoration: none; }
+#price .call .small	{ font-size: 12px; color: #919191; font-weight: normal; }
+
+/* OBJECTS */
+#selector_hint	{ font-size: 11px; line-height: 1.4em; padding: 12px 0 12px 22px; position: absolute; width: 120px; top: -7px; left: 310px; background: url('/i/hint-1.svg') 0 0 no-repeat; opacity: 0; -ms-transition: opacity 1s linear; -webkit-transition: opacity 1s linear; -moz-transition: opacity 1s linear; -o-transition: opacity 1s linear; transition: opacity 1s linear; }

@@ -294,8 +294,18 @@ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuN
 
 		break;
 	case 'page-portfolio':
-		window.setTimeout(function(){$("#selector_hint").css({'opacity':1});}, 2000);
-		init_selector();
+		if($("#selector_hint").length > 0)
+			window.setTimeout(function(){$("#selector_hint").css({'opacity':1});}, 2000);
+		if($("#selector").length > 0)
+			init_selector();
+		if($("#backnext").length > 0){
+			var d = ['M0,0 h8 l-8,25 8 25 h-8 v-50 Z','M50,0 h-8 l8,25 -8 25 h8 v-50 Z'];
+			$("#backnext img").each(function(i){
+				this.style.backgroundImage="url('"+this.src+"')";
+				this.src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' viewBox='0 0 50 50'><path fill='#fff' d='"+d[i]+"'/></svg>";
+			});
+		}
+
 		break;
 		
 }

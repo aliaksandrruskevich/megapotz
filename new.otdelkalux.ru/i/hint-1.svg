@@ -8,5 +8,5 @@
 <feBlend in="SourceGraphic" in2="blur" mode="normal" />
 </filter>
 </defs>
-<path filter="url(#dropshadow)" style="shape-rendering:crispEdges;stroke:#a7a7a7;stroke-width:1px;fill:#fff;" d="M14,7h120v38h-120v-11l-8,-8l8,-8,v-11 Z" />
+<path filter="url(#dropshadow)" style="shape-rendering:crispEdges;stroke:#a7a7a7;stroke-width:1px;fill:#fff;" d="M14,7h120v38h-120v-11l-8,-8l8,-8 v-11 Z" />
 </svg>

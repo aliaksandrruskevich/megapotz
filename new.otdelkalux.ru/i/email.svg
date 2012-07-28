@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 164 112">
+<defs>
+<style type="text/css"><![CDATA[
+path	{ stroke-linejoin: round; stroke: #000; stroke-width: 14; fill: none; shape-rendering: crisp-edges; }
+]]></style>
+</defs>
+<path d="M7,7h150v98h-150z"/>
+<path d="M7,7l75,49 75,-49"/>
+</svg>

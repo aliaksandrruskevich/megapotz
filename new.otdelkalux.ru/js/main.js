@@ -39,19 +39,19 @@ Calculator.prototype.init = function(){
 
 Calculator.prototype.update_values = function(){
 	var _this=this;
-	this.area=$('#area').val();
-	this.wc=$('#wc').val();
+	this.area=parseInt($('#area').val());
+	this.wc=parseInt($('#wc').val());
 	
 	var calc_cott = {
 	'cott':	{
 		'otd-pk': function(){
-			return [4000*_this.area, 5500*_this.area, 7000*_this.area];
+			return [4500*_this.area, 6000*_this.area, 7500*_this.area];
 		},
 		'ele-pk': function(){
-			return [110000+200*_this.area, 130000+200*_this.area, 150000+200*_this.area];
+			return [120000+220*_this.area, 140000+220*_this.area, 160000+220*_this.area];
 		},
 		'san-pk': function(){
-			return [20000*_this.wc, 25000*_this.wc, 30000*_this.wc];
+			return [30000*(_this.wc+0.5), 36000*(_this.wc+0.5), 42000*(_this.wc+0.5)];
 		},
 		'oto-pk': function(){
 			return [90000+200*_this.area, 110000+200*_this.area, 130000+200*_this.area];
@@ -63,7 +63,7 @@ Calculator.prototype.update_values = function(){
 			return [20000+200*_this.area, 40000+200*_this.area, 60000+200*_this.area];
 		},
 		'san-m': function(){
-			return [20000+200*_this.area, 40000+200*_this.area, 60000+200*_this.area];
+			return [17500*(_this.wc+0.5), 22500*(_this.wc+0.5), 30000*(_this.wc+0.5)];
 		},
 		'oto-m': function(){
 			return [60000+800*_this.area, 100000+800*_this.area, 140000+800*_this.area];
@@ -71,13 +71,13 @@ Calculator.prototype.update_values = function(){
 	},
 	'appt':	{
 		'otd-pk': function(){
-			return [5000*_this.area, 6000*_this.area, 8000*_this.area];
+			return [5000*_this.area, 6500*_this.area, 8000*_this.area];
 		},
 		'ele-pk': function(){
-			return [110000+200*_this.area, 130000+200*_this.area, 150000+200*_this.area];
+			return [120000+200*_this.area, 140000+220*_this.area, 160000+220*_this.area];
 		},
 		'san-pk': function(){
-			return [20000*_this.wc, 25000*_this.wc, 30000*_this.wc];
+			return [30000*(_this.wc+0.5), 36000*(_this.wc+0.5), 42000*(_this.wc+0.5)];
 		},
 		'otd-m': function(){
 			return [3000*_this.area, 3500*_this.area, 4000*_this.area];
@@ -86,8 +86,8 @@ Calculator.prototype.update_values = function(){
 			return [20000+200*_this.area, 40000+200*_this.area, 60000+200*_this.area];
 		},
 		'san-m': function(){
-			return [20000+200*_this.area, 40000+200*_this.area, 60000+200*_this.area];
-		},
+			return [17500*(_this.wc+0.5), 22500*(_this.wc+0.5), 30000*(_this.wc+0.5)];
+		}
 	}
 	}
 	
@@ -304,6 +304,17 @@ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuN
 				this.style.backgroundImage="url('"+this.src+"')";
 				this.src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' viewBox='0 0 50 50'><path fill='#fff' d='"+d[i]+"'/></svg>";
 			});
+		}
+		if($("#map_canvas").length > 0){
+			init_maps();
+			$('#showhide').toggle(function(){
+					$('#map').css({'height':0});
+					$(this).text('Показать карту');
+				},
+				function(){
+					$('#map').css({'height':'500px'});
+					$(this).text('Скрыть карту');
+				});
 		}
 
 		break;

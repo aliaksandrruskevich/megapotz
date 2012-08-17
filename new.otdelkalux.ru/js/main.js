@@ -284,6 +284,23 @@ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuN
 	case 'page-contacts':
 		init_maps();
 		init_callback();
+		init_selector();
+/* ПЕРЕключалка названия, переключалка карты, отрабатывание решетки */
+		var to;
+		$('#selector .left, #kuusinena_hint').hover(function(){
+			window.clearTimeout(to);
+			$('#madison_hint').css('opacity','0');
+			$('#kuusinena_hint').css({'visibility': 'visible','opacity':'1'});
+		}, function(){
+			to=window.setTimeout(function(){$('#kuusinena_hint').css({'opacity':'0','visibility':'hidden'})},1000);
+		});
+		$('#selector .right, #madison_hint').hover(function(){
+			window.clearTimeout(to);
+			$('#kuusinena_hint').css('opacity','0');
+			$('#madison_hint').css({'visibility': 'visible','opacity':'1'});
+		}, function(){
+			to=window.setTimeout(function(){$('#madison_hint').css({'opacity':'0','visibility':'hidden'})},1000);
+		});
 		break;
 
 	case 'page-price':

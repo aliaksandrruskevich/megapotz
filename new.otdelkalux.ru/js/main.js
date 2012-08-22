@@ -4,8 +4,49 @@
 function Calculator(){
 	this.area=0;
 	this.wc=0;
-	this.state='';
+	this.room_type='';
 	this.init();
+}
+
+Calculator.prototype.evaluate = function(room_type, work_type){
+	if(room_type=='cott')
+		switch(work_type)	{
+			case 'otd-pk':
+				return [4500*this.area, 6000*this.area, 7500*this.area];
+			case 'ele-pk':
+				return [120000+220*this.area, 140000+220*this.area, 160000+220*this.area];
+			case 'san-pk':
+				return [30000*(this.wc+0.5), 36000*(this.wc+0.5), 42000*(this.wc+0.5)];
+			case 'oto-pk':
+				return [90000+200*this.area, 110000+200*this.area, 130000+200*this.area];
+			case 'otd-m':
+				return [3000*this.area, 3500*this.area, 4000*this.area];
+			case 'ele-m':
+				return [20000+200*this.area, 40000+200*this.area, 60000+200*this.area];
+			case 'san-m':
+				return [17500*(this.wc+0.5), 22500*(this.wc+0.5), 30000*(this.wc+0.5)];
+			case 'oto-m':
+				return [60000+800*this.area, 100000+800*this.area, 140000+800*this.area];
+			default:
+				return false;
+		}
+	else
+		switch(work_type)	{
+			case 'otd-pk':
+				return [5000*this.area, 6500*this.area, 8000*this.area];
+			case 'ele-pk':
+				return [120000+200*this.area, 140000+220*this.area, 160000+220*this.area];
+			case 'san-pk':
+				return [30000*(this.wc+0.5), 36000*(this.wc+0.5), 42000*(this.wc+0.5)];
+			case 'otd-m':
+				return [3000*this.area, 3500*this.area, 4000*this.area];
+			case 'ele-m':
+				return [20000+200*this.area, 40000+200*this.area, 60000+200*this.area];
+			case 'san-m':
+				return [17500*(this.wc+0.5), 22500*(this.wc+0.5), 30000*(this.wc+0.5)];
+			default:
+				return false;
+		}
 }
 
 Calculator.prototype.init = function(){
@@ -15,8 +56,8 @@ Calculator.prototype.init = function(){
 	});
 
 	$('#calc .selector').click(function(){
-		_this.state=this.className.substring(9);
-		$('#price')[0].className=_this.state;
+		_this.room_type=this.className.substring(9);
+		$('#price')[0].className=_this.room_type;
 		_this.update_values();
 	});
 	
@@ -25,12 +66,12 @@ Calculator.prototype.init = function(){
 	
 	$(window).bind('scroll', function(){
 		if($(this).scrollTop() > hint_pos-500) {
-			window.setTimeout(function(){$("#calc_hint").addClass('shown');}, 300);
+			window.setTimeout(function(){$('#calc_hint').addClass('shown');}, 300);
 		}
 	});
 
 	$('#calc input').one('focus',function(){
-		$("#calc_hint").removeClass('shown');
+		$('#calc_hint').removeClass('shown');
 		$(window).unbind('scroll');
 	});
 	
@@ -42,68 +83,18 @@ Calculator.prototype.update_values = function(){
 	this.area=parseInt($('#area').val());
 	this.wc=parseInt($('#wc').val());
 	
-	var calc_cott = {
-	'cott':	{
-		'otd-pk': function(){
-			return [4500*_this.area, 6000*_this.area, 7500*_this.area];
-		},
-		'ele-pk': function(){
-			return [120000+220*_this.area, 140000+220*_this.area, 160000+220*_this.area];
-		},
-		'san-pk': function(){
-			return [30000*(_this.wc+0.5), 36000*(_this.wc+0.5), 42000*(_this.wc+0.5)];
-		},
-		'oto-pk': function(){
-			return [90000+200*_this.area, 110000+200*_this.area, 130000+200*_this.area];
-		},
-		'otd-m': function(){
-			return [3000*_this.area, 3500*_this.area, 4000*_this.area];
-		},
-		'ele-m': function(){
-			return [20000+200*_this.area, 40000+200*_this.area, 60000+200*_this.area];
-		},
-		'san-m': function(){
-			return [17500*(_this.wc+0.5), 22500*(_this.wc+0.5), 30000*(_this.wc+0.5)];
-		},
-		'oto-m': function(){
-			return [60000+800*_this.area, 100000+800*_this.area, 140000+800*_this.area];
-		}
-	},
-	'appt':	{
-		'otd-pk': function(){
-			return [5000*_this.area, 6500*_this.area, 8000*_this.area];
-		},
-		'ele-pk': function(){
-			return [120000+200*_this.area, 140000+220*_this.area, 160000+220*_this.area];
-		},
-		'san-pk': function(){
-			return [30000*(_this.wc+0.5), 36000*(_this.wc+0.5), 42000*(_this.wc+0.5)];
-		},
-		'otd-m': function(){
-			return [3000*_this.area, 3500*_this.area, 4000*_this.area];
-		},
-		'ele-m': function(){
-			return [20000+200*_this.area, 40000+200*_this.area, 60000+200*_this.area];
-		},
-		'san-m': function(){
-			return [17500*(_this.wc+0.5), 22500*(_this.wc+0.5), 30000*(_this.wc+0.5)];
-		}
-	}
-	}
-	
 	var itog=[0,0,0];
 	$('#price tbody tr').each(function(){
-		var vals=[0,0,0];
-
-		if(calc_cott[_this.state][this.id]!=undefined)
-			vals=calc_cott[_this.state][this.id]();
+		var vals=_this.evaluate(_this.room_type,this.id);
 		
-		for(var i=0;i<3;i++)
-			itog[i]+=vals[i];
+		if(vals){
+			for(var i=0;i<3;i++)
+				itog[i]+=vals[i];
 
-		$(this).find('td:nth-child(n+2)').each(function(i){
-			$(this).text(vals[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
-		});
+			$(this).find('td:nth-child(n+2)').each(function(i){
+				$(this).text(vals[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
+			});
+		}
 	});
 	$('tfoot td:nth-child(n+2)').each(function(i){
 		$(this).text(itog[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));

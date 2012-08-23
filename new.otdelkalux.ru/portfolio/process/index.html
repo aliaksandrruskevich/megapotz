@@ -20,11 +20,11 @@
 <!--!!!!!!!!!!!!!!!!!!!!!!!!!!<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>-->
 <script type="text/javascript">
 var places = [
-	['<p style="height: 60px"><b>Локация 1</b><br/><b>Локация 1</b></p>', 55.895301, 37.064235],
-	['Локация 2', 55.862879, 37.009303],
-	['Локация 3', 55.779381, 37.525661],
-	['Локация 4', 56.093873, 37.459743],
-	['Локация 5', 55.751896, 37.617113]
+	[55.895301, 37.064235],
+	[55.862879, 37.009303],
+	[55.779381, 37.525661],
+	[56.093873, 37.459743],
+	[55.751896, 37.617113]
 ];
 
 function init_maps() {
@@ -43,38 +43,21 @@ function init_maps() {
 
 	var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
 	map.setOptions({styles: styles});
-	
 	setMarkers(map, places);
 }
 
 function setMarkers(map, locations) {
-	var image = new google.maps.MarkerImage('/i/marker-1.png', new google.maps.Size(50,60), new google.maps.Point(0,0), new google.maps.Point(20,60));
 	var shadow = new google.maps.MarkerImage('/i/marker-shadow-1.png', new google.maps.Size(96, 37), new google.maps.Point(0,0), new google.maps.Point(16,36));
 
 	for (var i = 0; i < locations.length; i++) {
-		var loc = locations[i];
-		var myLatLng = new google.maps.LatLng(loc[1], loc[2]);
+		var myLatLng = new google.maps.LatLng(locations[i][0], locations[i][1]);
 		var marker = new google.maps.Marker({
 			position: myLatLng,
 			map: map,
 			shadow: shadow,
-			icon: image,
-			title: loc[0],
+			icon: new google.maps.MarkerImage('/i/markers.png', new google.maps.Size(51,60), new google.maps.Point(0,60*i), new google.maps.Point(20,60)),
 		});
-		attachInfo(marker, loc[0]);
 	}
-}
-
-function attachInfo(marker, str) {
-	var infowindow = new google.maps.InfoWindow({
-		content: str,
-	});
-	google.maps.event.addListener(marker, 'click', function() {
-	//	marker.setVisible(false);
-	
-	//http://stackoverflow.com/questions/2223574/google-maps-auto-close-open-infowindows
-		infowindow.open(marker.get('map'), marker);
-	});
 }
 
 </script>
@@ -121,7 +104,7 @@ function attachInfo(marker, str) {
 <section id="map">
 <div id="map_canvas"></div>
 <div id="text">
-<p class="redline"><span>Вы можете лично посмотреть</span></p>
+<p class="redline" style="margin-top: 400px"><span>Вы можете лично посмотреть</span></p>
 <p class="redline"><span>любой из этих объектов!</span></p>
 </div>
 </section>

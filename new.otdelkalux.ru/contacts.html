@@ -19,45 +19,106 @@
 <script type="text/javascript">VK.init({apiId: 2956871, onlyWidgets: true});</script>
 <!--!!!!!!!!!!!!!!!!!!!!!!!!!!<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>-->
 <script type="text/javascript">
-function init_maps() {
-	var point = new google.maps.LatLng(55.787674, 37.511282);
+/*
+	var madison_bg = new google.maps.GroundOverlay('/i/madison.png', 
+		new google.maps.LatLngBounds(
+			new google.maps.LatLng(55.77036,36.938939),
+			new google.maps.LatLng(55.780787,36.959882)
+		)
+	);
 	
-	var mapOptions = {
-		center: point,
-		zoom: 15,
-		disableDefaultUI: false,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	};
+	//madison_bg.setMap(map);
+*/
 
-	var styles = [{
-		stylers: [
-			{ saturation: -100 },
-			{ lightness: 50 }
-		]
-	}];
 
-	var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
-	map.setOptions({styles: styles});
 
+
+
+var map;
+var hash;
+var loc;
+
+function init_maps() {
+	// Точки офисов на карте. [0] - Куусинена, [1] - Madison.
+	var point = [new google.maps.LatLng(55.787674, 37.511282), new google.maps.LatLng(55.778093, 36.944855)];
+
+	// Объект маркера
 	var icon = new google.maps.MarkerImage('/i/marker.png',
 		new google.maps.Size(68, 96),
 		new google.maps.Point(0,0),
 		new google.maps.Point(34, 0)
 	);
+
+	//Тень маркера
 	var shadow = new google.maps.MarkerImage('/i/marker-shadow.png',
 		new google.maps.Size(146, 96),
 		new google.maps.Point(0,0),
 		new google.maps.Point(34, 0)
 	);
-	  
-	window.setTimeout(function(){var marker = new google.maps.Marker({
-		position: point,
-		map: map,
-		animation: google.maps.Animation.DROP,
-		icon: icon,
-		shadow: shadow
-	});},1000);
+	
+	loc = {
+	'kuusinena':	{
+		'zoom': 15,
+		'latlng': point[0],
+		'selector': 'left',
+		'addr': 'Москва,<br/>Куусинена 19А'
+	},
+	'madison':	{
+		'zoom': 10,
+		'latlng': point[1],
+		'selector': 'right',
+		'addr': 'Новорижское ш.,<br/>посёлок Madison Park,<br/>владение 15'
+	}};
+
+	hash = window.location.hash.substr(1);
+	if(loc[hash]==undefined){
+		hash='kuusinena';
+		window.location.hash=hash;
+	}
+	$('#selector')[0].className = loc[hash].selector;
+	$('#addr').html(loc[hash].addr);
+	
+	map = new google.maps.Map(document.getElementById("map_canvas"),{
+		center: loc[hash].latlng,
+		zoom: loc[hash].zoom,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	});
+
+	map.setOptions({styles: [{
+		stylers: [
+			{ saturation: -100 },
+			{ lightness: 50 }
+		]
+	}]});
+	
+	loc['kuusinena'].marker = new google.maps.Marker({position: point[0], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='kuusinena' });
+	loc['madison'].marker = new google.maps.Marker({position: point[1], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='madison' });
+
+	if (window.addEventListener) {
+		window.addEventListener('hashchange', pan_map, false); 
+	} else if (window.attachEvent)  {
+		window.attachEvent('onhashchange', pan_map);
+	}
 }
+
+
+
+function pan_map(){
+	loc[hash].marker.setVisible(false);
+
+	hash = window.location.hash.substr(1);
+	if(loc[hash]==undefined){
+		hash='kuusinena';
+		window.location.hash=hash;
+	}
+
+	map.panTo(loc[hash].latlng);
+	map.setZoom(loc[hash].zoom);
+	loc[hash].marker.setVisible(true);
+	loc[hash].marker.setAnimation(google.maps.Animation.DROP);
+	$('#addr').html(loc[hash].addr);
+}
+
 </script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
@@ -89,7 +150,7 @@ function init_maps() {
 <section class="map">
 <div id="map_canvas" style="width:100%; height:400px"></div>
 <div id="text">
-<p class="h1" id="addr">Москва,<br/>Куусинена 19А</p>
+<p class="h1" id="addr"></p>
 <p class="redline"><span>Работаем: пн—сб с 9:00 до 20:00</span></p>
 <p class="redline"><span>Телефон: +7 495 99-88-347</span></p>
 <p class="redline"><a href="mailto:rso2000@mail.ru">rso2000@mail.ru</a></p>
@@ -97,8 +158,8 @@ function init_maps() {
 
 <div id="selector" class="left">
 <div class="current"></div>
-<span class="left"><a href="#kuusinena-19a">Основной офис</a></span>
-<span class="right"><a href="#madison-park">Madison Park</a></span>
+<span class="left"><a href="#kuusinena">Основной офис</a></span>
+<span class="right"><a href="#madison">Madison Park</a></span>
 <div id="button"></div>
 <div id="kuusinena_hint">Нужно <b>заранее согласовать</b> встречу, потому что днём я нахожусь на объектах.</div>
 <div id="madison_hint">В будние дни я почти всегда на объектах в посёлках, построенных <a href="http://www.villagio.ru/villages/" rel="nofollow" target="_blank">Villagio Estate</a>.</div>

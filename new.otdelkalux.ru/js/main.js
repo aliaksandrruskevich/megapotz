@@ -351,23 +351,10 @@ function find_pos(obj) {
 
 //
 function init_callback()	{
-$('#callback_form .opacity').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function () {
-	if(!$(this).hasClass('o1')){
-		$('#contact').toggleClass('callback_shown');
-	}
-});
-$('#show_form_btn').click(function(){
+$('#show_form_btn,#callback_form input[type=reset], #close').click(function(){
 	$('#contact').toggleClass('callback_shown');
-	window.setTimeout(function(){$('#callback_form .opacity').toggleClass('o1');},100);
 });
-$('#callback_form input[type=reset]').click(function(){
-	$('#callback_form .opacity').toggleClass('o1');
-/*@cc_on
-@if (@_jscript_version <= 9)
-$('#contact').toggleClass('callback_shown');
-@end
-@*/
-});
+
 }
 
 function init_selector()	{

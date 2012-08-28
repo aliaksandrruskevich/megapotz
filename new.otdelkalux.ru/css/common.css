@@ -213,13 +213,17 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #callback_form .field input:hover	{ box-shadow: inset 0 0 4px #cb7a00; }
 #callback_form .buttons	{ text-align: left; }
 #callback_form .buttons input	{ margin-right: 10px; border: 0; padding: 10px 25px; } 
+#callback_form  .w	{ font-size: 24px; margin: 30px 0; }
+
+#callback_form.sent form	{ display: none }
+#callback_form.sent #thanks	{ display: block; }
+#callback_form.not_sent form	{ display: block; }
+#callback_form.not_sent #thanks	{ display: none; }
 
 #contact.callback_shown #callback_form	{ display: block; }
 #contact.callback_shown #show_form_btn	{ display: none; }
 #contact.callback_shown .cb_comment	{ display: none; }
-
-#callback_form .opacity	{ opacity: 0;  -webkit-transition: opacity 1s linear; -moz-transition: opacity 1s linear; -o-transition: opacity 1s linear; transition: opacity 1s linear; }
-#callback_form .opacity.o1	{ opacity: 1!important; }
+#callback_form iframe	{ position: absolute; left:-100px; width: 1px; height: 1px; }
 
 #contact .email .w	{ font-size: 24px; }
 #contact .email .y	{ font-size: 27px; margin: 20px 0; }

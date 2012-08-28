@@ -173,9 +173,8 @@ function pan_map(){
 		<p class="y">+7 (495) 99-88-347</p>
 		<div class="button red phone" id="show_form_btn"><span>Позвонить вам?</span></div>
 	</div>
-	<div id="callback_form">
-	<div class="opacity">
-		<form method="post" action="/cgi-bin/sendsms.pl">
+	<div id="callback_form" class="not_sent">
+		<form method="post" action="/true.html" target="target">
 			<div class="field"><label for="name">Имя</label><input type="text" name="name" id="name" required placeholder="Иван"/></div>
 			<div class="field"><label for="tel">Номер телефона</label><input type="text" name="tel" id="tel" required placeholder="+79051234567"/></div>
 			<div class="buttons">
@@ -183,7 +182,11 @@ function pan_map(){
 				<input type="submit" value="Отправить" class="red button"/>
 			</div>
 		</form>
-	</div>
+		<div id="thanks">
+			<p class="w">Спасибо!<br/>Я перезвоню Вам в самое ближайшее время.</p>
+			<div class="button black" id="close"><span>закрыть</span></div>
+		</div>
+		<iframe id="target" name="target"></iframe>
 	</div>
 	<p class="cb_comment">Оставьте свой телефон, и я обязательно перезвоню вам!</p><hr/>
 	<div class="email">

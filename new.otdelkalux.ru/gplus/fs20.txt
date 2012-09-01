@@ -1,0 +1,26 @@
+<div class="GPlusGallery">
+
+<div class="table">
+<div class="vcenter">
+<img id="photoholder" src="/i/0.gif" alt=""/>
+</div>
+</div>
+
+<div id="controls">
+
+<div id="go_left"><div class="arrow"></div></div>
+<div id="go_right"><div class="arrow"></div></div>
+
+<div class="pult_holder">
+<div id="pult">
+	<div id="text_button"><div class="inner"></div></div>
+	<div id="exit_button"><div class="inner"></div></div>
+	<div id="text_caption"><div class="bg"></div><span class="play-label">Приостановить</span><span class="stop-label">Продолжить</span><span class="replay-label">Начать заново</span></div>
+	<div id="exit_caption"><a class="bg" href="/"></a></div>
+</div>
+</div>
+</div>
+
+<div id="fs-tip" class="hidden"><p>Нажмите <span class="red">Enter</span>, чтобы смотреть фото во весь размер экрана.</p></div>
+<div id="loading"></div>
+</div>

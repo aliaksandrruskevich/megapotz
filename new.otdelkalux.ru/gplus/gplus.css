@@ -1,0 +1,52 @@
+html, body	{ height: 100%; }
+/* Center image on screen */
+#gplus-fullscreen-layout	{ background-color: #000; position: fixed; top: 0; left: 0; height: 100%; width: 100%; }
+body:-webkit-full-screen { width: 100%; }
+body:-moz-full-screen { width: 100%; }
+
+#gplus-fullscreen-layout .gplus-picture-holder	{ width: 100%; height: 100%; display: table; }
+#gplus-fullscreen-layout .gplus-picture-aligner	{ display: table-cell; width: 100%; height: 100%; vertical-align: middle; text-align: center; }
+#gplus-fullscreen-layout .hidden	{ opacity: 0; }
+/* Show / hide UI transition */
+#gplus-ui	{ -webkit-transition: opacity 500ms linear; opacity: 1; }
+.no-ui	{ cursor: none; }
+.no-ui #gplus-ui	{ opacity: 0; }
+
+
+/* Left and right navigation arrows */
+#gplus-go-left, #gplus-go-right	{ position: absolute; top: 10%; height: 80%; width: 80px; cursor: pointer; }
+#gplus-go-left	{ left: 0; }
+#gplus-go-right	{ right: 0; }
+#gplus-ui .gplus-arrow	{ height: 40px; width: 40px; background-image: url('fullscreen.png'); background-repeat: no-repeat; position: absolute; top: 50%; }
+#gplus-go-left .gplus-arrow	{  background-position: -40px -40px; left: 0; }
+#gplus-go-left.hover .gplus-arrow	{ background-position: -40px 0; }
+#gplus-go-right .gplus-arrow	{  background-position: 0 -40px; right: 0; }
+#gplus-go-right.hover .gplus-arrow	{ background-position: 0 0; }
+
+/* Pult */
+#gplus-ui .gplus-pult	{ position: absolute; left: 50%; bottom: 10%; margin-left: -124px; width: 248px; height: 48px; font-family: Helvetica, Arial, Sans-Serif; }
+
+#gplus-button-left, #gplus-button-right	{ border: solid 1px rgba(255, 255, 255, 0.6); height: 100%; position: absolute; top: 0; }
+#gplus-button-left	{ width: 197px; left: 0; border-radius: 5px 0 0 5px; }
+#gplus-button-right	{ width: 48px; left: 200px; border-radius: 0 5px 5px 0; }
+#gplus-ui .hover .gplus-button-highlighter	{ box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); opacity: 0.7; }
+#gplus-ui .gplus-button-highlighter	{ width: 100%; height: 100%; background-color: #fff; opacity: 0.35; -webkit-transition: opacity 200ms linear; -moz-transition: opacity 200ms linear; -ms-transition: opacity 200ms linear; -o-transition: opacity 200ms linear; transition: opacity 200ms linear; }
+
+#gplus-caption-left, #gplus-caption-right	{ cursor: pointer; position: absolute; top: 0; line-height: 48px; }
+#gplus-caption-left	{ overflow: hidden; font-weight: bold; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); color: #fff; left: 0; width: 197px; }
+#gplus-caption-right	{ right: 0; width: 48px; }
+#gplus-ui .gplus-caption-icon	{ background-image: url('fullscreen.png'); background-repeat: no-repeat; width: 40px; height: 40px; float: left; margin: 4px; }
+#gplus-caption-left span	{ display: none; width: 150px; }
+#gplus-caption-left.play .gplus-caption-icon	{ background-position: -40px -80px; }
+#gplus-caption-left.play .gplus-caption-play	{ display: inline;}
+#gplus-caption-left.replay .gplus-caption-icon	{ background-position: -40px -120px; }
+#gplus-caption-left.replay .gplus-caption-replay	{ display: inline; }
+#gplus-caption-left.stop .gplus-caption-icon	{ background-position: 0 -80px; }
+#gplus-caption-left.stop .gplus-caption-stop	{ display: inline; }
+#gplus-caption-right .gplus-caption-icon	{ background-position: 0 -120px; }
+
+/* Spinner and fullscreen hint */
+#gplus-fullscreen-tip	{ position: absolute; left: 50%; top: 50%; padding: 40px; font: normal 24px Arial; margin: -100px 0 0 -200px; width: 320px; background-color: #fff; opacity: 1; box-shadow: 0 0 30px #000; -webkit-transition: opacity 500ms linear; -moz-transition: opacity 500ms linear; -ms-transition: opacity 500ms linear; -o-transition: opacity 500ms linear; transition: opacity 500ms linear; }
+#gplus-fullscreen-tip p	{ line-height: 1.4em; }
+#gplus-spinner	{ position: absolute; top: 50%; left: 50%; margin: -22px 0 0 -22px; z-index: 10; }
+#gplus-spinner.css-spinner	{ width: 44px; height: 44px; border-radius: 5px; background: #000 url('loading.gif') 50% 50% no-repeat; }

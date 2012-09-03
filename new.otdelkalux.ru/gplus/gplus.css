@@ -3,6 +3,7 @@ html, body	{ height: 100%; }
 #gplus-fullscreen-layout	{ background-color: #000; position: fixed; top: 0; left: 0; height: 100%; width: 100%; }
 body:-webkit-full-screen { width: 100%; }
 body:-moz-full-screen { width: 100%; }
+body:full-screen { width: 100%; }
 
 #gplus-fullscreen-layout .gplus-picture-holder	{ width: 100%; height: 100%; display: table; }
 #gplus-fullscreen-layout .gplus-picture-aligner	{ display: table-cell; width: 100%; height: 100%; vertical-align: middle; text-align: center; }
@@ -50,3 +51,7 @@ body:-moz-full-screen { width: 100%; }
 #gplus-fullscreen-tip p	{ line-height: 1.4em; }
 #gplus-spinner	{ position: absolute; top: 50%; left: 50%; margin: -22px 0 0 -22px; z-index: 10; }
 #gplus-spinner.css-spinner	{ width: 44px; height: 44px; border-radius: 5px; background: #000 url('loading.gif') 50% 50% no-repeat; }
+
+#gplus-gallery-grid	{ margin: 30px 50px; }
+#gplus-gallery-grid .pic	{ margin: 0 6px 6px 0; display: inline-block; font-size: 0; }
+#gplus-gallery-grid img	{ cursor: pointer; }

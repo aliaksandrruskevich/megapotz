@@ -1,74 +1,189 @@
 /*!
  * Author: Mikhail Shestakov (mike.shestakov@gmail.com)
  * Use:
- *
+ *	var photos = [];					// [{'width': <number>, 'height': <number>, 'title': <string>, 'url': <string>}, ...]
  *	var options = {
- *		current:		0,		// Number of first photo to show
- *		photos:			[]		// [{'width': <number>, 'height': <number>, 'title': <string>, 'url': <string>}, ...]
- *		tickDuration:	300,	// Internal timer (in milliseconds)
- *		hideUIDelay:	6,		// Hide UI when user is idle (in ticks)
- *		slideInterval:	10,		// Delay between transitions (in ticks)
- *		fullscreenHintDelay:	5000	// in milleseconds
+ * 		pictureMarginRight:	6,			// margins between photos (must correspont with css rule to work correctly)
+ *		minRowAspectRatio:	4,			// Minimum row aspect ratio in justified layout
+ *		tickDuration:	300,			// Internal timer (in milliseconds)
+ *		hideUIDelay:	6,				// Hide UI when user is idle (in ticks)
+ *		slideInterval:	10,				// Delay between transitions (in ticks)
+ *		fullscreenHintDelay:	5000,	// in milleseconds
+ *		spinner:		undefined		// Pass spinner.js to have a fancy css3 spinner
  *	};
  *
- *	$(el).GPlusFullscreen(options);
+ *	$(el).GPlusGallery(photos, options);
  */
 
 ;(function ( $, window, document ) {
+	'use strict';
+    var pluginName = 'GPlusGallery';
 
-    // Create the defaults once
-    var pluginName = 'GPlusFullscreen',
-        defaults = {
-			current:		0,
-			photos:			[],
-            tickDuration:	300,
-			hideUIDelay:	6,
-			slideInterval:	10,
-			fullscreenHintDelay:	5000
-        };
+	// Defaults
+	var defaults = {
+		pictureMarginRight:	6,
+		minRowAspectRatio:	4,
+		tickDuration:	300,
+		hideUIDelay:	6,
+		slideInterval:	10,
+		fullscreenHintDelay:	5000,
+		spinner:		undefined
+	};
 
-	// Constructor
-	function GPlusFullscreen( element, options )	{
-		// Setting core properties
-		this.element = element;
+	function GPlusGallery( element, photos, options )	{
+		// Assigning arguments to internal properties
 		this.options = $.extend( {}, defaults, options);
+		this.photos = photos;
+		this.element = element;
+
+		this.rows = [];
+		this.treeBuilt = false;
+		this.oImgs = [];
+
+		this.init();
+	}
+
+	GPlusGallery.prototype =	{
+	init: function()	{
+		this.rootDiv = document.createElement('div');
+		this.rootDiv.setAttribute('id', 'gplus-gallery-grid');
+		this.element.appendChild( this.rootDiv );
+		var _this = this;
+		
+		$(this.rootDiv).on('click', 'div', function(){
+			_this.oFullscreen = new GPlusFullscreen($(this).index(), _this.photos, _this.options, function(){delete _this.oFullscreen; _this.show();});
+		});
+
+		for (var i = 0, l = this.photos.length; i < l; i++)	{
+			this.photos[i].aspectRatio = this.photos[i].width / this.photos[i].height;
+			this.photos[i].url = this.photos[i].url.substring(0,83);	// Length of URL of G+ picture without resize params and filename
+		}
+
+		var minRowAspectRatio = this.options.minRowAspectRatio;
+
+		for ( var i = 0, start = 0, rowAspectRatio = 0, l = this.photos.length; i < l; i++ )	{
+			rowAspectRatio += this.photos[i].aspectRatio;
+
+			if( rowAspectRatio > minRowAspectRatio )	{
+				this.rows.push({ 'rowAspectRatio': rowAspectRatio, 'startIndex': start, 'endIndex': i });
+				start = i + 1;
+				rowAspectRatio = 0;
+			}
+		}
+
+		// If rowAspectRatio == 0, than all rows are complete. If not, we need to push one last line.
+		if ( rowAspectRatio !== 0 )	{
+			this.rows.push({ 'rowAspectRatio': minRowAspectRatio, 'startIndex': start, 'endIndex': i - 1 });
+		}
+		
+		this.show();
+		// !!!!!!!!!!!!!!!! LIVE EVENT TO FULLSCREEEN
+		
+		var TO = false;
+		$(window).resize(function(){
+			if(TO !== false)	{
+				clearTimeout(TO);
+			}
+			TO = setTimeout(function(){_this.show();}, 500);
+		});
+
+	},
+		
+	show: function()	{
+		if (this.oFullscreen)	{
+			return false;
+		}
+
+		var width = $(this.rootDiv).width();
+		var fragment = document.createDocumentFragment();
+		
+		for ( var i = 0, l = this.rows.length; i < l; i++ ) {
+			var row = this.rows[i];
+			// Calculating height of the row
+			var fractionalRowHeight = ( width - this.options.pictureMarginRight * ( row.endIndex - row.startIndex ) ) / this.rows[i].rowAspectRatio;
+			var rowHeight = Math.floor( fractionalRowHeight );
+
+			// Calculating widths of photos in row
+			var sumOfWidths = 0;
+			for( var j = row.startIndex, end = row.endIndex; j <= end; j++ )	{
+				var photoWidth = Math.floor( this.photos[j].aspectRatio * fractionalRowHeight );
+				sumOfWidths += photoWidth;
+				this.photos[j].calculatedWidth = photoWidth;
+				this.photos[j].calculatedHeight = rowHeight;
+			}
+
+			// Distribute rest of pixels
+			var currentRowWidth = sumOfWidths + this.options.pictureMarginRight * ( row.endIndex - row.startIndex );
+			var pixelsToDistribute = width - currentRowWidth;
+
+			for( var j = row.startIndex, end = row.endIndex; j <= end && pixelsToDistribute; j++ )	{
+				this.photos[j].calculatedWidth++;
+				pixelsToDistribute--;
+			}
+			
+			// Show images
+			if(!this.treeBuilt)	{
+				for( var j = row.startIndex, end = row.endIndex; j <= end; j++ )	{
+					var oDiv = document.createElement('div');
+					oDiv.setAttribute('class', 'pic');
+
+					if( j === end )	{
+						oDiv.setAttribute('style', 'margin-right: 0;');
+					}
+					
+					var oImg = document.createElement('img');
+					oImg.setAttribute('style', 'width: ' + this.photos[j].calculatedWidth + 'px; height: ' + this.photos[j].calculatedHeight + 'px' );
+					oImg.setAttribute('src', this.photos[j].url + 'w' + this.photos[j].calculatedWidth + '-h' + this.photos[j].calculatedHeight + '-n/');
+					oImg.setAttribute('alt', this.photos[j].title );
+					
+					this.oImgs.push(oImg);
+
+					oDiv.appendChild(oImg);
+					fragment.appendChild(oDiv);
+				}
+			}
+		}
+
+		if(this.treeBuilt)	{
+			for ( var i = 0, l = this.photos.length; i < l; i++ )	{
+				this.oImgs[i].setAttribute('style', 'width: ' + this.photos[i].calculatedWidth + 'px; height: ' + this.photos[i].calculatedHeight + 'px' );
+				this.oImgs[i].setAttribute('src', this.photos[i].url + 'w' + this.photos[i].calculatedWidth + '-h' + this.photos[i].calculatedHeight + '-n/');
+			}
+		}
+
+		if( ! this.treeBuilt )	{
+			this.rootDiv.appendChild( fragment );
+			this.treeBuilt = true;
+		}
+	}
+};
+
+
+	function GPlusFullscreen( current, photos, options, destructor )	{
+
+		// Setting core properties
+		
+		this.options = options;
+		this.photos = photos;
 		
 		// Setting runtime properties
 		this.screenHeight	= 0;
 		this.screenWidth	= 0;
 		this.screenRatio	= 1;
+		this.selfDestroy = destructor;
 		
 		// Make sure current photo is not out of range
-		this.current = this.options.current  >= this.options.photos.length ? 0 : this.options.current;
-		this.state = this.current == this.options.photos.length - 1 ? 'replay' : 'play';
+		this.current = current  >= this.photos.length ? 0 : current; // !!!!!!!!!loose
+		this.state = this.current === this.photos.length - 1 ? 'replay' : 'play';
 		
 		// HTML templates for fullscreen slideshow
 		this.HTMLTemplate	= {
 			layout:	'<div id="gplus-fullscreen-layout"><div class="gplus-picture-holder"><div class="gplus-picture-aligner"><img id="gplus-picture" src="/i/0.gif" alt=""/></div></div><div id="gplus-ui"><div id="gplus-go-left"><div class="gplus-arrow"></div></div><div id="gplus-go-right"><div class="gplus-arrow"></div></div><div class="gplus-pult"><div id="gplus-button-left"><div class="gplus-button-highlighter"></div></div><div id="gplus-button-right"><div class="gplus-button-highlighter"></div></div><div id="gplus-caption-left"><div class="gplus-caption-icon"></div><span class="gplus-caption-play">Приостановить</span><span class="gplus-caption-stop">Продолжить</span><span class="gplus-caption-replay">Начать заново</span></div><div id="gplus-caption-right"><div class="gplus-caption-icon"></div></div></div></div><div id="gplus-spinner"></div></div>',
 			fullscreenHint:	'<div id="gplus-fullscreen-tip" class="hidden"><p>Нажмите <span style="color: #f00">Enter</span>, чтобы смотреть фото во весь размер экрана.</p></div>'
 		};
-		
-		// Initializing spinner
-		if ( options && options.spinner )	{
-			this.spinner = options.spinner;	// If spinner.js object passed, use it
-		}
-		else	{
-			$('#gplus-spinner').addClass('css-spinner');
-			
-			this.spinner = {
-				spin: function(){
-					$('#gplus-spinner').removeClass('hidden');
-				},
-				stop: function(){
-					$('#gplus-spinner').addClass('hidden');
-				}
-			}
-		}
 
 		this.init();
 	}
-
-///////// ADD HTML
 
     GPlusFullscreen.prototype = {
 
@@ -77,6 +192,23 @@
 
 		$('body').css('overflow','hidden');
 		$('body').append(this.HTMLTemplate.layout);
+		this.rootNode = $('#gplus-fullscreen-layout');
+
+		// Initializing spinner
+		if ( this.options && this.options.spinner )	{
+			this.spinner = this.options.spinner;	// If spinner.js object passed, use it
+		}
+		else	{
+			this.spinner = {
+				el: document.getElementById('gplus-spinner'),
+				spin: function(){
+					this.el.className = 'css-spinner';
+				},
+				stop: function(){
+					this.el.className = 'css-spinner hidden';
+				}
+			};
+		}
 		
 		this.updateScreenDimensions();
 		this.updatePicture();
@@ -85,7 +217,7 @@
 		if (document.cancelFullScreen||document.mozCancelFullScreen||document.webkitCancelFullScreen) {
 			this.fullscreenHint = $(this.HTMLTemplate.fullscreenHint).appendTo('#gplus-fullscreen-layout').removeClass( 'hidden' );
 			window.setTimeout( function(){
-				_this.fullscreenHint.addClass( 'hidden' ).bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function(){
+				_this.fullscreenHint.addClass( 'hidden' ).on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function(){
 					this.style.display='none';
 				});
 			}, this.options.fullscreenHintDelay );
@@ -106,18 +238,18 @@
 		this.ticker = window.setInterval(function(){
 
 			// Sends a signal to update picture
-			if( slideTicker == _this.options.slideInterval )	{
+			if( slideTicker === _this.options.slideInterval )	{
 				_this.autoplay();
 				slideTicker = 0;
 			}
 
 			// Hide controls on user idle
-			if( ticksSinceMouseMove == _this.options.hideUIDelay )	{
+			if( ticksSinceMouseMove === _this.options.hideUIDelay )	{
 				$('#gplus-fullscreen-layout').addClass( 'no-ui' );
 			}
 			
 			// Resize picture at 2nd tick after last window resize event
-			if( resizeTicker == 2 )	{
+			if( resizeTicker === 2 )	{
 				_this.updateScreenDimensions();
 				_this.updatePicture();
 			}
@@ -129,7 +261,7 @@
 		}, this.options.tickDuration);
 
 		// Show UI on user action
-		$( document ).mousemove( function ( e ) {
+		$( document ).on( 'mousemove.GPlusFullscreen', function ( e ) {
 
 			// User is considered as idle if mouse move is less than 5px by X or Y
 			if( Math.abs( lastMouseX - e.pageX ) > 5 || Math.abs( lastMouseY - e.pageY ) > 5 )	{
@@ -142,12 +274,12 @@
 		});
 		
 		// Drop resize ticker on resize
-		$(window).resize(function(){
+		$(window).on( 'resize.GPlusFullscreen', function(){
 			resizeTicker=0;
 		});
 		
 		// Keyboard events
-		$( document ).bind( 'keydown', function( e ) {
+		$( document ).on( 'keydown.GPlusFullscreen', function( e ) {
 			switch (e.keyCode)	{
 				case 13:	// Enter
 					_this.toggleFullscreen();
@@ -171,16 +303,16 @@
 		});
 		
 		// Animating  controls
-		$('#gplus-go-left, #gplus-go-right').hover(function(){$(this).toggleClass('hover')});
-		$('#gplus-caption-left').hover(function(){$('#gplus-button-left').toggleClass('hover')});
-		$('#gplus-caption-right').hover(function(){$('#gplus-button-right').toggleClass('hover')});
+		$('#gplus-go-left, #gplus-go-right').on('mouseenter mouseleave', function(){$(this).toggleClass('hover');});
+		$('#gplus-caption-left').on('mouseenter mouseleave', function(){$('#gplus-button-left').toggleClass('hover');});
+		$('#gplus-caption-right').on('mouseenter mouseleave', function(){$('#gplus-button-right').toggleClass('hover');});
 		
 		// Prev / Next
-		$('#gplus-go-left').click(function(){_this.prev();});
-		$('#gplus-go-right').click(function(){_this.next();});
+		$('#gplus-go-left').on( 'click', function(){_this.prev();});
+		$('#gplus-go-right').on( 'click', function(){_this.next();});
 
 		// Play / stop control
-		$('#gplus-caption-left').click(function(){
+		$('#gplus-caption-left').on('click', function(){
 			switch (_this.state)	{
 				case 'stop':
 					_this.state = 'play';
@@ -212,39 +344,38 @@
 		// Clearing timers
 		window.clearInterval(this.ticker);
 
-		// remove event
-		$( document ).unbind('mousemove');
-		$( window ).unbind();
-		$('#gplus-picture').unbind();
-		$('#gplus-go-left, #gplus-go-right, #gplus-caption-left, #gplus-caption-right').unbind();
-		this.fullscreenHint.unbind()
+		// Removing event handlers
+		$( document ).off( 'mousemove.GPlusFullscreen', 'keydown.GPlusFullscreen' );
+		$( window ).off( 'resize.GPlusFullscreen' );
+		$('#gplus-picture').off();
+		$('#gplus-go-left, #gplus-go-right, #gplus-caption-left, #gplus-caption-right').off();
+		this.fullscreenHint.off();
 
-		// removing DOM
+		// Removing DOM
 		$('#gplus-fullscreen-layout').remove();
+		this.selfDestroy();
 	},
 
 	updatePicture: function(){
 		// Show/hide navigation controls
-		$('#gplus-go-left').removeClass().addClass( this.current == 0 ? 'hidden' : '' );
-		$('#gplus-go-right').removeClass().addClass( this.current == (this.options.photos.length - 1) ? 'hidden' : '' );
+		$('#gplus-go-left').removeClass().addClass( this.current === 0 ? 'hidden' : '' );
+		$('#gplus-go-right').removeClass().addClass( this.current === (this.photos.length - 1) ? 'hidden' : '' );
 
-		var photoholder = $('#gplus-picture')[0];	/////// !!! когда соединятся 2 объекта, можно будет это убрать
-		var w = this.options.photos[this.current].width;
-		var h = this.options.photos[this.current].height;
-		var r = w / h;
+		var photoholder = $('#gplus-picture')[0];
 		
 		// Making URL to photo of appropriate size
-		var src = this.options.photos[this.current].url.substring(0,83);	// Length of URL to G+ picture without resize params
+		var src = this.photos[this.current].url;
 		
-		if(r > this.screenRatio)
+		if( this.photos[this.current].aspectRatio > this.screenRatio )	{
 			src += 'w' + this.screenWidth + '/';
-		else
+		}
+		else	{
 			src += 'h' + this.screenHeight + '/';
+		}
 
-		if( photoholder.src != src ){
+		if( photoholder.src !== src )	{
 			photoholder.src = src;
 			this.spinner.spin($('#gplus-spinner')[0]);
-			document.title = this.options.photos[this.current].title;
 		}
 
 		$('#gplus-caption-left').removeClass().addClass(this.state);
@@ -259,10 +390,10 @@
 
 	next: function(){
 
-		if( this.current < this.options.photos.length - 1 )	{
+		if( this.current < this.photos.length - 1 )	{
 			this.current++;
 
-			if( this.current == this.options.photos.length - 1 )	{
+			if( this.current === this.photos.length - 1 )	{
 				this.state='replay';
 				// Show controls
 				$('#gplus-fullscreen-layout').removeClass('no-ui');
@@ -273,75 +404,59 @@
 	},
 
 	autoplay: function(){
-		if( this.state == 'play' ){
+		if( this.state === 'play' ){
 			this.next();
 		}
 	},
 
 	updateScreenDimensions: function(){
-		this.screenWidth	= $(this.element).width();
-		this.screenHeight	= $(this.element).height();
-		console.log(this.screenWidth);
-		console.log(this.screenHeight);
+		this.screenWidth	= this.rootNode.width();
+		this.screenHeight	= this.rootNode.height();
 		this.screenRatio	= this.screenWidth / this.screenHeight;
 	},
 	
-	toggleFullscreen: function(){////!!!!!!!!!!!! this.element
-	if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-		if (this.element.requestFullScreen) {
-			this.element.requestFullScreen();
-		} else if (this.element.mozRequestFullScreen) {
-			this.element.mozRequestFullScreen();
-		} else if (this.element.webkitRequestFullScreen) {
-			this.element.webkitRequestFullScreen();
-		}
-		$('#gplus-fullscreen-tip').hide();
-	} else {
-		if (document.cancelFullScreen) {
-			document.cancelFullScreen();
-		} else if (document.mozCancelFullScreen) {
-			document.mozCancelFullScreen();
-		} else if (document.webkitCancelFullScreen) {
-			document.webkitCancelFullScreen();
+	toggleFullscreen: function(){
+		if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+			if (this.rootNode[0].requestFullScreen) {
+				this.rootNode[0].requestFullScreen();
+			} else if (this.rootNode[0].mozRequestFullScreen) {
+				this.rootNode[0].mozRequestFullScreen();
+			} else if (this.rootNode[0].webkitRequestFullScreen) {
+				this.rootNode[0].webkitRequestFullScreen();
+			}
+			$('#gplus-fullscreen-tip').hide();
+		} else {
+			if (document.cancelFullScreen) {
+				document.cancelFullScreen();
+			} else if (document.mozCancelFullScreen) {
+				document.mozCancelFullScreen();
+			} else if (document.webkitCancelFullScreen) {
+				document.webkitCancelFullScreen();
+			}
 		}
 	}
-}
 	};
 
     // A really lightweight plugin wrapper around the constructor, 
     // preventing against multiple instantiations
-    $.fn[pluginName] = function ( options ) {
+    $.fn[pluginName] = function ( photos, options ) {
         return this.each(function () {
-            if (!$.data(this, 'plugin_' + pluginName)) {
-                $.data(this, 'plugin_' + pluginName, 
-                new GPlusFullscreen( this, options ));
-            }
+			if (!$.data(this, 'plugin_' + pluginName)) {
+				$.data(this, 'plugin_' + pluginName, new GPlusGallery( this, photos, options ));
+			}
         });
-    }
+    };
 
 })( jQuery, window, document );
 
 
 
 $(document).ready(function() {
-	var photos;
-	var spinner = new Spinner({ 
-				lines: 13, 
-				length: 7, 
-				width: 4, 
-				radius: 10, 
-				rotate: 0, 
-				color: '#000', 
-				speed: 1, 
-				trail: 60, 
-				shadow: false, 
-				hwaccel: true, 
-				className: 'spinner', 
-				zIndex: 2e9
-			});
+	var data;
+
 	
 	$.getJSON('/portfolio/best/fullscreen.json', function(data) {
-		var fs = $('body').GPlusFullscreen({'photos': data.photos });
+		var fs = $('#matrix').GPlusGallery(data.photos);
 	});
 
 	

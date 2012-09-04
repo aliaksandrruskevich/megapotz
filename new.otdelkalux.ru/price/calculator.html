@@ -56,32 +56,36 @@
 </div>
 
 
-<div id="calc">
-<div class="selector cott">Коттедж</div>
-<div class="selector appt">Квартира</div>
+<div id="calculator" class="cott">
+<div class="calc-head">
+<div class="selector cott" data-type="cott">Коттедж</div>
+<div class="selector appt" data-type="appt">Квартира</div>
 <div class="input"><label for="area">Площадь, м²</label><input type="number" id="area" value="200" min="70" max="1200" step="1"/></div>
 <div class="input"><label for="wc">Санузлы</label><input type="number" id="wc" value="3" min="1" max="8" step="1"/></div>
-<div class="calculate"><div class="button red" id="do_calc"><span>Пересчитать</span></div></div>
-
-</div><div id="calc_hint"><p itemprop="description">Задайте параметры, чтобы рассчитать стоимость работ</p></div>
-<div id="priceholder">
+<div class="calculate"><div class="button red"><span>Пересчитать</span></div></div>
+</div>
+<div class="calc-hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
+<div class="calc-body">
 <table>
 <thead><tr><th></th><th>Стандарт</th><th>Бизнес</th><th>Люкс</th></tr></thead>
 <tfoot>
 <tr><td>Общая сумма (работа + материал)</td><td></td><td></td><td></td></tr>
 </tfoot>
 <tbody>
-<tr id="otd-pk"><td>Отделка под «ключ»</td><td></td><td></td><td></td></tr>
-<tr id="ele-pk"><td>Электрика под «ключ»</td><td></td><td></td><td></td></tr>
-<tr id="san-pk"><td>Сантехника под «ключ»</td><td></td><td></td><td></td></tr>
-<tr id="oto-pk"><td>Отопление под «ключ»</td><td></td><td></td><td></td></tr>
-<tr id="otd-m"><td>Черновой материал отделка</td><td></td><td></td><td></td></tr>
-<tr id="ele-m"><td>Черновой материал электрика</td><td></td><td></td><td></td></tr>
-<tr id="san-m"><td>Черновой материал сантехника</td><td></td><td></td><td></td></tr>
-<tr id="oto-m"><td>Черновой материал отопление</td><td></td><td></td><td></td></tr>
+<tr class="otd-pk"><td>Отделка под «ключ»</td><td></td><td></td><td></td></tr>
+<tr class="ele-pk"><td>Электрика под «ключ»</td><td></td><td></td><td></td></tr>
+<tr class="san-pk"><td>Сантехника под «ключ»</td><td></td><td></td><td></td></tr>
+<tr class="oto-pk"><td>Отопление под «ключ»</td><td></td><td></td><td></td></tr>
+<tr class="otd-m"><td>Черновой материал отделка</td><td></td><td></td><td></td></tr>
+<tr class="ele-m"><td>Черновой материал электрика</td><td></td><td></td><td></td></tr>
+<tr class="san-m"><td>Черновой материал сантехника</td><td></td><td></td><td></td></tr>
+<tr class="oto-m"><td>Черновой материал отопление</td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
+</div>
+
+
 <div class="center" style="margin: 40px 0">
 <p><!--[if lte IE 8]><img src="/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="/i/alert.svg" alt=""/><!--<![endif]--></p>
 <p style="margin: 20px; line-height: 1.2em; font-size: 14px;">В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса. Более точную информацию по ценам мы сможем дать только после ознакомления с дизайн-проектом.</p>

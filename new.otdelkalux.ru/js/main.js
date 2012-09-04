@@ -1,145 +1,173 @@
-//////////////////////////
-// Calculator		    //
-//////////////////////////
-function Calculator(){
-	this.area=0;
-	this.wc=0;
-	this.room_type='';
+/////////////
+// CLASSES //
+/////////////
+
+// Calculator
+function Calculator() {
+	this.area = 0;
+	this.wc = 0;
+	this.roomType = '';
+	
+	this.element = $('#calculator')[0];
 	this.init();
 }
 
-Calculator.prototype.evaluate = function(room_type, work_type){
-	if(room_type=='cott')
-		switch(work_type)	{
-			case 'otd-pk':
-				return [4500*this.area, 6000*this.area, 7500*this.area];
-			case 'ele-pk':
-				return [120000+220*this.area, 140000+220*this.area, 160000+220*this.area];
-			case 'san-pk':
-				return [30000*(this.wc+0.5), 36000*(this.wc+0.5), 42000*(this.wc+0.5)];
-			case 'oto-pk':
-				return [90000+200*this.area, 110000+200*this.area, 130000+200*this.area];
-			case 'otd-m':
-				return [3000*this.area, 3500*this.area, 4000*this.area];
-			case 'ele-m':
-				return [20000+200*this.area, 40000+200*this.area, 60000+200*this.area];
-			case 'san-m':
-				return [17500*(this.wc+0.5), 22500*(this.wc+0.5), 30000*(this.wc+0.5)];
-			case 'oto-m':
-				return [60000+800*this.area, 100000+800*this.area, 140000+800*this.area];
-			default:
-				return false;
-		}
-	else
-		switch(work_type)	{
-			case 'otd-pk':
-				return [5000*this.area, 6500*this.area, 8000*this.area];
-			case 'ele-pk':
-				return [120000+200*this.area, 140000+220*this.area, 160000+220*this.area];
-			case 'san-pk':
-				return [30000*(this.wc+0.5), 36000*(this.wc+0.5), 42000*(this.wc+0.5)];
-			case 'otd-m':
-				return [3000*this.area, 3500*this.area, 4000*this.area];
-			case 'ele-m':
-				return [20000+200*this.area, 40000+200*this.area, 60000+200*this.area];
-			case 'san-m':
-				return [17500*(this.wc+0.5), 22500*(this.wc+0.5), 30000*(this.wc+0.5)];
-			default:
-				return false;
-		}
-}
+Calculator.prototype = {
 
-Calculator.prototype.init = function(){
-	var _this=this;
-	$('#do_calc').click(function(){
-		_this.update_values();
-	});
+	init: function() {
+		var _this=this;
 
-	$('#calc .selector').click(function(){
-		_this.room_type=this.className.substring(9);
-		$('#price')[0].className=_this.room_type;
-		_this.update_values();
-	});
-	
-	// Tooltip
-	var hint_pos=find_pos($('#calc_hint')[0]);
-	
-	$(window).bind('scroll', function(){
-		if($(this).scrollTop() > hint_pos-500) {
-			window.setTimeout(function(){$('#calc_hint').addClass('shown');}, 300);
-		}
-	});
-
-	$('#calc input').one('focus',function(){
-		$('#calc_hint').removeClass('shown');
-		$(window).unbind('scroll');
-	});
-	
-	$('#calc .cott').click();
-}
-
-Calculator.prototype.update_values = function(){
-	var _this=this;
-	this.area=parseInt($('#area').val());
-	this.wc=parseInt($('#wc').val());
-	
-	var itog=[0,0,0];
-	$('#price tbody tr').each(function(){
-		var vals=_this.evaluate(_this.room_type,this.id);
-		
-		if(vals){
-			for(var i=0;i<3;i++)
-				itog[i]+=vals[i];
-
-			$(this).find('td:nth-child(n+2)').each(function(i){
-				$(this).text(vals[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
-			});
-		}
-	});
-	$('tfoot td:nth-child(n+2)').each(function(i){
-		$(this).text(itog[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
-	});
-}
-
-//////////////////////////
-// Cover View. G+ style //
-//////////////////////////
-function AlbumView(node){
-	this.container=node;
-	this.init();
-}
-
-AlbumView.prototype.init = function(){
-	this.covers=$(this.container).find('.image_stack');
-
-	$(this.covers).find('img')
-		.hover(
-			function() {
-				$(this).parent().addClass('rotated');
-			}, function() {
-				$(this).parent().removeClass('rotated');
-			}
-		)
-		.click(function() {
-			document.location=$(this).parent().find('a').attr('href');
+		$( this.element ).find( '.button' ).on( 'click', function() {
+			_this.updateValues();
 		});
-}
 
-AlbumView.prototype.show = function(){
-	var pic_side=Math.round($(this.container).width()/4-30);
-
-	$(this.covers).css({'height':pic_side+60+'px','width':pic_side+25+'px'});
-	$(this.covers).find('img')
-		.css({'height':pic_side+'px','width':pic_side+'px'})
-		.each(function() {
-			var new_src = this.src.substring(0,83)+'s'+pic_side+'-c/';
-			this.src = new_src;
+		$(this.element).on( 'click', '.selector', function() {
+			_this.roomType = $(this).data( 'type' );
+			_this.element.className = _this.roomType;
+			_this.updateValues();
+		});
+		
+		function updatePosition(obj) {
+			var curtop = 0;
+			if ( obj.offsetParent ) {
+				do {
+					curtop += obj.offsetTop;
+				} while ( obj = obj.offsetParent );
+			}
+			return curtop;
 		}
-	);
-	$(this.container).find('p').width(pic_side-10);
-	$(this.container).find('.link').css({'top': (pic_side+20)+'px'});
-	$(this.container).find('.count').css({'top': (pic_side+40)+'px'});
+
+		var hint = $(_this.element).find('.calc-hint')[0];
+		
+		$( window ).on( 'scroll.CalcHint', function(){
+			if( $(this).scrollTop() > updatePosition( hint ) - 400 ) {
+				window.setTimeout( function(){ $(hint).addClass( 'shown' ); }, 300 );
+			}
+		});
+
+		$( this.element ).find('input').one( 'focus' , function(){
+			$( hint ).removeClass('shown');
+			$( window ).off('.CalcHint');
+		});
+		
+		$( this.element ).find('.cott').click();
+	},
+
+	evaluate: function( roomType, workType ) {
+		if( roomType == 'cott' ) {
+			switch( workType ) {
+				case 'otd-pk':
+					return [4500 * this.area, 6000 * this.area, 7500 * this.area];
+				case 'ele-pk':
+					return [120000 + 220 * this.area, 140000 + 220 * this.area, 160000 + 220 * this.area];
+				case 'san-pk':
+					return [30000 * (this.wc + 0.5), 36000 * (this.wc + 0.5), 42000 * (this.wc + 0.5)];
+				case 'oto-pk':
+					return [90000 + 200 * this.area, 110000 + 200 * this.area, 130000 + 200 * this.area];
+				case 'otd-m':
+					return [3000 * this.area, 3500 * this.area, 4000 * this.area];
+				case 'ele-m':
+					return [20000 + 200 * this.area, 40000 + 200 * this.area, 60000 + 200 * this.area];
+				case 'san-m':
+					return [17500 * (this.wc + 0.5), 22500 * (this.wc + 0.5), 30000 * (this.wc + 0.5)];
+				case 'oto-m':
+					return [60000 + 800 * this.area, 100000 + 800 * this.area, 140000 + 800 * this.area];
+				default:
+					return false;
+			}
+		}
+		else {
+			switch( workType ) {
+				case 'otd-pk':
+					return [5000 * this.area, 6500 * this.area, 8000 * this.area];
+				case 'ele-pk':
+					return [120000 + 200 * this.area, 140000 + 220 * this.area, 160000 + 220 * this.area];
+				case 'san-pk':
+					return [30000 * (this.wc + 0.5), 36000 * (this.wc + 0.5), 42000 * (this.wc + 0.5)];
+				case 'otd-m':
+					return [3000 * this.area, 3500 * this.area, 4000 * this.area];
+				case 'ele-m':
+					return [20000 + 200 * this.area, 40000 + 200 * this.area, 60000 + 200 * this.area];
+				case 'san-m':
+					return [17500 * (this.wc + 0.5), 22500 * (this.wc + 0.5), 30000 * (this.wc + 0.5)];
+				default:
+					return false;
+			}
+		}
+	},
+
+	updateValues: function() {
+		var _this = this;
+		this.area = parseInt( $('#area').val() );
+		this.wc = parseInt( $('#wc').val() );
+		
+		var itog=[0,0,0];
+		$(this.element).find('tbody tr').each(function(){
+			var vals=_this.evaluate(_this.roomType, $(this).attr('class'));
+			
+			if( vals ){
+				for( var i=0; i<3; i++ )
+					itog[i]+=vals[i];
+
+				$(this).find('td:nth-child(n+2)').each(function(i){
+					$(this).text(vals[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
+				});
+			}
+		});
+		$(this.element).find('tfoot td:nth-child(n+2)').each(function(i){
+			$(this).text(itog[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
+		});
+	}
+};
+
+// Album covers
+function AlbumView(element){
+	this.element=element;
+	this.init();
 }
+
+AlbumView.prototype = {
+	init: function() {
+
+		$(this.element).on( 'mouseenter mouseleave', '.image_stack', function(e) {
+			if( e.type === 'mouseenter' ) {
+				$(this).addClass('rotated');
+			}
+			else {
+				$(this).removeClass('rotated');
+			}
+		});
+
+		$(this.element).on( 'click', '.image_stack', function() {
+			document.location = $(this).parent().find('a').attr('href');
+		});
+		
+		var _this = this, timer = false;
+		$( window ).on('resize', function() { 		
+			if( timer !== false )
+				window.clearTimeout( timer );
+			timer = window.setTimeout( function(){ _this.show(); }, 500 );
+		});
+
+		this.show();
+	},
+
+	show: function() {
+		var picSide = Math.round( $(this.element).width() / 4 - 30 );
+
+		$(this.element).find('.album').css( { 'height' : picSide + 60 + 'px', 'width' : picSide + 25 + 'px'} )
+		$(this.element).find('img')
+			.css({'height':picSide+'px','width':picSide+'px'})
+			.each(function() {
+				this.src = this.src.substring(0,83) + 's' + picSide + '-c/';
+			}
+		);
+
+		$(this.element).find('p').width( picSide - 10 );
+		$(this.element).find('.link').css( { 'top': ( picSide + 20 ) + 'px' } );
+		$(this.element).find('.count').css( { 'top': ( picSide + 40 ) + 'px' } );
+	}
+};
 
 ////////////////////////
 // Initializing pages //
@@ -151,7 +179,21 @@ switch (page_name) {
 	case 'page-index':
 		// Set cover background
 		$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
-	
+
+/*@cc_on
+@if (@_jscript_version <= 5.8)
+
+	// IE8: Reload background picture on window resize (no css3 backgrounds support)
+	var timer = false;
+	$( window ).on('resize', function() { 		
+		if( timer !== false )
+			window.clearTimeout( timer );
+		timer = window.setTimeout( function(){ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'}); }, 500 );
+	});
+
+@end
+@*/		
+		
 		// Ingosstrakh logo
 		if (window.devicePixelRatio == 2) {
 			var logo=$('#ingos')[0];
@@ -164,26 +206,10 @@ switch (page_name) {
 			.on('click', function(e){e.stopPropagation()})
 			.find('img')
 			.wrap('<a href="/portfolio/process/"/>');
+		var album=new AlbumView($('#album_grid')[0]);
 		
 		// Show / hide call-me-back form
 		init_callback();
-
-		// Resize event
-		function on_resize() {
-			album.show();
-			find_pos($('#calc_hint')[0]);
-/*@cc_on
-@if (@_jscript_version <= 5.8)
-$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
-@end
-@*/
-		}
-		var TO = false;
-		$(window).resize(function(){
-			if(TO !== false)
-			clearTimeout(TO);
-			TO = setTimeout(on_resize, 500);
-		});
 
 		var calc=new Calculator();
 		
@@ -219,7 +245,7 @@ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuN
 
 	case 'page-price':
 		// CALC
-		if($("#calc").length > 0)
+		if($("#calculator").length > 0)
 			var calc=new Calculator();
 		init_selector();
 
@@ -263,14 +289,7 @@ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuN
 });
 
 ////////////
-function find_pos(obj) {
-	var curtop = 0;
-	if (obj.offsetParent)
-		do {
-		curtop += obj.offsetTop;
-		} while (obj = obj.offsetParent);
-	return curtop;
-}
+
 
 //
 function init_callback()	{

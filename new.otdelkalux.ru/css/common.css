@@ -89,19 +89,20 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 /*objects*/
 #objects	{ margin: 80px auto; }
 #album_grid	{ margin: 30px 50px; }
-#album_grid .image_stack { position: relative; display: inline-block; }
-#album_grid .image_stack img { cursor: pointer; position: absolute; background-color: #fff; padding: 3px; border: 1px solid #aaa; z-index: 1;
+#album_grid .album	{ display: inline-block; position: relative; }
+#album_grid .image_stack img	{ z-index: 3; cursor: pointer; position: absolute; background-color: #fff; padding: 3px; border: 1px solid #aaa;
  transition: all 0.2s linear;
  -webkit-transition: left, all 0.2s linear;
  -moz-transition: all 0.2s linear;
  -o-transition: all 0.2s linear;
  -ms-transition: all 0.2s linear; }
+ 
+#album_grid .rotated img	{ z-index: 5; }
 
 #album_grid .image_stack img:nth-child(1) { top: 9px; left: 9px; }
 #album_grid .image_stack img:nth-child(2) { top: 6px; left: 6px; }
 #album_grid .image_stack img:nth-child(3) { top: 3px; left: 3px; }
 
-#album_grid .rotated img	{z-index: 2;}
 #album_grid .rotated img:nth-child(1) { left: 50px;
  transform: rotate(15deg);
  -webkit-transform: rotate(15deg);
@@ -117,48 +118,44 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
  -ms-transform: rotate(-15deg);
 }
 
-#album_grid .image_stack p	{ position: absolute; left: 3px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
-#album_grid .image_stack p.link	{ font-weight: bold; font-size: 13px;  }
-#album_grid .image_stack p.link a	{ color: #000; }
-#album_grid .image_stack p.count	{ font-size: 11px; color: #666; }
+#album_grid .album p	{ position: absolute; left: 3px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; z-index: 2; }
+#album_grid .album p.link	{ font-weight: bold; font-size: 13px;  }
+#album_grid .album p.link a	{ color: #000; }
+#album_grid .album p.count	{ font-size: 11px; color: #666; }
 
 /* gallery */
 #gallery	{ margin: 80px auto; }
 
-/* price */
+/* Calculator */
 #price .column	{ width: 980px; }
-#calc	{ display: table; position: relative; width: 100%; background-color: #363636; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzcAAABfBAMAAAAnsCRDAAAAMFBMVEU2NjY9PT0lJSVMTEwqKio6OjotLS0yMjJERERISEhKSkpCQkIoKChGRkY/Pz9RUVFtT8szAAAAAXRSTlMAQObYZgAAAaRJREFUeF7t20Ftw1AQRdGpokhOoqZdFIBBFIAhdFEAhhAQgVAIgRAABmEIhVAAxeBIHY2m5xLw4ur9976dRCIvU2TwHigr5ydATg6ONewk5wF0Do7Wms4JkJMDOdjVlQNyyLkFJCcHbwhwJEdyCCCHHIOAHBzqysFQt3Nw6CXnI+EBOqeqnFedIzmZcr4ih0vJB7iE6hzHWt3P1ORcJEfnkNOxcyTHlCZn6CVnbiXnOalzusiZGybnpnNC5zjWcuQ41nbkbGJpOKVXcgyCP5czRSLHXp0zJSSn3SC4dknOmJqcXnLGutH0G4KxzZTWOduZGnbOWleOY+2mc3wyWFxC6x5rS6spLTnkXOvKMQjuOsfHtrFV5xx6HWuTzjEIcjjVvYQaBIN3ay6hBoF7js5xCZUcck5tOse7Na9vGsrROZITo7VmSpNjrf37Y03nrNaa5Eyt5Jx9bNvELDnkZCbn7s9TpnQC/dbad6Bsct6iFeRgX3cQ4KxzEiCHnH6dQ85nbAf7BnLIMaXzeSInBXLIMaWtNRgE5EiO5JBDjmMN7jnb+QVtYHRQ9H4bNwAAAABJRU5ErkJggg=='), url('/i/noize.png'); border-radius: 7px 7px 0 0; }
-#calc>div	{ display: table-cell; height: 95px; vertical-align: middle; }
-
-#calc .selector	{ font-weight: bold; font-size: 18px; color: #fff; text-transform: uppercase; }
-#calc .selector 	{ background-image: url('/i/icos.svgz'); cursor: pointer; }
-#calc .cott	{ background-position: 0 0; width: 120px; padding-left: 96px; }
-#calc .appt	{ background-position: -215px 0; width: 125px; padding-left: 80px; }
-#calc .active	{ color: #ffe400; cursor: default; }
-#price.appt .appt	{ background-position: -215px -95px; color: #ffe400; }
-#price.cott .cott	{ background-position: 0 -95px; color: #ffe400; }
-#calc .input	{ color: #fff; width: 200px; text-align: center; width: 203px; }
-#calc .input label	{ font-weight: bold; font-size: 11px; padding-right: 30px; text-transform: uppercase; }
-#calc .input input	{ font-size: 22px; width: 70px; line-height: 30px; }
-#calc .calculate	{ text-align: center; }
-#calc_hint	{ position: absolute; width: 255px; top: 138px; left: 448px; background: url('/i/hint.svg') 0 0 no-repeat; opacity: 0; -ms-transition: opacity 1s linear; -webkit-transition: opacity 1s linear; -moz-transition: opacity 1s linear; -o-transition: opacity 1s linear; transition: opacity 1s linear; }
-#calc_hint.shown	{ opacity: 1; }
-#calc_hint p	{ margin: 32px; text-align: center; font-size: 13px; line-height: 1.2em; }
-
-#priceholder	{ background-color: #eee; padding: 0 100px; }
-#price table	{ width: 100%; background-color: #eee; font-weight: bold; }
-#price tbody td	{ border-bottom: 1px solid #bbb; padding: 12px; font-size: 14px; color: #919191; }
-#price thead th	{ font-size: 11px; padding: 20px 0; color: #383838; text-transform: uppercase; }
-#price tfoot td	{ font-size: 17px; color: #383838; padding: 30px 0; }
-
-#price.appt #san-pk td,#price.appt #san-m td	{ border-color: #000; }
-#price.appt #oto-pk,#price.appt #oto-m	{ display: none; }
-#price.cott #oto-pk td, #price.cott #oto-m td	{ border-color: #000; }
-#price #otd-pk td	{ border-top: 1px solid #000; }
-
-#price td:nth-child(n+1)	{ text-align: center; }
-#price td:nth-child(1)	{ text-align: left; width: 320px; }
-#price td:nth-child(even), #price th:nth-child(even)	{ background-color: #f7f7f7; }
+#calculator .calc-head	{ display: table; position: relative; width: 100%; background-color: #363636; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzcAAABfBAMAAAAnsCRDAAAAMFBMVEU2NjY9PT0lJSVMTEwqKio6OjotLS0yMjJERERISEhKSkpCQkIoKChGRkY/Pz9RUVFtT8szAAAAAXRSTlMAQObYZgAAAaRJREFUeF7t20Ftw1AQRdGpokhOoqZdFIBBFIAhdFEAhhAQgVAIgRAABmEIhVAAxeBIHY2m5xLw4ur9976dRCIvU2TwHigr5ydATg6ONewk5wF0Do7Wms4JkJMDOdjVlQNyyLkFJCcHbwhwJEdyCCCHHIOAHBzqysFQt3Nw6CXnI+EBOqeqnFedIzmZcr4ih0vJB7iE6hzHWt3P1ORcJEfnkNOxcyTHlCZn6CVnbiXnOalzusiZGybnpnNC5zjWcuQ41nbkbGJpOKVXcgyCP5czRSLHXp0zJSSn3SC4dknOmJqcXnLGutH0G4KxzZTWOduZGnbOWleOY+2mc3wyWFxC6x5rS6spLTnkXOvKMQjuOsfHtrFV5xx6HWuTzjEIcjjVvYQaBIN3ay6hBoF7js5xCZUcck5tOse7Na9vGsrROZITo7VmSpNjrf37Y03nrNaa5Eyt5Jx9bNvELDnkZCbn7s9TpnQC/dbad6Bsct6iFeRgX3cQ4KxzEiCHnH6dQ85nbAf7BnLIMaXzeSInBXLIMaWtNRgE5EiO5JBDjmMN7jnb+QVtYHRQ9H4bNwAAAABJRU5ErkJggg=='), url('/i/noize.png'); border-radius: 7px 7px 0 0; }
+#calculator .calc-head>div	{ display: table-cell; height: 95px; vertical-align: middle; }
+#calculator .selector	{ font-weight: bold; font-size: 18px; color: #fff; text-transform: uppercase; }
+#calculator .selector 	{ background-image: url('/i/icos.svgz'); cursor: pointer; }
+#calculator .cott	{ background-position: 0 0; width: 120px; padding-left: 96px; }
+#calculator .appt	{ background-position: -215px 0; width: 125px; padding-left: 80px; }
+#calculator .active	{ color: #ffe400; cursor: default; }
+#calculator.appt .appt	{ background-position: -215px -95px; color: #ffe400; }
+#calculator.cott .cott	{ background-position: 0 -95px; color: #ffe400; }
+#calculator .input	{ color: #fff; width: 200px; text-align: center; width: 203px; }
+#calculator .input label	{ font-weight: bold; font-size: 11px; padding-right: 30px; text-transform: uppercase; }
+#calculator .input input	{ font-size: 22px; width: 70px; line-height: 30px; }
+#calculator .calculate	{ text-align: center; }
+#calculator .calc-hint	{ position: absolute; width: 255px; top: 138px; left: 448px; background: url('/i/hint.svg') 0 0 no-repeat; opacity: 0; -ms-transition: opacity 1s linear; -webkit-transition: opacity 1s linear; -moz-transition: opacity 1s linear; -o-transition: opacity 1s linear; transition: opacity 1s linear; }
+#calculator .calc-hint.shown	{ opacity: 1; }
+#calculator .calc-hint p	{ margin: 32px; text-align: center; font-size: 13px; line-height: 1.2em; }
+#calculator .calc-body	{ background-color: #eee; padding: 0 100px; }
+#calculator table	{ width: 100%; background-color: #eee; font-weight: bold; }
+#calculator tbody td	{ border-bottom: 1px solid #bbb; padding: 12px; font-size: 14px; color: #919191; }
+#calculator th	{ font-size: 11px; padding: 20px 0; color: #383838; text-transform: uppercase; }
+#calculator tfoot td	{ font-size: 17px; color: #383838; padding: 30px 0; }
+#calculator.appt .san-pk td, #calculator.appt .san-m td	{ border-color: #000; }
+#calculator.appt .oto-pk, #calculator.appt .oto-m	{ display: none; }
+#calculator.cott .oto-pk td, #calculator.cott .oto-m td	{ border-color: #000; }
+#calculator .otd-pk td	{ border-top: 1px solid #000; }
+#calculator td:nth-child(n+1)	{ text-align: center; }
+#calculator td:nth-child(1)	{ text-align: left; width: 320px; }
+#calculator td:nth-child(even), #price th:nth-child(even)	{ background-color: #f7f7f7; }
 
 /* circles */
 #circles	{ margin: 80px auto; }

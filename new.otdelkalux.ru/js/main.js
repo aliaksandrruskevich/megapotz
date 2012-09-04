@@ -141,89 +141,6 @@ AlbumView.prototype.show = function(){
 	$(this.container).find('.count').css({'top': (pic_side+40)+'px'});
 }
 
-
-////////////////////////
-// Gallery. G+ style ///
-////////////////////////
-
-function Row(){
-	this.photos=[];
-	this.line_ratio=0;
-}
-	
-function GalleryView(node){
-	this.container=node;
-	this.MIN_RATIO=4; 
-	this.MARGIN=6;
-	this.rows=[];
-	this.init();
-}
-
-GalleryView.prototype.init = function(){
-	// Grouping images into rows
-	var _this=this;
-	this.rows.push(new Row());
-	
-	$(this.container).find('img').each(function(i) {
-		var ratio = $(this).width()/$(this).height();
-		_this.rows[_this.rows.length-1].line_ratio+=ratio;
-
-		_this.rows[_this.rows.length-1].photos.push(
-			{
-				index: i,
-				src: this.src.substring(0,83),
-				ratio: ratio
-			}
-		);	
-
-		if(_this.rows[_this.rows.length-1].line_ratio > _this.MIN_RATIO){
-			_this.rows.push(new Row());
-		}
-	});
-}
-
-
-GalleryView.prototype.show = function(){
-	var width = $('#gallery_grid').width();
-	
-	for(var i=0; i < this.rows.length; i++) {
-		// Calculating height of the row
-		// Correcting line_ratio in case when line is short
-		var line_ratio = this.rows[i].line_ratio > this.MIN_RATIO ? this.rows[i].line_ratio : this.MIN_RATIO;
-		var fractional_height=(width-this.MARGIN*(this.rows[i].photos.length-1))/line_ratio;
-
-		// Calculating widths of photos in row
-		var summed_width=0;
-		for(var j=0;j<this.rows[i].photos.length;j++){
-			var pic_width=Math.floor(this.rows[i].photos[j].ratio*fractional_height);
-			summed_width+=pic_width;
-			this.rows[i].photos[j].width=pic_width;
-		}
-		var current_width=summed_width+this.MARGIN*(this.rows[i].photos.length-1);
-		this.rows[i].height=Math.floor(fractional_height);
-		
-		// distribute rest of pixels
-		var pixels_to_distribute=width-current_width;
-		for(var j=0;j<this.rows[i].photos.length&&pixels_to_distribute>0;j++){
-			this.rows[i].photos[j].width++;
-			pixels_to_distribute--;
-		}
-
-		//show images
-		var img_elems = $(this.container).find('img');
-		for(var j=0;j<this.rows[i].photos.length;j++){
-			var oImg= img_elems[this.rows[i].photos[j].index];
-			oImg.style.width = this.rows[i].photos[j].width+'px';
-			oImg.style.height = this.rows[i].height+'px';
-			oImg.src=this.rows[i].photos[j].src+'w'+this.rows[i].photos[j].width+'-h'+this.rows[i].height+'-n/';
-			if(j==this.rows[i].photos.length-1)
-				oImg.parentNode.parentNode.style.marginRight=0;
-			
-		}
-	}
-}
-
-
 ////////////////////////
 // Initializing pages //
 ////////////////////////
@@ -247,7 +164,6 @@ switch (page_name) {
 		// Resize event
 		function on_resize() {
 			album.show();
-			gallery.show();
 			find_pos($('#calc_hint')[0]);
 /*@cc_on
 @if (@_jscript_version <= 5.8)

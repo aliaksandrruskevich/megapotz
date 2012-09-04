@@ -1,18 +1,5 @@
 /*!
  * Author: Mikhail Shestakov (mike.shestakov@gmail.com)
- * Use:
- *	var photos = [];					// [{'width': <number>, 'height': <number>, 'title': <string>, 'url': <string>}, ...]
- *	var options = {
- * 		pictureMarginRight:	6,			// margins between photos (must correspont with css rule to work correctly)
- *		minRowAspectRatio:	4,			// Minimum row aspect ratio in justified layout
- *		tickDuration:	300,			// Internal timer (in milliseconds)
- *		hideUIDelay:	6,				// Hide UI when user is idle (in ticks)
- *		slideInterval:	10,				// Delay between transitions (in ticks)
- *		fullscreenHintDelay:	5000,	// in milleseconds
- *		spinner:		undefined		// Pass spinner.js to have a fancy css3 spinner
- *	};
- *
- *	$(el).GPlusGallery(photos, options);
  */
 
 ;(function ( $, window, document ) {
@@ -21,143 +8,155 @@
 
 	// Defaults
 	var defaults = {
-		pictureMarginRight:	6,
-		minRowAspectRatio:	4,
-		tickDuration:	300,
-		hideUIDelay:	6,
-		slideInterval:	10,
-		fullscreenHintDelay:	5000,
-		spinner:		undefined
+		pictureMarginRight: 6,
+		minRowAspectRatio: 4,
+		tickDuration: 300,
+		hideUIDelay: 6,
+		slideInterval: 10,
+		fullscreenHintDelay: 5000,
+		spinner: undefined
 	};
 
-	function GPlusGallery( element, photos, options )	{
-		// Assigning arguments to internal properties
-		this.options = $.extend( {}, defaults, options);
-		this.photos = photos;
+	// Constructor
+	function GPlusGallery( element, photos, options ) {
 		this.element = element;
+		this.photos = photos;
+		this.options = $.extend( {}, defaults, options );
 
 		this.rows = [];
+		
+		// Properties for building gallery's DOM tree
 		this.treeBuilt = false;
+		this.oRootDiv = document.createElement('div' );
 		this.oImgs = [];
 
 		this.init();
 	}
 
-	GPlusGallery.prototype =	{
-	init: function()	{
-		this.rootDiv = document.createElement('div');
-		this.rootDiv.setAttribute('id', 'gplus-gallery-grid');
-		this.element.appendChild( this.rootDiv );
-		var _this = this;
-		
-		$(this.rootDiv).on('click', 'div', function(){
-			_this.oFullscreen = new GPlusFullscreen($(this).index(), _this.photos, _this.options, function(){delete _this.oFullscreen; _this.show();});
-		});
+	GPlusGallery.prototype = {
+		init: function() {
 
-		for (var i = 0, l = this.photos.length; i < l; i++)	{
-			this.photos[i].aspectRatio = this.photos[i].width / this.photos[i].height;
-			this.photos[i].url = this.photos[i].url.substring(0,83);	// Length of URL of G+ picture without resize params and filename
-		}
-
-		var minRowAspectRatio = this.options.minRowAspectRatio;
-
-		for ( var i = 0, start = 0, rowAspectRatio = 0, l = this.photos.length; i < l; i++ )	{
-			rowAspectRatio += this.photos[i].aspectRatio;
-
-			if( rowAspectRatio > minRowAspectRatio )	{
-				this.rows.push({ 'rowAspectRatio': rowAspectRatio, 'startIndex': start, 'endIndex': i });
-				start = i + 1;
-				rowAspectRatio = 0;
-			}
-		}
-
-		// If rowAspectRatio == 0, than all rows are complete. If not, we need to push one last line.
-		if ( rowAspectRatio !== 0 )	{
-			this.rows.push({ 'rowAspectRatio': minRowAspectRatio, 'startIndex': start, 'endIndex': i - 1 });
-		}
-		
-		this.show();
-		// !!!!!!!!!!!!!!!! LIVE EVENT TO FULLSCREEEN
-		
-		var TO = false;
-		$(window).resize(function(){
-			if(TO !== false)	{
-				clearTimeout(TO);
-			}
-			TO = setTimeout(function(){_this.show();}, 500);
-		});
-
-	},
-		
-	show: function()	{
-		if (this.oFullscreen)	{
-			return false;
-		}
-
-		var width = $(this.rootDiv).width();
-		var fragment = document.createDocumentFragment();
-		
-		for ( var i = 0, l = this.rows.length; i < l; i++ ) {
-			var row = this.rows[i];
-			// Calculating height of the row
-			var fractionalRowHeight = ( width - this.options.pictureMarginRight * ( row.endIndex - row.startIndex ) ) / this.rows[i].rowAspectRatio;
-			var rowHeight = Math.floor( fractionalRowHeight );
-
-			// Calculating widths of photos in row
-			var sumOfWidths = 0;
-			for( var j = row.startIndex, end = row.endIndex; j <= end; j++ )	{
-				var photoWidth = Math.floor( this.photos[j].aspectRatio * fractionalRowHeight );
-				sumOfWidths += photoWidth;
-				this.photos[j].calculatedWidth = photoWidth;
-				this.photos[j].calculatedHeight = rowHeight;
-			}
-
-			// Distribute rest of pixels
-			var currentRowWidth = sumOfWidths + this.options.pictureMarginRight * ( row.endIndex - row.startIndex );
-			var pixelsToDistribute = width - currentRowWidth;
-
-			for( var j = row.startIndex, end = row.endIndex; j <= end && pixelsToDistribute; j++ )	{
-				this.photos[j].calculatedWidth++;
-				pixelsToDistribute--;
-			}
+			this.oRootDiv.setAttribute('id', 'gplus-gallery-grid');
+			this.element.appendChild( this.oRootDiv );
+			var _this = this;
 			
-			// Show images
-			if(!this.treeBuilt)	{
-				for( var j = row.startIndex, end = row.endIndex; j <= end; j++ )	{
-					var oDiv = document.createElement('div');
-					oDiv.setAttribute('class', 'pic');
+			$(this.oRootDiv).on('click', 'div', function() {
+				_this.oFullscreen = new GPlusFullscreen( $( this ).index(), _this.photos, _this.options, function() { delete _this.oFullscreen; _this.show(); } );
+			});
 
-					if( j === end )	{
-						oDiv.setAttribute('style', 'margin-right: 0;');
-					}
-					
-					var oImg = document.createElement('img');
-					oImg.setAttribute('style', 'width: ' + this.photos[j].calculatedWidth + 'px; height: ' + this.photos[j].calculatedHeight + 'px' );
-					oImg.setAttribute('src', this.photos[j].url + 'w' + this.photos[j].calculatedWidth + '-h' + this.photos[j].calculatedHeight + '-n/');
-					oImg.setAttribute('alt', this.photos[j].title );
-					
-					this.oImgs.push(oImg);
+			for ( var i = 0, l = this.photos.length; i < l; i++ )	{
+				this.photos[i].aspectRatio = this.photos[i].width / this.photos[i].height;
+				this.photos[i].url = this.photos[i].url.substring( 0, 83 );	// Length of URL of G+ picture without resize params and filename
+			}
 
-					oDiv.appendChild(oImg);
-					fragment.appendChild(oDiv);
+			var minRowAspectRatio = this.options.minRowAspectRatio;
+
+			for ( var i = 0, start = 0, rowAspectRatio = 0, l = this.photos.length; i < l; i++ )	{
+				rowAspectRatio += this.photos[i].aspectRatio;
+
+				if( rowAspectRatio > minRowAspectRatio )	{
+					this.rows.push({ 'rowAspectRatio': rowAspectRatio, 'startIndex': start, 'endIndex': i });
+					start = i + 1;
+					rowAspectRatio = 0;
 				}
 			}
-		}
 
-		if(this.treeBuilt)	{
-			for ( var i = 0, l = this.photos.length; i < l; i++ )	{
-				this.oImgs[i].setAttribute('style', 'width: ' + this.photos[i].calculatedWidth + 'px; height: ' + this.photos[i].calculatedHeight + 'px' );
-				this.oImgs[i].setAttribute('src', this.photos[i].url + 'w' + this.photos[i].calculatedWidth + '-h' + this.photos[i].calculatedHeight + '-n/');
+			// If rowAspectRatio == 0, than all rows are filled completely and no photos are left. If not, we need to make one last row.
+			if ( rowAspectRatio !== 0 )	{
+				this.rows.push({ 'rowAspectRatio': minRowAspectRatio, 'startIndex': start, 'endIndex': i - 1 });
+			}
+			
+			this.show();
+			
+			var TO = false;
+			$( window ).on( 'resize', function() {
+				if( TO !== false )	{
+					window.clearTimeout( TO );
+				}
+				TO = window.setTimeout( function(){ _this.show(); }, 500 );
+			});
+
+		},
+			
+		show: function() {
+
+			// If user is in fullscreen gallery mode, do nothing
+			if ( this.oFullscreen )	{
+				return false;
+			}
+
+			var width = $(this.oRootDiv).width();
+
+			if( ! this.treeBuilt ) {
+				var fragment = document.createDocumentFragment();
+			}
+
+			for ( var i = 0, l = this.rows.length; i < l; i++ ) {
+				// Fast access to some useful variables
+				var row = this.rows[i];
+				var margins = this.options.pictureMarginRight * ( row.endIndex - row.startIndex );
+
+				// Calculating height of the row
+				var fractionalRowHeight = ( width - margins ) / row.rowAspectRatio;
+				var rowHeight = Math.floor( fractionalRowHeight );
+
+				// Calculating widths of photos in row
+				var sumOfWidths = 0;
+				for( var j = row.startIndex, end = row.endIndex; j <= end; j++ ) {
+					var photoWidth = Math.floor( this.photos[j].aspectRatio * fractionalRowHeight );
+					sumOfWidths += photoWidth;
+					this.photos[j].calculatedWidth = photoWidth;
+					this.photos[j].calculatedHeight = rowHeight;
+				}
+
+				// Distribute rest of pixels
+				var pixelsToDistribute = width - ( sumOfWidths + margins );
+
+				for( var j = row.startIndex, end = row.endIndex; j <= end && pixelsToDistribute; j++ )	{
+					this.photos[j].calculatedWidth++;
+					pixelsToDistribute--;
+				}
+				
+				// Show images
+				if( ! this.treeBuilt )	{
+					for( var j = row.startIndex, end = row.endIndex; j <= end; j++ )	{
+						var oDiv = document.createElement('div');
+						oDiv.setAttribute( 'class', 'pic' );
+
+						if( j === end )	{
+							oDiv.setAttribute( 'style', 'margin-right: 0' );
+						}
+						
+						var oImg = document.createElement( 'img' );
+						oImg.setAttribute( 'style', 'width: ' + this.photos[j].calculatedWidth + 'px; height: ' + this.photos[j].calculatedHeight + 'px' );
+						oImg.setAttribute( 'src', this.photos[j].url + 'w' + this.photos[j].calculatedWidth + '-h' + this.photos[j].calculatedHeight + '-n/' );
+						oImg.setAttribute( 'alt', this.photos[j].title );
+						
+						this.oImgs.push(oImg);
+
+						oDiv.appendChild(oImg);
+						fragment.appendChild(oDiv);
+					}
+				}
+			}
+
+			// If fragment is built, we just need to set new dimensions to pictures
+			if( this.treeBuilt )	{
+				for ( var i = 0, l = this.photos.length; i < l; i++ )	{
+					var photo = this.photos[i];
+					this.oImgs[i].setAttribute('style', 'width: ' + photo.calculatedWidth + 'px; height: ' + photo.calculatedHeight + 'px' );
+					this.oImgs[i].setAttribute('src', photo.url + 'w' + photo.calculatedWidth + '-h' + photo.calculatedHeight + '-n/');
+				}
+			}
+
+			if( ! this.treeBuilt )	{
+				this.oRootDiv.appendChild( fragment );
+				this.treeBuilt = true;
 			}
 		}
+	};
 
-		if( ! this.treeBuilt )	{
-			this.rootDiv.appendChild( fragment );
-			this.treeBuilt = true;
-		}
-	}
-};
-
+	/* Google+ fullscreen photo view mode class */
 
 	function GPlusFullscreen( current, photos, options, destructor )	{
 
@@ -173,8 +172,8 @@
 		this.selfDestroy = destructor;
 		
 		// Make sure current photo is not out of range
-		this.current = current  >= this.photos.length ? 0 : current; // !!!!!!!!!loose
-		this.state = this.current === this.photos.length - 1 ? 'replay' : 'play';
+		this.current = current  >= photos.length ? 0 : current;
+		this.state = this.current === photos.length - 1 ? 'replay' : 'play';
 		
 		// HTML templates for fullscreen slideshow
 		this.HTMLTemplate	= {
@@ -187,12 +186,12 @@
 
     GPlusFullscreen.prototype = {
 
-	init : function () {
-		var _this=this;
+	init: function() {
+		var _this = this;
 
-		$('body').css('overflow','hidden');
-		$('body').append(this.HTMLTemplate.layout);
-		this.rootNode = $('#gplus-fullscreen-layout');
+		$('body').css( 'overflow', 'hidden' );
+		$('body').append( this.HTMLTemplate.layout );
+		this.rootNode = $( '#gplus-fullscreen-layout' );
 
 		// Initializing spinner
 		if ( this.options && this.options.spinner )	{
@@ -209,48 +208,48 @@
 				}
 			};
 		}
-		
-		this.updateScreenDimensions();
+
+		this.getScreenDimensions();
 		this.updatePicture();
-		
+
 		// Throw 'Use fullscreen mode' hint if browser supports it
-		if (document.cancelFullScreen||document.mozCancelFullScreen||document.webkitCancelFullScreen) {
-			this.fullscreenHint = $(this.HTMLTemplate.fullscreenHint).appendTo('#gplus-fullscreen-layout').removeClass( 'hidden' );
-			window.setTimeout( function(){
-				_this.fullscreenHint.addClass( 'hidden' ).on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function(){
-					this.style.display='none';
+		if ( document.cancelFullScreen || document.mozCancelFullScreen || document.webkitCancelFullScreen ) {
+			this.fullscreenHint = $( this.HTMLTemplate.fullscreenHint ).appendTo( '#gplus-fullscreen-layout' ).removeClass( 'hidden' );
+			window.setTimeout( function() {
+				_this.fullscreenHint.addClass( 'hidden' ).on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function() {
+					this.style.display = 'none';
 				});
 			}, this.options.fullscreenHintDelay );
 		}
-		
+
 		// Main ticker
-		var slideTicker			= 0;
-		
+		var slideTicker = 0;
+
 		// These vars are intended to show/hide UI on user idle
-		var	ticksSinceMouseMove	= 0,
-			lastMouseX			= 0,	// Cursor X position at previous tick
-			lastMouseY			= 0;	// Cursor Y position at previous tick
+		var	ticksSinceMouseMove = 0,
+			lastMouseX = 0,	// Cursor X position at previous tick
+			lastMouseY = 0;	// Cursor Y position at previous tick
 		
 		// This helps to prevent superfluous resized picture reloads from Google+
-		var resizeTicker		= 0;
+		var resizeTicker = 0;
 
 		// Timer
-		this.ticker = window.setInterval(function(){
+		this.ticker = window.setInterval( function() {
 
 			// Sends a signal to update picture
-			if( slideTicker === _this.options.slideInterval )	{
+			if( slideTicker === _this.options.slideInterval ) {
 				_this.autoplay();
 				slideTicker = 0;
 			}
 
 			// Hide controls on user idle
-			if( ticksSinceMouseMove === _this.options.hideUIDelay )	{
-				$('#gplus-fullscreen-layout').addClass( 'no-ui' );
+			if( ticksSinceMouseMove === _this.options.hideUIDelay ) {
+				$( '#gplus-fullscreen-layout' ).addClass( 'no-ui' );
 			}
 			
 			// Resize picture at 2nd tick after last window resize event
-			if( resizeTicker === 2 )	{
-				_this.updateScreenDimensions();
+			if( resizeTicker === 2 ) {
+				_this.getScreenDimensions();
 				_this.updatePicture();
 			}
 			
@@ -258,7 +257,7 @@
 			resizeTicker++;
 			ticksSinceMouseMove++;
 
-		}, this.options.tickDuration);
+		}, this.options.tickDuration );
 
 		// Show UI on user action
 		$( document ).on( 'mousemove.GPlusFullscreen', function ( e ) {
@@ -266,7 +265,7 @@
 			// User is considered as idle if mouse move is less than 5px by X or Y
 			if( Math.abs( lastMouseX - e.pageX ) > 5 || Math.abs( lastMouseY - e.pageY ) > 5 )	{
 				ticksSinceMouseMove = 0;
-				$('#gplus-fullscreen-layout').removeClass( 'no-ui' );
+				$( '#gplus-fullscreen-layout' ).removeClass( 'no-ui' );
 			}
 
 			lastMouseX = e.pageX;
@@ -297,23 +296,23 @@
 		});
 		
 		// Image load event
-		$('#gplus-picture').load( function(){
+		$( '#gplus-picture' ).load( function(){
 			_this.spinner.stop();
 			slideTicker = 0;
 		});
 		
 		// Animating  controls
-		$('#gplus-go-left, #gplus-go-right').on('mouseenter mouseleave', function(){$(this).toggleClass('hover');});
-		$('#gplus-caption-left').on('mouseenter mouseleave', function(){$('#gplus-button-left').toggleClass('hover');});
-		$('#gplus-caption-right').on('mouseenter mouseleave', function(){$('#gplus-button-right').toggleClass('hover');});
+		$('#gplus-go-left, #gplus-go-right').on('mouseenter mouseleave', function() { $(this).toggleClass('hover'); });
+		$('#gplus-caption-left').on('mouseenter mouseleave', function() { $('#gplus-button-left').toggleClass('hover'); });
+		$('#gplus-caption-right').on('mouseenter mouseleave', function() { $('#gplus-button-right').toggleClass('hover'); });
 		
 		// Prev / Next
-		$('#gplus-go-left').on( 'click', function(){_this.prev();});
-		$('#gplus-go-right').on( 'click', function(){_this.next();});
+		$('#gplus-go-left').on( 'click', function() { _this.prev(); });
+		$('#gplus-go-right').on( 'click', function() { _this.next(); });
 
 		// Play / stop control
-		$('#gplus-caption-left').on('click', function(){
-			switch (_this.state)	{
+		$('#gplus-caption-left').on( 'click', function() {
+			switch (_this.state) {
 				case 'stop':
 					_this.state = 'play';
 					slideTicker = 0;
@@ -345,7 +344,7 @@
 		window.clearInterval(this.ticker);
 
 		// Removing event handlers
-		$( document ).off( 'mousemove.GPlusFullscreen', 'keydown.GPlusFullscreen' );
+		$( document ).off( '.GPlusFullscreen' );
 		$( window ).off( 'resize.GPlusFullscreen' );
 		$('#gplus-picture').off();
 		$('#gplus-go-left, #gplus-go-right, #gplus-caption-left, #gplus-caption-right').off();
@@ -375,14 +374,14 @@
 
 		if( photoholder.src !== src )	{
 			photoholder.src = src;
-			this.spinner.spin($('#gplus-spinner')[0]);
+			this.spinner.spin( $('#gplus-spinner')[0] );
 		}
 
-		$('#gplus-caption-left').removeClass().addClass(this.state);
+		$('#gplus-caption-left')[0].className = this.state;
 	},
 
 	prev: function(){
-		if( this.current > 0 )	{
+		if( this.current > 0 ) {
 			this.current--;
 			this.updatePicture();
 		}
@@ -390,13 +389,13 @@
 
 	next: function(){
 
-		if( this.current < this.photos.length - 1 )	{
+		if( this.current < this.photos.length - 1 ) {
 			this.current++;
 
-			if( this.current === this.photos.length - 1 )	{
-				this.state='replay';
+			if( this.current === this.photos.length - 1 ) {
+				this.state = 'replay';
 				// Show controls
-				$('#gplus-fullscreen-layout').removeClass('no-ui');
+				$( '#gplus-fullscreen-layout' ).removeClass( 'no-ui' );
 			}
 		}
 
@@ -404,15 +403,15 @@
 	},
 
 	autoplay: function(){
-		if( this.state === 'play' ){
+		if( this.state === 'play' ) {
 			this.next();
 		}
 	},
 
-	updateScreenDimensions: function(){
-		this.screenWidth	= this.rootNode.width();
-		this.screenHeight	= this.rootNode.height();
-		this.screenRatio	= this.screenWidth / this.screenHeight;
+	getScreenDimensions: function() {
+		this.screenWidth = this.rootNode.width();
+		this.screenHeight = this.rootNode.height();
+		this.screenRatio = this.screenWidth / this.screenHeight;
 	},
 	
 	toggleFullscreen: function(){
@@ -424,7 +423,7 @@
 			} else if (this.rootNode[0].webkitRequestFullScreen) {
 				this.rootNode[0].webkitRequestFullScreen();
 			}
-			$('#gplus-fullscreen-tip').hide();
+			$( '#gplus-fullscreen-tip' ).hide();
 		} else {
 			if (document.cancelFullScreen) {
 				document.cancelFullScreen();
@@ -448,16 +447,3 @@
     };
 
 })( jQuery, window, document );
-
-
-
-$(document).ready(function() {
-	var data;
-
-	
-	$.getJSON('/portfolio/best/fullscreen.json', function(data) {
-		var fs = $('#matrix').GPlusGallery(data.photos);
-	});
-
-	
-});

@@ -348,7 +348,10 @@
 		$( window ).off( 'resize.GPlusFullscreen' );
 		$('#gplus-picture').off();
 		$('#gplus-go-left, #gplus-go-right, #gplus-caption-left, #gplus-caption-right').off();
-		this.fullscreenHint.off();
+		
+		if( this.fullscreenHint ) {
+			this.fullscreenHint.off();
+		}
 
 		// Removing DOM
 		$('#gplus-fullscreen-layout').remove();

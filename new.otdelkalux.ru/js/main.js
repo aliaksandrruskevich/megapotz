@@ -158,6 +158,13 @@ switch (page_name) {
 			logo.src='/i/ingos-2x.png';
 		}
 		
+		var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
+		var fs = $('#GPlus').GPlusGallery(photos, {'spinner': spinner});
+		$('#GPlus div').last()
+			.on('click', function(e){e.stopPropagation()})
+			.find('img')
+			.wrap('<a href="/portfolio/process/"/>');
+		
 		// Show / hide call-me-back form
 		init_callback();
 

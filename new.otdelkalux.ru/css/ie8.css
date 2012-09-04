@@ -7,14 +7,6 @@
 #calc_hint	{display: none}
 #calc_hint.shown	{display: block}
 
-.hover .inner	{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"}
-.inner	{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)"}
-
-#fs-tip	{ display: block; }
-#fs-tip.hidden	{ display: none; }
-
-#controls	{display: block}
-#controls.hidden	{ display: none; }
 
 #page-warranty .t	{ background-image: url('/i/curve.png')!important; }
 #page-warranty .b	{ background-image: url('/i/curve.png')!important; }

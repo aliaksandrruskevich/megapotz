@@ -157,7 +157,7 @@ AlbumView.prototype = {
 
 		$(this.element).find('.album').css( { 'height' : picSide + 60 + 'px', 'width' : picSide + 25 + 'px'} )
 		$(this.element).find('img')
-			.css({'height':picSide+'px','width':picSide+'px'})
+			.css({ 'height': picSide + 'px', 'width': picSide + 'px'})
 			.each(function() {
 				this.src = this.src.substring(0,83) + 's' + picSide + '-c/';
 			}
@@ -173,110 +173,110 @@ AlbumView.prototype = {
 // Initializing pages //
 ////////////////////////
 $(document).ready(function() {
-var page_name = $('body').attr('id');
-switch (page_name) {
-	// Initializing main page
-	case 'page-index':
-		// Set cover background
-		$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
+	var page_name = $('body').attr('id');
 
-/*@cc_on
-@if (@_jscript_version <= 5.8)
+	switch (page_name) {
+		// Initializing main page
+		case 'page-index':
+			// Set cover background
+			$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
 
-	// IE8: Reload background picture on window resize (no css3 backgrounds support)
-	var timer = false;
-	$( window ).on('resize', function() { 		
-		if( timer !== false )
-			window.clearTimeout( timer );
-		timer = window.setTimeout( function(){ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'}); }, 500 );
-	});
+			/*@cc_on
+			@if (@_jscript_version <= 5.8)
 
-@end
-@*/		
-		
-		// Ingosstrakh logo
-		if (window.devicePixelRatio == 2) {
-			var logo=$('#ingos')[0];
-			logo.src='/i/ingos-2x.png';
-		}
-		
-		var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
-		var fs = $('#GPlus').GPlusGallery(photos, {'spinner': spinner});
-		$('#GPlus div').last()
-			.on('click', function(e){e.stopPropagation()})
-			.find('img')
-			.wrap('<a href="/portfolio/process/"/>');
-		var album=new AlbumView($('#album_grid')[0]);
-		
-		// Show / hide call-me-back form
-		init_callback();
-
-		var calc=new Calculator();
-		
-		// Mouse hint
-		$('#mouse')[0].style.opacity=1;
-		$(window).bind('scroll', function(){
-			$('#mouse')[0].style.opacity=0;
-		});
-		
-		break;
-
-	case 'page-contacts':
-		init_maps();
-		init_callback();
-		init_selector();
-/* ПЕРЕключалка названия, переключалка карты, отрабатывание решетки */
-		var to;
-		$('#selector .left, #kuusinena_hint').hover(function(){
-			window.clearTimeout(to);
-			$('#madison_hint').css('opacity','0');
-			$('#kuusinena_hint').css({'visibility': 'visible','opacity':'1'});
-		}, function(){
-			to=window.setTimeout(function(){$('#kuusinena_hint').css({'opacity':'0','visibility':'hidden'})},1000);
-		});
-		$('#selector .right, #madison_hint').hover(function(){
-			window.clearTimeout(to);
-			$('#kuusinena_hint').css('opacity','0');
-			$('#madison_hint').css({'visibility': 'visible','opacity':'1'});
-		}, function(){
-			to=window.setTimeout(function(){$('#madison_hint').css({'opacity':'0','visibility':'hidden'})},1000);
-		});
-		break;
-
-	case 'page-price':
-		// CALC
-		if($("#calculator").length > 0)
-			var calc=new Calculator();
-		init_selector();
-
-		break;
-	case 'page-portfolio':
-		if($("#selector_hint").length > 0)
-			window.setTimeout(function(){$("#selector_hint").css({'opacity':1});}, 2000);
-		if($("#selector").length > 0)
-			init_selector();
-		if($("#backnext").length > 0){
-			var d = ['/i/arr-l.png','/i/arr-r.png'];
-			$("#backnext img").each(function(i){
-				this.style.backgroundImage="url('"+this.src+"')";
-				this.src=d[i];
-			});
-		}
-		if($("#map_canvas").length > 0){
-			init_maps();
-			$('#showhide').toggle(function(){
-					$('#map').css({'height':0});
-					$(this).text('Показать карту');
-				},
-				function(){
-					$('#map').css({'height':'500px'});
-					$(this).text('Скрыть карту');
+				// IE8: Reload background picture on window resize (no css3 backgrounds support)
+				var timer = false;
+				$( window ).on('resize', function() { 		
+					if( timer !== false )
+						window.clearTimeout( timer );
+					timer = window.setTimeout( function(){ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'}); }, 500 );
 				});
-		}
 
-		break;
-		
-}
+			@end
+			@*/		
+			
+			// Ingosstrakh logo
+			if ( window.devicePixelRatio == 2 ) {
+				var logo=$('#ingos')[0];
+				logo.src='/i/ingos-2x.png';
+			}
+			
+			// Albums
+			var album=new AlbumView($('#album_grid')[0]);
+
+			// Best photos
+			var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
+			$('#GPlus').GPlusGallery(photos, {'spinner': spinner});
+			$('#GPlus div').last().on('click', function(e){e.stopPropagation()}).find('img').wrap('<a href="/portfolio/process/"/>');
+
+			// Show / hide call-me-back form
+			init_callback();
+
+			// Calculator
+			var calc = new Calculator();
+			
+			// Mouse hint
+			$('#mouse').css('opacity', 1);
+			$(window).one( 'scroll', function() { $('#mouse').css('opacity', 0); });
+
+			break;
+
+		case 'page-contacts':
+			init_maps();
+			init_callback();
+			init_selector();
+
+			var to;
+			$('#selector .left, #kuusinena_hint').hover(function(){
+				window.clearTimeout(to);
+				$('#madison_hint').css('opacity','0');
+				$('#kuusinena_hint').css({'visibility': 'visible','opacity':'1'});
+			}, function(){
+				to=window.setTimeout(function(){$('#kuusinena_hint').css({'opacity':'0','visibility':'hidden'})},1000);
+			});
+			$('#selector .right, #madison_hint').hover(function(){
+				window.clearTimeout(to);
+				$('#kuusinena_hint').css('opacity','0');
+				$('#madison_hint').css({'visibility': 'visible','opacity':'1'});
+			}, function(){
+				to=window.setTimeout(function(){$('#madison_hint').css({'opacity':'0','visibility':'hidden'})},1000);
+			});
+			break;
+
+		case 'page-price':
+			// CALC
+			if($("#calculator").length > 0)
+				var calc=new Calculator();
+			init_selector();
+
+			break;
+		case 'page-portfolio':
+			if($("#selector_hint").length > 0)
+				window.setTimeout(function(){$("#selector_hint").css({'opacity':1});}, 2000);
+			if($("#selector").length > 0)
+				init_selector();
+			if($("#backnext").length > 0){
+				var d = ['/i/arr-l.png','/i/arr-r.png'];
+				$("#backnext img").each(function(i){
+					this.style.backgroundImage="url('"+this.src+"')";
+					this.src=d[i];
+				});
+			}
+			if($("#map_canvas").length > 0){
+				init_maps();
+				$('#showhide').toggle(function(){
+						$('#map').css({'height':0});
+						$(this).text('Показать карту');
+					},
+					function(){
+						$('#map').css({'height':'500px'});
+						$(this).text('Скрыть карту');
+					});
+			}
+
+			break;
+			
+	}
 
 	// Years in footer
 	var today = new Date();
@@ -285,27 +285,21 @@ switch (page_name) {
 	var established=parseInt(el.text());
 	if(this_year>established)
 		el.text(established+'—'+this_year);
-
 });
 
-////////////
-
-
-//
 function init_callback()	{
-$('#show_form_btn,#callback_form input[type=reset], #close').click(function(){
-	$('#contact').toggleClass('callback_shown');
-});
-$('#check').val(5).prop('type', 'hidden').prev().remove();
+	$('#show_form_btn,#callback_form input[type=reset], #close').click(function(){
+		$('#contact').toggleClass('callback_shown');
+	});
+	$('#check').val(5).prop('type', 'hidden').prev().remove();
 }
 
 function init_selector()	{
-	// selector
-/*@cc_on
-@if (@_jscript_version <= 9)
-return;
-@end
-@*/
+	/*@cc_on
+	@if (@_jscript_version <= 9)
+	return;
+	@end
+	@*/
 	$('#selector .right, #selector .left').click(function(e){
 		e.preventDefault();
 		this.parentNode.className = this.className;

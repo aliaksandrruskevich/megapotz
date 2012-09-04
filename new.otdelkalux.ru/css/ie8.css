@@ -1,15 +1,15 @@
-#calc .selector 	{ background-image: url('/i/icos.png')!important; }
-#calc_hint	{ background-image: url('/i/hint.png')!important; }
+#calculator .selector 	{ background-image: url('/i/icos.png')!important; }
+#calculator .calc-hint	{ background-image: url('/i/hint.png')!important; }
 #contact .call	{ background-image: url('/i/phone.png')!important; }
 #contact .phone	{ background-image: url('/i/phone_button.png')!important; }
 #whatwedo .stage li	{ background-image: url('/i/icons.png')!important; }
 
-#calc_hint	{display: none}
-#calc_hint.shown	{display: block}
+#calculator .calc-hint	{display: none}
+#calculator .calc-hint.shown	{display: block}
 
 
 #page-warranty .t	{ background-image: url('/i/curve.png')!important; }
 #page-warranty .b	{ background-image: url('/i/curve.png')!important; }
-#mouse	{ background-image: url('/i/mouse.png')!important; }
+#mouse	{ display: none; }
 
 #selector_hint	{ background-image: url('/i/hint-1.png')!important; }

@@ -293,7 +293,13 @@ function init_callback()	{
 	$('#show_form_btn,#callback_form input[type=reset], #close').click(function(){
 		$('#contact').toggleClass('callback_shown');
 	});
-	$('#check').val(5).prop('type', 'hidden').prev().remove();
+	
+	/*@cc_on
+	@if (@_jscript_version <= 5.8)
+	return;
+	@end
+	@*/
+	$('#check').val(5).prop('type','hidden').prev().remove();
 }
 
 function init_selector()	{

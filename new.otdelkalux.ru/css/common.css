@@ -5,6 +5,7 @@ body::-webkit-scrollbar-thumb {background: #ee1c24; box-shadow: inset 0 0 6px rg
 
 *	{ padding: 0; margin: 0; line-height: 1em; font-family: Helvetica, Arial, Sans-Serif; -webkit-appearance: none; }
 html, body	{ height: 100%; counter-reset: tn; }
+body	{ overflow: scroll; overflow-y: scroll; overflow-x: hidden; }
 table	{ border-collapse: collapse; }
 img	{ border: 0; }
 .column	{ margin: 0 auto; max-width: 1500px; min-width: 980px; position: relative; }

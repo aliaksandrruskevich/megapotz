@@ -251,6 +251,8 @@ $(document).ready(function() {
 
 			break;
 		case 'page-portfolio':
+			if($("#album_grid").length > 0)
+				new AlbumView($('#album_grid')[0]);
 			if($("#selector_hint").length > 0)
 				window.setTimeout(function(){$("#selector_hint").css({'opacity':1});}, 2000);
 			if($("#selector").length > 0)

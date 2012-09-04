@@ -3,7 +3,7 @@ html, body	{ height: 100%; }
 body	{ overflow: scroll; overflow-y: scroll; overflow-x: hidden; }
 
 /* Center image on screen */
-#gplus-fullscreen-layout	{ background-color: #000; position: fixed; top: 0; left: 0; height: 100%; width: 100%; }
+#gplus-fullscreen-layout	{ background-color: #000; position: fixed; top: 0; left: 0; height: 100%; width: 100%; z-index: 1000; }
 body:-webkit-full-screen { width: 100%; }
 body:-moz-full-screen { width: 100%; }
 body:full-screen { width: 100%; }

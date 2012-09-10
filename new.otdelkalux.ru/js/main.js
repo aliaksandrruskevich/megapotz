@@ -41,13 +41,13 @@ Calculator.prototype = {
 		
 		$( window ).on( 'scroll.CalcHint', function(){
 			if( $(this).scrollTop() > updatePosition( hint ) - 400 ) {
-				window.setTimeout( function(){ $(hint).addClass( 'shown' ); }, 300 );
+				window.setTimeout( function(){ $(hint).addClass( 'shown' ); $( window ).off('.CalcHint'); }, 300 );
 			}
 		});
 
 		$( this.element ).find('input').one( 'focus' , function(){
 			$( hint ).removeClass('shown');
-			$( window ).off('.CalcHint');
+			
 		});
 		
 		$( this.element ).find('.cott').click();
@@ -312,7 +312,7 @@ function init_selector()	{
 		e.preventDefault();
 		this.parentNode.className = this.className;
 		var _this=this;
-		$('#selector .current').bind('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function(){
+		$('#selector .current').on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd otransitionend', function(){
 			document.location = $(_this).find('a').attr('href');
 		});
 

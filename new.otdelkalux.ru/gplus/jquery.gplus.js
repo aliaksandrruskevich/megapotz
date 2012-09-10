@@ -216,7 +216,7 @@
 		if ( document.cancelFullScreen || document.mozCancelFullScreen || document.webkitCancelFullScreen ) {
 			this.fullscreenHint = $( this.HTMLTemplate.fullscreenHint ).appendTo( '#gplus-fullscreen-layout' ).removeClass( 'hidden' );
 			window.setTimeout( function() {
-				_this.fullscreenHint.addClass( 'hidden' ).on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function() {
+				_this.fullscreenHint.addClass( 'hidden' ).on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd otransitionend', function() {
 					this.style.display = 'none';
 				});
 			}, this.options.fullscreenHintDelay );
@@ -296,7 +296,7 @@
 		});
 		
 		// Image load event
-		$( '#gplus-picture' ).load( function(){
+		$( '#gplus-picture' ).on( 'load', function(){
 			_this.spinner.stop();
 			slideTicker = 0;
 		});

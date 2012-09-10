@@ -170,7 +170,7 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #ingos	{ width: 93px; height: 31px; }
 
 /*serge_petunin*/
-#serge_petunin	{ background: url('/i/serge.jpg') 50% 0 no-repeat; }
+#serge_petunin	{ background: url('/i/serge.jpg') 50% 0 no-repeat; color: #000; text-shadow:  0 0 5px #fff; }
 #serge_petunin .column	{ width: 980px; margin: 0 auto; height: 375px; }
 
 #serge_petunin div.cite	{ position: absolute; top: 45px; left: 400px; width: 540px; }

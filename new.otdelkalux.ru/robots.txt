@@ -1,4 +1,5 @@
 User-Agent: *
 Disallow: *index.html
 Disallow: *?
+Disallow: /i/artel-sergey-petunin.pdf
 Host: www.otdelkalux.ru

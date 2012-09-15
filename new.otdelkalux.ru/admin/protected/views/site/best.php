@@ -23,7 +23,6 @@
 <script type="text/javascript">VK.init({apiId: 2956871, onlyWidgets: true});</script>
 <!--[if lt IE 9]><script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script><![endif]-->
 </head>
-
 <body id="page-portfolio" itemscope itemtype="http://schema.org/SingleFamilyResidence">
 <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 <!--[if lt IE 8]><p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p><![endif]-->
@@ -43,30 +42,24 @@
 </div>
 </div>
 </section>
-
 <section>
 <div class="column">
-
 <div class="center">
 <div class="back"><a href="/portfolio/">◄ Все объекты</a></div>
 <h1 itemprop="name">Лучшие</h1>
 </div>
-
 <div id="GPlus"></div>
-
 <script type="text/javascript" src="http://fgnass.github.com/spin.js/dist/spin.min.js"></script>
 <script type="text/javascript">
 var photos =<?=preg_replace_callback(
-    '/\\\u([0-9a-fA-F]{4})/',
-    create_function('$match', 'return mb_convert_encoding("&#" . intval($match[1], 16) . ";", "UTF-8", "HTML-ENTITIES");'),
-    json_encode($images)
+'/\\\u([0-9a-fA-F]{4})/',
+create_function('$match', 'return mb_convert_encoding("&#" . intval($match[1], 16) . ";", "UTF-8", "HTML-ENTITIES");'),
+json_encode($images)
 )?>;
 var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
 var fs = $('#GPlus').GPlusGallery(photos, {'spinner': spinner});
 </script>
 </div>
-</section>
-
 <div class="center" style="margin: 100px 0 40px 0">
 <p><!--[if lte IE 8]><img src="/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="/i/alert.svg" alt=""/><!--<![endif]--></p>
 <p class="h1">Мы показываем объекты!</p>
@@ -74,7 +67,6 @@ var fs = $('#GPlus').GPlusGallery(photos, {'spinner': spinner});
 <div class="button red"><a href="/portfolio/process/">Согласовать осмотр</a></div>
 </div>
 </section>
-
 <section id="footer">
 <footer>
 <p class="title">Артель строительных бригад Сергея Петунина</p>
@@ -83,7 +75,6 @@ var fs = $('#GPlus').GPlusGallery(photos, {'spinner': spinner});
 <p>Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов «под ключ»</p>
 </div>
 <div>
-
 <p><b>Основной офис</b></p>
 <p>Москва, ул. Куусинена 19 А</p>
 <p><a href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
@@ -107,6 +98,5 @@ var fs = $('#GPlus').GPlusGallery(photos, {'spinner': spinner});
 <div id="year">© <span>2006</span></div>
 </footer>
 </section>
-
 </body>
 </html>

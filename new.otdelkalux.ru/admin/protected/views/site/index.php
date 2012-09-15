@@ -24,15 +24,12 @@
 <!--[if lt IE 9]>
 <script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
 <![endif]-->
-
 </head>
-
 <body id="page-index">
 <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 <!--[if lt IE 8]>
 <p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
 <![endif]-->
-
 <section id="title">
 <div class="column">
 <div class="td" id="nav">
@@ -60,7 +57,6 @@
 </div>
 </header>
 </section>
-
 <section id="whatwedo">
 <div class="wwd">
 <p class="h2 center">Все перечисленные работы мы выполняем <br/>только своими силами, <span class="red">без субподряда</span>.</p>
@@ -89,7 +85,6 @@
 </div>
 </div>
 </section>
-
 <section id="objects">
 <div class="column">
 <p class="h1 center">Завершенные объекты</p>
@@ -121,7 +116,6 @@ unset($images);
 <div class="center"><div class="button red"><a href="/portfolio/">Смотреть все объекты ►</a></div></div>
 </div>
 </section>
-
 <section id="gallery">
 <div class="column">
 <h2 class="h1 center">Фото ремонта коттеджей</h2>
@@ -151,11 +145,9 @@ var photos = [
 <div class="center"><div class="button red"><a href="/portfolio/best/">Смотреть другие фотографии ►</a></div></div>
 </div>
 </section>
-
 <section id="price">
 <div class="column">
 <h2 class="h1 center">Стоимость ремонта</h2>
-
 <div id="calculator" class="cott">
 <div class="calc-head">
 <div class="selector cott" data-type="cott">Коттедж</div>
@@ -184,14 +176,12 @@ var photos = [
 </table>
 </div>
 </div>
-
 <div class="center" style="margin: 40px 0">
 <p><!--[if lte IE 8]><img src="/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="/i/alert.svg" alt=""/><!--<![endif]--></p>
 <p style="margin: 20px; line-height: 1.4em; font-size: 14px;">В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса. Более точную информацию по ценам мы сможем дать только после ознакомления с дизайн-проектом.</p>
 </div>
 </div>
 </section>
-
 <section id="circles">
 <div class="column">
 <div class="cholder">
@@ -214,7 +204,6 @@ var photos = [
 </div>
 </div>
 </section>
-
 <section id="serge_petunin">
 <div class="column">
 <div class="cite">
@@ -230,8 +219,6 @@ var photos = [
 </div>
 </div>
 </section>
-
-
 <section id="official">
 <div class="column">
 <p class="h1 center">Работаю официально</p>
@@ -252,7 +239,6 @@ var photos = [
 <div class="center"><div class="button white"><a href="/docs.html">Смотреть все документы</a></div></div>
 </div>
 </section>
-
 <section id="contact">
 <div class="call">
 <p class="w">Есть вопросы? <br/>Или вы хотите согласовать осмотр объекта, <br/>на котором мы <a href="/portfolio/process/">сейчас работаем</a>? <br/>Звоните:</p>
@@ -284,7 +270,6 @@ var photos = [
 </div>
 <div class="ready"><img src="https://lh3.googleusercontent.com/-JvCJh1G2RCk/T75YMe9Xg-I/AAAAAAAAAhQ/v0P0lGT7j9A/s56/" alt="Сергей Петунин"/>Готов <b>оперативно</b> приехать к вам на объект для знакомства и обсуждения деталей предстоящего ремонта!</div>
 </section>
-
 <section id="other">
 <div class="column">
 <div class="blocks">
@@ -301,7 +286,6 @@ var photos = [
 </div>
 </div>
 </section>
-
 <section id="counters">
 <div class="like_holder">
 <div class="like">
@@ -323,7 +307,6 @@ VK.Widgets.Like("vk_like", {type: "button"});
 </div>
 </div>
 </section>
-
 <section id="footer">
 <footer>
 <p itemprop="name" class="title">Артель строительных бригад Сергея Петунина</p>
@@ -332,7 +315,6 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p itemprop="description">Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов «под ключ»</p>
 </div>
 <div>
-
 <p><b>Основной офис</b></p>
 <p itemprop="address">Москва, ул. Куусинена 19 А</p>
 <p><a itemprop="map" href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>

@@ -21,13 +21,11 @@
 <script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
 <![endif]-->
 </head>
-
 <body id="page-portfolio">
 <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 <!--[if lt IE 8]>
 <p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
 <![endif]-->
-
 <section>
 <div class="column">
 <div class="td" id="nav">
@@ -44,10 +42,8 @@
 </div>
 </div>
 </section>
-
 <section id="objects">
 <div class="column">
-
 <div id="selector" class="left">
 <div class="current"></div>
 <span class="left"><a href="/portfolio/">Завершенные <sup><?=$count['finished']?></sup></a></span>
@@ -55,11 +51,8 @@
 <div id="button"></div>
 <div id="selector_hint">Эти объекты можно посмотреть лично!</div>
 </div>
-
 <div id="album_grid">
 <? $best_images = SiteController::getImages('','','best');
-//echo "<pre>"; print_r($images); echo "</pre>";
-//echo "https://picasaweb.google.com/data/feed/api/user/$user_id/albumid/$obj->picasa_album_id?alt=json&prettyprint=true&v=2.0&fields=entry(summary,gphoto:width,gphoto:height,content/@src)";
 ?>
 <div class="album">
 <div class="image_stack">
@@ -71,19 +64,16 @@ $j=2-$i;
 ?>
 <img alt="<?=$best_images[$j]['title']?>" src="<?=$best_images[$j]['url']?>/"/>
 <?
-if ($i>=2)	break;
+if ($i>=2)break;
 }?>
 <img alt="Лучшие работы" src= "https://lh4.googleusercontent.com/-kHaGCq9iTas/UAzo8BxPM2I/AAAAAAAABhU/9wACqbVw3qE/s100/"/>
 </div>
 <p class="link"><a href="/portfolio/best/">Лучшие работы</a></p>
 <p class="count"><?=count($best_images)?> фото</p>
 </div>
-
 <?foreach($objects as $obj) { 
 $user_id=!empty($obj->picasa_user_id)?$obj->picasa_user_id:"104094916837036848285";
 $images= SiteController::getImages($obj->picasa_album_id,$user_id);
-//echo "<pre>"; print_r($images); echo "</pre>";
-//echo "https://picasaweb.google.com/data/feed/api/user/$user_id/albumid/$obj->picasa_album_id?alt=json&prettyprint=true&v=2.0&fields=entry(summary,gphoto:width,gphoto:height,content/@src)";
 ?>
 <div class="album">
 <div class="image_stack">
@@ -95,9 +85,9 @@ $j=3-$i;
 ?>
 <img alt="<?=$images[$j]['title']?>" src="<?=$images[$j]['url']?>/"/>
 <?
-if ($i>=3)	break;
+if ($i>=3)break;
 }?>
-<p class="link"><a href="/portfolio/<?=$obj->link?>"><?=$obj->title?></a></p>
+<p class="link"><a href="/portfolio/<?=$obj->link?>/"><?=$obj->title?></a></p>
 <p class="count"><?=count($images)?> фото</p>
 </div>
 </div>
@@ -105,19 +95,14 @@ if ($i>=3)	break;
 unset($images);
 }?>
 </div>
-
 <div class="center" style="margin: 40px 0">
 <p><!--[if lte IE 8]><img src="/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="/i/alert.svg" alt=""/><!--<![endif]--></p>
 <p class="h1">Мы показываем объекты!</p>
 <p style="margin: 20px auto 50px auto; width: 500px; line-height: 1.4em; font-size: 14px;">В интернете каждый может украсть фото у конкурента и разместить их у себя на сайте, как свои собственные. Поэтому единственный способ убедиться в качестве работы потенциального подрядчика — лично посмотреть его объекты! Только так, и никак иначе, вы сможете получить представление о реальном качестве работы. У нас всегда несколько объектов находятся на завершающем этапе ремонта, и их можно посмотреть лично.</p>
 <div class="button red"><a href="/portfolio/process/">Согласовать осмотр</a></div>
-
 </div>
-
 </div>
 </section>
-
-
 <section id="counters">
 <div class="like_holder">
 <div class="like">
@@ -139,7 +124,6 @@ VK.Widgets.Like("vk_like", {type: "button"});
 </div>
 </div>
 </section>
-
 <section id="footer">
 <footer>
 <p class="title">Артель строительных бригад Сергея Петунина</p>
@@ -148,7 +132,6 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p>Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов «под ключ»</p>
 </div>
 <div>
-
 <p><b>Основной офис</b></p>
 <p>Москва, ул. Куусинена 19 А</p>
 <p><a href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
@@ -172,6 +155,5 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <div id="year">© <span>2006</span></div>
 </footer>
 </section>
-
 </body>
 </html>

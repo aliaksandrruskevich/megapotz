@@ -20,52 +20,44 @@
 <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 <script type="text/javascript">
 var places=<?=$map?>;
-
 function init_maps() {
-	var mapOptions = {
-		center: new google.maps.LatLng(55.8, 37.6),
-		zoom: 9,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	};
-
-	var styles = [{
-		stylers: [
-			{ saturation: -100 },
-			{ lightness: 50 }
-		]
-	}];
-
-	var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
-	map.setOptions({styles: styles});
-	setMarkers(map, places);
+var mapOptions = {
+center: new google.maps.LatLng(55.8, 37.6),
+zoom: 9,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var styles = [{
+stylers: [
+{ saturation: -100 },
+{ lightness: 50 }
+]
+}];
+var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+map.setOptions({styles: styles});
+setMarkers(map, places);
 }
-
 function setMarkers(map, locations) {
-	var shadow = new google.maps.MarkerImage('/i/marker-shadow-1.png', new google.maps.Size(96, 37), new google.maps.Point(0,0), new google.maps.Point(16,36));
-
-	for (var i = 0; i < locations.length; i++) {
-		var myLatLng = new google.maps.LatLng(locations[i][0], locations[i][1]);
-		var marker = new google.maps.Marker({
-			position: myLatLng,
-			map: map,
-			shadow: shadow,
-			icon: new google.maps.MarkerImage('/i/markers.png', new google.maps.Size(51,60), new google.maps.Point(0,60*i), new google.maps.Point(20,60)),
-		});
-	}
+var shadow = new google.maps.MarkerImage('/i/marker-shadow-1.png', new google.maps.Size(96, 37), new google.maps.Point(0,0), new google.maps.Point(16,36));
+for (var i = 0; i < locations.length; i++) {
+var myLatLng = new google.maps.LatLng(locations[i][0], locations[i][1]);
+var marker = new google.maps.Marker({
+position: myLatLng,
+map: map,
+shadow: shadow,
+icon: new google.maps.MarkerImage('/i/markers.png', new google.maps.Size(51,60), new google.maps.Point(0,60*i), new google.maps.Point(20,60)),
+});
 }
-
+}
 </script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
 <![endif]-->
 </head>
-
 <body id="page-portfolio">
 <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 <!--[if lt IE 8]>
 <p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
 <![endif]-->
-
 <section>
 <div class="column">
 <div class="td" id="nav">
@@ -82,19 +74,16 @@ function setMarkers(map, locations) {
 </div>
 </div>
 </section>
-
 <div id="selector" class="right">
 <div class="current"></div>
 <span class="left"><a href="/portfolio/">Завершенные <sup><?=$count['finished']?></sup></a></span>
 <span class="right"><a href="/portfolio/process/">В работе <sup><?=$count['notfinished']?></sup></a></span>
 <div id="button"></div>
 </div>
-
 <div class="center">
 <p class="h1">Вы можете лично осмотреть любой из объектов:</p>
 <p><?=$date?></p>
 </div>
-
 <section id="map">
 <div id="map_canvas"></div>
 <div id="text">
@@ -104,18 +93,17 @@ function setMarkers(map, locations) {
 </section>
 <div class="yline"><span id="showhide">Скрыть карту</span></div>
 <section id="objects">
-
 <div class="col470">
 <p class="title">На этих объектах сейчас ведётся чистовая отделка:</p>
 <?foreach($objects as $obj) { 
   if($obj->type==2) { ?>
-	<div class="object">
-	  <?if(!empty($obj->image)) { ?>
-		<img src="<?=$obj->image?>" alt="<?=$obj->title?>"/>
-	  <?}?>
-	  <p class="h"><?=$obj->title?></p>
-	  <p><?=$obj->description?></p>
-	</div>
+<div class="object">
+  <?if(!empty($obj->image)) { ?>
+<img src="<?=$obj->image?>" alt="<?=$obj->title?>"/>
+  <?}?>
+  <p class="h"><?=$obj->title?></p>
+  <p><?=$obj->description?></p>
+</div>
   <?}
 }
 ?>
@@ -128,28 +116,23 @@ function setMarkers(map, locations) {
 </div>
 </div>
 </div>
-
 <div class="yline"></div>
-
 <div class="col470">
 <p class="title">На этапе черновой отделки:</p>
 <?foreach($objects as $obj) { 
   if($obj->type==1) { ?>
-	<div class="object">
-	  <?if(!empty($obj->image)) { ?>
-	  <img src="<?=$obj->image?>" alt="<?=$obj->title?>"/>
-	  <?}?>
-	  <p class="h"><?=$obj->title?></p>
-	  <p><?=$obj->description?></p>
-	</div>
+<div class="object">
+  <?if(!empty($obj->image)) { ?>
+  <img src="<?=$obj->image?>" alt="<?=$obj->title?>"/>
+  <?}?>
+  <p class="h"><?=$obj->title?></p>
+  <p><?=$obj->description?></p>
+</div>
   <?}
 }
 ?>
 </div>
 </section>
-
-
-
 <section id="counters">
 <div class="like_holder">
 <div class="like">
@@ -171,7 +154,6 @@ VK.Widgets.Like("vk_like", {type: "button"});
 </div>
 </div>
 </section>
-
 <section id="footer">
 <footer>
 <p class="title">Артель строительных бригад Сергея Петунина</p>
@@ -180,7 +162,6 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p>Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов «под ключ»</p>
 </div>
 <div>
-
 <p><b>Основной офис</b></p>
 <p>Москва, ул. Куусинена 19 А</p>
 <p><a href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
@@ -204,6 +185,5 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <div id="year">© <span>2006</span></div>
 </footer>
 </section>
-
 </body>
 </html>

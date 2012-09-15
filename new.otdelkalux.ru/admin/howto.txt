@@ -1,0 +1,16 @@
+cd C:\WebServers\usr\local\mysql-5.1\bin
+mysql.exe -uroot
+create database otdelkalux;
+mysql.exe -uroot otdelkalux < C:\WebServers\home\otdelkalux.ru\new\admin\otdelkalux.sql
+
+
+
+C:\WebServers\home\otdelkalux.ru\new\admin\protected\config\main.php
+
+'db'=>array(
+	'connectionString' => 'mysql:host=localhost;dbname=otdelkalux',
+	'emulatePrepare' => true,
+	'username' => 'root',
+	'password' => '',
+	'charset' => 'utf8',
+),

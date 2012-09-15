@@ -17,7 +17,7 @@
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?49"></script>
 <script type="text/javascript">VK.init({apiId: 2956871, onlyWidgets: true});</script>
-<!--!!!!!!!!!!!!!!!!!!!!!!!!!!<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>-->
+<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 <script type="text/javascript">
 var places=<?=$map?>;
 
@@ -61,7 +61,7 @@ function setMarkers(map, locations) {
 </head>
 
 <body id="page-portfolio">
-<!-- Yandex.Metrika counter !!!!!!!!!!!!!!!!!!!!!! <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, trackHash:true, webvisor:true}); } catch(e) {} }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!- - /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 <!--[if lt IE 8]>
 <p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
 <![endif]-->
@@ -110,7 +110,9 @@ function setMarkers(map, locations) {
 <?foreach($objects as $obj) { 
   if($obj->type==2) { ?>
 	<div class="object">
-	  <img src="<?=$obj->image?>" alt="<?=$obj->title?>"/>
+	  <?if(!empty($obj->image)) { ?>
+		<img src="<?=$obj->image?>" alt="<?=$obj->title?>"/>
+	  <?}?>
 	  <p class="h"><?=$obj->title?></p>
 	  <p><?=$obj->description?></p>
 	</div>
@@ -134,7 +136,9 @@ function setMarkers(map, locations) {
 <?foreach($objects as $obj) { 
   if($obj->type==1) { ?>
 	<div class="object">
+	  <?if(!empty($obj->image)) { ?>
 	  <img src="<?=$obj->image?>" alt="<?=$obj->title?>"/>
+	  <?}?>
 	  <p class="h"><?=$obj->title?></p>
 	  <p><?=$obj->description?></p>
 	</div>

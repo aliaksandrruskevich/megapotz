@@ -17,7 +17,7 @@
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBm5umJanOaNNHGtcO3OY8wlTtZ-Z9Xw5o&sensor=false"></script>
 <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?49"></script>
 <script type="text/javascript">VK.init({apiId: 2956871, onlyWidgets: true});</script>
-<!--!!!!!!!!!!!!!!!!!!!!!!!!!!<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>-->
+<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 <script type="text/javascript">
 /*
 	var madison_bg = new google.maps.GroundOverlay('/i/madison.png', 
@@ -29,26 +29,18 @@
 	
 	//madison_bg.setMap(map);
 */
-
-
-
-
-
 var map;
 var hash;
 var loc;
-
 function init_maps() {
 	// Точки офисов на карте. [0] - Куусинена, [1] - Madison.
 	var point = [new google.maps.LatLng(55.787674, 37.511282), new google.maps.LatLng(55.778093, 36.944855)];
-
 	// Объект маркера
 	var icon = new google.maps.MarkerImage('/i/marker.png',
 		new google.maps.Size(68, 96),
 		new google.maps.Point(0,0),
 		new google.maps.Point(34, 0)
 	);
-
 	//Тень маркера
 	var shadow = new google.maps.MarkerImage('/i/marker-shadow.png',
 		new google.maps.Size(146, 96),
@@ -69,7 +61,6 @@ function init_maps() {
 		'selector': 'right',
 		'addr': 'Новорижское ш.,<br/>посёлок Madison Park,<br/>владение 15'
 	}};
-
 	hash = window.location.hash.substr(1);
 	if(loc[hash]==undefined){
 		hash='kuusinena';
@@ -83,7 +74,6 @@ function init_maps() {
 		zoom: loc[hash].zoom,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
-
 	map.setOptions({styles: [{
 		stylers: [
 			{ saturation: -100 },
@@ -93,44 +83,35 @@ function init_maps() {
 	
 	loc['kuusinena'].marker = new google.maps.Marker({position: point[0], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='kuusinena' });
 	loc['madison'].marker = new google.maps.Marker({position: point[1], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='madison' });
-
 	if (window.addEventListener) {
 		window.addEventListener('hashchange', pan_map, false); 
 	} else if (window.attachEvent)  {
 		window.attachEvent('onhashchange', pan_map);
 	}
 }
-
-
-
 function pan_map(){
 	loc[hash].marker.setVisible(false);
-
 	hash = window.location.hash.substr(1);
 	if(loc[hash]==undefined){
 		hash='kuusinena';
 		window.location.hash=hash;
 	}
-
 	map.panTo(loc[hash].latlng);
 	map.setZoom(loc[hash].zoom);
 	loc[hash].marker.setVisible(true);
 	loc[hash].marker.setAnimation(google.maps.Animation.DROP);
 	$('#addr').html(loc[hash].addr);
 }
-
 </script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
 <![endif]-->
 </head>
-
 <body id="page-contacts">
-<!-- Yandex.Metrika counter !!!!!!!!!!!!!!!!!!!!!! <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, trackHash:true, webvisor:true}); } catch(e) {} }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!- - /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 <!--[if lt IE 8]>
 <p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
 <![endif]-->
-
 <section>
 <div class="column">
 <div class="td" id="nav">
@@ -155,7 +136,6 @@ function pan_map(){
 <p class="redline"><span>Телефон: +7 495 99-88-347</span></p>
 <p class="redline"><a href="mailto:rso2000@mail.ru">rso2000@mail.ru</a></p>
 </div>
-
 <div id="selector" class="left">
 <div class="current"></div>
 <span class="left"><a href="#kuusinena">Основной офис</a></span>
@@ -164,9 +144,7 @@ function pan_map(){
 <div id="kuusinena_hint">Нужно <b>заранее согласовать</b> встречу, потому что днём я нахожусь на объектах.</div>
 <div id="madison_hint">В будние дни я почти всегда на объектах в посёлках, построенных <a href="http://www.villagio.ru/villages/" rel="nofollow" target="_blank">Villagio Estate</a>.</div>
 </div>
-
 </section>
-
 <section id="contact">
 	<div class="call">
 		<p class="w">Есть вопросы? <br/>Или вы хотите согласовать осмотр объекта, <br/>на котором мы сейчас работаем? <br/>Звоните:</p>
@@ -174,7 +152,7 @@ function pan_map(){
 		<div class="button red phone" id="show_form_btn"><span>Позвонить вам?</span></div>
 	</div>
 	<div id="callback_form" class="not_sent">
-		<form method="post" action="/true.html" target="target">
+		<form method="post" action="/feedback.php" target="target">
 			<div class="field"><label for="name">Имя</label><input type="text" name="name" id="name" required placeholder="Иван"/></div>
 			<div class="field"><label for="tel">Номер телефона</label><input type="text" name="tel" id="tel" required placeholder="+79051234567"/></div>
 			<div class="field"><label for="check">Сколько будет 2+3</label><input type="text" name="check" id="check"/></div>
@@ -198,7 +176,6 @@ function pan_map(){
 	</div>
 	<div class="ready">Готов <b>оперативно</b> приехать к вам на объект для знакомства и обсуждения деталей предстоящего ремонта!</div>
 </section>
-
 <section id="counters">
 <div class="like_holder">
 <div class="like">
@@ -220,7 +197,6 @@ VK.Widgets.Like("vk_like", {type: "button"});
 </div>
 </div>
 </section>
-
 <section id="footer">
 <footer>
 <p itemprop="name" class="title">Артель строительных бригад Сергея Петунина</p>
@@ -229,7 +205,6 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p itemprop="description">Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов «под ключ»</p>
 </div>
 <div>
-
 <p><b>Основной офис</b></p>
 <p itemprop="address">Москва, ул. Куусинена 19 А</p>
 <p><a itemprop="map" href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
@@ -253,7 +228,5 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <div id="year">© <span>2006</span></div>
 </footer>
 </section>
-
 </body>
 </html>
-

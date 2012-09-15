@@ -4,11 +4,11 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <meta name="viewport" content="width=1000"/>
-<meta name="keywords" content="ремонт коттеджей, отделка коттеджей, ремонт таунхаусов, отделка, внутренняя отделка загородного дома, отделка коттеджей под ключ, отделка загородных домов, ремонт загородных домов, ремонт коттеджей под ключ, внутренняя отделка коттеджей, ремонт коттеджей цены, отделка таунхаусов, ремонт и отделка коттеджей, отделка под ключ, элитный ремонт коттеджей, элитная отделка коттеджей, стоимость отделки коттеджа, ремонт коттеджей загородных домов, ремонт коттеджей фото, ремонт коттеджа фото, отделка коттеджей цена, отделка домов и коттеджей, комплексный ремонт коттеджей, элитный ремонт загородных домов, элитная отделка загородных домов, цены на отделку коттеджей"/>
-<meta name="description" content="Ремонт и отделка элитных коттеджей и загородных домов под «ключ». Производим полный цикл работ собственными силами, не привлекая субподрядчиков."/>
-<meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
+<meta name="keywords" content="<?=!empty($object->seo_keywords)?$object->seo_keywords:""?>"/>
+<meta name="description" content="<?=!empty($object->seo_description)?$object->seo_description:""?>"/>
+<meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg"/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>Элитный ремонт и отделка коттеджей, загородных домов и таунхаусов под «ключ». Внутренняя отделка: цены, фото.</title>
+<title><?=!empty($object->seo_title)?$object->seo_title:""?></title>
 <link rel="stylesheet" type="text/css" href="/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
 <link rel="stylesheet" type="text/css" href="/css/common.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie8.css"/><![endif]-->
@@ -18,17 +18,16 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.js"></script>
 <script type="text/javascript" src="/gplus/jquery.gplus.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
-<!--!!!!!!!!!!!!!!!!!!!!!!!!!!<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>-->
+<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?49"></script>
 <script type="text/javascript">VK.init({apiId: 2956871, onlyWidgets: true});</script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
 <![endif]-->
-
 </head>
 
 <body id="page-portfolio" itemscope itemtype="http://schema.org/SingleFamilyResidence">
-<!-- Yandex.Metrika counter !!!!!!!!!!!!!!!!!!!!!! <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, trackHash:true, webvisor:true}); } catch(e) {} }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!- - /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 <!--[if lt IE 8]>
 <p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
 <![endif]-->

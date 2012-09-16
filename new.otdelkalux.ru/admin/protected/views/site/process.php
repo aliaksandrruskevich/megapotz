@@ -2,16 +2,16 @@
 <!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
 <html lang="ru">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <meta name="viewport" content="width=1000"/>
 <meta name="keywords" content="просмотр объектов"/>
-<meta name="description" content="Любой из этих объектов вы можете посмотреть лично. Позвоните мне по телефону +7 495 99-88-347, чтобы согласовать время осмотра."/>
+<meta name="description" content="Любой из этих объектов вы можете посмотреть лично. Позвоните по телефону +7 495 99-88-347, чтобы согласовать время осмотра."/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>Объекты, на которых мы работаем</title>
-<link rel="stylesheet" type="text/css" href="/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
-<link rel="stylesheet" type="text/css" href="/css/common.css"/>
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie8.css"/><![endif]-->
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<title>Объекты, на которых мы сейчас работаем</title>
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
+<link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
 <script type="text/javascript" src="http://yandex.st/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -61,7 +61,7 @@ icon: new google.maps.MarkerImage('/i/markers.png', new google.maps.Size(51,60),
 <section>
 <div class="column">
 <div class="td" id="nav">
-<a href="/" id="logo"><!--[if lte IE 8]><img src="/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
+<a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="http://static.otdelkalux.ru/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
 <nav>
 <a class="index" href="/">Главная</a>
 <a class="portfolio" href="/portfolio/">Объекты</a>

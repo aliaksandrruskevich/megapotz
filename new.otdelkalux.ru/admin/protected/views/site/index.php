@@ -9,12 +9,12 @@
 <meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>Элитный ремонт и отделка коттеджей, загородных домов и таунхаусов под «ключ». Внутренняя отделка: цены, фото.</title>
-<link rel="stylesheet" type="text/css" href="/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
-<link rel="stylesheet" type="text/css" href="/css/common.css"/>
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie8.css"/><![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
 <link rel="stylesheet" type="text/css" href="/gplus/gplus.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/gplus/gplus.ie8.css"/><![endif]-->
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.js"></script>
 <script type="text/javascript" src="/gplus/jquery.gplus.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
@@ -33,7 +33,7 @@
 <section id="title">
 <div class="column">
 <div class="td" id="nav">
-<a href="/" id="logo"><!--[if lte IE 8]><img src="/i/logo.png" /><![endif]--><!--[if !IE]>--><img src="/i/logo.svg" alt=""/><!--<![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
+<a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if !IE]>--><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!--<![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
 <nav>
 <a class="index" href="/">Главная</a>
 <a class="portfolio" href="/portfolio/">Объекты</a>
@@ -177,7 +177,7 @@ var photos = [
 </div>
 </div>
 <div class="center" style="margin: 40px 0">
-<p><!--[if lte IE 8]><img src="/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="/i/alert.svg" alt=""/><!--<![endif]--></p>
+<p><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="http://static.otdelkalux.ru/i/alert.svg" alt=""/><!--<![endif]--></p>
 <p style="margin: 20px; line-height: 1.4em; font-size: 14px;">В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса. Более точную информацию по ценам мы сможем дать только после ознакомления с дизайн-проектом.</p>
 </div>
 </div>
@@ -274,12 +274,12 @@ var photos = [
 <div class="column">
 <div class="blocks">
 <div class="block pdf">
-<a href="/i/artel-sergey-petunin.pdf"><img src="/i/pdf.png" alt="Брошюра"/></a>
+<a href="/i/artel-sergey-petunin.pdf"><img src="http://static.otdelkalux.ru/i/pdf.png" alt="Брошюра"/></a>
 <p><a href="/i/artel-sergey-petunin.pdf">Презентация наших работ по ремонту и отделке в формате PDF</a></p>
 <p class="yellow"><a href="/i/artel-sergey-petunin.pdf">Скачать презентацию</a></p>
 </div>
 <div class="block youtube">
-<a href="http://youtu.be/7_wzJNQhK00" target="_blank"><img src="/i/youtube.png" alt="Выпуск передачи «Проект мечты» на телеканале Усадьба"/></a>
+<a href="http://youtu.be/7_wzJNQhK00" target="_blank"><img src="http://static.otdelkalux.ru/i/youtube.png" alt="Выпуск передачи «Проект мечты» на телеканале Усадьба"/></a>
 <p><a href="http://youtu.be/7_wzJNQhK00" target="_blank">Выпуск передачи «Проект мечты» на телеканале «Усадьба» про наш объект</a></p>
 <p class="yellow"><a href="http://youtu.be/7_wzJNQhK00" target="_blank">Смотреть на YouTube</a></p>
 </div>

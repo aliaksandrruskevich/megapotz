@@ -199,7 +199,7 @@ $(document).ready(function() {
 			// Ingosstrakh logo
 			if ( window.devicePixelRatio == 2 ) {
 				var logo=$('#ingos')[0];
-				logo.src='/i/ingos-2x.png';
+				logo.src='http://static.otdelkalux.ru/i/ingos-2x.png';
 			}
 			
 			// Albums
@@ -259,7 +259,7 @@ $(document).ready(function() {
 			if($("#selector").length > 0)
 				init_selector();
 			if($("#backnext").length > 0){
-				var d = ['/i/arr-l.png','/i/arr-r.png'];
+				var d = ['http://static.otdelkalux.ru/i/arr-l.png','http://static.otdelkalux.ru/i/arr-r.png'];
 				$("#backnext img").each(function(i){
 					this.style.backgroundImage="url('"+this.src+"')";
 					this.src=d[i];

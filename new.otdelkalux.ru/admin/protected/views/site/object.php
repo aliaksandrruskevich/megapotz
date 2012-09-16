@@ -9,12 +9,12 @@
 <meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg"/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title><?=!empty($object->seo_title)?$object->seo_title:""?></title>
-<link rel="stylesheet" type="text/css" href="/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
-<link rel="stylesheet" type="text/css" href="/css/common.css"/>
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie8.css"/><![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
 <link rel="stylesheet" type="text/css" href="/gplus/gplus.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/gplus/gplus.ie8.css"/><![endif]-->
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.js"></script>
 <script type="text/javascript" src="/gplus/jquery.gplus.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
@@ -31,7 +31,7 @@
 <section>
 <div class="column">
 <div class="td" id="nav">
-<a href="/" id="logo"><!--[if lte IE 8]><img src="/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
+<a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="http://static.otdelkalux.ru/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
 <nav>
 <a class="index" href="/">Главная</a>
 <a class="portfolio" href="/portfolio/">Объекты</a>
@@ -120,7 +120,7 @@ echo "Люкс";
 </div>
 </div>
 <div class="center" style="margin: 100px 0 40px 0">
-<p><!--[if lte IE 8]><img src="/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="/i/alert.svg" alt=""/><!--<![endif]--></p>
+<p><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="http://static.otdelkalux.ru/i/alert.svg" alt=""/><!--<![endif]--></p>
 <p class="h1">Мы показываем объекты!</p>
 <p style="margin: 20px auto 50px auto; width: 500px; line-height: 1.4em; font-size: 14px;">В интернете каждый может украсть фото у конкурента и разместить их у себя на сайте, как свои собственные. Поэтому единственный способ убедиться в качестве работы потенциального подрядчика — лично посмотреть его объекты! Только так, и никак иначе, вы сможете получить представление о реальном качестве работы. У нас всегда несколько объектов находятся на завершающем этапе ремонта, и их можно посмотреть лично.</p>
 <div class="button red"><a href="/portfolio/process/">Согласовать осмотр</a></div>

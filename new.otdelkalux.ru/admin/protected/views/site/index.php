@@ -246,7 +246,7 @@ var photos = [
 <div class="button red phone" id="show_form_btn"><span>Позвонить вам?</span></div>
 </div>
 <div id="callback_form" class="not_sent">
-<form method="post" action="/true.html" target="target">
+<form method="post" action="/feedback.php" target="target">
 <div class="field"><label for="name">Имя</label><input type="text" name="name" id="name" required placeholder="Иван"/></div>
 <div class="field"><label for="tel">Номер телефона</label><input type="text" name="tel" id="tel" required placeholder="+79051234567"/></div>
 <div class="field"><label for="check">Сколько будет 2+3</label><input type="text" name="check" id="check" value=""/></div>

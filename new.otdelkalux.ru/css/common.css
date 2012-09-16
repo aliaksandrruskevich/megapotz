@@ -199,7 +199,7 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #contact .call	{ background: url('/i/phone.svg') 50% 46px no-repeat; padding-top: 130px; }
 #contact .call .w	{ margin-bottom: 30px; font-size: 30px; }
 #contact .call .y	{ font-size: 42px; }
-#contact .phone	{ padding-left: 28px; margin: 30px auto; background: #ed1c24 url('/i/phone_button.svg') 0 50% no-repeat; }
+#contact .phone	{ padding-left: 28px; margin: 30px auto; background: #ed1c24 url('/i/phone_button.png') 0 50% no-repeat; /* Not .SVG due to weird Opera behavious in conjunctions with border-radius... */ }
 #contact hr	{ height: 0; border: dotted #fff; border-width: 1px 0 0 0; width: 300px; margin: 30px auto; }
 
 #callback_form	{ display: none; margin: 30px 0; background: #3c3c3c url('/i/noize1.png'); padding: 20px 0; box-shadow: inset 0 0 30px #191919; }
@@ -209,7 +209,8 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #callback_form .field input	{ font-size: 26px; width: 100%; text-align: center; border: 0; line-height: 45px; box-shadow: inset 0 0 4px #555; border-radius: 3px; }
 #callback_form .field input:hover	{ box-shadow: inset 0 0 4px #cb7a00; }
 #callback_form .buttons	{ text-align: left; }
-#callback_form .buttons input	{ margin-right: 10px; border: 0; padding: 10px 25px; } 
+#callback_form .buttons input	{ border: 0; padding: 10px 25px; } 
+#callback_form .buttons .black	{ margin-right: 10px; }
 #callback_form  .w	{ font-size: 24px; margin: 30px 0; }
 
 #callback_form.sent form	{ display: none }

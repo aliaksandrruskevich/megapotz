@@ -41,13 +41,14 @@ Calculator.prototype = {
 		
 		$( window ).on( 'scroll.CalcHint', function(){
 			if( $(this).scrollTop() > updatePosition( hint ) - 400 ) {
-				window.setTimeout( function(){ $(hint).addClass( 'shown' ); $( window ).off('.CalcHint'); }, 300 );
+				window.setTimeout( function(){ 
+					$( hint ).addClass( 'shown' );
+					$( window ).off('.CalcHint');
+					$( _this.element ).one( 'click' , function(){
+						$( hint ).removeClass('shown');
+					});
+				}, 300 );
 			}
-		});
-
-		$( this.element ).find('input').one( 'focus' , function(){
-			$( hint ).removeClass('shown');
-			
 		});
 		
 		$( this.element ).find('.cott').click();
@@ -303,14 +304,14 @@ function init_callback()	{
 }
 
 function init_selector()	{
-	/*@cc_on
-	@if (@_jscript_version <= 9)
-	return;
-	@end
-	@*/
 	$('#selector .right, #selector .left').click(function(e){
-		e.preventDefault();
 		this.parentNode.className = this.className;
+		/*@cc_on
+		@if (@_jscript_version <= 9)
+		return;
+		@end
+		@*/
+		e.preventDefault();
 		var _this=this;
 		$('#selector .current').on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd otransitionend', function(){
 			document.location = $(_this).find('a').attr('href');

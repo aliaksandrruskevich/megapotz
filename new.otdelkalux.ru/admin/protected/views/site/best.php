@@ -46,7 +46,7 @@
 <div class="column">
 <div class="center">
 <div class="back"><a href="/portfolio/">◄ Все объекты</a></div>
-<h1 itemprop="name">Лучшие</h1>
+<h1 itemprop="name">Фотографии лучших работ</h1>
 </div>
 <div id="GPlus"></div>
 <script type="text/javascript" src="http://fgnass.github.com/spin.js/dist/spin.min.js"></script>

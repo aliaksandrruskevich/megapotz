@@ -86,10 +86,9 @@ $j=3-$i;
 <img alt="<?=$images[$j]['title']?>" src="<?=$images[$j]['url']?>/"/>
 <?
 if ($i>=3)break;
-}?>
+}?></div>
 <p class="link"><a href="/portfolio/<?=$obj->link?>/"><?=$obj->title?></a></p>
 <p class="count"><?=count($images)?> фото</p>
-</div>
 </div>
 <?
 unset($images);

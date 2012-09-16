@@ -20,87 +20,87 @@
 <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 <script type="text/javascript">
 /*
-	var madison_bg = new google.maps.GroundOverlay('/i/madison.png', 
-		new google.maps.LatLngBounds(
-			new google.maps.LatLng(55.77036,36.938939),
-			new google.maps.LatLng(55.780787,36.959882)
-		)
-	);
-	
-	//madison_bg.setMap(map);
+var madison_bg = new google.maps.GroundOverlay('/i/madison.png', 
+new google.maps.LatLngBounds(
+new google.maps.LatLng(55.77036,36.938939),
+new google.maps.LatLng(55.780787,36.959882)
+)
+);
+
+//madison_bg.setMap(map);
 */
 var map;
 var hash;
 var loc;
 function init_maps() {
-	// Точки офисов на карте. [0] - Куусинена, [1] - Madison.
-	var point = [new google.maps.LatLng(55.787674, 37.511282), new google.maps.LatLng(55.778093, 36.944855)];
-	// Объект маркера
-	var icon = new google.maps.MarkerImage('/i/marker.png',
-		new google.maps.Size(68, 96),
-		new google.maps.Point(0,0),
-		new google.maps.Point(34, 0)
-	);
-	//Тень маркера
-	var shadow = new google.maps.MarkerImage('/i/marker-shadow.png',
-		new google.maps.Size(146, 96),
-		new google.maps.Point(0,0),
-		new google.maps.Point(34, 0)
-	);
-	
-	loc = {
-	'kuusinena':	{
-		'zoom': 15,
-		'latlng': point[0],
-		'selector': 'left',
-		'addr': 'Москва,<br/>Куусинена 19А'
-	},
-	'madison':	{
-		'zoom': 10,
-		'latlng': point[1],
-		'selector': 'right',
-		'addr': 'Новорижское ш.,<br/>посёлок Madison Park,<br/>владение 15'
-	}};
-	hash = window.location.hash.substr(1);
-	if(loc[hash]==undefined){
-		hash='kuusinena';
-		window.location.hash=hash;
-	}
-	$('#selector')[0].className = loc[hash].selector;
-	$('#addr').html(loc[hash].addr);
-	
-	map = new google.maps.Map(document.getElementById("map_canvas"),{
-		center: loc[hash].latlng,
-		zoom: loc[hash].zoom,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	});
-	map.setOptions({styles: [{
-		stylers: [
-			{ saturation: -100 },
-			{ lightness: 50 }
-		]
-	}]});
-	
-	loc['kuusinena'].marker = new google.maps.Marker({position: point[0], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='kuusinena' });
-	loc['madison'].marker = new google.maps.Marker({position: point[1], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='madison' });
-	if (window.addEventListener) {
-		window.addEventListener('hashchange', pan_map, false); 
-	} else if (window.attachEvent)  {
-		window.attachEvent('onhashchange', pan_map);
-	}
+// Точки офисов на карте. [0] - Куусинена, [1] - Madison.
+var point = [new google.maps.LatLng(55.787674, 37.511282), new google.maps.LatLng(55.778093, 36.944855)];
+// Объект маркера
+var icon = new google.maps.MarkerImage('/i/marker.png',
+new google.maps.Size(68, 96),
+new google.maps.Point(0,0),
+new google.maps.Point(34, 0)
+);
+//Тень маркера
+var shadow = new google.maps.MarkerImage('/i/marker-shadow.png',
+new google.maps.Size(146, 96),
+new google.maps.Point(0,0),
+new google.maps.Point(34, 0)
+);
+
+loc = {
+'kuusinena':	{
+'zoom': 15,
+'latlng': point[0],
+'selector': 'left',
+'addr': 'Москва,<br/>Куусинена 19А'
+},
+'madison':	{
+'zoom': 10,
+'latlng': point[1],
+'selector': 'right',
+'addr': 'Новорижское ш.,<br/>посёлок Madison Park,<br/>владение 15'
+}};
+hash = window.location.hash.substr(1);
+if(loc[hash]==undefined){
+hash='kuusinena';
+window.location.hash=hash;
+}
+$('#selector')[0].className = loc[hash].selector;
+$('#addr').html(loc[hash].addr);
+
+map = new google.maps.Map(document.getElementById("map_canvas"),{
+center: loc[hash].latlng,
+zoom: loc[hash].zoom,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+map.setOptions({styles: [{
+stylers: [
+{ saturation: -100 },
+{ lightness: 50 }
+]
+}]});
+
+loc['kuusinena'].marker = new google.maps.Marker({position: point[0], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='kuusinena' });
+loc['madison'].marker = new google.maps.Marker({position: point[1], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='madison' });
+if (window.addEventListener) {
+window.addEventListener('hashchange', pan_map, false); 
+} else if (window.attachEvent)  {
+window.attachEvent('onhashchange', pan_map);
+}
 }
 function pan_map(){
-	loc[hash].marker.setVisible(false);
-	hash = window.location.hash.substr(1);
-	if(loc[hash]==undefined){
-		hash='kuusinena';
-		window.location.hash=hash;
-	}
-	map.panTo(loc[hash].latlng);
-	map.setZoom(loc[hash].zoom);
-	loc[hash].marker.setVisible(true);
-	loc[hash].marker.setAnimation(google.maps.Animation.DROP);
-	$('#addr').html(loc[hash].addr);
+loc[hash].marker.setVisible(false);
+hash = window.location.hash.substr(1);
+if(loc[hash]==undefined){
+hash='kuusinena';
+window.location.hash=hash;
+}
+map.panTo(loc[hash].latlng);
+map.setZoom(loc[hash].zoom);
+loc[hash].marker.setVisible(true);
+loc[hash].marker.setAnimation(google.maps.Animation.DROP);
+$('#addr').html(loc[hash].addr);
 }
 </script>
 <!--[if lt IE 9]>
@@ -146,35 +146,35 @@ function pan_map(){
 </div>
 </section>
 <section id="contact">
-	<div class="call">
-		<p class="w">Есть вопросы? <br/>Или вы хотите согласовать осмотр объекта, <br/>на котором мы сейчас работаем? <br/>Звоните:</p>
-		<p class="y">+7 (495) 99-88-347</p>
-		<div class="button red phone" id="show_form_btn"><span>Позвонить вам?</span></div>
-	</div>
-	<div id="callback_form" class="not_sent">
-		<form method="post" action="/feedback.php" target="target">
-			<div class="field"><label for="name">Имя</label><input type="text" name="name" id="name" required placeholder="Иван"/></div>
-			<div class="field"><label for="tel">Номер телефона</label><input type="text" name="tel" id="tel" required placeholder="+79051234567"/></div>
-			<div class="field"><label for="check">Сколько будет 2+3</label><input type="text" name="check" id="check"/></div>
-			<div class="buttons">
-				<input type="reset" value="Отменить" class="black button"/>
-				<input type="submit" value="Отправить" class="red button"/>
-			</div>
-		</form>
-		<div id="thanks">
-			<p class="w">Спасибо!<br/>Я перезвоню Вам в самое ближайшее время.</p>
-			<div class="button black" id="close"><span>закрыть</span></div>
-		</div>
-		<iframe id="target" name="target"></iframe>
-	</div>
-	<p class="cb_comment">Оставьте свой телефон, и я обязательно перезвоню вам!</p><hr/>
-	<div class="email">
-		<p class="w">Если у вас есть проект, и вы хотите <br/>узнать, сколько будет стоить ремонт, пишите:</p>
-		<p class="y"><a href="mailto:rso2000@mail.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">rso2000@mail.ru</a></p>
-		<p>Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
-		<hr/>
-	</div>
-	<div class="ready">Готов <b>оперативно</b> приехать к вам на объект для знакомства и обсуждения деталей предстоящего ремонта!</div>
+<div class="call">
+<p class="w">Есть вопросы? <br/>Или вы хотите согласовать осмотр объекта, <br/>на котором мы сейчас работаем? <br/>Звоните:</p>
+<p class="y">+7 (495) 99-88-347</p>
+<div class="button red phone" id="show_form_btn"><span>Позвонить вам?</span></div>
+</div>
+<div id="callback_form" class="not_sent">
+<form method="post" action="/feedback.php" target="target">
+<div class="field"><label for="name">Имя</label><input type="text" name="name" id="name" required placeholder="Иван"/></div>
+<div class="field"><label for="tel">Номер телефона</label><input type="text" name="tel" id="tel" required placeholder="+79051234567"/></div>
+<div class="field"><label for="check">Сколько будет 2+3</label><input type="text" name="check" id="check"/></div>
+<div class="buttons">
+<input type="reset" value="Отменить" class="black button"/>
+<input type="submit" value="Отправить" class="red button"/>
+</div>
+</form>
+<div id="thanks">
+<p class="w">Спасибо!<br/>Я перезвоню Вам в самое ближайшее время.</p>
+<div class="button black" id="close"><span>закрыть</span></div>
+</div>
+<iframe id="target" name="target"></iframe>
+</div>
+<p class="cb_comment">Оставьте свой телефон, и я обязательно перезвоню вам!</p><hr/>
+<div class="email">
+<p class="w">Если у вас есть проект, и вы хотите <br/>узнать, сколько будет стоить ремонт, пишите:</p>
+<p class="y"><a href="mailto:rso2000@mail.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">rso2000@mail.ru</a></p>
+<p>Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
+<hr/>
+</div>
+<div class="ready"><img src="https://lh3.googleusercontent.com/-JvCJh1G2RCk/T75YMe9Xg-I/AAAAAAAAAhQ/v0P0lGT7j9A/s56/" alt="Сергей Петунин"/>Готов <b>оперативно</b> приехать к вам на объект для знакомства и обсуждения деталей предстоящего ремонта!</div>
 </section>
 <section id="counters">
 <div class="like_holder">

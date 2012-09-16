@@ -62,7 +62,7 @@ foreach($best_images as $img) {
 $i++;
 $j=2-$i;
 ?>
-<img alt="<?=$best_images[$j]['title']?>" src="<?=$best_images[$j]['url']?>/"/>
+<img alt="<?=$best_images[$j]['title']?>" src="<?=$best_images[$j]['url']?>"/>
 <?
 if ($i>=2)break;
 }?>
@@ -83,7 +83,7 @@ foreach($images as $img) {
 $i++;
 $j=3-$i;
 ?>
-<img alt="<?=$images[$j]['title']?>" src="<?=$images[$j]['url']?>/"/>
+<img alt="<?=$images[$j]['title']?>" src="<?=$images[$j]['url']?>"/>
 <?
 if ($i>=3)break;
 }?></div>

@@ -3,3 +3,4 @@ Disallow: *index.html
 Disallow: *?
 Disallow: /i/artel-sergey-petunin.pdf
 Host: www.otdelkalux.ru
+Sitemap: http://www.otdelkalux.ru/sitemap.xml

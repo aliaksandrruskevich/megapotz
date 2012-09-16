@@ -37,14 +37,14 @@ map.setOptions({styles: styles});
 setMarkers(map, places);
 }
 function setMarkers(map, locations) {
-var shadow = new google.maps.MarkerImage('/i/marker-shadow-1.png', new google.maps.Size(96, 37), new google.maps.Point(0,0), new google.maps.Point(16,36));
+var shadow = new google.maps.MarkerImage('http://static.otdelkalux.ru//i/marker-shadow-1.png', new google.maps.Size(96, 37), new google.maps.Point(0,0), new google.maps.Point(16,36));
 for (var i = 0; i < locations.length; i++) {
 var myLatLng = new google.maps.LatLng(locations[i][0], locations[i][1]);
 var marker = new google.maps.Marker({
 position: myLatLng,
 map: map,
 shadow: shadow,
-icon: new google.maps.MarkerImage('/i/markers.png', new google.maps.Size(51,60), new google.maps.Point(0,60*i), new google.maps.Point(20,60)),
+icon: new google.maps.MarkerImage('http://static.otdelkalux.ru//i/markers.png', new google.maps.Size(51,60), new google.maps.Point(0,60*i), new google.maps.Point(20,60)),
 });
 }
 }

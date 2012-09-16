@@ -156,7 +156,7 @@ AlbumView.prototype = {
 	show: function() {
 		var picSide = Math.round( $(this.element).width() / 4 - 30 );
 
-		$(this.element).find('.album').css( { 'height' : picSide + 60 + 'px', 'width' : picSide + 25 + 'px'} )
+		$(this.element).find('.image_stack').css( { 'height' : picSide + 60 + 'px', 'width' : picSide + 25 + 'px'} )
 		$(this.element).find('img')
 			.css({ 'height': picSide + 'px', 'width': picSide + 'px'})
 			.each(function() {

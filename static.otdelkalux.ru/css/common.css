@@ -259,7 +259,9 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #footer .social	{ line-height: 16px; margin-left: -24px; padding-left: 24px; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABACAMAAAAkowekAAAAwFBMVEUpguf////SRjTYSDa+Nia5NCX/ardrpd/NQjD//+urKx3gqaXdSzn///PmekLIPi3OUFSyLyHzn1bDOirzrHD/9tbG3POyMFb/AIT17v7rikvVfJEAY8j/sdn//8jIiLiy0O7/x+T/fMDVn9j4wIiyLyzgYi3lvb99sOPh9f/y7N7+0enNsejlvOLhTjKzca3dUyzPhpX3+v/CRif4////+f/bRTDxx8np6//ncjeRsuLjyeDq0uz19v/8h8bU4fTLuY0VAAAAAXRSTlMAQObYZgAAAOVJREFUeF7tzsWOwzAUhtH7G8JMZeZhZnj/t5qbRM0ikWbRdY9kW/pkIq+FPNmwLEtK8kavAwB5wAGWFPSVyegaaymECGEJQdMbIaI3/z1k4EHTFz66QiJQI3vLeYYkZeBByDis8jueOYQpfftZNLoIUqageEfk7gZ+oEpaa6Uo1T1+QzdIxZur5zyIj+h+57qfsIdNWD868Wb2YG/jkhOTckq3T4lTI10tvcPwGP5zdoaW00JhmgXYwjAWZdiP2R5Y9tkSVIwrv5f9yoTMOnz81MHohM6R7qXA3DTnYBPDmJz49ZY/DOsbGjG5/X4AAAAASUVORK5CYII='); background-repeat: no-repeat; }
 #footer .flickr	{ background-position: 0 -48px; }
 #footer .gplus	{ background-position: 0 0; }
-#year	{ color: #888; font-size: 12px; }
+#year	{ color: #888; font-size: 12px; margin-top: 30px; }
+#year a	{ color: #888; text-decoration: none; }
+#year a:hover	{ color: #444; }
 
 /* CONTACTS */
 #page-contacts .map	{ position: relative; }
@@ -271,8 +273,8 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #addr	{ line-height: 1.4em; }
 
 /* ARTICLES */
-#page-articles .table	{ margin-top: 80px; }
-#page-articles .td { padding: 0 40px; }
+#page-articles .table	{ margin-top: 80px; width: 100% }
+#page-articles .td { padding: 0 40px; width: 25% }
 #page-articles hr	{  border: dotted #000; border-width: 1px 0 0 0; margin: 20px 0; }
 #page-articles ul	{ list-style: none; }
 #page-articles li	{ margin: 14px -5px; font-size: 14px; line-height: 1.7em; }
@@ -286,7 +288,7 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 
 caption:before { content: "Таблица " counter(tn) ": "; counter-increment: tn; }
 article	{ width: 980px; margin: 0 auto; }
-article p, article li	{ margin: 20px 0; line-height: 1.4em; font-size: 14px; }
+article p, article li	{ margin: 20px 0; line-height: 1.5em; font-size: 14px; }
 article ul.dash, article ol	{ margin: 40px 60px; }
 article ul.dash li:before	{ content: '\2014\a0'; margin-left: -1.25em; }
 article li ul, article li ol	{ margin: 10px 40px!important; }

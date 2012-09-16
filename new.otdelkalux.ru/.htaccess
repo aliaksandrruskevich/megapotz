@@ -2,9 +2,9 @@ AddDefaultCharset utf-8
 DefaultLanguage ru
 FileETag None
 
-#RewriteEngine on
-#RewriteCond %{HTTP_HOST} ^otdelkalux\.ru
-#RewriteRule ^(.*)$ http://www.otdelkalux.ru/$1 [R=301,L]
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^otdelkalux\.ru
+RewriteRule ^(.*)$ http://www.otdelkalux.ru/$1 [R=301,L]
 
 <ifModule mod_headers.c>
 	Header unset ETag

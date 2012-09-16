@@ -22,7 +22,7 @@
 var places=<?=$map?>;
 function init_maps() {
 var mapOptions = {
-center: new google.maps.LatLng(55.8, 37.6),
+center: new google.maps.LatLng(56, 37.6),
 zoom: 9,
 mapTypeId: google.maps.MapTypeId.ROADMAP
 };

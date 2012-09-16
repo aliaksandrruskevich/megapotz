@@ -12,11 +12,11 @@
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
-<link rel="stylesheet" type="text/css" href="/gplus/gplus.css"/>
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/gplus/gplus.ie8.css"/><![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.css"/>
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.ie8.css"/><![endif]-->
 <link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.js"></script>
-<script type="text/javascript" src="/gplus/jquery.gplus.js"></script>
+<script type="text/javascript" src="http://static.otdelkalux.ru/gplus/jquery.gplus.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?49"></script>

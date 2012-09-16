@@ -15,6 +15,3 @@ AddType application/javascript jsz
 AddType image/svg+xml svg svgz
 
 AddEncoding gzip svgz cssz jsz
-<files *.js>
-SetOutputFilter DEFLATE
-</files>

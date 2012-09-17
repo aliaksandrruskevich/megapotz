@@ -155,8 +155,9 @@ AlbumView.prototype = {
 
 	show: function() {
 		var picSide = Math.round( $(this.element).width() / 4 - 30 );
+		$(this.element).hide();
 
-		$(this.element).find('.image_stack').css( { 'height' : picSide + 60 + 'px', 'width' : picSide + 25 + 'px'} )
+		$(this.element).find('.album').css( { 'height' : picSide + 60 + 'px', 'width' : picSide + 25 + 'px'} )
 		$(this.element).find('img')
 			.css({ 'height': picSide + 'px', 'width': picSide + 'px'})
 			.each(function() {
@@ -167,6 +168,7 @@ AlbumView.prototype = {
 		$(this.element).find('p').width( picSide - 10 );
 		$(this.element).find('.link').css( { 'top': ( picSide + 20 ) + 'px' } );
 		$(this.element).find('.count').css( { 'top': ( picSide + 40 ) + 'px' } );
+		$(this.element).show();
 	}
 };
 

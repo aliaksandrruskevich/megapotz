@@ -85,6 +85,17 @@ VK.Widgets.Like("vk_like", {type: "button"});
 </script>
 </div>
 </div>
+<?if($object->type==3) {?>
+<dl>
+<?if(!empty($object->area)) { ?>
+<dt>Общая площадь</dt>
+<dd><?=$object->area?></dd>
+<?} if(!empty($object->cost)) {  ?>
+<dt>Стоимость работ</dt>
+<dd><?=$object->cost?></dd>
+<?}?>
+</dl>
+<?} else { ?>
 <dl>
 <?if(!empty($object->area)) { ?>
 <dt>Общая площадь</dt>
@@ -106,6 +117,7 @@ echo "Люкс";
 }
 ?>»</dd>
 </dl>
+<?}?>
 <div class="text">
 <?=$object->description?>
 </div>

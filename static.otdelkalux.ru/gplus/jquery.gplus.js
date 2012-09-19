@@ -365,6 +365,17 @@
 
 		var photoholder = $('#gplus-picture')[0];
 		
+		// !!! Костыль для главной страницы !!!
+		if ( $('body').attr('id')==='page-index' )	{
+			if ( this.current === (this.photos.length - 1) && $(photoholder).parent().prop('tagName')!=='A'){
+			console.log('wrap!');
+				$(photoholder).wrap('<a href="/portfolio/process/"/>');
+			}
+			else if( this.current !== (this.photos.length - 1) && $(photoholder).parent().prop('tagName')==='A')	{
+				$(photoholder).unwrap();
+			}
+		}
+		
 		// Making URL to photo of appropriate size
 		var src = this.photos[this.current].url;
 		

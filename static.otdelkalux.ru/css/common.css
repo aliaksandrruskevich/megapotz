@@ -1,3 +1,8 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (-moz-min-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2) {
+*	{  -webkit-text-size-adjust: none; }
+#footer .social	{ background-image: url('/i/social-2x.png')!important; background-size: 16px 64px; }
+}
+
 /* GENERAL STYLING */
 body::-webkit-scrollbar {width: 8px; height: 8px; }
 body::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background: #fff; }
@@ -5,7 +10,6 @@ body::-webkit-scrollbar-thumb {background: #ee1c24; box-shadow: inset 0 0 6px rg
 
 *	{ padding: 0; margin: 0; line-height: 1em; font-family: Helvetica, Arial, Sans-Serif; -webkit-appearance: none; }
 html, body	{ height: 100%; counter-reset: tn; }
-body	{ overflow: scroll; overflow-y: scroll; overflow-x: hidden; }
 table	{ border-collapse: collapse; }
 img	{ border: 0; }
 .column	{ margin: 0 auto; max-width: 1500px; min-width: 980px; position: relative; }

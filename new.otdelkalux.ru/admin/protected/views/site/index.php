@@ -214,7 +214,7 @@ var photos = [
 <span class="r">»</span>
 </blockquote>
 <div class="author" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
-<p><a rel="author" href="https://plus.google.com/104094916837036848285/?rel=author"><span itemprop="name">Сергей Петунин</span></a>, <span itemprop="contactType">руководитель работ</span></p>
+<p><a target="_blank" rel="author" href="https://plus.google.com/104094916837036848285/?rel=author"><span itemprop="name">Сергей Петунин</span></a>, <span itemprop="contactType">руководитель работ</span></p>
 </div>
 </div>
 </div>
@@ -224,15 +224,15 @@ var photos = [
 <p class="h1 center">Работаю официально</p>
 <div class="docs">
 <div>
-<a href="https://plus.google.com/photos/104094916837036848285/albums/5764239495290938993/5764239503098428994"><img src="https://lh5.googleusercontent.com/-9W9unrwpMsM/T_6xSa50vkI/AAAAAAAAAjU/Emi7DteexcI/s256/" alt="Свидетельство о присвоении ИНН"/></a>
+<a target="_blank" href="https://plus.google.com/photos/104094916837036848285/albums/5764239495290938993/5764239503098428994"><img src="https://lh5.googleusercontent.com/-9W9unrwpMsM/T_6xSa50vkI/AAAAAAAAAjU/Emi7DteexcI/s256/" alt="Свидетельство о присвоении ИНН"/></a>
 <p>Свидетельство о присвоении ИНН</p>
 </div>
 <div>
-<a href="https://plus.google.com/photos/104094916837036848285/albums/5764239495290938993/5764239501776809522"><img src="https://lh5.googleusercontent.com/-2RJvpn4FvvY/T_6xSV-ubjI/AAAAAAAAAjQ/WrSqcx0Z1n4/s256/" alt="Свидетельство о регистрации юридического лица"/></a>
+<a target="_blank" href="https://plus.google.com/photos/104094916837036848285/albums/5764239495290938993/5764239501776809522"><img src="https://lh5.googleusercontent.com/-2RJvpn4FvvY/T_6xSV-ubjI/AAAAAAAAAjQ/WrSqcx0Z1n4/s256/" alt="Свидетельство о регистрации юридического лица"/></a>
 <p>Свидетельство о регистрации юридического лица</p>
 </div>
 <div>
-<a href="https://plus.google.com/photos/104094916837036848285/albums/5764239495290938993/5764239495369205058"><img src="https://lh5.googleusercontent.com/-5QaamqERlq0/T_6xR-HCJUI/AAAAAAAAAjM/FuCI5_hhXu0/s256/" alt="Допуск от СРО (лицензия на работу)"/></a>
+<a target="_blank" href="https://plus.google.com/photos/104094916837036848285/albums/5764239495290938993/5764239495369205058"><img src="https://lh5.googleusercontent.com/-5QaamqERlq0/T_6xR-HCJUI/AAAAAAAAAjM/FuCI5_hhXu0/s256/" alt="Допуск от СРО (лицензия на работу)"/></a>
 <p>Свидетельство о допуске к работам, выданное СРО (лицензия на работу)</p>
 </div>
 </div>
@@ -317,11 +317,11 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <div>
 <p><b>Основной офис</b></p>
 <p itemprop="address">Москва, ул. Куусинена 19 А</p>
-<p><a itemprop="map" href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
+<p><a target="_blank" itemprop="map" href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
 <br/>
 <p><b>Мобильный офис</b></p>
 <p itemprop="address">Московская область, Новорижское ш., посёлок Madison Park, вл. 15</p>
-<p><a itemprop="map" href="http://maps.yandex.ru/-/CVEO74NH">На карте</a></p>
+<p><a target="_blank" itemprop="map" href="http://maps.yandex.ru/-/CVEO74NH">На карте</a></p>
 </div>
 <div>
 <p><b>Связаться со мной</b></p>
@@ -329,13 +329,13 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p><a itemprop="email" href="mailto:rso2000@mail.ru">rso2000@mail.ru</a></p>
 <br/>
 <p><b>Online</b></p>
-<p class="social flickr"><a href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
-<p class="social gplus"><a href="https://plus.google.com/104094916837036848285/">Сергей Петунин на Google+</a></p>
+<p class="social flickr"><a target="_blank" href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
+<p class="social gplus"><a target="_blank" href="https://plus.google.com/104094916837036848285/">Сергей Петунин на Google+</a></p>
 <p><a itemprop="url" href="http://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
 </div>
 <div class="qr"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABdElEQVR4Xu3HoYGAIBQA0E+RFT4FVsOiK2BBKLICFFgNiq4ARS5c/Ybr99qDv/qnpvf1cHDMTh5ZBCu1ag7Ji1HaC9qyEj9+yQXM2T5fulzv9evIUnEqtOaQvJrp1+zkARAWy1MFIC/XJ7Su5TEqeZQqeWfX+RryoFpdNt551OTFpdl7Pi2zTl6erer9cdxX8tyBNiCy5p38Iu41RMtToS+luLdNRNRAf32B39sZuibPX2mPdB/x7OSlKj4F32aI5BfJU8lm9y+QZ35G5VPmtyEvtT1nX5A5TZ7N2+5ZpbpX8rgsZ7qEv4UjL1q3+/MEpzV52CxvzUfUQF6e6XESz7p28iwf0ehtvxHJA782ZBE1r+R5PkI1R+SNvniSd9yJkjp5QFHtssc1G/K4z+GLv9So5AGQzzBGRySvZlSpW3OUSh6Zv9lzoVGRvBh+jPTu8zUfT/PJyOumPx5S37QK2ZBHlqUqFUTX5NVMbV5spIv43/z7AZHRqkZ0yRK6AAAAAElFTkSuQmCC" alt="Контактная информация на QR коде"/></div>
 </div>
-<div id="year">© <span>2006</span>. Разработка сайта — <a href="http://hh.ru/resume/15187f9bff013946630039ed1f613543514445?print" rel="nofollow" style="color: #888">Михаил Шестаков</a>.</div>
+<div id="year">© <span>2006</span>. Разработка сайта — <a target="_blank" href="http://hh.ru/resume/15187f9bff013946630039ed1f613543514445?print" rel="nofollow" style="color: #888">Михаил Шестаков</a>.</div>
 </footer>
 </section>
 </body>

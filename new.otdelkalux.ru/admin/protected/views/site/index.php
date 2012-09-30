@@ -5,25 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <meta name="viewport" content="width=1000"/>
 <meta name="keywords" content="ремонт коттеджей, отделка коттеджей, ремонт таунхаусов, отделка, внутренняя отделка загородного дома, отделка коттеджей под ключ, отделка загородных домов, ремонт загородных домов, ремонт коттеджей под ключ, внутренняя отделка коттеджей, ремонт коттеджей цены, отделка таунхаусов, ремонт и отделка коттеджей, отделка под ключ, элитный ремонт коттеджей, элитная отделка коттеджей, стоимость отделки коттеджа, ремонт коттеджей загородных домов, ремонт коттеджей фото, ремонт коттеджа фото, отделка коттеджей цена, отделка домов и коттеджей, комплексный ремонт коттеджей, элитный ремонт загородных домов, элитная отделка загородных домов, цены на отделку коттеджей"/>
-<meta name="description" content="Ремонт и отделка элитных коттеджей и загородных домов под «ключ». Производим полный цикл работ собственными силами, не привлекая субподрядчиков."/>
+<meta name="description" content="Ремонт и отделка элитных коттеджей и загородных домов под ключ. Производим полный цикл работ собственными силами, не привлекая субподрядчиков."/>
 <meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>Элитный ремонт и отделка коттеджей, загородных домов и таунхаусов под «ключ». Внутренняя отделка: цены, фото.</title>
-
+<title>Элитный ремонт и отделка коттеджей, загородных домов и таунхаусов под ключ. Внутренняя отделка: цены, фото.</title>
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.ie8.css"/><![endif]-->
 <link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.js"></script>
+<script type="text/javascript" src="http://yandex.st/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://static.otdelkalux.ru/gplus/jquery.gplus.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?49"></script>
 <script type="text/javascript">VK.init({apiId: 2956871, onlyWidgets: true});</script>
-<!--[if lt IE 9]>
-<script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
-<![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script><![endif]-->
 </head>
 <body id="page-index">
 <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
@@ -49,7 +46,22 @@
 <div class="td" id="bg">
 <div style="position: relative">
 <div id="text_holder">
-<h1><span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке коттеджей</span> <br/>и загородных домов <span class="red">«под ключ»</span></h1>
+<h1><span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке коттеджей,</span> <br/>таунхаусов и загородных домов <span class="red">под ключ</span></h1>
+<script type="text/javascript">
+var html = [
+'<span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке</span> <br/>квартир <span class="red">под ключ</span>',
+'<span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке</span> <br/>таунхаусов <span class="red">под ключ</span>',
+'<span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке</span> <br/>загородных домов <span class="red">под ключ</span>',
+'<span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке</span> <br/>коттеджей <span class="red">под ключ</span>'
+];
+var query = ['квартир', 'таунхаус', 'загородн', 'коттедж'];
+var ref = decodeURIComponent(document.referrer);
+for (var i = 0; i < 3; i++){
+if (ref.match(query[i]))
+break;
+}
+$('#text_holder h1').html(html[i]);
+</script>
 <p class="since">Работаем с <span itemprop="foundingDate">1998</span> года</p>
 </div>
 </div>
@@ -68,7 +80,7 @@
 </ul>
 </div>
 <div class="stage">
-<p>Ремонт под «ключ»</p>
+<p>Ремонт под ключ</p>
 <ul>
 <li id="electric">Электрика</li>
 <li id="santech">Сантехника</li>
@@ -164,10 +176,10 @@ var photos = [
 <tr><td>Общая сумма (работа + материал)</td><td></td><td></td><td></td></tr>
 </tfoot>
 <tbody>
-<tr class="otd-pk"><td>Отделка под «ключ»</td><td></td><td></td><td></td></tr>
-<tr class="ele-pk"><td>Электрика под «ключ»</td><td></td><td></td><td></td></tr>
-<tr class="san-pk"><td>Сантехника под «ключ»</td><td></td><td></td><td></td></tr>
-<tr class="oto-pk"><td>Отопление под «ключ»</td><td></td><td></td><td></td></tr>
+<tr class="otd-pk"><td>Отделка под ключ</td><td></td><td></td><td></td></tr>
+<tr class="ele-pk"><td>Электрика под ключ</td><td></td><td></td><td></td></tr>
+<tr class="san-pk"><td>Сантехника под ключ</td><td></td><td></td><td></td></tr>
+<tr class="oto-pk"><td>Отопление под ключ</td><td></td><td></td><td></td></tr>
 <tr class="otd-m"><td>Черновой материал отделка</td><td></td><td></td><td></td></tr>
 <tr class="ele-m"><td>Черновой материал электрика</td><td></td><td></td><td></td></tr>
 <tr class="san-m"><td>Черновой материал сантехника</td><td></td><td></td><td></td></tr>
@@ -312,7 +324,7 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p itemprop="name" class="title">Артель строительных бригад Сергея Петунина</p>
 <div class="info">
 <div>
-<p itemprop="description">Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов «под ключ»</p>
+<p itemprop="description">Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов под ключ</p>
 </div>
 <div>
 <p><b>Основной офис</b></p>

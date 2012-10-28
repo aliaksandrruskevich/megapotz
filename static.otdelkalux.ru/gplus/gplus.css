@@ -56,3 +56,4 @@ body:full-screen { width: 100%; }
 #gplus-gallery-grid	{ margin: 30px 50px; }
 #gplus-gallery-grid .pic	{ margin: 0 6px 6px 0; display: inline-block; font-size: 0; }
 #gplus-gallery-grid img	{ cursor: pointer; cursor: -moz-zoom-in; cursor: -webkit-zoom-in; cursor: -o-zoom-in; }
+#page-index #gplus-gallery-grid a img	{ cursor: pointer!important; }

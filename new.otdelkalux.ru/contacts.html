@@ -33,8 +33,8 @@ var map;
 var hash;
 var loc;
 function init_maps() {
-// Точки офисов на карте. [0] - Куусинена, [1] - Madison.
-var point = [new google.maps.LatLng(55.787674, 37.511282), new google.maps.LatLng(55.778093, 36.944855)];
+// Точки офисов на карте. [0] - Millennium, [1] - Madison.
+var point = [new google.maps.LatLng(55.789745, 37.039345), new google.maps.LatLng(55.778093, 36.944855)];
 // Объект маркера
 var icon = new google.maps.MarkerImage('http://static.otdelkalux.ru/i/marker.png',
 new google.maps.Size(68, 96),
@@ -49,11 +49,11 @@ new google.maps.Point(34, 0)
 );
 
 loc = {
-'kuusinena':	{
-'zoom': 15,
+'millennium':	{
+'zoom': 10,
 'latlng': point[0],
 'selector': 'left',
-'addr': 'Москва,<br/>Куусинена 19А'
+'addr': 'Новорижское ш.,<br/>посёлок Millennium Park,<br/>владение 3041'
 },
 'madison':	{
 'zoom': 10,
@@ -63,7 +63,7 @@ loc = {
 }};
 hash = window.location.hash.substr(1);
 if(loc[hash]==undefined){
-hash='kuusinena';
+hash='millennium';
 window.location.hash=hash;
 }
 $('#selector')[0].className = loc[hash].selector;
@@ -81,7 +81,7 @@ stylers: [
 ]
 }]});
 
-loc['kuusinena'].marker = new google.maps.Marker({position: point[0], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='kuusinena' });
+loc['millennium'].marker = new google.maps.Marker({position: point[0], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='millennium' });
 loc['madison'].marker = new google.maps.Marker({position: point[1], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='madison' });
 if (window.addEventListener) {
 window.addEventListener('hashchange', pan_map, false); 
@@ -93,7 +93,7 @@ function pan_map(){
 loc[hash].marker.setVisible(false);
 hash = window.location.hash.substr(1);
 if(loc[hash]==undefined){
-hash='kuusinena';
+hash='millennium';
 window.location.hash=hash;
 }
 map.panTo(loc[hash].latlng);
@@ -138,11 +138,12 @@ $('#addr').html(loc[hash].addr);
 </div>
 <div id="selector" class="left">
 <div class="current"></div>
-<span class="left"><a href="#kuusinena">Основной офис</a></span>
+<span class="left"><a href="#millennium">Millennium Park</a></span>
 <span class="right"><a href="#madison">Madison Park</a></span>
 <div id="button"></div>
-<div id="kuusinena_hint">Нужно <b>заранее согласовать</b> встречу, потому что днём я нахожусь на объектах.</div>
+<!--<div id="millennium_hint">Нужно <b>заранее согласовать</b> встречу, потому что днём я нахожусь на объектах.</div>
 <div id="madison_hint">В будние дни я почти всегда на объектах в посёлках, построенных <a href="http://www.villagio.ru/villages/" rel="nofollow" target="_blank">Villagio Estate</a>.</div>
+-->
 </div>
 </section>
 <section id="contact">
@@ -205,12 +206,12 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p itemprop="description">Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов под ключ</p>
 </div>
 <div>
-<p><b>Основной офис</b></p>
-<p itemprop="address">Москва, ул. Куусинена 19 А</p>
-<p><a itemprop="map" href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
+<p><b>Офис в Millennium Park</b></p>
+<p itemprop="address">Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
+<p><a itemprop="map" href="http://maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
 <br/>
-<p><b>Мобильный офис</b></p>
-<p itemprop="address">Московская область, Новорижское ш., посёлок Madison Park, вл. 15</p>
+<p><b>Офис в Madison Park</b></p>
+<p itemprop="address">Московская область, Новорижское ш., посёлок Мэдисон Парк, вл. 15</p>
 <p><a itemprop="map" href="http://maps.yandex.ru/-/CVEO74NH">На карте</a></p>
 </div>
 <div>

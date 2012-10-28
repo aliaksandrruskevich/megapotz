@@ -284,7 +284,9 @@ var photos = [
 </section>
 <section id="other">
 <div class="column">
-<div class="blocks">
+<div class="blocks" style="margin: 0 auto; width: 420px">
+<iframe width="420" height="315" src="http://www.youtube.com/embed/7_wzJNQhK00" frameborder="0" allowfullscreen></iframe>
+<!--
 <div class="block pdf">
 <a href="/i/artel-sergey-petunin.pdf"><img src="http://static.otdelkalux.ru/i/pdf.png" alt="Брошюра"/></a>
 <p><a href="/i/artel-sergey-petunin.pdf">Презентация наших работ по ремонту и отделке в формате PDF</a></p>
@@ -294,7 +296,7 @@ var photos = [
 <a href="http://youtu.be/7_wzJNQhK00" target="_blank"><img src="http://static.otdelkalux.ru/i/youtube.png" alt="Выпуск передачи «Проект мечты» на телеканале Усадьба"/></a>
 <p><a href="http://youtu.be/7_wzJNQhK00" target="_blank">Выпуск передачи «Проект мечты» на телеканале «Усадьба» про наш объект</a></p>
 <p class="yellow"><a href="http://youtu.be/7_wzJNQhK00" target="_blank">Смотреть на YouTube</a></p>
-</div>
+</div>-->
 </div>
 </div>
 </section>
@@ -327,13 +329,13 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p itemprop="description">Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов под ключ</p>
 </div>
 <div>
-<p><b>Основной офис</b></p>
-<p itemprop="address">Москва, ул. Куусинена 19 А</p>
-<p><a target="_blank" itemprop="map" href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
+<p><b>Офис в Millennium Park</b></p>
+<p itemprop="address">Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
+<p><a itemprop="map" href="http://maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
 <br/>
-<p><b>Мобильный офис</b></p>
-<p itemprop="address">Московская область, Новорижское ш., посёлок Madison Park, вл. 15</p>
-<p><a target="_blank" itemprop="map" href="http://maps.yandex.ru/-/CVEO74NH">На карте</a></p>
+<p><b>Офис в Madison Park</b></p>
+<p itemprop="address">Московская область, Новорижское ш., посёлок Мэдисон Парк, вл. 15</p>
+<p><a itemprop="map" href="http://maps.yandex.ru/-/CVEO74NH">На карте</a></p>
 </div>
 <div>
 <p><b>Связаться со мной</b></p>

@@ -2,5 +2,15 @@ User-Agent: *
 Disallow: *index.html
 Disallow: *?
 Disallow: /i/artel-sergey-petunin.pdf
+Disallow: *&
+Disallow: /about/
+Disallow: /contacts/
+Disallow: /fullscreen.html
+Disallow: /gallery/
+Disallow: /portfolio/dmitrovskoe_40/
+Disallow: /portfolio/green_hill_104/
+Disallow: /portfolio/green_hill_104/land/
+Disallow: /portfolio/kupavna/
+Disallow: /portfolio/process/vysokiy_bereg/
 Host: www.otdelkalux.ru
 Sitemap: http://www.otdelkalux.ru/sitemap.xml

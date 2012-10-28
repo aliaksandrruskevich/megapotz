@@ -10,7 +10,7 @@ if(!empty($_REQUEST['tel']) && !empty($_REQUEST['name'])) {
   $from='feedback@otdelkalux.ru'; 
 
   // функция которая отправляет смс
-  $ret=send_sms('79859988347', $mess, 'megapotz', 'QqWw123');
+  //$ret=send_sms('79859988347', $mess, 'megapotz', 'QqWw123');
 
   // функция, которая отправляет наше письмо. 
   mail($to, $title, iconv('utf-8', 'windows-1251', $mess), 'From:'.$from); 

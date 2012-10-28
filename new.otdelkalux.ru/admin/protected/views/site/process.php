@@ -96,15 +96,16 @@ icon: new google.maps.MarkerImage('http://static.otdelkalux.ru//i/markers.png', 
 <div class="col470">
 <p class="title">На этих объектах сейчас ведётся чистовая отделка:</p>
 <?foreach($objects as $obj) { 
-  if($obj->type==2) { ?>
+if($obj->type==2) { ?>
 <div class="object">
-  <?if(!empty($obj->image)) { ?>
-<img src="<?=$obj->image?>" alt="<?=$obj->title?>"/>
-  <?}?>
-  <p class="h"><?=$obj->title?></p>
-  <p><?=$obj->description?></p>
+
+<p class="h"><?=$obj->title?></p>
+<?if(!empty($obj->image)) { ?>
+<a href="<?=$obj->link?>" target="_blank"><img src="<?=$obj->image?>" alt="<?=$obj->title?>"/></a>
+<?}?>
+<p><?=$obj->description?></p>
 </div>
-  <?}
+<?}
 }
 ?>
 <div class="gotakealook">
@@ -120,15 +121,15 @@ icon: new google.maps.MarkerImage('http://static.otdelkalux.ru//i/markers.png', 
 <div class="col470">
 <p class="title">На этапе черновой отделки:</p>
 <?foreach($objects as $obj) { 
-  if($obj->type==1) { ?>
+if($obj->type==1) { ?>
 <div class="object">
-  <?if(!empty($obj->image)) { ?>
-  <img src="<?=$obj->image?>" alt="<?=$obj->title?>"/>
-  <?}?>
-  <p class="h"><?=$obj->title?></p>
-  <p><?=$obj->description?></p>
+<?if(!empty($obj->image)) { ?>
+<a href="<?=$obj->link?>" target="_blank"><img src="<?=$obj->image?>" alt="<?=$obj->title?>"/></a>
+<?}?>
+<p class="h"><?=$obj->title?></p>
+<p><?=$obj->description?></p>
 </div>
-  <?}
+<?}
 }
 ?>
 </div>
@@ -162,11 +163,11 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p>Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов под ключ</p>
 </div>
 <div>
-<p><b>Основной офис</b></p>
-<p>Москва, ул. Куусинена 19 А</p>
-<p><a href="http://maps.yandex.ru/-/CFu7NB7J">На карте</a></p>
+<p><b>Офис в Millennium Park</b></p>
+<p>Московская область, Новорижское ш., посёлок Millennium Park, вл. 3041</p>
+<p><a href="http://maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
 <br/>
-<p><b>Мобильный офис</b></p>
+<p><b>Офис в Madison Park</b></p>
 <p>Московская область, Новорижское ш., посёлок Madison Park, вл. 15</p>
 <p><a href="http://maps.yandex.ru/-/CVEO74NH">На карте</a></p>
 </div>

@@ -16,6 +16,20 @@ Calculator.prototype = {
 
 	init: function() {
 		var _this=this;
+		
+		//cookies
+		var cookies = document.cookie.split(';');
+		
+		for(var i = 0, l = cookies.length; i < l; i++){
+			if(cookies[i].indexOf('wc=') !== -1){
+				this.wc = cookies[i].split('=')[1];
+				$('#wc').val(this.wc);
+			}
+			if(cookies[i].indexOf('area=') !== -1){
+				this.area = cookies[i].split('=')[1];
+				$('#area').val(this.area);
+			}
+		}
 
 		$( this.element ).find( '.button' ).on( 'click', function() {
 			_this.updateValues();
@@ -101,6 +115,9 @@ Calculator.prototype = {
 		var _this = this;
 		this.area = parseInt( $('#area').val() );
 		this.wc = parseInt( $('#wc').val() );
+		
+		document.cookie = 'area=' + this.area + ';path=/';
+		document.cookie = 'wc=' + this.wc + ';path=/';
 		
 		var itog=[0,0,0];
 		$(this.element).find('tbody tr').each(function(){

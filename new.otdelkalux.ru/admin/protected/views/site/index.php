@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <meta name="viewport" content="width=1000"/>
 <meta name="keywords" content="ремонт коттеджей, отделка коттеджей, ремонт таунхаусов, отделка, внутренняя отделка загородного дома, отделка коттеджей под ключ, отделка загородных домов, ремонт загородных домов, ремонт коттеджей под ключ, внутренняя отделка коттеджей, ремонт коттеджей цены, отделка таунхаусов, ремонт и отделка коттеджей, отделка под ключ, элитный ремонт коттеджей, элитная отделка коттеджей, стоимость отделки коттеджа, ремонт коттеджей загородных домов, ремонт коттеджей фото, ремонт коттеджа фото, отделка коттеджей цена, отделка домов и коттеджей, комплексный ремонт коттеджей, элитный ремонт загородных домов, элитная отделка загородных домов, цены на отделку коттеджей"/>
-<meta name="description" content="Ремонт и отделка элитных коттеджей и загородных домов под ключ. Производим полный цикл работ собственными силами, не привлекая субподрядчиков."/>
+<meta name="description" content="Комплексный ремонт и отделка элитных коттеджей и загородных домов под ключ. Производим полный цикл работ собственными силами, не привлекая субподрядчиков."/>
 <meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>Элитный ремонт и отделка коттеджей, загородных домов и таунхаусов под ключ. Внутренняя отделка: цены, фото.</title>
@@ -33,7 +33,8 @@
 <a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if !IE]>--><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!--<![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
 <nav>
 <a class="index" href="/">Главная</a>
-<a class="portfolio" href="/portfolio/">Объекты</a>
+<a class="portfolio" href="/portfolio/">Фото</a>
+<a class="portfolio" href="/portfolio/process/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
 <a class="docs" href="/docs.html">Документы</a>
 <a class="warranty" href="/warranty.html">Гарантия</a>
@@ -71,6 +72,9 @@ $('#text_holder h1').html(html[i]);
 </section>
 <section id="whatwedo">
 <div class="wwd">
+<p class="description">Комплексный ремонт и отделка элитных коттеджей и загородных домов под ключ. Производим полный цикл работ собственными силами, не привлекая субподрядчиков.</p>
+<p class="description">Большинство наших объектов находятся на Новой Риге: мы работаем в коттеджных посёлках Monteville (Монтевиль), Millennium Park (Миллениум Парк), Madison Park (Мэдисон Парк), Park Avenue (Парк Авеню), Гринфилд, Лазурный Берег, Риверсайд, Шервуд, Агаларов Эстейт, Высокий берег.</p>
+
 <p class="h2 center">Все перечисленные работы мы выполняем <br/>только своими силами, <span class="red">без субподряда</span>.</p>
 <div class="stage">
 <p>Подготовка проекта</p>
@@ -180,10 +184,10 @@ var photos = [
 <tr class="ele-pk"><td>Электрика под ключ</td><td></td><td></td><td></td></tr>
 <tr class="san-pk"><td>Сантехника под ключ</td><td></td><td></td><td></td></tr>
 <tr class="oto-pk"><td>Отопление под ключ</td><td></td><td></td><td></td></tr>
-<tr class="otd-m"><td>Черновой материал отделка</td><td></td><td></td><td></td></tr>
-<tr class="ele-m"><td>Черновой материал электрика</td><td></td><td></td><td></td></tr>
-<tr class="san-m"><td>Черновой материал сантехника</td><td></td><td></td><td></td></tr>
-<tr class="oto-m"><td>Черновой материал отопление</td><td></td><td></td><td></td></tr>
+<tr class="otd-m"><td>Материал отделка</td><td></td><td></td><td></td></tr>
+<tr class="ele-m"><td>Материал электрика</td><td></td><td></td><td></td></tr>
+<tr class="san-m"><td>Материал сантехника</td><td></td><td></td><td></td></tr>
+<tr class="oto-m"><td>Материал отопление</td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
@@ -253,7 +257,7 @@ var photos = [
 </section>
 <section id="contact">
 <div class="call">
-<p class="w">Есть вопросы? <br/>Или вы хотите согласовать осмотр объекта, <br/>на котором мы <a href="/portfolio/process/">сейчас работаем</a>? <br/>Звоните:</p>
+<p class="w">Есть вопросы? <br/>Или вы хотите согласовать <a href="/portfolio/process/">осмотр объекта</a>, <br/>на котором мы сейчас работаем? <br/>Звоните:</p>
 <p class="y">+7 (495) 99-88-347</p>
 <div class="button red phone" id="show_form_btn"><span>Позвонить вам?</span></div>
 </div>
@@ -276,7 +280,7 @@ var photos = [
 <p class="cb_comment">Оставьте свой телефон, и я обязательно перезвоню вам!</p><hr/>
 <div class="email">
 <p class="w">Если у вас есть проект, и вы хотите <br/>узнать, сколько будет стоить ремонт, пишите:</p>
-<p class="y"><a href="mailto:rso2000@mail.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">rso2000@mail.ru</a></p>
+<p class="y"><a href="mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">hello@otdelkalux.ru</a></p>
 <p>Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
 <hr/>
 </div>
@@ -340,7 +344,7 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <div>
 <p><b>Связаться со мной</b></p>
 <p itemprop="telephone">+7 (495) 99-88-347</p>
-<p><a itemprop="email" href="mailto:rso2000@mail.ru">rso2000@mail.ru</a></p>
+<p><a itemprop="email" href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
 <br/>
 <p><b>Online</b></p>
 <p class="social flickr"><a target="_blank" href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>

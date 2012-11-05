@@ -62,6 +62,7 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #nav nav a	{ padding-top: 20px; display: inline-block; font: bold 11px Helvetica; text-decoration: none; text-transform: uppercase; color: #000; padding: 0 10px; }
 #page-index .index,
 #page-portfolio .portfolio,
+#page-process .process,
 #page-price .price,
 #page-docs nav .docs,
 #page-warranty nav .warranty,
@@ -359,30 +360,32 @@ article table.bg caption	{ margin: 30px 0; }
 #page-portfolio .table a	{ font-size: 13px; color: #000; }
 #page-portfolio .table .small	{ font-size: 10px; color: #383838; margin-top: 6px; }
 
-#page-portfolio .col470	{ width: 470px; margin: 50px auto; }
-#page-portfolio .object	{ border-bottom: dotted 1px #000; clear: right; padding: 20px 0; }
-#page-portfolio .object:before { content: counter(tn) "."; counter-increment: tn; font-size: 36px; color: #d4d4d4; float: left; margin: 20px 0 0 -50px; }
-#page-portfolio .object img	{ float: right; width: 50px; height: 50px; }
-#page-portfolio .object p	{ font-size: 13px; margin: 8px 0; }
-#page-portfolio .object p.h	{ font-size: 16px; font-weight: normal; }
-#page-portfolio .title	{ font-size: 20px; font-weight: bold; margin: 20px 0; }
-#page-portfolio .gotakealook	{ position: relative; margin: 40px 0; }
-#page-portfolio .gotakealook img	{ float: left; margin: 10px 0 0 -150px; border-radius: 50px; }
-#page-portfolio .gotakealook .text	{ font: bold italic 16px Georgia; line-height: 1.6em; width: 400px; }
-#page-portfolio .gotakealook .arrange	{ position: absolute; top: 20px; left: 450px; }
-#page-portfolio .gotakealook .arrange p	{ font-weight: bold; font-size: 18px; padding: 8px 0 8px 40px; }
-#page-portfolio .gotakealook .arrange p.tel	{ background: url('/i/phone-1.svg') 0 6px no-repeat; }
-#page-portfolio .gotakealook .arrange p.email	{ background: url('/i/email.svg') 0 6px no-repeat; }
-#page-portfolio .gotakealook .arrange p a	{ color: #000; }
-#page-portfolio #map #text	{ position: absolute; top: 0; left: 90px; width: 100%; height: 100%; }
-#page-portfolio #map_canvas	{ width: 100%; height: 100%; }
-#page-portfolio #map_canvas div	{ line-height: normal ! important; }
-#page-portfolio #map	{ margin-top: 50px; height:500px; position: relative; overflow: hidden;
+#page-process .col470	{ width: 470px; margin: 50px auto; }
+#page-process .object	{ border-bottom: dotted 1px #000; clear: right; padding: 20px 0; }
+#page-process .object:before { content: counter(tn) "."; counter-increment: tn; font-size: 36px; color: #d4d4d4; float: left; margin: 20px 0 0 -50px; }
+#page-process .object img	{ float: right; width: 50px; height: 50px; }
+#page-process .object p	{ font-size: 13px; margin: 8px 0; }
+#page-process .object p.h	{ font-size: 16px; font-weight: normal; }
+#page-process .title	{ font-size: 20px; font-weight: bold; margin: 20px 0; }
+#page-process .gotakealook	{ position: relative; margin: 40px 0; }
+#page-process .gotakealook img	{ float: left; margin: 10px 0 0 -150px; border-radius: 50px; }
+#page-process .gotakealook .text	{ font: bold italic 16px Georgia; line-height: 1.6em; width: 400px; }
+#page-process .gotakealook .arrange	{ position: absolute; top: 20px; left: 450px; }
+#page-process .gotakealook .arrange p	{ font-weight: bold; font-size: 18px; padding: 8px 0 8px 40px; }
+#page-process .gotakealook .arrange p.tel	{ background: url('/i/phone-1.svg') 0 6px no-repeat; }
+#page-process .gotakealook .arrange p.email	{ background: url('/i/email.svg') 0 6px no-repeat; }
+#page-process .gotakealook .arrange p a	{ color: #000; }
+#page-process #map #text	{ position: absolute; top: 0; left: 90px; width: 100%; height: 100%; }
+#page-process #map_canvas	{ width: 100%; height: 100%; }
+#page-process #map_canvas div	{ line-height: normal ! important; }
+#page-process #map	{ margin-top: 50px; height:500px; position: relative; overflow: hidden;
 transition: height 0.5s linear; 
 -webkit-transition: height 0.5s linear; 
 -moz-transition: height 0.5s linear; 
 -o-transition: height 0.5s linear; 
 -ms-transition: height 0.5s linear; }
 
-#page-portfolio .yline	{ border-top: solid 4px #ffe400; text-align: center; }
-#page-portfolio #showhide	{ cursor: pointer; background-color: #ffe400; font-size: 10px; font-weight: bold; padding: 5px 20px; text-transform: uppercase; }
+#page-process .yline	{ border-top: solid 4px #ffe400; text-align: center; }
+#page-process #showhide	{ cursor: pointer; background-color: #ffe400; font-size: 10px; font-weight: bold; padding: 5px 20px; text-transform: uppercase; }
+
+#page-contacts section.map h1, #page-portfolio .small, #page-price h1, #page-price .small, #page-portfolio>h1, #page-process h1, #page-process p.small, #page-index .description	{ display: none; }

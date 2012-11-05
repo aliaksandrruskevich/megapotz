@@ -2,3 +2,6 @@ User-Agent: *
 Disallow: *index.html
 Disallow: *?
 Host: www.otdelkalux.ru
+
+User-agent: googlebot
+Disallow: /

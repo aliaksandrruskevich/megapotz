@@ -4,11 +4,10 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <meta name="viewport" content="width=1000"/>
-<meta name="keywords" content="объекты, ремонт, работы, отделка"/>
-<meta name="description" content="Объекты, на которых ремонт уже завершен."/>
+<meta name="keywords" content="объекты, ремонт, работы, отделка, фото, интерьер, ландшафтные работы"/>
+<meta name="description" content="Фото объектов, на которых ремонт уже завершен."/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>Завершенные объекты</title>
-
+<title>Фото</title>
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
 <link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
@@ -32,7 +31,8 @@
 <a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="http://static.otdelkalux.ru/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
 <nav>
 <a class="index" href="/">Главная</a>
-<a class="portfolio" href="/portfolio/">Объекты</a>
+<a class="portfolio" href="/portfolio/">Фото</a>
+<a class="process" href="/portfolio/process/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
 <a class="docs" href="/docs.html">Документы</a>
 <a class="warranty" href="/warranty.html">Гарантия</a>
@@ -42,6 +42,7 @@
 </div>
 </div>
 </section>
+<h1>Фото</h1>
 <section id="objects">
 <div class="column">
 <div id="selector" class="left">
@@ -142,7 +143,7 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <div>
 <p><b>Связаться со мной</b></p>
 <p>+7 (495) 998-83-47</p>
-<p><a href="mailto:rso2000@mail.ru">rso2000@mail.ru</a></p>
+<p><a href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
 <br/>
 <p><b>Online</b></p>
 <p class="social flickr"><a href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>

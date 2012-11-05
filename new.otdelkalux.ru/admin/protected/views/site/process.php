@@ -4,11 +4,10 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <meta name="viewport" content="width=1000"/>
-<meta name="keywords" content="просмотр объектов"/>
-<meta name="description" content="Любой из этих объектов вы можете посмотреть лично. Позвоните по телефону +7 495 99-88-347, чтобы согласовать время осмотра."/>
+<meta name="keywords" content="осмотр объектов"/>
+<meta name="description" content="Вы можете лично приехать и осмотреть любой из объектов, на котором мы ведем работы. Все текущие проекты отмечены на карте с указанием текущего состояния ремонта."/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>Объекты, на которых мы сейчас работаем</title>
-
+<title>Осмотр объектов</title>
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
 <link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
@@ -53,7 +52,7 @@ icon: new google.maps.MarkerImage('http://static.otdelkalux.ru//i/markers.png', 
 <script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
 <![endif]-->
 </head>
-<body id="page-portfolio">
+<body id="page-process">
 <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 <!--[if lt IE 8]>
 <p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
@@ -64,7 +63,8 @@ icon: new google.maps.MarkerImage('http://static.otdelkalux.ru//i/markers.png', 
 <a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="http://static.otdelkalux.ru/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
 <nav>
 <a class="index" href="/">Главная</a>
-<a class="portfolio" href="/portfolio/">Объекты</a>
+<a class="portfolio" href="/portfolio/">Фото</a>
+<a class="process" href="/portfolio/process/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
 <a class="docs" href="/docs.html">Документы</a>
 <a class="warranty" href="/warranty.html">Гарантия</a>
@@ -74,6 +74,8 @@ icon: new google.maps.MarkerImage('http://static.otdelkalux.ru//i/markers.png', 
 </div>
 </div>
 </section>
+<h1>Осмотр объектов</h1>
+<p class="small">Вы можете лично приехать и осмотреть любой из объектов, на котором мы ведем работы. Все текущие проекты отмечены на карте с указанием текущего состояния ремонта.</p>
 <div id="selector" class="right">
 <div class="current"></div>
 <span class="left"><a href="/portfolio/">Завершенные <sup><?=$count['finished']?></sup></a></span>
@@ -113,7 +115,7 @@ if($obj->type==2) { ?>
 <p class="text">Вы можете приехать на ЛЮБОЙ из этих объектов и лично посмотреть, какие у меня рабочие, как работают, каким инструментом, а также поговорить с заказчиками!</p>
 <div class="arrange">
 <p class="tel">+7 495 99-88-347</p>
-<p class="email"><a href="mailto:rso2000@mail.ru?subject=Осмотр%20объекта&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон.">rso2000@mail.ru</a></p>
+<p class="email"><a href="mailto:hello@otdelkalux.ru?subject=Осмотр%20объекта&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон.">hello@otdelkalux.ru</a></p>
 </div>
 </div>
 </div>
@@ -174,7 +176,7 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <div>
 <p><b>Связаться со мной</b></p>
 <p>+7 (495) 998-83-47</p>
-<p><a href="mailto:rso2000@mail.ru">rso2000@mail.ru</a></p>
+<p><a href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
 <br/>
 <p><b>Online</b></p>
 <p class="social flickr"><a target="_blank" href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>

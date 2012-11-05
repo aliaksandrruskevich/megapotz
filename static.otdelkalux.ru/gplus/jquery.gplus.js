@@ -189,7 +189,6 @@
 	init: function() {
 		var _this = this;
 
-		$('body').css( 'overflow', 'hidden' );
 		$('body').append( this.HTMLTemplate.layout );
 		this.rootNode = $( '#gplus-fullscreen-layout' );
 
@@ -338,7 +337,6 @@
 	
 	deinit:	function(){
 		// General CSS fix
-		$('body').css('overflow','auto');
 		
 		// Clearing timers
 		window.clearInterval(this.ticker);

@@ -284,20 +284,20 @@ $(document).ready(function() {
 					this.src=d[i];
 				});
 			}
-			if($("#map_canvas").length > 0){
-				init_maps();
-				$('#showhide').toggle(function(){
-						$('#map').css({'height':0});
-						$(this).text('Показать карту');
-					},
-					function(){
-						$('#map').css({'height':'500px'});
-						$(this).text('Скрыть карту');
-					});
-			}
-
 			break;
-			
+		case 'page-process':
+			init_selector();
+			init_maps();
+			$('#showhide').toggle(function(){
+					$('#map').css({'height':0});
+					$(this).text('Показать карту');
+				},
+				function(){
+					$('#map').css({'height':'500px'});
+					$(this).text('Скрыть карту');
+				}
+			);
+			break;
 	}
 
 	// Years in footer

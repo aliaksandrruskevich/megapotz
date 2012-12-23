@@ -48,7 +48,7 @@ function content_loaded(){
 	var body=document.getElementsByTagName('body')[0];
 	//var cim=document.createElement('script');cim.type='text/javascript';cim.src='http://static.cloudim.ru/js/chat.js';
 	//body.appendChild(cim);
-	Cloudim.Chat.init({uid:839});
+	//Cloudim.Chat.init({uid:839});
 
 /*
 Cloudim.Api.bind('onReady', function(){
@@ -74,7 +74,7 @@ return;}}});});*/
 	var globjs=document.createElement('script');globjs.type='text/javascript';globjs.async=true;globjs.src='/js/global.js';
 	var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(globjs,s);
 	// Liveinternet
-	new Image().src="http://counter.yadro.ru/hit?r"+escape(document.referrer)+((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+ ";" +Math.random();
+	//new Image().src="http://counter.yadro.ru/hit?r"+escape(document.referrer)+((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+ ";" +Math.random();
 
 	
 }

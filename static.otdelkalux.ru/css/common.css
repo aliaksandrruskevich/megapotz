@@ -262,7 +262,7 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #footer .info div	{ display: table-cell; width: 29%; vertical-align: top; }
 #footer .info div:last-child	{ width: auto; }
 #footer .qr	{ text-align: right; }
-#footer .qr img	{ width: 120px; height: 120px; }
+#footer .qr img	{ width: 150px; height: 150px; }
 #footer .social	{ line-height: 16px; margin-left: -24px; padding-left: 24px; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABACAMAAAAkowekAAAAwFBMVEUpguf////SRjTYSDa+Nia5NCX/ardrpd/NQjD//+urKx3gqaXdSzn///PmekLIPi3OUFSyLyHzn1bDOirzrHD/9tbG3POyMFb/AIT17v7rikvVfJEAY8j/sdn//8jIiLiy0O7/x+T/fMDVn9j4wIiyLyzgYi3lvb99sOPh9f/y7N7+0enNsejlvOLhTjKzca3dUyzPhpX3+v/CRif4////+f/bRTDxx8np6//ncjeRsuLjyeDq0uz19v/8h8bU4fTLuY0VAAAAAXRSTlMAQObYZgAAAOVJREFUeF7tzsWOwzAUhtH7G8JMZeZhZnj/t5qbRM0ikWbRdY9kW/pkIq+FPNmwLEtK8kavAwB5wAGWFPSVyegaaymECGEJQdMbIaI3/z1k4EHTFz66QiJQI3vLeYYkZeBByDis8jueOYQpfftZNLoIUqageEfk7gZ+oEpaa6Uo1T1+QzdIxZur5zyIj+h+57qfsIdNWD868Wb2YG/jkhOTckq3T4lTI10tvcPwGP5zdoaW00JhmgXYwjAWZdiP2R5Y9tkSVIwrv5f9yoTMOnz81MHohM6R7qXA3DTnYBPDmJz49ZY/DOsbGjG5/X4AAAAASUVORK5CYII='); background-repeat: no-repeat; }
 #footer .flickr	{ background-position: 0 -48px; }
 #footer .gplus	{ background-position: 0 0; }

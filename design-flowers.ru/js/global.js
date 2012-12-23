@@ -317,14 +317,12 @@ $(document).ready(function() {
 	var divs=$('#body .banner');
 	divs.hide();
 	var cur=0;
-	window.setInterval(change_banner,6000);
+	window.setInterval(change_banner,3000);
 	
 	function change_banner(){
-		$(divs[cur-1==-1?5:cur-1]).fadeOut('fast',function(){
-			$(divs[cur]).fadeIn('slow');
+		$(divs[cur]).fadeOut('fast',function(){
 			cur=cur+1==6?0:cur+1;
+			$(divs[cur]).fadeIn('slow');
 		});
-		
 	}
 });
-

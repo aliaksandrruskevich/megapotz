@@ -8,7 +8,8 @@
 <meta name="description" content="Комплексный ремонт и отделка элитных коттеджей и загородных домов под ключ. Производим полный цикл работ собственными силами, не привлекая субподрядчиков."/>
 <meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>Элитный ремонт и отделка коттеджей, загородных домов и таунхаусов под ключ. Внутренняя отделка: цены, фото.</title>
+<meta name="robots" content="noyaca"/>
+<title>Элитный ремонт и отделка коттеджей, загородных домов и таунхаусов под ключ. Внутренняя отделка загородного дома: цены, фото.</title>
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.css"/>
@@ -47,7 +48,8 @@
 <div class="td" id="bg">
 <div style="position: relative">
 <div id="text_holder">
-<h1><span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке коттеджей,</span> <br/>таунхаусов и загородных домов <span class="red">под ключ</span></h1>
+<h1><span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и внутренней отделке коттеджей,</span> <br/>загородных домов и таунхаусов <span class="red">под ключ</span></h1>
+<!--noindex-->
 <script type="text/javascript">
 var html = [
 '<span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке</span> <br/>квартир <span class="red">под ключ</span>',
@@ -63,6 +65,7 @@ break;
 }
 $('#text_holder h1').html(html[i]);
 </script>
+<!--/noindex-->
 <p class="since">Работаем с <span itemprop="foundingDate">1998</span> года</p>
 </div>
 </div>
@@ -72,9 +75,8 @@ $('#text_holder h1').html(html[i]);
 </section>
 <section id="whatwedo">
 <div class="wwd">
-<p class="description">Комплексный ремонт и отделка элитных коттеджей и загородных домов под ключ. Производим полный цикл работ собственными силами, не привлекая субподрядчиков.</p>
+<p class="description"><b>Комплексный ремонт и отделка элитных коттеджей и загородных домов под ключ. Производим полный цикл работ собственными силами, не привлекая субподрядчиков.</b></p>
 <p class="description">Большинство наших объектов находятся на Новой Риге: мы работаем в коттеджных посёлках Monteville (Монтевиль), Millennium Park (Миллениум Парк), Madison Park (Мэдисон Парк), Park Avenue (Парк Авеню), Гринфилд, Лазурный Берег, Риверсайд, Шервуд, Агаларов Эстейт, Высокий берег.</p>
-
 <p class="h2 center">Все перечисленные работы мы выполняем <br/>только своими силами, <span class="red">без субподряда</span>.</p>
 <div class="stage">
 <p>Подготовка проекта</p>
@@ -180,7 +182,7 @@ var photos = [
 <tr><td>Общая сумма (работа + материал)</td><td></td><td></td><td></td></tr>
 </tfoot>
 <tbody>
-<tr class="otd-pk"><td>Отделка под ключ</td><td></td><td></td><td></td></tr>
+<tr class="otd-pk"><td>Внутренняя отделка под ключ</td><td></td><td></td><td></td></tr>
 <tr class="ele-pk"><td>Электрика под ключ</td><td></td><td></td><td></td></tr>
 <tr class="san-pk"><td>Сантехника под ключ</td><td></td><td></td><td></td></tr>
 <tr class="oto-pk"><td>Отопление под ключ</td><td></td><td></td><td></td></tr>
@@ -259,25 +261,8 @@ var photos = [
 <div class="call">
 <p class="w">Есть вопросы? <br/>Или вы хотите согласовать <a href="/portfolio/process/">осмотр объекта</a>, <br/>на котором мы сейчас работаем? <br/>Звоните:</p>
 <p class="y">+7 (495) 99-88-347</p>
-<div class="button red phone" id="show_form_btn"><span>Позвонить вам?</span></div>
 </div>
-<div id="callback_form" class="not_sent">
-<form method="post" action="/feedback.php" target="target">
-<div class="field"><label for="name">Имя</label><input type="text" name="name" id="name" required placeholder="Иван"/></div>
-<div class="field"><label for="tel">Номер телефона</label><input type="text" name="tel" id="tel" required placeholder="+79051234567"/></div>
-<div class="field"><label for="check">Сколько будет 2+3</label><input type="text" name="check" id="check" value=""/></div>
-<div class="buttons">
-<input type="reset" value="Отменить" class="black button"/>
-<input type="submit" value="Отправить" class="red button"/>
-</div>
-</form>
-<div id="thanks">
-<p class="w">Спасибо!<br/>Я перезвоню Вам в самое ближайшее время.</p>
-<div class="button black" id="close"><span>закрыть</span></div>
-</div>
-<iframe id="target" name="target"></iframe>
-</div>
-<p class="cb_comment">Оставьте свой телефон, и я обязательно перезвоню вам!</p><hr/>
+<hr/>
 <div class="email">
 <p class="w">Если у вас есть проект, и вы хотите <br/>узнать, сколько будет стоить ремонт, пишите:</p>
 <p class="y"><a href="mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">hello@otdelkalux.ru</a></p>
@@ -290,17 +275,6 @@ var photos = [
 <div class="column">
 <div class="blocks" style="margin: 0 auto; width: 420px">
 <iframe width="420" height="315" src="http://www.youtube.com/embed/7_wzJNQhK00" frameborder="0" allowfullscreen></iframe>
-<!--
-<div class="block pdf">
-<a href="/i/artel-sergey-petunin.pdf"><img src="http://static.otdelkalux.ru/i/pdf.png" alt="Брошюра"/></a>
-<p><a href="/i/artel-sergey-petunin.pdf">Презентация наших работ по ремонту и отделке в формате PDF</a></p>
-<p class="yellow"><a href="/i/artel-sergey-petunin.pdf">Скачать презентацию</a></p>
-</div>
-<div class="block youtube">
-<a href="http://youtu.be/7_wzJNQhK00" target="_blank"><img src="http://static.otdelkalux.ru/i/youtube.png" alt="Выпуск передачи «Проект мечты» на телеканале Усадьба"/></a>
-<p><a href="http://youtu.be/7_wzJNQhK00" target="_blank">Выпуск передачи «Проект мечты» на телеканале «Усадьба» про наш объект</a></p>
-<p class="yellow"><a href="http://youtu.be/7_wzJNQhK00" target="_blank">Смотреть на YouTube</a></p>
-</div>-->
 </div>
 </div>
 </section>
@@ -330,7 +304,7 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p itemprop="name" class="title">Артель строительных бригад Сергея Петунина</p>
 <div class="info">
 <div>
-<p itemprop="description">Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов под ключ</p>
+<p itemprop="description">Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей и загородных домов под ключ</p>
 </div>
 <div>
 <p><b>Офис в Millennium Park</b></p>
@@ -351,7 +325,7 @@ VK.Widgets.Like("vk_like", {type: "button"});
 <p class="social gplus"><a target="_blank" href="https://plus.google.com/104094916837036848285/">Сергей Петунин на Google+</a></p>
 <p><a itemprop="url" href="http://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
 </div>
-<div class="qr"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABdElEQVR4Xu3HoYGAIBQA0E+RFT4FVsOiK2BBKLICFFgNiq4ARS5c/Ybr99qDv/qnpvf1cHDMTh5ZBCu1ag7Ji1HaC9qyEj9+yQXM2T5fulzv9evIUnEqtOaQvJrp1+zkARAWy1MFIC/XJ7Su5TEqeZQqeWfX+RryoFpdNt551OTFpdl7Pi2zTl6erer9cdxX8tyBNiCy5p38Iu41RMtToS+luLdNRNRAf32B39sZuibPX2mPdB/x7OSlKj4F32aI5BfJU8lm9y+QZ35G5VPmtyEvtT1nX5A5TZ7N2+5ZpbpX8rgsZ7qEv4UjL1q3+/MEpzV52CxvzUfUQF6e6XESz7p28iwf0ehtvxHJA782ZBE1r+R5PkI1R+SNvniSd9yJkjp5QFHtssc1G/K4z+GLv9So5AGQzzBGRySvZlSpW3OUSh6Zv9lzoVGRvBh+jPTu8zUfT/PJyOumPx5S37QK2ZBHlqUqFUTX5NVMbV5spIv43/z7AZHRqkZ0yRK6AAAAAElFTkSuQmCC" alt="Контактная информация на QR коде"/></div>
+<div class="qr"><img src="http://static.otdelkalux.ru/i/qr.png" alt="Контактная информация на QR коде"/></div>
 </div>
 <div id="year">© <span>2006</span>. Разработка сайта — <a target="_blank" href="http://hh.ru/resume/15187f9bff013946630039ed1f613543514445?print" rel="nofollow" style="color: #888">Михаил Шестаков</a>.</div>
 </footer>

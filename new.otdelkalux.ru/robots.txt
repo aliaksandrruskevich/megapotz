@@ -2,8 +2,6 @@ User-Agent: *
 Disallow: *index.html
 Disallow: *?
 Disallow: *&
-Host: www.otdelkalux.ru
-Sitemap: http://www.otdelkalux.ru/sitemap.xml
 
-User-agent: googlebot
+User-agent: Googlebot
 Disallow: /

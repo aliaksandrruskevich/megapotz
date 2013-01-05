@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
+<html lang="ru" itemscope itemtype="http://schema.org/GeneralContractor">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
+<meta name="viewport" content="width=1000"/>
+<meta name="keywords" content="контактная информация, контакты, адрес, телефон, email, артель строительных бригад Сергея Петунина"/>
+<meta name="description" content="Контактная информация. Тел.: +7 (495) 99-88-347, email: hello@otdelkalux.ru. Сергей Петунин."/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Контакты</title>
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
+<link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+<script type="text/javascript">
+var map;
+var hash;
+var loc;
+function init_maps() {
+// Точки офисов на карте. [0] - Millennium, [1] - Madison.
+var point = [new google.maps.LatLng(55.789745, 37.039345), new google.maps.LatLng(55.778093, 36.944855)];
+// Объект маркера
+var icon = new google.maps.MarkerImage('http://static.otdelkalux.ru/i/marker.png',
+new google.maps.Size(68, 96),
+new google.maps.Point(0,0),
+new google.maps.Point(34, 0)
+);
+//Тень маркера
+var shadow = new google.maps.MarkerImage('http://static.otdelkalux.ru/i/marker-shadow.png',
+new google.maps.Size(146, 96),
+new google.maps.Point(0,0),
+new google.maps.Point(34, 0)
+);
+
+loc = {
+'millennium':	{
+'zoom': 10,
+'latlng': point[0],
+'selector': 'left',
+'addr': 'Новорижское ш.,<br/>посёлок Millennium Park,<br/>владение 3041'
+},
+'madison':	{
+'zoom': 10,
+'latlng': point[1],
+'selector': 'right',
+'addr': 'Новорижское ш.,<br/>посёлок Madison Park,<br/>владение 15'
+}};
+hash = window.location.hash.substr(1);
+if(loc[hash]==undefined){
+hash='millennium';
+window.location.hash=hash;
+}
+$('#selector')[0].className = loc[hash].selector;
+$('#addr').html(loc[hash].addr);
+
+map = new google.maps.Map(document.getElementById("map_canvas"),{
+center: loc[hash].latlng,
+zoom: loc[hash].zoom,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+map.setOptions({styles: [{
+stylers: [
+{ saturation: -100 },
+{ lightness: 50 }
+]
+}]});
+
+loc['millennium'].marker = new google.maps.Marker({position: point[0], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='millennium' });
+loc['madison'].marker = new google.maps.Marker({position: point[1], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='madison' });
+if (window.addEventListener) {
+window.addEventListener('hashchange', pan_map, false); 
+} else if (window.attachEvent)  {
+window.attachEvent('onhashchange', pan_map);
+}
+}
+function pan_map(){
+loc[hash].marker.setVisible(false);
+hash = window.location.hash.substr(1);
+if(loc[hash]==undefined){
+hash='millennium';
+window.location.hash=hash;
+}
+map.panTo(loc[hash].latlng);
+map.setZoom(loc[hash].zoom);
+loc[hash].marker.setVisible(true);
+loc[hash].marker.setAnimation(google.maps.Animation.DROP);
+$('#addr').html(loc[hash].addr);
+}
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body id="page-contacts">
+<!--[if lt IE 8]>
+<p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
+<![endif]-->
+<section>
+<div class="column">
+<div class="td" id="nav">
+<a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="http://static.otdelkalux.ru/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
+<nav>
+<a class="index" href="/">Главная</a>
+<a class="portfolio" href="/portfolio/">Фото</a>
+<a class="portfolio" href="/portfolio/process/">Осмотр объектов</a>
+<a class="price" href="/price/calculator.html">Цены</a>
+<a class="docs" href="/docs.html">Документы</a>
+<a class="warranty" href="/warranty.html">Гарантия</a>
+<a class="articles" href="/articles/">Статьи</a>
+<a class="contacts" href="/contacts.html">Контакты</a>
+</nav>
+</div>
+</div>
+</section>
+<section class="map">
+<h1>Контакты</h1>
+<div id="map_canvas" style="width:100%; height:400px"></div>
+<div id="text">
+<p class="h1" id="addr"></p>
+<p class="redline"><span>Работаем: пн—сб с 9:00 до 20:00</span></p>
+<p class="redline"><span>Телефон: +7 495 99-88-347</span></p>
+<p class="redline"><a href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
+</div>
+<div id="selector" class="left">
+<div class="current"></div>
+<span class="left"><a href="#millennium">Millennium Park</a></span>
+<span class="right"><a href="#madison">Madison Park</a></span>
+<div id="button"></div>
+<!--<div id="millennium_hint">Нужно <b>заранее согласовать</b> встречу, потому что днём я нахожусь на объектах.</div>
+<div id="madison_hint">В будние дни я почти всегда на объектах в посёлках, построенных <a href="http://www.villagio.ru/villages/" rel="nofollow" target="_blank">Villagio Estate</a>.</div>
+-->
+</div>
+</section>
+<section id="contact">
+<div class="call">
+<p class="w">Есть вопросы? <br/>Или вы хотите согласовать осмотр объекта, <br/>на котором мы сейчас работаем? <br/>Звоните:</p>
+<p class="y">+7 (495) 99-88-347</p>
+<div class="button red phone" id="show_form_btn"><span>Позвонить вам?</span></div>
+</div>
+<div id="callback_form" class="not_sent">
+<form method="post" action="/feedback.php" target="target">
+<div class="field"><label for="name">Имя</label><input type="text" name="name" id="name" required placeholder="Иван"/></div>
+<div class="field"><label for="tel">Номер телефона</label><input type="text" name="tel" id="tel" required placeholder="+79051234567"/></div>
+<div class="field"><label for="check">Сколько будет 2+3</label><input type="text" name="check" id="check"/></div>
+<div class="buttons">
+<input type="reset" value="Отменить" class="black button"/>
+<input type="submit" value="Отправить" class="red button"/>
+</div>
+</form>
+<div id="thanks">
+<p class="w">Спасибо!<br/>Я перезвоню Вам в самое ближайшее время.</p>
+<div class="button black" id="close"><span>закрыть</span></div>
+</div>
+<iframe id="target" name="target"></iframe>
+</div>
+<p class="cb_comment">Оставьте свой телефон, и я обязательно перезвоню вам!</p><hr/>
+<div class="email">
+<p class="w">Если у вас есть проект, и вы хотите <br/>узнать, сколько будет стоить ремонт, пишите:</p>
+<p class="y"><a href="mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">hello@otdelkalux.ru</a></p>
+<p>Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
+<hr/>
+</div>
+<div class="ready"><img src="https://lh3.googleusercontent.com/-JvCJh1G2RCk/T75YMe9Xg-I/AAAAAAAAAhQ/v0P0lGT7j9A/s56/" alt="Сергей Петунин"/>Готов <b>оперативно</b> приехать к вам на объект для знакомства и обсуждения деталей предстоящего ремонта!</div>
+</section>
+<section id="counters">
+<div class="like_holder">
+<div class="like">
+<div class="g-plusone"></div>
+<script type="text/javascript">
+window.___gcfg = {lang: 'ru'};
+(function() {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+</div>
+
+</div>
+</section>
+<section id="footer">
+<footer>
+<p itemprop="name" class="title">Артель строительных бригад Сергея Петунина</p>
+<div class="info">
+<div>
+<p itemprop="description">Полный комплекс работ по элитному ремонту и отделке коттеджей и загородных домов под ключ</p>
+</div>
+<div>
+<p><b>Офис в Millennium Park</b></p>
+<p itemprop="address">Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
+<p><a itemprop="map" href="http://maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
+<br/>
+<p><b>Офис в Madison Park</b></p>
+<p itemprop="address">Московская область, Новорижское ш., посёлок Мэдисон Парк, вл. 15</p>
+<p><a itemprop="map" href="http://maps.yandex.ru/-/CVEO74NH">На карте</a></p>
+</div>
+<div>
+<p><b>Связаться со мной</b></p>
+<p itemprop="telephone">+7 (495) 998-83-47</p>
+<p><a itemprop="email" href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
+<br/>
+<p><b>Online</b></p>
+<p class="social flickr"><a href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
+<p class="social gplus"><a href="https://plus.google.com/104094916837036848285/">Сергей Петунин на Google+</a></p>
+<p><a itemprop="url" href="http://ремонт-коттеджей.рф/">ремонт-коттеджей.рф</a></p>
+</div>
+<div class="qr"><img src="http://static.otdelkalux.ru/i/qr.png" alt="Контактная информация на QR коде"/></div></div>
+<div id="year">© <span>2006</span> «Отделка Люкс» — <a href="/">комплексный ремонт коттеджей</a>.</div>
+</footer>
+</section>
+</body>
+</html>

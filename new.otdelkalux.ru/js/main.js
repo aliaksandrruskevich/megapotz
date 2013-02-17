@@ -72,21 +72,21 @@ Calculator.prototype = {
 		if( roomType == 'cott' ) {
 			switch( workType ) {
 				case 'otd-pk':
-					return [4500 * this.area, 6000 * this.area, 7500 * this.area];
+					return [/* 4500 * this.area,  */7000 * this.area, 8500 * this.area];
 				case 'ele-pk':
-					return [120000 + 220 * this.area, 140000 + 220 * this.area, 160000 + 220 * this.area];
+					return [/* 120000 + 220 * this.area,  */140000 + 220 * this.area, 160000 + 220 * this.area];
 				case 'san-pk':
-					return [30000 * (this.wc + 0.5), 36000 * (this.wc + 0.5), 42000 * (this.wc + 0.5)];
+					return [/* 30000 * (this.wc + 0.5),  */36000 * (this.wc + 0.5), 42000 * (this.wc + 0.5)];
 				case 'oto-pk':
-					return [90000 + 200 * this.area, 110000 + 200 * this.area, 130000 + 200 * this.area];
+					return [/* 90000 + 200 * this.area,  */110000 + 200 * this.area, 130000 + 200 * this.area];
 				case 'otd-m':
-					return [3000 * this.area, 3500 * this.area, 4000 * this.area];
+					return [/* 3000 * this.area,  */3500 * this.area, 4000 * this.area];
 				case 'ele-m':
-					return [20000 + 200 * this.area, 40000 + 200 * this.area, 60000 + 200 * this.area];
+					return [/* 20000 + 200 * this.area,  */40000 + 200 * this.area, 60000 + 200 * this.area];
 				case 'san-m':
-					return [17500 * (this.wc + 0.5), 22500 * (this.wc + 0.5), 30000 * (this.wc + 0.5)];
+					return [/* 17500 * (this.wc + 0.5),  */22500 * (this.wc + 0.5), 30000 * (this.wc + 0.5)];
 				case 'oto-m':
-					return [60000 + 800 * this.area, 100000 + 800 * this.area, 140000 + 800 * this.area];
+					return [/* 60000 + 800 * this.area,  */100000 + 800 * this.area, 140000 + 800 * this.area];
 				default:
 					return false;
 			}
@@ -94,17 +94,17 @@ Calculator.prototype = {
 		else {
 			switch( workType ) {
 				case 'otd-pk':
-					return [5000 * this.area, 6500 * this.area, 8000 * this.area];
+					return [/* 5000 * this.area,  */7500 * this.area, 9000 * this.area];
 				case 'ele-pk':
-					return [120000 + 200 * this.area, 140000 + 220 * this.area, 160000 + 220 * this.area];
+					return [/* 120000 + 200 * this.area,  */140000 + 220 * this.area, 160000 + 220 * this.area];
 				case 'san-pk':
-					return [30000 * (this.wc + 0.5), 36000 * (this.wc + 0.5), 42000 * (this.wc + 0.5)];
+					return [/* 30000 * (this.wc + 0.5),  */36000 * (this.wc + 0.5), 42000 * (this.wc + 0.5)];
 				case 'otd-m':
-					return [3000 * this.area, 3500 * this.area, 4000 * this.area];
+					return [/* 3000 * this.area,  */3500 * this.area, 4000 * this.area];
 				case 'ele-m':
-					return [20000 + 200 * this.area, 40000 + 200 * this.area, 60000 + 200 * this.area];
+					return [/* 20000 + 200 * this.area,  */40000 + 200 * this.area, 60000 + 200 * this.area];
 				case 'san-m':
-					return [17500 * (this.wc + 0.5), 22500 * (this.wc + 0.5), 30000 * (this.wc + 0.5)];
+					return [/* 17500 * (this.wc + 0.5),  */22500 * (this.wc + 0.5), 30000 * (this.wc + 0.5)];
 				default:
 					return false;
 			}
@@ -307,6 +307,14 @@ $(document).ready(function() {
 	var established=parseInt(el.text());
 	if(this_year>established)
 		el.text(established+'—'+this_year);
+		
+		
+		
+		//////////////
+		/*$("p:contains('47')").each(function(){
+			$(this).text($(this).text().replace("(495) 99-88-347", "(909) 151-31-56").replace("(495) 998-83-47", "(909) 151-31-56"));
+		});*/
+		///////////
 });
 
 function init_callback()	{

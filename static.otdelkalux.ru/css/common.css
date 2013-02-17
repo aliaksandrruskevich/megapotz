@@ -162,7 +162,7 @@ input[type=text]:hover, input[type=number]:hover	{ box-shadow: inset 0 0 4px #cb
 #calculator.cott .oto-pk td, #calculator.cott .oto-m td	{ border-color: #000; }
 #calculator .otd-pk td	{ border-top: 1px solid #000; }
 #calculator td:nth-child(n+1)	{ text-align: center; }
-#calculator td:nth-child(1)	{ text-align: left; width: 320px; }
+#calculator td:nth-child(1)	{ text-align: left; width: 400px; }
 #calculator td:nth-child(even), #price th:nth-child(even)	{ background-color: #f7f7f7; }
 
 /* circles */

@@ -96,6 +96,8 @@ p	{ line-height: 1.5em; font-size: 0.8em; }
 
 #YMapsID td	{ margin: 0; padding: 0; }
 
+#al a	{text-decoration: none; color: #000; }
+
 }
 
 @media print {

@@ -177,19 +177,19 @@ var photos = [
 <div class="calc-hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
 <div class="calc-body">
 <table>
-<thead><tr><th></th><th>Стандарт</th><th>Бизнес</th><th>Люкс</th></tr></thead>
+<thead><tr><th></th><!--<th>Стандарт</th>--><th>Бизнес</th><th>Люкс</th></tr></thead>
 <tfoot>
-<tr><td>Общая сумма (работа + материал)</td><td></td><td></td><td></td></tr>
+<tr><td>Общая сумма (работа + материал)</td><!--<td></td>--><td></td><td></td></tr>
 </tfoot>
 <tbody>
-<tr class="otd-pk"><td>Внутренняя отделка под ключ</td><td></td><td></td><td></td></tr>
-<tr class="ele-pk"><td>Электрика под ключ</td><td></td><td></td><td></td></tr>
-<tr class="san-pk"><td>Сантехника под ключ</td><td></td><td></td><td></td></tr>
-<tr class="oto-pk"><td>Отопление под ключ</td><td></td><td></td><td></td></tr>
-<tr class="otd-m"><td>Материал отделка</td><td></td><td></td><td></td></tr>
-<tr class="ele-m"><td>Материал электрика</td><td></td><td></td><td></td></tr>
-<tr class="san-m"><td>Материал сантехника</td><td></td><td></td><td></td></tr>
-<tr class="oto-m"><td>Материал отопление</td><td></td><td></td><td></td></tr>
+<tr class="otd-pk"><td>Отделка под ключ</td><!-- <td></td> --><td></td><td></td></tr>
+<tr class="ele-pk"><td>Электрика под ключ</td><!-- <td></td> --><td></td><td></td></tr>
+<tr class="san-pk"><td>Сантехника под ключ</td><!-- <td></td> --><td></td><td></td></tr>
+<tr class="oto-pk"><td>Отопление под ключ</td><!-- <td></td> --><td></td><td></td></tr>
+<tr class="otd-m"><td>Черновой материал отделка</td><!-- <td></td> --><td></td><td></td></tr>
+<tr class="ele-m"><td>Черновой материал электрика</td><!-- <td></td> --><td></td><td></td></tr>
+<tr class="san-m"><td>Черновой материал сантехника</td><!-- <td></td> --><td></td><td></td></tr>
+<tr class="oto-m"><td>Черновой материал отопление</td><!-- <td></td> --><td></td><td></td></tr>
 </tbody>
 </table>
 </div>

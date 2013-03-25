@@ -3,12 +3,8 @@ DefaultLanguage ru
 FileETag None
 
 RewriteEngine on
-
-#RewriteCond %{HTTP_USER_AGENT} Googlebot
-#RewriteCond %{HTTP_HOST} otdelkalux\.ru
-#RewriteRule ^(.*)$ http://xn----htbbbbfwdqkkdt6ada.xn--p1ai/$1 [R=301,NC,L]
-
-RewriteCond %{HTTP_HOST} ^otdelkalux\.ru
+RewriteCond %{HTTP_HOST} ^otdelkalux\.ru [OR]
+RewriteCond %{HTTP_HOST} \.xn--p1ai$
 RewriteRule ^(.*)$ http://www.otdelkalux.ru/$1 [R=301,L]
 
 <ifModule mod_headers.c>

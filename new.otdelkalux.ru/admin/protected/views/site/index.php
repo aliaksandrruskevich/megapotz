@@ -33,7 +33,7 @@
 <div class="td" id="nav">
 <a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if !IE]>--><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!--<![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
 <nav>
-<a class="index" href="/">Главная</a>
+<a class="index" href="/">Ремонт и отделка</a>
 <a class="portfolio" href="/portfolio/">Фото</a>
 <a class="portfolio" href="/portfolio/process/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
@@ -327,7 +327,7 @@ VK.Widgets.Like("vk_like", {type: "button"});
 </div>
 <div class="qr"><img src="http://static.otdelkalux.ru/i/qr.png" alt="Контактная информация на QR коде"/></div>
 </div>
-<div id="year">© <span>2006</span>. Разработка сайта — <a target="_blank" href="http://hh.ru/resume/15187f9bff013946630039ed1f613543514445?print" rel="nofollow" style="color: #888">Михаил Шестаков</a>.</div>
+<div id="year">© <span>2006</span> «Отделка Люкс»</div>
 </footer>
 </section>
 </body>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
-<html lang="ru" itemscope itemtype="http://schema.org/GeneralContractor">
+<html lang="ru">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <meta name="viewport" content="width=1000"/>
@@ -31,7 +31,7 @@
 <div class="td" id="nav">
 <a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="http://static.otdelkalux.ru/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
 <nav>
-<a class="index" href="/">Главная</a>
+<a class="index" href="/">Ремонт и отделка</a>
 <a class="portfolio" href="/portfolio/">Фото</a>
 <a class="portfolio" href="/portfolio/process/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
@@ -96,7 +96,7 @@ var fs = $('#GPlus').GPlusGallery(photos, {'spinner': spinner});
 </div>
 <div class="qr"><img src="http://static.otdelkalux.ru/i/qr.png" alt="Контактная информация на QR коде"/></div>
 </div>
-<div id="year">© <span>2006</span> «Отделка Люкс» — <a href="/">элитный ремонт коттеджей</a>.</div>
+<div id="year">© <span>2006</span> «Отделка Люкс»</div>
 </footer>
 </section>
 </body>

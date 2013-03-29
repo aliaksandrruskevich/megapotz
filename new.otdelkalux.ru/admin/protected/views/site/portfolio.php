@@ -30,7 +30,7 @@
 <div class="td" id="nav">
 <a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if gte IE 9]><img src="http://static.otdelkalux.ru/i/logo.svg" /><![endif]--><!--[if !IE]> --><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!-- <![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
 <nav>
-<a class="index" href="/">Главная</a>
+<a class="index" href="/">Ремонт и отделка</a>
 <a class="portfolio" href="/portfolio/">Фото</a>
 <a class="process" href="/portfolio/process/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
@@ -152,7 +152,7 @@ VK.Widgets.Like("vk_like", {type: "button"});
 </div>
 <div class="qr"><img src="http://static.otdelkalux.ru/i/qr.png" alt="Контактная информация на QR коде"/></div>
 </div>
-<div id="year">© <span>2006</span> «Отделка Люкс» — <a href="/">ремонт и отделка коттеджей</a>.</div>
+<div id="year">© <span>2006</span> «Отделка Люкс»</div>
 </footer>
 </section>
 </body>

@@ -1,0 +1,89 @@
+a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	line-height: 20px;
+	font-weight: 900;
+	font-stretch:condensed;
+	text-decoration: none;	
+}
+a:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style:italic;
+	color: #D4910F;;
+	line-height: 20px;
+	font-weight: 900;
+	font-stretch:condensed;
+	text-decoration: none;	
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	line-height: 20px;
+	font-weight: 900;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style:italic;
+	color: #222222;
+	line-height: 20px;
+	font-weight: 900;
+}
+ol {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style:italic;
+	color: #666666;
+	line-height: 20px;
+	font-weight: 900;
+}
+p.we {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	font-style:italic;
+	line-height: 20px;
+	font-weight: 900;
+}
+a.we {
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:14px; 
+	color:#D4910F; 
+	font-style:italic;
+	font-weight:900;
+	line-height: 30px;
+	margin-top: 0px;
+}
+a.we:hover {
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:14px; 
+	font-style:italic;
+	color:#aaaaaa; 
+	font-weight:900;
+	line-height: 30px;
+	margin-top: 0px;
+}
+p.iqb
+ {
+	font-family:Tahoma, sans-serif;
+	font-style: none;
+	font-size: 11px;
+	color: #000000;
+}
+a.iqb
+ {
+	font-family:Tahoma, sans-serif;
+	font-style: none;
+	font-size:11px; 
+	color:#06399f;
+}
+a.iqb:hover
+ {
+	font-family:Tahoma, sans-serif; 
+	font-style: none;
+	font-size:11px; 
+	color:#06399f; 
+}

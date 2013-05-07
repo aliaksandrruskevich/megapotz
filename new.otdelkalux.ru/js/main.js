@@ -347,4 +347,12 @@ function init_selector()	{
 	});
 }
 
-(function(w,n,d,r,s){(new Image).src='http://db.ce.b2.a2.top.mail.ru/counter?id=2288412;js=13'+((r=d.referrer)?';r='+escape(r):'')+((s=w.screen)?';s='+s.width+'*'+s.height:'')+';_='+Math.random();})(window,navigator,document);
+/* статистика */
+(function(w,n,d,r,s){
+/* Mail.ru */
+(new Image).src='http://db.ce.b2.a2.top.mail.ru/counter?id=2288412;js=13'+((r=d.referrer)?';r='+escape(r):'')+((s=w.screen)?';s='+s.width+'*'+s.height:'')+';_='+Math.random();}
+/* Liveinternet */
+(new Image).src = "//counter.yadro.ru/hit?r" + escape(document.referrer)+((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";"+Math.random();
+/* Rambler*/
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'http://counter.rambler.ru/top100.jcn?2890004';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po, s);
+)(window,navigator,document);

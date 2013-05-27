@@ -199,11 +199,11 @@ $(document).ready(function() {
 		// Initializing main page
 		case 'page-index':
 			// Set cover background
-			$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
+			$('#bg').css({'background-image':'url("http://static.otdelkalux.ru/i/bg.jpg")'});
 
 			/*@cc_on
 			@if (@_jscript_version <= 5.8)
-
+			$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
 				// IE8: Reload background picture on window resize (no css3 backgrounds support)
 				var timer = false;
 				$( window ).on('resize', function() { 		

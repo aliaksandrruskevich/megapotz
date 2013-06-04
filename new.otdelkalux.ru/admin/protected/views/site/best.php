@@ -33,7 +33,7 @@
 <nav>
 <a class="index" href="/">Ремонт и отделка</a>
 <a class="portfolio" href="/portfolio/">Фото</a>
-<a class="portfolio" href="/portfolio/process/">Осмотр объектов</a>
+<a class="process" href="/portfolio/process/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
 <a class="docs" href="/docs.html">Документы</a>
 <a class="warranty" href="/warranty.html">Гарантия</a>

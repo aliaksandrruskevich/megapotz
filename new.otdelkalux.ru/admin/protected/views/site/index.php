@@ -9,13 +9,18 @@
 <meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <meta name="robots" content="noyaca"/>
-<title>Элитный ремонт и отделка коттеджей и таунхаусов под ключ, внутренняя отделка загородного дома: цены, фото</title>
+<title>Ремонт и отделка коттеджей и таунхаусов под ключ, внутренняя отделка загородного дома: цены (калькулятор стоимости ремонта), фото внутренней отделки</title>
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.css"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.ie8.css"/><![endif]-->
 <link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
-<script type="text/javascript" src="http://yandex.st/jquery/1.8.2/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://yandex.st/jquery/1.10.1/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script type="text/javascript" src="http://yandex.st/jquery/2.0.2/jquery.min.js"></script>
+<!--<![endif]-->
 <script type="text/javascript" src="http://static.otdelkalux.ru/gplus/jquery.gplus.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
@@ -175,19 +180,19 @@ var photos = [
 <div class="calc-hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
 <div class="calc-body">
 <table>
-<thead><tr><th></th><!--<th>Стандарт</th>--><th>Бизнес</th><th>Люкс</th></tr></thead>
+<thead><tr><th></th><th>Бизнес</th><th>Люкс</th></tr></thead>
 <tfoot>
-<tr><td>Общая сумма (работа + материал)</td><!--<td></td>--><td></td><td></td></tr>
+<tr><td>Общая сумма (работа + материал)</td><td></td><td></td></tr>
 </tfoot>
 <tbody>
-<tr class="otd-pk"><td>Отделка под ключ</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="ele-pk"><td>Электрика под ключ</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="san-pk"><td>Сантехника под ключ</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="oto-pk"><td>Отопление под ключ</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="otd-m"><td>Черновой материал отделка</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="ele-m"><td>Черновой материал электрика</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="san-m"><td>Черновой материал сантехника</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="oto-m"><td>Черновой материал отопление</td><!-- <td></td> --><td></td><td></td></tr>
+<tr class="otd-pk"><td>Отделка под ключ</td><td></td><td></td></tr>
+<tr class="ele-pk"><td>Электрика под ключ</td><td></td><td></td></tr>
+<tr class="san-pk"><td>Сантехника под ключ</td><td></td><td></td></tr>
+<tr class="oto-pk"><td>Отопление под ключ</td><td></td><td></td></tr>
+<tr class="otd-m"><td>Черновой материал отделка</td><td></td><td></td></tr>
+<tr class="ele-m"><td>Черновой материал электрика</td><td></td><td></td></tr>
+<tr class="san-m"><td>Черновой материал сантехника</td><td></td><td></td></tr>
+<tr class="oto-m"><td>Черновой материал отопление</td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>

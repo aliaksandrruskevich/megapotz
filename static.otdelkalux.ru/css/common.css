@@ -98,40 +98,22 @@ input[type=text]:hover, input[type=number]:hover, input[type=email]:hover	{ box-
 
 /*objects*/
 #objects	{ margin: 80px auto; }
-#album_grid	{ margin: 30px 50px; }
+#album_grid	{ margin: 30px 80px; }
 #album_grid .album	{ display: inline-block; position: relative; }
-#album_grid .image_stack img	{ z-index: 3; cursor: pointer; position: absolute; background-color: #fff; padding: 3px; border: 1px solid #aaa;
- transition: all 0.2s linear;
- -webkit-transition: left, all 0.2s linear;
- -moz-transition: all 0.2s linear;
- -o-transition: all 0.2s linear;
- -ms-transition: all 0.2s linear; }
+#album_grid .image_stack img	{ z-index: 3; cursor: pointer; position: absolute; background-color: #fff; padding: 3px; border: 1px solid #aaa; transition: all 0.2s linear; }
  
-#album_grid .rotated img	{ z-index: 5; }
-
+#album_grid :hover img	{ z-index: 5; }
 #album_grid .image_stack img:nth-child(1) { top: 9px; left: 9px; }
 #album_grid .image_stack img:nth-child(2) { top: 6px; left: 6px; }
 #album_grid .image_stack img:nth-child(3) { top: 3px; left: 3px; }
 
-#album_grid .rotated img:nth-child(1) { left: 50px;
- transform: rotate(15deg);
- -webkit-transform: rotate(15deg);
- -moz-transform: rotate(15deg);
- -o-transform: rotate(15deg);
- -ms-transform: rotate(15deg);
- }
-#album_grid .rotated img:nth-child(3) { left: -50px;
- transform: rotate(15deg);
- -webkit-transform: rotate(-15deg);
- -moz-transform: rotate(-15deg);
- -o-transform: rotate(-15deg);
- -ms-transform: rotate(-15deg);
-}
+#album_grid :hover img:nth-child(1) { left: 50px; transform: rotate(15deg); -webkit-transform: rotate(15deg); -ms-transform: rotate(15deg); -o-transform: rotate(15deg); }
+#album_grid :hover img:nth-child(3) { left: -50px; transform: rotate(-15deg); -webkit-transform: rotate(-15deg); -ms-transform: rotate(-15deg); -o-transform: rotate(-15deg); }
 
-#album_grid .album p	{ position: absolute; left: 3px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; z-index: 2; }
-#album_grid .album p.link	{ font-weight: bold; font-size: 13px;  }
+#album_grid .album p	{ position: absolute; left: 3px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; z-index: 2; width: 90%; }
+#album_grid .album p.link	{ font-weight: bold; font-size: 13px; bottom: 25px;  }
 #album_grid .album p.link a	{ color: #000; }
-#album_grid .album p.count	{ font-size: 11px; color: #666; }
+#album_grid .album p.count	{ font-size: 11px; color: #666; bottom:5px; }
 
 /* gallery */
 #gallery	{ margin: 80px auto; }

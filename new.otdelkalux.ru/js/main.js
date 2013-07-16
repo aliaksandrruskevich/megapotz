@@ -13,7 +13,7 @@
 	// Работа с  CSS3 Transitions
 	// http://www.w3.org/TR/css3-transitions/
 	var animate = (function () {		// cfg = {transition:'', from: {}, to: {}, callback:fn}
-		var transitionSupported = document.createElement('div').hasOwnProperty('transition');
+		var transitionSupported = 'transition' in document.createElement('div').style;
 		var animatableProps = {'backgroundColor':1,'backgroundPosition':1,'borderBottomColor':1,'borderBottomWidth':1,'borderLeftColor':1,'borderLeftWidth':1,'borderRightColor':1,'borderRightWidth':1,'borderSpacing':1,'borderTopColor':1,'borderTopWidth':1,'bottom':1,'clip':1,'color':1,'fontSize':1,'fontWeight':1,'height':1,'left':1,'letterSpacing':1,'lineHeight':1,'marginBottom':1,'marginLeft':1,'marginRight':1,'marginTop':1,'maxHeight':1,'maxWidth':1,'minHeight':1,'minWidth':1,'opacity':1,'outlineColor':1,'outlineWidth':1,'paddingBottom':1,'paddingLeft':1,'paddingRight':1,'paddingTop':1,'right':1,'textIndent':1,'textShadow':1,'top':1,'verticalAlign':1,'visibility':1,'width':1,'wordSpacing':1,'zIndex':1};
 
 		// Моментальная анимация выставляет сначала стили до, потом стили после на случай, если в стилях "до" были какие-то непересекающиеся с "после" стили
@@ -213,6 +213,7 @@
 		// Перед отправкой форму необходимо в hidden поле записать innerHTML калькуляции
 		form.addEventListener('submit', function(e) {
 			e.preventDefault();
+			// TODO вычищать ноды лишние
 			form.html.value = form.querySelector('table').innerHTML.replace(/\s{2,}/g, '');
 			form.submit();
 		});
@@ -226,50 +227,74 @@
 	
 	// Album covers
 	function AlbumView(root) {
-	init: function() {
-		$(this.element).on( 'mouseenter mouseleave', '.image_stack', function(e) {
-			if( e.type === 'mouseenter' ) {
-				$(this).addClass('rotated');
-			}
-			else {
-				$(this).removeClass('rotated');
-			}
-		});
+		function getPicSize() {
+			return Math.round( parseInt(window.getComputedStyle(root).width) / 4 - 30 );
+		}
 
-		$(this.element).on( 'click', '.image_stack', function() {
-			document.location = $(this).parent().find('a').attr('href');
-		});
+		// Забираем код тэгов картинок из noindex, чтобы не прогружать их в стандартных размерах попусту с гугла
+		// Сразу подставляем в них нужные размеры и после этого грузим...
+		var stub = document.createElement('div');
+		stub.style.display = 'none';
+		document.body.appendChild(stub);
+		var picSize = getPicSize();
+		var picIndex = [];
 		
-		var _this = this, timer = false;
-		$( window ).on('resize', function() { 		
-			if( timer !== false )
-				window.clearTimeout( timer );
-			timer = window.setTimeout( function(){ _this.show(); }, 500 );
-		});
-
-		this.show();
-	},
-
-	show: function() {
-		var picSide = Math.round( $(this.element).width() / 4 - 30 );
-		$(this.element).hide();
-
-		$(this.element).find('.album').css( { 'height' : picSide + 60 + 'px', 'width' : picSide + 25 + 'px'} )
-		$(this.element).find('img')
-			.css({ 'height': picSide + 'px', 'width': picSide + 'px'})
-			.each(function() {
-				this.src = this.src.substring(0,83) + 's' + picSide + '-c/';
+		var noscriptNodes = root.querySelectorAll('noscript');
+		for (var i = 0, l = noscriptNodes.length, node; i < l; i++) {
+			var str = noscriptNodes[i].textContent;
+			var parts = [], pos = 0;
+			
+			while ( (pos = str.indexOf('https://') + 83) != 82 ) {
+				parts.push(str.substr(0, pos) + 's' + picSize + '-c/');
+				str = str.substr(pos);
 			}
-		);
+			stub.innerHTML = parts.join('') + str;
 
-		$(this.element).find('p').width( picSide - 10 );
-		$(this.element).find('.link').css( { 'top': ( picSide + 20 ) + 'px' } );
-		$(this.element).find('.count').css( { 'top': ( picSide + 40 ) + 'px' } );
-		$(this.element).show();
+			var frag = document.createDocumentFragment();
+			for (var i1 = 0, l1 = stub.children.length, node; i1 < l1; i1++) {
+				node = stub.removeChild(stub.children[0]);
+				frag.appendChild(node);
+				picIndex.push({
+					node:		node,
+					baseUrl:	node.src.substring(0,83)
+				});
+			}
+			
+			noscriptNodes[i].parentNode.replaceChild(frag, noscriptNodes[i]);
+		}
+		document.body.removeChild(stub);
+
+		var timer;
+		var albums = root.querySelectorAll('.album');
+		function resize(){
+			var picSide = getPicSize();
+			
+			for (var i = 0, l = albums.length, album; album = albums[i], i < l; i++) {
+				album.style.width =  picSide + 25 + 'px';
+				album.style.height = picSide + 60 + 'px';
+			}
+			
+			for (var i = 0, l = picIndex.length, pic; pic = picIndex[i], i < l; i++) {
+				pic.node.style.width =  picSide + 'px';
+				pic.node.style.height = picSide + 'px';
+			}
+
+			if (timer) window.clearTimeout(timer);
+			timer = window.setTimeout(load, 1000);
+		}
+		
+		function load() {
+			timer = undefined;
+			var picSide = getPicSize();
+			for (var i = 0, l = picIndex.length, pic; pic = picIndex[i], i < l; i++) {
+				pic.node.src = pic.baseUrl + 's' + picSide + '-c/';
+			}
+		}
+		
+		// При изменении размеров экрана надо делать ресайз альбомов, но перегружать фотографии гугла только по таймауту
+		window.addEventListener('resize', resize, false);
+		resize();
 	}
-}
-
-
 
 
 ////////////////////////
@@ -305,11 +330,11 @@ $(document).ready(function () {
 			}
 			
 			// Albums
-			var album=new AlbumView($('#album_grid')[0]);
+			//var album=AlbumView($('#album_grid')[0]);
 
 			// Best photos
 			var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
-			$('#GPlus').GPlusGallery(photos, {'spinner': spinner});
+			//$('#GPlus').GPlusGallery(photos, {'spinner': spinner});
 			$('#GPlus div').last().on('click', function(e){e.stopPropagation()}).find('img').wrap('<a href="/portfolio/process/"/>');
 
 			// Show / hide call-me-back form
@@ -355,7 +380,7 @@ $(document).ready(function () {
 			break;
 		case 'page-portfolio':
 			if($("#album_grid").length > 0)
-				new AlbumView($('#album_grid')[0]);
+				AlbumView($('#album_grid')[0]);
 			if($("#selector_hint").length > 0)
 				window.setTimeout(function (){$("#selector_hint").css({'opacity':1});}, 2000);
 			if($("#selector").length > 0)

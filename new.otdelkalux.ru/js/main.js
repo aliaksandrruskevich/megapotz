@@ -1,9 +1,9 @@
-//(function() {
+//(function () {
 	"use strict";
 	
 	// Итератор по ключам объекта
 	Object.prototype.forEach = function(callback) {
-		if (this.constructor == Object) {
+		if (this.constructor === Object) {
 			for (var i = 0, keys = Object.keys(this), l = keys.length, key, value; key = keys[i], value = this[key], i < l; i++) {
 				if (callback(value, key, i) === false) break;
 			}
@@ -12,8 +12,8 @@
 	
 	// Работа с  CSS3 Transitions
 	// http://www.w3.org/TR/css3-transitions/
-	var animate = (function() {		// cfg = {transition:'', from: {}, to: {}, callback:fn}
-		var transitionSupported = 'transition' in document.createElement('div').style;
+	var animate = (function () {		// cfg = {transition:'', from: {}, to: {}, callback:fn}
+		var transitionSupported = document.createElement('div').hasOwnProperty('transition');
 		var animatableProps = {'backgroundColor':1,'backgroundPosition':1,'borderBottomColor':1,'borderBottomWidth':1,'borderLeftColor':1,'borderLeftWidth':1,'borderRightColor':1,'borderRightWidth':1,'borderSpacing':1,'borderTopColor':1,'borderTopWidth':1,'bottom':1,'clip':1,'color':1,'fontSize':1,'fontWeight':1,'height':1,'left':1,'letterSpacing':1,'lineHeight':1,'marginBottom':1,'marginLeft':1,'marginRight':1,'marginTop':1,'maxHeight':1,'maxWidth':1,'minHeight':1,'minWidth':1,'opacity':1,'outlineColor':1,'outlineWidth':1,'paddingBottom':1,'paddingLeft':1,'paddingRight':1,'paddingTop':1,'right':1,'textIndent':1,'textShadow':1,'top':1,'verticalAlign':1,'visibility':1,'width':1,'wordSpacing':1,'zIndex':1};
 
 		// Моментальная анимация выставляет сначала стили до, потом стили после на случай, если в стилях "до" были какие-то непересекающиеся с "после" стили
@@ -27,7 +27,7 @@
 			cfg.callback && cfg.callback();
 		};
 
-		var setRules = function(node, css, animatable) {		// если animatable, то ставит только анимируемые, если false - то только не анимируемые
+		var setRules = function(node, css, animatable) {		// если animatable, то ставит только анимируемые, если false - то только не анимируемые, если не передать - то все
 			if (typeof css == 'object') {
 				css.forEach(function(value, prop) {
 					if ( (animatable && animatableProps[prop]) || (!animatable && !animatableProps[prop]) || animatable === undefined ) node.style[prop] = value;
@@ -46,12 +46,13 @@
 			skipAnimation && cfg.to.forEach(function(value, prop) {
 				if (animatableProps[prop] && value != cfg.from[prop]) skipAnimation = false;
 			});
-			setRules(node, cfg.from);
 
 			if (skipAnimation) {
 				instantTransition(node, cfg);
 			} else {
 				node.style.transition = cfg.transition;
+				setRules(node, cfg.from);
+				// Запускаем анимацию
 				window.setTimeout(setRules.bind(null, node, cfg.to, true), 10);
 
 				// не надо вешать эвентлистенеры, если на них нечего вешать (нет колбэка и неанимируемых атрибутов)
@@ -123,20 +124,19 @@
 		}
 		
 		// Показываем подсказку
-		var showHint = function() {
+		var showHint = function () {
 			root.removeEventListener('mouseover', showHint, false);
 			var hint = root.querySelector('.calc-hint');
 			fadeIn(hint, 'slow');
 			
 			// Убираем
-			var hideHint = function() {
+			var hideHint = function () {
 				root.removeEventListener('click', hideHint, false);
 				hint.parentNode.removeChild(hint);
 			};
 			root.addEventListener('click', hideHint, false);
 		}
 		root.addEventListener('mouseover', showHint, false);
-
 
 		// Форматированный вывод сумм
 		var formatCurrency = function(num) {
@@ -149,7 +149,7 @@
 			wc = +nodes.wc.value;
 			area = +nodes.area.value;
 			// Пишем их в куки
-			var date = new Date('2020').toUTCString();
+			var date = new Date('2025').toUTCString();
 			document.cookie = 'area=' + area + ';path=/;expires=' + date;
 			document.cookie = 'wc=' + wc + ';path=/;expires=' + date;
 			// Пересчитываем таблицу
@@ -207,9 +207,10 @@
 			recalculate();
 		});
 
-		// Настраиваем форму форму, потому что Firefox кэширует состояние радиокнопок
 		var form = root.querySelector('form');
-		form.reset();
+		form.reset();	// Сбрасываем форму, потому что Firefox кэширует состояние радиокнопок
+
+		// Перед отправкой форму необходимо в hidden поле записать innerHTML калькуляции
 		form.addEventListener('submit', function(e) {
 			e.preventDefault();
 			form.html.value = form.querySelector('table').innerHTML.replace(/\s{2,}/g, '');
@@ -221,6 +222,52 @@
 		nodes.area.value = area;
 		document.getElementById(roomType).click();
 	}
+	
+	
+	// Album covers
+	function AlbumView(root) {
+	init: function() {
+		$(this.element).on( 'mouseenter mouseleave', '.image_stack', function(e) {
+			if( e.type === 'mouseenter' ) {
+				$(this).addClass('rotated');
+			}
+			else {
+				$(this).removeClass('rotated');
+			}
+		});
+
+		$(this.element).on( 'click', '.image_stack', function() {
+			document.location = $(this).parent().find('a').attr('href');
+		});
+		
+		var _this = this, timer = false;
+		$( window ).on('resize', function() { 		
+			if( timer !== false )
+				window.clearTimeout( timer );
+			timer = window.setTimeout( function(){ _this.show(); }, 500 );
+		});
+
+		this.show();
+	},
+
+	show: function() {
+		var picSide = Math.round( $(this.element).width() / 4 - 30 );
+		$(this.element).hide();
+
+		$(this.element).find('.album').css( { 'height' : picSide + 60 + 'px', 'width' : picSide + 25 + 'px'} )
+		$(this.element).find('img')
+			.css({ 'height': picSide + 'px', 'width': picSide + 'px'})
+			.each(function() {
+				this.src = this.src.substring(0,83) + 's' + picSide + '-c/';
+			}
+		);
+
+		$(this.element).find('p').width( picSide - 10 );
+		$(this.element).find('.link').css( { 'top': ( picSide + 20 ) + 'px' } );
+		$(this.element).find('.count').css( { 'top': ( picSide + 40 ) + 'px' } );
+		$(this.element).show();
+	}
+}
 
 
 
@@ -228,7 +275,7 @@
 ////////////////////////
 // Initializing pages //
 ////////////////////////
-$(document).ready(function() {
+$(document).ready(function () {
 	var page_name = $('body').attr('id');
 
 	switch (page_name) {
@@ -242,10 +289,10 @@ $(document).ready(function() {
 			$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
 				// IE8: Reload background picture on window resize (no css3 backgrounds support)
 				var timer = false;
-				$( window ).on('resize', function() { 		
+				$( window ).on('resize', function () { 		
 					if( timer !== false )
 						window.clearTimeout( timer );
-					timer = window.setTimeout( function(){ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'}); }, 500 );
+					timer = window.setTimeout( function (){ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'}); }, 500 );
 				});
 
 			@end
@@ -273,7 +320,7 @@ $(document).ready(function() {
 			
 			// Mouse hint
 			$('#mouse').css('opacity', 1);
-			$(window).one( 'scroll', function() { $('#mouse').css('opacity', 0); });
+			$(window).one( 'scroll', function () { $('#mouse').css('opacity', 0); });
 
 			break;
 
@@ -283,19 +330,19 @@ $(document).ready(function() {
 			init_selector();
 
 			var to;
-			$('#selector .left, #kuusinena_hint').hover(function(){
+			$('#selector .left, #kuusinena_hint').hover(function (){
 				window.clearTimeout(to);
 				$('#madison_hint').css('opacity','0');
 				$('#kuusinena_hint').css({'visibility': 'visible','opacity':'1'});
-			}, function(){
-				to=window.setTimeout(function(){$('#kuusinena_hint').css({'opacity':'0','visibility':'hidden'})},1000);
+			}, function (){
+				to=window.setTimeout(function (){$('#kuusinena_hint').css({'opacity':'0','visibility':'hidden'})},1000);
 			});
-			$('#selector .right, #madison_hint').hover(function(){
+			$('#selector .right, #madison_hint').hover(function (){
 				window.clearTimeout(to);
 				$('#kuusinena_hint').css('opacity','0');
 				$('#madison_hint').css({'visibility': 'visible','opacity':'1'});
-			}, function(){
-				to=window.setTimeout(function(){$('#madison_hint').css({'opacity':'0','visibility':'hidden'})},1000);
+			}, function (){
+				to=window.setTimeout(function (){$('#madison_hint').css({'opacity':'0','visibility':'hidden'})},1000);
 			});
 			break;
 
@@ -310,7 +357,7 @@ $(document).ready(function() {
 			if($("#album_grid").length > 0)
 				new AlbumView($('#album_grid')[0]);
 			if($("#selector_hint").length > 0)
-				window.setTimeout(function(){$("#selector_hint").css({'opacity':1});}, 2000);
+				window.setTimeout(function (){$("#selector_hint").css({'opacity':1});}, 2000);
 			if($("#selector").length > 0)
 				init_selector();
 			if($("#backnext").length > 0){
@@ -324,11 +371,11 @@ $(document).ready(function() {
 		case 'page-process':
 			init_selector();
 			init_maps();
-			$('#showhide').toggle(function(){
+			$('#showhide').toggle(function (){
 					$('#map').css({'height':0});
 					$(this).text('Показать карту');
 				},
-				function(){
+				function (){
 					$('#map').css({'height':'500px'});
 					$(this).text('Скрыть карту');
 				}
@@ -347,14 +394,14 @@ $(document).ready(function() {
 		
 		
 		//////////////
-		/*$("p:contains('47')").each(function(){
+		/*$("p:contains('47')").each(function (){
 			$(this).text($(this).text().replace("(495) 99-88-347", "(909) 151-31-56").replace("(495) 998-83-47", "(909) 151-31-56"));
 		});*/
 		///////////
 });
 
 function init_callback()	{
-	$('#show_form_btn,#callback_form input[type=reset], #close').click(function(){
+	$('#show_form_btn,#callback_form input[type=reset], #close').click(function (){
 		$('#contact').toggleClass('callback_shown');
 	});
 	
@@ -376,7 +423,7 @@ function init_selector()	{
 		@*/
 		e.preventDefault();
 		var _this=this;
-		$('#selector .current').on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd otransitionend', function(){
+		$('#selector .current').on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd otransitionend', function (){
 			document.location = $(_this).find('a').attr('href');
 		});
 

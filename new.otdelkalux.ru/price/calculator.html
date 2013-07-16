@@ -9,6 +9,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>Цены</title>
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
+<link rel="canonical" href="http://www.otdelkalux.ru/price/calculator.html"/>
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
 <link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
 <!--[if lt IE 9]>
@@ -48,7 +49,7 @@
 </div>
 </section>
 <h1>Цены</h1><p class="small">Калькулятор ремонта: укажите площадь помещения и количество санузлов, и вы получите прикидку по стоимости ремонта класса «Стандарт», «Бизнес» и «Люкс». Цены абсолютно реальные, мы по ним работаем!</p>
-<section id="price" class="cott">
+<section id="price">
 <div class="column">
 <div id="selector" class="left">
 <div class="current"></div>
@@ -56,33 +57,41 @@
 <span class="right"><a href="/price/price-list.html">Прайс-лист</a></span>
 <div id="button"></div>
 </div>
-<div id="calculator" class="cott">
-<div class="calc-head">
-<div class="selector cott" data-type="cott">Коттедж</div>
-<div class="selector appt" data-type="appt">Квартира</div>
-<div class="input"><label for="area">Площадь, м²</label><input type="number" id="area" value="400" min="100" max="2000" step="1"/></div>
-<div class="input"><label for="wc">Санузлы</label><input type="number" id="wc" value="3" min="1" max="8" step="1"/></div>
-<div class="calculate"><div class="button red"><span>Пересчитать</span></div></div>
-</div>
-<div class="calc-hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
-<div class="calc-body">
-<table>
-<thead><tr><th></th><!-- <th>Стандарт</th> --><th>Бизнес</th><th>Люкс</th></tr></thead>
-<tfoot>
-<tr><td>Общая сумма (работа + материал)</td><!-- <td></td> --><td></td><td></td></tr>
-</tfoot>
-<tbody>
-<tr class="otd-pk"><td>Отделка под ключ</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="ele-pk"><td>Электрика под ключ</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="san-pk"><td>Сантехника под ключ</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="oto-pk"><td>Отопление под ключ</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="otd-m"><td>Черновой материал отделка</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="ele-m"><td>Черновой материал электрика</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="san-m"><td>Черновой материал сантехника</td><!-- <td></td> --><td></td><td></td></tr>
-<tr class="oto-m"><td>Черновой материал отопление</td><!-- <td></td> --><td></td><td></td></tr>
-</tbody>
-</table>
-</div>
+<div id="calculator">
+<form method="post" action="/">
+	<div class="calc-head">
+		<input type="radio" name="type" value="cott" id="cott" class="dn"><label for="cott" class="cott">Коттедж</label>
+		<input type="radio" name="type" value="appt" id="appt" class="dn"><label for="appt" class="appt">Квартира</label>
+		<div class="input" style="padding-left: 130px"><label for="area">Площадь, м²</label><input type="number" name="area" id="area" value="400" min="100" max="2000" step="1"/></div>
+		<div class="input"><label for="wc">Санузлы</label><input type="number" name="wc" id="wc" value="3" min="1" max="8" step="1"/></div>
+		<!--<div class="calculate"><div class="button red"><span>Пересчитать</span></div></div>-->
+	</div>
+	<div class="calc-hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
+	<div class="calc-body">
+		<table>
+			<thead><tr><th></th><th>Бизнес</th><th>Люкс</th></tr></thead>
+			<tfoot><tr><td>Общая сумма (работа + материал)</td><td></td><td></td></tr></tfoot>
+			<tbody>
+				<tr><td>Отделка под ключ</td><td></td><td></td></tr>
+				<tr><td>Электрика под ключ</td><td></td><td></td></tr>
+				<tr><td>Сантехника под ключ</td><td></td><td></td></tr>
+				<tr><td>Отопление под ключ</td><td></td><td></td></tr>
+				<tr><td>Черновой материал отделка</td><td></td><td></td></tr>
+				<tr><td>Черновой материал электрика</td><td></td><td></td></tr>
+				<tr><td>Черновой материал сантехника</td><td></td><td></td></tr>
+				<tr><td>Черновой материал отопление</td><td></td><td></td></tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="sendback">
+		<label for="name">Отправить эту калькуляцию на почту:</label>
+		<input type="text" placeholder="Имя" title="Наличие вашего имени в тексте письма снижает вероятность попадания в спам" id="name" value="" name="name" required="required"/>
+		<input type="email" placeholder="vasha@pochta.ru" title="Не волнуйтесь, кроме этого письма ничего отправлять не будем :)" id="email" value="" name="email" required="required"/>
+		<input type="hidden" name="html" value="" id="html"/>
+		<input type="submit" class="button red" value="Отправить"/>
+	</div>
+</form>
 </div>
 <div class="center" style="margin: 40px 0">
 <p><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="http://static.otdelkalux.ru/i/alert.svg" alt=""/><!--<![endif]--></p>

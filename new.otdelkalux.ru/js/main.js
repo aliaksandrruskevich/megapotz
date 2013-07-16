@@ -1,193 +1,229 @@
-/////////////
-// CLASSES //
-/////////////
-
-// Calculator
-function Calculator() {
-	this.area = 0;
-	this.wc = 0;
-	this.roomType = '';
+//(function() {
+	"use strict";
 	
-	this.element = $('#calculator')[0];
-	this.init();
-}
-
-Calculator.prototype = {
-
-	init: function() {
-		var _this=this;
-		
-		//cookies
-		var cookies = document.cookie.split(';');
-		
-		for(var i = 0, l = cookies.length; i < l; i++){
-			if(cookies[i].indexOf('wc=') !== -1){
-				this.wc = cookies[i].split('=')[1];
-				$('#wc').val(this.wc);
-			}
-			if(cookies[i].indexOf('area=') !== -1){
-				this.area = cookies[i].split('=')[1];
-				$('#area').val(this.area);
+	// Итератор по ключам объекта
+	Object.prototype.forEach = function(callback) {
+		if (this.constructor == Object) {
+			for (var i = 0, keys = Object.keys(this), l = keys.length, key, value; key = keys[i], value = this[key], i < l; i++) {
+				if (callback(value, key, i) === false) break;
 			}
 		}
+	};
+	
+	// Работа с  CSS3 Transitions
+	// http://www.w3.org/TR/css3-transitions/
+	var animate = (function() {		// cfg = {transition:'', from: {}, to: {}, callback:fn}
+		var transitionSupported = 'transition' in document.createElement('div').style;
+		var animatableProps = {'backgroundColor':1,'backgroundPosition':1,'borderBottomColor':1,'borderBottomWidth':1,'borderLeftColor':1,'borderLeftWidth':1,'borderRightColor':1,'borderRightWidth':1,'borderSpacing':1,'borderTopColor':1,'borderTopWidth':1,'bottom':1,'clip':1,'color':1,'fontSize':1,'fontWeight':1,'height':1,'left':1,'letterSpacing':1,'lineHeight':1,'marginBottom':1,'marginLeft':1,'marginRight':1,'marginTop':1,'maxHeight':1,'maxWidth':1,'minHeight':1,'minWidth':1,'opacity':1,'outlineColor':1,'outlineWidth':1,'paddingBottom':1,'paddingLeft':1,'paddingRight':1,'paddingTop':1,'right':1,'textIndent':1,'textShadow':1,'top':1,'verticalAlign':1,'visibility':1,'width':1,'wordSpacing':1,'zIndex':1};
 
-		$( this.element ).find( '.button' ).on( 'click', function() {
-			_this.updateValues();
-		});
+		// Моментальная анимация выставляет сначала стили до, потом стили после на случай, если в стилях "до" были какие-то непересекающиеся с "после" стили
+		var instantTransition = function(node, cfg) {
+			cfg.from.forEach(function(value, prop) {
+				node.style[prop] = value;
+			});
+			cfg.to.forEach(function(value, prop) {
+				node.style[prop] = value;
+			});
+			cfg.callback && cfg.callback();
+		};
 
-		$(this.element).on( 'click', '.selector', function() {
-			_this.roomType = $(this).data( 'type' );
-			_this.element.className = _this.roomType;
-			_this.updateValues();
-		});
-		
-		function updatePosition(obj) {
-			var curtop = 0;
-			if ( obj.offsetParent ) {
-				do {
-					curtop += obj.offsetTop;
-				} while ( obj = obj.offsetParent );
-			}
-			return curtop;
-		}
-
-		var hint = $(_this.element).find('.calc-hint')[0];
-		
-		$( window ).on( 'scroll.CalcHint', function(){
-			if( $(this).scrollTop() > updatePosition( hint ) - 400 ) {
-				window.setTimeout( function(){ 
-					$( hint ).addClass( 'shown' );
-					$( window ).off('.CalcHint');
-					$( _this.element ).one( 'click' , function(){
-						$( hint ).removeClass('shown');
-					});
-				}, 300 );
-			}
-		});
-		
-		$( this.element ).find('.cott').click();
-	},
-
-	evaluate: function( roomType, workType ) {
-		if( roomType == 'cott' ) {
-			switch( workType ) {
-				case 'otd-pk':
-					return [/* 4500 * this.area,  */7000 * this.area, 8500 * this.area];
-				case 'ele-pk':
-					return [/* 120000 + 220 * this.area,  */140000 + 220 * this.area, 160000 + 220 * this.area];
-				case 'san-pk':
-					return [/* 30000 * (this.wc + 0.5),  */36000 * (this.wc + 0.5), 42000 * (this.wc + 0.5)];
-				case 'oto-pk':
-					return [/* 90000 + 200 * this.area,  */110000 + 200 * this.area, 130000 + 200 * this.area];
-				case 'otd-m':
-					return [/* 3000 * this.area,  */3500 * this.area, 4000 * this.area];
-				case 'ele-m':
-					return [/* 20000 + 200 * this.area,  */40000 + 200 * this.area, 60000 + 200 * this.area];
-				case 'san-m':
-					return [/* 17500 * (this.wc + 0.5),  */22500 * (this.wc + 0.5), 30000 * (this.wc + 0.5)];
-				case 'oto-m':
-					return [/* 60000 + 800 * this.area,  */100000 + 800 * this.area, 140000 + 800 * this.area];
-				default:
-					return false;
-			}
-		}
-		else {
-			switch( workType ) {
-				case 'otd-pk':
-					return [/* 5000 * this.area,  */7500 * this.area, 9000 * this.area];
-				case 'ele-pk':
-					return [/* 120000 + 200 * this.area,  */140000 + 220 * this.area, 160000 + 220 * this.area];
-				case 'san-pk':
-					return [/* 30000 * (this.wc + 0.5),  */36000 * (this.wc + 0.5), 42000 * (this.wc + 0.5)];
-				case 'otd-m':
-					return [/* 3000 * this.area,  */3500 * this.area, 4000 * this.area];
-				case 'ele-m':
-					return [/* 20000 + 200 * this.area,  */40000 + 200 * this.area, 60000 + 200 * this.area];
-				case 'san-m':
-					return [/* 17500 * (this.wc + 0.5),  */22500 * (this.wc + 0.5), 30000 * (this.wc + 0.5)];
-				default:
-					return false;
-			}
-		}
-	},
-
-	updateValues: function() {
-		var _this = this;
-		this.area = parseInt( $('#area').val() );
-		this.wc = parseInt( $('#wc').val() );
-		
-		document.cookie = 'area=' + this.area + ';path=/';
-		document.cookie = 'wc=' + this.wc + ';path=/';
-		
-		var itog=[0,0,0];
-		$(this.element).find('tbody tr').each(function(){
-			var vals=_this.evaluate(_this.roomType, $(this).attr('class'));
-			
-			if( vals ){
-				for( var i=0; i<3; i++ )
-					itog[i]+=vals[i];
-
-				$(this).find('td:nth-child(n+2)').each(function(i){
-					$(this).text(vals[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
+		var setRules = function(node, css, animatable) {		// если animatable, то ставит только анимируемые, если false - то только не анимируемые
+			if (typeof css == 'object') {
+				css.forEach(function(value, prop) {
+					if ( (animatable && animatableProps[prop]) || (!animatable && !animatableProps[prop]) || animatable === undefined ) node.style[prop] = value;
 				});
+			} else node.className = css;
+		};
+
+		// Если браузер не поддерживает анимацию, то просто ставим конечные стили и вызываем колбэк
+		if (!transitionSupported) {
+			return instantTransition;
+		} else return function(node, cfg) {
+			// Моментальная анимация теоретически возможна, если from и to - хэши стилей. Если передали класс, то пропускать нельзя никак
+			var skipAnimation = typeof cfg.from == 'object' && typeof cfg.to == 'object';
+
+			// Анимацию можно пропустить если в итоговых стилях нет анимируемых свойств, ИЛИ если юзер идиот и он в from и to указал совпадающие значения у анимируемых свойств
+			skipAnimation && cfg.to.forEach(function(value, prop) {
+				if (animatableProps[prop] && value != cfg.from[prop]) skipAnimation = false;
+			});
+			setRules(node, cfg.from);
+
+			if (skipAnimation) {
+				instantTransition(node, cfg);
+			} else {
+				node.style.transition = cfg.transition;
+				window.setTimeout(setRules.bind(null, node, cfg.to, true), 10);
+
+				// не надо вешать эвентлистенеры, если на них нечего вешать (нет колбэка и неанимируемых атрибутов)
+				// определяем наличие неанимируемых css правил в конечных стилях
+				var hasNonAnimatable = false;
+				typeof cfg.to == 'object' && cfg.to.forEach(function(value, prop) {
+					if (!animatableProps[prop]) hasNonAnimatable = true;
+				});
+
+				if (cfg.callback || hasNonAnimatable) {
+					var ontransitionend = function(e) {
+						console.info('transition ended');
+						setRules(node, cfg.to, false);
+						cfg.callback && cfg.callback();
+						node.removeEventListener('transitionend', ontransitionend);
+					};
+					node.addEventListener('transitionend', ontransitionend, false);
+				}
 			}
+		};
+	})();
+	
+	// Утилита для вычисления строки, подставляемой в параметр времени анимации
+	var getSpeed = function(speed) {
+		if (typeof speed == 'string' || typeof speed == 'number') {
+			var speedPreset = {'slow': '1s', 'normal': '0.6s', 'fast': '0.3s'};
+			return typeof speed == 'string' ? speedPreset[speed] : (speed / 1000).toFixed(1) + 's';
+		}
+		return '0.3s';
+	};
+
+	var fadeIn = function(node, speed, fn) {	// slow, normal, fast
+		animate(node, {
+			transition:	'opacity linear ' + getSpeed(speed),
+			from:		{opacity: 0, display: 'block'},
+			to:			{opacity: 1},
+			callback:	fn
 		});
-		$(this.element).find('tfoot td:nth-child(n+2)').each(function(i){
-			$(this).text(itog[i].toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
+	};
+
+	var fadeOut = function(self, speed, fn) {
+		animate(node, {
+			transition:	'opacity linear ' + getSpeed(speed),
+			from:		{},
+			to:			{opacity: 0, display: 'none'},
+			callback:	fn
 		});
-	}
-};
+	};
+	
+	
+	// КАЛЬКУЛЯТОР
+	function Calculator(root) {
+		// Инициализация
+		var nodes = {
+			wc:			document.getElementById('wc'),
+			area:		document.getElementById('area'),
+			eastimate:	root.querySelectorAll('tbody td:not(:first-child)'),
+			total:		root.querySelectorAll('tfoot td:not(:first-child)'),
+		};
+		var wc = 3, area = 400, roomType = 'cott';
+		
+		// Подстановка изначальных данных для подсчета
+		// Из Яндекс Островов более приоритетно, чем из cookies
+		var pairs = document.cookie.split('; ').concat(document.location.search.substring(1).split('&'));
+		for (var i = 0, l = pairs.length; i < l; i++) {
+			var pair = pairs[i].split('=');
+			if (pair[0] == 'wc') wc = +pair[1];
+			if (pair[0] == 'area') area = +pair[1];
+		}
+		
+		// Показываем подсказку
+		var showHint = function() {
+			root.removeEventListener('mouseover', showHint, false);
+			var hint = root.querySelector('.calc-hint');
+			fadeIn(hint, 'slow');
+			
+			// Убираем
+			var hideHint = function() {
+				root.removeEventListener('click', hideHint, false);
+				hint.parentNode.removeChild(hint);
+			};
+			root.addEventListener('click', hideHint, false);
+		}
+		root.addEventListener('mouseover', showHint, false);
 
-// Album covers
-function AlbumView(element){
-	this.element=element;
-	this.init();
-}
 
-AlbumView.prototype = {
-	init: function() {
+		// Форматированный вывод сумм
+		var formatCurrency = function(num) {
+			return num.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+		};
+		
+		// Калькуляция сметы и вывод
+		var recalculate = function () {
+			// Забираем значения из инпутов
+			wc = +nodes.wc.value;
+			area = +nodes.area.value;
+			// Пишем их в куки
+			var date = new Date('2020').toUTCString();
+			document.cookie = 'area=' + area + ';path=/;expires=' + date;
+			document.cookie = 'wc=' + wc + ';path=/;expires=' + date;
+			// Пересчитываем таблицу
+		
+			var results = [];
+			var totalBusiness = 0;
+			var totalLuxe = 0;
+		
+			results[2]	= 140000 + 220 * area;		// работа электрика бизнес
+			results[3]	= 160000 + 220 * area;		// работа электрика люкс
+			results[4]	= 36000 * (wc + 0.5);		// работа сантехника бизнес
+			results[5]	= 42000 * (wc + 0.5);		// работа сантехника люкс
+			results[8]	= 3500 * area;				// материал отделка бизнес
+			results[9]	= 4000 * area;				// материал отделка люкс
+			results[10]	= 40000 + 200 * area;		// материал электрика бизнес
+			results[11]	= 60000 + 200 * area;		// материал электрика люкс
+			results[12]	= 22500 * (wc + 0.5);		// материал сантехника бизнес
+			results[13]	= 30000 * (wc + 0.5);		// материал сантехника люкс
 
-		$(this.element).on( 'mouseenter mouseleave', '.image_stack', function(e) {
-			if( e.type === 'mouseenter' ) {
-				$(this).addClass('rotated');
+			// Коттедж
+			if (roomType == 'cott') {
+				results[0]	= 7000 * area;			// работа отделка бизнес
+				results[1]	= 8500 * area;			// работа отделка люкс
+				results[6]	= 110000 + 200 * area;	// работа отопление бизнес
+				results[7]	= 130000 + 200 * area;	// работа отопление люкс
+				results[14]	= 100000 + 800 * area;	// материал отопление бизнес
+				results[15]	= 140000 + 800 * area;	// материал отопление люкс
 			}
+			// Квартира
 			else {
-				$(this).removeClass('rotated');
+				results[1]	= 9000 * area;			// отделка люкс
+				results[0]	= 7500 * area;			// отделка бизнес
+				results[6]	= results[7] = results[14] = results[15] = 0;	// Зануляем отопление в квартире
 			}
+
+			// Проставляем значения сметы в таблицу
+			for (var i = 0, l = nodes.eastimate.length, node; node = nodes.eastimate[i], i < l; i++) {
+				if (i % 2 == 0) totalBusiness += results[i];
+				else totalLuxe += results[i];
+				node.textContent = formatCurrency(results[i]);
+			}
+			
+			// Вычисляем итог
+			nodes.total[0].textContent = formatCurrency(totalBusiness);
+			nodes.total[1].textContent = formatCurrency(totalLuxe);
+		};
+
+		// Привязываем события к кнопке Пересчитать
+		root.addEventListener('keyup', recalculate, false);
+
+		// Переключение между вкладками и пересчет таблицы
+		root.addEventListener('change', function(e) {
+			var target = e.target;
+			if (target.type == 'radio') roomType = root.className = e.target.id;
+			recalculate();
 		});
 
-		$(this.element).on( 'click', '.image_stack', function() {
-			document.location = $(this).parent().find('a').attr('href');
+		// Настраиваем форму форму, потому что Firefox кэширует состояние радиокнопок
+		var form = root.querySelector('form');
+		form.reset();
+		form.addEventListener('submit', function(e) {
+			e.preventDefault();
+			form.html.value = form.querySelector('table').innerHTML.replace(/\s{2,}/g, '');
+			form.submit();
 		});
 		
-		var _this = this, timer = false;
-		$( window ).on('resize', function() { 		
-			if( timer !== false )
-				window.clearTimeout( timer );
-			timer = window.setTimeout( function(){ _this.show(); }, 500 );
-		});
-
-		this.show();
-	},
-
-	show: function() {
-		var picSide = Math.round( $(this.element).width() / 4 - 30 );
-		$(this.element).hide();
-
-		$(this.element).find('.album').css( { 'height' : picSide + 60 + 'px', 'width' : picSide + 25 + 'px'} )
-		$(this.element).find('img')
-			.css({ 'height': picSide + 'px', 'width': picSide + 'px'})
-			.each(function() {
-				this.src = this.src.substring(0,83) + 's' + picSide + '-c/';
-			}
-		);
-
-		$(this.element).find('p').width( picSide - 10 );
-		$(this.element).find('.link').css( { 'top': ( picSide + 20 ) + 'px' } );
-		$(this.element).find('.count').css( { 'top': ( picSide + 40 ) + 'px' } );
-		$(this.element).show();
+		// Простановка начальных значений в калькулятор
+		nodes.wc.value = wc;
+		nodes.area.value = area;
+		document.getElementById(roomType).click();
 	}
-};
+
+
+
 
 ////////////////////////
 // Initializing pages //
@@ -233,7 +269,7 @@ $(document).ready(function() {
 			init_callback();
 
 			// Calculator
-			var calc = new Calculator();
+			Calculator($("#calculator")[0]);
 			
 			// Mouse hint
 			$('#mouse').css('opacity', 1);
@@ -266,7 +302,7 @@ $(document).ready(function() {
 		case 'page-price':
 			// CALC
 			if($("#calculator").length > 0)
-				var calc=new Calculator();
+				Calculator($("#calculator")[0]);
 			init_selector();
 
 			break;
@@ -348,11 +384,14 @@ function init_selector()	{
 }
 
 /* статистика */
-(function(w,n,d,r,s){
+(function(w,n,d){
+var r, s;
 /* Mail.ru */
-(new Image).src='http://db.ce.b2.a2.top.mail.ru/counter?id=2288412;js=13'+((r=d.referrer)?';r='+escape(r):'')+((s=w.screen)?';s='+s.width+'*'+s.height:'')+';_='+Math.random();}
+(new Image).src='http://db.ce.b2.a2.top.mail.ru/counter?id=2288412;js=13'+((r=d.referrer)?';r='+escape(r):'')+((s=w.screen)?';s='+s.width+'*'+s.height:'')+';_='+Math.random();
 /* Liveinternet */
-(new Image).src = "//counter.yadro.ru/hit?r" + escape(document.referrer)+((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";"+Math.random();
+(new Image).src = "//counter.yadro.ru/hit?r" + escape(r)+((typeof(s)=="undefined")?"" : ";s"+s.width+"*"+s.height+"*"+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(document.URL)+";"+Math.random();
 /* Rambler*/
-var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'http://counter.rambler.ru/top100.jcn?2890004';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po, s);
-)(window,navigator,document);
+var po = document.createElement('script');po.type = 'text/javascript';po.async = true;po.src = 'http://counter.rambler.ru/top100.jcn?2890004';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po, s);
+})(window,navigator,document);
+
+//})();

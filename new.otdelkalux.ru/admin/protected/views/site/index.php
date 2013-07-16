@@ -8,6 +8,7 @@
 <meta name="description" content="Выполняем весь комплекс отделочных и ремонтных работ в коттеджах, загородных домах и таунхаусах: отопление, электрика, сантехника, внутренняя отделка под ключ. Фотографии завершенных объектов, калькулятор стоимости ремонта."/>
 <meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<link rel="canonical" href="http://www.otdelkalux.ru/"/>
 <meta name="robots" content="noyaca"/>
 <title>Ремонт и отделка коттеджей, загородных домов и таунхаусов под ключ: цены, фото</title>
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>

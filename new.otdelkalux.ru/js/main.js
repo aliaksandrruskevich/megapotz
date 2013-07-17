@@ -234,6 +234,8 @@
 		// Забираем код тэгов картинок из noindex, чтобы не прогружать их в стандартных размерах попусту с гугла
 		// Сразу подставляем в них нужные размеры и после этого грузим...
 		var stub = document.createElement('div');
+		
+		// !!! может это не надо??!!!!!!!!!!!!!!!!!!!
 		stub.style.display = 'none';
 		document.body.appendChild(stub);
 		var picSize = getPicSize();
@@ -243,7 +245,7 @@
 		for (var i = 0, l = noscriptNodes.length, node; i < l; i++) {
 			var str = noscriptNodes[i].textContent;
 			var parts = [], pos = 0;
-			
+			// var re = /([^/]+)\.jpg/g; str = str.replace(re, 's20-c/');	- http://jsperf.com/myregexptest-megapotz
 			while ( (pos = str.indexOf('https://') + 83) != 82 ) {
 				parts.push(str.substr(0, pos) + 's' + picSize + '-c/');
 				str = str.substr(pos);

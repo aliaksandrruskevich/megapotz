@@ -302,29 +302,60 @@
 ////////////////////////
 // Initializing pages //
 ////////////////////////
+
+var page_name = document.body.id;
+
+switch (page_name) {
+	case 'page-index':
+		if ( window.devicePixelRatio == 2 ) {
+			document.getElementById('ingos').src='http://static.otdelkalux.ru/i/ingos-2x.png';
+		}
+		AlbumView(document.getElementById('album_grid'));
+		Calculator(document.getElementById('calculator'));
+		
+		$('#GPlus').GPlusGallery(photos);
+		$('#GPlus div').last().on('click', function(e){e.stopPropagation()}).find('img').wrap('<a href="/portfolio/process/"/>');
+		
+		// Убирание подсказки про "крутите дальше"
+		function onScroll() {
+			fadeOut(document.getElementById('mouse'));
+			window.removeEventListener('scroll', onScroll);
+		}
+		window.addEventListener('scroll', onScroll, false);
+
+		break;
+	case 'page-contacts':
+		init_maps();
+		//init_callback();
+		init_selector();
+
+		var to;
+		$('#selector .left, #kuusinena_hint').hover(function (){
+			window.clearTimeout(to);
+			$('#madison_hint').css('opacity','0');
+			$('#kuusinena_hint').css({'visibility': 'visible','opacity':'1'});
+		}, function (){
+			to=window.setTimeout(function (){$('#kuusinena_hint').css({'opacity':'0','visibility':'hidden'})},1000);
+		});
+		$('#selector .right, #madison_hint').hover(function (){
+			window.clearTimeout(to);
+			$('#kuusinena_hint').css('opacity','0');
+			$('#madison_hint').css({'visibility': 'visible','opacity':'1'});
+		}, function (){
+			to=window.setTimeout(function (){$('#madison_hint').css({'opacity':'0','visibility':'hidden'})},1000);
+		});
+		break;
+}
+
+
+/*
 $(document).ready(function () {
 	var page_name = $('body').attr('id');
 
 	switch (page_name) {
 		// Initializing main page
 		case 'page-index':
-			// Set cover background
-			$('#bg').css({'background-image':'url("http://static.otdelkalux.ru/i/bg.jpg")'});
 
-			/*@cc_on
-			@if (@_jscript_version <= 5.8)
-			$('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'});
-				// IE8: Reload background picture on window resize (no css3 backgrounds support)
-				var timer = false;
-				$( window ).on('resize', function () { 		
-					if( timer !== false )
-						window.clearTimeout( timer );
-					timer = window.setTimeout( function (){ $('#bg').css({'background-image':'url("https://lh3.googleusercontent.com/-InPyuNzqhv4/T-cKtkttLpI/AAAAAAAAAck/NZS1nov73xE/w'+$('#bg').width()+'-h'+$('#bg').height()+'-n/i.jpg")'}); }, 500 );
-				});
-
-			@end
-			@*/		
-			
 			// Ingosstrakh logo
 			if ( window.devicePixelRatio == 2 ) {
 				var logo=$('#ingos')[0];
@@ -425,7 +456,7 @@ $(document).ready(function () {
 			$(this).text($(this).text().replace("(495) 99-88-347", "(909) 151-31-56").replace("(495) 998-83-47", "(909) 151-31-56"));
 		});*/
 		///////////
-});
+});*/
 
 function init_callback()	{
 	$('#show_form_btn,#callback_form input[type=reset], #close').click(function (){
@@ -456,6 +487,189 @@ function init_selector()	{
 
 	});
 }
+
+
+
+/*
+var places=[["55.797092","37.023568"],["55.789745","37.039345"],["55.778571","36.946130"],["55.805454","36.971275"],["56.051165","36.802061"],["55.824103","37.620016"]];
+function init_maps() {
+var mapOptions = {
+scrollwheel: false,
+center: new google.maps.LatLng(55.8, 37),
+zoom: 11,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var styles = [{
+stylers: [
+{ saturation: -100 },
+{ lightness: 50 }
+]
+}];
+var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+map.setOptions({styles: styles});
+setMarkers(map, places);
+}
+function setMarkers(map, locations) {
+var shadow = new google.maps.MarkerImage('http://static.otdelkalux.ru//i/marker-shadow-1.png', new google.maps.Size(96, 37), new google.maps.Point(0,0), new google.maps.Point(16,36));
+for (var i = 0; i < locations.length; i++) {
+var myLatLng = new google.maps.LatLng(locations[i][0], locations[i][1]);
+var marker = new google.maps.Marker({
+position: myLatLng,
+map: map,
+shadow: shadow,
+icon: new google.maps.MarkerImage('http://static.otdelkalux.ru//i/markers.png', new google.maps.Size(51,60), new google.maps.Point(0,60*i), new google.maps.Point(20,60)),
+});
+(function(i){google.maps.event.addListener(marker, 'click', function() {
+document.location.hash = 'obj'+i;
+});
+})(i+1);
+}
+
+}
+
+
+-*--------------------
+
+
+var map;
+var hash;
+var loc;
+function init_maps() {
+// Точки офисов на карте. [0] - Millennium, [1] - Madison.
+var point = [new google.maps.LatLng(55.789745, 37.039345), new google.maps.LatLng(55.778093, 36.944855)];
+// Объект маркера
+var icon = new google.maps.MarkerImage('http://static.otdelkalux.ru/i/marker.png',
+new google.maps.Size(68, 96),
+new google.maps.Point(0,0),
+new google.maps.Point(34, 0)
+);
+//Тень маркера
+var shadow = new google.maps.MarkerImage('http://static.otdelkalux.ru/i/marker-shadow.png',
+new google.maps.Size(146, 96),
+new google.maps.Point(0,0),
+new google.maps.Point(34, 0)
+);
+
+loc = {
+'millennium':	{
+'zoom': 10,
+'latlng': point[0],
+'selector': 'left',
+'addr': 'Новорижское ш.,<br/>посёлок Millennium Park,<br/>владение 3041'
+},
+'madison':	{
+'zoom': 10,
+'latlng': point[1],
+'selector': 'right',
+'addr': 'Новорижское ш.,<br/>посёлок Madison Park,<br/>владение 15'
+}};
+hash = window.location.hash.substr(1);
+if(loc[hash]==undefined){
+hash='millennium';
+window.location.hash=hash;
+}
+$('#selector')[0].className = loc[hash].selector;
+$('#addr').html(loc[hash].addr);
+
+map = new google.maps.Map(document.getElementById("map_canvas"),{
+center: loc[hash].latlng,
+scrollwheel: false,
+zoom: loc[hash].zoom,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+map.setOptions({styles: [{
+stylers: [
+{ saturation: -100 },
+{ lightness: 50 }
+]
+}]});
+
+loc['millennium'].marker = new google.maps.Marker({position: point[0], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='millennium' });
+loc['madison'].marker = new google.maps.Marker({position: point[1], map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='madison' });
+if (window.addEventListener) {
+window.addEventListener('hashchange', pan_map, false); 
+} else if (window.attachEvent)  {
+window.attachEvent('onhashchange', pan_map);
+}
+}
+function pan_map(){
+loc[hash].marker.setVisible(false);
+hash = window.location.hash.substr(1);
+if(loc[hash]==undefined){
+hash='millennium';
+window.location.hash=hash;
+}
+map.panTo(loc[hash].latlng);
+map.setZoom(loc[hash].zoom);
+loc[hash].marker.setVisible(true);
+loc[hash].marker.setAnimation(google.maps.Animation.DROP);
+$('#addr').html(loc[hash].addr);
+}
+*/
+
+
+/////////////////////////
+// GA
+/*  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17254104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  // Metrika
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter13794628 = new Ya.Metrika({id:13794628,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    trackHash:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  
+  .reachGoal(target, [params])
+  http://help.yandex.ru/metrika/objects/reachgoal.xml
+  http://help.yandex.ru/metrika/content/e-commerce.xml
+  var yaParams = {
+  order_id: "12345",
+  order_price: 123.45, 
+  currency: "RUR",
+  exchange_rate: 1,
+  goods: 
+     [
+        {
+          id: "1", 
+          name: "наименование товара", 
+          price: 100,
+          quantity: 1
+        } 
+      ]
+};
+*/
+
 
 /* статистика */
 (function(w,n,d){

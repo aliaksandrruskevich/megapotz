@@ -131,9 +131,9 @@ echo "Люкс";
 <div class="table" id="backnext">
 <div class="tr">
 <?if(!empty($last_next[0]->link)) {?>
-<div class="td l"><a href="/portfolio/<?=$last_next[0]->link?>/"><img src="<?=$last_next[0]->image?>s50-c/" alt="<?=$last_next[0]->title?>"/><?=$last_next[0]->title?></a><p class="small"><?=$last_next[0]->picasa_images?> фото</p></div>
+<div class="td l"><a href="/portfolio/<?=$last_next[0]->link?>/"><img src="http://static.otdelkalux.ru/i/arr-l.png" style="background-image: url('<?=$last_next[0]->image?>s50-c/')" alt="<?=$last_next[0]->title?>"/><?=$last_next[0]->title?></a><p class="small"><?=$last_next[0]->picasa_images?> фото</p></div>
 <? } if(!empty($last_next[1]->link)) {?>
-<div class="td r"><a href="/portfolio/<?=$last_next[1]->link?>/"><img src="<?=$last_next[1]->image?>s50-c/" alt="<?=$last_next[1]->title?>"/><?=$last_next[1]->title?></a><p class="small"><?=$last_next[1]->picasa_images?> фото</p></div>
+<div class="td r"><a href="/portfolio/<?=$last_next[1]->link?>/"><img src="http://static.otdelkalux.ru/i/arr-r.png" style="background-image: url('<?=$last_next[1]->image?>s50-c/')" alt="<?=$last_next[1]->title?>"/><?=$last_next[1]->title?></a><p class="small"><?=$last_next[1]->picasa_images?> фото</p></div>
 <?}?>
 </div>
 </div>

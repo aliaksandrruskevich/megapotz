@@ -1,14 +1,22 @@
 application: remont-cottage
 version: 1
+runtime: python27
 api_version: 1
-runtime: python
+threadsafe: yes
 
 default_expiration: "300d"
 
 handlers:
+- url: /send
+  script: send.application
+
 - url: (.*)/
   static_files: static\1/index.html
   upload: static/index.html
 
 - url: /
   static_dir: static
+
+libraries:
+- name: webapp2
+  version: latest

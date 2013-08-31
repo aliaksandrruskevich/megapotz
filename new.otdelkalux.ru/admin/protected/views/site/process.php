@@ -102,7 +102,6 @@ document.location.hash = 'obj'+i;
 <div class="yline"><span id="showhide">Скрыть карту</span></div>
 <section id="objects">
 <div class="col470">
-<p class="title">На этапе черновой отделки:</p>
 <?php
 $i=1;
 ?>
@@ -127,7 +126,7 @@ if($obj->type==1) { ?>
 </div>
 </div>
 </div>
-<div class="yline"></div>
+<!--<div class="yline"></div>
 <div class="col470">
 <p class="title">На этих объектах сейчас ведётся чистовая отделка:</p>
 <?foreach($objects as $obj) { 
@@ -142,7 +141,7 @@ if($obj->type==2) { ?>
 <?}
 }
 ?>
-</div>
+</div>-->
 </section>
 <section id="counters">
 <div class="like_holder">

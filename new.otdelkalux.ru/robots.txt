@@ -2,6 +2,3 @@ User-Agent: *
 Disallow: *index.html
 Disallow: *?
 Disallow: *&
-
-User-agent: Googlebot
-Disallow: /

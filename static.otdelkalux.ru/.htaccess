@@ -9,9 +9,3 @@ FileETag None
 	ExpiresActive on
 	ExpiresDefault "access plus 1 month"
 </IfModule>
-
-AddType text/css cssz
-AddType application/javascript jsz
-AddType image/svg+xml svg svgz
-
-AddEncoding gzip svgz cssz jsz

@@ -1,6 +1,0 @@
-/* IE8 fixes */
-.hover .gplus-button-highlighter	{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"}
-.gplus-button-highlighter	{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)"}
-#fs-tip	{ display: none; }
-#gplus-ui	{ display: block }
-#gplus-ui.hidden	{ display: none; }

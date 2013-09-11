@@ -1,10 +1,5 @@
-/*!
- * Author: Mikhail Shestakov (mike.shestakov@gmail.com)
- */
-
-;(function ( $, window, document ) {
+var GPlusGallery = (function () {
 	'use strict';
-    var pluginName = 'GPlusGallery';
 
 	// Defaults
 	var defaults = {
@@ -18,23 +13,64 @@
 	};
 
 	// Constructor
-	function GPlusGallery( element, photos, options ) {
+	function GPlusGallery(root, params) {
+		var noscript = root.querySelector('noscript');
+		var pics = [];
+
+		// Скрипт, который выпотрашивает данные из HTML
+		noscript.textContent.match(/<img (.+)>/g)
+            .forEach(function(part){
+				var pic = {};
+                part.match(/\w+="[^"]*"/g).forEach(function(pair) {
+                    pair.match(/(\w+)="([^"]*)"/)
+					if (RegExp.$1 == 'src') pic.src = RegExp.$2;
+					else if (RegExp.$1 == 'alt') pic.alt = RegExp.$2;
+					else if (RegExp.$1 == 'style') {
+						RegExp.$2.match(/width.*?px|height.*?px/g).forEach(function(rule) {
+							if (rule.indexOf('width') == 0) pic.width = +rule.match(/\d+/g)[0];
+							if (rule.indexOf('height') == 0) pic.height = +rule.match(/\d+/g)[0];
+						});
+					}
+                });
+				pics.push(pic);
+            });
+			console.info(pics);
+return;
+
+        for (var i = 0, l = noscriptNodes.length, noscript; noscript = noscriptNodes[i], i < l; i++) {
+            stub.innerHTML = noscript.textContent.replace(re, 's' + picSide + '-c/');
+
+            var frag = document.createDocumentFragment();
+            for (var i1 = 0, l1 = stub.children.length, node; i1 < l1; i1++) {
+                node = stub.removeChild(stub.children[0]);
+                frag.appendChild(node);
+                picIndex.push({
+                    node:		node,
+                    baseUrl:	node.src.substring(0,83)
+                });
+            }
+
+            noscript.parentNode.replaceChild(frag, noscript);
+
+
+
 		this.element = element;
 		this.photos = photos;
-		this.options = $.extend( {}, defaults, options );
 
 		this.rows = [];
 		
-		// Properties for building gallery's DOM tree
 		this.treeBuilt = false;
 		this.oRootDiv = document.createElement('div' );
 		this.oImgs = [];
 
 		this.init();
-	}
+	}}
 
 	GPlusGallery.prototype = {
 		init: function() {
+
+
+
 
 			this.oRootDiv.setAttribute('id', 'gplus-gallery-grid');
 			this.element.appendChild( this.oRootDiv );
@@ -156,305 +192,7 @@
 		}
 	};
 
-	/* Google+ fullscreen photo view mode class */
 
-	function GPlusFullscreen( current, photos, options, destructor )	{
 
-		// Setting core properties
-		
-		this.options = options;
-		this.photos = photos;
-		
-		// Setting runtime properties
-		this.screenHeight	= 0;
-		this.screenWidth	= 0;
-		this.screenRatio	= 1;
-		this.selfDestroy = destructor;
-		
-		// Make sure current photo is not out of range
-		this.current = current  >= photos.length ? 0 : current;
-		this.state = this.current === photos.length - 1 ? 'replay' : 'play';
-		
-		// HTML templates for fullscreen slideshow
-		this.HTMLTemplate	= {
-			layout:	'<div id="gplus-fullscreen-layout"><div class="gplus-picture-holder"><div class="gplus-picture-aligner"><img id="gplus-picture" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/></div></div><div id="gplus-ui"><div id="gplus-go-left"><div class="gplus-arrow"></div></div><div id="gplus-go-right"><div class="gplus-arrow"></div></div><div class="gplus-pult"><div id="gplus-button-left"><div class="gplus-button-highlighter"></div></div><div id="gplus-button-right"><div class="gplus-button-highlighter"></div></div><div id="gplus-caption-left"><div class="gplus-caption-icon"></div><span class="gplus-caption-play">Приостановить</span><span class="gplus-caption-stop">Продолжить</span><span class="gplus-caption-replay">Начать заново</span></div><div id="gplus-caption-right"><div class="gplus-caption-icon"></div></div></div></div><div id="gplus-spinner"></div></div>',
-			fullscreenHint:	'<div id="gplus-fullscreen-tip" class="hidden"><p>Нажмите <span style="color: #f00">Enter</span>, чтобы смотреть фото во весь размер экрана.</p></div>'
-		};
-
-		this.init();
-	}
-
-    GPlusFullscreen.prototype = {
-
-	init: function() {
-		var _this = this;
-
-		$('body').append( this.HTMLTemplate.layout );
-		this.rootNode = $( '#gplus-fullscreen-layout' );
-
-		// Initializing spinner
-		if ( this.options && this.options.spinner )	{
-			this.spinner = this.options.spinner;	// If spinner.js object passed, use it
-		}
-		else	{
-			this.spinner = {
-				el: document.getElementById('gplus-spinner'),
-				spin: function(){
-					this.el.className = 'css-spinner';
-				},
-				stop: function(){
-					this.el.className = 'css-spinner hidden';
-				}
-			};
-		}
-
-		this.getScreenDimensions();
-		this.updatePicture();
-
-		// Throw 'Use fullscreen mode' hint if browser supports it
-		if ( document.cancelFullScreen || document.mozCancelFullScreen || document.webkitCancelFullScreen ) {
-			this.fullscreenHint = $( this.HTMLTemplate.fullscreenHint ).appendTo( '#gplus-fullscreen-layout' ).removeClass( 'hidden' );
-			window.setTimeout( function() {
-				_this.fullscreenHint.addClass( 'hidden' ).on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd otransitionend', function() {
-					this.style.display = 'none';
-				});
-			}, this.options.fullscreenHintDelay );
-		}
-
-		// Main ticker
-		var slideTicker = 0;
-
-		// These vars are intended to show/hide UI on user idle
-		var	ticksSinceMouseMove = 0,
-			lastMouseX = 0,	// Cursor X position at previous tick
-			lastMouseY = 0;	// Cursor Y position at previous tick
-		
-		// This helps to prevent superfluous resized picture reloads from Google+
-		var resizeTicker = 0;
-
-		// Timer
-		this.ticker = window.setInterval( function() {
-
-			// Sends a signal to update picture
-			if( slideTicker === _this.options.slideInterval ) {
-				_this.autoplay();
-				slideTicker = 0;
-			}
-
-			// Hide controls on user idle
-			if( ticksSinceMouseMove === _this.options.hideUIDelay ) {
-				$( '#gplus-fullscreen-layout' ).addClass( 'no-ui' );
-			}
-			
-			// Resize picture at 2nd tick after last window resize event
-			if( resizeTicker === 2 ) {
-				_this.getScreenDimensions();
-				_this.updatePicture();
-			}
-			
-			slideTicker++;
-			resizeTicker++;
-			ticksSinceMouseMove++;
-
-		}, this.options.tickDuration );
-
-		// Show UI on user action
-		$( document ).on( 'mousemove.GPlusFullscreen', function ( e ) {
-
-			// User is considered as idle if mouse move is less than 5px by X or Y
-			if( Math.abs( lastMouseX - e.pageX ) > 5 || Math.abs( lastMouseY - e.pageY ) > 5 )	{
-				ticksSinceMouseMove = 0;
-				$( '#gplus-fullscreen-layout' ).removeClass( 'no-ui' );
-			}
-
-			lastMouseX = e.pageX;
-			lastMouseY = e.pageY;
-		});
-		
-		// Drop resize ticker on resize
-		$(window).on( 'resize.GPlusFullscreen', function(){
-			resizeTicker=0;
-		});
-		
-		// Keyboard events
-		$( document ).on( 'keydown.GPlusFullscreen', function( e ) {
-			switch (e.keyCode)	{
-				case 13:	// Enter
-					_this.toggleFullscreen();
-					break;
-				case 37:	// Left
-					_this.prev();
-					break;
-				case 39:	// Right
-					_this.next();
-					break;
-				case 32:	// Space
-					$('#gplus-caption-left').click();
-					break;
-				}
-		});
-		
-		// Image load event
-		$( '#gplus-picture' ).on( 'load', function(){
-			_this.spinner.stop();
-			slideTicker = 0;
-		});
-		
-		// Animating  controls
-		$('#gplus-go-left, #gplus-go-right').on('mouseenter mouseleave', function() { $(this).toggleClass('hover'); });
-		$('#gplus-caption-left').on('mouseenter mouseleave', function() { $('#gplus-button-left').toggleClass('hover'); });
-		$('#gplus-caption-right').on('mouseenter mouseleave', function() { $('#gplus-button-right').toggleClass('hover'); });
-		
-		// Prev / Next
-		$('#gplus-go-left').on( 'click', function() { _this.prev(); });
-		$('#gplus-go-right').on( 'click', function() { _this.next(); });
-
-		// Play / stop control
-		$('#gplus-caption-left').on( 'click', function() {
-			switch (_this.state) {
-				case 'stop':
-					_this.state = 'play';
-					slideTicker = 0;
-					break;
-				case 'replay':
-					_this.current = 0;
-					slideTicker = 0;
-					_this.state = 'play';
-					break;
-				case 'play':
-					_this.state='stop';
-					break;
-			}
-
-			_this.updatePicture();
-		});
-		
-		// Exit button
-		$('#gplus-caption-right').click(function(){
-			_this.deinit();		
-		});
-    },
-	
-	deinit:	function(){
-		// General CSS fix
-		
-		// Clearing timers
-		window.clearInterval(this.ticker);
-
-		// Removing event handlers
-		$( document ).off( '.GPlusFullscreen' );
-		$( window ).off( 'resize.GPlusFullscreen' );
-		$('#gplus-picture').off();
-		$('#gplus-go-left, #gplus-go-right, #gplus-caption-left, #gplus-caption-right').off();
-		
-		if( this.fullscreenHint ) {
-			this.fullscreenHint.off();
-		}
-
-		// Removing DOM
-		$('#gplus-fullscreen-layout').remove();
-		this.selfDestroy();
-	},
-
-	updatePicture: function(){
-		// Show/hide navigation controls
-		$('#gplus-go-left').removeClass().addClass( this.current === 0 ? 'hidden' : '' );
-		$('#gplus-go-right').removeClass().addClass( this.current === (this.photos.length - 1) ? 'hidden' : '' );
-
-		var photoholder = $('#gplus-picture')[0];
-		
-		// !!! Костыль для главной страницы !!!
-		if ( $('body').attr('id')==='page-index' )	{
-			if ( this.current === (this.photos.length - 1) && $(photoholder).parent().prop('tagName')!=='A'){
-				$(photoholder).wrap('<a href="/portfolio/process/"/>');
-			}
-			else if( this.current !== (this.photos.length - 1) && $(photoholder).parent().prop('tagName')==='A')	{
-				$(photoholder).unwrap();
-			}
-		}
-		
-		// Making URL to photo of appropriate size
-		var src = this.photos[this.current].url;
-		
-		if( this.photos[this.current].aspectRatio > this.screenRatio )	{
-			src += 'w' + this.screenWidth + '/';
-		}
-		else	{
-			src += 'h' + this.screenHeight + '/';
-		}
-
-		if( photoholder.src !== src )	{
-			photoholder.src = src;
-			this.spinner.spin( $('#gplus-spinner')[0] );
-		}
-
-		$('#gplus-caption-left')[0].className = this.state;
-	},
-
-	prev: function(){
-		if( this.current > 0 ) {
-			this.current--;
-			this.updatePicture();
-		}
-	},
-
-	next: function(){
-
-		if( this.current < this.photos.length - 1 ) {
-			this.current++;
-
-			if( this.current === this.photos.length - 1 ) {
-				this.state = 'replay';
-				// Show controls
-				$( '#gplus-fullscreen-layout' ).removeClass( 'no-ui' );
-			}
-		}
-
-		this.updatePicture();
-	},
-
-	autoplay: function(){
-		if( this.state === 'play' ) {
-			this.next();
-		}
-	},
-
-	getScreenDimensions: function() {
-		this.screenWidth = this.rootNode.width();
-		this.screenHeight = this.rootNode.height();
-		this.screenRatio = this.screenWidth / this.screenHeight;
-	},
-	
-	toggleFullscreen: function(){
-		if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-			if (this.rootNode[0].requestFullScreen) {
-				this.rootNode[0].requestFullScreen();
-			} else if (this.rootNode[0].mozRequestFullScreen) {
-				this.rootNode[0].mozRequestFullScreen();
-			} else if (this.rootNode[0].webkitRequestFullScreen) {
-				this.rootNode[0].webkitRequestFullScreen();
-			}
-			$( '#gplus-fullscreen-tip' ).hide();
-		} else {
-			if (document.cancelFullScreen) {
-				document.cancelFullScreen();
-			} else if (document.mozCancelFullScreen) {
-				document.mozCancelFullScreen();
-			} else if (document.webkitCancelFullScreen) {
-				document.webkitCancelFullScreen();
-			}
-		}
-	}
-	};
-
-    // A really lightweight plugin wrapper around the constructor, 
-    // preventing against multiple instantiations
-    $.fn[pluginName] = function ( photos, options ) {
-        return this.each(function () {
-			if (!$.data(this, 'plugin_' + pluginName)) {
-				$.data(this, 'plugin_' + pluginName, new GPlusGallery( this, photos, options ));
-			}
-        });
-    };
-
-})( jQuery, window, document );
+    return GPlusGallery;
+})();

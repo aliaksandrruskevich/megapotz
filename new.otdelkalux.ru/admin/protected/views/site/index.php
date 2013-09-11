@@ -2,86 +2,72 @@
 <!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
 <html lang="ru" itemscope itemtype="http://schema.org/GeneralContractor">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
-<meta name="viewport" content="width=1000"/>
-<meta name="keywords" content="ремонт коттеджей, отделка коттеджей, ремонт таунхаусов, отделка, внутренняя отделка загородного дома, отделка коттеджей под ключ, отделка загородных домов, ремонт загородных домов, ремонт коттеджей под ключ, внутренняя отделка коттеджей, ремонт коттеджей цены, отделка таунхаусов, ремонт и отделка коттеджей, отделка под ключ, элитный ремонт коттеджей, элитная отделка коттеджей, стоимость отделки коттеджа, ремонт коттеджей загородных домов, ремонт коттеджей фото, ремонт коттеджа фото, отделка коттеджей цена, отделка домов и коттеджей, комплексный ремонт коттеджей, элитный ремонт загородных домов, элитная отделка загородных домов, цены на отделку коттеджей"/>
-<meta name="description" content="Выполняем весь комплекс отделочных и ремонтных работ в коттеджах, загородных домах и таунхаусах: отопление, электрика, сантехника, внутренняя отделка под ключ. Фотографии завершенных объектов, калькулятор стоимости ремонта."/>
-<meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
-<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<link rel="canonical" href="http://www.otdelkalux.ru/"/>
-<meta name="robots" content="noyaca"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=1000">
+<meta name="keywords" content="ремонт, отделка, коттедж, загородный дом, стоимость, фото, таунхаус, элитный, под ключ">
+<meta name="description" content="Выполняем весь комплекс отделочных и ремонтных работ в коттеджах, загородных домах и таунхаусах: отопление, электрика, сантехника, внутренняя отделка под ключ. Фотографии завершенных объектов, калькулятор стоимости ремонта.">
 <title>Ремонт и отделка коттеджей, загородных домов и таунхаусов под ключ: цены, фото</title>
-<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css"/>
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/ie8.css"/><![endif]-->
-<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.css"/>
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.ie8.css"/><![endif]-->
-<link rel="shortcut icon" href="http://static.otdelkalux.ru/favicon.ico" type="image/x-icon" />
-<!--[if lt IE 9]>
-<script type="text/javascript" src="http://yandex.st/jquery/1.10.1/jquery.min.js"></script>
-<![endif]-->
-<!--[if gte IE 9]><!-->
-<script type="text/javascript" src="http://yandex.st/jquery/2.0.2/jquery.min.js"></script>
-<!--<![endif]-->
-<script type="text/javascript" src="http://static.otdelkalux.ru/gplus/jquery.gplus.js"></script>
+<meta itemprop="image" content="http://farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="canonical" href="http://www.otdelkalux.ru/">
+<meta name="robots" content="noyaca">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css">
 <script type="text/javascript" src="/js/main.js"></script>
-<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-17254104-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = 'http://www.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
-<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?49"></script>
-<script type="text/javascript">VK.init({apiId: 2956871, onlyWidgets: true});</script>
-<!--[if lt IE 9]><script type="text/javascript" src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script><![endif]-->
+<!-- gplus gallery-->
+<script type="text/javascript" src="http://yandex.st/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://static.otdelkalux.ru/gplus/jquery.gplus.js"></script>
+<link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/gplus/gplus.css">
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"CalculateAction","url":"http://www.otdelkalux.ru/","specificationUrl":"http://www.otdelkalux.ru/calc.xml"}</script>
 </head>
 <body id="page-index">
-<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, enableAll: true, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
-<!--[if lt IE 8]>
-<p style="text-align: center; margin: 100px; font: normal 60px Arial; color: #f00">Сайт не предназначен для просмотра в безнадежно устаревших браузерах Internet Explorer 6 и 7.<br/><a href="http://browser-update.org/ru/update.html">Обновите ваш браузер</a> или посмотрите старую версию нашего сайта: <a href="http://old.otdelkalux.ru">old.otdelkalux.ru</a></p>
-<![endif]-->
 <section id="title">
-<div class="column">
-<div class="td" id="nav">
-<a href="/" id="logo"><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/logo.png" /><![endif]--><!--[if !IE]>--><img src="http://static.otdelkalux.ru/i/logo.svg" alt=""/><!--<![endif]--><span>Артель строительных бригад Сергея Петунина</span></a>
+<header class="column">
+<a itemprop="url" href="http://www.otdelkalux.ru/" id="logo">
+<img itemprop="logo" src="http://static.otdelkalux.ru/i/logo.svg" alt="Артель Сергея Петунина">
+<span itemprop="name">Артель Сергея Петунина</span>
+</a>
 <nav>
 <a class="index" href="/">Ремонт и отделка</a>
 <a class="portfolio" href="/portfolio/">Фото</a>
-<a class="portfolio" href="/portfolio/process/">Осмотр объектов</a>
+<a class="osmotr" href="/osmotr/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
 <a class="docs" href="/docs.html">Документы</a>
 <a class="warranty" href="/warranty.html">Гарантия</a>
 <a class="articles" href="/articles/">Статьи</a>
 <a class="contacts" href="/contacts.html">Контакты</a>
 </nav>
-</div>
-</div>
-<header class="column">
-<div class="td" id="bg">
+</header>
+<div id="bg" style="background-image: url('http://static.otdelkalux.ru/i/bg.jpg');">
 <div style="position: relative">
 <div id="text_holder">
-<h1><span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и внутренней отделке загородных домов,</span> <br/>коттеджей и таунхаусов <span class="red">под ключ</span></h1>
-<!--noindex-->
-<script type="text/javascript">
-var html = [
-'<span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке</span> <br/>квартир <span class="red">под ключ</span>',
-'<span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке</span> <br/>таунхаусов <span class="red">под ключ</span>',
-'<span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке</span> <br/>загородных домов <span class="red">под ключ</span>',
-'<span class="u">Полный комплекс работ</span> <br/><span class="u">по элитному ремонту и отделке</span> <br/>коттеджей <span class="red">под ключ</span>'
-];
-var query = ['квартир', 'таунхаус', 'загородн', 'коттедж'];
-var ref = decodeURIComponent(document.referrer);
-for (var i = 0; i < 3; i++){
-if (ref.match(query[i]))
-break;
-}
-$('#text_holder h1').html(html[i]);
-</script>
-<!--/noindex-->
+<h1><span class="u">Полный комплекс работ</span> <br><span class="u">по элитному ремонту и внутренней отделке загородных домов,</span> <br>коттеджей и таунхаусов <span class="red">под ключ</span></h1>
 <p class="since">Работаем с <span itemprop="foundingDate">1998</span> года</p>
 </div>
 </div>
-<!--noindex--><div id="mouse">Прокрутите вниз, <br/>чтобы узнать больше</div><!--/noindex-->
+<!--noindex-->
+<script type="text/javascript">
+(function() {
+// Адаптируем тайтл под запрос юзера. Нужно оставить здесь, чтобы не мигало...
+var html = ['квартир', 'таунхаусов', 'загородных', 'коттеджей'];
+var query = ['квартир', 'таунхаус', 'загородн', 'коттедж'];
+var ref = decodeURIComponent(document.referrer);
+for (var i = 0; i < 3; i++) {
+if (ref.match(query[i])) break;
+}
+var h1 = document.querySelector('#text_holder h1');
+h1.innerHTML = h1.innerHTML.replace('внутренней отделке загородных домов', 'отделке').replace('коттеджей и таунхаусов', html[i]);
+// Прягаем к калькулятору, если юзер пришел с островов
+if (ref.match(/фот/)) document.location.hash = 'gallery';
+if (document.location.search.match(/area|wc/) || ref.match(/стоит|стоимост|цен/)) document.location.hash = 'price';
+})();
+</script>
+<div id="mouse">Прокрутите вниз, <br>чтобы узнать больше</div>
+<!--/noindex-->
 </div>
-</header>
 </section>
 <section id="whatwedo">
-<div class="wwd">
-<p class="h2 center">Все перечисленные работы мы выполняем <br/>только своими силами, <span class="red">без субподряда</span>.</p>
+<p class="h2 center">Все перечисленные работы мы выполняем <br>только своими силами, <span class="red">без субподряда</span>.</p>
 <div class="stage">
 <p>Подготовка проекта</p>
 <ul>
@@ -104,7 +90,6 @@ $('#text_holder h1').html(html[i]);
 <li id="fasad">Фасадные работы</li>
 </ul>
 </div>
-</div>
 </section>
 <section id="objects">
 <div class="column">
@@ -115,18 +100,20 @@ $user_id=!empty($obj->picasa_user_id)?$obj->picasa_user_id:"10409491683703684828
 $images=  SiteController::getImages($obj->picasa_album_id,$user_id);
 ?>
 <div class="album">
-<div class="image_stack">
+<a href="/portfolio/<?=$obj->link?>/" class="image_stack">
+<noscript>
 <?
 $i=0;
 foreach($images as $img) {
 $i++;
 $j=3-$i;
 ?>
-<img alt="<?=$images[$j]['title']?>" src="<?=$images[$j]['url']?>"/>
+<img alt="<?=$images[$j]['title']?>" src="<?=$images[$j]['url']?>">
 <?
 if ($i>=3) break;
 }?>
-</div>
+</noscript>
+</a>
 <p class="link"><a href="/portfolio/<?=$obj->link?>/"><?=$obj->title?></a></p>
 <p class="count"><?=count($images)?> фото</p>
 </div>
@@ -134,12 +121,12 @@ if ($i>=3) break;
 unset($images);
 }?>
 </div>
-<div class="center"><div class="button red"><a href="/portfolio/">Смотреть все объекты ►</a></div></div>
+<div class="center"><div class="button red"><a href="/portfolio/">Смотреть все объекты</a></div></div>
 </div>
 </section>
-<section id="gallery">
-<div class="column">
+<section id="gallery" class="column">
 <h2 class="h1 center">Фото ремонта коттеджей</h2>
+
 <div id="GPlus"></div>
 <script type="text/javascript" src="http://fgnass.github.com/spin.js/dist/spin.min.js"></script>
 <script type="text/javascript">
@@ -163,176 +150,159 @@ var photos = [
 {title: "", url: "https://lh6.googleusercontent.com/-i3gJKv6bFU8/T_RtEqJ1abI/AAAAAAAAAhY/CE_1wyg-Kfo/s600", width: 512, height: 340}
 ];
 </script>
-<div class="center"><div class="button red"><a href="/portfolio/best/">Смотреть другие фотографии ►</a></div></div>
-</div>
+<div class="center"><div class="button red"><a href="/portfolio/best/">Смотреть другие фотографии</a></div></div>
 </section>
-<section id="price">
-<div class="column">
+<section id="price" class="column">
 <h2 class="h1 center">Сколько стоит ремонт?</h2>
-<div id="calculator" class="cott">
+<div id="calculator">
+<form method="post" action="/email_ok.html" target="send_estimate">
 <div class="calc-head">
-<div class="selector cott" data-type="cott">Коттедж</div>
-<div class="selector appt" data-type="appt">Квартира</div>
-<div class="input"><label for="area">Площадь, м²</label><input type="number" id="area" value="400" min="70" max="2000" step="1"/></div>
-<div class="input"><label for="wc">Санузлы</label><input type="number" id="wc" value="3" min="1" max="8" step="1"/></div>
-<div class="calculate"><div class="button red"><span>Пересчитать</span></div></div>
+<input type="radio" name="type" value="cott" id="cott" class="dn"><label for="cott" class="cott">Коттедж</label>
+<input type="radio" name="type" value="appt" id="appt" class="dn"><label for="appt" class="appt">Квартира</label>
+<div class="input" style="padding-left: 130px"><label for="area">Площадь, м²</label><input type="number" name="area" id="area" value="400" min="100" max="2000" step="1"></div>
+<div class="input"><label for="wc">Санузлы</label><input type="number" name="wc" id="wc" value="3" min="1" max="8" step="1"></div>
 </div>
 <div class="calc-hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
 <div class="calc-body">
 <table>
 <thead><tr><th></th><th>Бизнес</th><th>Люкс</th></tr></thead>
-<tfoot>
-<tr><td>Общая сумма (работа + материал)</td><td></td><td></td></tr>
-</tfoot>
+<tfoot><tr><td>Общая сумма (работа + материал)</td><td></td><td></td></tr></tfoot>
 <tbody>
-<tr class="otd-pk"><td>Отделка под ключ</td><td></td><td></td></tr>
-<tr class="ele-pk"><td>Электрика под ключ</td><td></td><td></td></tr>
-<tr class="san-pk"><td>Сантехника под ключ</td><td></td><td></td></tr>
-<tr class="oto-pk"><td>Отопление под ключ</td><td></td><td></td></tr>
-<tr class="otd-m"><td>Черновой материал отделка</td><td></td><td></td></tr>
-<tr class="ele-m"><td>Черновой материал электрика</td><td></td><td></td></tr>
-<tr class="san-m"><td>Черновой материал сантехника</td><td></td><td></td></tr>
-<tr class="oto-m"><td>Черновой материал отопление</td><td></td><td></td></tr>
+<tr><td>Отделка под ключ</td><td></td><td></td></tr>
+<tr><td>Электрика под ключ</td><td></td><td></td></tr>
+<tr><td>Сантехника под ключ</td><td></td><td></td></tr>
+<tr><td>Отопление под ключ</td><td></td><td></td></tr>
+<tr><td>Черновой материал отделка</td><td></td><td></td></tr>
+<tr><td>Черновой материал электрика</td><td></td><td></td></tr>
+<tr><td>Черновой материал сантехника</td><td></td><td></td></tr>
+<tr><td>Черновой материал отопление</td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
+<div class="sendback">
+<label for="name">Отправить эту калькуляцию на почту:</label>
+<input type="text" placeholder="Имя" title="Наличие вашего имени в тексте письма снижает вероятность попадания в спам" id="name" value="" name="name" required="required">
+<input type="email" placeholder="vasha@pochta.ru" title="Не волнуйтесь, кроме этого письма ничего отправлять не будем :)" id="email" value="" name="email" required="required">
+<input type="hidden" name="html" value="" id="html">
+<input type="submit" class="button red" value="Отправить">
 </div>
-<div class="center" style="margin: 40px 0">
-<p><!--[if lte IE 8]><img src="http://static.otdelkalux.ru/i/alert.png" /><![endif]--><!--[if !IE]>--><img src="http://static.otdelkalux.ru/i/alert.svg" alt=""/><!--<![endif]--></p>
-<p style="margin: 20px; line-height: 1.4em; font-size: 14px;">В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса. Более точную информацию по ценам мы сможем дать только после ознакомления с дизайн-проектом.</p>
+</form>
+<iframe src="about:blank" id="send_estimate" name="send_estimate" class="dn"></iframe>
 </div>
+<div class="disclaimer">
+<p><img src="http://static.otdelkalux.ru/i/alert.svg" alt=""></p>
+<p>В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса. Более точную информацию по ценам мы сможем дать только после ознакомления с дизайн-проектом.</p>
 </div>
 </section>
-<section id="circles">
-<div class="column">
+<section id="circles" class="column">
 <div class="cholder">
 <div class="circle">
-<p><b><br/><br/>Минимальная<br/>предоплата</b></p>
-<p>Оплата производится по факту завершения каждого этапа работ. Предоплата только за материал <br/>+ 20% от стоимости этапа работ.</p>
+<p><b><br><br>Минимальная<br>предоплата</b></p>
+<p>Оплата производится по факту завершения каждого этапа работ. Предоплата только за материал <br>+ 20% от стоимости этапа работ.</p>
 </div>
 </div>
-<div class="cholder"><div class="circle">
-<p><b><br/><br/>Гарантия</b></p>
-<p>В договоре прописывается гарантия <br/>на ремонт и внутреннюю отделку <br/на 2 года.</p>
+<div class="cholder">
+<div class="circle">
+<p><b><br><br>Гарантия</b></p>
+<p>В договоре прописывается гарантия <br>на ремонт и внутреннюю отделку <br>на 2 года.</p>
 </div>
 </div>
-<div class="cholder"><div class="circle">
-<p><b><br/><br/>Страхование</b></p>
-<p>Бесплатное страхование <br/>гражданской ответственности перед <br/>третьими лицами на период <br/>проведения ремонта на сумму <br/>1 000 000 рублей *</p>
-<p><img id="ingos" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAfBAMAAAB3z9yXAAAAGFBMVEUpgueszvZop+5Qmes1iejQ5PqKu/L3+v7V5W7OAAAAAXRSTlMAQObYZgAAAo1JREFUeF6V0E2TojoYhuEHEl2PtsoWEZtt/GDcRvzaNjbKFrsF1hHD+/cPYyHqZs70XVAF4SKE4DXWDyX+PRYP8l8/8HkP5vXfubkH2P/49VqumxC4lZ8KcEfweoiv5e2y9rkOqBdfPJoQlW0iN/JJybFWCyLtE72xOOLV86L2i9IgN4+WKiCnXESLyyp2vRHNc++k8t96qNdxAa9YnGu/KXYk8g+jZCQyK2lrQ8GYlDCGRmkEmtOcqhvVR+O9xnMSjPwLsCsAGCVMLeOpUmBUPHyn8jqufIUlp7zyi+vdm7Tck4T10fhyX/mw/+K9u6e4bH2TgPeYX38267kdiwv4ogCXN5+JnaYEsW48nRvPY9vUGwVjXMIQt/UA45n1YV7IbvyK5n/2c0UuvGhzMUl4TnWKpZKmlrwDr9gkVlT7XLWoR6VHEyrQ1pTA01rkWkuPxI4SU1fESuKy9lOXOXPHDZyV4wLDL4B1zjCrM3Bk4Ag+wnQ0FdMR1gDHUw4A7uI1M0LdtiN5J8GjEwAjwmu7u+Dhu/QzG498CXgCdavZLWs2r/ele+bHdzy1ScDV4+3DLa3rKdNMbo72s2cXGFe81gprwpSN/K2xXALwu3l3NAJ3ZtjaGIrtL265bQE+mmGzB1f2wx8G34CvTrqPcac0w942/p1+ni4sPcpqgFmp8NUVTXk2B/Kk1TsuVevT+hi8pV/G0e+d5uVWtaKhyoJ4nLz8LJYl+u3P09UbeNt9EPI08Ya2sc+u+fs4nmdl6qCJhe5EC7NoHVeltjcd+d5tp8I6Y1cNxN+5H06iwxmPlofQBhOmjfEVzMY2YV+YAoGNWSBn7GxKB89xiVtmauMnZcMfcdbt/cwP5N/Af4yvvbqw6+DyAAAAAElFTkSuQmCC" alt="Страхование ответственности в Ингосстрах"/></p>
+<div class="cholder">
+<div class="circle">
+<p><b><br><br>Страхование</b></p>
+<p>Бесплатное страхование <br>гражданской ответственности перед <br>третьими лицами на период <br>проведения ремонта на сумму <br>1 000 000 рублей *</p>
+<p><img id="ingos" src="http://static.otdelkalux.ru/i/ingos.png" alt="Страхование ответственности в Ингосстрах"></p>
 </div>
 <p class="comment">* — Страховой договор заключает собственник помещения, а после проведения ремонта мы компенсируем страховую премию.</p>
 </div>
-</div>
 </section>
+
 <section id="serge_petunin">
 <div class="column">
 <div class="cite">
 <blockquote>
-<span class="l">«</span>
 <p>Более пятнадцати лет я руковожу работами по ремонту и отделке элитных загородных домов. Я – профессионал, и знаю, что и как надо делать, и отвечаю за то, что делаю.</p>
 <p>Обращаясь ко мне, вы снимаете с себя всю головную боль, связанную с ремонтом. Когда всё в одних руках, от вас требуется только поставить задачу и принять результат. Все промежуточные процессы я проведу на высшем уровне.</p>
-<span class="r">»</span>
 </blockquote>
-<div class="author" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
-<p><a target="_blank" rel="author" href="https://plus.google.com/104094916837036848285/?rel=author"><span itemprop="name">Сергей Петунин</span></a>, <span itemprop="contactType">руководитель работ</span></p>
+<div class="author">
+<p><b itemprop="founder">Сергей Петунин</b>, руководитель работ</p>
 </div>
 </div>
 </div>
 </section>
+
 <section id="official">
-<div class="column">
 <p class="h1 center">Работаю официально</p>
 <div class="docs">
-<div>
-<a target="_blank" href="https://plus.google.com/photos/104094916837036848285/albums/5764239495290938993/5764239503098428994"><img src="https://lh5.googleusercontent.com/-9W9unrwpMsM/T_6xSa50vkI/AAAAAAAAAjU/Emi7DteexcI/s256/" alt="Свидетельство о присвоении ИНН"/></a>
-<p>Свидетельство о присвоении ИНН</p>
-</div>
-<div>
-<a target="_blank" href="https://plus.google.com/photos/104094916837036848285/albums/5764239495290938993/5764239501776809522"><img src="https://lh5.googleusercontent.com/-2RJvpn4FvvY/T_6xSV-ubjI/AAAAAAAAAjQ/WrSqcx0Z1n4/s256/" alt="Свидетельство о регистрации юридического лица"/></a>
-<p>Свидетельство о регистрации юридического лица</p>
-</div>
-<div>
-<a target="_blank" href="https://plus.google.com/photos/104094916837036848285/albums/5764239495290938993/5764239495369205058"><img src="https://lh5.googleusercontent.com/-5QaamqERlq0/T_6xR-HCJUI/AAAAAAAAAjM/FuCI5_hhXu0/s256/" alt="Допуск от СРО (лицензия на работу)"/></a>
-<p>Свидетельство о допуске к работам, выданное СРО (лицензия на работу)</p>
-</div>
+<figure>
+<a target="_blank" href="https://lh5.googleusercontent.com/-9W9unrwpMsM/T_6xSa50vkI/AAAAAAAAAjU/Emi7DteexcI/s1000/inn.jpg"><img src="https://lh5.googleusercontent.com/-9W9unrwpMsM/T_6xSa50vkI/AAAAAAAAAjU/Emi7DteexcI/s256/" alt="Свидетельство о присвоении ИНН"></a>
+<figcaption>Свидетельство о присвоении ИНН</figcaption>
+</figure>
+<figure>
+<a target="_blank" href="https://lh5.googleusercontent.com/-2RJvpn4FvvY/T_6xSV-ubjI/AAAAAAAAAjQ/WrSqcx0Z1n4/s1000/ogrn.jpg"><img src="https://lh5.googleusercontent.com/-2RJvpn4FvvY/T_6xSV-ubjI/AAAAAAAAAjQ/WrSqcx0Z1n4/s256/" alt="Свидетельство о регистрации юридического лица"></a>
+<figcaption>Свидетельство о регистрации юридического лица</figcaption>
+</figure>
+<figure>
+<a target="_blank" href="https://lh5.googleusercontent.com/-5QaamqERlq0/T_6xR-HCJUI/AAAAAAAAAjM/FuCI5_hhXu0/s1000/sro.jpg"><img src="https://lh5.googleusercontent.com/-5QaamqERlq0/T_6xR-HCJUI/AAAAAAAAAjM/FuCI5_hhXu0/s256/" alt="Допуск от СРО (лицензия на работу)"></a>
+<figcaption>Свидетельство о допуске к работам, выданное СРО (лицензия на работу)</figcaption>
+</figure>
 </div>
 <div class="center"><div class="button white"><a href="/docs.html">Смотреть все документы</a></div></div>
-</div>
 </section>
+
 <section id="contact">
 <div class="call">
-<p class="w">Есть вопросы? <br/>Или вы хотите согласовать <a href="/portfolio/process/">осмотр объекта</a>, <br/>на котором мы сейчас работаем? <br/>Звоните:</p>
+<p class="w">Есть вопросы? <br>Или вы хотите согласовать <a href="/osmotr/">осмотр объекта</a>, <br>на котором мы сейчас работаем? <br>Звоните:</p>
 <p class="y">+7 (495) 99-88-347</p>
 </div>
-<hr/>
+<hr>
 <div class="email">
-<p class="w">Если у вас есть проект, и вы хотите <br/>узнать, сколько будет стоить ремонт, пишите:</p>
+<p class="w">Если у вас есть проект, и вы хотите <br>узнать, сколько будет стоить ремонт, пишите:</p>
 <p class="y"><a href="mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">hello@otdelkalux.ru</a></p>
 <p>Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
-<hr/>
 </div>
-<div class="ready"><img src="https://lh3.googleusercontent.com/-JvCJh1G2RCk/T75YMe9Xg-I/AAAAAAAAAhQ/v0P0lGT7j9A/s56/" alt="Сергей Петунин"/>Готов <b>оперативно</b> приехать к вам на объект для знакомства и обсуждения деталей предстоящего ремонта!</div>
+<hr>
+<div class="ready"><img src="https://lh3.googleusercontent.com/-JvCJh1G2RCk/T75YMe9Xg-I/AAAAAAAAAhQ/v0P0lGT7j9A/s56/" alt="Сергей Петунин">Готов <b>оперативно</b> приехать к вам на объект для знакомства и обсуждения деталей предстоящего ремонта!</div>
 </section>
-<section id="other">
-<div class="column">
-<div class="blocks" style="margin: 0 auto; width: 420px">
-<iframe width="420" height="315" src="http://www.youtube.com/embed/7_wzJNQhK00" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
+
+
+<section id="other" class="center">
+<figure>
+<iframe width="420" height="315" src="//www.youtube.com/embed/7_wzJNQhK00?rel=0" frameborder="0" allowfullscreen></iframe>
+<figcaption>Запись выпуска передачи «<b>Проект мечты</b>» на телеканале «<b>Усадьба</b>» о строительстве <a href="/portfolio/leningradskoe_37/">дома в римском стиле</a> с участием руководителя проекта&nbsp;— Сергея Петунина. <br><a href="http://www.tv-stream.ru/tv/usadba" rel="nofollow" target="_blank"><img src="http://static.otdelkalux.ru/i/usadba.png" alt="Телеканал Усадьба"></a></figcaption>
+</figure>
+<div style="margin: 50px auto;" class="likes yashare-auto-init" data-yashareL10n="ru" data-yashareTitle="Артель Сергея Петунина" data-yashareDescription="Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ. Наша специализация: внутренняя отделка, монтаж электрики, сантехники, отопления, а также ландшафтные работы." data-yashareImage="https://lh6.googleusercontent.com/-tA-Yr-ZRJqI/UEoo-61MQVI/AAAAAAAAB1E/uTM00UyxDWk/s150-c/" data-yashareQuickServices="vkontakte,gplus,facebook,twitter" data-yashareTheme="counter" data-yashareType="small"></div>
 </section>
-<section id="counters">
-<div class="like_holder">
-<div class="like">
-<div class="g-plusone"></div>
-<script type="text/javascript">
-window.___gcfg = {lang: 'ru'};
-(function() {
-var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-po.src = 'https://apis.google.com/js/plusone.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-})();
-</script>
-</div>
-<div class="like">
-<div id="vk_like"></div>
-<script type="text/javascript">
-VK.Widgets.Like("vk_like", {type: "button"});
-</script>
-</div>
-</div>
-</section>
-<section id="footer">
+
 <footer>
-<p itemprop="name" class="title">Артель строительных бригад Сергея Петунина</p>
+<p class="title">Артель Сергея Петунина</p>
 <div class="info">
-<div>
-<p itemprop="description">Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ</p>
+<div itemprop="description">
+<p>Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ.</p>
 <p>Наша специализация: внутренняя отделка, монтаж электрики, сантехники, отопления, а также ландшафтные работы.</p>
 </div>
 <div>
 <p><b>Офис в Millennium Park</b></p>
 <p itemprop="address">Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
-<p><a itemprop="map" href="http://maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
-<br/>
+<p><a itemprop="map" target="_blank" href="http://maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
+<br>
 <p><b>Офис в Madison Park</b></p>
 <p itemprop="address">Московская область, Новорижское ш., посёлок Мэдисон Парк, вл. 15</p>
-<p><a itemprop="map" href="http://maps.yandex.ru/-/CVEO74NH">На карте</a></p>
+<p><a itemprop="map" target="_blank" href="http://maps.yandex.ru/-/CVEO74NH">На карте</a></p>
 </div>
 <div>
 <p><b>Связаться со мной</b></p>
 <p itemprop="telephone">+7 (495) 99-88-347</p>
 <p><a itemprop="email" href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
-<br/>
+<br>
 <p><b>Online</b></p>
 <p class="social flickr"><a target="_blank" href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
-<p class="social gplus"><a target="_blank" href="https://plus.google.com/104094916837036848285/">Сергей Петунин на Google+</a></p>
-<p><a itemprop="url" href="http://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
+<p class="social gplus"><a target="_blank" rel="author" href="https://plus.google.com/104094916837036848285/?rel=author">Сергей Петунин на Google+</a></p>
+<p><a href="http://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
 </div>
-<div class="qr"><img src="http://static.otdelkalux.ru/i/qr.png" alt="Контактная информация на QR коде"/></div>
+<div class="qr"><img src="http://static.otdelkalux.ru/i/qr.png" alt="Контактная информация на QR-коде"></div>
 </div>
 <div id="year">© <span>2006</span> «Отделка Люкс»</div>
 </footer>
-</section>
 </body>
 </html>

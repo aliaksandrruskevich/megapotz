@@ -2,26 +2,26 @@
 <site xmlns="http://interactive-answers.webmaster.yandex.ru/schemas/site/0.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://interactive-answers.webmaster.yandex.ru/schemas/site/0.0.1  http://interactive-answers.webmaster.yandex.ru/schemas/site-0.0.1.xsd">
 	<title>Калькулятор стоимости ремонта коттеджа под ключ</title>
 	<description>Узнайте стоимость ремонта, включающую работу и материалы</description>
-	<rootUrl>http://www.otdelkalux.ru/</rootUrl>
+	<rootUrl>http://www.otdelkalux.ru</rootUrl>
 	<resource>
-		<fixed name="www.otdelkalux.ru"/>
+		<fixed name="www.otdelkalux.ru/price/calculator.html"/>
 	</resource>
-	<filters>
+    <filters>
 		<textBox type="NoFilling">
 			<description caption="Площадь, м²">
 				<setParameter name="area"/>
 			</description>
 		</textBox>
-		<dropDown default="3">
+		<dropDown>
 			<description caption="Количество санузлов">
 				<setParameter name="wc"/>
 			</description>
 			<dropDownValue key="1" caption="1"/>
 			<dropDownValue key="2" caption="2"/>
-			<dropDownValue key="3" caption="3"/>
+			<dropDownValue key="3" caption="3" default="true" />
 			<dropDownValue key="4" caption="4"/>
 			<dropDownValue key="5" caption="5"/>
 			<dropDownValue key="6" caption="6"/>
 		</dropDown>
-	</filters>
+    </filters>
 </site>

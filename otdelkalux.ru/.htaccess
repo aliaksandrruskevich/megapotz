@@ -2,10 +2,6 @@ AddDefaultCharset windows-1251
 DefaultLanguage ru
 FileETag None
 
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^otdelkalux\.ru
-RewriteRule ^(.*)$ http://www.otdelkalux.ru/$1 [R=permanent,L]
-
 <ifModule mod_headers.c>
 	Header unset ETag
 	Header unset Last-Modified

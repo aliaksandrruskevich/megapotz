@@ -1,8 +1,12 @@
 /*@cc_on
- @if (@_jscript_version <= 5.8)
- document.location = 'http://oldie.otdelkalux.ru';
- @end
- @*/
+if (navigator.appName == 'Microsoft Internet Explorer') {
+	var ua = navigator.userAgent;
+	var re  = new RegExp("MSIE (.+) ");
+	if (re.exec(ua) != null) var ver = parseFloat( RegExp.$1 );
+	if (ver == 8) document.location = 'http://ie.otdelkalux.ru';
+	else if (ver < 8) document.location = 'http://old.otdelkalux.ru';
+}
+@*/
 
 (function () {
 	"use strict";

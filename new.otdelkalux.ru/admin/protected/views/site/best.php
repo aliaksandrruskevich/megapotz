@@ -39,7 +39,7 @@
 <h1>Фотографии лучших работ</h1>
 </div>
 <div id="GPlus"></div>
-<script type="text/javascript" src="http://fgnass.github.com/spin.js/dist/spin.min.js"></script>
+<script type="text/javascript" src="http://fgnass.github.io/spin.js/dist/spin.min.js"></script>
 <script type="text/javascript">
 var photos =<?=preg_replace_callback(
 '/\\\u([0-9a-fA-F]{4})/',

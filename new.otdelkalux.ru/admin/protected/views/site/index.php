@@ -128,7 +128,7 @@ unset($images);
 <h2 class="h1 center">Фото ремонта коттеджей</h2>
 
 <div id="GPlus"></div>
-<script type="text/javascript" src="http://fgnass.github.com/spin.js/dist/spin.min.js"></script>
+<script type="text/javascript" src="http://fgnass.github.io/spin.js/dist/spin.min.js"></script>
 <script type="text/javascript">
 var photos = [
 {title: "Художественная укладка мрамора класса &quot;люкс&quot;.", url: "https://lh4.googleusercontent.com/-BlYXdflG-_E/UAhF58bs7HI/AAAAAAAABNs/t5WwXg3GOlY/6917955734.jpg", width: 717, height: 1080 },
@@ -267,8 +267,7 @@ var photos = [
 
 
 <section id="other" class="center">
-<figure>
-<iframe width="420" height="315" src="//www.youtube.com/embed/7_wzJNQhK00?rel=0" frameborder="0" allowfullscreen></iframe>
+<figure id="youtube">
 <figcaption>Запись выпуска передачи «<b>Проект мечты</b>» на телеканале «<b>Усадьба</b>» о строительстве <a href="/portfolio/leningradskoe_37/">дома в римском стиле</a> с участием руководителя проекта&nbsp;— Сергея Петунина. <br><a href="http://www.tv-stream.ru/tv/usadba" rel="nofollow" target="_blank"><img src="http://static.otdelkalux.ru/i/usadba.png" alt="Телеканал Усадьба"></a></figcaption>
 </figure>
 <div style="margin: 50px auto;" class="likes yashare-auto-init" data-yashareL10n="ru" data-yashareTitle="Артель Сергея Петунина" data-yashareDescription="Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ. Наша специализация: внутренняя отделка, монтаж электрики, сантехники, отопления, а также ландшафтные работы." data-yashareImage="https://lh6.googleusercontent.com/-tA-Yr-ZRJqI/UEoo-61MQVI/AAAAAAAAB1E/uTM00UyxDWk/s150-c/" data-yashareQuickServices="vkontakte,gplus,facebook,twitter" data-yashareTheme="counter" data-yashareType="small"></div>

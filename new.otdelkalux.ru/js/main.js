@@ -86,6 +86,35 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			}
 		};
 	})();
+	
+	var deferredLoader = (function() {
+		var nodes = [];
+		
+		function getY(el) {
+			var y = 0;
+			while (el.offsetParent !== null) {
+				y += el.offsetTop;
+				el = el.offsetParent;
+			}
+			return y;
+		}
+
+		function step() {
+			var curPos = (document.body.scrollTop || document.documentElement.scrollTop) + window.innerHeight;
+			nodes.forEach(function(el, i) {
+				var pos = getY(el.node);
+				if (curPos + 200 > pos) {
+					el.fn(el.node);
+					delete nodes[i];
+				}
+			});
+		}
+		
+		window.addEventListener('scroll', step, false);
+		window.addEventListener('resize', step, false);
+		window.addEventListener('DOMContentLoaded', step, false);
+		return nodes;
+	})();
 
 	// Утилита для вычисления строки, подставляемой в параметр времени анимации
 	var getSpeed = function(speed) {
@@ -250,22 +279,25 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var picSide = getPicSide();
 		var picIndex = [];
 		var re = /([^/]+)\.jpg/g;
+		var curAlbumShown = 0; // какие альбомы уже докрутили и можно показывать
 
-		var noscriptNodes = root.querySelectorAll('noscript');
-		for (var i = 0, l = noscriptNodes.length, noscript; noscript = noscriptNodes[i], i < l; i++) {
-			stub.innerHTML = noscript.textContent.replace(re, 's' + picSide + '-c/');
+		function processNoscripts() {
+			var noscriptNodes = root.querySelectorAll('noscript');
+			for (var i = 0, l = (noscriptNodes.length > curAlbumShown ? curAlbumShown : noscriptNodes.length), noscript; noscript = noscriptNodes[i], i < l; i++) {
+				stub.innerHTML = noscript.textContent.replace(re, 's' + picSide + '-c/');
 
-			var frag = document.createDocumentFragment();
-			for (var i1 = 0, l1 = stub.children.length, node; i1 < l1; i1++) {
-				node = stub.removeChild(stub.children[0]);
-				frag.appendChild(node);
-				picIndex.push({
-					node:		node,
-					baseUrl:	node.src.substring(0,83)
-				});
+				var frag = document.createDocumentFragment();
+				for (var i1 = 0, l1 = stub.children.length, node; i1 < l1; i1++) {
+					node = stub.removeChild(stub.children[0]);
+					frag.appendChild(node);
+					picIndex.push({
+						node:		node,
+						baseUrl:	node.src.substring(0,83)
+					});
+				}
+
+				noscript.parentNode.replaceChild(frag, noscript);
 			}
-
-			noscript.parentNode.replaceChild(frag, noscript);
 		}
 
 		var timer;
@@ -291,7 +323,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		function load() {
 			timer = undefined;
 			var picSide = getPicSide();
-			for (var i = 0, l = picIndex.length, pic; pic = picIndex[i], i < l; i++) {
+			for (var i = 0, l = (picIndex.length > curAlbumShown ? curAlbumShown : picIndex.length), pic; pic = picIndex[i], i < l; i++) {
 				pic.node.src = pic.baseUrl + 's' + picSide + '-c/';
 			}
 		}
@@ -299,6 +331,22 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// При изменении размеров экрана надо делать ресайз альбомов, но перегружать фотографии гугла только по таймауту
 		window.addEventListener('resize', resize, false);
 		resize();
+		
+		// для отложенной загрузки
+		
+		var defers = [];
+		for (var i = 0, l = albums.length, album; album = albums[i], i < l; i += 4) {
+			defers.push({
+				node: album,
+				fn: (function(i) {
+					return function() {
+						curAlbumShown = i;
+						processNoscripts();
+					}
+				})(i+4)
+			});
+		}
+		return defers;
 	}
 
 	// Переключалка ездящая
@@ -440,7 +488,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				if (window.devicePixelRatio == 2) {
 					document.getElementById('ingos').src='http://static.otdelkalux.ru/i/ingos-2x.png';
 				}
-				AlbumView(document.getElementById('album_grid'));
+				Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
 				Calculator(document.getElementById('calculator'));
 
 				var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
@@ -449,6 +497,12 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				
 				// Убирание подсказки про "крутите дальше" по скроллу
 				window.addEventListener('scroll', onScroll, false);
+				deferredLoader.push({
+					node: document.getElementById('youtube'),
+					fn: function(node) {
+						node.innerHTML = '<iframe width="420" height="315" src="//www.youtube.com/embed/7_wzJNQhK00?rel=0" frameborder="0" allowfullscreen></iframe>' + node.innerHTML;
+					}
+				});
 				break;
 			case 'page-contacts':
 				initContactsMap();
@@ -463,7 +517,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 			case 'page-portfolio':
 				var album_grid = document.getElementById('album_grid');
-				if (album_grid !== null) AlbumView(album_grid);
+				if (album_grid !== null) Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
 
 				var selector_hint = document.getElementById('selector_hint');
 				if (selector_hint !== null) window.setTimeout(function (){fadeIn(selector_hint);}, 2000);
@@ -496,7 +550,6 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 		// Счетчики грузим в последнюю очередь
 		(function (d, w, c, n) {
-//;;;;;;;;return;
 			// Яндекс Метрика
 			(w[c] = w[c] || []).push(function() {
 				try {
@@ -515,18 +568,25 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 			var scr = scrTpl.cloneNode(true); scr.src = '//mc.yandex.ru/metrika/watch.js'; pos.parentNode.insertBefore(scr, pos);
 
-			/* Mail.ru */
-			var r, s;
-			(new Image).src='http://db.ce.b2.a2.top.mail.ru/counter?id=2288412;js=13'+((r=d.referrer)?';r='+escape(r):'')+((s=w.screen)?';s='+s.width+'*'+s.height:'')+';_='+Math.random();
+			// инициализируем говносчетчики и шарилку только если юзер крутит ниже, чтобы все быстрее прогружалось
+			deferredLoader.push({
+				node: document.querySelector('.yashare-auto-init'),
+				fn: function() {
+					/* Mail.ru */
+					var r, s;
+					(new Image).src='http://db.ce.b2.a2.top.mail.ru/counter?id=2288412;js=13'+((r=d.referrer)?';r='+escape(r):'')+((s=w.screen)?';s='+s.width+'*'+s.height:'')+';_='+Math.random();
 
-			/* Liveinternet */
-			(new Image).src = "//counter.yadro.ru/hit?r" + escape(r)+((typeof(s)=="undefined")?"" : ";s"+s.width+"*"+s.height+"*"+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+document.URL+";"+Math.random();
+					/* Liveinternet */
+					(new Image).src = "//counter.yadro.ru/hit?r" + escape(r)+((typeof(s)=="undefined")?"" : ";s"+s.width+"*"+s.height+"*"+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+document.URL+";"+Math.random();
 
-			/* Rambler*/
-			scr = scrTpl.cloneNode(true); scr.src = '//counter.rambler.ru/top100.jcn?2890004'; pos.parentNode.insertBefore(scr, pos);
+					/* Rambler*/
+					scr = scrTpl.cloneNode(true); scr.src = '//counter.rambler.ru/top100.jcn?2890004'; pos.parentNode.insertBefore(scr, pos);
 
-			/* Яндекс шарилка */
-			scr = scrTpl.cloneNode(true); scr.src = '//yandex.st/share/cnt.share.js'; pos.parentNode.insertBefore(scr, pos);
+					/* Яндекс шарилка */
+					scr = scrTpl.cloneNode(true); scr.src = '//yandex.st/share/cnt.share.js'; pos.parentNode.insertBefore(scr, pos);
+					window.removeEventListener('scroll', onScroll);
+				}
+			});
 		})(document, window, "yandex_metrika_callbacks", navigator);
 	});
 })();

@@ -321,7 +321,7 @@ $(document).ready(function() {
 	
 	function change_banner(){
 		$(divs[cur]).fadeOut('fast',function(){
-			cur=cur+1==4?0:cur+1;
+			cur=cur+1==3?0:cur+1;
 			$(divs[cur]).fadeIn('slow');
 		});
 	}

@@ -99,6 +99,12 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			return y;
 		}
 
+		var timer = null;
+		function onEvent() {
+			if (timer) window.clearTimeout(timer);
+			timer = window.setTimeout(step, 50);
+		}
+		
 		function step() {
 			var curPos = (document.body.scrollTop || document.documentElement.scrollTop) + window.innerHeight;
 			nodes.forEach(function(el, i) {
@@ -110,9 +116,9 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			});
 		}
 		
-		window.addEventListener('scroll', step, false);
-		window.addEventListener('resize', step, false);
-		window.addEventListener('DOMContentLoaded', step, false);
+		window.addEventListener('scroll', onEvent, false);
+		window.addEventListener('resize', onEvent, false);
+		window.addEventListener('DOMContentLoaded', onEvent, false);
 		return nodes;
 	})();
 
@@ -150,7 +156,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			wc:			document.getElementById('wc'),
 			area:		document.getElementById('area'),
 			eastimate:	root.querySelectorAll('tbody td:not(:first-child)'),
-			total:		root.querySelectorAll('tfoot td:not(:first-child)'),
+			total:		root.querySelectorAll('tfoot td:not(:first-child)')
 		};
 		var wc = 3, area = 400, roomType = 'cott';
 
@@ -493,6 +499,8 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 				var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
 				$('#GPlus').GPlusGallery(photos, {'spinner': spinner});
+				Array.prototype.push.apply(deferredLoader, window.GPlusDefers);
+				delete window.GPlusDefers;
 				$('#GPlus div').last().on('click', function(e){e.stopPropagation()}).find('img').wrap('<a href="/osmotr/"/>');
 				
 				// Убирание подсказки про "крутите дальше" по скроллу

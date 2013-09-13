@@ -30,6 +30,8 @@
 		this.oRootDiv = document.createElement('div' );
 		this.oImgs = [];
 
+		this.curPicShown = 0;
+
 		this.init();
 	}
 
@@ -91,6 +93,9 @@
 				var fragment = document.createDocumentFragment();
 			}
 
+			var defers = [];
+			
+			
 			for ( var i = 0, l = this.rows.length; i < l; i++ ) {
 				// Fast access to some useful variables
 				var row = this.rows[i];
@@ -129,7 +134,7 @@
 						
 						var oImg = document.createElement( 'img' );
 						oImg.setAttribute( 'style', 'width: ' + this.photos[j].calculatedWidth + 'px; height: ' + this.photos[j].calculatedHeight + 'px' );
-						oImg.setAttribute( 'src', this.photos[j].url + 'w' + this.photos[j].calculatedWidth + '-h' + this.photos[j].calculatedHeight + '-n/' );
+						oImg.setAttribute( 'src', 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' );
 						oImg.setAttribute( 'alt', this.photos[j].title );
 						
 						this.oImgs.push(oImg);
@@ -137,12 +142,22 @@
 						oDiv.appendChild(oImg);
 						fragment.appendChild(oDiv);
 					}
+
+					defers.push({
+						node: oDiv,
+						fn: (function(scope, j) {
+							return function() {
+								scope.curPicShown = j;
+								scope.show();
+							}
+						})(this, j)
+					});
 				}
 			}
 
 			// If fragment is built, we just need to set new dimensions to pictures
 			if( this.treeBuilt )	{
-				for ( var i = 0, l = this.photos.length; i < l; i++ )	{
+				for ( var i = 0, l = this.photos.length > this.curPicShown ? this.curPicShown : this.photos.length; i < l; i++ )	{
 					var photo = this.photos[i];
 					this.oImgs[i].setAttribute('style', 'width: ' + photo.calculatedWidth + 'px; height: ' + photo.calculatedHeight + 'px' );
 					this.oImgs[i].setAttribute('src', photo.url + 'w' + photo.calculatedWidth + '-h' + photo.calculatedHeight + '-n/');
@@ -153,6 +168,9 @@
 				this.oRootDiv.appendChild( fragment );
 				this.treeBuilt = true;
 			}
+
+			// sorry, had to do this...
+			window.GPlusDefers = defers;
 		}
 	};
 

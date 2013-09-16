@@ -3,7 +3,7 @@
 <html lang="ru" itemscope itemtype="http://schema.org/GeneralContractor">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-<meta name="viewport" content="width=1000">
+<meta name="viewport" content="width=1024">
 <meta name="keywords" content="ремонт, отделка, коттедж, загородный дом, стоимость, фото, таунхаус, элитный, под ключ">
 <meta name="description" content="Выполняем весь комплекс отделочных и ремонтных работ в коттеджах, загородных домах и таунхаусах: отопление, электрика, сантехника, внутренняя отделка под ключ. Фотографии завершенных объектов, калькулятор стоимости ремонта.">
 <title>Ремонт и отделка коттеджей, загородных домов и таунхаусов под ключ: цены, фото</title>

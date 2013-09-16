@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-<meta name="viewport" content="width=1000">
+<meta name="viewport" content="width=1024">
 <title>Осмотр объектов</title>
 <meta name="keywords" content="осмотр объектов"/>
 <meta name="description" content="Вы можете лично приехать и осмотреть любой из объектов, на котором мы ведем работы. Все текущие проекты отмечены на карте с указанием текущего состояния ремонта."/>

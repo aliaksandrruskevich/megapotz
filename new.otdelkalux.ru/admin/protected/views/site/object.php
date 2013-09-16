@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-<meta name="viewport" content="width=1000">
+<meta name="viewport" content="width=1024">
 <meta name="keywords" content="<?=!empty($object->seo_keywords)?$object->seo_keywords:""?>"/>
 <meta name="description" content="<?=!empty($object->seo_description)?$object->seo_description:""?>"/>
 <title><?=!empty($object->seo_title)?$object->seo_title:""?></title>

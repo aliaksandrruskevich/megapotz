@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-<meta name="viewport" content="width=1000">
+<meta name="viewport" content="width=1024">
 <title>Фото</title>
 <meta name="keywords" content="объекты, ремонт, работы, отделка, фото, интерьер, ландшафтные работы"/>
 <meta name="description" content="Фото объектов, на которых ремонт уже завершен."/>

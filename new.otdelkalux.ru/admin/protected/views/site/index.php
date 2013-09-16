@@ -155,7 +155,7 @@ var photos = [
 <section id="price" class="column">
 <h2 class="h1 center">Сколько стоит ремонт?</h2>
 <div id="calculator">
-<form method="post" action="/email_ok.html" target="send_estimate">
+<form method="post" action="/offer.php" target="send_estimate">
 <div class="calc-head">
 <input type="radio" name="type" value="cott" id="cott" class="dn"><label for="cott" class="cott">Коттедж</label>
 <input type="radio" name="type" value="appt" id="appt" class="dn"><label for="appt" class="appt">Квартира</label>

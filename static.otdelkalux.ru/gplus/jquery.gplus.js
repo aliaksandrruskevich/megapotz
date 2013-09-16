@@ -71,12 +71,12 @@
 			this.show();
 			
 			var TO = false;
-			$( window ).on( 'resize', function() {
+			window.addEventListener('resize', function() {
 				if( TO !== false )	{
 					window.clearTimeout( TO );
 				}
 				TO = window.setTimeout( function(){ _this.show(); }, 500 );
-			});
+			}, false);
 
 		},
 			
@@ -133,17 +133,20 @@
 						}
 						
 						var oImg = document.createElement( 'img' );
-						oImg.setAttribute( 'style', 'width: ' + this.photos[j].calculatedWidth + 'px; height: ' + this.photos[j].calculatedHeight + 'px' );
-						oImg.setAttribute( 'src', 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' );
-						oImg.setAttribute( 'alt', this.photos[j].title );
+						oImg.style.width = this.photos[j].calculatedWidth + 'px';
+						oImg.style.height = this.photos[j].calculatedHeight + 'px';
+						oImg.style.opacity = 0;
+						oImg.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+						oImg.alt = this.photos[j].title;
 						
+						oImg.onload = function(e) {e.target.style.opacity = 1;}
 						this.oImgs.push(oImg);
 
 						oDiv.appendChild(oImg);
 						fragment.appendChild(oDiv);
 					}
 
-					defers.push({
+					oDiv && defers.push({
 						node: oDiv,
 						fn: (function(scope, j) {
 							return function() {
@@ -159,8 +162,15 @@
 			if( this.treeBuilt )	{
 				for ( var i = 0, l = this.photos.length > this.curPicShown ? this.curPicShown : this.photos.length; i < l; i++ )	{
 					var photo = this.photos[i];
-					this.oImgs[i].setAttribute('style', 'width: ' + photo.calculatedWidth + 'px; height: ' + photo.calculatedHeight + 'px' );
-					this.oImgs[i].setAttribute('src', photo.url + 'w' + photo.calculatedWidth + '-h' + photo.calculatedHeight + '-n/');
+					var url = photo.url + 'w' + photo.calculatedWidth + '-h' + photo.calculatedHeight + '-n/';
+					var oImg = this.oImgs[i];
+					
+					if (oImg.src != url) {
+						oImg.style.width = photo.calculatedWidth + 'px'; 
+						oImg.style.height = photo.calculatedHeight + 'px';
+						oImg.style.opacity = 0;
+						oImg.src = url;
+					}
 				}
 			}
 

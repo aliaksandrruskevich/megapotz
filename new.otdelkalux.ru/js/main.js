@@ -1,4 +1,3 @@
-/*@cc_on
 if (navigator.appName == 'Microsoft Internet Explorer') {
 	var ua = navigator.userAgent;
 	var re  = new RegExp("MSIE (.+) ");
@@ -6,7 +5,6 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 	if (ver == 8) document.location = 'http://ie.otdelkalux.ru';
 	else if (ver < 8) document.location = 'http://old.otdelkalux.ru';
 }
-@*/
 
 (function () {
 	"use strict";
@@ -106,9 +104,11 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		}
 		
 		function step() {
+		console.info(nodes);
 			var curPos = (document.body.scrollTop || document.documentElement.scrollTop) + window.innerHeight;
 			nodes.forEach(function(el, i) {
 				var pos = getY(el.node);
+				console.info(nodes);
 				if (curPos + 200 > pos) {
 					el.fn(el.node);
 					delete nodes[i];
@@ -481,6 +481,13 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 // Initializing pages //
 ////////////////////////
 
+	function initGPlus() {
+		var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
+		$('#GPlus').GPlusGallery(photos, {'spinner': spinner});
+		Array.prototype.push.apply(deferredLoader, window.GPlusDefers);
+		delete window.GPlusDefers;
+	}
+
 	document.addEventListener("DOMContentLoaded", function(event) {
 		var page_name = document.body.id;
 		// Убирание подсказки про "крутите дальше" по скроллу
@@ -497,10 +504,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
 				Calculator(document.getElementById('calculator'));
 
-				var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
-				$('#GPlus').GPlusGallery(photos, {'spinner': spinner});
-				Array.prototype.push.apply(deferredLoader, window.GPlusDefers);
-				delete window.GPlusDefers;
+				initGPlus();
 				$('#GPlus div').last().on('click', function(e){e.stopPropagation()}).find('img').wrap('<a href="/osmotr/"/>');
 				
 				// Убирание подсказки про "крутите дальше" по скроллу
@@ -532,14 +536,18 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 				var selector = document.getElementById('selector');
 				if (selector !== null) initTumbler();
+				
+				if (document.getElementById('GPlus')) {
+					initGPlus();
 
-				// оборачиваем картинки в уголочки
-				var imgs = document.querySelectorAll('#backnext img');
-				['l','r'].forEach(function(side, i) {
-				var img = imgs[i];
-					img.style.backgroundImage = 'url("' + img.src + '")';
-					img.src = 'http://static.otdelkalux.ru/i/arr-' + side + '.png';
-				});
+					// оборачиваем картинки в уголочки
+					var imgs = document.querySelectorAll('#backnext img');
+					imgs.length && ['l','r'].forEach(function(side, i) {
+					var img = imgs[i];
+						img.style.backgroundImage = 'url("' + img.src + '")';
+						img.src = 'http://static.otdelkalux.ru/i/arr-' + side + '.png';
+					});
+				}
 
 				break;
 

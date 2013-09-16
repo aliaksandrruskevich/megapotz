@@ -49,8 +49,6 @@ var photos =<?=preg_replace_callback(
 create_function('$match', 'return mb_convert_encoding("&#" . intval($match[1], 16) . ";", "UTF-8", "HTML-ENTITIES");'),
 json_encode($images)
 )?>;
-var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
-var fs = $('#GPlus').GPlusGallery(photos, {'spinner': spinner});
 </script>
 </div>
 </section>
@@ -58,8 +56,8 @@ var fs = $('#GPlus').GPlusGallery(photos, {'spinner': spinner});
 
 
 <div class="likeholder">
+<div class="like" style="float: right"><div class="likes yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,gplus,facebook,twitter" data-yashareTheme="counter" data-yashareType="small"></div></div>
 <span>Понравился объект?</span>
-<div class="like"></div>
 </div>
 <?if($object->type==3) {?>
 <dl>

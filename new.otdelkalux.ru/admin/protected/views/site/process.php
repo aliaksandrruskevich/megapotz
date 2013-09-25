@@ -58,13 +58,18 @@ $i=1;
 ?>
 <?foreach($objects as $obj) { ?>
 <div class="object" data-gps="<?=$obj->lat?>,<?=$obj->lng?>">
+
+<?if ($obj->link != '/') {?>
 <a href="<?=$obj->link?>" target="_blank"><img src="<?=$obj->image?>" alt="<?=$obj->title?>"/></a>
 <p class="h"><?=$obj->title?></p>
 <p><?=$obj->description?></p>
 <p><a href="<?=$obj->link?>">Посмотреть процесс ремонта</a></p>
+<?} else { ?>
+<p class="h"><?=$obj->title?></p>
+<p><?=$obj->description?></p>
+<?}?>
 </div>
-<?}
-?>
+<?}?>
 
 </section>
 <section class="center">

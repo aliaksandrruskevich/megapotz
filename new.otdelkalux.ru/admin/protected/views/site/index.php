@@ -21,6 +21,7 @@
 <script type="application/ld+json">{"@context":"http://schema.org","@type":"CalculateAction","url":"http://www.otdelkalux.ru/","specificationUrl":"http://www.otdelkalux.ru/calc.xml"}</script>
 </head>
 <body id="page-index">
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter13794628 = new Ya.Metrika({id:13794628, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 <section id="title">
 <header class="column">
 <a itemprop="url" href="http://www.otdelkalux.ru/" id="logo">
@@ -56,7 +57,7 @@ for (var i = 0; i < 3; i++) {
 if (ref.match(query[i])) break;
 }
 var h1 = document.querySelector('#text_holder h1');
-h1.innerHTML = h1.innerHTML.replace('внутренней отделке загородных домов', 'отделке').replace('коттеджей и таунхаусов', html[i]);
+h1.innerHTML = h1.innerHTML.replace('внутренней отделке загородных домов,', 'отделке').replace('коттеджей и таунхаусов', html[i]);
 // Прягаем к калькулятору, если юзер пришел с островов
 if (ref.match(/фот/)) document.location.hash = 'gallery';
 if (document.location.search.match(/area|wc/) || ref.match(/стоит|стоимост|цен/)) document.location.hash = 'price';
@@ -168,7 +169,26 @@ var photos = [
 <thead><tr><th></th><th>Бизнес</th><th>Люкс</th></tr></thead>
 <tfoot><tr><td>Общая сумма (работа + материал)</td><td></td><td></td></tr></tfoot>
 <tbody>
-<tr><td>Отделка под ключ</td><td></td><td></td></tr>
+<tr><td>Отделка под ключ</td><td>
+<!-- Google price list mark up -->
+<div itemscope itemtype="http://schema.org/Product">
+<div itemprop="name">Ремонт под ключ класса «Бизнес»</div>
+<div itemprop="description">(отделка, сантехника, электрика, отопление)</div>
+<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+<span itemprop="price">8 400 руб. за м²</span>
+<meta itemprop="priceCurrency" content="RUB"/>
+</div>
+</div>
+<div itemscope itemtype="http://schema.org/Product">
+<div itemprop="name">Ремонт под ключ класса «Люкс»</div>
+<div itemprop="description">(отделка, сантехника, электрика, отопление)</div>
+<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+<span itemprop="price">10 100 руб. за м²</span>
+<meta itemprop="priceCurrency" content="RUB"/>
+</div>
+</div>
+<!-- / -->
+</td><td></td></tr>
 <tr><td>Электрика под ключ</td><td></td><td></td></tr>
 <tr><td>Сантехника под ключ</td><td></td><td></td></tr>
 <tr><td>Отопление под ключ</td><td></td><td></td></tr>
@@ -189,6 +209,7 @@ var photos = [
 </form>
 <iframe src="about:blank" id="send_estimate" name="send_estimate" class="dn"></iframe>
 </div>
+
 <div class="disclaimer">
 <p><img src="http://static.otdelkalux.ru/i/alert.svg" alt=""></p>
 <p>В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса. Более точную информацию по ценам мы сможем дать только после ознакомления с дизайн-проектом.</p>

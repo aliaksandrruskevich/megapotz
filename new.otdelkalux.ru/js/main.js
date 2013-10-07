@@ -257,11 +257,13 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// Перед отправкой форму необходимо в hidden поле записать innerHTML калькуляции
 		form.addEventListener('submit', function(e) {
 			e.preventDefault();
-			form.html.value = form.querySelector('table').innerHTML.replace(/\s{2,}/g, '');
-			// Сообщаем в метрику о нашей удаче :)
-			try { yaCounter13794628.reachGoal('estimate_send', {area: area, wc: wc}); } catch(e) {}
-			
-			form.submit();
+			if (document.getElementById('email').value != '') {
+				form.html.value = form.querySelector('table').innerHTML.replace(/\s{2,}/g, '');
+				// Сообщаем в метрику о нашей удаче :)
+				try { yaCounter13794628.reachGoal('estimate_send', {area: area, wc: wc}); } catch(e) {}
+				
+				form.submit();
+			}
 		});
 
 		// Простановка начальных значений в калькулятор
@@ -603,6 +605,8 @@ _gaq.push(['_trackPageview']);
 
 /* Яндекс Метрика */
 (function (d, w, c) {
+if (document.location.pathname == '/') return;
+
 (w[c] = w[c] || []).push(function() {
 try {
 w.yaCounter13794628 = new Ya.Metrika({id:13794628,

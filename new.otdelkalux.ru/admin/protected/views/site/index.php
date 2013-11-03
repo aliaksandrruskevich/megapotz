@@ -138,7 +138,7 @@ var photos = [
 {title: "Кабинет класса &quot;люкс&quot;", url: "https://lh6.googleusercontent.com/-J55XDS4POFs/UAhC5pa3qkI/AAAAAAAABKQ/EOY3RkKs3Z0/7064957277.jpg", width: 1626, height: 1080 },
 {title: "Гостиная в классическом стиле", url: "https://lh6.googleusercontent.com/-RsRci7ARGSc/UAhGMcJsp_I/AAAAAAAABRQ/tAzTM5jgQAk/7064032869.jpg", width: 1626, height: 1080 },
 {title: "Гипсовая лепнина", url: "https://lh6.googleusercontent.com/-q4DRJQ3CwGY/UAhAbXkoACI/AAAAAAAABGI/ujiSwZ6AZeY/7064083333.jpg", width: 1624, height: 1080 },
-{title: "Пол в кабинете", url: "https://lh5.googleusercontent.com/-570Q7GhjRUI/UAhHwhIKB6I/AAAAAAAABXg/tIRurGQZ1Lg/7064817625.jpg", width: 1620, height: 1080 },
+{title: "Укладка плитки в ванной комнате", url: "https://lh5.googleusercontent.com/-LaEvZj8-EzE/UEyGxsAWFQI/AAAAAAAAB20/RoI0CRdsr6Q/7064817625.jpg", width: 1620, height: 1080 },
 {title: "Мраморный пол, лестница", url: "https://lh3.googleusercontent.com/-ExlpDSaMLkw/UAhGeeUR3nI/AAAAAAAABVE/UCqLb-84UCU/7064038015.jpg", width: 717, height: 1080 },
 {title: "Потолки класса &quot;люкс&quot;", url: "https://lh3.googleusercontent.com/-UU8OHxvIBek/UAhC2mXQIeI/AAAAAAAABJg/aoxmFYCcRpM/7064955377.jpg", width: 1626, height: 1080 },
 {title: "Укладка плитки класса &quot;люкс&quot;", url: "https://lh3.googleusercontent.com/-b_WrvYzVODA/UAhCvsM0b4I/AAAAAAAABH0/E2XCwPyFMPA/6918880148.jpg", width: 717, height: 1080 },

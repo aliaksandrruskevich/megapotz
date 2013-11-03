@@ -38,7 +38,7 @@
 </div>
 <h1 class="center">Лучше один раз увидеть!</h1>
 <div class="gotakealook">
-	<img src="https://lh6.googleusercontent.com/-tA-Yr-ZRJqI/UEoo-61MQVI/AAAAAAAAB1E/uTM00UyxDWk/s150-c/" alt="Сергей Петунин"/>
+	<img class="petunin" src="https://lh6.googleusercontent.com/-tA-Yr-ZRJqI/UEoo-61MQVI/AAAAAAAAB1E/uTM00UyxDWk/s150-c/" alt="Сергей Петунин"/>
 	<div class="arrange">
 		<p class="tel">+7 495 99-88-347</p>
 		<p class="email"><a href="mailto:hello@otdelkalux.ru?subject=Осмотр%20объекта&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон.">hello@otdelkalux.ru</a></p>

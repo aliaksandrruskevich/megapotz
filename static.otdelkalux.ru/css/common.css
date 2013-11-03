@@ -347,3 +347,5 @@ article table.bg caption	{ margin: 30px 0; }
 .pyramid_bg	{background: url('/i/pyramida1.jpg') 50% 0; padding: 30px 0; margin-top: 20px;}
 .pyramid_bg .speech	{color: #fff;}
 .pyramid_bg .speech .big	{font: bold 18px Arial;}
+
+.special	{padding: 8px 5px; background-color: #fff06f; text-align: center;}

@@ -23,8 +23,6 @@
 <a class="portfolio" href="/portfolio/">Фото</a>
 <a class="osmotr" href="/osmotr/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
-<a class="docs" href="/docs.html">Документы</a>
-<a class="warranty" href="/warranty.html">Гарантия</a>
 <a class="articles" href="/articles/">Статьи</a>
 <a class="contacts" href="/contacts.html">Контакты</a>
 </nav>

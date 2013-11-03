@@ -33,8 +33,6 @@
 <a class="portfolio" href="/portfolio/">Фото</a>
 <a class="osmotr" href="/osmotr/">Осмотр объектов</a>
 <a class="price" href="/price/calculator.html">Цены</a>
-<a class="docs" href="/docs.html">Документы</a>
-<a class="warranty" href="/warranty.html">Гарантия</a>
 <a class="articles" href="/articles/">Статьи</a>
 <a class="contacts" href="/contacts.html">Контакты</a>
 </nav>
@@ -199,6 +197,9 @@ var photos = [
 </tbody>
 </table>
 </div>
+<div class="special">
+<p>Для владельцев загородных домов на <b>Новорижском шоссе</b> действует <a href="/novayariga.html">специальное предложение</a>!</p>
+</div>
 <div class="sendback">
 <label for="name">Отправить эту калькуляцию на почту:</label>
 <input type="text" placeholder="Имя" title="Наличие вашего имени в тексте письма снижает вероятность попадания в спам" id="name" value="" name="name" required="required">
@@ -225,7 +226,7 @@ var photos = [
 <div class="cholder">
 <div class="circle">
 <p><b><br><br>Гарантия</b></p>
-<p>В договоре прописывается гарантия <br>на ремонт и внутреннюю отделку <br>на 2 года.</p>
+<p>В договоре прописывается гарантия <br>на ремонт и внутреннюю отделку <br><a href="/warranty.html">на 2 года</a>.</p>
 </div>
 </div>
 <div class="cholder">

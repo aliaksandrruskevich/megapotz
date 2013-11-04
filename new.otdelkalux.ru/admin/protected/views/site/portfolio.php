@@ -2,7 +2,6 @@
 <!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
 <html lang="ru">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
 <meta name="viewport" content="width=1024">
 <title>Фото</title>
 <meta name="keywords" content="объекты, ремонт, работы, отделка, фото, интерьер, ландшафтные работы"/>
@@ -18,14 +17,14 @@
 <img src="http://static.otdelkalux.ru/i/logo.svg" alt="Артель Сергея Петунина">
 <span>Артель Сергея Петунина</span>
 </a>
-<nav>
-<a class="index" href="/">Ремонт и отделка</a>
-<a class="portfolio" href="/portfolio/">Фото</a>
-<a class="osmotr" href="/osmotr/">Осмотр объектов</a>
-<a class="price" href="/price/calculator.html">Цены</a>
-<a class="articles" href="/articles/">Статьи</a>
-<a class="contacts" href="/contacts.html">Контакты</a>
-</nav>
+<nav><ul>
+<li><a class="index" href="/">Ремонт и отделка</a></li>
+<li><a class="portfolio" href="/portfolio/">Фото</a></li>
+<li><a class="osmotr" href="/osmotr/">Осмотр объектов</a></li>
+<li><a class="price" href="/price/calculator.html">Цены</a></li>
+<li><a class="articles" href="/articles/">Статьи</a></li>
+<li><a class="contacts" href="/contacts.html">Контакты</a></li>
+</ul></nav>
 </header>
 
 <h1>Фото</h1>

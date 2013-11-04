@@ -11,6 +11,8 @@ Redirect 301 /portfolio/process/ http://www.otdelkalux.ru/osmotr/
 
 <ifModule mod_headers.c>
 	Header unset ETag
+	BrowserMatch MSIE ie
+	Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
 </ifModule>
 
 <IfModule mod_expires.c>

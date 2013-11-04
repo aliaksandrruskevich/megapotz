@@ -1,17 +1,22 @@
-@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (-moz-min-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio: 2) {
 #footer .social	{ background-image: url('/i/social-2x.png')!important; background-size: 16px 64px; }
+*	{-webkit-text-size-adjust: none; -webkit-appearance: none;}
+h1,div {max-height: 100000px;}
 }
 @media only screen and (device-width: 768px) {
 #logo	{ left: 30px! important; }
 }
 
+@media only screen and (max-width: 1200px) {
+#novayariga .arrange	{ display: none; }
+}
 
 /* GENERAL STYLING */
 body::-webkit-scrollbar {width: 8px; height: 8px; }
 body::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background: #fff; }
 body::-webkit-scrollbar-thumb {background: #ee1c24; box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
 
-*	{ padding: 0; margin: 0; line-height: 1em; -webkit-text-size-adjust: none; -webkit-appearance: none; }
+*	{ padding: 0; margin: 0; line-height: 1em; }
 html, body	{ height: 100%; }
 body    { counter-reset: tn; font-family: Helvetica, Arial, Sans-Serif; }
 table	{ border-collapse: collapse; }
@@ -64,7 +69,9 @@ header	{ height: 78px; font-weight: bold; }
 #logo img	{ width: 20px; height: 30px; margin-right: 10px; }
 #logo span	{ display: inline-block; margin-top: 13px; vertical-align: top; font-size: 12px; }
 nav	{ position: absolute; top: 45px; right: 30px; }
-nav a	{ display: inline-block; font-size: 11px; text-decoration: none; text-transform: uppercase; color: #000; padding: 0 10px; }
+nav ul	{ list-style-type: none; }
+nav li	{ display: inline-block; }
+nav a	{ font-size: 11px; text-decoration: none; text-transform: uppercase; color: #000; padding: 0 10px; }
 #page-index .index, #page-portfolio .portfolio, #page-process .process, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts	{ cursor: default; color: #ee1c24; }
 #text_holder	{ position: absolute; top: 50px; left: 90px; }
 #bg	{ position: relative; background-size: cover; height: 100%; }
@@ -241,10 +248,10 @@ footer .gplus	{ background-position: 0 0; }
 #page-articles .td { padding: 0 40px; width: 25% }
 #page-articles hr	{  border: dotted #000; border-width: 1px 0 0 0; margin: 20px 0; }
 #page-articles ul	{ list-style: none; }
-#page-articles li	{ margin: 14px -5px; font-size: 14px; line-height: 1.7em; }
-#page-articles ul a	{ color: #000; padding: 3px 5px; background-color: #fff; }
-#page-articles ul a:hover	{ color: #000 ! important; background-color: #ffe400; text-decoration: none;  transition: all 0.3s linear; }
-#page-articles ul a:visited	{ color: #999; }
+#page-articles #articles li	{ margin: 14px -5px; font-size: 14px; line-height: 1.7em; }
+#page-articles #articles ul a	{ color: #000; padding: 3px 5px; background-color: #fff; }
+#page-articles #articles ul a:hover	{ color: #000 ! important; background-color: #ffe400; text-decoration: none;  transition: all 0.3s linear; }
+#page-articles #articles ul a:visited	{ color: #999; }
 
 caption:before { content: "Таблица " counter(tn) ": "; counter-increment: tn; }
 article	{ width: 980px; margin: 0 auto; }
@@ -340,7 +347,7 @@ article table.bg caption	{ margin: 30px 0; }
 
 #novayariga .arrange	{ padding: 120px 100px; }
 #novayariga .call	{ font-size: 18px; margin: 40px auto; text-align: center;  width: 600px; }
-#novayariga .call p	{ line-height: 1.4em; margin: 15px 0; }
+#novayariga .call p	{ line-height: 2em; margin: 15px 0; }
 .bg_yellow	{ background-color: #ffe400; padding: 4px 2px; font-weight: bold; }
 .form_bg	{padding: 30px 0; background: #eee;}
 
@@ -348,4 +355,4 @@ article table.bg caption	{ margin: 30px 0; }
 .pyramid_bg .speech	{color: #fff;}
 .pyramid_bg .speech .big	{font: bold 18px Arial;}
 
-.special	{padding: 8px 5px; background-color: #fff06f; text-align: center;}
+.special	{padding: 8px 5px; background-color: #fff06f; text-align: center; font-size: 14px;}

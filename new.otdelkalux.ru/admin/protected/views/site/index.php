@@ -2,7 +2,6 @@
 <!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
 <html lang="ru" itemscope itemtype="http://schema.org/GeneralContractor">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
 <meta name="viewport" content="width=1024">
 <meta name="keywords" content="ремонт, отделка, коттедж, загородный дом, стоимость, фото, таунхаус, элитный, под ключ">
 <meta name="description" content="Выполняем весь комплекс отделочных и ремонтных работ в коттеджах, загородных домах и таунхаусах: отопление, электрика, сантехника, внутренняя отделка под ключ. Фотографии завершенных объектов, калькулятор стоимости ремонта.">
@@ -28,14 +27,14 @@
 <img itemprop="logo" src="http://static.otdelkalux.ru/i/logo.svg" alt="Артель Сергея Петунина">
 <span itemprop="name">Артель Сергея Петунина</span>
 </a>
-<nav>
-<a class="index" href="/">Ремонт и отделка</a>
-<a class="portfolio" href="/portfolio/">Фото</a>
-<a class="osmotr" href="/osmotr/">Осмотр объектов</a>
-<a class="price" href="/price/calculator.html">Цены</a>
-<a class="articles" href="/articles/">Статьи</a>
-<a class="contacts" href="/contacts.html">Контакты</a>
-</nav>
+<nav><ul>
+<li><a class="index" href="/">Ремонт и отделка</a></li>
+<li><a class="portfolio" href="/portfolio/">Фото</a></li>
+<li><a class="osmotr" href="/osmotr/">Осмотр объектов</a></li>
+<li><a class="price" href="/price/calculator.html">Цены</a></li>
+<li><a class="articles" href="/articles/">Статьи</a></li>
+<li><a class="contacts" href="/contacts.html">Контакты</a></li>
+</ul></nav>
 </header>
 <div id="bg" style="background-image: url('http://static.otdelkalux.ru/i/bg.jpg');">
 <div style="position: relative">
@@ -70,6 +69,7 @@ if (document.location.search.match(/area|wc/) || ref.match(/стоит|стои�
 <div class="stage">
 <p>Подготовка проекта</p>
 <ul>
+<li id="design">Дизайн интерьеров</li>
 <li id="project">Проектная документация</li>
 </ul>
 </div>

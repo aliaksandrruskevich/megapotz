@@ -297,10 +297,10 @@ article table.bg caption	{ margin: 30px 0; }
 #selector a	{ color: #aaa; text-decoration: none; outline-style: none; }
 #selector.left .left, #selector.right .right	{ color: #fff; cursor: default; }
 
-.call	{ width: 450px; text-align: center; margin: 0 auto; }
-.call p	{ font-size: 24px; font-weight: bold; line-height: 1.4em; margin: 20px 0; }
-.call a	{ background-color: #ffe400; color: #000; padding: 4px 8px; text-decoration: none; }
-.call .small	{ font-size: 12px; color: #919191; font-weight: normal; }
+.actioncall	{ width: 450px; text-align: center; margin: 0 auto; }
+.actioncall p	{ font-size: 24px; font-weight: bold; line-height: 1.4em; margin: 20px 0; }
+.actioncall a	{ background-color: #ffe400; color: #000; padding: 4px 8px; text-decoration: none; }
+.actioncall .small	{ font-size: 12px; color: #919191; font-weight: normal; }
 
 /* OBJECTS */
 #page-portfolio #selector_hint	{ font-size: 11px; line-height: 1.4em; padding: 12px 0 12px 22px; position: absolute; width: 120px; top: -7px; left: 310px; background: url('/i/hint-1.svg') 0 0 no-repeat; opacity: 0; }

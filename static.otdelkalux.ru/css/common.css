@@ -354,3 +354,5 @@ article table.bg caption	{ margin: 30px 0; }
 .pyramid_bg .speech .big	{font: bold 18px Arial;}
 
 .special	{padding: 8px 5px; background-color: #fff06f; text-align: center; font-size: 14px;}
+
+#badge_holder	{ width: 180px; }

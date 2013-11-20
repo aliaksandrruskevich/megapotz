@@ -129,7 +129,7 @@ unset($images);
 <p class="social gplus"><a target="_blank" rel="author" href="https://plus.google.com/104094916837036848285/?rel=author">Сергей Петунин на Google+</a></p>
 <p><a href="http://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
 </div>
-<div class="qr"><img src="http://static.otdelkalux.ru/i/qr.png" alt="Контактная информация на QR-коде"></div>
+<div id="badge_holder"><div class="g-page" data-width="180" data-href="//plus.google.com/105598601692280332786" data-rel="publisher"></div></div>
 </div>
 <div id="year">© <span>2006</span> «Отделка Люкс»</div>
 </footer>

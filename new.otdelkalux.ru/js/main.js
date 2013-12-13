@@ -585,7 +585,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 					var scr = scrTpl.cloneNode(true); scr.src = '//counter.rambler.ru/top100.jcn?2890004'; pos.parentNode.insertBefore(scr, pos);
 
 					/* Яндекс шарилка */
-					scr = scrTpl.cloneNode(true); scr.src = '//yandex.st/share/cnt.share.js'; pos.parentNode.insertBefore(scr, pos);
+					scr = scrTpl.cloneNode(true); scr.src = '//yandex.st/share/share.js'; pos.parentNode.insertBefore(scr, pos);
 				}
 			});
 			deferredLoader.push({

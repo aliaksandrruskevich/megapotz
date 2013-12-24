@@ -482,8 +482,8 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 ////////////////////////
 
 	function initGPlus() {
-		var spinner = new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
-		$('#GPlus').GPlusGallery(photos, {'spinner': spinner});
+		var spinner = window.Spinner && new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
+		$('#GPlus').GPlusGallery(photos);
 		Array.prototype.push.apply(deferredLoader, window.GPlusDefers);
 		delete window.GPlusDefers;
 	}
@@ -563,6 +563,17 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var el = document.querySelector('#year span');
 		var established = parseInt(el.textContent);
 		if (this_year > established) el.innerHTML = established + '—' + this_year;
+		
+		// 
+		
+		////////////// Подмена телефона
+		var phoneNodes = document.querySelectorAll("p");
+		for (var i = 0, l = phoneNodes.length; i < l; i++) {
+			var html = phoneNodes[i].innerHTML;
+			if (html.indexOf('99-88-347')) {
+				phoneNodes[i].innerHTML = phoneNodes[i].innerHTML.replace(/\(?495\)? 99-88-347/, "(909) 151-31-56");
+			}
+		}
 
 		// Счетчики грузим в последнюю очередь
 		(function () {

@@ -498,9 +498,9 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 		switch (page_name) {
 			case 'page-index':
-				if (window.devicePixelRatio == 2) {
+				/*if (window.devicePixelRatio == 2) {
 					document.getElementById('ingos').src='http://static.otdelkalux.ru/i/ingos-2x.png';
-				}
+				}*/
 				Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
 				Calculator(document.getElementById('calculator'));
 
@@ -567,7 +567,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// 
 		
 		////////////// Подмена телефона
-		var phoneNodes = document.querySelectorAll("p");
+		var phoneNodes = document.getElementsByTagName('p');
 		for (var i = 0, l = phoneNodes.length; i < l; i++) {
 			var html = phoneNodes[i].innerHTML;
 			if (html.indexOf('99-88-347')) {

@@ -127,7 +127,7 @@ unset($images);
 <h2 class="h1 center">Фото ремонта коттеджей</h2>
 
 <div id="GPlus"></div>
-<script type="text/javascript" src="http://fgnass.github.io/spin.js/dist/spin.min.js"></script>
+<script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
 <script type="text/javascript">
 var photos = [
 {title: "Художественная укладка мрамора класса &quot;люкс&quot;.", url: "https://lh4.googleusercontent.com/-BlYXdflG-_E/UAhF58bs7HI/AAAAAAAABNs/t5WwXg3GOlY/6917955734.jpg", width: 717, height: 1080 },

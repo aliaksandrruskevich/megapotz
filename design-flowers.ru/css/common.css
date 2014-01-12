@@ -24,7 +24,7 @@ table#body	{ border-collapse: collapse; width: 100%; }
 #header div	{ float: left; }
 #header a	{ color: #fff; }
 #header h2 a	{ text-decoration: none; }
-#header h2	{ font: normal 1.5em Tahoma; }
+#header .h2, #header h2	{ font: normal 1.5em Tahoma; }
 #header p	{ font: normal 0.7em Tahoma; color: #ccc; }
 .logo	{ margin: 15px 0; }
 .tel	{ margin: 12px 10px 0 240px; font-size: 0.8em; }

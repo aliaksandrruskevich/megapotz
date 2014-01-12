@@ -8,7 +8,6 @@
 		<!--[if IE 8]><style type="text/css">.item input[type=button] { padding: 3px }</style><![endif]-->
 		<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/css/lte_ie7.css"/><![endif]-->
 		<!--[if lte IE 6]><meta http-equiv="imagetoolbar" content="no"/><link rel="stylesheet" type="text/css" href="/css/lte_ie6.css"/><![endif]-->
-		<script type="text/javascript" src="http://yandex.st/jquery/1.4.2/jquery.min.js"></script>
 		<script type="text/javascript" src="/js/global.js"></script>
 		<meta name="keywords" content="<tmpl_var keywords>"/>
 		<meta name="description" content="<tmpl_var description>"/>
@@ -70,7 +69,7 @@
 
 				</td>
 				<td class="right">
-<div class="subline" style="padding: 14px 10px"><a href="mailto:flowerslp@yandex.ru" class="feedback"><img src="/i/0.gif" alt=""/>Напишите нам</a><a href="/cgi-bin/basket.cgi" class="basket" id="basket"><img src="/i/0.gif" alt=""/>Корзина</a></div>
+<div class="subline" style="padding: 14px 10px"><a href="mailto:flowerslp@yandex.ru" class="feedback"><img src="/i/0.gif" alt=""/>Напишите нам</a><a href="/basket.html" class="basket" id="basket"><img src="/i/0.gif" alt=""/>Корзина</a> <b id="quantity"></b></div>
 <h1><tmpl_var doc_title></h1>
 <div class="txt">
 <div style="border: 2px; padding: 10px; color: #f00; font-size: bold;">Значительное пополнение ассортимента <a href="http://www.design-flowers.ru/flowers/">искусственных цветов</a> - 300 новых позиций!</div>
@@ -84,7 +83,7 @@
 			<p><b><tmpl_var title></b><tmpl_if comment><br/>Арт.: <b><tmpl_var comment></b></tmpl_if><tmpl_if min_part><br/>Мин. партия: <b><tmpl_var min_part> шт.</b></tmpl_if></p>
 			<div class="c"><p class="price"><tmpl_if price><tmpl_var price> руб.</tmpl_if>&nbsp;</p><p class="id">№<tmpl_var id></p></div>
 		</div></div></div>
-		<tmpl_if price><div class="buy"><img src="/i/0.gif" alt="Положить в корзину"/><input maxlength="3" value="<tmpl_var min_part>" type="text" class="num" id="id<tmpl_var id>"/><input type="button" value="В корзину" onclick="buy('id<tmpl_var id>')"/></div></tmpl_if>
+		<tmpl_if price><div class="buy"><img src="/i/0.gif" alt="Положить в корзину"/><input maxlength="3" value="<tmpl_var min_part>" type="text" class="num" id="id<tmpl_var id>"/><input type="button" value="В корзину"/></div></tmpl_if>
 	</div>
 </tmpl_loop>
 <div style="clear: left"></div>
@@ -101,7 +100,7 @@
 			<tr><td id="copy" colspan="2"><p>&copy;&nbsp;<span>2005</span> Дизайн Цветы ЛП</p></td></tr>
 			</table>
 		</div>
-<script type="text/javascript">count();</script>
+
 <script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
 <script type="text/javascript">var gaJsHost="http://www.";var pageTracker=_gat._getTracker("UA-2900270-1");pageTracker._trackPageview();</script>
 

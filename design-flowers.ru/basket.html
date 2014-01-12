@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<title>Корзина</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT"/>
+<link rel="stylesheet" type="text/css" href="/css/common.css"/>
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/css/lte_ie7.css"/><![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/css/lte_ie6.css"/><![endif]-->
+<script type="text/javascript" src="/js/global.js"></script>
+<style type="text/css">
+.al{ padding-left: 30px; background: url('/i/ico_alert.png') 0 50% no-repeat; margin: 20px 0; padding: 10px 45px; display: inline-block; }
+</style>
+</head>
+<body>
+<div id="layout">
+	<div id="header">
+		<div class="logo"><span class="h2">Дизайн-Цветы ЛП</span><p>оптовая и мелкооптовая продажа искусственных растений</p></div>
+		<div class="tel"><span class="h2">+7 (495) 462-22-23<br/>+7 (926) 970-19-18</span></div>
+		<div class="contacts"><a href="/contacts.html"><img src="/i/compass.png" alt=""/>Контактная информация</a></div>
+	</div>
+	<div id="menu"><ul><li><a href="/flowers/">Искусственные цветы</a></li><li><a href="/green/">Зелень</a></li><li><a href="/tree/">Искусственные деревья</a></li><li><a href="/fruit/">Фрукты, овощи и пр.</a></li><li><a href="/composition/">Композиции, коллажи</a></li><li><a href="/vase/">Вазы, керамика</a></li><li><a href="/florist/">Для флористов</a></li><li class="r"><a href="/zakaz/">Заказ</a></li></ul></div>
+	<div class="subline"><a href="mailto:flowerslp@yandex.ru" class="feedback"><img src="/i/0.gif" alt=""/>Напишите нам</a><a href="/basket.html" class="basket" id="basket"><img src="/i/0.gif" alt=""/>Корзина</a> <b id="quantity"></b></div>
+
+	<div id="body" style="text-align: center;">
+		<h1 style="margin-bottom: 20px;">Корзина</h1>
+		<p id="noorder">Ваша корзина пуста</p>
+		<div id="order_form">
+			<form method="post" id="form" action="/cgi-bin/basket.cgi">
+				<table id="order_list">
+					<tr class="th"><th class="l">Наименование</th><th style="width: 60px">Цена</th><th style="width: 60px">Количество</th><th class="r" style="width: 60px">Удалить</th></tr>
+					<tr data-id='id'><td class="l"></td><td></td><td><input type="text" maxlength="3" value="" name=""/></td><td class="r"><img src="/i/x.gif" alt="Удалить"/></td></tr>
+				</table>
+				<div class="sum">Общая сумма заказа: <b id="total"></b></div>
+				<p class="al" id="min_sum" style="display: none"><big>Опт от: <b>5000 руб. (1-2 модели)</b></big></p>
+				<div class="box reg"><div class="t"><div class="r"><div class="b"><div class="l"><div class="in">
+				<input type="hidden" name="do" value="set_request"/>
+				<div class="field short"><label for="f1">Имя<span>*</span></label><input value="" id="f1" name="request_name" type="text" required="true"/></div>
+				<div class="field short"><label for="f2">Электронная почта<span>*</span></label><input value="" id="f2" name="request_email" type="email" required="true"/></div>
+				<div class="field short"><label for="f3">Телефон<span>*</span></label><input value="" id="f3" name="request_phone" type="text" required="true"/></div>
+				<div class="field long"><label for="f4">Адрес</label><input value="" id="f4" name="request_address" type="text"/></div>
+				<div class="field long"><label for="f5">Комментарии</label><textarea rows="" cols="" id="f5" name="request_comment"></textarea></div>
+				<div class="remark">* &#151; поля, обязательные для заполнения</div>
+				</div></div></div></div></div>
+				</div>
+				<p class="al">Мы работаем с юридическими лицами и индивидуальными предпринимателями</p>
+				<div class="iholder"><input type="submit" value="" class="submit"/></div>
+			</form>
+		</div>
+		<div id="copy"><p>&copy;&nbsp;<span>2005</span> Дизайн Цветы ЛП</p></div>
+	</div>
+</div>
+<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">var gaJsHost="http://www.";var pageTracker=_gat._getTracker("UA-2900270-1");pageTracker._trackPageview();</script>
+<!-- Yandex.Metrika counter -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<script type="text/javascript">try { var yaCounter47049 = new Ya.Metrika({id:47049, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { }</script>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

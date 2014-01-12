@@ -50,7 +50,7 @@ ul.submenu li	{ border-bottom: solid 1px #eee; padding: 10px; font-size: 0.8em; 
 ul.submenu li a	{ color: #000; }
 ul.submenu li strong	{ color: #090; }
 
-.banner	{ margin: 10px auto; cursor: pointer; }
+.banner	{ margin: 10px auto; cursor: pointer;display: none;}
 .b1, .b2, .b3, .b4	{ height: 200px; width: 193px; }
 .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12, .b13, .b14, .b15, .b16	{ width: 184px; }
 .b1	{ background: url('/i/banner1.jpg') no-repeat; }
@@ -184,6 +184,8 @@ div.box div.remark	{ font: normal 70% Tahoma, sans-serif; color: #f00; padding: 
 .al{ padding-left: 30px; background: url('/i/ico_alert.png') 0 50% no-repeat; margin: 20px 0; padding: 10px 45px; display: inline-block; }
 
 .new	{ position: absolute; top: -30px; right: -10px; }
+
+.order #noorder, .empty #order_form  { display: none; }
 }
 
 @media print {

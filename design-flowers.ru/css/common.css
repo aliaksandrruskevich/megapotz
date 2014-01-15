@@ -88,7 +88,7 @@ div.pages span	{ background-color: #0c0; padding: 5px 10px; color: #fff; }
 .p	{ background-position: 0 -594px; overflow: hidden; }
 .p p	{ line-height: 1.3em;  }
 .c	{ position: absolute; top: 11px; left: 11px; background: url('/i/corner24.png') 0 0 no-repeat; width: 170px; height: 80px; text-align: left; }
-.p img	{ margin: 35px 15px 0 15px; }
+.p img	{ margin: 35px 15px 0 15px; cursor: -webkit-zoom-in; cursor: zoom-in; }
 .price, .id	{ font-weight: bold; font-size: 0.75em; margin: 5px 0 5px 5px; }
 .price	{ color: #fff; }
 .id	{ color: #666; }

@@ -168,3 +168,20 @@ $(document).ready(function(){
 })
 
 window.onload=start;
+
+
+
+/* Cloud IM */
+
+var script = document.createElement('script');
+script.src = '//static.cloudim.ru/js/chat.js';
+script.type = 'text/javascript';
+var pos = document.querySelector('script');
+pos.parentNode.insertBefore(script,pos);
+
+window.addEventListener('load', function() {
+	var div = document.createElement('div');
+	div.id = 'cloudim_widget';
+	document.body.appendChild(div);
+	Cloudim.Chat.init({uid:839});
+}, false);

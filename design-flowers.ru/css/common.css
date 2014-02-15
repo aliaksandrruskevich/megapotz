@@ -50,9 +50,9 @@ ul.submenu li	{ border-bottom: solid 1px #eee; padding: 10px; font-size: 0.8em; 
 ul.submenu li a	{ color: #000; }
 ul.submenu li strong	{ color: #090; }
 
-.banner	{ margin: 10px auto; cursor: pointer;display: none;}
-.b1, .b2, .b3, .b4	{ height: 200px; width: 193px; }
-.b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12, .b13, .b14, .b15, .b16	{ width: 184px; }
+.banner	{ margin: 10px auto; cursor: pointer;display: none; width: 184px;}
+/*.b1, .b2, .b3, .b4	{ height: 200px; width: 193px; }
+.b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12, .b13, .b14, .b15, .b16	{  }*/
 .b1	{ background: url('/i/banner1.jpg') no-repeat; }
 .b2	{ background: url('/i/banner2.jpg') no-repeat; }
 .b3	{ background: url('/i/banner3.jpg') no-repeat; }
@@ -65,13 +65,18 @@ ul.submenu li strong	{ color: #090; }
 .b11	{ background: url('/i/banner11.jpg') no-repeat; }
 .b12	{ background: url('/i/banner12.jpg') no-repeat; }
 .b13	{ background: url('/i/banner13.jpg') no-repeat; }
-
 .b14	{ background: url('/i/banner14.jpg') no-repeat; }
 .b15	{ background: url('/i/banner15.jpg') no-repeat; }
 .b16	{ background: url('/i/banner16.jpg') no-repeat; }
+.b17	{ background: url('/i/banner17.jpg') no-repeat; }
+.b18	{ background: url('/i/banner18.jpg') no-repeat; }
+.b19	{ background: url('/i/banner19.jpg') no-repeat; }
+.b20	{ background: url('/i/banner20.jpg') no-repeat; }
+.b21	{ background: url('/i/banner21.jpg') no-repeat; }
+.b22	{ background: url('/i/banner22.jpg') no-repeat; }
+.b23	{ background: url('/i/banner23.jpg') no-repeat; }
 
-.b9	{ background: url('/i/banner9.jpg') no-repeat; }
-.b5 div, .b6 div, .b7 div, .b8 div, .b9 div, .b10 div, .b11 div, .b12 div, .b13 div, .b14 div, .b15 div, .b16 div	{ background: url('/i/banner.png') no-repeat; height: 256px; }
+.banner div	{ background: url('/i/banner.png') no-repeat; height: 256px; }
 .banner div p	{ padding-top: 172px; }
 .banner p	{ padding: 116px 10px 10px 10px; color: #fff; line-height: 1em; }
 .banner p a, .banner p b	{ color: #fff; font-weight: bold; display: block; padding-bottom: 5px; line-height: 1.3em; }

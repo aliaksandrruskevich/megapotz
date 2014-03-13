@@ -567,6 +567,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// 
 		
 		////////////// Подмена телефона
+		/*
 		var phoneNodes = document.getElementsByTagName('p');
 		for (var i = 0, l = phoneNodes.length; i < l; i++) {
 			var html = phoneNodes[i].innerHTML;
@@ -574,6 +575,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				phoneNodes[i].innerHTML = phoneNodes[i].innerHTML.replace(/\(?495\)? 99-88-347/, "(909) 151-31-56");
 			}
 		}
+		*/
 
 		// Счетчики грузим в последнюю очередь
 		(function () {

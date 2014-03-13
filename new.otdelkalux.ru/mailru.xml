@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+	<name>Артель Сергея Петунина</name>
+	<sitelinks>
+		<sitelink title="Фото отделки" url="http://www.otdelkalux.ru/portfolio/"/>
+		<sitelink title="Калькулятор ремонта" url="http://www.otdelkalux.ru/price/calculator.html"/>
+		<sitelink title="Контакты" url="http://www.otdelkalux.ru/contacts.html"/>
+		<sitelink title="Осмотр объектов" url="http://www.otdelkalux.ru/osmotr/"/>
+		<sitelink title="Предложение для Новой Риги" url="http://www.otdelkalux.ru/novayariga.html"/>
+		<sitelink title="Гарантия &#151; 2 года" url="http://www.otdelkalux.ru/warranty.html"/>
+	</sitelinks>
+	<addresses>
+		<address status="main">
+			<name>Артель Сергея Петунина</name>
+			<addressCountry>Россия</addressCountry>
+			<addressRegion>Московская область</addressRegion>
+			<addressLocality>пос. Миллениум Парк</addressLocality>
+			<postalCode>143581</postalCode>
+			<streetAddress>влад. ЧЕС-3-041</streetAddress>
+			<geo>
+				<latitude>55.79</latitude>
+				<longitude>37.022</longitude>
+			</geo>
+			<telephone>+7 (495) 9988347</telephone>
+			<email>hello@otdelkalux.ru</email>
+		</address>
+		<address status="main">
+			<addressCountry>Россия</addressCountry>
+			<addressLocality>Москва</addressLocality>
+		</address>
+	</addresses>
+</site>

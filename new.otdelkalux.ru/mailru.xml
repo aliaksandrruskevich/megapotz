@@ -21,12 +21,8 @@
 				<latitude>55.79</latitude>
 				<longitude>37.022</longitude>
 			</geo>
-			<telephone>+7 (495) 9988347</telephone>
+			<telephone>+7 (495) 998-83-47</telephone>
 			<email>hello@otdelkalux.ru</email>
-		</address>
-		<address status="main">
-			<addressCountry>Россия</addressCountry>
-			<addressLocality>Москва</addressLocality>
 		</address>
 	</addresses>
 </site>

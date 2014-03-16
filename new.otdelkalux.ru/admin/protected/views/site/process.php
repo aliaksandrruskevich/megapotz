@@ -71,6 +71,51 @@ $i=1;
 <?}?>
 
 </section>
+
+	<div class="actioncall">
+			<p>Если у вас уже есть проект ремонта, и вы хотите узнать, сколько стоит его реализация, пишите:</p>
+			<p><a href="mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">hello@otdelkalux.ru</a></p>
+			<p class="small">Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
+			<p>Также мы можем встретиться у вас на объекте для проведения замеров:</p>
+	</div>
+	<div class="form_bg">
+		<div class="form">
+		<form action="novayariga.php" method="POST" target="send_estimate">
+			<div>
+				<label for="name">Имя:</label>
+				<input type="input" required="true" name="name" id="name">
+			</div>
+			<div>
+				<label for="phone">Телефон:</label>
+				<input type="tel" required="true" name="phone" id="phone" placeholder="+7 (495) 998-83-47">
+			</div>
+			<div>
+				<label for="email">Email:</label>
+				<input type="email" required="true" name="email" id="email">
+			</div>
+			<div>
+				<label for="date">Дата и время встречи:</label>
+				<input type="datetime-local" name="date" id="date">
+			</div>
+			<div>
+				<label for="area">Площадь дома:</label>
+				<input type="number" name="area" id="area" min="100" max="1500" step="1" required="true">
+			</div>
+			<div>
+				<label for="vil">Название посёлка:</label>
+				<input name="village" list="villages" id="vil" required="true" title="Пожалуйста, укажите название посёлка"><datalist id="villages"><option value="Monteville"></option><option value="Millennium Park"></option><option value="Madison Park"></option><option value="Park Avenue"></option><option value="Гринфилд"></option><option value="Риверсайд"></option><option value="Шервуд"></option><option value="Bosconi"></option><option value="Резиденции Бенилюкс"></option><option value="Онегино"></option><option value="Монолит"></option><option value="Agalarov Estate "></option><option value="Покровский"></option><option value="Lipki Парк"></option><option value="Crystal Istra"></option><option value="Маленькая Италия"></option><option value="Павлово"></option><option value="Никольская слобода"></option><option value="Николо-Урюпино"></option><option value="Архангельское II"></option><option value="Ильинский квартал"></option><option value="Новоархангельское"></option><option value="Sovereign (Соверен)"></option><option value="Тимошкино"></option><option value="Европа"></option><option value="Петрово-Дальнее"></option><option value="Кедры"></option><option value="Усадьба Вельяминово"></option><option value="Крона (Krona Village)"></option><option value="Старая Рига"></option><option value="Белая гора"></option><option value="Спутник"></option><option value="Величъ"></option></datalist>
+			</div>
+			<div>
+				<label for="comment">Комментарий:</label>
+				<textarea name="comment" id="comment"></textarea>
+			</div>
+			<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
+		</form>
+		<iframe src="about:blank" id="send_estimate" name="send_estimate" class="dn"></iframe>
+		</div>
+	</div>
+
+
 <section class="center">
 <div style="margin: 50px auto;" class="likes yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,gplus,facebook,twitter" data-yashareTheme="counter" data-yashareType="small"></div>
 </section>

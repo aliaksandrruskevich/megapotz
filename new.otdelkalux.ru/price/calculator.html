@@ -36,27 +36,25 @@
 <a href="/price/price-list.html" class="right">Прайс-лист</a>
 </div>
 <div id="calculator">
-<form method="post" action="/offer.php" target="send_estimate">
+<form method="post" action="/offer.php" target="send_estimate" id="calc_form">
 <div class="calc-head">
-<input type="radio" name="type" value="cott" id="cott" class="dn"><label for="cott" class="cott">Коттедж</label>
-<input type="radio" name="type" value="appt" id="appt" class="dn"><label for="appt" class="appt">Квартира</label>
-<div class="input" style="padding-left: 130px"><label for="area">Площадь, м²</label><input type="number" name="area" id="area" value="400" min="100" max="2000" step="1"></div>
-<div class="input"><label for="wc">Санузлы</label><input type="number" name="wc" id="wc" value="3" min="1" max="8" step="1"></div>
+<input type="radio" name="level" value="standard" id="standard" class="dn"><label for="standard" class="standard">Стандарт</label>
+<input type="radio" name="level" value="business" id="business" class="dn"><label for="business" class="business">Бизнес</label>
+<div class="input" style="padding-left: 130px"><label for="area">Площадь, м²</label><input type="number" name="area" id="area" value="" min="150" max="1000" step="10"></div>
+<div class="input"><label for="wc">Санузлы</label><input type="number" name="wc" id="wc" value="" min="1" max="6" step="1"></div>
 </div>
 <div class="calc-hint"><p>Задайте параметры, чтобы рассчитать стоимость работ</p></div>
 <div class="calc-body">
 <table>
-<thead><tr><th></th><th>Бизнес</th><th>Люкс</th></tr></thead>
-<tfoot><tr><td>Общая сумма (работа + материал)</td><td></td><td></td></tr></tfoot>
+<thead><tr><th></th><th>Работа</th><th>Черновой материал</th></tr></thead>
+<tfoot><tr><td>Общая сумма</td><td></td><td></td></tr></tfoot>
 <tbody>
 <tr><td>Отделка под ключ</td><td></td><td></td></tr>
 <tr><td>Электрика под ключ</td><td></td><td></td></tr>
-<tr><td>Сантехника под ключ</td><td></td><td></td></tr>
-<tr><td>Отопление под ключ</td><td></td><td></td></tr>
-<tr><td>Черновой материал отделка</td><td></td><td></td></tr>
-<tr><td>Черновой материал электрика</td><td></td><td></td></tr>
-<tr><td>Черновой материал сантехника</td><td></td><td></td></tr>
-<tr><td>Черновой материал отопление</td><td></td><td></td></tr>
+<tr><td>Водоснабжение</td><td></td><td></td></tr>
+<tr><td>Канализация</td><td></td><td></td></tr>
+<tr><td>Отопление</td><td></td><td></td></tr>
+<tr><td>Котельная</td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
@@ -75,13 +73,45 @@
 </div>
 <div class="disclaimer">
 <p><img src="http://static.otdelkalux.ru/i/alert.svg" alt=""></p>
-<p>В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса. Более точную информацию по ценам мы сможем дать только после ознакомления с дизайн-проектом.</p>
+<p>В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса.</p>
+<p>Более точные цифры мы сможем дать <b>только после осмотра</b> вашего объекта!</p>
 </div>
-<div class="actioncall">
-<p>Если у вас уже есть проект ремонта, и вы хотите узнать, сколько стоит его реализация, пишите:</p>
-<p><a href="mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">hello@otdelkalux.ru</a></p>
-<p class="small">Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
-</div>
+	<p class="big">Согласовать встречу для проведения замеров:</p>
+	<div class="form_bg">
+		<div class="form">
+			<form action="novayariga.php" method="POST" target="send_estimate">
+				<div>
+					<label for="name_2">Имя:</label>
+					<input type="input" required="true" name="name" id="name_2">
+				</div>
+				<div>
+					<label for="phone">Телефон:</label>
+					<input type="tel" required="true" name="phone" id="phone" placeholder="+7 (495) 998-83-47">
+				</div>
+				<div>
+					<label for="email_2">Email:</label>
+					<input type="email" required="true" name="email" id="email_2">
+				</div>
+				<div>
+					<label for="date">Дата и время встречи:</label>
+					<input type="datetime-local" name="date" id="date">
+				</div>
+				<div>
+					<label for="area">Площадь дома:</label>
+					<input type="number" name="area" id="area_2" min="100" max="1500" step="1" required="true">
+				</div>
+				<div>
+					<label for="vil">Название посёлка:</label>
+					<input name="village" list="villages" id="vil" required="true" title="Пожалуйста, укажите название посёлка"><datalist id="villages"><option value="Monteville"></option><option value="Millennium Park"></option><option value="Madison Park"></option><option value="Park Avenue"></option><option value="Гринфилд"></option><option value="Риверсайд"></option><option value="Шервуд"></option><option value="Bosconi"></option><option value="Резиденции Бенилюкс"></option><option value="Онегино"></option><option value="Монолит"></option><option value="Agalarov Estate "></option><option value="Покровский"></option><option value="Lipki Парк"></option><option value="Crystal Istra"></option><option value="Маленькая Италия"></option><option value="Павлово"></option><option value="Никольская слобода"></option><option value="Николо-Урюпино"></option><option value="Архангельское II"></option><option value="Ильинский квартал"></option><option value="Новоархангельское"></option><option value="Sovereign (Соверен)"></option><option value="Тимошкино"></option><option value="Европа"></option><option value="Петрово-Дальнее"></option><option value="Кедры"></option><option value="Усадьба Вельяминово"></option><option value="Крона (Krona Village)"></option><option value="Старая Рига"></option><option value="Белая гора"></option><option value="Спутник"></option><option value="Величъ"></option></datalist>
+				</div>
+				<div>
+					<label for="comment">Комментарий:</label>
+					<textarea name="comment" id="comment"></textarea>
+				</div>
+				<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
+			</form>
+		</div>
+	</div>
 </div>
 </section>
 

@@ -10,6 +10,13 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="http://static.otdelkalux.ru/css/common.css">
 <script type="text/javascript" src="/js/main.js"></script>
+<style>
+	.price-list	{ width: 960px; margin: 0 auto; text-align: left; border-collapse: collapse; margin-bottom: 50px; }
+	.price-list th { border-bottom: 1px solid #000; padding: 10px; }
+	.price-list td:nth-child(n+2) { width: 90px; }
+	.price-list td { padding: 10px; border-bottom: 1px solid #888; line-height: 1.4em; }
+	.price-list tr:hover td { background-color: #f0f0f0; }
+</style>
 </head>
 <body id="page-price">
 <header class="column">
@@ -27,20 +34,333 @@
 </ul></nav>
 </header>
 
-<section id="price">
+<section>
 <div class="column center">
 <div id="selector" class="right">
 <div class="current"></div>
 <a href="/price/calculator.html" class="left">Калькулятор</a>
 <a href="/price/price-list.html" class="right">Прайс-лист</a>
 </div>
-<iframe width="820" height="4910" style="border: 0" src='https://docs.google.com/spreadsheet/pub?key=0AkVCyJtOc1uydHh6WEhBUFBrWm1tM21qUm9FQlZiOUE&amp;single=true&amp;gid=0&amp;output=html&amp;widget=true'></iframe>
+
+<h1>Стоимость услуг</h1>
+
+<table class="price-list">
+<thead>
+<tr><th>Демонтажные работы</th><th>Ед. изм.</th><th>Цена, руб.</th></tr>
+</thead>
+<tbody>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж временного электрощита с последующим демонтажем</td><td>шт.</td><td itemprop="price">4500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Прокладка временных линий освещения и электропитания</td><td>м/п</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж временных электроустановочных приборов с последующим демонтажем</td><td>шт.</td><td itemprop="price">300</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж подмостей деревянных</td><td>м/п</td><td itemprop="price">400</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Укрытие оборудования, мебели и отдельных элементов плёнкой с последующим снятием</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Защита окон и дверей плёнкой с проклейкой скотчем</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Уборка, вынос и погрузка лёгкого мусора (дерево, бумага, ПВХ и т. п.) в контейнер (автомобиль)</td><td>м³</td><td itemprop="price">600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Добавляется в доме без лифта за этаж</td><td>м³</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Уборка, вынос и погрузка тяжёлого мусора (кирпич, бетон, металл) в контейнер (автомобиль)</td><td>м³</td><td itemprop="price">1400</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Добавляется в доме без лифта за этаж</td><td>этаж</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж кирпичных стен толщиной в полкирпича</td><td>м²</td><td itemprop="price">300</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж перегородок из керамзитобетонных, шлакобетонных и т.п. блоков толщиной до 100 мм</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Разборка гипсокартонных перегородок однослойных</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж обшивки стен из гипсокартона на каркасе</td><td>м²</td><td itemprop="price">140</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж облицовки стен из гипсокартона на клее</td><td>м/п</td><td itemprop="price">110</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Разборка обшивки стен из досок, вагонки, панелей ПВХ с разборкой каркаса</td><td>м²</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Прорезка проёмов в железобетонных стенах толщиной до 200 мм (без работ по усилению)</td><td>м²</td><td itemprop="price">7500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Прорезка проёмов в кирпичных стенах (без работ по усилению)</td><td>м²</td><td itemprop="price">3500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Усиление проёма конструкцией из швеллера</td><td>м²</td><td itemprop="price">5500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штроба электрическая по стене бетон 2 х 2 см</td><td>м/п</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штроба электрическая по потолку бетон 2 х 2 см</td><td>м/п</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штроба сантехническая бетон 5 х 5 см</td><td>м/п</td><td itemprop="price">800</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штроба сантехническая бетон 10 х 10 см</td><td>м/п</td><td itemprop="price">1600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Гнездо-подрозетник (бетон)</td><td>шт.</td><td itemprop="price">650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штроба электрическая по стене кирпич 2 х 2 см</td><td>м/п</td><td itemprop="price">100</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штроба сантехническая кирпич 5 х 5 см</td><td>м/п</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штроба сантехническая кирпич 10 х 10 см</td><td>м/п</td><td itemprop="price">750</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Гнездо-подрозетник (кирпич)</td><td>шт.</td><td itemprop="price">300</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж настенной керамической плитки</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Снятие старых обоев со стен (до двух слоев)</td><td>м²</td><td itemprop="price">170</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Расчистка стен от краски на водной или акриловой основе</td><td>м²</td><td itemprop="price">170</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Разборка подвесного потолка типа "Armstrong"</td><td>м²</td><td itemprop="price">180</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Разборка реечных потолков</td><td>м²</td><td itemprop="price">220</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Разборка простого гипсокартонного потолка</td><td>м²</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Разборка подшивных потолков из досок, вагонки, панелей ПВХ с разборкой каркаса</td><td>м²</td><td itemprop="price">380</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Расчистка потолков от старой шпаклёвки</td><td>м²</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Расчистка потолков от краски на водной или акриловой основе</td><td>м²</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж линолеума или ковролина, уложенного без клея</td><td>м²</td><td itemprop="price">100</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж линолеума или ковролина, уложенного на клей</td><td>м²</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж фанеры, уложенной на мастику и дюбеля</td><td>м²</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Разборка штучного паркета без сохранения</td><td>м²</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж керамической плитки половой</td><td>м²</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж гидроизоляции рулонной</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж цементной стяжки неармированной толщиной до 50 мм</td><td>м²</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж блоков дверных без сохранения</td><td>шт.</td><td itemprop="price">1500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж блоков оконных без сохранения</td><td>шт.</td><td itemprop="price">1500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж ванны чугунной</td><td>шт.</td><td itemprop="price">2000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж унитаза</td><td>шт.</td><td itemprop="price">900</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж раковины</td><td>шт.</td><td itemprop="price">800</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж полотенцесушителя</td><td>шт.</td><td itemprop="price">2000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж труб системы отопления</td><td>м/п</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж радиаторов отопления</td><td>шт.</td><td itemprop="price">2200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж стояков водоснабжения, канализации</td><td>м/п</td><td itemprop="price">240</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж наружной электропроводки</td><td>м/п</td><td itemprop="price">10</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж светильников</td><td>шт.</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж розеток и выключателей</td><td>шт.</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Демонтаж электрощита с маркировкой концов</td><td>шт.</td><td itemprop="price">1500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка временных розеток</td><td>шт.</td><td itemprop="price">250</td></tr>
+</tbody>
+</table>
+
+<table class="price-list">
+<thead>
+<tr><th>Окна, двери, проёмы</th><th>Ед. изм.</th><th>Цена, руб.</th></tr>
+</thead>
+<tbody>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Устройство откосов плоских шириной до 200 мм из гипсокартона</td><td>м/п</td><td itemprop="price">500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Грунтовка</td><td>м²</td><td itemprop="price">60</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж сетки штукатурной на откосах</td><td>м²</td><td itemprop="price">120</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка откосов плоских шириной до 200 мм цементным раствором</td><td>м/п</td><td itemprop="price">600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка откосов плоских шириной до 200 мм гипсовыми смесями</td><td>м/п</td><td itemprop="price">500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка малярных уголков</td><td>м/п</td><td itemprop="price">120</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпаклевка ГК откосов (стандарт) плоских шириной до 200 мм</td><td>м/п</td><td itemprop="price">240</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпатлёвка оштукатуренных откосов (стандарт под обои) плоских шириной до 200 мм</td><td>м/п</td><td itemprop="price">290</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпатлёвка ошпатлёваных откосо (стандарт под обои)в плоских шириной до 200 мм</td><td>м/п</td><td itemprop="price">160</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Флизелин на откосах</td><td>м/п</td><td itemprop="price">210</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Грунтовка откосов перед покраской</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Покраска откосов плоских шириной до 200 мм водоэмульсионными составами</td><td>м/п</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка стандартных дверных блоков (площадью до 2 м²)</td><td>шт.</td><td itemprop="price">3500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка распашной двери (площадью до 3,5 м²)</td><td>шт.</td><td itemprop="price">4500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка наличников деревянных с прирезкой</td><td>м/п</td><td itemprop="price">300</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Врезка замков дверных с установкой ручек и накладок</td><td>шт.</td><td itemprop="price">950</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Врезка замков дверных простых</td><td>шт.</td><td itemprop="price">400</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж карнизов для штор</td><td>м/п</td><td itemprop="price">450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка жалюзи</td><td>м²</td><td itemprop="price">650</td></tr>
+</tbody>
+</table>
+
+<table class="price-list">
+<thead>
+<tr><th>Потолки</th><th>Ед. изм.</th><th>Цена, руб.</th></tr>
+</thead>
+<tbody>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Металокаркас для гк-листов в 1 уровень прямолинейной формы</td><td>м²</td><td itemprop="price">650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Металокаркас для гк-листов в 2 уровень прямолинейной формы</td><td>м²</td><td itemprop="price">850</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Металокаркас для гк-листов в 3 уровень прямолинейной формы</td><td>м²</td><td itemprop="price">1050</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Зашивка потолка ГК-листами в два слоя</td><td>м²</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж торцов перепада между уровнями потолка</td><td>м/п</td><td itemprop="price">1000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж торцов перепада между уровнями потолка с нишами для подсветки</td><td>м/п</td><td itemprop="price">1500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Грунтовка</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж сетки штукатурной на потолке</td><td>м²</td><td itemprop="price">160</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка потолков гипсовыми смесями без маяков слоем до 25 мм</td><td>м²</td><td itemprop="price">600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка потолков гипсовыми смесями по маякам слоем до 25 мм</td><td>м²</td><td itemprop="price">850</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка потолков гипсовыми смесями по маякам слоем больше 25 мм</td><td>м²</td><td itemprop="price">850</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпатлёвка ГК потолка (стандарт) под обои или флизелин</td><td>м²</td><td itemprop="price">240</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпатлёвка оштукатуренного потолка (стандарт) под обои</td><td>м²</td><td itemprop="price">290</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпатлёвка ошпатлёваного потолка (стандарт) под покраску (2 слоя шитрока)</td><td>м²</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпатлевка торцов потолка (стандарт)</td><td>м/п</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпатлевка торцов потолка (под покраску)</td><td>м/п</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шлифовка потолка после шпаклевки под окраску и обои</td><td>м²</td><td itemprop="price">80</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Флизелин на потолках</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Грунтовка потолока перед покраской</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Покраска потолка водоэмульсионными составами (3 слоя)</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Устройство пароизоляции потолков и перекрытий из рулонных материалов</td><td>м²</td><td itemprop="price">450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Утепление и звукоизоляция потолков плитами на клею</td><td>м²</td><td itemprop="price">450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Утепление потолков минераловатными плитами на клею и дюбелях</td><td>м²</td><td itemprop="price">550</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Утепление и звукоизоляция перекрытий рулонной минераловатой</td><td>м²</td><td itemprop="price">450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Устройство потолков подвесных реечных в помещениях с 4 углами</td><td>м²</td><td itemprop="price">460</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Устройство потолков подвесных реечных в помещениях с 5-6 углами</td><td>м²</td><td itemprop="price">550</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Устройство потолков подвесных "Armstrong"</td><td>м²</td><td itemprop="price">450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Обшивка потолков вагонкой</td><td>м²</td><td itemprop="price">440</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Обшивка потолков декоративной фанерой</td><td>м²</td><td itemprop="price">650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Обшивка потолков панелями ПВХ</td><td>м²</td><td itemprop="price">440</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Облицовка потолков декоративными деревянными панелями</td><td>м²</td><td itemprop="price">950</td></tr>
+</tbody>
+</table>
+
+<table class="price-list">
+<thead>
+<tr><th>Стены</th><th>Ед. изм.</th><th>Цена, руб.</th></tr>
+</thead>
+<tbody>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Кладка перегородок кирпичных армированных толщиной в 1/2 кирпича</td><td>м²</td><td itemprop="price">850</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Кладка перегородок кирпичных В КУБАХ</td><td>м3</td><td itemprop="price">5500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Кладка перегородок из пеноблоков</td><td>м²</td><td itemprop="price">650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Кладка перегородок из керамзитобетонных блоков толщиной до 200 мм</td><td>м²</td><td itemprop="price">650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Кладка перегородок из гипсолитовых пазогребневых плит</td><td>м²</td><td itemprop="price">650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Кладка из кирпича портиков, беседок, арок и других декоративных конструкций</td><td>м³</td><td itemprop="price">5500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Кладка из кирпича мелких конструкций</td><td>м³</td><td itemprop="price">5500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Обрешотка стен под вагонку</td><td>м³</td><td itemprop="price">300</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Обшивка стен вагонкой по обрешотки</td><td>м²</td><td itemprop="price">400</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Обшивка стен сложной формы вагонкой по  обрешётке</td><td>м²</td><td itemprop="price">от 480</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Утепление стен утеплителем в один слой</td><td>м²</td><td itemprop="price">100</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Пластиковые панели по готовой обрешотки</td><td>м²</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Каркас под ГК перегородки с однослойной обшивкой на металлокаркасе</td><td>м²</td><td itemprop="price">600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Каркас под ГК перегородки с двухслойной обшивкой на металлокаркасе</td><td>м²</td><td itemprop="price">700</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">ГК по металлокаркасу  в один слой</td><td>м²</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Расшивка заделка швов между листами ГК</td><td>м/п</td><td itemprop="price">120</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Облицовка стен гипсокартоном на клее</td><td>м²</td><td itemprop="price">600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж коробов из гипсокартона прямолинейной формы (без отделки)</td><td>м²</td><td itemprop="price">1200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Грунтовка бетонных стен праймером перед штукатуркой</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Грунтовка</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Металлическая сетка под штукатурку</td><td>м²</td><td itemprop="price">160</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Пластиковая сетка на стены 2,5 х 2,5 мм или 5 х 5 мм</td><td>м²</td><td itemprop="price">80</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка штукатурных маяков</td><td>м²</td><td itemprop="price">80</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка стен цементным раствором под плитку по маякам</td><td>м²</td><td itemprop="price">450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка стен цементным раствором без маяков</td><td>м²</td><td itemprop="price">500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка стен цементным раствором по маякам</td><td>м²</td><td itemprop="price">650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка стен гипсовыми смесями без маяков под правило   слой  до  3  см.</td><td>м²</td><td itemprop="price">400</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штукатурка стен гипсовыми смесями по маякам слой до 3 см.</td><td>м²</td><td itemprop="price">490</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Заглажевание штукатурки</td><td>м²</td><td itemprop="price">80</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка штукатурных уголков</td><td>м/п</td><td itemprop="price">120</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Добовление за слой выше 3 см (+ за каждый  см слоя)</td><td>м²</td><td itemprop="price">120</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпаклёвка ГК стен (стандарт) под обои</td><td>м²</td><td itemprop="price">220</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпаклёвка оштукатуреных стен (стандарт) под обои</td><td>м²</td><td itemprop="price">260</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпаклёвка ошпатлёваных стен (стандарт) под покраску (2 слоя шитрока)</td><td>м²</td><td itemprop="price">210</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шпаклёвка криволинейных стен под покраску</td><td>м²</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Шлифовка стен после шпаклевки под окраску и обои</td><td>м²</td><td itemprop="price">80</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Флизелин на стены</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Грунтовка отшпатлёванных стен под покраску</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Покраска стен вододисперсионной краской (2 слоя)</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Декоративное покрытие "Антика"</td><td>м²</td><td itemprop="price">600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Покраска стен декоративными красками мозаичными</td><td>м²</td><td itemprop="price">300</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Венецианская штукатурка</td><td>м²</td><td itemprop="price">1200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Оклейка стен обоями виниловыми</td><td>м²</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Оклейка стен флизелиновыми обоями</td><td>м²</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Оклейка стен обоями текстильными или тканями</td><td>м²</td><td itemprop="price">1000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Наклейка бордюра обойного</td><td>м/п</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Керамическая плитка по подготовленной поверхности</td><td>м²</td><td itemprop="price">950</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Мозаичная плитка по подготовленной поверхности</td><td>м²</td><td itemprop="price">2900</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Мраморная плитка встык без шва по подготовленной поверхности</td><td>м²</td><td itemprop="price">2800</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка карнизных и бордюрных плиток</td><td>м/п</td><td itemprop="price">950</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Обработка торцов плитки под 45 градусов</td><td>м/п</td><td itemprop="price">1000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Облицовка стен искусственным камнем</td><td>м²</td><td itemprop="price">1200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Облицовка стен искусственным камнем правильной геометрической формой</td><td>м²</td><td itemprop="price">1200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Бордюр, плинтуса керамические</td><td>м/п</td><td itemprop="price">1000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Уголки, раскладки</td><td>м/п</td><td itemprop="price">120</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Затирка швов шириной до 5 мм</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Отверстия в плитке </td><td>шт.</td><td itemprop="price">300</td></tr>
+</tbody>
+</table>
+
+<table class="price-list">
+<thead>
+<tr><th>Пол</th><th>Ед. изм.</th><th>Цена, руб.</th></tr>
+</thead>
+<tbody>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Застилка полов плёнкой с проклейкой швов</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Защитная временная застилка полов оргалитом</td><td>м²</td><td itemprop="price">80</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Грунтовка пола</td><td>м²</td><td itemprop="price">50</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Гидроизоляция пола</td><td>м²</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Металическая сетка на пол</td><td>м²</td><td itemprop="price">120</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Цементная стяжка без маяков</td><td>м²</td><td itemprop="price">300</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Цементная стяжка по маякам от 3-5 см</td><td>м²</td><td itemprop="price">400</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Цементная стяжка по маякам от 5-10 см</td><td>м²</td><td itemprop="price">600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Цементная стяжка с керамзитом слой до 400 мм</td><td>м²</td><td itemprop="price">950</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Наливные самовыравнивающиеся полы</td><td>м²</td><td itemprop="price">220</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Очистка основания пола от пыли пылесосом с нанесением дисперсионной грунтовки</td><td>м²</td><td itemprop="price">120</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Обмазочная гидроизоляция полов цементными составами толщиной 3 мм в два слоя</td><td>м²</td><td itemprop="price">450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Устройство оклеечной гидроизоляции пола рулонными материалами на мастике</td><td>м²</td><td itemprop="price">320</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Устройство шумоизоляции тонкослойным рулонным материалом</td><td>м²</td><td itemprop="price">75</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Укладка лаг из бруса 100 х 100 мм</td><td>м²</td><td itemprop="price">280</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Доски необрезные на пол</td><td>м²</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Доски шпунтованные на пол</td><td>м²</td><td itemprop="price">650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Фанера на деревянные основания с резкой листа на 4 части</td><td>м²</td><td itemprop="price">195</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Фанера по бетонному основанию на мастике и дюбелях с резкой листа на 4 части</td><td>м²</td><td itemprop="price">280</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штучный паркет</td><td>м²</td><td itemprop="price">700</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Циклёвка паркетного пола</td><td>м²</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Покрытие лаком (3 слоя)</td><td>м²</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Укладка, циклёвка, лакировка штучного паркета</td><td>м²</td><td itemprop="price">1100</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Облицовка полов керамической плиткой</td><td>м²</td><td itemprop="price">1000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Облицовка полов керамической плиткой (улучшеная)</td><td>м²</td><td itemprop="price">1200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Облицовка полов мозаичной плиткой по подготовленому основанию</td><td>м²</td><td itemprop="price">2900</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Обработка торцов половой плитки под 45 градусов</td><td>м/п</td><td itemprop="price">1000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Ламинат</td><td>м²</td><td itemprop="price">600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Линолеум, ковролин</td><td>м²</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Паркетная доска</td><td>м²</td><td itemprop="price">600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Плинтус деревянный на гвоздях</td><td>м/п</td><td itemprop="price">230</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Плинтус пластиковый на клее</td><td>м/п</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Плинтус пластиковый на клипсах</td><td>м/п</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Лакировка плинтуса деревянного</td><td>м/п</td><td itemprop="price">150</td></tr>
+</tbody>
+</table>
+
+<table class="price-list">
+<thead>
+<tr><th>Сантехнические работы</th><th>Ед. изм.</th><th>Цена, руб.</th></tr>
+</thead>
+<tbody>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка смесителя</td><td>шт.</td><td itemprop="price">2100</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка полотенцесушителя</td><td>шт.</td><td itemprop="price">3350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка ванны</td><td>шт.</td><td itemprop="price">5000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка джакузи</td><td>шт.</td><td itemprop="price">7500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка унитаза</td><td>шт.</td><td itemprop="price">2650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка раковины</td><td>шт.</td><td itemprop="price">2500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка душевой кабины</td><td>шт.</td><td itemprop="price">4500</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка водонагревателя накопительного</td><td>шт.</td><td itemprop="price">4300</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка стиральной машины</td><td>шт.</td><td itemprop="price">4000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Устройство фурнитуры</td><td>шт.</td><td itemprop="price">2000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка мойдодыра с зеркалом</td><td>шт.</td><td itemprop="price">4150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Разводка труб системы отопления</td><td>м/п</td><td itemprop="price">325</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка радиаторов отопления с установкой кранов и терморегуляторов</td><td>шт.</td><td itemprop="price">4200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Прокладка стояков водоснабжения, канализации</td><td>м/п</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка манометров и датчиков давления холодной/горячей воды</td><td>шт.</td><td itemprop="price">2000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка фильтров грубой очистки (полуавтомат)</td><td>шт.</td><td itemprop="price">1700</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка фильтров тонкой очистки</td><td>шт.</td><td itemprop="price">1150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Разводка горячей/холодной воды</td><td>точка</td><td itemprop="price">4000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Штробировка стен под укладку труб</td><td>м/п</td><td itemprop="price">360</td></tr>
+</tbody>
+</table>
+
+<table class="price-list">
+<thead>
+<tr><th>Электромонтажные работы</th><th>Ед. изм.</th><th>Цена, руб.</th></tr>
+</thead>
+<tbody>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Пробивка ниши под встраиваемый щиток на 36 модулей бетон/кирпич</td><td>шт.</td><td itemprop="price">2400/2800</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Пробивка ниши под встраиваемый щиток на 24 модуля бетон/кирпич</td><td>шт.</td><td itemprop="price">3200/4600</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Пробивка борозд сечением до 20 см² в конструкциях стен</td><td>м/п</td><td itemprop="price">200</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Пробивка борозд сечением до 20 см² в конструкциях потолка</td><td>м/п</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Пробивка отверстий в стенах</td><td>шт.</td><td itemprop="price">340</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Пробивка гнезд 130 х 130 мм в перегородках под распаечные коробки</td><td>шт.</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Бурение ниш под розетку, выключатель гкл/бетон/кирпич</td><td>шт.</td><td itemprop="price">320</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж крюка под люстру</td><td>шт.</td><td itemprop="price">450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Сверление отверстия под установку точечного светильника гкл/реечный потолок</td><td>шт.</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж короба электротехнического размером до 100 х 60 мм</td><td>м/п</td><td itemprop="price">100</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж короба электротехнического размером до 60 х 40 мм</td><td>м/п</td><td itemprop="price">65</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж короба электротехнического размером до 40 х 25 мм</td><td>м/п</td><td itemprop="price">30</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Затягивание кабеля в гофру</td><td>м/п</td><td itemprop="price">20</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж гофры по полу диаметром до 25 мм</td><td>м/п</td><td itemprop="price">15</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж гофры по потолку диаметром до 25 мм</td><td>м/п</td><td itemprop="price">25</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж распределительного щитка</td><td>шт.</td><td itemprop="price">1300</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Сборка щитка</td><td>групп</td><td itemprop="price">355</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка распаечных и распределительных коробок</td><td>шт.</td><td itemprop="price">100</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка точечного светильника</td><td>шт.</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка механизма розетки, выключателя</td><td>шт.</td><td itemprop="price">250</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка розетки накладной</td><td>шт.</td><td itemprop="price">325</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка и подключение датчика теплого пола</td><td>шт.</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Счетчик электроэнергии прямого включения</td><td>шт.</td><td itemprop="price">850</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка электрического звонка с подключением</td><td>шт.</td><td itemprop="price">350</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка кнопки звонка электрического</td><td>шт.</td><td itemprop="price">150</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка и подключение видеодомофона с вызывной панелью</td><td>шт.</td><td itemprop="price">2450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка розетки под электрическую плиту</td><td>шт.</td><td itemprop="price">650</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж ТВ кабеля</td><td>м/п</td><td itemprop="price">25</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж сетевого кабеля для компьютера</td><td>м/п</td><td itemprop="price">25</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Монтаж телефонного кабеля</td><td>м/п</td><td itemprop="price">15</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка люстры с лампами накаливания до 5 шт х 60 Вт</td><td>шт.</td><td itemprop="price">345</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка люстры с лампами накаливания до 10 шт х 60 Вт</td><td>шт.</td><td itemprop="price">400</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Расключение и прозвонка распаечных коробок освещения</td><td>шт.</td><td itemprop="price">450</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Замена тройного электроблока санузла</td><td>шт.</td><td itemprop="price">1000</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Установка и подключение вентилятора</td><td>шт.</td><td itemprop="price">625</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Устройство декоративной подсветки</td><td>м/п</td><td itemprop="price">145</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Подключение ТВ и телефонного кабеля к сети</td><td>шт.</td><td itemprop="price">125</td></tr>
+<tr itemscope itemtype="http://schema.org/Offer"><td itemprop="name">Ревизия распределительного квартирного щитка</td><td>шт.</td><td itemprop="price">1000</td></tr>
+</tbody>
+</table>
 </div>
 </section>
 
-<section class="center">
+<div class="center">
 <div style="margin: 50px auto;" class="likes yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,gplus,facebook,twitter" data-yashareTheme="counter" data-yashareType="small"></div>
-</section>
+</div>
 <footer>
 <p class="title">Артель Сергея Петунина</p>
 <div class="info">
@@ -64,10 +384,10 @@
 <br>
 <p><b>Online</b></p>
 <p class="social flickr"><a target="_blank" href="http://www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
-<p class="social gplus"><a target="_blank" rel="author" href="https://plus.google.com/104094916837036848285/?rel=author">Сергей Петунин на Google+</a></p>
+<p class="social gplus"><a target="_blank" href="https://plus.google.com/104094916837036848285/">Сергей Петунин на Google+</a></p>
 <p><a href="http://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
 </div>
-<div id="badge_holder"><div class="g-page" data-width="180" data-href="//plus.google.com/105598601692280332786" data-rel="publisher"></div></div>
+<div id="badge_holder"><div class="g-page" data-width="180" data-href="//plus.google.com/104572237617615451669" data-rel="publisher"></div></div>
 </div>
 <div id="year">© <span>2006</span> «Отделка Люкс»</div>
 </footer>

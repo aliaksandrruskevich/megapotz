@@ -74,7 +74,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				});
 
 				if (cfg.callback || hasNonAnimatable) {
-					var ontransitionend = function(e) {
+					var ontransitionend = function() {
 						setRules(node, cfg.to, false);
 						cfg.callback && cfg.callback();
 						node.removeEventListener('transitionend', ontransitionend);
@@ -150,21 +150,20 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 	// КАЛЬКУЛЯТОР
 	function Calculator(root) {
 		// Инициализация
+		var form = root.querySelector('#calc_form');
 		var nodes = {
-			wc:			document.getElementById('wc'),
-			area:		document.getElementById('area'),
-			eastimate:	root.querySelectorAll('tbody td:not(:first-child)'),
-			total:		root.querySelectorAll('tfoot td:not(:first-child)')
+			eastimate:	root.querySelectorAll('tbody td:not(:first-child)'),	// ячейки, куда информацию выводить
+			total:		root.querySelectorAll('tfoot td:not(:first-child)')		// для итогов
 		};
-		var wc = 3, area = 400, roomType = 'cott';
+		var wc = 3, area = 400, level = 'standard';	// Дефолтные значения, которые могут быть перезатерты куками или Островами
 
-		// Подстановка изначальных данных для подсчета
-		// Из Яндекс Островов более приоритетно, чем из cookies
+		// Подстановка изначальных данных для подсчета. Из Яндекс Островов более приоритетно, чем из cookies.
 		var pairs = document.cookie.split('; ').concat(document.location.search.substring(1).split('&'));
 		for (var i = 0, l = pairs.length; i < l; i++) {
 			var pair = pairs[i].split('=');
 			if (pair[0] == 'wc') wc = +pair[1];
 			if (pair[0] == 'area') area = +pair[1];
+			if (pair[0] == 'level' && pair[1].match(/^(?:standard|business)$/)) level = pair[1];
 		}
 
 		// Показываем подсказку
@@ -179,7 +178,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				hint.parentNode.removeChild(hint);
 			};
 			root.addEventListener('click', hideHint, false);
-		}
+		};
 		root.addEventListener('mouseover', showHint, false);
 
 		// Форматированный вывод сумм
@@ -190,68 +189,60 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// Калькуляция сметы и вывод
 		var recalculate = function () {
 			// Забираем значения из инпутов
-			wc = +nodes.wc.value;
-			area = +nodes.area.value;
+			wc = +form.wc.value;
+			area = +form.area.value;
+			level = form.level.value;
+
 			// Пишем их в куки
 			var date = new Date('2025').toUTCString();
 			document.cookie = 'area=' + area + ';path=/;expires=' + date;
 			document.cookie = 'wc=' + wc + ';path=/;expires=' + date;
-			// Пересчитываем таблицу
+			document.cookie = 'level=' + level + ';path=/;expires=' + date;
 
 			var results = [];
-			var totalBusiness = 0;
-			var totalLuxe = 0;
+			var totalWork = 0, totalMaterials = 0;
 
-			results[2]	= 140000 + 220 * area;		// работа электрика бизнес
-			results[3]	= 160000 + 220 * area;		// работа электрика люкс
-			results[4]	= 36000 * (wc + 0.5);		// работа сантехника бизнес
-			results[5]	= 42000 * (wc + 0.5);		// работа сантехника люкс
-			results[8]	= 3500 * area;				// материал отделка бизнес
-			results[9]	= 4000 * area;				// материал отделка люкс
-			results[10]	= 40000 + 200 * area;		// материал электрика бизнес
-			results[11]	= 60000 + 200 * area;		// материал электрика люкс
-			results[12]	= 22500 * (wc + 0.5);		// материал сантехника бизнес
-			results[13]	= 30000 * (wc + 0.5);		// материал сантехника люкс
+			results[1] = (7000 - (area - 200) * 2.5) * area;// материал отделка под ключ
+			results[3] = 50000 + area * 300;				// материал электрика под ключ
+			results[4] = 15000 * wc + area * 140;			// работа водоснабжение
+			results[5] = 25000 * wc + area * 50;			// материал водоснабжение
+			results[6] = 10000 * wc + area * 130;			// работа канализация
+			results[7] = 10000 * wc + area * 50;			// материал канализация
+			results[8] = 80000 + area * 250;				// работа отопление
 
-			// Коттедж
-			if (roomType == 'cott') {
-				results[0]	= 7000 * area;			// работа отделка бизнес
-				results[1]	= 8500 * area;			// работа отделка люкс
-				results[6]	= 110000 + 200 * area;	// работа отопление бизнес
-				results[7]	= 130000 + 200 * area;	// работа отопление люкс
-				results[14]	= 100000 + 800 * area;	// материал отопление бизнес
-				results[15]	= 140000 + 800 * area;	// материал отопление люкс
+			// STANDARD
+			if (level == 'standard') {
+				results[0] = (9200 - (area - 200) * 2) * area;	// работа отделка под ключ
+				results[2] = (1000 - (area - 200) / 4) * area;	// работа электрика под ключ
+				results[9] = (1000 - (area - 200) / 3.5 ) * area;	// материал отопление
+				results[10] = 50000 + area * 120;				// работа котельная
+				results[11] = 140000 + area * 100;				// материал котельная
 			}
-			// Квартира
-			else {
-				results[1]	= 9000 * area;			// отделка люкс
-				results[0]	= 7500 * area;			// отделка бизнес
-				results[6]	= results[7] = results[14] = results[15] = 0;	// Зануляем отопление в квартире
+
+			// BUSINESS
+			if (level == 'business') {
+				results[0] = (12200 - (area - 200) * 2) * area;	// работа отделка под ключ
+				results[2] = (1200 - (area - 200) / 3.333333) * area;	// работа электрика под ключ
+				results[9] = (1100 - (area - 200) / 4) * area;	// материал отопление
+				results[10] = 65000 + area * 150;				// работа котельная
+				results[11] = 165000 + area * 250;				// материал котельная
 			}
 
 			// Проставляем значения сметы в таблицу
 			for (var i = 0, l = nodes.eastimate.length, node; node = nodes.eastimate[i], i < l; i++) {
-				if (i % 2 == 0) totalBusiness += results[i];
-				else totalLuxe += results[i];
+				results[i] = parseInt(Math.round(results[i]/1000) * 1000);
+				if (i % 2 == 0) totalWork += results[i];
+				else totalMaterials += results[i];
 				node.textContent = formatCurrency(results[i]);
 			}
 
 			// Вычисляем итог
-			nodes.total[0].textContent = formatCurrency(totalBusiness);
-			nodes.total[1].textContent = formatCurrency(totalLuxe);
+			nodes.total[0].textContent = formatCurrency(totalWork);
+			nodes.total[1].textContent = formatCurrency(totalMaterials);
 		};
 
 		// Привязываем события к кнопке Пересчитать
-		root.addEventListener('keyup', recalculate, false);
-
-		// Переключение между вкладками и пересчет таблицы
-		root.addEventListener('change', function(e) {
-			var target = e.target;
-			if (target.type == 'radio') roomType = root.className = e.target.id;
-			recalculate();
-		});
-
-		var form = root.querySelector('form');
+		root.addEventListener('change', recalculate, false);
 		form.reset();	// Сбрасываем форму, потому что Firefox кэширует состояние радиокнопок
 
 		// Перед отправкой форму необходимо в hidden поле записать innerHTML калькуляции
@@ -261,15 +252,16 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				form.html.value = form.querySelector('table').innerHTML.replace(/\s{2,}/g, '');
 				// Сообщаем в метрику о нашей удаче :)
 				try { yaCounter13794628.reachGoal('estimate_send', {area: area, wc: wc}); } catch(e) {}
-				
 				form.submit();
 			}
 		});
 
 		// Простановка начальных значений в калькулятор
-		nodes.wc.value = wc;
-		nodes.area.value = area;
-		document.getElementById(roomType).click();
+		form.wc.value = wc;
+		form.area.value = area;
+		form.level.value = level;
+
+		recalculate();
 	}
 
 	// Album covers
@@ -317,7 +309,8 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				album.style.height = picSide + 60 + 'px';
 			}
 
-			for (var i = 0, l = picIndex.length, pic; pic = picIndex[i], i < l; i++) {
+			var pic;
+			for (i = 0, l = picIndex.length; pic = picIndex[i], i < l; i++) {
 				pic.node.style.width =  picSide + 'px';
 				pic.node.style.height = picSide + 'px';
 			}
@@ -488,7 +481,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		delete window.GPlusDefers;
 	}
 
-	document.addEventListener("DOMContentLoaded", function(event) {
+	document.addEventListener("DOMContentLoaded", function() {
 		var page_name = document.body.id;
 		// Убирание подсказки про "крутите дальше" по скроллу
 		var onScroll = function() {

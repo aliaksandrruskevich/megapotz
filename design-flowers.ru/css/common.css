@@ -76,6 +76,13 @@ ul.submenu li strong	{ color: #090; }
 .b22	{ background: url('/i/banner22.jpg') no-repeat; }
 .b23	{ background: url('/i/banner23.jpg') no-repeat; }
 
+.su1	{ background: url('/i/su1.jpg') no-repeat; }
+.su2	{ background: url('/i/su2.jpg') no-repeat; }
+.su3	{ background: url('/i/su3.jpg') no-repeat; }
+.su4	{ background: url('/i/su4.jpg') no-repeat; }
+.su5	{ background: url('/i/su5.jpg') no-repeat; }
+.su6	{ background: url('/i/su6.jpg') no-repeat; }
+
 .banner div	{ background: url('/i/banner.png') no-repeat; height: 256px; }
 .banner div p	{ padding-top: 172px; }
 .banner p	{ padding: 116px 10px 10px 10px; color: #fff; line-height: 1em; }

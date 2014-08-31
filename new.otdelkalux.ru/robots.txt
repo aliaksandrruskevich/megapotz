@@ -2,3 +2,7 @@ User-Agent: *
 Disallow: *index.html
 Disallow: *?
 Disallow: *&
+Disallow: /blog
+Host: https://www.otdelkalux.ru
+
+

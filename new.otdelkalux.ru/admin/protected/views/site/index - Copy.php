@@ -6,7 +6,7 @@
 <meta name="keywords" content="ремонт, отделка, коттедж, загородный дом, стоимость, фото, таунхаус, элитный, под ключ">
 <meta name="description" content="Выполняем весь комплекс отделочных и ремонтных работ в коттеджах, загородных домах и таунхаусах: отопление, электрика, сантехника, внутренняя отделка под ключ. Фотографии завершенных объектов, калькулятор стоимости ремонта.">
 <title>Ремонт и отделка коттеджей, загородных домов и таунхаусов под ключ: цены, фото</title>
-<meta itemprop="image" content="farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
+<meta itemprop="image" content="//farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="canonical" href="https://www.otdelkalux.ru/">
 <meta name="robots" content="noyaca">
@@ -91,6 +91,38 @@ if (document.location.search.match(/area|wc/) || ref.match(/стоит|стои�
 </section>
 <section id="objects">
 <div class="column">
+
+<section id="objects">
+<div class="column">
+<p class="h1 center">Завершенные объекты</p>
+<div id="album_grid">
+<?foreach($process as $obj) { ?>
+<div class="album">
+<a href="/osmotr/<?=$obj->link?>/" class="image_stack">
+<noscript>
+<?
+$i=0;
+foreach($images as $img) {
+$i++;
+$j=3-$i;
+?>
+<img alt="<?=$images[$j]['title']?>" src="<?=$images[$j]['url']?>">
+<?
+if ($i>=3) break;
+}?>
+</noscript>
+</a>
+<p class="link"><a href="/osmotr/<?=$obj->link?>/"><?=$obj->title?></a></p>
+<p class="count"><?=count($images)?> фото</p>
+</div>
+<?
+unset($images);
+}?>
+</div>
+<div class="center"><div class="button red"><a href="/portfolio/">Все объекты</a></div></div>
+</div>
+</section>
+
 <p class="h1 center">Завершенные объекты</p>
 <div id="album_grid">
 <?foreach($objects as $obj) { 
@@ -121,34 +153,6 @@ unset($images);
 </div>
 <div class="center"><div class="button red"><a href="/portfolio/">Смотреть все объекты</a></div></div>
 </div>
-</section>
-<section id="gallery" class="column">
-<h2 class="h1 center">Фото ремонта коттеджей</h2>
-
-<div id="GPlus"></div>
-<script type="text/javascript" src="//fgnass.github.io/spin.js/spin.min.js"></script>
-<script type="text/javascript">
-var photos = [
-{title: "Художественная укладка мрамора класса &quot;люкс&quot;.", url: "https://lh4.googleusercontent.com/-BlYXdflG-_E/UAhF58bs7HI/AAAAAAAABNs/t5WwXg3GOlY/6917955734.jpg", width: 717, height: 1080 },
-{title: "Холл на втором этаже", url: "https://lh5.googleusercontent.com/-u0CvAjW8bmk/UAhAWCy8fkI/AAAAAAAABFA/SCm7GS25k1I/6918005218.jpg", width: 1624, height: 1080 },
-{title: "Статуя Марка Аврелия", url: "https://lh5.googleusercontent.com/-xf73iCkQAuI/UAhAbQuLq-I/AAAAAAAABGQ/SgwJEgL3-vk/7064083653.jpg", width: 1624, height: 1080 },
-{title: "Кабинет класса &quot;люкс&quot;", url: "https://lh6.googleusercontent.com/-J55XDS4POFs/UAhC5pa3qkI/AAAAAAAABKQ/EOY3RkKs3Z0/7064957277.jpg", width: 1626, height: 1080 },
-{title: "Гостиная в классическом стиле", url: "https://lh6.googleusercontent.com/-RsRci7ARGSc/UAhGMcJsp_I/AAAAAAAABRQ/tAzTM5jgQAk/7064032869.jpg", width: 1626, height: 1080 },
-{title: "Гипсовая лепнина", url: "https://lh6.googleusercontent.com/-q4DRJQ3CwGY/UAhAbXkoACI/AAAAAAAABGI/ujiSwZ6AZeY/7064083333.jpg", width: 1624, height: 1080 },
-{title: "Укладка плитки в ванной комнате", url: "https://lh5.googleusercontent.com/-LaEvZj8-EzE/UEyGxsAWFQI/AAAAAAAAB20/RoI0CRdsr6Q/7064817625.jpg", width: 1620, height: 1080 },
-{title: "Мраморный пол, лестница", url: "https://lh3.googleusercontent.com/-ExlpDSaMLkw/UAhGeeUR3nI/AAAAAAAABVE/UCqLb-84UCU/7064038015.jpg", width: 717, height: 1080 },
-{title: "Потолки класса &quot;люкс&quot;", url: "https://lh3.googleusercontent.com/-UU8OHxvIBek/UAhC2mXQIeI/AAAAAAAABJg/aoxmFYCcRpM/7064955377.jpg", width: 1626, height: 1080 },
-{title: "Укладка плитки класса &quot;люкс&quot;", url: "https://lh3.googleusercontent.com/-b_WrvYzVODA/UAhCvsM0b4I/AAAAAAAABH0/E2XCwPyFMPA/6918880148.jpg", width: 717, height: 1080 },
-{title: "Санузел класса &quot;люкс&quot;", url: "https://lh3.googleusercontent.com/-dcy6rJvJXW0/UAhHp8jfzPI/AAAAAAAABWQ/8vG-Wkoh-6c/6918740720.jpg", width: 1620, height: 1080 },
-{title: "Санузел класса &quot;люкс&quot;", url: "https://lh4.googleusercontent.com/-YSn6yqpoP1k/UAhHz0nAU3I/AAAAAAAABYM/z6qug4au8Go/7064818405.jpg", width: 1620, height: 1080 },
-{title: "Система водоснабжения", url: "https://lh4.googleusercontent.com/-eWGZqO68ZTw/UAhHtqyhx5I/AAAAAAAABXI/B9UglgYd6tk/6918745226.jpg", width: 1620, height: 1080 },
-{title: "Кабинет", url: "https://lh6.googleusercontent.com/-rAZWWHhYWDU/UAhHpR3UYtI/AAAAAAAABWU/piHJJPuEB-Y/6918740014.jpg", width: 1620, height: 1080 },
-{title: "Переоборудование нежилого чердака в жилую комнату.", url: "https://lh5.googleusercontent.com/-p1fzWGlIG_s/UAhGW8ntgBI/AAAAAAAABTY/k4kYCvnEwLY/7064035629.jpg", width: 1626, height: 1080 },
-{title: "Коридор между гостевой комнатой, кухней и столовой.", url: "https://lh6.googleusercontent.com/-Pt_rssHE32o/UAhAZSgMmCI/AAAAAAAABFw/cw-0D_FUdTc/7064081883.jpg", width: 1624, height: 1080 },
-{title: "", url: "https://lh6.googleusercontent.com/-i3gJKv6bFU8/T_RtEqJ1abI/AAAAAAAAAhY/CE_1wyg-Kfo/s600", width: 512, height: 340}
-];
-</script>
-<div class="center"><div class="button red"><a href="/portfolio/best/">Смотреть другие фотографии</a></div></div>
 </section>
 <section id="price" class="column">
 <h2 class="h1 center">Сколько стоит ремонт?</h2>
@@ -319,11 +323,11 @@ var photos = [
 <div>
 <p><b>Офис в Millennium Park</b></p>
 <p itemprop="address">Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
-<p><a itemprop="map" target="_blank" href="maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
+<p><a itemprop="map" target="_blank" href="//maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
 <br>
 <p><b>Офис в Madison Park</b></p>
 <p itemprop="address">Московская область, Новорижское ш., посёлок Мэдисон Парк, вл. 15</p>
-<p><a itemprop="map" target="_blank" href="maps.yandex.ru/-/CVEO74NH">На карте</a></p>
+<p><a itemprop="map" target="_blank" href="//maps.yandex.ru/-/CVEO74NH">На карте</a></p>
 </div>
 <div>
 <p><b>Связаться со мной</b></p>

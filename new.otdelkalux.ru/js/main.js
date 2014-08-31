@@ -1,7 +1,7 @@
 if (navigator.appName == 'Microsoft Internet Explorer') {
 	var ua = navigator.userAgent;
-	var re  = new RegExp("MSIE (.+) ");
-	if (re.exec(ua) != null) var ver = parseFloat( RegExp.$1 );
+	var re = new RegExp("MSIE (.+) ");
+	if (re.exec(ua) != null) var ver = parseFloat(RegExp.$1);
 	if (ver == 8) document.location = 'http://ie.otdelkalux.ru';
 	else if (ver < 8) document.location = 'http://old.otdelkalux.ru';
 }
@@ -11,7 +11,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 	// Итератор по ключам объекта
 	Object.defineProperty(Object.prototype, 'forEach', {
-		value: function(callback) {
+		value: function (callback) {
 			if (this.constructor === Object) {
 				for (var i = 0, keys = Object.keys(this), l = keys.length, key, value; key = keys[i], value = this[key], i < l; i++) {
 					if (callback(value, key, i) === false) break;
@@ -25,23 +25,23 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 	// http://www.w3.org/TR/css3-transitions/
 	var animate = (function () {		// cfg = {transition:'', from: {}, to: {}, callback:fn}
 		var transitionSupported = 'transition' in document.createElement('div').style;
-		var animatableProps = {'backgroundColor':1,'backgroundPosition':1,'borderBottomColor':1,'borderBottomWidth':1,'borderLeftColor':1,'borderLeftWidth':1,'borderRightColor':1,'borderRightWidth':1,'borderSpacing':1,'borderTopColor':1,'borderTopWidth':1,'bottom':1,'clip':1,'color':1,'fontSize':1,'fontWeight':1,'height':1,'left':1,'letterSpacing':1,'lineHeight':1,'marginBottom':1,'marginLeft':1,'marginRight':1,'marginTop':1,'maxHeight':1,'maxWidth':1,'minHeight':1,'minWidth':1,'opacity':1,'outlineColor':1,'outlineWidth':1,'paddingBottom':1,'paddingLeft':1,'paddingRight':1,'paddingTop':1,'right':1,'textIndent':1,'textShadow':1,'top':1,'verticalAlign':1,'visibility':1,'width':1,'wordSpacing':1,'zIndex':1};
+		var animatableProps = {'backgroundColor': 1, 'backgroundPosition': 1, 'borderBottomColor': 1, 'borderBottomWidth': 1, 'borderLeftColor': 1, 'borderLeftWidth': 1, 'borderRightColor': 1, 'borderRightWidth': 1, 'borderSpacing': 1, 'borderTopColor': 1, 'borderTopWidth': 1, 'bottom': 1, 'clip': 1, 'color': 1, 'fontSize': 1, 'fontWeight': 1, 'height': 1, 'left': 1, 'letterSpacing': 1, 'lineHeight': 1, 'marginBottom': 1, 'marginLeft': 1, 'marginRight': 1, 'marginTop': 1, 'maxHeight': 1, 'maxWidth': 1, 'minHeight': 1, 'minWidth': 1, 'opacity': 1, 'outlineColor': 1, 'outlineWidth': 1, 'paddingBottom': 1, 'paddingLeft': 1, 'paddingRight': 1, 'paddingTop': 1, 'right': 1, 'textIndent': 1, 'textShadow': 1, 'top': 1, 'verticalAlign': 1, 'visibility': 1, 'width': 1, 'wordSpacing': 1, 'zIndex': 1};
 
 		// Моментальная анимация выставляет сначала стили до, потом стили после на случай, если в стилях "до" были какие-то непересекающиеся с "после" стили
-		var instantTransition = function(node, cfg) {
-			cfg.from.forEach(function(value, prop) {
+		var instantTransition = function (node, cfg) {
+			cfg.from.forEach(function (value, prop) {
 				node.style[prop] = value;
 			});
-			cfg.to.forEach(function(value, prop) {
+			cfg.to.forEach(function (value, prop) {
 				node.style[prop] = value;
 			});
 			cfg.callback && cfg.callback();
 		};
 
-		var setRules = function(node, css, animatable) {		// если animatable, то ставит только анимируемые, если false - то только не анимируемые, если не передать - то все
+		var setRules = function (node, css, animatable) {		// если animatable, то ставит только анимируемые, если false - то только не анимируемые, если не передать - то все
 			if (typeof css == 'object') {
-				css.forEach(function(value, prop) {
-					if ( (animatable && animatableProps[prop]) || (!animatable && !animatableProps[prop]) || animatable === undefined ) node.style[prop] = value;
+				css.forEach(function (value, prop) {
+					if ((animatable && animatableProps[prop]) || (!animatable && !animatableProps[prop]) || animatable === undefined) node.style[prop] = value;
 				});
 			} else node.className = css;
 		};
@@ -49,12 +49,12 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// Если браузер не поддерживает анимацию, то просто ставим конечные стили и вызываем колбэк
 		if (!transitionSupported) {
 			return instantTransition;
-		} else return function(node, cfg) {
+		} else return function (node, cfg) {
 			// Моментальная анимация теоретически возможна, если from и to - хэши стилей. Если передали класс, то пропускать нельзя никак
 			var skipAnimation = typeof cfg.from == 'object' && typeof cfg.to == 'object';
 
 			// Анимацию можно пропустить если в итоговых стилях нет анимируемых свойств, ИЛИ если юзер идиот и он в from и to указал совпадающие значения у анимируемых свойств
-			skipAnimation && cfg.to.forEach(function(value, prop) {
+			skipAnimation && cfg.to.forEach(function (value, prop) {
 				if (animatableProps[prop] && value != cfg.from[prop]) skipAnimation = false;
 			});
 
@@ -69,12 +69,12 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				// не надо вешать эвентлистенеры, если на них нечего вешать (нет колбэка и неанимируемых атрибутов)
 				// определяем наличие неанимируемых css правил в конечных стилях
 				var hasNonAnimatable = false;
-				typeof cfg.to == 'object' && cfg.to.forEach(function(value, prop) {
+				typeof cfg.to == 'object' && cfg.to.forEach(function (value, prop) {
 					if (!animatableProps[prop]) hasNonAnimatable = true;
 				});
 
 				if (cfg.callback || hasNonAnimatable) {
-					var ontransitionend = function() {
+					var ontransitionend = function () {
 						setRules(node, cfg.to, false);
 						cfg.callback && cfg.callback();
 						node.removeEventListener('transitionend', ontransitionend);
@@ -84,10 +84,10 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			}
 		};
 	})();
-	
-	var deferredLoader = (function() {
+
+	var deferredLoader = (function () {
 		var nodes = [];
-		
+
 		function getY(el) {
 			var y = 0;
 			while (el.offsetParent !== null) {
@@ -98,14 +98,15 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		}
 
 		var timer = null;
+
 		function onEvent() {
 			if (timer) window.clearTimeout(timer);
 			timer = window.setTimeout(step, 50);
 		}
-		
+
 		function step() {
 			var curPos = (document.body.scrollTop || document.documentElement.scrollTop) + window.innerHeight;
-			nodes.forEach(function(el, i) {
+			nodes.forEach(function (el, i) {
 				var pos = getY(el.node);
 				if (curPos + 200 > pos) {
 					el.fn(el.node);
@@ -113,7 +114,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				}
 			});
 		}
-		
+
 		window.addEventListener('scroll', onEvent, false);
 		window.addEventListener('resize', onEvent, false);
 		window.addEventListener('DOMContentLoaded', onEvent, false);
@@ -121,7 +122,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 	})();
 
 	// Утилита для вычисления строки, подставляемой в параметр времени анимации
-	var getSpeed = function(speed) {
+	var getSpeed = function (speed) {
 		if (typeof speed == 'string' || typeof speed == 'number') {
 			var speedPreset = {'slow': '1s', 'normal': '0.6s', 'fast': '0.3s'};
 			return typeof speed == 'string' ? speedPreset[speed] || '0.3s' : (speed / 1000).toFixed(1) + 's';
@@ -129,21 +130,21 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		return '0.3s';
 	};
 
-	var fadeIn = function(node, speed, fn) {	// slow, normal, fast
+	var fadeIn = function (node, speed, fn) {	// slow, normal, fast
 		animate(node, {
-			transition:	'opacity linear ' + getSpeed(speed),
-			from:		{opacity: 0, display: 'block'},
-			to:			{opacity: 1},
-			callback:	fn
+			transition: 'opacity linear ' + getSpeed(speed),
+			from: {opacity: 0, display: 'block'},
+			to: {opacity: 1},
+			callback: fn
 		});
 	};
 
-	var fadeOut = function(node, speed, fn) {
+	var fadeOut = function (node, speed, fn) {
 		animate(node, {
-			transition:	'opacity linear ' + getSpeed(speed),
-			from:		{},
-			to:			{opacity: 0, display: 'none'},
-			callback:	fn
+			transition: 'opacity linear ' + getSpeed(speed),
+			from: {},
+			to: {opacity: 0, display: 'none'},
+			callback: fn
 		});
 	};
 
@@ -152,8 +153,8 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// Инициализация
 		var form = root.querySelector('#calc_form');
 		var nodes = {
-			eastimate:	root.querySelectorAll('tbody td:not(:first-child)'),	// ячейки, куда информацию выводить
-			total:		root.querySelectorAll('tfoot td:not(:first-child)')		// для итогов
+			eastimate: root.querySelectorAll('tbody td:not(:first-child)'),	// ячейки, куда информацию выводить
+			total: root.querySelectorAll('tfoot td:not(:first-child)')		// для итогов
 		};
 		var wc = 3, area = 400, level = 'standard';	// Дефолтные значения, которые могут быть перезатерты куками или Островами
 
@@ -182,7 +183,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		root.addEventListener('mouseover', showHint, false);
 
 		// Форматированный вывод сумм
-		var formatCurrency = function(num) {
+		var formatCurrency = function (num) {
 			return num.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
 		};
 
@@ -230,7 +231,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 			// Проставляем значения сметы в таблицу
 			for (var i = 0, l = nodes.eastimate.length, node; node = nodes.eastimate[i], i < l; i++) {
-				results[i] = parseInt(Math.round(results[i]/1000) * 1000);
+				results[i] = parseInt(Math.round(results[i] / 1000) * 1000);
 				if (i % 2 == 0) totalWork += results[i];
 				else totalMaterials += results[i];
 				node.textContent = formatCurrency(results[i]);
@@ -246,12 +247,15 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		form.reset();	// Сбрасываем форму, потому что Firefox кэширует состояние радиокнопок
 
 		// Перед отправкой форму необходимо в hidden поле записать innerHTML калькуляции
-		form.addEventListener('submit', function(e) {
+		form.addEventListener('submit', function (e) {
 			e.preventDefault();
 			if (document.getElementById('email').value != '') {
 				form.html.value = form.querySelector('table').innerHTML.replace(/\s{2,}/g, '');
 				// Сообщаем в метрику о нашей удаче :)
-				try { yaCounter13794628.reachGoal('estimate_send', {area: area, wc: wc}); } catch(e) {}
+				try {
+					yaCounter13794628.reachGoal('estimate_send', {area: area, wc: wc});
+				} catch (e) {
+				}
 				form.submit();
 			}
 		});
@@ -267,7 +271,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 	// Album covers
 	function AlbumView(root) {
 		function getPicSide() {
-			return Math.floor( parseInt(window.getComputedStyle(root).width) / 4 - 31 );
+			return Math.floor(parseInt(window.getComputedStyle(root).width) / 4 - 31);
 		}
 
 		// Забираем код тэгов картинок из noindex, чтобы не прогружать их в стандартных размерах попусту с гугла
@@ -276,7 +280,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 		var picSide = getPicSide();
 		var picIndex = [];
-		var re = /([^/]+)\.jpg/g;
+		var re = /([^/]+)\.jpg/ig;
 		var curAlbumShown = 0; // какие альбомы уже докрутили и можно показывать
 
 		function processNoscripts() {
@@ -289,8 +293,8 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 					node = stub.removeChild(stub.children[0]);
 					frag.appendChild(node);
 					picIndex.push({
-						node:		node,
-						baseUrl:	node.src.substring(0,83)
+						node: node,
+						baseUrl: node.src.substring(0, 83)
 					});
 				}
 
@@ -301,17 +305,17 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var timer;
 		var albums = root.querySelectorAll('.album');
 
-		function resize(){
+		function resize() {
 			var picSide = getPicSide();
 
 			for (var i = 0, l = albums.length, album; album = albums[i], i < l; i++) {
-				album.style.width =  picSide + 25 + 'px';
+				album.style.width = picSide + 25 + 'px';
 				album.style.height = picSide + 60 + 'px';
 			}
 
 			var pic;
 			for (i = 0, l = picIndex.length; pic = picIndex[i], i < l; i++) {
-				pic.node.style.width =  picSide + 'px';
+				pic.node.style.width = picSide + 'px';
 				pic.node.style.height = picSide + 'px';
 			}
 
@@ -330,46 +334,48 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// При изменении размеров экрана надо делать ресайз альбомов, но перегружать фотографии гугла только по таймауту
 		window.addEventListener('resize', resize, false);
 		resize();
-		
+
 		// для отложенной загрузки
-		
+
 		var defers = [];
 		for (var i = 0, l = albums.length, album; album = albums[i], i < l; i += 4) {
 			defers.push({
 				node: album,
-				fn: (function(i) {
-					return function() {
+				fn: (function (i) {
+					return function () {
 						curAlbumShown = i;
 						processNoscripts();
 					}
-				})(i+4)
+				})(i + 4)
 			});
 		}
 		return defers;
 	}
 
 	// Переключалка ездящая
-	function initTumbler()	{
+	function initTumbler() {
 		var sel = document.getElementById('selector');
-		sel.addEventListener('click', function(e) {
+		sel.addEventListener('click', function (e) {
 			e.preventDefault();
 			animate(sel, {
 				transition: '',	// анимируется не сам этот элемент, поэтому смысла задавать transition нет
 				from: e.target.className == 'left' ? 'left' : 'right',
 				to: e.target.className == 'right' ? 'right' : 'left',
-				callback: function(){if (e.target.href) document.location = e.target.href;}
+				callback: function () {
+					if (e.target.href) document.location = e.target.href;
+				}
 			});
 		}, false);
 	}
 
 	function initContactsMap() {
 		var loc = {
-			'millennium':	{
+			'millennium': {
 				zoom: 10,
 				latlng: new google.maps.LatLng(55.789745, 37.039345),
 				addr: 'Новорижское ш.,<br/>посёлок Millennium Park,<br/>владение 3041'
 			},
-			'madison':	{
+			'madison': {
 				zoom: 10,
 				latlng: new google.maps.LatLng(55.778093, 36.944855),
 				addr: 'Новорижское ш.,<br/>посёлок Madison Park,<br/>владение 15'
@@ -377,22 +383,22 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		};
 
 		// Объект маркера
-		var icon = new google.maps.MarkerImage('http://static.otdelkalux.ru/i/marker.png',
+		var icon = new google.maps.MarkerImage('/i/marker.png',
 			new google.maps.Size(68, 96),
-			new google.maps.Point(0,0),
+			new google.maps.Point(0, 0),
 			new google.maps.Point(34, 0)
 		);
 
 		//Тень маркера
-		var shadow = new google.maps.MarkerImage('http://static.otdelkalux.ru/i/marker-shadow.png',
+		var shadow = new google.maps.MarkerImage('/i/marker-shadow.png',
 			new google.maps.Size(146, 96),
-			new google.maps.Point(0,0),
+			new google.maps.Point(0, 0),
 			new google.maps.Point(34, 0)
 		);
 
 		// Определяем текущий адрес по хэшу строке УРЛа
 		var hash = document.location.hash = document.location.hash == '#madison' ? 'madison' : 'millennium';
-		document.getElementById('selector').className = hash == 'millennium' ? 'left' : 'right';
+		//document.getElementById('selector').className = hash == 'millennium' ? 'left' : 'right';
 		document.getElementById('addr').innerHTML = loc[hash].addr;
 
 		var map = new google.maps.Map(document.getElementById("map_canvas"), {
@@ -403,16 +409,18 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		});
 
 		map.setOptions({
-			styles: [{
-				stylers: [
-					{ saturation: -100 },
-					{ lightness: 50 }
-				]
-			}]
+			styles: [
+				{
+					stylers: [
+						{ saturation: -100 },
+						{ lightness: 50 }
+					]
+				}
+			]
 		});
 
-		loc['millennium'].marker = new google.maps.Marker({position: loc['millennium'].latlng, map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='millennium' });
-		loc['madison'].marker = new google.maps.Marker({position: loc['madison'].latlng, map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash=='madison' });
+		loc['millennium'].marker = new google.maps.Marker({position: loc['millennium'].latlng, map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash == 'millennium' });
+		loc['madison'].marker = new google.maps.Marker({position: loc['madison'].latlng, map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash == 'madison' });
 		window.addEventListener('hashchange', panMap, false);
 
 		function panMap() {
@@ -434,12 +442,14 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 
-		var styles = [{
-			stylers: [
-				{ saturation: -100 },
-				{ lightness: 50 }
-			]
-		}];
+		var styles = [
+			{
+				stylers: [
+					{ saturation: -100 },
+					{ lightness: 50 }
+				]
+			}
+		];
 
 		var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 		map.setOptions({styles: styles});
@@ -448,9 +458,9 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var current;
 
 		for (var i = 0, l = objects.length, obj; obj = objects[i], i < l; i++) {
-			(function(){
+			(function () {
 				var gps = obj.getAttribute('data-gps').split(',');
-				var myLatLng = new google.maps.LatLng(+gps[0],+gps[1]);
+				var myLatLng = new google.maps.LatLng(+gps[0], +gps[1]);
 
 				var marker = new google.maps.Marker({
 					position: myLatLng,
@@ -459,15 +469,14 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 				var infowindow = new google.maps.InfoWindow({content: obj.parentNode.removeChild(obj)});
 
-				google.maps.event.addListener(marker, 'click', function() {
+				google.maps.event.addListener(marker, 'click', function () {
 					if (current) current.close();
 					current = infowindow;
-					infowindow.open(map,marker);
+					infowindow.open(map, marker);
 				});
 			})();
 		}
 	}
-
 
 
 ////////////////////////
@@ -481,30 +490,34 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		delete window.GPlusDefers;
 	}
 
-	document.addEventListener("DOMContentLoaded", function() {
+	document.addEventListener("DOMContentLoaded", function () {
 		var page_name = document.body.id;
 		// Убирание подсказки про "крутите дальше" по скроллу
-		var onScroll = function() {
+		var onScroll = function () {
 			fadeOut(document.getElementById('mouse'), 300);
 			window.removeEventListener('scroll', onScroll);
 		}
 
+		if (document.getElementById('GPlus')) initGPlus();
+
 		switch (page_name) {
 			case 'page-index':
 				/*if (window.devicePixelRatio == 2) {
-					document.getElementById('ingos').src='http://static.otdelkalux.ru/i/ingos-2x.png';
-				}*/
+				 document.getElementById('ingos').src='/i/ingos-2x.png';
+				 }*/
 				Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
 				Calculator(document.getElementById('calculator'));
 
-				initGPlus();
-				$('#GPlus div').last().on('click', function(e){e.stopPropagation()}).find('img').wrap('<a href="/osmotr/"/>');
-				
+				if (document.querySelector('#map_canvas')) initProcessMap();
+
+				//initGPlus();
+				//$('#GPlus div').last().on('click', function(e){e.stopPropagation()}).find('img').wrap('<a href="/osmotr/"/>');
+
 				// Убирание подсказки про "крутите дальше" по скроллу
 				window.addEventListener('scroll', onScroll, false);
 				deferredLoader.push({
 					node: document.getElementById('youtube'),
-					fn: function(node) {
+					fn: function (node) {
 						node.innerHTML = '<iframe width="420" height="315" src="//www.youtube.com/embed/7_wzJNQhK00?rel=0" frameborder="0" allowfullscreen></iframe>' + node.innerHTML;
 					}
 				});
@@ -525,20 +538,20 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				if (album_grid !== null) Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
 
 				var selector_hint = document.getElementById('selector_hint');
-				if (selector_hint !== null) window.setTimeout(function (){fadeIn(selector_hint);}, 2000);
+				if (selector_hint !== null) window.setTimeout(function () {
+					fadeIn(selector_hint);
+				}, 2000);
 
 				var selector = document.getElementById('selector');
 				if (selector !== null) initTumbler();
-				
-				if (document.getElementById('GPlus')) {
-					initGPlus();
 
+				if (document.getElementById('GPlus')) {
 					// оборачиваем картинки в уголочки
 					var imgs = document.querySelectorAll('#backnext img');
-					imgs.length && ['l','r'].forEach(function(side, i) {
-					var img = imgs[i];
+					imgs.length && ['l', 'r'].forEach(function (side, i) {
+						var img = imgs[i];
 						img.style.backgroundImage = 'url("' + img.src + '")';
-						img.src = 'http://static.otdelkalux.ru/i/arr-' + side + '.png';
+						img.src = '/i/arr-' + side + '.png';
 					});
 				}
 
@@ -556,9 +569,9 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var el = document.querySelector('#year span');
 		var established = parseInt(el.textContent);
 		if (this_year > established) el.innerHTML = established + '—' + this_year;
-		
+
 		// 
-		
+
 		////////////// Подмена телефона
 		/*
 		var phoneNodes = document.getElementsByTagName('p');
@@ -575,32 +588,45 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			// инициализируем говносчетчики и шарилку только если юзер крутит ниже, чтобы все быстрее прогружалось
 			deferredLoader.push({
 				node: document.querySelector('.yashare-auto-init'),
-				fn: function() {
+				fn: function () {
 					var d = document, w = window, n = navigator;
-					var scrTpl = d.createElement('script'); scrTpl.type = 'text/javascript'; scrTpl.async = true;
+					var scrTpl = d.createElement('script');
+					scrTpl.type = 'text/javascript';
+					scrTpl.async = true;
 					var pos = document.getElementsByTagName('script')[0];
-					
+
 					/* Mail.ru */
-					var r, s;
-					(new Image).src='http://db.ce.b2.a2.top.mail.ru/counter?id=2288412;js=13'+((r=d.referrer)?';r='+escape(r):'')+((s=w.screen)?';s='+s.width+'*'+s.height:'')+';_='+Math.random();
+					var _tmr = _tmr || [];
+					_tmr.push({id: "2288412", type: "pageView", start: (new Date()).getTime()});
+					var scr = scrTpl.cloneNode(true);
+					scr.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+					pos.parentNode.insertBefore(scr, pos);
 
 					/* Liveinternet */
-					(new Image).src = "//counter.yadro.ru/hit?r" + escape(r)+((typeof(s)=="undefined")?"" : ";s"+s.width+"*"+s.height+"*"+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+document.URL+";"+Math.random();
+					var r = d.referrer, s = w.screen;
+					(new Image).src = "//counter.yadro.ru/hit?r" + escape(r) + ((typeof(s) == "undefined") ? "" : ";s" + s.width + "*" + s.height + "*" + (s.colorDepth ? s.colorDepth : s.pixelDepth)) + ";u" + document.URL + ";" + Math.random();
 
 					/* Rambler*/
-					var scr = scrTpl.cloneNode(true); scr.src = '//counter.rambler.ru/top100.jcn?2890004'; pos.parentNode.insertBefore(scr, pos);
+					scr = scrTpl.cloneNode(true);
+					scr.src = '//counter.rambler.ru/top100.jcn?2890004';
+					pos.parentNode.insertBefore(scr, pos);
 
 					/* Яндекс шарилка */
-					scr = scrTpl.cloneNode(true); scr.src = '//yandex.st/share/share.js'; pos.parentNode.insertBefore(scr, pos);
+					scr = scrTpl.cloneNode(true);
+					scr.src = '//yandex.st/share/share.js';
+					pos.parentNode.insertBefore(scr, pos);
 				}
 			});
 			deferredLoader.push({
 				node: document.getElementById('badge_holder'),
-				fn: function() {
+				fn: function () {
 					window.___gcfg = {lang: 'ru'};
-					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					var po = document.createElement('script');
+					po.type = 'text/javascript';
+					po.async = true;
 					po.src = 'https://apis.google.com/js/plusone.js';
-					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(po, s);
 				}
 			});
 		})();
@@ -612,35 +638,11 @@ var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-17254104-1']);
 _gaq.push(['_trackPageview']);
 
-(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+(function () {
+	var ga = document.createElement('script');
+	ga.type = 'text/javascript';
+	ga.async = true;
 	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ga, s);
 })();
-
-/* Яндекс Метрика */
-(function (d, w, c) {
-if (document.location.pathname == '/') return;
-
-(w[c] = w[c] || []).push(function() {
-try {
-w.yaCounter13794628 = new Ya.Metrika({id:13794628,
-webvisor:true,
-clickmap:true,
-trackLinks:true,
-accurateTrackBounce:true,
-trackHash:true});
-} catch(e) { }
-});
-
-var n = d.getElementsByTagName("script")[0],
-s = d.createElement("script"),
-f = function () { n.parentNode.insertBefore(s, n); };
-s.type = "text/javascript";
-s.async = true;
-s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-if (w.opera == "[object Opera]") {
-d.addEventListener("DOMContentLoaded", f, false);
-} else { f(); }
-})(document, window, "yandex_metrika_callbacks");

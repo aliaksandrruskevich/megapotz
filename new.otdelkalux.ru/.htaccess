@@ -2,12 +2,9 @@ AddDefaultCharset utf-8
 DefaultLanguage ru
 FileETag None
 
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^otdelkalux\.ru [OR]
-RewriteCond %{HTTP_HOST} \.xn--p1ai$
-RewriteRule ^(.*)$ http://www.otdelkalux.ru/$1 [R=301,L]
-
-Redirect 301 /portfolio/process/ http://www.otdelkalux.ru/osmotr/
+RewriteEngine On
+RewriteCond %{HTTP:PORT} !^443$
+RewriteRule ^(.*)$ https://www.otdelkalux.ru/$1 [L,R=301]
 
 <ifModule mod_headers.c>
 	Header unset ETag

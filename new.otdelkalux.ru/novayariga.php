@@ -96,10 +96,10 @@ body	{ font-family: Arial; }
 <img style="float: left" alt="Сергей Петунин" src="https://lh6.googleusercontent.com/-tA-Yr-ZRJqI/UEoo-61MQVI/AAAAAAAAB1E/uTM00UyxDWk/s150-c/" />
 <div style="margin-left: 250px">
 <p><b>Сергей Петунин</b>, руководитель работ</p>
-<p><a href="http://www.otdelkalux.ru/?utm_source=estimate&utm_medium=email&utm_campaign=otdelkalux">www.otdelkalux.ru/</a></p>
-<p>+7 (495) 99-88-347</p>
+<p><a href="https://www.otdelkalux.ru/?utm_source=estimate&utm_medium=email&utm_campaign=otdelkalux">www.otdelkalux.ru/</a></p>
+<p>+7 (495) 99-88-347</p><p>+7 (926) 709-62-18</p>
 <a href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a>
-<p>Портфолио работ на Flickr: <a href="http://www.flickr.com/photos/otdelkalux/sets/">http://www.flickr.com/photos/otdelkalux/sets/</a></p>
+<p>Портфолио работ на Flickr: <a href="//www.flickr.com/photos/otdelkalux/sets/">www.flickr.com/photos/otdelkalux/sets/</a></p>
 </div>
 </body>
 </html>

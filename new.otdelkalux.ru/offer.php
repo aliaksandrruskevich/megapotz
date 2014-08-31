@@ -91,7 +91,7 @@ tr:nth-child(4n) td	{ border-color: #000; }
 <body>
 <h1>Здравствуйте, $name!</h1>
 <p>Высылаю приблизительную смету на ремонт вашего загородного дома площадью <b>$area м²</b> с <b>$wc санузлами</b><!-- 1 санузлоМ -->.</p>
-<p>Смета расчитана с помощью <a href="www.otdelkalux.ru/price/calculator.html?utm_source=estimate&utm_medium=email&utm_campaign=otdelkalux">калькулятора</a> и является приблизительной оценкой.</p>
+<p>Смета расчитана с помощью <a href="https://www.otdelkalux.ru/price/calculator.html?utm_source=estimate&utm_medium=email&utm_campaign=otdelkalux">калькулятора</a> и является приблизительной оценкой.</p>
 <p>Если у вас уже есть проектная документация по ремонту дома, <mark><b>высылайте её в ответ на это письмо</b></mark> с указанием:</p>
 <ol>
 <li>вашего номера мобильного телефона</li>
@@ -115,10 +115,10 @@ $html
 <img style="float: left" alt="Сергей Петунин" src="https://lh6.googleusercontent.com/-tA-Yr-ZRJqI/UEoo-61MQVI/AAAAAAAAB1E/uTM00UyxDWk/s150-c/" />
 <div style="margin-left: 250px">
 <p><b>Сергей Петунин</b>, руководитель работ</p>
-<p><a href="http://www.otdelkalux.ru/?utm_source=estimate&utm_medium=email&utm_campaign=otdelkalux">www.otdelkalux.ru/</a></p>
-<p>+7 (495) 99-88-347</p>
+<p><a href="https://www.otdelkalux.ru/?utm_source=estimate&utm_medium=email&utm_campaign=otdelkalux">www.otdelkalux.ru/</a></p>
+<p>+7 (495) 99-88-347</p><p>+7 (926) 709-62-18</p>
 <a href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a>
-<p>Портфолио работ на Flickr: <a href="http://www.flickr.com/photos/otdelkalux/sets/">http://www.flickr.com/photos/otdelkalux/sets/</a></p>
+<p>Портфолио работ на Flickr: <a href="//www.flickr.com/photos/otdelkalux/sets/">//www.flickr.com/photos/otdelkalux/sets/</a></p>
 </div>
 </body>
 </html>

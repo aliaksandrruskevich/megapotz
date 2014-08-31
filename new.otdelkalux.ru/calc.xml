@@ -2,8 +2,9 @@
 <site xmlns="http://interactive-answers.webmaster.yandex.ru/schemas/site/0.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://interactive-answers.webmaster.yandex.ru/schemas/site-0.0.1.xsd">
 	<title>Посчитать стоимость ремонта</title>
 	<metricaCounterId>13794628</metricaCounterId>
-	<description>Узнайте стоимость ремонта, включающую работу и черновые материалы</description>
-	<rootUrl>http://www.otdelkalux.ru</rootUrl>
+	<description>Узнайте стоимость ремонта загородного дома, включающую работу и черновые материалы</description>
+	<rootUrl>https://www.otdelkalux.ru</rootUrl>
+	<protocol>HTTPS</protocol>
 	<resource>
 		<fixed name="www.otdelkalux.ru"/>
 	</resource>

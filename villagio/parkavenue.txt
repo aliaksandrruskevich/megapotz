@@ -1,0 +1,1134 @@
+[
+    {
+        "status": "free",
+        "title": "Êîğïóñ 3"
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-001",
+        "houseArea": 364,
+        "landArea": 425
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-002",
+        "houseArea": 291,
+        "landArea": 319
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-003",
+        "houseArea": 291,
+        "landArea": 326
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-004",
+        "houseArea": 291,
+        "landArea": 302
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-005",
+        "houseArea": 291,
+        "landArea": 290
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-006",
+        "houseArea": 291,
+        "landArea": 291
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-007",
+        "houseArea": 291,
+        "landArea": 283
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-008",
+        "houseArea": 364,
+        "landArea": 516
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-009",
+        "houseArea": 364,
+        "landArea": 450
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-010",
+        "houseArea": 291,
+        "landArea": 280
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-011",
+        "houseArea": 291,
+        "landArea": 283
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-012",
+        "houseArea": 291,
+        "landArea": 288
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-014",
+        "houseArea": 291,
+        "landArea": 284
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-015",
+        "houseArea": 291,
+        "landArea": 286
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-016",
+        "houseArea": 291,
+        "landArea": 281
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-017",
+        "houseArea": 364,
+        "landArea": 485
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-018",
+        "houseArea": 364,
+        "landArea": 542
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-019",
+        "houseArea": 291,
+        "landArea": 360
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-020",
+        "houseArea": 291,
+        "landArea": 378
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-021",
+        "houseArea": 364,
+        "landArea": 781
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-022",
+        "houseArea": 364,
+        "landArea": 454
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-023",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-024",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-025",
+        "houseArea": 291,
+        "landArea": 271
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-026",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-027",
+        "houseArea": 364,
+        "landArea": 497
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-028",
+        "houseArea": 364,
+        "landArea": 453
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-029",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-030",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-031",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-032",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-033",
+        "houseArea": 364,
+        "landArea": 499
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-034",
+        "houseArea": 364,
+        "landArea": 454
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-035",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-036",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-037",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-038",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-039",
+        "houseArea": 364,
+        "landArea": 499
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-040",
+        "houseArea": 364,
+        "landArea": 453
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-041",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-042",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-043",
+        "houseArea": 291,
+        "landArea": 274
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-044",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-045",
+        "houseArea": 364,
+        "landArea": 501
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-046",
+        "houseArea": 364,
+        "landArea": 455
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-047",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-048",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-049",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-050",
+        "houseArea": 291,
+        "landArea": 271
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-051",
+        "houseArea": 364,
+        "landArea": 498
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-052",
+        "houseArea": 364,
+        "landArea": 448
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-053",
+        "houseArea": 291,
+        "landArea": 274
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-054",
+        "houseArea": 291,
+        "landArea": 266
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-055",
+        "houseArea": 291,
+        "landArea": 276
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-056",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-057",
+        "houseArea": 364,
+        "landArea": 503
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-058",
+        "houseArea": 364,
+        "landArea": 780
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-059",
+        "houseArea": 291,
+        "landArea": 482
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-060",
+        "houseArea": 291,
+        "landArea": 499
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-061",
+        "houseArea": 291,
+        "landArea": 523
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-062",
+        "houseArea": 291,
+        "landArea": 537
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-063",
+        "houseArea": 364,
+        "landArea": 600
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-064",
+        "houseArea": 364,
+        "landArea": 657
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-065",
+        "houseArea": 364,
+        "landArea": 673
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-066",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-067",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-068",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-069",
+        "houseArea": 364,
+        "landArea": 650
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-070",
+        "houseArea": 364,
+        "landArea": 621
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-071",
+        "houseArea": 291,
+        "landArea": 269
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-072",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-073",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-074",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-075",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-076",
+        "houseArea": 364,
+        "landArea": 500
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-077",
+        "houseArea": 364,
+        "landArea": 450
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-078",
+        "houseArea": 364,
+        "landArea": 501
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-079",
+        "houseArea": 364,
+        "landArea": 451
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-080",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-081",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-082",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-083",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-084",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-085",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-086",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-087",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-088",
+        "houseArea": 364,
+        "landArea": 503
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-089",
+        "houseArea": 364,
+        "landArea": 452
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 8"
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 9"
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-090",
+        "houseArea": 364,
+        "landArea": 451
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 5"
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 6"
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 7"
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 4"
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-091",
+        "houseArea": 364,
+        "landArea": 501
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-092",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-093",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-094",
+        "houseArea": 291,
+        "landArea": 267
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-095",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-096",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-097",
+        "houseArea": 291,
+        "landArea": 275
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-098",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-099",
+        "houseArea": 291,
+        "landArea": 274
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-100",
+        "houseArea": 364,
+        "landArea": 453
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-101",
+        "houseArea": 364,
+        "landArea": 503
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-102",
+        "houseArea": 364,
+        "landArea": 451
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-103",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-104",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-105",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-106",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-107",
+        "houseArea": 364,
+        "landArea": 504
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-108",
+        "houseArea": 364,
+        "landArea": 451
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-109",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-110",
+        "houseArea": 291,
+        "landArea": 269
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-111",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-112",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-113",
+        "houseArea": 364,
+        "landArea": 504
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-114",
+        "houseArea": 364,
+        "landArea": 450
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-115",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-116",
+        "houseArea": 291,
+        "landArea": 269
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-117",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-118",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-119",
+        "houseArea": 364,
+        "landArea": 504
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-120",
+        "houseArea": 364,
+        "landArea": 450
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-121",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-122",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-123",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-124",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-125",
+        "houseArea": 364,
+        "landArea": 504
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-126",
+        "houseArea": 364,
+        "landArea": 451
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-127",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-128",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-129",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-130",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-131",
+        "houseArea": 364,
+        "landArea": 518
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-132",
+        "houseArea": 364,
+        "landArea": 617
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-133",
+        "houseArea": 364,
+        "landArea": 580
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-134",
+        "houseArea": 364,
+        "landArea": 518
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-135",
+        "houseArea": 364,
+        "landArea": 580
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-136",
+        "houseArea": 364,
+        "landArea": 518
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-137",
+        "houseArea": 364,
+        "landArea": 588
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-140",
+        "houseArea": 364,
+        "landArea": 499
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-141",
+        "houseArea": 364,
+        "landArea": 702
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-142",
+        "houseArea": 364,
+        "landArea": 554
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-143",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-144",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-145",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-146",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-147",
+        "houseArea": 364,
+        "landArea": 448
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-148",
+        "houseArea": 364,
+        "landArea": 496
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-149",
+        "houseArea": 364,
+        "landArea": 449
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-150",
+        "houseArea": 364,
+        "landArea": 451
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-151",
+        "houseArea": 364,
+        "landArea": 504
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-152",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-153",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-154",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-155",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-156",
+        "houseArea": 291,
+        "landArea": 269
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-157",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-158",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-159",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-160",
+        "houseArea": 364,
+        "landArea": 450
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-161",
+        "houseArea": 364,
+        "landArea": 499
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-162",
+        "houseArea": 364,
+        "landArea": 450
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-163",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-164",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-165",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-166",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-167",
+        "houseArea": 364,
+        "landArea": 499
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-168",
+        "houseArea": 364,
+        "landArea": 450
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-169",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-170",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-171",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-172",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-173",
+        "houseArea": 364,
+        "landArea": 504
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-174",
+        "houseArea": 364,
+        "landArea": 514
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-175",
+        "houseArea": 291,
+        "landArea": 315
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-176",
+        "houseArea": 291,
+        "landArea": 313
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-177",
+        "houseArea": 364,
+        "landArea": 588
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-178",
+        "houseArea": 364,
+        "landArea": 519
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-179",
+        "houseArea": 291,
+        "landArea": 313
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-180",
+        "houseArea": 291,
+        "landArea": 315
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-181",
+        "houseArea": 364,
+        "landArea": 764
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-182",
+        "houseArea": 364,
+        "landArea": 504
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-183",
+        "houseArea": 291,
+        "landArea": 270
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-184",
+        "houseArea": 291,
+        "landArea": 272
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-185",
+        "houseArea": 291,
+        "landArea": 268
+    },
+    {
+        "status": "free",
+        "title": "ÏÊÂ-186",
+        "houseArea": 291,
+        "landArea": 273
+    },
+    {
+        "status": "sold",
+        "title": "ÏÊÂ-187",
+        "houseArea": 364,
+        "landArea": 454
+    }
+]

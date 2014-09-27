@@ -51,7 +51,7 @@
 </div>
 
 <div id="map_canvas"></div>
-<section id="objects">
+<section id="process">
 <?php
 $i=1;
 ?>

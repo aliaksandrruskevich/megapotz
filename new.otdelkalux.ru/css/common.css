@@ -119,8 +119,8 @@ nav a	{ font-size: 11px; text-decoration: none; text-transform: uppercase; color
 /* Calculator */
 
 #price.column	{ width: 980px; }
-#price .disclaimer  { text-align: center; margin: 40px 0; }
-#price .disclaimer p { margin: 20px; line-height: 1.4em; font-size: 14px; }
+.disclaimer  { text-align: center; margin: 40px 0; }
+.disclaimer p { margin: 20px; line-height: 1.4em; font-size: 14px; }
 #calculator .calc-head	{ display: table; position: relative; width: 100%; background-color: #363636; background-image: url('/i/sep.png'), url('/i/noize.png'); border-radius: 7px 7px 0 0; }
 #calculator .calc-head>*	{ display: table-cell; height: 95px; vertical-align: middle; width: 215px; text-align: center; }
 #calculator .calc-head label	{ font-weight: bold; font-size: 18px; color: #fff; text-transform: uppercase; cursor: pointer; }
@@ -366,3 +366,11 @@ div.text table { margin: 30px 0;  font-size: 12px; width: 100%; }
 div.text td { padding: 10px 5px; border-bottom: 1px solid #eee; }
 div.text th { padding: 10px 5px;  background-color: #eee; }
 div.text td:nth-child(n+2)	{ text-align: center; }
+
+.w950	{ width: 960px; margin: 0 auto; }
+#process .object { width: 250px; margin: 50px 30px 0 30px; display: inline-block; vertical-align: top; text-align: center; }
+#process .object img	{ border-radius: 25px; width: 250px; height: 250px; }
+#process .object p	{ margin: 5px 0; font: normal 13px Arial; }
+#process .object p.h	{ font: bold 14px Arial; margin-top: 20px; }
+
+#page-process #process {display: none;}

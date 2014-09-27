@@ -192,7 +192,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			// Забираем значения из инпутов
 			wc = +form.wc.value;
 			area = +form.area.value;
-			level = form.level.value;
+			level = form.level[0].checked ? form.level[0].value : form.level[1].value;
 
 			// Пишем их в куки
 			var date = new Date('2025').toUTCString();
@@ -213,11 +213,11 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 			// STANDARD
 			if (level == 'standard') {
-				results[0] = (9200 - (area - 200) * 2) * area;	// работа отделка под ключ
-				results[2] = (1000 - (area - 200) / 4) * area;	// работа электрика под ключ
-				results[9] = (1000 - (area - 200) / 3.5 ) * area;	// материал отопление
-				results[10] = 50000 + area * 120;				// работа котельная
-				results[11] = 140000 + area * 100;				// материал котельная
+				results[0] = (9200 - (area - 200) * 2) * area;	// !!!работа отделка под ключ
+				results[2] = (1000 - (area - 200) / 4) * area;	// !!!работа электрика под ключ
+				results[9] = (1000 - (area - 200) / 3.5 ) * area;	// !!!материал отопление
+				results[10] = 50000 + area * 120;				// !!!работа котельная
+				results[11] = 140000 + area * 100;				//!!!! материал котельная
 			}
 
 			// BUSINESS
@@ -355,7 +355,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 	// Переключалка ездящая
 	function initTumbler() {
 		var sel = document.getElementById('selector');
-		sel.addEventListener('click', function (e) {
+		if (sel) sel.addEventListener('click', function (e) {
 			e.preventDefault();
 			animate(sel, {
 				transition: '',	// анимируется не сам этот элемент, поэтому смысла задавать transition нет
@@ -404,6 +404,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var map = new google.maps.Map(document.getElementById("map_canvas"), {
 			center: loc[hash].latlng,
 			scrollwheel: false,
+			draggable: false,
 			zoom: loc[hash].zoom,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		});
@@ -437,6 +438,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 	function initProcessMap() {
 		var mapOptions = {
 			scrollwheel: false,
+			draggable: false,
 			center: new google.maps.LatLng(55.9, 37),
 			zoom: 10,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -454,7 +456,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 		map.setOptions({styles: styles});
 
-		var objects = document.querySelectorAll('#objects .object');
+		var objects = document.querySelectorAll('#process .object');
 		var current;
 
 		for (var i = 0, l = objects.length, obj; obj = objects[i], i < l; i++) {
@@ -467,7 +469,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 					map: map
 				});
 
-				var infowindow = new google.maps.InfoWindow({content: obj.parentNode.removeChild(obj)});
+				var infowindow = new google.maps.InfoWindow({content: obj.cloneNode(true)});
 
 				google.maps.event.addListener(marker, 'click', function () {
 					if (current) current.close();

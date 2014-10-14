@@ -34,7 +34,7 @@ table#body	{ border-collapse: collapse; width: 100%; }
 
 #menu	{ height: 37px; background: #42a627 url('/i/btns.png') 0 0 repeat-x; }
 #menu li	{ float: left; background: url('/i/btns.png') 100% -37px no-repeat; height: 37px; }
-#menu li a, #menu li strong	{ color: #fff; font-size: 0.8em; font-family: Arial; line-height: 37px; display: block; /**/ padding: 0 9px; /*width: 192px;*/ text-align: center; text-decoration: none; }
+#menu li a, #menu li strong	{ color: #fff; font-size: 0.78em; font-family: Arial; line-height: 37px; display: block; /**/ padding: 0 9px; /*width: 192px;*/ text-align: center; text-decoration: none; }
 #menu li.r	{ background: none; }
 
 .subline	{ font-size: 0.8em; text-align: right; padding: 14px 30px; background: url('/i/btns.png') 190px -74px repeat-x; }

@@ -5,6 +5,30 @@
     },
     {
         "status": "free",
+        "title": "Êîğïóñ 4"
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 5"
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 6"
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 7"
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 8"
+    },
+    {
+        "status": "free",
+        "title": "Êîğïóñ 9"
+    },
+    {
+        "status": "free",
         "title": "ÏÊÂ-001",
         "houseArea": 364,
         "landArea": 425
@@ -34,7 +58,7 @@
         "landArea": 290
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "ÏÊÂ-006",
         "houseArea": 291,
         "landArea": 291
@@ -58,7 +82,7 @@
         "landArea": 450
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "ÏÊÂ-010",
         "houseArea": 291,
         "landArea": 280
@@ -88,7 +112,7 @@
         "landArea": 286
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "ÏÊÂ-016",
         "houseArea": 291,
         "landArea": 281
@@ -310,7 +334,7 @@
         "landArea": 448
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-053",
         "houseArea": 291,
         "landArea": 274
@@ -322,7 +346,7 @@
         "landArea": 266
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-055",
         "houseArea": 291,
         "landArea": 276
@@ -340,7 +364,7 @@
         "landArea": 503
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-058",
         "houseArea": 364,
         "landArea": 780
@@ -388,7 +412,7 @@
         "landArea": 673
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "ÏÊÂ-066",
         "houseArea": 291,
         "landArea": 272
@@ -412,7 +436,7 @@
         "landArea": 650
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-070",
         "houseArea": 364,
         "landArea": 621
@@ -478,13 +502,13 @@
         "landArea": 272
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-081",
         "houseArea": 291,
         "landArea": 270
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "ÏÊÂ-082",
         "houseArea": 291,
         "landArea": 272
@@ -502,7 +526,7 @@
         "landArea": 272
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "ÏÊÂ-085",
         "houseArea": 291,
         "landArea": 268
@@ -533,33 +557,9 @@
     },
     {
         "status": "free",
-        "title": "Êîğïóñ 8"
-    },
-    {
-        "status": "free",
-        "title": "Êîğïóñ 9"
-    },
-    {
-        "status": "free",
         "title": "ÏÊÂ-090",
         "houseArea": 364,
         "landArea": 451
-    },
-    {
-        "status": "free",
-        "title": "Êîğïóñ 5"
-    },
-    {
-        "status": "free",
-        "title": "Êîğïóñ 6"
-    },
-    {
-        "status": "free",
-        "title": "Êîğïóñ 7"
-    },
-    {
-        "status": "free",
-        "title": "Êîğïóñ 4"
     },
     {
         "status": "free",
@@ -604,13 +604,13 @@
         "landArea": 275
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-098",
         "houseArea": 291,
         "landArea": 270
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-099",
         "houseArea": 291,
         "landArea": 274
@@ -634,7 +634,7 @@
         "landArea": 451
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "ÏÊÂ-103",
         "houseArea": 291,
         "landArea": 272
@@ -838,7 +838,7 @@
         "landArea": 518
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-137",
         "houseArea": 364,
         "landArea": 588
@@ -856,7 +856,7 @@
         "landArea": 702
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-142",
         "houseArea": 364,
         "landArea": 554
@@ -886,7 +886,7 @@
         "landArea": 273
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "ÏÊÂ-147",
         "houseArea": 364,
         "landArea": 448
@@ -922,7 +922,7 @@
         "landArea": 270
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "ÏÊÂ-153",
         "houseArea": 291,
         "landArea": 272
@@ -970,7 +970,7 @@
         "landArea": 450
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "ÏÊÂ-161",
         "houseArea": 364,
         "landArea": 499

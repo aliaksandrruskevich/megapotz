@@ -1,5 +1,6 @@
 objects.forEach(function (obj) {
 	var node = document.getElementById('object_' + obj.ID + '_bubble');
+	console.info(obj, node);
 	obj.title = node.querySelector('.plan__title').textContent;
 	var items = node.querySelectorAll('.plan__data-item');
 	for (var i = 0, l = items.length, item; item = items[i], i < l; i++) {
@@ -26,5 +27,28 @@ sorted.forEach(function (obj) {
 	delete obj.sortProp;
 });
 
+////////////
+var hash = {};
+objects.forEach(function (o) {
+	hash[o.title] = o.status;
+});
+
+var oldKeys = window.prompt().split("\r\n");
+var newStatusList = '';
+oldKeys.forEach(function (key) {
+	newStatusList += key + "\t" + hash[key] + "\n";
+	delete hash[key];
+});
+
+console.info(newStatusList, Object.keys(hash).join(', '));
+
+////////////
 window.clipboardData.setData("Text", JSON.stringify(sorted, undefined, 4));
 console.info(JSON.stringify(sorted, undefined, 4));
+
+var str = '';
+sorted.forEach(function (item) {
+	str += item.title + '	' + item.houseArea + '	' + item.landArea + '	' + item.status + "\n";
+});
+
+console.info(str);

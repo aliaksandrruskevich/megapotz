@@ -507,6 +507,36 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				/*if (window.devicePixelRatio == 2) {
 				 document.getElementById('ingos').src='/i/ingos-2x.png';
 				 }*/
+				 
+				var div = document.getElementById('bg');
+				var bg = ['https://lh4.googleusercontent.com/-CjgEskSG1Uk/VIgXFRs2X6I/AAAAAAAAALk/nvhLC17_I6w/',
+						'https://lh3.googleusercontent.com/-yPrcH2aRQKk/VIgXF6Z0zhI/AAAAAAAAALs/2U0eAKvs2ys/',
+						'https://lh3.googleusercontent.com/-MyNokKanXbM/VIgXHGqbQUI/AAAAAAAAAL0/3riAHdYIhIc/',
+						'https://lh3.googleusercontent.com/-5-eF3hpPBFE/VIgXIPwZuaI/AAAAAAAAAMA/EftzUi1fXoo/',
+						'https://lh3.googleusercontent.com/-7ddEmPvzb-E/VIgXIm8uDkI/AAAAAAAAAME/RzcVMum5ess/',
+						'https://lh5.googleusercontent.com/-63HGTs67txs/VIgXJdWq74I/AAAAAAAAAMM/0IVw9luJxME/',
+						'https://lh6.googleusercontent.com/-YtsZB50oGTU/VIgXKZZPpAI/AAAAAAAAAMY/_9hnSu501aM/',
+						'https://lh3.googleusercontent.com/-k-SR9ObLf-c/VIgXK1i3rzI/AAAAAAAAAMg/qWGdh7x3wjE/',
+						'https://lh5.googleusercontent.com/-TZj2ezI20b4/VIgXLZgM2pI/AAAAAAAAAMk/c0fDAVH1GtI/',
+						'https://lh3.googleusercontent.com/-kgczYZoQTHc/VIgXGNw6e2I/AAAAAAAAALo/dn0fQa8QA_Q/'];
+				
+				var counter = 0;
+				var changeBG = function () {
+					var w = div.offsetWidth, h = div.offsetHeight;
+					if (bg[counter]) {
+						div.style.backgroundImage = 'url(' + bg[counter] + 'w' + w + '-h' + h + '-n/cover.jpg)';
+						counter++;
+						var img = new Image();
+						img.src = bg[counter] + 'w' + w + '-h' + h + '-n/cover.jpg';
+						window.setTimeout(changeBG, 5000);
+					} else {
+						counter = 0;
+						changeBG();
+					}
+				};
+				changeBG();
+
+				
 				Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
 				Calculator(document.getElementById('calculator'));
 
@@ -575,13 +605,22 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// 
 
 		////////////// Подмена телефона
-		/*
+/*
 		var phoneNodes = document.getElementsByTagName('p');
 		for (var i = 0, l = phoneNodes.length; i < l; i++) {
 			var html = phoneNodes[i].innerHTML;
 			if (html.indexOf('99-88-347')) {
 				phoneNodes[i].innerHTML = phoneNodes[i].innerHTML.replace(/\(?495\)? 99-88-347/, "(909) 151-31-56");
 			}
+		}*/
+		/*
+		if (document.cookie.indexOf('close') == -1) {
+			document.body.innerHTML += '<div id="work" style="position: fixed; top: 40px;left: 40%;font-size: 15px;margin: 0 auto;background: #fff;box-shadow: 0px 0px 14px #666;padding: 10px;z-index: 100;cursor: pointer;">Мы работаем в праздники! Звоните!</div>';
+			var bubble = document.getElementById('work');
+			bubble.onclick=function () {
+				bubble.parentNode.removeChild(bubble);
+				document.cookie = 'close=1';
+			}	
 		}
 		*/
 

@@ -339,7 +339,7 @@
         "landArea": 4937
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "œ— -055",
         "houseArea": null,
         "landArea": 2258
@@ -401,7 +401,7 @@
         "landArea": 2118
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "œ— -071",
         "project": "",
         "houseArea": 411,
@@ -506,13 +506,6 @@
         "landArea": 2097
     },
     {
-        "status": "free",
-        "title": "œ— -096",
-        "project": "",
-        "houseArea": 615,
-        "landArea": 2097
-    },
-    {
         "status": "sold",
         "title": "œ— -097",
         "project": "",
@@ -587,13 +580,6 @@
     },
     {
         "status": "free",
-        "title": "œ— -108",
-        "project": "",
-        "houseArea": 322,
-        "landArea": 2158
-    },
-    {
-        "status": "sold",
         "title": "œ— -108",
         "houseArea": 322,
         "landArea": 2158
@@ -751,7 +737,7 @@
         "landArea": 2088
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "œ— -134",
         "houseArea": null,
         "landArea": 2297
@@ -901,13 +887,6 @@
         "landArea": 2496
     },
     {
-        "status": "free",
-        "title": "œ— -164",
-        "project": "",
-        "houseArea": 552,
-        "landArea": 2496
-    },
-    {
         "status": "sold",
         "title": "œ— -165",
         "houseArea": 522,
@@ -952,7 +931,7 @@
         "landArea": 2290
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "œ— -172",
         "houseArea": 411,
         "landArea": 2409
@@ -1017,9 +996,9 @@
         "landArea": 2001
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "œ— -182",
-        "houseArea": 450,
+        "houseArea": null,
         "landArea": 2554
     },
     {
@@ -1107,14 +1086,7 @@
         "landArea": 2114
     },
     {
-        "status": "free",
-        "title": "œ— -195",
-        "project": "",
-        "houseArea": 520,
-        "landArea": 2113
-    },
-    {
-        "status": "free",
+        "status": "sold",
         "title": "œ— -195",
         "project": "",
         "houseArea": 520,
@@ -1128,14 +1100,14 @@
         "landArea": 2158
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "œ— -197",
         "project": "",
         "houseArea": 410,
         "landArea": 2268
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "œ— -198",
         "houseArea": 347,
         "landArea": 2310
@@ -1216,13 +1188,6 @@
     },
     {
         "status": "free",
-        "title": "œ— -209",
-        "project": "",
-        "houseArea": 440,
-        "landArea": 2756
-    },
-    {
-        "status": "free",
         "title": "œ— -210",
         "project": "",
         "houseArea": 341,
@@ -1236,16 +1201,16 @@
     },
     {
         "status": "sold",
-        "title": "œ— -212‡",
-        "houseArea": null,
-        "landArea": 10
-    },
-    {
-        "status": "sold",
         "title": "œ— -212",
         "project": "ÃÓÌÂ",
         "houseArea": 612,
         "landArea": 2518
+    },
+    {
+        "status": "sold",
+        "title": "œ— -212‡",
+        "houseArea": null,
+        "landArea": 10
     },
     {
         "status": "sold",
@@ -1445,9 +1410,9 @@
         "landArea": 2475
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "œ— -266",
-        "houseArea": 400,
+        "houseArea": null,
         "landArea": 2257
     },
     {
@@ -1564,7 +1529,7 @@
         "landArea": 2253
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "œ— -286",
         "project": "",
         "houseArea": 411,

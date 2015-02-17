@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+<div>
+	<div>
+		<label>Исходные данные <textarea id="original"></textarea></label>
+	</div>
+	<div>
+		<label>Текущие данные <textarea id="current"></textarea></label>
+	</div>
+	<input type="button" value="Diff!" onclick="diff()">
+</div>
+<hr>
+<ul></ul>
+
+<script type="text/javascript">
+function diff() {
+	var original = JSON.parse(document.getElementById('original').value);
+	var current = JSON.parse(document.getElementById('current').value);
+	var result = [];
+	
+	var hash = {};
+	for (var i = 0, l = original.length; i < l; i++) {
+		hash[original[i].title] = original[i];
+	}
+
+	for (i = 0, l = current.length; i < l; i++) {
+		var item = current[i];
+		var status = item.status;
+		var title = item.title;
+		if (status == 'sold' && (!hash.hasOwnProperty(title) || hash[title].status == 'free')) {
+			result.push(item.title);
+		}
+	}
+	console.info(result);
+}
+</script>
+</body>
+</html>

@@ -1,1921 +1,1880 @@
 [
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-001",
         "houseArea": 600,
-        "landArea": 41
+        "landArea": 4153
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-002",
         "houseArea": 550,
-        "landArea": 36
+        "landArea": 3657
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-003",
-        "project": "йпхр-2л",
         "houseArea": 777,
-        "landArea": 37
+        "landArea": 3790
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-004",
         "houseArea": 550,
-        "landArea": 38
+        "landArea": 3882
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-005",
         "houseArea": 550,
-        "landArea": 39
+        "landArea": 3902
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-006",
-        "project": "йпхр-2л",
         "houseArea": 777,
-        "landArea": 22
+        "landArea": 2231
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-007",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2262
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-008",
         "houseArea": 450,
-        "landArea": 25
+        "landArea": 2560
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-009",
-        "project": "аюдем-аюдем",
         "houseArea": 551,
-        "landArea": 21
+        "landArea": 2128
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-010",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2121
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-011",
         "houseArea": 650,
-        "landArea": 49
+        "landArea": 4958
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-012",
-        "houseArea": 749,
-        "landArea": 22
+        "houseArea": 741,
+        "landArea": 2221
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-013",
         "houseArea": 400,
-        "landArea": 23
+        "landArea": 2355
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-014",
-        "project": "йнлн",
-        "houseArea": 575,
-        "landArea": 20
+        "houseArea": 585,
+        "landArea": 2000
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-015",
         "houseArea": 400,
-        "landArea": 23
+        "landArea": 2395
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-016",
-        "houseArea": 400,
-        "landArea": 19
+        "houseArea": null,
+        "landArea": 1951
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-017",
-        "project": "ахкэаюн",
         "houseArea": 493,
-        "landArea": 21
+        "landArea": 2177
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-018",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2028
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-019",
         "houseArea": 400,
-        "landArea": 24
+        "landArea": 2464
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-020",
-        "project": "аюдем-аюдем",
         "houseArea": 551,
-        "landArea": 22
+        "landArea": 2258
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-021",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2090
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-022",
         "houseArea": 450,
-        "landArea": 30
+        "landArea": 3026
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-023",
-        "project": "лепюмн",
-        "houseArea": 476,
-        "landArea": 22
+        "houseArea": 586,
+        "landArea": 2254
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-024",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2141
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-025",
         "houseArea": 500,
-        "landArea": 31
+        "landArea": 3166
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-026",
-        "project": "йнлн",
-        "houseArea": 575,
-        "landArea": 22
+        "houseArea": 585,
+        "landArea": 2289
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-027",
         "houseArea": 400,
-        "landArea": 23
+        "landArea": 2310
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-028",
         "houseArea": 500,
-        "landArea": 33
+        "landArea": 3339
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-029",
-        "project": "лчнм",
-        "houseArea": 483,
-        "landArea": 21
+        "houseArea": 537,
+        "landArea": 2139
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-030",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2207
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-031",
         "houseArea": 750,
-        "landArea": 44
+        "landArea": 4482
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-032",
-        "project": "йпхр-2л",
         "houseArea": 777,
-        "landArea": 27
+        "landArea": 2730
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-033",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2179
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-034",
         "houseArea": 550,
-        "landArea": 36
+        "landArea": 3633
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-035",
-        "project": "аюдем-аюдем",
         "houseArea": 551,
-        "landArea": 24
+        "landArea": 2440
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-036",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2184
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-037",
         "houseArea": 600,
-        "landArea": 44
+        "landArea": 4439
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-038",
-        "houseArea": 749,
-        "landArea": 27
+        "houseArea": 741,
+        "landArea": 2754
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-039",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2117
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-040",
         "houseArea": 650,
-        "landArea": 49
+        "landArea": 4895
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-041",
-        "project": "йнлн",
-        "houseArea": 575,
-        "landArea": 23
+        "houseArea": 585,
+        "landArea": 2375
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-042",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2095
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-043",
         "houseArea": 600,
-        "landArea": 42
+        "landArea": 4212
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-044",
-        "project": "йпхр-2л",
         "houseArea": 777,
-        "landArea": 24
+        "landArea": 2415
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-045",
-        "houseArea": 400,
-        "landArea": 21
+        "houseArea": null,
+        "landArea": 2125
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-046",
         "houseArea": null,
-        "landArea": 44
+        "landArea": 4462
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-047",
         "houseArea": 450,
-        "landArea": 25
+        "landArea": 2548
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-048",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2047
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-049",
         "houseArea": 600,
-        "landArea": 45
+        "landArea": 4495
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-050",
         "houseArea": 450,
-        "landArea": 26
+        "landArea": 2687
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-051",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2177
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-052",
         "houseArea": 650,
-        "landArea": 48
+        "landArea": 4795
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-053",
-        "houseArea": 400,
-        "landArea": 23
+        "houseArea": null,
+        "landArea": 2364
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-054",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2043
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-055",
         "houseArea": 700,
-        "landArea": 51
+        "landArea": 5118
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-056",
         "houseArea": null,
-        "landArea": 33
+        "landArea": 3371
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-057",
         "houseArea": 900,
-        "landArea": 110
+        "landArea": 11013
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-058",
         "houseArea": 900,
-        "landArea": 28
+        "landArea": 2882
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-059",
         "houseArea": 900,
-        "landArea": 113
+        "landArea": 11320
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-059Ю",
         "houseArea": 900,
-        "landArea": 125
+        "landArea": 12553
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-060",
         "houseArea": 450,
-        "landArea": 25
+        "landArea": 2544
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-061",
         "houseArea": null,
-        "landArea": 166
+        "landArea": 16637
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-062",
         "houseArea": null,
-        "landArea": 27
+        "landArea": 2744
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-062Ю",
         "houseArea": null,
-        "landArea": 72
+        "landArea": 7240
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-062А",
         "houseArea": null,
-        "landArea": 34
+        "landArea": 3447
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-063",
         "houseArea": null,
-        "landArea": 26
+        "landArea": 2614
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-063Ю",
         "houseArea": null,
-        "landArea": 49
+        "landArea": 4940
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-064",
         "houseArea": null,
-        "landArea": 58
+        "landArea": 5795
     },
     {
-        "state": "sold",
-        "title": "пем-065Ю",
-        "houseArea": null,
-        "landArea": 49
-    },
-    {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-065",
         "houseArea": null,
-        "landArea": 111
+        "landArea": 11182
     },
     {
-        "state": "sold",
-        "title": "пем-065А",
-        "houseArea": 650,
-        "landArea": 49
+        "status": "sold",
+        "title": "пем-065Ю",
+        "houseArea": null,
+        "landArea": 4958
     },
     {
-        "state": "sold",
-        "title": "пем-065Б",
-        "houseArea": 900,
-        "landArea": 69
-    },
-    {
-        "state": "free",
+        "status": "free",
         "title": "пем-066",
         "houseArea": 500,
-        "landArea": 30
+        "landArea": 3015
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-066Ю",
         "houseArea": 450,
-        "landArea": 27
+        "landArea": 2769
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-066А",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2112
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-066Б",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2106
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-067",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2259
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-067Ю",
         "houseArea": 400,
-        "landArea": 23
+        "landArea": 2296
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-067А",
         "houseArea": 300,
-        "landArea": 18
+        "landArea": 1806
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-067Б",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2010
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-067Ц",
         "houseArea": null,
-        "landArea": 20
+        "landArea": 2009
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-067Д",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2120
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-068",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2044
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-068Ю",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2178
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-068А",
         "houseArea": null,
-        "landArea": 18
+        "landArea": 1815
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-068Б",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1766
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-068Ц",
         "houseArea": null,
-        "landArea": 22
+        "landArea": 2253
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-068Д",
         "houseArea": null,
-        "landArea": 22
+        "landArea": 2202
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-069",
         "houseArea": 400,
-        "landArea": 25
+        "landArea": 2573
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-069Ю",
         "houseArea": 450,
-        "landArea": 26
+        "landArea": 2652
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-069А",
         "houseArea": null,
-        "landArea": 21
+        "landArea": 2148
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-069Б",
         "houseArea": null,
-        "landArea": 20
+        "landArea": 2093
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-069Ц",
         "houseArea": null,
-        "landArea": 23
+        "landArea": 2342
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-069Д",
         "houseArea": null,
-        "landArea": 25
+        "landArea": 2551
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-070",
         "houseArea": null,
-        "landArea": 358
+        "landArea": 35894
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-070Ю",
         "houseArea": null,
-        "landArea": 256
+        "landArea": 25664
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-070А",
         "houseArea": null,
-        "landArea": 256
+        "landArea": 25661
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-071",
         "houseArea": 400,
-        "landArea": 24
+        "landArea": 2415
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-071Ю",
         "houseArea": 450,
-        "landArea": 27
+        "landArea": 2751
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-071А",
         "houseArea": null,
-        "landArea": 23
+        "landArea": 2391
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-071Б",
         "houseArea": null,
-        "landArea": 24
+        "landArea": 2399
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-071Ц",
         "houseArea": null,
-        "landArea": 24
+        "landArea": 2453
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-071Д",
         "houseArea": null,
-        "landArea": 24
+        "landArea": 2446
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-072",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2188
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-072Ю",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2123
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-072А",
         "houseArea": null,
-        "landArea": 23
+        "landArea": 2297
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-072Б",
         "houseArea": null,
-        "landArea": 19
+        "landArea": 1979
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-072Ц",
         "houseArea": null,
-        "landArea": 21
+        "landArea": 2102
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-072Д",
         "houseArea": null,
-        "landArea": 22
+        "landArea": 2225
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-073",
         "houseArea": 400,
-        "landArea": 23
+        "landArea": 2318
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-073Ю",
         "houseArea": null,
-        "landArea": 22
+        "landArea": 2291
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-073А",
         "houseArea": null,
-        "landArea": 44
+        "landArea": 4461
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-073Б",
         "houseArea": null,
-        "landArea": 39
+        "landArea": 3961
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-073Ц",
         "houseArea": null,
-        "landArea": 45
+        "landArea": 4584
     },
     {
-        "state": "sold",
+        "status": "free",
         "title": "пем-073Д",
         "houseArea": null,
-        "landArea": 71
+        "landArea": 7100
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-074",
         "houseArea": 600,
-        "landArea": 53
+        "landArea": 5377
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-074Ю",
         "houseArea": 550,
-        "landArea": 40
+        "landArea": 4065
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-074А",
         "houseArea": 550,
-        "landArea": 40
+        "landArea": 4080
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-074Б",
         "houseArea": 900,
-        "landArea": 111
+        "landArea": 11180
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-075",
         "houseArea": 900,
-        "landArea": 156
+        "landArea": 15636
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-075Ю",
         "houseArea": 900,
-        "landArea": 131
+        "landArea": 13110
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-076",
         "houseArea": 900,
-        "landArea": 114
+        "landArea": 11396
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-077",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1826
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-077Ю",
         "houseArea": 350,
-        "landArea": 16
+        "landArea": 1658
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-077А",
         "houseArea": 350,
-        "landArea": 16
+        "landArea": 1645
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-077Б",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1847
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-078",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1829
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-078Ю",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1923
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-078А",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1886
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-078Б",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1845
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-079",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1805
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-080",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1966
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-081",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2014
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-082",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1635
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-082Ю",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1872
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-083",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1930
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-084",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1593
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-084Ю",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1681
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-085",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1701
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-086",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1512
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-086Ю",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1644
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-087",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1525
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-088",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1522
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-088Ю",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1595
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-089",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1610
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-090",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1509
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-090Ю",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1626
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-091",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1622
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-092",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1505
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-092Ю",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1603
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-093",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1611
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-094",
         "houseArea": 400,
-        "landArea": 23
+        "landArea": 2371
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-094Ю",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1627
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-095",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1601
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-096",
         "houseArea": 300,
-        "landArea": 14
+        "landArea": 1483
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-096Ю",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1515
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-097",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1535
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-098",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1612
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-098Ю",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1642
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-099",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2276
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-100",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1603
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-100Ю",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1620
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-101",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1619
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-102",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1503
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-102Ю",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1527
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-103",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1569
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-104",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1549
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-104Ю",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1610
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-105",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1586
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-106",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1516
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-106Ю",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1594
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-107",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1574
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-108",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1749
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-108Ю",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1726
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-109",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1762
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-110",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1503
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-110Ю",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1589
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-111",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1578
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-112",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1520
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-112Ю",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1581
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-112А",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1500
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-113",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1940
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-114",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2041
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-115",
         "houseArea": 450,
-        "landArea": 21
+        "landArea": 2101
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-116",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1871
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-117",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2102
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-118",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2165
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-119",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2089
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-120",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2108
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-121",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2145
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-122",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2111
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-122Ю",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1935
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-123",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1819
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-124",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1988
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-125",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1953
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-126",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1932
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-127",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1778
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-128",
         "houseArea": 400,
-        "landArea": 16
+        "landArea": 1690
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-129",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1879
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-130",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1921
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-131",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1946
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-131Ю",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1844
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-132",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1856
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-132Ю",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1767
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-133",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1706
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-134",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1867
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-135",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1642
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-135Ю",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1857
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-136",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1856
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-137",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1575
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-137Ю",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1660
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-138",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1673
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-139",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1588
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-139Ю",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1502
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-140",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1553
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-141",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1910
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-142",
         "houseArea": 524,
-        "landArea": 26
+        "landArea": 2628
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-143",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2091
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-144",
-        "project": "йнлн",
-        "houseArea": 575,
-        "landArea": 23
+        "houseArea": 585,
+        "landArea": 2361
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-145",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2191
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-146",
-        "project": "йпхр-2л",
         "houseArea": 777,
-        "landArea": 25
+        "landArea": 2556
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-147",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2050
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-148",
-        "project": "лепюмн",
-        "houseArea": 476,
-        "landArea": 22
+        "houseArea": 586,
+        "landArea": 2287
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-149",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2076
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-150",
         "houseArea": 524,
-        "landArea": 22
+        "landArea": 2267
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-151",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2070
     },
     {
-        "state": "free",
-        "title": "пем-152Ю",
-        "project": "яюмрнпхмх",
-        "houseArea": 409,
-        "landArea": 16
-    },
-    {
-        "state": "free",
+        "status": "free",
         "title": "пем-152",
         "houseArea": 300,
-        "landArea": 15
+        "landArea": 1583
     },
     {
-        "state": "free",
+        "status": "free",
+        "title": "пем-152Ю",
+        "houseArea": 409,
+        "landArea": 1608
+    },
+    {
+        "status": "free",
         "title": "пем-153",
         "houseArea": 400,
-        "landArea": 23
+        "landArea": 2339
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-154",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2052
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-155",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2115
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-156",
-        "project": "ахкэаюн",
         "houseArea": 493,
-        "landArea": 20
+        "landArea": 2044
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-156Ю",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2047
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-157",
-        "project": "анцелю-3",
         "houseArea": 693,
-        "landArea": 21
+        "landArea": 2251
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-157Ю",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1786
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-158",
         "houseArea": 524,
-        "landArea": 22
+        "landArea": 2240
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-158Ю",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1874
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-159",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2044
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-160",
-        "project": "йнлн",
-        "houseArea": 575,
-        "landArea": 22
+        "houseArea": 585,
+        "landArea": 2260
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-161",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2035
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-162",
-        "project": "ахкэаюн",
         "houseArea": 493,
-        "landArea": 21
+        "landArea": 2170
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-163",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2138
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-164",
-        "project": "юбхмэнм",
         "houseArea": 511,
-        "landArea": 21
+        "landArea": 2184
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-165",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2075
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-166",
-        "project": "лепюмн",
-        "houseArea": 476,
-        "landArea": 20
+        "houseArea": 586,
+        "landArea": 2001
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-167",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2193
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-168",
-        "project": "лчнм",
-        "houseArea": 483,
-        "landArea": 21
+        "houseArea": 537,
+        "landArea": 2161
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-169",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1660
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-170",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1792
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-170Ю",
-        "project": "яюмрнпхмх",
         "houseArea": 409,
-        "landArea": 18
+        "landArea": 1875
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-171",
         "houseArea": null,
-        "landArea": 61
+        "landArea": 6163
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-172",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1859
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-173",
-        "project": "анцелю-3",
         "houseArea": 693,
-        "landArea": 22
+        "landArea": 2263
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-174",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2061
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-174Ю",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2066
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-175",
         "houseArea": 485,
-        "landArea": 21
+        "landArea": 2160
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-176",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1855
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-177",
-        "project": "йнлн",
-        "houseArea": 575,
-        "landArea": 21
+        "houseArea": 585,
+        "landArea": 2133
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-178",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2068
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-179",
-        "project": "анцелю-3",
         "houseArea": 693,
-        "landArea": 19
+        "landArea": 1957
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-180",
-        "project": "лепюмн",
-        "houseArea": 476,
-        "landArea": 20
+        "houseArea": 586,
+        "landArea": 2018
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-181",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1802
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-182",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1821
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-182Ю",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2067
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-183",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1765
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-184",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2003
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-185",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2167
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-186",
         "houseArea": 400,
-        "landArea": 23
+        "landArea": 2296
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-187",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1972
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-188",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1892
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-188Ю",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2133
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-189",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2024
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-190",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1981
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-191",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1871
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-191Ю",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2050
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-192",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2004
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-193",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2195
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-194",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2173
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-195",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1990
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-196",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2004
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-197",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2210
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-198",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2190
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-199",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2295
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-200",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2294
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-201",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1800
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-202",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1904
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-202Ю",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2028
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-203",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2180
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-204",
         "houseArea": 400,
-        "landArea": 21
+        "landArea": 2134
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-205",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1790
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-206",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1836
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-206Ю",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1836
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-207",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2035
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-208",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2080
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-209",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1707
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-210",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1801
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-210Ю",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1910
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-211",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2035
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-212",
         "houseArea": 400,
-        "landArea": 20
+        "landArea": 2037
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-213",
         "houseArea": 300,
-        "landArea": 16
+        "landArea": 1683
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-214",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1909
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-214Ю",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1908
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-215",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1862
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-216",
         "houseArea": 400,
-        "landArea": 19
+        "landArea": 1950
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-217",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1807
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-218",
         "houseArea": 300,
-        "landArea": 17
+        "landArea": 1792
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-218Ю",
         "houseArea": 400,
-        "landArea": 18
+        "landArea": 1864
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-219",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1844
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-220",
         "houseArea": 350,
-        "landArea": 18
+        "landArea": 1834
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-221",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2262
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-222",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2282
     },
     {
-        "state": "free",
+        "status": "sold",
         "title": "пем-222Ю",
         "houseArea": 400,
-        "landArea": 23
+        "landArea": 2302
     },
     {
-        "state": "free",
+        "status": "free",
         "title": "пем-223",
         "houseArea": 400,
-        "landArea": 22
+        "landArea": 2279
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-224",
         "houseArea": null,
-        "landArea": 24
+        "landArea": 2469
     },
     {
-        "state": "sold",
+        "status": "sold",
         "title": "пем-225-234",
         "houseArea": null,
-        "landArea": 1356
+        "landArea": 135667
     }
 ]

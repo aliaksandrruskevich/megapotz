@@ -113,7 +113,7 @@ unset($images);
 <div>
 <p><b>Офис в Millennium Park</b></p>
 <p>Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
-<p><a target="_blank" href="maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
+<p><a target="_blank" href="//maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
 </div>
 <div>
 <p><b>Связаться со мной</b></p>

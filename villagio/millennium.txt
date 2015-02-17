@@ -7,9 +7,9 @@
         "landArea": 2038
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-1-002",
-        "houseArea": 492,
+        "houseArea": 458,
         "landArea": 1966
     },
     {
@@ -37,7 +37,7 @@
         "title": "вея-1-005",
         "project": "аХКЭАЮН",
         "houseArea": 493,
-        "landArea": 1968
+        "landArea": 1959
     },
     {
         "status": "sold",
@@ -130,14 +130,14 @@
         "landArea": 2316
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-1-020",
         "project": "аЮДЕМ-аЮДЕМ",
         "houseArea": 551,
         "landArea": 2486
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-021",
         "houseArea": 749,
         "landArea": 2515
@@ -157,7 +157,7 @@
         "landArea": 2520
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-1-024",
         "project": "йПХР-2л",
         "houseArea": 777,
@@ -188,7 +188,7 @@
         "landArea": 2036
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-1-029",
         "project": "йПХР-2л",
         "houseArea": 777,
@@ -202,10 +202,10 @@
         "landArea": 2569
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-1-031",
         "project": "аЮДЕМ-аЮДЕМ",
-        "houseArea": 551,
+        "houseArea": 545,
         "landArea": 2538
     },
     {
@@ -223,7 +223,7 @@
         "landArea": 2230
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-034",
         "project": "аНЦЕЛЮ-3",
         "houseArea": 734,
@@ -242,7 +242,7 @@
         "landArea": 3554
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-037",
         "houseArea": 749,
         "landArea": 3701
@@ -266,7 +266,7 @@
         "landArea": 2223
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-041",
         "project": "",
         "houseArea": 429,
@@ -296,6 +296,24 @@
         "title": "вея-1-045-1-049",
         "houseArea": null,
         "landArea": 14556
+    },
+    {
+        "status": "free",
+        "title": "вея-1-046",
+        "houseArea": 500,
+        "landArea": 3168
+    },
+    {
+        "status": "free",
+        "title": "вея-1-047",
+        "houseArea": 500,
+        "landArea": 3502
+    },
+    {
+        "status": "free",
+        "title": "вея-1-048",
+        "houseArea": 500,
+        "landArea": 3188
     },
     {
         "status": "sold",
@@ -367,13 +385,13 @@
         "landArea": 6113
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-062",
         "houseArea": null,
         "landArea": 3781
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-063",
         "houseArea": null,
         "landArea": 4152
@@ -456,7 +474,7 @@
         "landArea": 2554
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-1-076",
         "project": "цХОЕПХНМ",
         "houseArea": 651,
@@ -478,14 +496,8 @@
     {
         "status": "sold",
         "title": "вея-1-079",
-        "houseArea": 450,
+        "houseArea": null,
         "landArea": 2398
-    },
-    {
-        "status": "free",
-        "title": "вея-1-079Ю",
-        "houseArea": 450,
-        "landArea": 2620
     },
     {
         "status": "free",
@@ -500,7 +512,7 @@
         "landArea": 3388
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-082",
         "houseArea": 500,
         "landArea": 3511
@@ -512,7 +524,7 @@
         "landArea": 3556
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-084",
         "houseArea": 500,
         "landArea": 3594
@@ -532,7 +544,7 @@
         "landArea": 3267
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-1-087",
         "project": "лНМРЕ",
         "houseArea": 645,
@@ -594,7 +606,7 @@
         "status": "sold",
         "title": "вея-1-096",
         "project": "лЧНМ",
-        "houseArea": 483,
+        "houseArea": 533,
         "landArea": 2500
     },
     {
@@ -676,7 +688,7 @@
         "landArea": 2681
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-106",
         "houseArea": 450,
         "landArea": 3097
@@ -689,16 +701,16 @@
         "landArea": 2964
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-1-108",
         "project": "лЧНМ",
-        "houseArea": 483,
+        "houseArea": 537,
         "landArea": 2024
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-1-109",
-        "houseArea": 524,
+        "houseArea": 521,
         "landArea": 2430
     },
     {
@@ -751,13 +763,13 @@
         "landArea": 2282
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-2-008",
         "houseArea": 500,
         "landArea": 3555
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-2-009",
         "houseArea": 450,
         "landArea": 2952
@@ -775,7 +787,7 @@
         "landArea": 2731
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-2-012",
         "houseArea": 400,
         "landArea": 2144
@@ -842,15 +854,15 @@
     },
     {
         "status": "free",
-        "title": "вея-2-021",
-        "houseArea": 500,
-        "landArea": 3110
-    },
-    {
-        "status": "free",
         "title": "вея-2-021Ю",
         "houseArea": 500,
         "landArea": 3326
+    },
+    {
+        "status": "free",
+        "title": "вея-2-021",
+        "houseArea": 500,
+        "landArea": 3110
     },
     {
         "status": "free",
@@ -859,7 +871,7 @@
         "landArea": 3321
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-2-023",
         "houseArea": null,
         "landArea": 4768
@@ -884,15 +896,15 @@
     },
     {
         "status": "free",
-        "title": "вея-2-027Ю",
-        "houseArea": 400,
-        "landArea": 1915
-    },
-    {
-        "status": "free",
         "title": "вея-2-027",
         "houseArea": 400,
         "landArea": 1925
+    },
+    {
+        "status": "free",
+        "title": "вея-2-027Ю",
+        "houseArea": 400,
+        "landArea": 1915
     },
     {
         "status": "free",
@@ -1077,15 +1089,15 @@
     },
     {
         "status": "free",
-        "title": "вея-2-064",
-        "houseArea": 400,
-        "landArea": 2319
-    },
-    {
-        "status": "sold",
         "title": "вея-2-064Ю",
         "houseArea": 400,
         "landArea": 2323
+    },
+    {
+        "status": "free",
+        "title": "вея-2-064",
+        "houseArea": 400,
+        "landArea": 2319
     },
     {
         "status": "free",
@@ -1097,7 +1109,7 @@
         "status": "sold",
         "title": "вея-2-066",
         "houseArea": null,
-        "landArea": 2878
+        "landArea": 5699
     },
     {
         "status": "sold",
@@ -1139,7 +1151,7 @@
         "landArea": 2186
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-2-072",
         "project": "оЮКЕПЛН",
         "houseArea": 428,
@@ -1158,14 +1170,14 @@
         "landArea": 2707
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-2-075",
         "project": "йБЮПРЮ",
         "houseArea": null,
         "landArea": 2586
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-2-076",
         "houseArea": null,
         "landArea": 2860
@@ -1203,7 +1215,7 @@
         "landArea": 3478
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-2-082",
         "houseArea": null,
         "landArea": 3480
@@ -1215,7 +1227,7 @@
         "landArea": 3738
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-2-084",
         "houseArea": null,
         "landArea": 3856
@@ -1369,7 +1381,7 @@
         "landArea": 3303
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-2-109",
         "houseArea": null,
         "landArea": 1923
@@ -1456,14 +1468,14 @@
         "landArea": 2917
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-3-002",
         "project": "",
         "houseArea": 745,
         "landArea": 2955
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-3-003",
         "project": "юПЮАЕЯЙЮ",
         "houseArea": 686,
@@ -1503,7 +1515,7 @@
         "landArea": 2232
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-3-011",
         "project": "оЮКЕПЛН",
         "houseArea": 407,
@@ -1541,27 +1553,27 @@
     },
     {
         "status": "sold",
-        "title": "вея-3-015",
-        "houseArea": null,
-        "landArea": 1477
-    },
-    {
-        "status": "sold",
         "title": "вея-3-015Ю",
         "houseArea": null,
         "landArea": 1696
     },
     {
         "status": "sold",
-        "title": "вея-3-016Ю",
+        "title": "вея-3-015",
         "houseArea": null,
-        "landArea": 1552
+        "landArea": 1477
     },
     {
         "status": "sold",
         "title": "вея-3-016",
         "houseArea": 300,
         "landArea": 1554
+    },
+    {
+        "status": "sold",
+        "title": "вея-3-016Ю",
+        "houseArea": null,
+        "landArea": 1552
     },
     {
         "status": "free",
@@ -1588,7 +1600,7 @@
         "landArea": 2000
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-3-021",
         "houseArea": 400,
         "landArea": 2249
@@ -1598,6 +1610,12 @@
         "title": "вея-3-021Ю",
         "houseArea": null,
         "landArea": 1605
+    },
+    {
+        "status": "free",
+        "title": "вея-3-022Ю",
+        "houseArea": 400,
+        "landArea": 2249
     },
     {
         "status": "sold",
@@ -1610,12 +1628,6 @@
         "title": "вея-3-022А",
         "houseArea": 400,
         "landArea": 2000
-    },
-    {
-        "status": "free",
-        "title": "вея-3-022Ю",
-        "houseArea": 400,
-        "landArea": 2249
     },
     {
         "status": "sold",
@@ -1637,7 +1649,7 @@
         "landArea": 2442
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-3-026",
         "project": "нКЭАЕПЯ",
         "houseArea": 487,
@@ -1671,14 +1683,14 @@
         "landArea": 2331
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-3-031",
         "project": "лЮЙЯБЕКК",
         "houseArea": 446,
         "landArea": 2552
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-3-032",
         "project": "нКЭАЕПЯ",
         "houseArea": 487,
@@ -1689,14 +1701,14 @@
         "title": "вея-3-033",
         "project": "лЧНМ",
         "houseArea": 475,
-        "landArea": 2495
+        "landArea": 2500
     },
     {
         "status": "free",
         "title": "вея-3-034",
         "project": "рХЖХСЯ",
         "houseArea": 537,
-        "landArea": 2782
+        "landArea": 2777
     },
     {
         "status": "free",
@@ -1717,13 +1729,13 @@
         "landArea": 3163
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-3-038",
-        "houseArea": 400,
-        "landArea": 2019
+        "houseArea": 300,
+        "landArea": 1589
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-3-039",
         "houseArea": 300,
         "landArea": 1478
@@ -1877,6 +1889,12 @@
         "title": "вея-3-064",
         "houseArea": null,
         "landArea": 3540
+    },
+    {
+        "status": "sold",
+        "title": "вея-3-065",
+        "houseArea": null,
+        "landArea": 3738
     },
     {
         "status": "sold",
@@ -2138,13 +2156,6 @@
         "landArea": 2707
     },
     {
-        "status": "free",
-        "title": "вея-4-012",
-        "project": "",
-        "houseArea": 751,
-        "landArea": 2707
-    },
-    {
         "status": "sold",
         "title": "вея-4-013",
         "project": "йБХМРЮ",
@@ -2165,7 +2176,7 @@
         "landArea": 2772
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-4-016",
         "houseArea": 751,
         "landArea": 3272
@@ -2184,7 +2195,7 @@
         "landArea": 3774
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-4-019",
         "houseArea": 579,
         "landArea": 2841
@@ -2309,7 +2320,7 @@
         "landArea": 2579
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-4-037",
         "project": "",
         "houseArea": 522,
@@ -2356,7 +2367,7 @@
         "landArea": 2508
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-4-044",
         "project": "",
         "houseArea": 462,
@@ -2401,7 +2412,7 @@
         "landArea": 1800
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-4-051",
         "project": "",
         "houseArea": 750,
@@ -2461,7 +2472,7 @@
         "landArea": 2999
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-4-060",
         "project": "",
         "houseArea": 540,
@@ -2503,7 +2514,7 @@
         "landArea": 3201
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-4-066",
         "project": "йБЮПРЮ",
         "houseArea": null,
@@ -2542,7 +2553,7 @@
         "landArea": 1926
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-5-001",
         "project": "лНМЕ",
         "houseArea": 613,
@@ -2597,7 +2608,7 @@
         "landArea": 3212
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-5-009",
         "project": "йБЮПРЮ",
         "houseArea": 500,
@@ -2724,7 +2735,7 @@
         "landArea": 2685
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-5-029",
         "project": "",
         "houseArea": null,
@@ -2948,15 +2959,15 @@
     },
     {
         "status": "sold",
-        "title": "вея-5-063",
-        "houseArea": null,
-        "landArea": 1739
-    },
-    {
-        "status": "sold",
         "title": "вея-5-063Ю",
         "houseArea": null,
         "landArea": 1751
+    },
+    {
+        "status": "sold",
+        "title": "вея-5-063",
+        "houseArea": null,
+        "landArea": 1739
     },
     {
         "status": "sold",
@@ -2965,22 +2976,22 @@
         "landArea": 2414
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-5-065",
         "project": "яЮМРНПХМХ",
         "houseArea": 409,
         "landArea": 2278
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-5-066",
-        "houseArea": 450,
+        "houseArea": null,
         "landArea": 2573
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-5-067",
-        "houseArea": 500,
+        "houseArea": null,
         "landArea": 3128
     },
     {
@@ -2998,9 +3009,9 @@
     },
     {
         "status": "sold",
-        "title": "вея-5-069,5-069Ю",
+        "title": "вея-5-069",
         "houseArea": 300,
-        "landArea": 3920
+        "landArea": 1775
     },
     {
         "status": "sold",
@@ -3010,21 +3021,21 @@
     },
     {
         "status": "sold",
-        "title": "вея-5-069",
-        "houseArea": 300,
-        "landArea": 1775
-    },
-    {
-        "status": "sold",
         "title": "вея-5-069,069Ю",
         "houseArea": 976,
         "landArea": 3920
     },
     {
         "status": "sold",
+        "title": "вея-5-069,5-069Ю",
+        "houseArea": 300,
+        "landArea": 3920
+    },
+    {
+        "status": "sold",
         "title": "вея-5-070Ю",
         "houseArea": null,
-        "landArea": null
+        "landArea": 1622
     },
     {
         "status": "sold",
@@ -3057,7 +3068,7 @@
         "landArea": 2250
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-5-075",
         "houseArea": 824,
         "landArea": 2430
@@ -3111,9 +3122,9 @@
         "landArea": 2230
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-5-084",
-        "houseArea": 450,
+        "houseArea": null,
         "landArea": 2658
     },
     {
@@ -3165,13 +3176,6 @@
         "project": "йБЮПРЮ",
         "houseArea": null,
         "landArea": 2208
-    },
-    {
-        "status": "free",
-        "title": "вея-5-093",
-        "project": "",
-        "houseArea": 499,
-        "landArea": 1964
     },
     {
         "status": "free",
@@ -3287,9 +3291,9 @@
         "landArea": 2811
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-6-006",
-        "houseArea": 500,
+        "houseArea": null,
         "landArea": 3189
     },
     {
@@ -3314,17 +3318,17 @@
     },
     {
         "status": "sold",
-        "title": "вея-6-010Ю",
-        "project": "",
-        "houseArea": 391,
-        "landArea": 2166
-    },
-    {
-        "status": "sold",
         "title": "вея-6-010",
         "project": "аНЯТНП-3",
         "houseArea": 437,
         "landArea": 2206
+    },
+    {
+        "status": "sold",
+        "title": "вея-6-010Ю",
+        "project": "",
+        "houseArea": 391,
+        "landArea": 2166
     },
     {
         "status": "sold",
@@ -3334,15 +3338,21 @@
     },
     {
         "status": "sold",
+        "title": "вея-6-012",
+        "houseArea": null,
+        "landArea": 2151
+    },
+    {
+        "status": "sold",
         "title": "вея-6-012Ю",
         "houseArea": null,
         "landArea": 1905
     },
     {
         "status": "sold",
-        "title": "вея-6-012",
+        "title": "вея-6-013",
         "houseArea": null,
-        "landArea": 2151
+        "landArea": 2009
     },
     {
         "status": "sold",
@@ -3350,12 +3360,6 @@
         "project": "аНКНМЭЪ",
         "houseArea": 454,
         "landArea": 1791
-    },
-    {
-        "status": "sold",
-        "title": "вея-6-013",
-        "houseArea": null,
-        "landArea": 2009
     },
     {
         "status": "sold",
@@ -3486,7 +3490,7 @@
         "landArea": 2726
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-6-034",
         "houseArea": null,
         "landArea": 3611
@@ -3632,9 +3636,9 @@
         "landArea": 3489
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-6-059,6-060",
-        "houseArea": 400,
+        "houseArea": null,
         "landArea": 7510
     },
     {
@@ -3701,11 +3705,11 @@
     {
         "status": "sold",
         "title": "вея-6-070",
-        "houseArea": null,
+        "houseArea": 500,
         "landArea": 2359
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-6-071",
         "houseArea": null,
         "landArea": 2628
@@ -3744,12 +3748,12 @@
         "status": "sold",
         "title": "вея-6-079",
         "houseArea": null,
-        "landArea": 2933
+        "landArea": 1467
     },
     {
         "status": "sold",
         "title": "вея-6-080",
-        "houseArea": 500,
+        "houseArea": null,
         "landArea": 3453
     },
     {
@@ -3865,15 +3869,15 @@
     },
     {
         "status": "sold",
-        "title": "вея-7-014Ю",
-        "houseArea": 619,
-        "landArea": 2213
-    },
-    {
-        "status": "sold",
         "title": "вея-7-014А",
         "houseArea": 622,
         "landArea": 2224
+    },
+    {
+        "status": "sold",
+        "title": "вея-7-014Ю",
+        "houseArea": 619,
+        "landArea": 2213
     },
     {
         "status": "sold",
@@ -3889,18 +3893,18 @@
     },
     {
         "status": "sold",
+        "title": "вея-7-016Ю",
+        "houseArea": null,
+        "landArea": 1633
+    },
+    {
+        "status": "sold",
         "title": "вея-7-016А",
         "houseArea": null,
         "landArea": 1648
     },
     {
         "status": "sold",
-        "title": "вея-7-016Ю",
-        "houseArea": null,
-        "landArea": 1633
-    },
-    {
-        "status": "free",
         "title": "вея-7-017",
         "houseArea": null,
         "landArea": 3325
@@ -4030,16 +4034,10 @@
         "landArea": 2369
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-7-038",
         "houseArea": 503,
         "landArea": 2351
-    },
-    {
-        "status": "sold",
-        "title": "вея-7-039",
-        "houseArea": null,
-        "landArea": 2357
     },
     {
         "status": "sold",
@@ -4049,14 +4047,26 @@
     },
     {
         "status": "sold",
+        "title": "вея-7-039",
+        "houseArea": null,
+        "landArea": 2357
+    },
+    {
+        "status": "sold",
         "title": "вея-7-040",
         "houseArea": null,
         "landArea": 2371
     },
     {
+        "status": "free",
+        "title": "вея-7-041Ю",
+        "houseArea": 400,
+        "landArea": 1906
+    },
+    {
         "status": "sold",
         "title": "вея-7-041",
-        "houseArea": 400,
+        "houseArea": null,
         "landArea": 1853
     },
     {
@@ -4116,7 +4126,7 @@
         "landArea": 3776
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-7-051",
         "project": "нЙРЮБЮ",
         "houseArea": 726,
@@ -4124,15 +4134,15 @@
     },
     {
         "status": "sold",
-        "title": "вея-7-052Ю",
-        "houseArea": 408,
-        "landArea": 2029
-    },
-    {
-        "status": "sold",
         "title": "вея-7-052",
         "houseArea": 443,
         "landArea": 2028
+    },
+    {
+        "status": "sold",
+        "title": "вея-7-052Ю",
+        "houseArea": 408,
+        "landArea": 2029
     },
     {
         "status": "sold",
@@ -4248,13 +4258,13 @@
         "landArea": 2696
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-7-069",
         "houseArea": 450,
         "landArea": 2460
     },
     {
-        "status": "free",
+        "status": "sold",
         "title": "вея-7-070",
         "houseArea": 300,
         "landArea": 2370
@@ -4316,7 +4326,7 @@
     {
         "status": "free",
         "title": "вея-7-078",
-        "houseArea": 250,
+        "houseArea": null,
         "landArea": 1633
     },
     {
@@ -4350,7 +4360,7 @@
         "landArea": 2125
     },
     {
-        "status": "sold",
+        "status": "free",
         "title": "вея-7-083",
         "houseArea": null,
         "landArea": 2541
@@ -4361,4 +4371,4 @@
         "houseArea": 450,
         "landArea": 2554
     }
-] 
+]

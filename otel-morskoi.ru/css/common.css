@@ -62,7 +62,7 @@ li#m6	{ background-position: -326px 0; width: 164px; }
 .copy div	{ position: absolute; top: 6px; left: 150px; font: normal 0.85em Tahoma; color: #06c; }
 
 /*Цены*/
-.price	{ margin: 0 auto; width: 596px; font-family: Verdana, sans-serif; text-align: left; }
+.price	{ margin: 0 auto; width: 800px; font-family: Verdana, sans-serif; text-align: left; }
 .price th	{ background-color: #68c3ff; font-weight: normal ! important; font-size: 0.75em; }
 .price th.l	{ background: url('/i/price_top.png') 0 0 no-repeat; }
 .price th.r	{ background: url('/i/price_top.png') 100% 0 no-repeat; }
@@ -70,7 +70,7 @@ li#m6	{ background-position: -326px 0; width: 164px; }
 .price th	{ padding: 10px 0; }
 .price tbody td	{ background-color: #fff; color: #06c; padding: 10px 0; font-size: 0.75em; }
 .price tbody tr.bg_blue td	{ background-color: #c1e9fe; }
-.price tfoot td	{ background: url('/i/price_bg.png') 0 100% repeat-y ! important; padding: 20px 0; background: none; position: relative; overflow: hidden; }
+.price tfoot td	{ background: rgba(255,255,255,0.7); padding: 20px 0; }
 .price li	{ margin: 8px 0 0 0; position: relative; z-index: 2; }
 .footer	{ height: 100%; }
 

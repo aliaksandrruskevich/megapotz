@@ -14,6 +14,7 @@
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script type="text/javascript" src="/js/main.js"></script>
 <!-- gplus gallery-->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript" src="//yandex.st/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="/gplus/jquery.gplus.js"></script>
 <link rel="stylesheet" type="text/css" href="/gplus/gplus.css">
@@ -225,6 +226,7 @@ var photos = [
 					<label for="comment">Комментарий:</label>
 					<textarea name="comment" id="comment"></textarea>
 				</div>
+				<div style="margin-left: 200px; width: 300px;" class="g-recaptcha" data-sitekey="6LfYFQgTAAAAABYnlHzgo71XVa37XmuRQ4CfTy4y"></div>
 				<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
 			</form>
 		</div>

@@ -1,4 +1,8 @@
 <?php
+
+require('recaptcha/autoload.php');
+
+
 function server_parse($socket, $expected_response)
 {
 	$server_response = '';
@@ -60,7 +64,17 @@ function smtp_mail($to, $subject, $message, $headers)
 	return true;
 }
 
-if (isset($_POST['name']) && isset($_POST['email'])) {
+$siteKey = '6LfYFQgTAAAAABYnlHzgo71XVa37XmuRQ4CfTy4y';
+$secret = '6LfYFQgTAAAAAAFrrYca023DAJsM5hoJWkO4xnMv';
+$lang = 'ru';
+$recaptcha = new \ReCaptcha\ReCaptcha($secret);
+
+
+if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['g-recaptcha-response'])) {
+
+
+
+
 	$name = $_POST['name'];
 	$area = $_POST['area'];
 	$email = $_POST['email'];
@@ -68,6 +82,8 @@ if (isset($_POST['name']) && isset($_POST['email'])) {
 	$date = $_POST['date'];
 	$village = $_POST['village'];
 	$comment = $_POST['comment'];
+	
+	
 
 	$msg = <<<EOF
 <!DOCTYPE html>
@@ -105,14 +121,21 @@ body	{ font-family: Arial; }
 </html>
 EOF;
 	$subject = "Согласование встречи для осмотра объекта (www.otdelkalux.ru)";
+
+	$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+	if ($resp->isSuccess()) {
+		if(smtp_mail($email.', rso2000@mail.ru', $subject, $msg, "MIME-Version: 1.0\r\nContent-Type: text/html; charset=utf-8\r\nContent-Transfer-Encoding: 8bit"))
+		{
+			echo "<!DOCTYPE html><html><head><script type=\"text/javascript\">alert('В ближайшее время я свяжусь с вами для уточнения деталей. Спасибо!');</script><title>Спасибо</title></head></html>";
+		}
+		else
+		{
+			echo "<!DOCTYPE html><html><head><script type=\"text/javascript\">alert('Произошла ошибка и письмо не было отправлено!');</script><title>Спасибо</title></head></html>";
+		}
+	} else {
+		$errors = implode($resp->getErrorCodes());
+		echo "<!DOCTYPE html><html><head><script type=\"text/javascript\">alert('Не пройдена проверка капчи! Ошибка: $errors');</script><title>Спасибо</title></head></html>";
+	}
 	
-	if(smtp_mail($email.', rso2000@mail.ru', $subject, $msg, "MIME-Version: 1.0\r\nContent-Type: text/html; charset=utf-8\r\nContent-Transfer-Encoding: 8bit"))
-	{
-		echo "<!DOCTYPE html><html><head><script type=\"text/javascript\">alert('В ближайшее время я свяжусь с вами для уточнения деталей. Спасибо!');</script><title>Спасибо</title></head></html>";
-	}
-	else
-	{
-		echo "<!DOCTYPE html><html><head><script type=\"text/javascript\">alert('Произошла ошибка и письмо не было отправлено!');</script><title>Спасибо</title></head></html>";
-	}
 }
 ?>

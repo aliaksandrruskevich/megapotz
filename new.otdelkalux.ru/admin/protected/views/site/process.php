@@ -9,6 +9,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBm5umJanOaNNHGtcO3OY8wlTtZ-Z9Xw5o&amp;sensor=false"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 </head>
@@ -109,6 +110,7 @@ $i=1;
 				<label for="comment">Комментарий:</label>
 				<textarea name="comment" id="comment"></textarea>
 			</div>
+			<div style="margin-left: 200px; width: 300px;" class="g-recaptcha" data-sitekey="6LfYFQgTAAAAABYnlHzgo71XVa37XmuRQ4CfTy4y"></div>
 			<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
 		</form>
 		<iframe src="about:blank" id="send_estimate" name="send_estimate" class="dn"></iframe>

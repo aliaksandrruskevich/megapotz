@@ -1,0 +1,545 @@
+doctype html
+// Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com)
+html(lang='ru', itemscope='', itemtype='http://schema.org/GeneralContractor')
+  head
+    meta(name='viewport', content='width=1024')
+    meta(name='keywords', content='ремонт, отделка, коттедж, загородный дом, стоимость, фото, таунхаус, элитный, под ключ')
+    meta(name='description', content='Выполняем весь комплекс отделочных и ремонтных работ в коттеджах, загородных домах и таунхаусах: отопление, электрика, сантехника, внутренняя отделка под ключ. Фотографии завершенных объектов, калькулятор стоимости ремонта.')
+    title Ремонт и отделка коттеджей, загородных домов и таунхаусов под ключ: цены, фото
+    meta(itemprop='image', content='//farm8.staticflickr.com/7079/7064821993_68d9fa0357_b.jpg')
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    link(rel='canonical', href='https://www.otdelkalux.ru/')
+    meta(name='robots', content='noyaca')
+    link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', type='text/css', href='/css/common.css')
+    script(type='text/javascript', src='//maps.googleapis.com/maps/api/js?key=AIzaSyBm5umJanOaNNHGtcO3OY8wlTtZ-Z9Xw5o&sensor=false')
+    script(type='text/javascript', src='/js/main.js')
+    script(type='application/ld+json').
+      {"@context":"http://schema.org","@type":"WebFormHandler","specificationUrl":"https://www.otdelkalux.ru/calc.xml","defaultProperty":[{"@type":"FormProperty","name":"area","defaultValue":"300"},{"@type":"FormProperty","name":"wc","defaultValue":"3"}]}
+    link(rel='stylesheet', href='//callbackhunter.com/widget/tracker.css')
+    script(type='text/javascript', src='//callbackhunter.com/widget/tracker.js', charset='UTF-8')
+    script(type='text/javascript').
+      var hunter_code="3bd4004d0ddbdcacdc5bc6e8f9c99066";
+  body#page-index
+    section#title
+      header.column
+        a#logo(itemprop='url', href='https://www.otdelkalux.ru/')
+          img(itemprop='logo', src='/i/logo.svg', alt='Артель Сергея Петунина')
+          span(itemprop='name') Артель Сергея Петунина
+        nav
+          ul
+            li
+              a.index(href='/') Ремонт и отделка
+            li
+              a.portfolio(href='/portfolio/') Фото
+            li
+              a.osmotr(href='/osmotr/') Осмотр объектов
+            li
+              a.price(href='/price/calculator.html') Цены
+            li
+              a.articles(href='/articles/') Статьи
+            li
+              a.contacts(href='/contacts.html') Контакты
+      #bg(style="background-image: url('https://lh4.googleusercontent.com/-TCDnpzOftaU/U9q88GtSExI/AAAAAAAADaY/pSpFfUCNF7s/w1280-h800-n/remont-cottage.jpg');")
+        div(style='position: relative')
+          #text_holder
+            h1(style='background-color: rgba(255,255,255,0.6); padding: 20px; margin-left: -20px;')
+              span.u Полный комплекс работ
+              br
+              span.u по элитному ремонту и внутренней отделке загородных домов,
+              br
+              | коттеджей и таунхаусов 
+              span.red под ключ
+            p.since
+              | Работаем с 
+              span(itemprop='foundingDate') 1998
+              |  года
+        // noindex
+        script(type='text/javascript').
+          (function() {
+          // Адаптируем тайтл под запрос юзера. Нужно оставить здесь, чтобы не мигало...
+          var html = ['квартир', 'таунхаусов', 'загородных', 'коттеджей'];
+          var query = ['квартир', 'таунхаус', 'загородн', 'коттедж'];
+          var ref = decodeURIComponent(document.referrer);
+          for (var i = 0; i < 3; i++) {
+          if (ref.match(query[i])) break;
+          }
+          var h1 = document.querySelector('#text_holder h1');
+          h1.innerHTML = h1.innerHTML.replace('внутренней отделке загородных домов,', 'отделке').replace('коттеджей и таунхаусов', html[i]);
+          // Прягаем к калькулятору, если юзер пришел с островов
+          if (ref.match(/фот/)) document.location.hash = 'gallery';
+          if (document.location.search.match(/area|wc/) || ref.match(/стоит|стоимост|цен/)) document.location.hash = 'price';
+          })();
+        #mouse
+          | Прокрутите вниз, 
+          br
+          | чтобы узнать больше
+        // /noindex
+    section#whatwedo
+      p.h2.center
+        | Все перечисленные работы мы выполняем 
+        br
+        | только своими силами, 
+        span.red без субподряда
+        | .
+      .stage
+        p Подготовка проекта
+        ul
+          li#design Дизайн интерьеров
+          li#project Проектная документация
+      .stage
+        p Инженерные работы
+        ul
+          li#electric Электрика
+          li#santech Сантехника и канализация
+          li#heating Котельная и отопление
+      .stage
+        p Строительные работы
+        ul
+          li#decor Внутренняя отделка под ключ
+          li#fasad Фасадные работы
+          li#land Ландшафтные работы
+    section#process
+      p.h1.center Ведутся работы:
+      .w950
+        .object(data-gps='55.78,37.02')
+          a(href='https://plus.google.com/photos/104094916837036848285/albums/6042349284522259025', target='_blank')
+            img(src='https://lh4.googleusercontent.com/-N4cfEH_9Wr4/U9q86pxmzGI/AAAAAAAAC9Y/efMZ8iOl8vc/s250-c/millennium-park-remont.jpg', alt='Ремонт коттеджа 800 кв.м. в Millennium Park')
+          p.h Ремонт коттеджа 800 кв.м. в Millennium Park
+          p Основной дом: 3 этажа, 520 кв.м. Строительство и ремонтные работы под ключ.
+          p
+            a(href='https://plus.google.com/photos/104094916837036848285/albums/6042349284522259025') Посмотреть
+        .object(data-gps='55.791339,36.993172')
+          a(href='https://plus.google.com/photos/104094916837036848285/albums/6042352373478299521', target='_blank')
+            img(src='https://lh5.googleusercontent.com/-TCDnpzOftaU/U9q88GtSExI/AAAAAAAADaY/pSpFfUCNF7s/s250-c/monteville.jpg', alt='Отделка дома в Monteville 260 кв.м.')
+          p.h Отделка дома в Monteville 260 кв.м.
+          p
+          p
+            a(href='https://plus.google.com/photos/104094916837036848285/albums/6042352373478299521') Посмотреть
+        .object(data-gps='55.79,37.04')
+          a(href='https://plus.google.com/photos/104094916837036848285/albums/5804280091595557121', target='_blank')
+            img(src='https://lh4.googleusercontent.com/-7Vy8a_wNdwE/UIzyF_Y5t5I/AAAAAAAACEE/p6xWEdIWAlI/s250-c/millennium-park-otdelka.jpg', alt='Отделка коттеджа в Millennium Park (630 м2)')
+          p.h Отделка коттеджа в Millennium Park (630 м2)
+          p Завершаем ремонт на объекте (10.09.2013).
+          p
+            a(href='https://plus.google.com/photos/104094916837036848285/albums/5804280091595557121') Посмотреть
+        .object(data-gps='55.805,36.974')
+          a(href='https://plus.google.com/photos/104094916837036848285/albums/6042355205457891377', target='_blank')
+            img(src='https://lh4.googleusercontent.com/-SlQvxUgERz0/VAn7csN9kjI/AAAAAAAAD5k/uZnMRHPjuo0/s250-c/', alt='Ландшафт №1 в КП Покровский')
+          p.h Ландшафт №1 в КП Покровский
+          p
+          p
+            a(href='https://plus.google.com/photos/104094916837036848285/albums/6042355205457891377') Посмотреть
+        .object(data-gps='55.805454,36.971275')
+          a(href='https://plus.google.com/photos/104094916837036848285/albums/6042354559677508209', target='_blank')
+            img(src='https://lh4.googleusercontent.com/-J2GR7OlZpX4/U9rCDawRigI/AAAAAAAADTk/QNlcfWSZXGE/s250-c/pokrovsky.jpg', alt='Ремонт таунхауса №2 в КП Покровский')
+          p.h Ремонт таунхауса №2 в КП Покровский
+          p
+          p
+            a(href='https://plus.google.com/photos/104094916837036848285/albums/6042354559677508209') Посмотреть
+        .object(data-gps='55.8,37.12')
+          a(href='https://plus.google.com/photos/104094916837036848285/albums/6042354071356678353', target='_blank')
+            img(src='https://lh6.googleusercontent.com/-i4lLGY-W7Xs/U9rBFz6Z93I/AAAAAAAADN8/1ovBlgp4ECA/s250-c/remont-cottage-pavlovo-2.jpg', alt='Отделка таунхауса в КП Павлово-2')
+          p.h Отделка таунхауса в КП Павлово-2
+          p Начинаем ремонт в таунхаусе. Идут демонтажные и инженерные работы.
+          p
+            a(href='https://plus.google.com/photos/104094916837036848285/albums/6042354071356678353') Посмотреть
+        .object(data-gps='55.807,37.1209')
+          a(href='https://plus.google.com/photos/104094916837036848285/albums/6042353462952704465', target='_blank')
+            img(src='https://lh4.googleusercontent.com/-crU0mmwIMiY/U9rAhRzptpI/AAAAAAAADLE/x_CXONcDUR8/s250-c/remont-cottage-pavlovo2.jpg', alt='Ремонт коттеджа в КП Павлово-2')
+          p.h Ремонт коттеджа в КП Павлово-2
+          p Идет утепление и уселение крыши, а так же инженерные работы
+          p
+            a(href='https://plus.google.com/photos/104094916837036848285/albums/6042353462952704465') Посмотреть
+        .object(data-gps='55.9372,36.9066')
+          a(href='https://plus.google.com/photos/104094916837036848285/albums/6042350751816582337', target='_blank')
+            img(src='https://lh6.googleusercontent.com/-bn-BpdmI0Ng/U9q-B49NeXI/AAAAAAAADAQ/EGNrm5B2Sy0/s250-c/dom-kp-darna.jpg', alt='Дом в поселке Дарна')
+          p.h Дом в поселке Дарна
+          p
+          p
+            a(href='https://plus.google.com/photos/104094916837036848285/albums/6042350751816582337') Посмотреть
+        .disclaimer
+          p
+            img(src='/i/alert.svg', alt='')
+          p
+            | Если ваш дом находится в одном из коттеджных посёлков в районе Пирамиды , то мы постараемся предложить вам 
+            b самые выгодные условия ремонта
+            | !
+          p
+            b Действует специальная акция
+            |  в посёлках Millennium Park, Ренессанс Парк, Madison Park, Monteville, Park Avenue, Гринфилд, Резиденции Бенилюкс, Новорижский, Покровский, Монолит, Агаларов Эстейт, Онегино, Княжье озеро: 
+            b логистические расходы не включаются в смету!
+      #map_canvas(style='height: 400px')
+    section#objects
+      .column
+        p.h1.center Завершенные объекты
+        #album_grid
+          .album
+            a.image_stack(href='/portfolio/madisonpark/')
+              noscript
+                img(alt='', src='https://lh5.googleusercontent.com/-a-XP8yPFZU0/UwFFYcO6NtI/AAAAAAAAClw/jQoFB01O5y4/IMG_9895_d.jpg')
+                img(alt='', src='https://lh3.googleusercontent.com/-dwLYT_xoqg4/UwFFR_U27ZI/AAAAAAAAC1E/ydkFNBr_X-Q/IMG_9687_d.jpg')
+                img(alt='', src='https://lh6.googleusercontent.com/-hmxug0tX-tE/VALw_734lWI/AAAAAAAADvE/EB98c8wSBp0/IMG_0350.JPG')
+            p.link
+              a(href='/portfolio/madisonpark/') Ремонт дома в Madison Park - 600 м2
+            p.count 30 фото
+          .album
+            a.image_stack(href='/portfolio/pokrovsky/')
+              noscript
+                img(alt='', src='https://lh6.googleusercontent.com/-tzm8xe0vq0A/VAIXmnUNAjI/AAAAAAAADng/koW0zxHgm28/%2525D0%252592%2525D0%2525B8%2525D0%2525B4-%2525D1%252581-%2525D0%2525BA%2525D1%252583%2525D1%252585%2525D0%2525BD%2525D0%2525B8.jpg')
+                img(alt='', src='https://lh3.googleusercontent.com/-hGlFTKkOufA/VAIX78fpktI/AAAAAAAADpY/4O0ZJXPZez0/%2525D0%2525B4%2525D0%2525B5%2525D1%252582%2525D1%252581%2525D0%2525BA%2525D0%2525B0%2525D1%25258F2.jpg')
+                img(alt='', src='https://lh4.googleusercontent.com/-3BQ-Q1o0iV4/VAIkgY2MjyI/AAAAAAAADq8/O9fniAd8HeY/pork_filtered.jpg')
+            p.link
+              a(href='/portfolio/pokrovsky/') Таунхаус в посёлке Покровский
+            p.count 37 фото
+          .album
+            a.image_stack(href='/portfolio/green_hill_14/')
+              noscript
+                img(alt='Многосекционный деревянный потолок на веранде с резными потолочными карнизами', src='https://lh3.googleusercontent.com/-JKkGgXmg_Tc/UAhGXDH6yNI/AAAAAAAACYo/qdFN9h3qtNw/7064035761.jpg')
+                img(alt='Переоборудование нежилого чердака в жилую комнату.', src='https://lh5.googleusercontent.com/-p1fzWGlIG_s/UAhGW8ntgBI/AAAAAAAACYw/-jNgA7ckuP4/7064035629.jpg')
+                img(alt='Кухня класса "люкс": "остров" и встроенная бытовая техника.', src='https://lh6.googleusercontent.com/-Zhw4YxTlSo4/UAhGbTe0CBI/AAAAAAAABUU/y5QAOVJ4qTA/7064036313.jpg')
+            p.link
+              a(href='/portfolio/green_hill_14/') Отделка коттеджа №14 в посёлке Грин Хилл
+            p.count 68 фото
+          .album
+            a.image_stack(href='/portfolio/leningradskoe_37/')
+              noscript
+                img(alt='Панно в санузле', src='https://lh5.googleusercontent.com/-Sr2jJEQoLps/UAhATl1mnsI/AAAAAAAABEU/YyGJJA5H1Ik/6918003696.jpg')
+                img(alt='Статуя Марка Аврелия', src='https://lh5.googleusercontent.com/-xf73iCkQAuI/UAhAbQuLq-I/AAAAAAAACZY/PXLqeBDyPpM/7064083653.jpg')
+                img(alt='Холл на втором этаже', src='https://lh5.googleusercontent.com/-u0CvAjW8bmk/UAhAWCy8fkI/AAAAAAAABFA/SCm7GS25k1I/6918005218.jpg')
+            p.link
+              a(href='/portfolio/leningradskoe_37/') Отделка загородного дома в Шереметьево
+            p.count 26 фото
+          .album
+            a.image_stack(href='/portfolio/vysokiy_bereg/')
+              noscript
+                img(alt='Гардины для штор, спрятанные за ГК потолок', src='https://lh6.googleusercontent.com/-Lb3M7ZAyvnc/UEyGqza23XI/AAAAAAAAB1g/y0jTrne7Xak/_DSC0203_1.jpg')
+                img(alt='Решетка конвектора', src='https://lh3.googleusercontent.com/-6tJV2dvxIlI/UEyGq_Er_PI/AAAAAAAAB1o/JG3yeClVv2c/_DSC0201_1.jpg')
+                img(alt='Кухня', src='https://lh4.googleusercontent.com/-o9H1wlNTtsw/UEyGq9C88dI/AAAAAAAAB1k/w3B_NYnj9kk/_DSC0196_1.jpg')
+            p.link
+              a(href='/portfolio/vysokiy_bereg/') Ремонт коттеджа в посёлке Высокий берег
+            p.count 44 фото
+          .album
+            a.image_stack(href='/portfolio/green_hill_14_land/')
+              noscript
+                img(alt='Пошаговая дорожка', src='https://lh5.googleusercontent.com/-cQ9IZ7OKQMQ/UAg6RHXs7AI/AAAAAAAAD7k/OTqlmG-GeZs/7064059671.jpg')
+                img(alt='Капельный автополив', src='https://lh3.googleusercontent.com/-SDKpIxyDEXo/UAg6HIFqB0I/AAAAAAAAD7c/ioBKsOBXA9s/6917983814.jpg')
+                img(alt='Вид на беседку и водоём', src='https://lh4.googleusercontent.com/-DTq31KX-6KE/UAg5-PszphI/AAAAAAAAD7U/HWWHVzUbBp0/6917981876.jpg')
+            p.link
+              a(href='/portfolio/green_hill_14_land/') Ландшафтные работы на участке №14 в посёлке Грин Хилл
+            p.count 42 фото
+          .album
+            a.image_stack(href='/portfolio/leningradskoe_37_land/')
+              noscript
+                img(alt='Балюстрада', src='https://lh5.googleusercontent.com/-tKJmZZM19dM/UAg0zJMIg7I/AAAAAAAADt0/OQMohpLDefY/6920900604.jpg')
+                img(alt='Бетонная лестница', src='https://lh5.googleusercontent.com/-TjSFH4EKFuk/UAg0vsz2OsI/AAAAAAAADto/AbRtuEM4sF4/6920900124.jpg')
+                img(alt='Главный фасад дома', src='https://lh5.googleusercontent.com/-BZuxDfKtBK8/UAg0_98R_XI/AAAAAAAADuA/0bdb1Ktve88/7066979655.jpg')
+            p.link
+              a(href='/portfolio/leningradskoe_37_land/') Ландшафтные работы на усадьбе в Шереметьево
+            p.count 34 фото
+          .album
+            a.image_stack(href='/portfolio/green_hill_104_land/')
+              noscript
+                img(alt='Газон и голубые ели', src='https://lh6.googleusercontent.com/-eLUNWdIqvgA/UAg3I3nKMhI/AAAAAAAAD2Q/AbcFyJB7PrU/6920952446.jpg')
+                img(alt='Дорожка из брусчатки', src='https://lh6.googleusercontent.com/-WShf_5GiRB0/UAg3JaWU2KI/AAAAAAAADi8/3qaWLpoGOkY/6920952720.jpg')
+                img(alt='Общий вид участка', src='https://lh5.googleusercontent.com/-ZDaAiTwa_W8/UAg3LCFAWAI/AAAAAAAADjE/v4s07WctQaE/7067032101.jpg')
+            p.link
+              a(href='/portfolio/green_hill_104_land/') Ландшафтные работы в посёлке Грин Хилл №104
+            p.count 10 фото
+        .center
+          .button.red
+            a(href='/portfolio/') Смотреть все объекты
+    section#price.column
+      h2.h1.center Сколько реально стоит ремонт?
+      #calculator
+        form#calc_form(method='post', action='/offer.php', target='send_estimate')
+          .calc-head
+            input#standard.dn(type='radio', name='level', value='standard')
+            label.standard(for='standard') Стандарт
+            input#business.dn(type='radio', name='level', value='business')
+            label.business(for='business') Бизнес
+            .input(style='padding-left: 130px')
+              label(for='area') Площадь, м²
+              input#area(type='number', name='area', value='', min='150', max='1000', step='10')
+            .input
+              label(for='wc') Санузлы
+              input#wc(type='number', name='wc', value='', min='1', max='6', step='1')
+          .calc-hint
+            p Задайте параметры, чтобы рассчитать стоимость работ
+          .calc-body
+            table
+              thead
+                tr
+                  th
+                  th Работа
+                  th Черновой материал
+              tfoot
+                tr
+                  td Общая сумма
+                  td
+                  td
+              tbody
+                tr
+                  td Отделка под ключ
+                  td
+                  td
+                tr
+                  td Электрика под ключ
+                  td
+                  td
+                tr
+                  td Водоснабжение
+                  td
+                  td
+                tr
+                  td Канализация
+                  td
+                  td
+                tr
+                  td Отопление
+                  td
+                  td
+                tr
+                  td Котельная
+                  td
+                  td
+          .special
+            p
+              | Для владельцев загородных домов на 
+              b Новорижском шоссе
+              |  действует 
+              a(href='/novayariga.html') специальное предложение
+              | !
+          .sendback
+            label(for='name') Отправить эту калькуляцию на почту:
+            input#name(type='text', placeholder='Имя', title='Наличие вашего имени в тексте письма снижает вероятность попадания в спам', value='', name='name', required='required')
+            input#email(type='email', placeholder='vasha@pochta.ru', title='Не волнуйтесь, кроме этого письма ничего отправлять не будем :)', value='', name='email', required='required')
+            input#html(type='hidden', name='html', value='')
+            input.button.red(type='submit', value='Отправить')
+        iframe#send_estimate.dn(src='about:blank', name='send_estimate')
+      .disclaimer
+        p
+          img(src='/i/alert.svg', alt='')
+        p
+          | В таблице указана приблизительная стоимость ремонта, основанная на опыте работы на объектах соответствующего класса.
+        p
+          | Более точные цифры мы сможем дать 
+          b только после осмотра
+          |  вашего объекта!
+      p.big Согласовать встречу для проведения замеров:
+      .form_bg
+        .form
+          form(action='novayariga.php', method='POST', target='send_estimate')
+            div
+              label(for='name_2') Имя:
+              input#name_2(type='input', required='true', name='name')
+            div
+              label(for='phone') Телефон:
+              input#phone(type='tel', required='true', name='phone', placeholder='+7 (495) 998-83-47')
+            div
+              label(for='email_2') Email:
+              input#email_2(type='email', required='true', name='email')
+            div
+              label(for='date') Дата и время встречи:
+              input#date(type='datetime-local', name='date')
+            div
+              label(for='area') Площадь дома:
+              input#area_2(type='number', name='area', min='100', max='1500', step='1', required='true')
+            div
+              label(for='vil') Название посёлка:
+              input#vil(name='village', list='villages', required='true', title='Пожалуйста, укажите название посёлка')
+              datalist#villages
+                option(value='Monteville')
+                option(value='Millennium Park')
+                option(value='Madison Park')
+                option(value='Park Avenue')
+                option(value='Гринфилд')
+                option(value='Риверсайд')
+                option(value='Шервуд')
+                option(value='Bosconi')
+                option(value='Резиденции Бенилюкс')
+                option(value='Онегино')
+                option(value='Монолит')
+                option(value='Agalarov Estate ')
+                option(value='Покровский')
+                option(value='Lipki Парк')
+                option(value='Crystal Istra')
+                option(value='Маленькая Италия')
+                option(value='Павлово')
+                option(value='Никольская слобода')
+                option(value='Николо-Урюпино')
+                option(value='Архангельское II')
+                option(value='Ильинский квартал')
+                option(value='Новоархангельское')
+                option(value='Sovereign (Соверен)')
+                option(value='Тимошкино')
+                option(value='Европа')
+                option(value='Петрово-Дальнее')
+                option(value='Кедры')
+                option(value='Усадьба Вельяминово')
+                option(value='Крона (Krona Village)')
+                option(value='Старая Рига')
+                option(value='Белая гора')
+                option(value='Спутник')
+                option(value='Величъ')
+            div
+              label(for='comment') Комментарий:
+              textarea#comment(name='comment')
+            input.button.red(type='submit', value='Согласовать встречу', style='margin-top: 30px')
+    section#circles.column
+      .cholder
+        .circle
+          p
+            b
+              br
+              br
+              | Без
+              br
+              | предоплаты
+          p
+            | Оплата производится по факту завершения каждого этапа работ. Предоплата только за материал.
+      .cholder
+        .circle
+          p
+            b
+              br
+              br
+              | Гарантия
+          p
+            | В договоре прописывается гарантия 
+            br
+            | на ремонт и внутреннюю отделку 
+            br
+            a(href='/warranty.html') на 2 года
+            | .
+      .cholder
+        .circle
+          p
+            b
+              br
+              br
+              | Все для 
+              br
+              | работы зимой
+          p В наличии есть системы временного отопления для работы зимой при отсутствии газа
+          // 50% клиентов призодят по рекомендациям
+    section#serge_petunin
+      .column
+        .cite
+          blockquote
+            p
+              | Более пятнадцати лет я руковожу работами по ремонту и отделке элитных загородных домов. Я – профессионал, и знаю, что и как надо делать, и отвечаю за то, что делаю.
+            p
+              | Обращаясь ко мне, вы снимаете с себя всю головную боль, связанную с ремонтом. Когда всё в одних руках, от вас требуется только поставить задачу и принять результат. Все промежуточные процессы я проведу на высшем уровне.
+          .author
+            p
+              b(itemprop='founder') Сергей Петунин
+              | , руководитель работ
+    section#official
+      p.h1.center Работаю официально
+      .docs
+        figure
+          a(target='_blank', href='https://lh5.googleusercontent.com/-9W9unrwpMsM/T_6xSa50vkI/AAAAAAAAAjU/Emi7DteexcI/s1000/inn.jpg')
+            img(src='https://lh5.googleusercontent.com/-9W9unrwpMsM/T_6xSa50vkI/AAAAAAAAAjU/Emi7DteexcI/s256/', alt='Свидетельство о присвоении ИНН')
+          figcaption Свидетельство о присвоении ИНН
+        figure
+          a(target='_blank', href='https://lh5.googleusercontent.com/-2RJvpn4FvvY/T_6xSV-ubjI/AAAAAAAAAjQ/WrSqcx0Z1n4/s1000/ogrn.jpg')
+            img(src='https://lh5.googleusercontent.com/-2RJvpn4FvvY/T_6xSV-ubjI/AAAAAAAAAjQ/WrSqcx0Z1n4/s256/', alt='Свидетельство о регистрации юридического лица')
+          figcaption Свидетельство о регистрации юридического лица
+        figure
+          a(target='_blank', href='https://lh5.googleusercontent.com/-5QaamqERlq0/T_6xR-HCJUI/AAAAAAAAAjM/FuCI5_hhXu0/s1000/sro.jpg')
+            img(src='https://lh5.googleusercontent.com/-5QaamqERlq0/T_6xR-HCJUI/AAAAAAAAAjM/FuCI5_hhXu0/s256/', alt='Допуск от СРО (лицензия на работу)')
+          figcaption Свидетельство о допуске к работам, выданное СРО (лицензия на работу)
+      .center
+        .button.white
+          a(href='/docs.html') Смотреть все документы
+    section#contact
+      .call
+        p.w
+          | Есть вопросы? 
+          br
+          | Или вы хотите согласовать 
+          a(href='/osmotr/') осмотр объекта
+          | , 
+          br
+          | на котором мы сейчас работаем? 
+          br
+          | Звоните:
+        p.y +7 (495) 99-88-347
+        p.y +7 (926) 709-62-18
+      hr
+      .email
+        p.w
+          | Если у вас есть проект, и вы хотите 
+          br
+          | узнать, сколько будет стоить ремонт, пишите:
+        p.y
+          a(href='mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.') hello@otdelkalux.ru
+        p
+          | Я постараюсь ответить в течение 
+          b двух
+          |  рабочих дней.
+      hr
+      .ready
+        img(src='https://lh3.googleusercontent.com/-JvCJh1G2RCk/T75YMe9Xg-I/AAAAAAAAAhQ/v0P0lGT7j9A/s56/', alt='Сергей Петунин')
+        | Готов 
+        b оперативно
+        |  приехать к вам на объект для знакомства и обсуждения деталей предстоящего ремонта!
+    section#other.center
+      figure#youtube
+        figcaption
+          | Запись выпуска передачи «
+          b Проект мечты
+          | » на телеканале «
+          b Усадьба
+          | » о строительстве 
+          a(href='/portfolio/leningradskoe_37/') дома в римском стиле
+          |  с участием руководителя проекта — Сергея Петунина. 
+          br
+          a(href='http://www.tv-stream.ru/tv/usadba', rel='nofollow', target='_blank')
+            img(src='/i/usadba.png', alt='Телеканал Усадьба')
+      .likes.yashare-auto-init(style='margin: 50px auto;', data-yasharel10n='ru', data-yasharetitle='Артель Сергея Петунина', data-yasharedescription='Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ. Наша специализация: внутренняя отделка, монтаж электрики, сантехники, отопления, а также ландшафтные работы.', data-yashareimage='https://lh6.googleusercontent.com/-tA-Yr-ZRJqI/UEoo-61MQVI/AAAAAAAAB1E/uTM00UyxDWk/s150-c/', data-yasharequickservices='vkontakte,gplus,facebook,twitter', data-yasharetheme='counter', data-yasharetype='small')
+    footer
+      p.title Артель Сергея Петунина
+      .info
+        div(itemprop='description')
+          p
+            | Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ.
+          p
+            | Наша специализация: внутренняя отделка, монтаж электрики, сантехники, отопления, а также ландшафтные работы.
+        div
+          p
+            b Офис в Millennium Park
+          p(itemprop='address') Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041
+          p
+            a(itemprop='hasMap', target='_blank', href='//maps.yandex.ru/-/CVuAJ6O4') На карте
+        div
+          p
+            b Связаться со мной
+          p(itemprop='telephone') +7 (495) 99-88-347
+          p(itemprop='telephone') +7 (926) 709-62-18
+          p
+            a(itemprop='email', href='mailto:hello@otdelkalux.ru') hello@otdelkalux.ru
+          br
+          p
+            b Online
+          p.social.flickr
+            a(target='_blank', href='//www.flickr.com/photos/otdelkalux/sets') Портфолио на Flickr
+          p.social.gplus
+            a(target='_blank', rel='author', href='https://plus.google.com/u/0/104572237617615451669') Сергей Петунин на Google+
+          p
+            a(href='https://www.otdelkalux.ru/') www.OtdelkaLux.ru
+        #badge_holder
+          .g-page(data-width='180', data-href='//plus.google.com/u/0/104572237617615451669', data-rel='publisher')
+      #year
+        | © 
+        span 2006
+        |  «Отделка Люкс»
+    // Yandex.Metrika counter
+    script(src='//mc.yandex.ru/metrika/watch.js', type='text/javascript')
+    script(type='text/javascript').
+      try { var yaCounter13794628 = new Ya.Metrika({id:13794628, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { }
+    noscript
+      div
+        img(src='//mc.yandex.ru/watch/13794628', style='position:absolute; left:-9999px;', alt='')
+    // /Yandex.Metrika counter

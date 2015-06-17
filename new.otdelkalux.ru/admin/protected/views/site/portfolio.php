@@ -41,28 +41,6 @@
 
 
 <div id="album_grid">
-<? $best_images = SiteController::getImages('','','best');
-?>
-<div class="album">
-<a href="/portfolio/best/" class="image_stack">
-<noscript>
-<?
-$i=0;
-foreach($best_images as $img) {
-$i++;
-$j=2-$i;
-?>
-<img alt="<?=$best_images[$j]['title']?>" src="<?=$best_images[$j]['url']?>"/>
-<?
-if ($i>=2)break;
-}?>
-<img alt="Лучшие работы" src= "https://lh4.googleusercontent.com/-kHaGCq9iTas/UAzo8BxPM2I/AAAAAAAABhU/9wACqbVw3qE/best.jpg"/>
-</noscript>
-</a>
-
-<p class="link"><a href="/portfolio/best/">Лучшие работы</a></p>
-<p class="count"><?=count($best_images)?> фото</p>
-</div>
 
 <?foreach($objects as $obj) { 
 $user_id=!empty($obj->picasa_user_id)?$obj->picasa_user_id:"104094916837036848285";

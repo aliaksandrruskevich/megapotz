@@ -1,0 +1,1 @@
+var str = ''; $.each(info_arr, function(k, val) {['name', 'Проект', 'Площадь участка', 'status'].forEach(function (k){str += val[k] + "\t";}); str+="\n"}); str;

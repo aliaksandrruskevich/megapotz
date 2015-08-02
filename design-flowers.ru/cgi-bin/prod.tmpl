@@ -70,20 +70,24 @@
 <div class="subline" style="padding: 14px 10px"><a href="mailto:flowerslp@yandex.ru" class="feedback"><img src="/i/0.gif" alt=""/>Напишите нам</a><a href="/basket.html" class="basket" id="basket"><img src="/i/0.gif" alt=""/>Корзина</a> <b id="quantity"></b></div>
 <h1><tmpl_var doc_title></h1>
 <div class="txt">
-<div style="border: solid 2px #f00; padding: 10px; font-size: bold;">
+<!--<div style="border: solid 2px #f00; padding: 10px; font-size: bold;">
 <p><b>Внимание!</b></p>
 <p>25 апреля начинается  акция на продажу флористических аксессуаров.
 Скидка 30% на <a href="/sizal/">сизальные изделия</a>, <a href="/basket/">корзины</a>, <a href="/florist/">товары для флористов</a> и <a href="/insects/">муляжи насекомых</a>. Срок акции один месяц. Не упустите возможность сэкономить.</p>
-</div>
+</div>-->
 <tmpl_var text>
 </div>
 <tmpl_loop items_loop>
-	<div class="item">
+	<div class="item" itemscope itemtype="http://schema.org/Product">
 		<div class="i_l"><div class="i_r"><div class="p">
-			<a href="/img/big/<tmpl_var id>.jpg" onclick="enlarge(<tmpl_var id>);return false;"><img src="/img/<tmpl_var id>.jpg" alt="<tmpl_var title>"/></a>
+			<a href="/img/big/<tmpl_var id>.jpg" onclick="enlarge(<tmpl_var id>);return false;"><img itemprop="image" src="/img/<tmpl_var id>.jpg" alt="<tmpl_var title>"/></a>
 			<tmpl_if new><img src="/i/new.png" alt="Новинка" class="new"/></tmpl_if>
-			<p><b><tmpl_var title></b><tmpl_if comment><br/>Арт.: <b><tmpl_var comment></b></tmpl_if><tmpl_if min_part><br/>Мин. партия: <b><tmpl_var min_part> шт.</b></tmpl_if></p>
-			<div class="c"><p class="price"><tmpl_if price><tmpl_var price> руб.</tmpl_if>&nbsp;</p><p class="id">№<tmpl_var id></p></div>
+			<p><b itemprop="name"><tmpl_var title></b><tmpl_if comment><span itemprop="description"><br/>Арт.: <b><tmpl_var comment></b></span></tmpl_if><tmpl_if min_part><br/>Мин. партия: <b><tmpl_var min_part> шт.</b></tmpl_if></p>
+			<div class="c"><p class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><tmpl_if price><tmpl_var price> руб.
+<meta itemprop="price" content="<tmpl_var price>">
+<meta itemprop="priceCurrency" content="RUB">
+<link itemprop="availability" href="http://schema.org/InStock">
+			</tmpl_if>&nbsp;</p><p class="id">№<tmpl_var id></p></div>
 		</div></div></div>
 		<tmpl_if price><div class="buy"><img src="/i/0.gif" alt="Положить в корзину"/><input maxlength="3" value="<tmpl_var min_part>" type="text" class="num" id="id<tmpl_var id>"/><input type="button" value="В корзину"/></div></tmpl_if>
 	</div>

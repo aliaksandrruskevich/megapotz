@@ -1,0 +1,6 @@
+var arr = [];
+var st = ['free', 'booked','sold'];
+$('g').each(function() {arr.push($(this).data());});
+arr.forEach(function (v) {
+	console.info(v.num + '	' + v.type+ '	' + v.square + '	' + v.area + '	' + v.price + '	' + st[v.status]);
+});

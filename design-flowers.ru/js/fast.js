@@ -80,7 +80,7 @@ function calculate()
 		else{
 			var b=document.getElementById('total');
 			b.innerHTML=Math.round(sum)+' руб.';
-			document.getElementById('min_sum').style.display=sum<5000?'inline-block':'none';
+			document.getElementById('min_sum').style.display=sum<3000?'inline-block':'none';
 		}
 	}
 }

@@ -34,7 +34,7 @@
 <section>
 <div class="column">
 <div class="center">
-<div class="back"><a href="/portfolio/">◄ Все объекты</a></div>
+<div class="back"><a href="../">◄ Все объекты</a></div>
 <h1><?=$object->title?></h1>
 <p><?=$object->work_date?></p>
 </div>

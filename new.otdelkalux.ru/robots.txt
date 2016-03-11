@@ -2,18 +2,7 @@ User-Agent: *
 Disallow: *index.html
 Disallow: *?
 Disallow: *&
-Disallow: /blog
-Disallow: /portfolio/agalarov-estate-land/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/agalarov-estate/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/dominanta/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/green_hill_104_land/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/green_hill_14/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/green_hill_14_land/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/leningradskoe_37/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/leningradskoe_37_build/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/madisonpark/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/pokrovsky/maps.yandex.ru/-/CVuAJ6O4
-Disallow: /portfolio/vysokiy_bereg/maps.yandex.ru/-/CVuAJ6O4
+Disallow: /uslugi/
 Host: https://www.otdelkalux.ru
 
 

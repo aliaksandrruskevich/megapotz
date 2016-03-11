@@ -34,7 +34,7 @@ table#body	{ border-collapse: collapse; width: 100%; }
 
 #menu	{ height: 37px; background: #42a627 url('/i/btns.png') 0 0 repeat-x; }
 #menu li	{ float: left; background: url('/i/btns.png') 100% -37px no-repeat; height: 37px; }
-#menu li a, #menu li strong	{ color: #fff; font-size: 0.78em; font-family: Arial; line-height: 37px; display: block; /**/ padding: 0 9px; /*width: 192px;*/ text-align: center; text-decoration: none; }
+#menu li a, #menu li strong	{ color: #fff; font-size: 12px; font-family: Arial; line-height: 37px; display: block; /**/ padding: 0 6px; /*width: 192px;*/ text-align: center; text-decoration: none; }
 #menu li.r	{ background: none; }
 
 .subline	{ font-size: 0.8em; text-align: right; padding: 14px 30px; background: url('/i/btns.png') 190px -74px repeat-x; }
@@ -96,6 +96,29 @@ ul.submenu li strong	{ color: #090; }
 .winter6	{ background: url('/i/banner33.jpg') no-repeat; }
 .winter7	{ background: url('/i/banner34.jpg') no-repeat; }
 .winter8	{ background: url('/i/banner35.jpg') no-repeat; }
+
+.march-8-1	{ background: url('/i/banner-08.03-1.jpg') no-repeat; }
+.march-8-2	{ background: url('/i/banner-08.03-2.jpg') no-repeat; }
+.march-8-3	{ background: url('/i/banner-08.03-3.jpg') no-repeat; }
+.march-8-4	{ background: url('/i/banner-08.03-4.jpg') no-repeat; }
+.march-8-5	{ background: url('/i/banner-08.03-5.jpg') no-repeat; }
+.march-8-6	{ background: url('/i/banner-08.03-6.jpg') no-repeat; }
+.march-8-7	{ background: url('/i/banner-08.03-7.jpg') no-repeat; }
+.march-8-8	{ background: url('/i/banner-08.03-8.jpg') no-repeat; }
+
+.spring-1	{ background: url('/i/banner-spring-1.jpg') no-repeat; }
+.spring-2	{ background: url('/i/banner-spring-2.jpg') no-repeat; }
+.spring-3	{ background: url('/i/banner-spring-3.jpg') no-repeat; }
+.spring-4	{ background: url('/i/banner-spring-4.jpg') no-repeat; }
+.spring-5	{ background: url('/i/banner-spring-5.jpg') no-repeat; }
+.spring-6	{ background: url('/i/banner-spring-6.jpg') no-repeat; }
+.spring-7	{ background: url('/i/banner-spring-7.jpg') no-repeat; }
+.spring-8	{ background: url('/i/banner-spring-8.jpg') no-repeat; }
+.spring-9	{ background: url('/i/banner-spring-9.jpg') no-repeat; }
+.spring-10	{ background: url('/i/banner-spring-10.jpg') no-repeat; }
+.spring-11	{ background: url('/i/banner-spring-11.jpg') no-repeat; }
+.spring-12	{ background: url('/i/banner-spring-12.jpg') no-repeat; }
+
 
 .banner div	{ background: url('/i/banner.png') no-repeat; height: 256px; }
 .banner div p	{ padding-top: 172px; }
@@ -212,6 +235,9 @@ div.box div.remark	{ font: normal 70% Tahoma, sans-serif; color: #f00; padding: 
 .new	{ position: absolute; top: -30px; right: -10px; }
 
 .order #noorder, .empty #order_form  { display: none; }
+
+.banner2 { margin: 0 auto; width: 184px; height: 168px; border-radius: 4px; border: 1px solid #aaa; position: relative; }
+.banner2 p { position: absolute; bottom: 0; left: 0; width: 174px;  background-color: rgba(0,0,0,0.3); text-align: center; padding: 5px; color: #fff; }
 }
 
 @media print {

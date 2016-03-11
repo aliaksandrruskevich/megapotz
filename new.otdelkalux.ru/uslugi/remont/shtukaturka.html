@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- Разработка сайта: Михаил Шестаков mike.shestakov@gmail.com -->
+<html lang="ru">
+<head>
+<meta name="viewport" content="width=1024">
+<title>Механизированная штукатурка стен</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<script type="text/javascript" src="/js/main.js"></script>
+</head>
+<body id="page-uslugi">
+<header class="column">
+<a href="https://www.otdelkalux.ru/" id="logo">
+<img src="/i/logo.svg" alt="Артель Сергея Петунина">
+<span>Артель Сергея Петунина</span>
+</a>
+<nav><ul>
+<li><a class="index" href="/">Ремонт и отделка</a></li>
+<li><a class="uslugi" href="/uslugi/">Услуги</a></li>
+<li><a class="portfolio" href="/portfolio/">Фото</a></li>
+<li><a class="osmotr" href="/osmotr/">Осмотр объектов</a></li>
+<li><a class="price" href="/price/calculator.html">Цены</a></li>
+<li><a class="articles" href="/articles/">Статьи</a></li>
+<li><a class="contacts" href="/contacts.html">Контакты</a></li>
+</ul></nav>
+</header>
+
+<article>
+<div class="center"><div class="back"><a href="../">◄ Услуги</a></div></div>
+<h1 class="center">Штукатурка стен</h1>
+
+<p>Мы производим штукатурку как внутри помещения (когда выполняются ремонтные работы), так и снаружи (фасадные работы). Все работы выполняются в строгом соответствии со СНиП, при их проведении выдерживаются все технологические сроки высыхания. Штукатурку выполняют специализированные бригады штукатуров с большим опытом работы, с использованием штукатурных станций последнего поколения. Гарантия на штукатурные работы 2 года.</p>
+<p>Главное отличие наших работ от работ специализированных организаций заключается в качестве. Дело в том, что услуги узко специализированных организаций, занимающихся механизированными штукатурными работами, в основном нацелены на большие объемы. Это, в первую очередь, помещения, не требующие высокого качества выполнения: офисы, торговые помещения, склады, производственные помещения и т.п.</p>
+<p>Наши специалисты, в первую очередь, ориентированы на высококачественную отделку коттеджей, где уровень выполняемых работ существенно выше.</p>
+<p>Мы не делаем дешево, мы делаем по разумной цене и качественно!</p>
+<p>Убедиться в высочайшем уровне качества (выше СНиП) наших работ можно посмотрев наши объекты, находящиеся <a href="/osmotr/">в работе</a>.</p>
+
+
+<p class="h2 center">Обсудим детали?</p>
+<div class="b_333">
+<div class="form-yellow-header">Серьёзно настроены делать ремонт, но у вас много вопросов? Давайте назначим встречу у вас на объекте!</div>
+<div class="form_bg">
+	<div class="form">
+	<form action="/novayariga.php" method="POST" target="send_estimate">
+		<input type="hidden" name="secret" value="5"/>
+		<div>
+			<label for="name">Имя:</label>
+			<input type="input" required="true" name="name" id="name">
+		</div>
+		<div>
+			<label for="phone">Телефон:</label>
+			<input type="tel" required="true" name="phone" id="phone" placeholder="+7 (495) 998-83-47">
+		</div>
+		<div>
+			<label for="email">Email:</label>
+			<input type="email" required="true" name="email" id="email">
+		</div>
+		<div>
+			<label for="date">Дата и время встречи:</label>
+			<input type="datetime-local" name="date" id="date">
+		</div>
+		<div>
+			<label for="area">Площадь дома:</label>
+			<input type="number" name="area" id="area" min="100" max="1500" step="1" required="true">
+		</div>
+		<div>
+			<label for="vil">Название посёлка:</label>
+			<input name="village" list="villages" id="vil" required="true" title="Пожалуйста, укажите название посёлка"><datalist id="villages"><option value="Monteville"></option><option value="Millennium Park"></option><option value="Madison Park"></option><option value="Park Avenue"></option><option value="Гринфилд"></option><option value="Риверсайд"></option><option value="Шервуд"></option><option value="Bosconi"></option><option value="Резиденции Бенилюкс"></option><option value="Онегино"></option><option value="Монолит"></option><option value="Agalarov Estate "></option><option value="Покровский"></option><option value="Lipki Парк"></option><option value="Crystal Istra"></option><option value="Маленькая Италия"></option><option value="Павлово"></option><option value="Никольская слобода"></option><option value="Николо-Урюпино"></option><option value="Архангельское II"></option><option value="Ильинский квартал"></option><option value="Новоархангельское"></option><option value="Sovereign (Соверен)"></option><option value="Тимошкино"></option><option value="Европа"></option><option value="Петрово-Дальнее"></option><option value="Кедры"></option><option value="Усадьба Вельяминово"></option><option value="Крона (Krona Village)"></option><option value="Старая Рига"></option><option value="Белая гора"></option><option value="Спутник"></option><option value="Величъ"></option></datalist>
+		</div>
+		<div>
+			<label for="comment">Комментарий:</label>
+			<textarea name="comment" id="comment"></textarea>
+		</div>
+		<div style="margin-left: 200px; width: 300px;" class="g-recaptcha" data-sitekey="6LfYFQgTAAAAABYnlHzgo71XVa37XmuRQ4CfTy4y"></div>
+		<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
+	</form>
+	<iframe src="about:blank" id="send_estimate" name="send_estimate" class="dn"></iframe>
+	</div>
+</div>
+</div>
+	
+<h2>Штукатурка стен механизированным способом</h2>
+<p>Штукатурка стен - один из важнейших этапов отделочных работ т.к. он формирует геометрию помещения. Некачественное выполнение штукатурных работ повлечет за собой значительные трудности и дополнительные финансовые затраты при дальнейшей отделке.</p>
+<p>При выполнении штукатурных работ в коттедже, её целесообразно выполнять с применением механизированных технологий. Механизированный способ позволяет существенно сократить сроки и стоимость выполнения работ.</p>
+
+<p class="h2">Преимущества механизированной штукатурки перед ручным способом</p>
+<ul class="dash">
+	<li>Замешивание механическим способом позволяет получить качественный раствор: он отличается от приготовленного ручным способом равномерностью и высоким содержанием воздушных пузырей. Это делает раствор более легким и объемным, что позволяет экономить. Расход сухой смеси для ручного способа составляет 35 – 40 кг/м², а с помощью штукатурной станции – около 16 кг/м².  Соотношение компонентов всегда одинаково, что является важным условием для однородности отделываемой поверхности.</li>
+	<li>Практически одновременное нанесение раствора на стену также способствует качеству штукатурки. Вручную невозможно обработать всю стену в один прием: в результате раствор сохнет неравномерно (эффект чешуи).</li>
+	<li>Обработка поверхности в течение короткого промежутка времени требует применения больших шпателей и правил. Это позволяет получить более ровную стену, что важно для облицовки керамической плиткой (при использовании цементных смесей).</li>
+	<li>Механическая штукатурка обеспечивает одновременное выполнение двух процессов: выравнивания и шпатлевания. Это позволяет силами одной бригады (четыре человека) подготовить к дальнейшей отделке до 200 м² стен за одну смену.</li>
+	<li>Расценки на штукатурные работы механизированным способом на 30-40% ниже, чем на отделку стен вручную. Сухие смеси для станций также стоят дешевле, чем смеси для ручных работ. Для обслуживания станции необходимо меньше людей, чем для штукатурки стен ручным способом. Потери материала исключены на всех этапах благодаря механизации. Оштукатуренные гипсовой смесью стены идеально ровные и готовы к оклейке обоями или окраске если это офисное помещение.</li>
+</ul>
+
+<div class="note-bene">
+<p>Качество выполнения штукатурных работ проверяется следующим образом: берется трехметровая линейка и прикладывается к стене. При качественном выполнении, под нее не должен проходить даже лист бумаги!</p> 
+</div>
+
+<p class="h2">Процесс механизированной штукатурки стен и потолков</p>
+<p>Перед началом основных работ оценивается кривизна стен и проводится процесс установки направляющих-маяков, угловых профилей. После подключения штукатурной станции к электросети и источнику водоснабжения, в бункер загружают сухие смеси. Раствор получается однородным благодаря непрерывности процесса. По подающему шлангу со специальными насадками смесь направляется на стену под прямым углом: маяки должны полностью скрыться под раствором. По мере готовности раствора осуществляется его нанесение на обрабатываемую поверхность и выравнивание.</p>
+<p>Выравнивание выполняется с помощью правил и гладилок: лишняя масса раствора снимается и добавляется там, где ее не хватает. При этом очень важно наличие практических навыков у оператора, подающего раствор на стену. Раствор должен сохнуть около часа: за это время выполняют доводку углов и смежных поверхностей. Контроль качества осуществляется с помощью уровней. После этого стену обрабатывают теркой с губкой, устраняя мелкие дефекты. Дальнейшие работы с внутренними поверхностями можно будет проводить спустя 3 - 4 суток. Во время сушки не следует допускать сквозняков.</p>
+
+</article>
+
+<section class="center">
+<div style="margin: 50px auto;" class="likes yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,gplus,facebook,twitter" data-yashareTheme="counter" data-yashareType="small"></div>
+</section>
+
+<footer>
+<p class="title">Артель Сергея Петунина</p>
+<div class="info">
+<div>
+<p>Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ.</p>
+<p>Наша специализация: внутренняя отделка, монтаж электрики, сантехники, отопления, а также ландшафтные работы.</p>
+</div>
+<div>
+<p><b>Офис в Millennium Park</b></p>
+<p>Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
+<p><a target="_blank" href="//maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
+
+</div>
+<div>
+<p><b>Связаться со мной</b></p>
+<p>+7 (495) 99-88-347</p><p>+7 (926) 709-62-18</p>
+<p><a href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
+<br>
+<p><b>Online</b></p>
+<p class="social flickr"><a target="_blank" href="//www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
+<p class="social gplus"><a target="_blank" rel="author" href="https://plus.google.com/104094916837036848285/?rel=author">Сергей Петунин на Google+</a></p>
+<p><a href="https://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
+</div>
+<div id="badge_holder"><div class="g-page" data-width="180" data-href="//plus.google.com/u/0/104572237617615451669" data-rel="publisher"></div></div>
+</div>
+<div id="year">© <span>2006</span> «Отделка Люкс»</div>
+</footer>
+<!-- Yandex.Metrika counter --><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script><script type="text/javascript">try { var yaCounter13794628 = new Ya.Metrika({id:13794628, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { }</script><noscript><div><img src="//mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --></body>
+</html>

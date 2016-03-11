@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var node = document.getElementById('total');
 		if (node) {
 			node.innerHTML = count + ' руб.';
-			document.getElementById('min_sum').style.display = count >= 5000 ? 'none' : 'inline-block';
+			document.getElementById('min_sum').style.display = count >= 3000 ? 'none' : 'inline-block';
 			document.body.className = count ? 'order' : 'empty';
 		}
 		money = count;
@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		// валидатор итп
 		document.getElementById('form').addEventListener('submit', function(e) {
-			if (money < 5000) {
-				alert('Минимальная сумма заказа - 5000 рублей');
+			if (money < 3000) {
+				alert('Минимальная сумма заказа - 3000 рублей');
 				e.preventDefault();
 			}
 		}, false);

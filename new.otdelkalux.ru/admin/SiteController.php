@@ -130,8 +130,15 @@ class SiteController extends Controller
 		$data.= $this->object_page($obj->id);
 	  }
 	  
-	  $data.= '<b>Генерация страницы лучших объектов</b><br/>';	  
-	  $data.=$this->best_page();
+	  //$data.= '<b>Генерация страницы лучших объектов</b><br/>';	  
+	  //$data.=$this->best_page();
+	  $objects=$this->get_all_process();
+	  $data.='__'.count($objects);
+	  foreach($objects as $obj) {
+		$data.= '<b>Генерация страницы объекта В ПРОЦЕССЕ: '.$obj->title.' </b><br/>';
+		$data.= $this->object_page($obj->id);
+	  }
+	  
 	   
 	  $data.= '<b>Генерация страницы sitemap.xml</b><br/>';	  
 	  $data.=$this->sitemap();
@@ -183,7 +190,7 @@ class SiteController extends Controller
 	  
 	  $objects=Objects::model()->findAll($criteria);
 	  
-	  $this->save_to_file('index.html',$this->renderPartial('index',array('objects'=>$objects),true));
+	  //$this->save_to_file('index.html',$this->renderPartial('index',array('objects'=>$objects),true));
 	  return " успешно <br>";
 	}
 	
@@ -201,7 +208,7 @@ class SiteController extends Controller
 	function object_page($id) {
 	  $criteria=new CDbCriteria;
 	  $criteria->order= "t.sort, t.date";
-	  $criteria->condition="(t.status=0 OR t.status is NULL) AND (t.type=0 OR t.type IS NULL OR t.type=3) AND id='".$id."'";
+	  $criteria->condition="id='".$id."'";
 	  
 	  $obj=Objects::model()->findAll($criteria);
 	  
@@ -244,13 +251,14 @@ class SiteController extends Controller
 		
 		//echo "<pre>"; print_r($data); echo "</pre>";
 	  }
-	  if(!is_dir($_SERVER['DOCUMENT_ROOT']."/portfolio/".$obj->link)) {
-		mkdir($_SERVER['DOCUMENT_ROOT']."/portfolio/".$obj->link,0777);
-	  }
-	  $this->save_to_file('portfolio/'.$obj->link.'/index.html',$this->renderPartial('object',array('object'=>$obj,'images'=>$images,'last_next'=>$last_next),true));
-	  //$this->save_to_file('portfolio/'.$obj->link.'/fullscreen.json',json_encode($data));
+	  $path = $obj->type == '1' ? 'osmotr': 'portfolio';
 	  
-	  return '/portfolio/'.$obj->link." - успешно <br>";
+	  if(!is_dir($_SERVER['DOCUMENT_ROOT']."/".$path."/".$obj->link)) {
+		mkdir($_SERVER['DOCUMENT_ROOT']."/".$path."/".$obj->link,0777);
+	  }
+	  $this->save_to_file($path.'/'.$obj->link.'/index.html',$this->renderPartial('object',array('object'=>$obj,'images'=>$images,'last_next'=>$last_next),true));
+	  
+	  return '/'.$path.'/'.$obj->link." - успешно $path<br>";
 	}
 	
 	function process_page () {
@@ -309,9 +317,18 @@ class SiteController extends Controller
 	  return $objects;
 	}
 	
+	function get_all_process() {
+	  $criteria=new CDbCriteria;
+	  $criteria->order= "t.sort, t.date";
+	  $criteria->condition="(t.type=1)";
+	  
+	  $objects=Objects::model()->findAll($criteria);
+	  return $objects;
+	}
+	
 	function actionGetImagesXHR() {
 	  $data.="Синхронизируем базу фотографий объектов!<br/>";
-	  $objects=$this->get_all_objects();
+	  $objects=array_merge($this->get_all_objects(), $this->get_all_process());
 	  Images::model()->deleteAll();
 	  foreach($objects as $obj) {
 		$data.= 'Фотографии объекта: <b>'.$obj->title.' </b><br/>';

@@ -34,7 +34,7 @@ img	{ border: 0; }
 .table	{ display: table; }
 
 h1	{ font-size: 36px; margin: 30px 0; }
-.h2	{ font-weight: bold; font-size: 32px; }
+.h2, h2	{ font-weight: bold; font-size: 32px; margin: 50px 0; }
 .h1	{ font-weight: bold; font-size: 36px; margin: 30px 0; }
 .dn	{ display: none!important; }
 
@@ -72,7 +72,7 @@ nav	{ position: absolute; top: 45px; right: 30px; }
 nav ul	{ list-style-type: none; }
 nav li	{ display: inline-block; }
 nav a	{ font-size: 11px; text-decoration: none; text-transform: uppercase; color: #000; padding: 0 10px; }
-#page-index .index, #page-portfolio .portfolio, #page-process .process, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts	{ cursor: default; color: #ee1c24; }
+#page-index .index, #page-portfolio .portfolio, #page-process .process, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts, #page-uslugi .uslugi	{ cursor: default; color: #ee1c24; }
 #text_holder	{ position: absolute; top: 50px; left: 90px; }
 #bg	{ position: relative; background-size: cover; height: 100%; }
 #bg h1	{ font-weight: bold; font-size: 40px; margin: 40px 0; }
@@ -82,8 +82,8 @@ nav a	{ font-size: 11px; text-decoration: none; text-transform: uppercase; color
 
 /* whatwedo */
 #whatwedo	{ width: 960px; margin: 80px auto; }
-#whatwedo p.h2	{ margin: 50px 0; }
 #whatwedo .stage	{ margin-top: 50px; }
+.stage a { color: #000; }
 #whatwedo .stage p	{ text-transform: uppercase; font: normal 10px Arial; color: #383838; margin-bottom: 6px; }
 #whatwedo .stage ul	{ display: table-row; }
 #whatwedo .stage li	{ border-top: solid 1px #383838; display: table-cell; vertical-align: middle; padding-left: 60px; font-weight: bold; font-size: 16px; color: #000; height: 60px; width: 240px; background-image: url('/i/icons.svg'); background-repeat: no-repeat; }
@@ -242,19 +242,20 @@ footer .gplus	{ background-position: 0 0; }
 #addr	{ line-height: 1.4em; }
 
 /* ARTICLES */
-#page-articles .table	{ margin-top: 80px; width: 100% }
-#page-articles .td { padding: 0 40px; width: 25% }
-#page-articles hr	{  border: dotted #000; border-width: 1px 0 0 0; margin: 20px 0; }
-#page-articles ul	{ list-style: none; }
-#page-articles #articles li	{ margin: 14px -5px; font-size: 14px; line-height: 1.7em; }
-#page-articles #articles ul a	{ color: #000; padding: 3px 5px; background-color: #fff; }
-#page-articles #articles ul a:hover	{ color: #000 ! important; background-color: #ffe400; text-decoration: none;  transition: all 0.3s linear; }
-#page-articles #articles ul a:visited	{ color: #999; }
+#articles .table	{ margin-top: 80px; width: 100% }
+#articles .td { padding: 0 40px; width: 25% }
+#articles hr	{  border: dotted #000; border-width: 1px 0 0 0; margin: 20px 0; }
+#articles ul	{ list-style: none; }
+#articles li	{ margin: 14px -5px; font-size: 14px; line-height: 1.7em; }
+#articles a	{ color: #000; padding: 3px 5px; background-color: #fff; }
+#articles ul a:hover	{ color: #000 ! important; background-color: #ffe400; text-decoration: none;  transition: all 0.3s linear; }
+#articles ul a:visited	{ color: #999; }
 
 caption:before { content: "Таблица " counter(tn) ": "; counter-increment: tn; }
 article	{ width: 980px; margin: 0 auto; }
 article p, article li	{ margin: 20px 0; line-height: 1.5em; font-size: 14px; }
 article ul.dash, article ol	{ margin: 40px 60px; }
+article ul.dash	{ list-style-type: none;  }
 article ul.dash li:before	{ content: '\2014\a0'; margin-left: -1.25em; }
 article li ul, article li ol	{ margin: 10px 40px!important; }
 
@@ -374,3 +375,41 @@ div.text td:nth-child(n+2)	{ text-align: center; }
 #process .object p.h	{ font: bold 14px Arial; margin-top: 20px; }
 
 #page-process #process {display: none;}
+
+
+.oh	{ overflow: hidden; }
+.uslugi-block	{ min-width: 1000px; width: 60%; margin: 0 auto; }
+.float-column 	{ float: left; width: 290px; padding: 20px; }
+
+.price-list	{ margin: 0 auto; text-align: left; border-collapse: collapse; margin-bottom: 50px; }
+.price-list th { border-bottom: 1px solid #000; padding: 10px; }
+.price-list td:nth-child(n+2) { width: 90px; }
+.price-list td { padding: 10px; border-bottom: 1px solid #888; line-height: 1.4em; }
+.price-list tr:hover td { background-color: #f0f0f0; }
+
+.designer	{ min-width: 1000px; width: 80%; margin: 0 auto; font-size: 12px; }
+table.designer { border: 2px solid #333;  }
+.designer tr th { font-weight: normal; background-color: #eee; }
+.designer tr:first-child th { font-weight: bold; }
+.designer tr.big	{ font-weight: bold; }
+
+.note-bene	{ border-left: 5px solid #f00; padding: 15px 30px; margin-left: -35px; background-color: #fff8f8; }
+.note-bene p	{ font-size: 16px; }
+
+.form-yellow-header	{ background-color: #ffe400; padding: 25px 50px; font-size: 17px; line-height: 1.5em; }
+.b_333	{ border: 1px solid #ddd; }
+
+.subnav	{  }
+.subnav li	{ display: inline-block; width: 150px; height: 120px; position: relative; border-bottom: 30px solid rgba(100, 100, 100, 0.5); }
+.subnav li a	{ display: block; position: absolute; bottom: -20px; left: 0; text-align: center; width: 150px; color: #fff; text-shadow: 0 0 2px #555; padding-top: 120px; }
+.subnav li.kotelnaya	{ background: url('/i/thumbs/kotelnaya.jpg'); }
+.subnav li.otoplenie	{ background-image: url('/i/thumbs/otoplenie.jpg'); }
+.subnav li.vodosnabjenie	{ background-image: url('/i/thumbs/vodosnabjenie.jpg'); }
+.subnav li.kanalizacia	{ background-image: url('/i/thumbs/kanalizacia.jpg'); }
+.subnav li.electroproject	{ background-image: url('/i/thumbs/electroproject.jpg'); }
+.subnav li.slabotochka	{ background-image: url('/i/thumbs/slabotochka.jpg'); }
+
+
+.fr	{float: right;}
+.ml30	{ margin-left: 30px; }
+.clr	{ clear: both; }

@@ -1,0 +1,10 @@
+{
+	"name": "Picasa-API",
+	"dependencies": {
+		"xml2js": "latest",
+		"googleapis": "latest",
+		"request": "latest",
+		"promise": "latest"
+	}
+}
+

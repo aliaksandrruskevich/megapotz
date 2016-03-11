@@ -1,0 +1,173 @@
+{
+	"agalarov-estate": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": true,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/6091129088898843393/",
+		"area": 920,
+		"wc": 9
+	},
+	"agalarov-estate-land": {
+		"tags": ["item", "land", "done"],
+		"showIndex": true,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/6090870172921302433/",
+		"area": 20
+	},
+	"madisonpark": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": true,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5981137929405716049/",
+		"area": 550,
+		"wc": 6
+	},
+	"madisonpark_land": {
+		"tags": ["item", "land", "done"],
+		"showIndex": true,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/madisonpark_land/",
+		"area": 20,
+		"wc": 6
+	},
+	"pokrovsky": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": true,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5981127913267177953/",
+		"area": 240,
+		"wc": 3
+	},
+	"green_hill_14": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": true,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5766936139597069073/",
+		"area": 460,
+		"wc": 5
+	},
+	"green_hill_14_land": {
+		"tags": ["item", "land", "done"],
+		"showIndex": true,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5766922949500318545/",
+		"area": 14
+	},
+	"dominanta2": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": false,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5766932655454739361/",
+		"area": 110,
+		"wc": 3
+	},
+	"leningradskoe_37": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": false,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5766929955163945713/",
+		"area": 630,
+		"wc": 7
+	},
+	"leningradskoe_37_land": {
+		"tags": ["item", "land", "done"],
+		"showIndex": false,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5766917242451191313/",
+		"area": 60
+	},
+	"tarasovka": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": false,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5766938084948272737/",
+		"area": 350,
+		"wc": 4
+	},
+	"vysokiy_bereg": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": false,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5786147686305522641/",
+		"area": 330,
+		"wc": 4
+	},
+	"dominanta": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": false,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5766943203098445761/",
+		"area": 110,
+		"wc": 3
+	},
+	"leningradskoe_37_build": {
+		"tags": ["item", "remont", "done"],
+		"showIndex": false,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5766924534629363441/"
+	},
+	"green_hill_104_land": {
+		"tags": ["item", "land", "done"],
+		"showIndex": false,
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5766919886223166529/",
+		"area": 22
+	},
+	"millennium-park-1": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/5804280091595557121/",
+		"area": 630,
+		"wc": 6
+	},
+	"millennium-park-2": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/6042349284522259025/",
+		"area": 660,
+		"wc": 6
+	},
+	"monteville-1": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/6102705886201046081/",
+		"area": 260,
+		"wc": 3
+	},
+	"monteville-2": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/6102830793622050401/",
+		"area": 510,
+		"wc": 4
+	},
+	"pavlovo-1": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/6042354071356678353/",
+		"area": 300,
+		"wc": 3
+	},
+	"pavlovo-2": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/6042353462952704465/",
+		"area": 350,
+		"wc": 4
+	},
+	"pokrovsky-1": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/xxx/",
+		"area": 350,
+		"wc": 4
+	},
+	"pokrovsky-2": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/xxx/",
+		"area": 350,
+		"wc": 4
+	},
+	"ivolgi-36": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/xxx/",
+		"area": 350,
+		"wc": 4
+	},
+	"ivolgi-58": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/xxx/",
+		"area": 350,
+		"wc": 4
+	},
+	"istra-park-62": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/xxx/",
+		"area": 350,
+		"wc": 4
+	},
+	"volokolamsk": {
+		"tags": ["item", "remont", "progress"],
+		"picasaURI": "https://picasaweb.google.com/data/feed/api/user/104094916837036848285/albumid/xxx/",
+		"area": 350,
+		"wc": 4
+	}
+}

@@ -9,18 +9,6 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 (function () {
 	"use strict";
 
-	// Итератор по ключам объекта
-	Object.defineProperty(Object.prototype, 'forEach', {
-		value: function (callback) {
-			if (this.constructor === Object) {
-				for (var i = 0, keys = Object.keys(this), l = keys.length, key, value; key = keys[i], value = this[key], i < l; i++) {
-					if (callback(value, key, i) === false) break;
-				}
-			}
-		},
-		writable: true
-	});
-
 	// Работа с  CSS3 Transitions
 	// http://www.w3.org/TR/css3-transitions/
 	var animate = (function () {		// cfg = {transition:'', from: {}, to: {}, callback:fn}
@@ -29,10 +17,10 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 		// Моментальная анимация выставляет сначала стили до, потом стили после на случай, если в стилях "до" были какие-то непересекающиеся с "после" стили
 		var instantTransition = function (node, cfg) {
-			cfg.from.forEach(function (value, prop) {
+			Object.keys(cfg.from).forEach(function (prop) {var value = cfg.from[prop];
 				node.style[prop] = value;
 			});
-			cfg.to.forEach(function (value, prop) {
+			Object.keys(cfg.to).forEach(function (prop) {var value = cfg.to[prop];
 				node.style[prop] = value;
 			});
 			cfg.callback && cfg.callback();
@@ -40,7 +28,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 		var setRules = function (node, css, animatable) {		// если animatable, то ставит только анимируемые, если false - то только не анимируемые, если не передать - то все
 			if (typeof css == 'object') {
-				css.forEach(function (value, prop) {
+				Object.keys(css).forEach(function (prop) {var value = css[prop];
 					if ((animatable && animatableProps[prop]) || (!animatable && !animatableProps[prop]) || animatable === undefined) node.style[prop] = value;
 				});
 			} else node.className = css;
@@ -54,7 +42,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			var skipAnimation = typeof cfg.from == 'object' && typeof cfg.to == 'object';
 
 			// Анимацию можно пропустить если в итоговых стилях нет анимируемых свойств, ИЛИ если юзер идиот и он в from и to указал совпадающие значения у анимируемых свойств
-			skipAnimation && cfg.to.forEach(function (value, prop) {
+			skipAnimation && Object.keys(cfg.to).forEach(function (prop) {var value = cfg.to[prop];
 				if (animatableProps[prop] && value != cfg.from[prop]) skipAnimation = false;
 			});
 
@@ -69,7 +57,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				// не надо вешать эвентлистенеры, если на них нечего вешать (нет колбэка и неанимируемых атрибутов)
 				// определяем наличие неанимируемых css правил в конечных стилях
 				var hasNonAnimatable = false;
-				typeof cfg.to == 'object' && cfg.to.forEach(function (value, prop) {
+				typeof cfg.to == 'object' && Object.keys(cfg.to).forEach(function (prop) {var value = cfg.to[prop];
 					if (!animatableProps[prop]) hasNonAnimatable = true;
 				});
 
@@ -372,13 +360,8 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var loc = {
 			'millennium': {
 				zoom: 10,
-				latlng: new google.maps.LatLng(55.789745, 37.039345),
-				addr: 'Новорижское ш.,<br/>посёлок Millennium Park,<br/>владение 3041'
-			},
-			'madison': {
-				zoom: 10,
-				latlng: new google.maps.LatLng(55.778093, 36.944855),
-				addr: 'Новорижское ш.,<br/>посёлок Madison Park,<br/>владение 15'
+				latlng: new google.maps.LatLng(55.778846, 37.031636),
+				addr: 'Новорижское ш.,<br/>посёлок Millennium Park,<br/>владение 7-024'
 			}
 		};
 
@@ -498,7 +481,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var onScroll = function () {
 			fadeOut(document.getElementById('mouse'), 300);
 			window.removeEventListener('scroll', onScroll);
-		}
+		};
 
 		if (document.getElementById('GPlus')) initGPlus();
 
@@ -525,10 +508,10 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 					var w = div.offsetWidth, h = div.offsetHeight;
 					if (bg[counter]) {
 						div.style.backgroundImage = 'url(' + bg[counter] + 'w' + w + '-h' + h + '-n/cover.jpg)';
-						counter++;
 						var img = new Image();
 						img.src = bg[counter] + 'w' + w + '-h' + h + '-n/cover.jpg';
 						window.setTimeout(changeBG, 5000);
+						counter++;
 					} else {
 						counter = 0;
 						changeBG();
@@ -541,9 +524,6 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				Calculator(document.getElementById('calculator'));
 
 				if (document.querySelector('#map_canvas')) initProcessMap();
-
-				//initGPlus();
-				//$('#GPlus div').last().on('click', function(e){e.stopPropagation()}).find('img').wrap('<a href="/osmotr/"/>');
 
 				// Убирание подсказки про "крутите дальше" по скроллу
 				window.addEventListener('scroll', onScroll, false);
@@ -671,11 +651,15 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				}
 			});
 		})();
+		
+		window.onloadCallback = function() {
+			grecaptcha.render(document.querySelector('.g-recaptcha'), {"sitekey": "6LevMR4TAAAAAIaY8TYcwXaSbrc5ig4d_Og2P6wL"});
+		};
 	});
 })();
 
 /* Google Analytics: если оставить в блоке выше, то не пашет... */
-var _gaq = _gaq || [];
+/*var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-17254104-1']);
 _gaq.push(['_trackPageview']);
 
@@ -687,3 +671,4 @@ _gaq.push(['_trackPageview']);
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(ga, s);
 })();
+*/

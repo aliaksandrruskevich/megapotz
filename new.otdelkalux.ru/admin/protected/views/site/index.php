@@ -14,11 +14,10 @@
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script type="text/javascript" src="/js/main.js"></script>
 <!-- gplus gallery-->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script type="text/javascript" src="//yandex.st/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="/gplus/jquery.gplus.js"></script>
 <link rel="stylesheet" type="text/css" href="/gplus/gplus.css">
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"CalculateAction","url":"https://www.otdelkalux.ru/","specificationUrl":"https://www.otdelkalux.ru/calc.xml"}</script>
 </head>
 <body id="page-index">
 <section id="title">
@@ -197,7 +196,7 @@ var photos = [
 	<p class="big">Согласовать встречу для проведения замеров:</p>
 	<div class="form_bg">
 		<div class="form">
-			<form action="novayariga.php" method="POST" target="send_estimate">
+			<form action="/novayariga.php" method="POST" target="send_estimate">
 				<div>
 					<label for="name_2">Имя:</label>
 					<input type="input" required="true" name="name" id="name_2">
@@ -226,7 +225,7 @@ var photos = [
 					<label for="comment">Комментарий:</label>
 					<textarea name="comment" id="comment"></textarea>
 				</div>
-				<div style="margin-left: 200px; width: 300px;" class="g-recaptcha" data-sitekey="6LfYFQgTAAAAABYnlHzgo71XVa37XmuRQ4CfTy4y"></div>
+				<div class="g-recaptcha"></div>
 				<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
 			</form>
 		</div>
@@ -320,7 +319,7 @@ var photos = [
 </div>
 <div>
 <p><b>Офис в Millennium Park</b></p>
-<p itemprop="address">Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
+<p itemprop="address">Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 7-024</p>
 <p><a itemprop="map" target="_blank" href="maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
 <br>
 <p><b>Офис в Madison Park</b></p>

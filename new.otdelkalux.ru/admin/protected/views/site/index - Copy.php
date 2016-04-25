@@ -200,7 +200,7 @@ unset($images);
 	<p class="big">Согласовать встречу для проведения замеров:</p>
 	<div class="form_bg">
 		<div class="form">
-			<form action="novayariga.php" method="POST" target="send_estimate">
+			<form action="/novayariga.php" method="POST" target="send_estimate">
 				<div>
 					<label for="name_2">Имя:</label>
 					<input type="input" required="true" name="name" id="name_2">
@@ -322,7 +322,7 @@ unset($images);
 </div>
 <div>
 <p><b>Офис в Millennium Park</b></p>
-<p itemprop="address">Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
+<p itemprop="address">Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 7-024</p>
 <p><a itemprop="map" target="_blank" href="//maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
 <br>
 <p><b>Офис в Madison Park</b></p>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
+<html lang="ru" itemscope itemtype="http://schema.org/Offer">
+<head>
+<meta name="viewport" content="width=1000">
+<title>Специальное предложение для владельцев домов на Новорижском шоссе</title>
+<meta name="description" content="Специальное предложение для владельцев домов в посёлках Villagio Estate и Инком на Новорижском шоссе"/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script type="text/javascript" src="/js/main.js"></script>
+</head>
+<body id="novayariga">
+
+<form action="/mail-test-oauth2.php" method="POST">
+	<input type="hidden" name="secret" value="5"/>
+	<div>
+		<label for="name">Имя:</label>
+		<input type="input" required="true" name="name" id="name">
+	</div>
+	<div>
+		<label for="phone">Телефон:</label>
+		<input type="tel" required="true" name="phone" id="phone" placeholder="+7 (495) 998-83-47">
+	</div>
+	<div>
+		<label for="email">Email:</label>
+		<input type="email" required="true" name="email" id="email">
+	</div>
+	<div class="g-recaptcha"></div>
+	<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
+</form>
+</html>

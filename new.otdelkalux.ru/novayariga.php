@@ -1,79 +1,28 @@
 <?php
 
-require('recaptcha/autoload.php');
+namespace PHPMailer\PHPMailer;
 
+date_default_timezone_set('Etc/UTC');
+require('vendor/autoload.php');
 
-function server_parse($socket, $expected_response)
-{
-	$server_response = '';
-	while (substr($server_response, 3, 1) != ' ')
-	{
-		if (!($server_response = fgets($socket, 256)))
-			echo 'Couldn\'t get mail server response codes. Please contact the forum administrator.', __FILE__, __LINE__;
-	}
+$recaptcha = new \ReCaptcha\ReCaptcha("6LevMR4TAAAAAPELgNHOhsXFt0MRHSutVB82i0Gu");
 
-	if (!(substr($server_response, 0, 3) == $expected_response))
-		echo 'Unable to send e-mail. Please contact the forum administrator with the following error message reported by the SMTP server: "'.$server_response.'"', __FILE__, __LINE__;
-}
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->SMTPDebug = 0;
 
-function smtp_mail($to, $subject, $message, $headers)
-{
-	$recipients = explode(',', $to);
-	$user = 'hello@otdelkalux.ru';
-	$pass = 'serge775150';
-	$smtp_host = 'ssl://smtp.gmail.com';
-	$smtp_port = 465;
+$mail->Host = 'smtp.gmail.com';
+$mail->Port = 587;
+$mail->SMTPSecure = 'tls';
+$mail->SMTPAuth = true;
+$mail->Username = "hello@otdelkalux.ru";
+$mail->Password = "serge775150";
 
-	if (!($socket = fsockopen($smtp_host, $smtp_port, $errno, $errstr, 15)))
-		echo "Could not connect to smtp host '$smtp_host' ($errno) ($errstr)", __FILE__, __LINE__;
-
-	server_parse($socket, '220');
-
-	fwrite($socket, 'EHLO '.$smtp_host."\r\n");
-	server_parse($socket, '250');
-
-	fwrite($socket, 'AUTH LOGIN'."\r\n");
-	server_parse($socket, '334');
-
-	fwrite($socket, base64_encode($user)."\r\n");
-	server_parse($socket, '334');
-
-	fwrite($socket, base64_encode($pass)."\r\n");
-	server_parse($socket, '235');
-
-	fwrite($socket, 'MAIL FROM: <hello@otdelkalux.ru>'."\r\n");
-	server_parse($socket, '250');
-
-	foreach ($recipients as $email)
-	{
-		fwrite($socket, 'RCPT TO: <'.$email.'>'."\r\n");
-		server_parse($socket, '250');
-	}
-
-	fwrite($socket, 'DATA'."\r\n");
-	server_parse($socket, '354');
-
-	fwrite($socket, 'Subject: '.$subject."\r\n".'To: <'.implode('>, <', $recipients).'>'."\r\n".$headers."\r\nFrom: Сергей Петунин <hello@otdelkalux.ru>\r\n\r\n".$message."\r\n");
-
-	fwrite($socket, '.'."\r\n");
-	server_parse($socket, '250');
-
-	fwrite($socket, 'QUIT'."\r\n");
-	fclose($socket);
-
-	return true;
-}
-
-$siteKey = '6LfYFQgTAAAAABYnlHzgo71XVa37XmuRQ4CfTy4y';
-$secret = '6LfYFQgTAAAAAAFrrYca023DAJsM5hoJWkO4xnMv';
-$lang = 'ru';
-$recaptcha = new \ReCaptcha\ReCaptcha($secret);
-
+$mail->CharSet = 'UTF-8';
+$mail->setFrom('hello@otdelkalux.ru', 'Сергей Петунин');
+$mail->AddBCC('rso2000@mail.ru');
 
 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['g-recaptcha-response'])) {
-
-
-
 
 	$name = $_POST['name'];
 	$area = $_POST['area'];
@@ -83,9 +32,11 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['g-recaptcha
 	$village = $_POST['village'];
 	$comment = $_POST['comment'];
 	
+	$mail->addAddress($email);
 	
-
-	$msg = <<<EOF
+	$mail->isHTML(true);
+	$mail->Subject = 'Согласование встречи для осмотра объекта (www.otdelkalux.ru)';
+	$mail->Body    = <<<EOF
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -120,17 +71,13 @@ body	{ font-family: Arial; }
 </body>
 </html>
 EOF;
-	$subject = "Согласование встречи для осмотра объекта (www.otdelkalux.ru)";
 
 	$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 	if ($resp->isSuccess()) {
-		if(smtp_mail($email.', rso2000@mail.ru', $subject, $msg, "MIME-Version: 1.0\r\nContent-Type: text/html; charset=utf-8\r\nContent-Transfer-Encoding: 8bit"))
-		{
-			echo "<!DOCTYPE html><html><head><script type=\"text/javascript\">alert('В ближайшее время я свяжусь с вами для уточнения деталей. Спасибо!');</script><title>Спасибо</title></head></html>";
-		}
-		else
-		{
+		if (!$mail->send()) {
 			echo "<!DOCTYPE html><html><head><script type=\"text/javascript\">alert('Произошла ошибка и письмо не было отправлено!');</script><title>Спасибо</title></head></html>";
+		} else {
+			echo "<!DOCTYPE html><html><head><script type=\"text/javascript\">alert('В ближайшее время я свяжусь с вами для уточнения деталей. Спасибо!');</script><title>Спасибо</title></head></html>";
 		}
 	} else {
 		$errors = implode($resp->getErrorCodes());

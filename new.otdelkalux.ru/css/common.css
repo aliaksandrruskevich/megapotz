@@ -413,3 +413,5 @@ table.designer { border: 2px solid #333;  }
 .fr	{float: right;}
 .ml30	{ margin-left: 30px; }
 .clr	{ clear: both; }
+
+.g-recaptcha	{ margin-left: 200px ! important; width: 300px; }

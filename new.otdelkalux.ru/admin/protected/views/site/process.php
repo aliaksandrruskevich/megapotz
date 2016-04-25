@@ -9,8 +9,8 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBm5umJanOaNNHGtcO3OY8wlTtZ-Z9Xw5o&amp;sensor=false"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBm5umJanOaNNHGtcO3OY8wlTtZ-Z9Xw5o"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body id="page-process">
@@ -81,7 +81,7 @@ $i=1;
 	</div>
 	<div class="form_bg">
 		<div class="form">
-		<form action="novayariga.php" method="POST" target="send_estimate">
+		<form action="/novayariga.php" method="POST" target="send_estimate">
 			<div>
 				<label for="name">Имя:</label>
 				<input type="input" required="true" name="name" id="name">
@@ -104,13 +104,13 @@ $i=1;
 			</div>
 			<div>
 				<label for="vil">Название посёлка:</label>
-				<input name="village" list="villages" id="vil" required="true" title="Пожалуйста, укажите название посёлка"><datalist id="villages"><option value="Monteville"></option><option value="Millennium Park"></option><option value="Madison Park"></option><option value="Park Avenue"></option><option value="Гринфилд"></option><option value="Риверсайд"></option><option value="Шервуд"></option><option value="Bosconi"></option><option value="Резиденции Бенилюкс"></option><option value="Онегино"></option><option value="Монолит"></option><option value="Agalarov Estate "></option><option value="Покровский"></option><option value="Lipki Парк"></option><option value="Crystal Istra"></option><option value="Маленькая Италия"></option><option value="Павлово"></option><option value="Никольская слобода"></option><option value="Николо-Урюпино"></option><option value="Архангельское II"></option><option value="Ильинский квартал"></option><option value="Новоархангельское"></option><option value="Sovereign (Соверен)"></option><option value="Тимошкино"></option><option value="Европа"></option><option value="Петрово-Дальнее"></option><option value="Кедры"></option><option value="Усадьба Вельяминово"></option><option value="Крона (Krona Village)"></option><option value="Старая Рига"></option><option value="Белая гора"></option><option value="Спутник"></option><option value="Величъ"></option></datalist>
+				<input name="village" list="villages" id="vil" required title="Пожалуйста, укажите название посёлка"><datalist id="villages"><option value="Monteville">Монтевиль</option><option value="Millennium Park">Миллениум Парк</option><option value="Madison Park">Мэдисон Парк</option><option value="Park Avenue">Парк Авеню</option><option value="Renaissance Park">Ренессанс Парк</option><option value="Futuro Park">Futuro Park</option><option value="Онегино">Онегино</option><option value="Agalarov Estate">Agalarov Estate</option><option value="Покровский">Покровский</option><option value="Crystal Istra">Crystal Istra</option><option value="Павлово">Павлово</option><option value="Sovereign">Соверен</option><option value="Европа">Европа</option><option value="Новогорск-7">Новогорск-7</option><option value="Пестово">Пестово</option></datalist>
 			</div>
 			<div>
 				<label for="comment">Комментарий:</label>
 				<textarea name="comment" id="comment"></textarea>
 			</div>
-			<div style="margin-left: 200px; width: 300px;" class="g-recaptcha" data-sitekey="6LfYFQgTAAAAABYnlHzgo71XVa37XmuRQ4CfTy4y"></div>
+			<div class="g-recaptcha"></div>
 			<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
 		</form>
 		<iframe src="about:blank" id="send_estimate" name="send_estimate" class="dn"></iframe>
@@ -131,7 +131,7 @@ $i=1;
 </div>
 <div>
 <p><b>Офис в Millennium Park</b></p>
-<p>Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3041</p>
+<p>Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 7-024</p>
 <p><a target="_blank" href="//maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
 
 </div>

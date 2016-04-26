@@ -2,7 +2,10 @@ User-Agent: *
 Disallow: *index.html
 Disallow: *?
 Disallow: *&
-Disallow: /uslugi/
+Disallow: /uslugi/landshaft/
+Disallow: /uslugi/montage/
+Disallow: /uslugi/otdelka/
+Disallow: /uslugi/remont/
 Host: https://www.otdelkalux.ru
 
 

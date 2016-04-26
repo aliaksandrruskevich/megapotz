@@ -95,6 +95,7 @@ nav a	{ font-size: 11px; text-decoration: none; text-transform: uppercase; color
 #whatwedo #decor	{ background-position: 0 -300px; }
 #whatwedo #land	{ background-position: 0 -360px; }
 #whatwedo #fasad	{ background-position: 0 -420px; }
+#whatwedo #stroy	{ background: url('/i/build.png') no-repeat; }
 
 /*objects*/
 #objects	{ margin: 80px auto; }

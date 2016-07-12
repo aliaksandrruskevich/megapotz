@@ -1,31 +1,26 @@
 <?php
 
-namespace PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\OAuth;
+use League\OAuth2\Client\Provider\Google;
+
 date_default_timezone_set('Etc/UTC');
-require 'phpmailer.php';
+require 'vendor/autoload.php';
 
 $mail = new PHPMailer;
+
 $mail->isSMTP();
 $mail->SMTPDebug = 2;
-$mail->Debugoutput = 'html';
-
 $mail->Host = 'smtp.gmail.com';
 $mail->Port = 587;
 $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
-//$mail->AuthType = 'XOAUTH2';
+$mail->AuthType = 'XOAUTH2';
 
-//Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = "hello@otdelkalux.ru";
-
-//Password to use for SMTP authentication
-$mail->Password = "serge775150";
-
-/*
 $email = 'hello@otdelkalux.ru';
-$clientId = '407883698840-47e4rhg839eh8fm3qsfuva8b46acnl36.apps.googleusercontent.com';
-$clientSecret = 'xr1Q08dGYjpSFLrwWB7laBb3';
-$refreshToken = '1/JRTle_utTpfG4Mz_Z1fQiCf-qrNXzkS2PDg4iaqSHa4';
+$clientId = '407883698840-g6u0bk2ik8gvsurmcqvdnedkfvr0cbd1.apps.googleusercontent.com';
+$clientSecret = 'CbKXl9CL05GuSqL_BrE-lOEs';
+$refreshToken = '1/O8n1h5Xr49CTOFTkyCLHsyJoVlp8Z_JFTWUf289x8aA';
 
 //Create a new OAuth2 provider instance
 $provider = new Google([
@@ -44,7 +39,6 @@ $mail->setOAuth(
     ])
 );
 
-*/
 
 $mail->CharSet = 'UTF-8';
 $mail->setFrom('hello@otdelkalux.ru', 'Сергей Петунин');

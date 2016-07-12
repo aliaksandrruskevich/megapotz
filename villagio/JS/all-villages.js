@@ -33,7 +33,7 @@ objects.forEach(function (o) {
 	hash[o.title] = o.status;
 });
 
-var oldKeys = window.prompt().split("\r\n");
+var oldKeys = window.prompt().split(" ");	// \r\n
 var newStatusList = '';
 oldKeys.forEach(function (key) {
 	newStatusList += key + "\t" + hash[key] + "\n";

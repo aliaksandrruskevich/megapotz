@@ -95,16 +95,31 @@ document.addEventListener("DOMContentLoaded", function() {
 		}, false);
 	}
 	
-	var divs=document.querySelectorAll('#body .banner');
-	var cur=0;
-	if (divs.length) window.setInterval(change_banner,3000);
-	
-	function change_banner(){
-		divs[cur].style.display = 'none';
-		cur=cur+1==divs.length?0:cur+1;
-		divs[cur].style.display = 'block';
-	}
-	
+	(function () {
+		var divs=document.querySelectorAll('.summer .banner');
+		var cur=0;
+		if (divs.length) window.setInterval(change_banner,3000);
+		
+		function change_banner(){
+			divs[cur].style.display = 'none';
+			cur=cur+1==divs.length?0:cur+1;
+			divs[cur].style.display = 'block';
+		}
+	})();
+
+		
+	(function () {
+		var divs=document.querySelectorAll('.wedding .banner');
+		var cur=0;
+		if (divs.length) window.setInterval(change_banner,3000);
+		
+		function change_banner(){
+			divs[cur].style.display = 'none';
+			cur=cur+1==divs.length?0:cur+1;
+			divs[cur].style.display = 'block';
+		}
+	})();
+
 
 });
 

@@ -1,0 +1,9 @@
+var arr = [];
+
+jQuery('.b-datalist__item').each(function() {
+	if( jQuery(this).find('.b-datalist__item__addr').text() !== 'portal@rosreestr.ru') {
+
+	}
+});
+
+console.info(arr.join("\n"));

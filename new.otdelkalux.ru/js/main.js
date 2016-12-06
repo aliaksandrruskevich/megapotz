@@ -274,7 +274,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		function processNoscripts() {
 			var noscriptNodes = root.querySelectorAll('noscript');
 			for (var i = 0, l = (noscriptNodes.length > curAlbumShown ? curAlbumShown : noscriptNodes.length), noscript; noscript = noscriptNodes[i], i < l; i++) {
-				stub.innerHTML = noscript.textContent.replace(re, 's' + picSide + '-c/');
+				stub.innerHTML = noscript.textContent.replace(re, 's' + picSide + '-c/img.jpg');
 
 				var frag = document.createDocumentFragment();
 				for (var i1 = 0, l1 = stub.children.length, node; i1 < l1; i1++) {
@@ -282,7 +282,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 					frag.appendChild(node);
 					picIndex.push({
 						node: node,
-						baseUrl: node.src.substring(0, 83)
+						baseUrl: node.src.split('/').splice(0, 7, '/').join('/')
 					});
 				}
 
@@ -315,7 +315,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			timer = undefined;
 			var picSide = getPicSide();
 			for (var i = 0, l = (picIndex.length > curAlbumShown ? curAlbumShown : picIndex.length), pic; pic = picIndex[i], i < l; i++) {
-				pic.node.src = pic.baseUrl + 's' + picSide + '-c/';
+				pic.node.src = pic.baseUrl + '/s' + picSide + '-c/img.jpg';
 			}
 		}
 
@@ -422,8 +422,8 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var mapOptions = {
 			scrollwheel: false,
 			draggable: false,
-			center: new google.maps.LatLng(55.9, 37),
-			zoom: 10,
+			center: new google.maps.LatLng(55.8, 37),
+			zoom: 13,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 
@@ -469,21 +469,46 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 ////////////////////////
 
 	function initGPlus() {
-		var spinner = window.Spinner && new Spinner({ lines: 13, length: 7, width: 4, radius: 10, rotate: 0, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: true, className: 'spinner', zIndex: 2e9 });
-		$('#GPlus').GPlusGallery(photos);
-		Array.prototype.push.apply(deferredLoader, window.GPlusDefers);
-		delete window.GPlusDefers;
+		var params = {
+			thumbnailWidth:'auto', thumbnailHeight:300,
+			theme: 'clean',
+			thumbnailGutterWidth: 8,
+			thumbnailGutterHeight: 8,
+			viewerToolbar: {
+				display: false,
+			},
+			photoSorting: location.pathname.search('osmotr') > 0 ? 'reversed' : 'standard',
+			locationHash: false,
+			userID: '104094916837036848285',
+			kind: 'picasa',
+			album: window.albumID,	// hard code in HTML
+			thumbnailL1Label:{display:false},
+		};
+		
+		if (window.nanoParams) {jQuery.extend(params, window.nanoParams);}	// hard code in HTML
+		jQuery("#GPlus").nanoGallery(params);
 	}
 
 	document.addEventListener("DOMContentLoaded", function () {
 		var page_name = document.body.id;
 		// Убирание подсказки про "крутите дальше" по скроллу
 		var onScroll = function () {
-			fadeOut(document.getElementById('mouse'), 300);
+			var el = document.getElementById('mouse');
+			if (el) {
+				fadeOut(document.getElementById('mouse'), 300);
+			}
 			window.removeEventListener('scroll', onScroll);
 		};
+		// Убирание подсказки про "крутите дальше" по скроллу
+		window.addEventListener('scroll', onScroll, false);
+
+		var calc = document.getElementById('calculator');
+		if (calc !== null) Calculator(calc);
 
 		if (document.getElementById('GPlus')) initGPlus();
+		
+		var album_grid = document.getElementById('album_grid');
+		if (album_grid !== null) Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
 
 		switch (page_name) {
 			case 'page-index':
@@ -518,15 +543,9 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 					}
 				};
 				changeBG();
-
 				
-				Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
-				Calculator(document.getElementById('calculator'));
-
 				if (document.querySelector('#map_canvas')) initProcessMap();
-
-				// Убирание подсказки про "крутите дальше" по скроллу
-				window.addEventListener('scroll', onScroll, false);
+				
 				deferredLoader.push({
 					node: document.getElementById('youtube'),
 					fn: function (node) {
@@ -540,15 +559,11 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				break;
 
 			case 'page-price':
-				var calc = document.getElementById('calculator');
-				if (calc !== null) Calculator(calc);
+
 				initTumbler();
 				break;
 
 			case 'page-portfolio':
-				var album_grid = document.getElementById('album_grid');
-				if (album_grid !== null) Array.prototype.push.apply(deferredLoader, AlbumView(document.getElementById('album_grid')));
-
 				var selector_hint = document.getElementById('selector_hint');
 				if (selector_hint !== null) window.setTimeout(function () {
 					fadeIn(selector_hint);

@@ -72,7 +72,7 @@ nav	{ position: absolute; top: 45px; right: 30px; }
 nav ul	{ list-style-type: none; }
 nav li	{ display: inline-block; }
 nav a	{ font-size: 11px; text-decoration: none; text-transform: uppercase; color: #000; padding: 0 10px; }
-#page-index .index, #page-portfolio .portfolio, #page-process .process, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts, #page-uslugi .uslugi	{ cursor: default; color: #ee1c24; }
+#page-index .index, #page-portfolio .portfolio, #page-process .process, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts, #page-uslugi .uslugi, #poselki .poselki	{ cursor: default; color: #ee1c24; }
 #text_holder	{ position: absolute; top: 50px; left: 90px; }
 #bg	{ position: relative; background-size: cover; height: 100%; }
 #bg h1	{ font-weight: bold; font-size: 40px; margin: 40px 0; }
@@ -255,10 +255,10 @@ footer .gplus	{ background-position: 0 0; }
 caption:before { content: "Таблица " counter(tn) ": "; counter-increment: tn; }
 article	{ width: 980px; margin: 0 auto; }
 article p, article li	{ margin: 20px 0; line-height: 1.5em; font-size: 14px; }
-article ul.dash, article ol	{ margin: 40px 60px; }
-article ul.dash	{ list-style-type: none;  }
-article ul.dash li:before	{ content: '\2014\a0'; margin-left: -1.25em; }
-article li ul, article li ol	{ margin: 10px 40px!important; }
+ul.dash, article ol	{ margin: 40px 60px; }
+ul.dash	{ list-style-type: none;  }
+ul.dash li:before	{ content: '\2014\a0'; margin-left: -1.25em; }
+li ul, article li ol	{ margin: 10px 40px!important; }
 
 article table.bg	{ background-color: #f5f5ea; font-size: 12px; }
 article table.bg td, article table.bg th	{ padding: 20px; line-height: 1.4em; }
@@ -416,3 +416,11 @@ table.designer { border: 2px solid #333;  }
 .clr	{ clear: both; }
 
 .g-recaptcha	{ margin-left: 200px ! important; width: 300px; }
+
+.screenwide_bg	{ background-size: cover; background-position: center; position: relative; width: 100%; box-shadow: inset 0px -300px 200px -100px rgba(0,0,0,0.6); }
+.screenwide_bg h1	{ position: absolute; text-align: center; color: #fff; bottom: 10%; left: 50%; margin-left: -500px; width: 1000px; font-size: 48px; }
+
+
+.poselok	{ float: left; text-align: center; margin: 0 20px 40px 0 }
+.poselok img	{ border-radius: 20px; }
+.poselok figcaption	{ padding-top: 10px; }

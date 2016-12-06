@@ -39,13 +39,13 @@
 <p><?=$object->work_date?></p>
 </div>
 <div id="GPlus"></div>
-<script type="text/javascript" src="//fgnass.github.io/spin.js/spin.min.js"></script>
+
+<link href="/css/nanogallery.min.css" rel="stylesheet" type="text/css">
+<link href="/css/themes/clean/nanogallery_clean.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="//yandex.st/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.nanogallery.min.js"></script>
 <script type="text/javascript">
-var photos =<?=preg_replace_callback(
-'/\\\u([0-9a-fA-F]{4})/',
-create_function('$match', 'return mb_convert_encoding("&#" . intval($match[1], 16) . ";", "UTF-8", "HTML-ENTITIES");'),
-json_encode($images)
-)?>;
+	var albumID = '<?=$object->picasa_album_id?>';
 </script>
 </div>
 </section>

@@ -2,6 +2,9 @@ AddDefaultCharset utf-8
 DefaultLanguage ru
 FileETag None
 
+Redirect 301 /parkavenue/ https://www.otdelkalux.ru/poselki/park-avenue/
+Redirect 301 /madisonpark/ https://www.otdelkalux.ru/poselki/madison-park/
+
 RewriteEngine On
 RewriteCond %{HTTP:PORT} !^443$
 RewriteRule ^(.*)$ https://www.otdelkalux.ru/$1 [L,R=301]

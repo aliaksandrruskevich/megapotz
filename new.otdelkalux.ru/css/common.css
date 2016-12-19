@@ -72,7 +72,7 @@ nav	{ position: absolute; top: 45px; right: 30px; }
 nav ul	{ list-style-type: none; }
 nav li	{ display: inline-block; }
 nav a	{ font-size: 11px; text-decoration: none; text-transform: uppercase; color: #000; padding: 0 10px; }
-#page-index .index, #page-portfolio .portfolio, #page-process .process, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts, #page-uslugi .uslugi, #poselki .poselki	{ cursor: default; color: #ee1c24; }
+#page-index .index, #page-portfolio .portfolio, #page-process .osmotr, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts, #page-uslugi .uslugi, #poselki .poselki	{ cursor: default; color: #ee1c24; }
 #text_holder	{ position: absolute; top: 50px; left: 90px; }
 #bg	{ position: relative; background-size: cover; height: 100%; }
 #bg h1	{ font-weight: bold; font-size: 40px; margin: 40px 0; }

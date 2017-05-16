@@ -10,9 +10,9 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <link rel="stylesheet" media="(max-width: 640px)" href="/css/max-640px.css">
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBm5umJanOaNNHGtcO3OY8wlTtZ-Z9Xw5o"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCMahDawtiuAa1DX48AKcjiOufGdJZ8I8M"></script>
+<script type="text/javascript" src="//www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </head>
 <body id="page-process">
 <header class="column">

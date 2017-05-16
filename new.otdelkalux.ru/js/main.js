@@ -646,18 +646,6 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 					pos.parentNode.insertBefore(scr, pos);
 				}
 			});
-			deferredLoader.push({
-				node: document.getElementById('badge_holder'),
-				fn: function () {
-					window.___gcfg = {lang: 'ru'};
-					var po = document.createElement('script');
-					po.type = 'text/javascript';
-					po.async = true;
-					po.src = 'https://apis.google.com/js/plusone.js';
-					var s = document.getElementsByTagName('script')[0];
-					s.parentNode.insertBefore(po, s);
-				}
-			});
 		})();
 		
 		window.onloadCallback = function() {

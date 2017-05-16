@@ -14,8 +14,8 @@ $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->SMTPDebug = 0;
 $mail->Host = 'smtp.gmail.com';
-$mail->Port = 587;
-$mail->SMTPSecure = 'tls';
+$mail->Port = 465;
+$mail->SMTPSecure = 'ssl';
 $mail->SMTPAuth = true;
 $mail->AuthType = 'XOAUTH2';
 

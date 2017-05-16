@@ -1,0 +1,92 @@
+.nomobile	{ display: none!important; visibility:hidden; }
+header	{ border-bottom: solid 1px #666; min-height: 52px; }
+
+header a#logo	{ position: absolute; top: 10px; left: 20px; font-weight: bold; }
+
+header ul { margin: 60px 0 20px 70px; }
+header nav li	{ padding-bottom: 20px; }
+
+header .icon	{ font-size: 2em; position: absolute; top: 10px; }
+header .mobile-nav	{ right: 20px; }
+header .phone	{ right: 70px; text-decoration: none; color: #000; }
+input#menu-switch	{ display: none; }
+#menu-switch:checked + ul	{ display: none; }
+
+section	{ margin: 0 10px; }
+
+.stage > p	{ display: none; }
+#whatwedo .big	{ margin: 40px 10px; }
+#whatwedo ul	{ list-style-type: none; margin: 20px; }
+#whatwedo li	{ margin: 20px; }
+#whatwedo li:before	{ content: '\2014\a0'; margin-left: -1.25em; }
+
+#process .object { position: relative; min-height: 70px; }
+#process .object a	{ display: block; position: absolute; width: 100%; }
+#process .object img	{ border-radius: 25px; width: 50px; height: 50px; margin: 10px; }
+#process .object p	{ margin: 5px 0 5px 80px; font: normal 13px Arial; }
+#process .object p.h	{ font: bold 14px Arial; padding-top: 20px; }
+#process .object>:last-child	{ display: none; }
+
+
+#album_grid	{ margin-bottom: 30px; }
+#album_grid .album	{ position: relative; height: 70px; }
+#album_grid .image_stack	{ display: block; position: absolute; width: 100%; }
+#album_grid .album img	{ border-radius: 25px; width: 50px; height: 50px; margin: 10px; }
+#album_grid .album p	{ margin: 5px 0 5px 80px; font: normal 13px Arial; }
+#album_grid .album p.link	{ font: bold 14px Arial; padding-top: 20px; }
+#album_grid .album p.link a	{ color: #000; }
+#album_grid .album p.count	{ font-size: 11px; color: #666; }
+
+.limit_6>div:nth-child(n+7)	{ display: none; }
+
+
+.disclaimer  { text-align: center; margin: 40px 0; }
+.disclaimer p { margin: 20px; line-height: 1.4em; font-size: 14px; }
+#calculator .calc-hint	{ display: none; }
+#calculator .calc-body	{ background-color: #eee; }
+#calculator .calc-head	{ background-color: #363636; url('/i/noize.png'); border-radius: 7px 7px 0 0; padding: 10px; color: #fff; text-align: center; }
+#calculator .calc-head > label	{ font-weight: bold; font-size: 18px; margin: 10px; }
+#calculator :checked + label	{ color: #ffe400; text-shadow: 0px 0px 50px #fff; border-bottom: 1px dashed; }
+
+#calculator div.input	{ margin: 20px; }
+#calculator div.input input	{ margin-left: 20px; }
+#calculator table	{ width: 100%; background-color: #eee; }
+#calculator tbody td	{ border-bottom: 1px solid #bbb; padding: 12px; font-size: 14px; color: #383838; }
+#calculator th	{ font-size: 11px; padding: 20px 0; color: #383838; text-transform: uppercase; }
+#calculator tfoot td	{ font-size: 17px; color: #383838; padding: 30px 0; }
+#calculator tr:first-child td	{ border-top: 1px solid #000; }
+#calculator.appt tr:nth-child(4n-1) td, #calculator.cott tr:nth-child(4n) td	{ border-color: #000; }
+#calculator.appt tr:nth-child(4n)	{ display: none; }
+#calculator td:nth-child(n+1)	{ text-align: center; width: 100px }
+#calculator td:nth-child(1)	{ text-align: left; }
+#calculator td:nth-child(even), #price th:nth-child(even)	{ background-color: #f7f7f7; }
+.mobile-form { margin-top: 20px; padding: 10px; text-align: center; background-color: #eee; background-image: linear-gradient(0deg, #eee, #f7f7f7); border-radius: 8px; border: solid 1px #999; }
+.mobile-form label	{ font: bold 16px Arial; color: #383838; display: block; }
+.mobile-form input	{ width: 80%; margin: 10px auto; display: block; }
+.mobile-form input[type=submit]	{ width: 200px; }
+
+.form label	{ display: none }
+
+footer .title	{display: none; }
+footer .info > div	{ margin: 20px 0; }
+
+#contact .call .w	{ margin-bottom: 16px; font-size: 20px; }
+#contact .call .y	{ font-size: 30px; }
+article	{ margin: 0 20px; }
+
+.float-column 	{ padding: 20px 20px 80px 20px; }
+.g-recaptcha	{ margin: 0 auto; width: 300px; }
+.poselok	{ margin: 40px auto; width: 80%; text-align: center; }
+
+.gotakealook	{ text-align: center; }
+.gotakealook .speech p	{ margin: 20px; }
+
+
+.screenwide_bg	{ height: 300px; background-size: cover; background-position: center; }
+.screenwide_bg h1	{ text-align: center; color: #fff; font-size: 32px; margin: 20px; }
+
+.price-list	{ width: 100%; }
+
+#addr	{ font-size: 18px; }
+#articles .td { padding: 40px; }
+.arrange, #mouse	{ display: none; }

@@ -2,39 +2,45 @@
 <!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
 <html lang="ru">
 <head>
-<meta name="viewport" content="width=1024">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Статьи по ремонту и отделке коттеджей</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" media="(max-width: 640px)" href="/css/max-640px.css">
 <script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body id="page-uslugi">
 <header class="column">
-<a href="https://www.otdelkalux.ru/" id="logo">
-<img src="/i/logo.svg" alt="Артель Сергея Петунина">
-<span>Артель Сергея Петунина</span>
-</a>
-<nav><ul>
-<li><a class="index" href="/">Ремонт и отделка</a></li>
-<li><a class="uslugi" href="/uslugi/">Услуги</a></li>
-	<li><a class="poselki" href="/poselki/">Посёлки</a></li>
-<li><a class="portfolio" href="/portfolio/">Фото</a></li>
-<li><a class="osmotr" href="/osmotr/">Осмотр объектов</a></li>
-<li><a class="price" href="/price/calculator.html">Цены</a></li>
-<li><a class="articles" href="/articles/">Статьи</a></li>
-<li><a class="contacts" href="/contacts.html">Контакты</a></li>
-</ul></nav>
+	<a itemprop="url" href="https://www.otdelkalux.ru/" id="logo">
+		<img itemprop="logo" src="/i/logo.svg" alt="Артель Сергея Петунина">
+		<span itemprop="name">Артель Сергея Петунина</span>
+	</a>
+	<nav>
+		<label for="menu-switch" class="mobile-nav icon">☰</label><input type="checkbox" id="menu-switch" checked=""><ul>
+			<li><a class="index" href="/">Главная</a></li>
+			<li><a class="uslugi" href="/uslugi/">Услуги</a></li>
+			<li><a class="poselki" href="/poselki/">Посёлки</a></li>
+			<li><a class="portfolio" href="/portfolio/">Фото</a></li>
+			<li><a class="osmotr" href="/osmotr/">Осмотр объектов</a></li>
+			<li><a class="price" href="/price/calculator.html">Цены</a></li>
+			<li><a class="articles" href="/articles/">Статьи</a></li>
+			<li><a class="contacts" href="/contacts.html">Контакты</a></li>
+		</ul>
+	</nav>
+	<a href="tel:+74959988347" class="phone icon">&#9990;</a>
 </header>
 <section id="articles">
 <h1 class="center">Услуги</h1>
 <div class="oh uslugi-block">
 
 <div class="float-column">
-<p><b><a href="design/">Дизайн-проект</a></b></p><hr/>
+<p><b>Строительные проекты</b></p><hr/>
 <ul>
-<li><a href="design/">Разработка дизайн-проекта</a></li>
-<li><a href="design/tech-audit.html">Технический аудит проекта</a></li>
+<li><a>Архитектурный проекты</a></li>
+<li><a>Конструкторский расчёт</a></li>
+<li><a href="design/">Дизайн-проект интерьера</a></li>
+<li><a href="design/tech-audit.html">Технический аудит дизайн-проекта</a></li>
 </ul>
 </div>
 
@@ -49,6 +55,19 @@
 <li><a href="project/slabotochka.html">Проект слаботочных систем</a></li>
 </ul>
 </div>
+
+<div class="float-column">
+<p><b><a href="/uslugi/stroitelstvo/">Строительные работы</a></b></p><hr/>
+<ul>
+<li><a>Строительство домов</a></li>
+<li><a>Строительство пристроек</a></li>
+<li><a>Строительство нежилых сооружений</a></li>
+<li><a>Усиление и утепление кровли</a></li>
+<li><a>Реконструкция</a></li>
+</ul>
+</div>
+
+<div class="clr"></div>
 
 <div class="float-column">
 <p><b>Черновые работы</b></p><hr/>
@@ -71,6 +90,7 @@
 <li><a href="montage/vodosnabjenie.html">Монтаж системы водоснабжения</a></li>
 <li><a href="montage/kanalizacia.html">Монтаж канализации</a></li>
 <li><a href="montage/electromontage.html">Электромонтаж</a></li>
+<li><a href="montage/conditioner.html">Система кондиционирования</a></li>
 </ul>
 </div>
 
@@ -85,22 +105,16 @@
 </ul>
 </div>
 
+<div class="clr"></div>
+
 <div class="float-column">
 <p><b><a href="landshaft/">Ландшафтные работы</a></b></p><hr/>
 <ul>
-<li><a href="landshaft/design.html">Ландшафтный дизайн</a></li>
+<li><a href="landshaft/design.html">Ландшафтное проектирование</a></li>
 <li><a href="landshaft/">Ландшафтные работы</a></li>
 </ul>
 </div>
-<!--
-<div class="float-column">
-<p><b>Строительство работы</b></p><hr/>
-<ul>
-<li><a href="design/idea/">Строительство пристроек</a></li>
-<li><a href="design/principles/">Возведение зданий</a></li>
-</ul>
-</div>
--->
+
 </div>
 </section>
 
@@ -111,7 +125,7 @@
 <footer>
 <p class="title">Артель Сергея Петунина</p>
 <div class="info">
-<div>
+<div class="nomobile">
 <p>Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ.</p>
 <p>Наша специализация: внутренняя отделка, монтаж электрики, сантехники, отопления, а также ландшафтные работы.</p>
 </div>
@@ -119,19 +133,19 @@
 <p><b>Офис в Millennium Park</b></p>
 <p>Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 7-024</p>
 <p><a target="_blank" href="//maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
-
 </div>
 <div>
 <p><b>Связаться со мной</b></p>
-<p>+7 (495) 99-88-347</p><p>+7 (926) 709-62-18</p>
+<p>+7 495 99-88-347</p><p>+7 926 709-62-18</p>
 <p><a href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
 <br>
+<div class="nomobile">
 <p><b>Online</b></p>
 <p class="social flickr"><a target="_blank" href="//www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
 <p class="social gplus"><a target="_blank" rel="author" href="https://plus.google.com/104094916837036848285/?rel=author">Сергей Петунин на Google+</a></p>
 <p><a href="https://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
 </div>
-<div id="badge_holder"><div class="g-page" data-width="180" data-href="//plus.google.com/u/0/104572237617615451669" data-rel="publisher"></div></div>
+</div>
 </div>
 <div id="year">© <span>2006</span> «Отделка Люкс»</div>
 </footer>

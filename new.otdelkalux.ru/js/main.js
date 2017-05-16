@@ -8,6 +8,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 (function () {
 	"use strict";
+	var isMobile = window.innerWidth <= 960;
 
 	// Работа с  CSS3 Transitions
 	// http://www.w3.org/TR/css3-transitions/
@@ -144,31 +145,32 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			eastimate: root.querySelectorAll('tbody td:not(:first-child)'),	// ячейки, куда информацию выводить
 			total: root.querySelectorAll('tfoot td:not(:first-child)')		// для итогов
 		};
-		var wc = 3, area = 400, level = 'standard';	// Дефолтные значения, которые могут быть перезатерты куками или Островами
+		var area = 400, level = 'standard';	// Дефолтные значения, которые могут быть перезатерты куками или Островами
 
 		// Подстановка изначальных данных для подсчета. Из Яндекс Островов более приоритетно, чем из cookies.
 		var pairs = document.cookie.split('; ').concat(document.location.search.substring(1).split('&'));
 		for (var i = 0, l = pairs.length; i < l; i++) {
 			var pair = pairs[i].split('=');
-			if (pair[0] == 'wc') wc = +pair[1];
 			if (pair[0] == 'area') area = +pair[1];
 			if (pair[0] == 'level' && pair[1].match(/^(?:standard|business)$/)) level = pair[1];
 		}
 
 		// Показываем подсказку
-		var showHint = function () {
-			root.removeEventListener('mouseover', showHint, false);
-			var hint = root.querySelector('.calc-hint');
-			fadeIn(hint, 'slow');
+		if (!isMobile) {
+			var showHint = function () {
+				root.removeEventListener('mouseover', showHint, false);
+				var hint = root.querySelector('.calc-hint');
+				fadeIn(hint, 'slow');
 
-			// Убираем
-			var hideHint = function () {
-				root.removeEventListener('click', hideHint, false);
-				hint.parentNode.removeChild(hint);
+				// Убираем
+				var hideHint = function () {
+					root.removeEventListener('click', hideHint, false);
+					hint.parentNode.removeChild(hint);
+				};
+				root.addEventListener('click', hideHint, false);
 			};
-			root.addEventListener('click', hideHint, false);
-		};
-		root.addEventListener('mouseover', showHint, false);
+			root.addEventListener('mouseover', showHint, false);
+		}
 
 		// Форматированный вывод сумм
 		var formatCurrency = function (num) {
@@ -178,43 +180,42 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		// Калькуляция сметы и вывод
 		var recalculate = function () {
 			// Забираем значения из инпутов
-			wc = +form.wc.value;
 			area = +form.area.value;
 			level = form.level[0].checked ? form.level[0].value : form.level[1].value;
 
 			// Пишем их в куки
 			var date = new Date('2025').toUTCString();
 			document.cookie = 'area=' + area + ';path=/;expires=' + date;
-			document.cookie = 'wc=' + wc + ';path=/;expires=' + date;
 			document.cookie = 'level=' + level + ';path=/;expires=' + date;
 
 			var results = [];
 			var totalWork = 0, totalMaterials = 0;
 
-			results[1] = (7000 - (area - 200) * 2.5) * area;// материал отделка под ключ
-			results[3] = 50000 + area * 300;				// материал электрика под ключ
-			results[4] = 15000 * wc + area * 140;			// работа водоснабжение
-			results[5] = 25000 * wc + area * 50;			// материал водоснабжение
-			results[6] = 10000 * wc + area * 130;			// работа канализация
-			results[7] = 10000 * wc + area * 50;			// материал канализация
-			results[8] = 80000 + area * 250;				// работа отопление
+			results[1] = (7000 - (area - 200) * 2.5) * area;	// материал отделка под ключ
+			results[3] = 50000 + area * 300;					// материал электрика под ключ
+			results[4] = 30000 + area * 250;					// работа водоснабжение =30000+250*I$1
+			results[5] = 30000 + area * 250;					// материал водоснабжение =30000+250*I$1
+			results[6] = 30000 + area * 250;					// работа канализация =30000+250*I$1
+			results[7] = 10000 + area * 50;						// материал канализация =10000+50*I$1
+			results[8] = (600 - (area - 200) / 10 ) * area;		// работа отопление =(600-(I$1-200)/10)*I$1
+			results[9] = (1000 - (area - 200) / 2.5 ) * area;	// материал отопление =(1000-(I$1-200)/2,5)*I$1
+			results[10] = 50000 + area * 200; 					// теплый пол монтаж =50000+200*I$1
+			results[11] = 50000 + area * 300; 					// =50000+300*I$1 теплый пол материал
+			results[12] = area <= 300 ? (80000 + (area - 200) * 100) : (130000 + (area - 300) * 300); // монтаж котельная
+			results[13] = area <= 300 ? (200000 + (area - 200) * 200) : (300000 + (area - 300) * 600); // материал котельная
+			
 
 			// STANDARD
 			if (level == 'standard') {
 				results[0] = (9200 - (area - 200) * 2) * area;	// !!!работа отделка под ключ
 				results[2] = (1000 - (area - 200) / 4) * area;	// !!!работа электрика под ключ
-				results[9] = (1000 - (area - 200) / 3.5 ) * area;	// !!!материал отопление
-				results[10] = 50000 + area * 120;				// !!!работа котельная
-				results[11] = 140000 + area * 100;				//!!!! материал котельная
 			}
 
 			// BUSINESS
 			if (level == 'business') {
 				results[0] = (12200 - (area - 200) * 2) * area;	// работа отделка под ключ
 				results[2] = (1200 - (area - 200) / 3.333333) * area;	// работа электрика под ключ
-				results[9] = (1100 - (area - 200) / 4) * area;	// материал отопление
-				results[10] = 65000 + area * 150;				// работа котельная
-				results[11] = 165000 + area * 250;				// материал котельная
+				results[9] *= 1.88 // Arbonia
 			}
 
 			// Проставляем значения сметы в таблицу
@@ -241,7 +242,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				form.html.value = form.querySelector('table').innerHTML.replace(/\s{2,}/g, '');
 				// Сообщаем в метрику о нашей удаче :)
 				try {
-					yaCounter13794628.reachGoal('estimate_send', {area: area, wc: wc});
+					yaCounter13794628.reachGoal('estimate_send', {area: area});
 				} catch (e) {
 				}
 				form.submit();
@@ -249,7 +250,6 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		});
 
 		// Простановка начальных значений в калькулятор
-		form.wc.value = wc;
 		form.area.value = area;
 		form.level.value = level;
 
@@ -259,7 +259,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 	// Album covers
 	function AlbumView(root) {
 		function getPicSide() {
-			return Math.floor(parseInt(window.getComputedStyle(root).width) / 4 - 31);
+			return isMobile ? 50 : Math.floor(parseInt(window.getComputedStyle(root).width) / 4 - 31);
 		}
 
 		// Забираем код тэгов картинок из noindex, чтобы не прогружать их в стандартных размерах попусту с гугла
@@ -277,13 +277,19 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 				stub.innerHTML = noscript.textContent.replace(re, 's' + picSide + '-c/img.jpg');
 
 				var frag = document.createDocumentFragment();
-				for (var i1 = 0, l1 = stub.children.length, node; i1 < l1; i1++) {
-					node = stub.removeChild(stub.children[0]);
-					frag.appendChild(node);
-					picIndex.push({
-						node: node,
-						baseUrl: node.src.split('/').splice(0, 7, '/').join('/')
-					});
+
+				if (isMobile) {
+					frag.appendChild(stub.lastElementChild);
+				}
+				else {
+					for (var i1 = 0, l1 = stub.children.length, node; i1 < l1; i1++) {
+						node = stub.removeChild(stub.children[0]);
+						frag.appendChild(node);
+						picIndex.push({
+							node: node,
+							baseUrl: node.src.split('/').splice(0, 7, '/').join('/')
+						});
+					}
 				}
 
 				noscript.parentNode.replaceChild(frag, noscript);
@@ -294,6 +300,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		var albums = root.querySelectorAll('.album');
 
 		function resize() {
+			if (isMobile) return;
 			var picSide = getPicSide();
 
 			for (var i = 0, l = albums.length, album; album = albums[i], i < l; i++) {
@@ -528,23 +535,25 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 						'https://lh5.googleusercontent.com/-TZj2ezI20b4/VIgXLZgM2pI/AAAAAAAAAMk/c0fDAVH1GtI/',
 						'https://lh3.googleusercontent.com/-kgczYZoQTHc/VIgXGNw6e2I/AAAAAAAAALo/dn0fQa8QA_Q/'];
 				
-				var counter = 0;
-				var changeBG = function () {
-					var w = div.offsetWidth, h = div.offsetHeight;
-					if (bg[counter]) {
-						div.style.backgroundImage = 'url(' + bg[counter] + 'w' + w + '-h' + h + '-n/cover.jpg)';
-						var img = new Image();
-						img.src = bg[counter] + 'w' + w + '-h' + h + '-n/cover.jpg';
-						window.setTimeout(changeBG, 5000);
-						counter++;
-					} else {
-						counter = 0;
-						changeBG();
-					}
-				};
-				changeBG();
+				if (!isMobile) {
+					var counter = 0;
+					var changeBG = function () {
+						var w = div.offsetWidth, h = div.offsetHeight;
+						if (bg[counter]) {
+							div.style.backgroundImage = 'url(' + bg[counter] + 'w' + w + '-h' + h + '-n/cover.jpg)';
+							var img = new Image();
+							img.src = bg[counter] + 'w' + w + '-h' + h + '-n/cover.jpg';
+							window.setTimeout(changeBG, 5000);
+							counter++;
+						} else {
+							counter = 0;
+							changeBG();
+						}
+					};
+					changeBG();
+				}
 				
-				if (document.querySelector('#map_canvas')) initProcessMap();
+				if (document.querySelector('#map_canvas') && !isMobile) initProcessMap();
 				
 				deferredLoader.push({
 					node: document.getElementById('youtube'),
@@ -631,24 +640,8 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 					scrTpl.async = true;
 					var pos = document.getElementsByTagName('script')[0];
 
-					/* Mail.ru */
-					var _tmr = _tmr || [];
-					_tmr.push({id: "2288412", type: "pageView", start: (new Date()).getTime()});
-					var scr = scrTpl.cloneNode(true);
-					scr.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-					pos.parentNode.insertBefore(scr, pos);
-
-					/* Liveinternet */
-					var r = d.referrer, s = w.screen;
-					(new Image).src = "//counter.yadro.ru/hit?r" + escape(r) + ((typeof(s) == "undefined") ? "" : ";s" + s.width + "*" + s.height + "*" + (s.colorDepth ? s.colorDepth : s.pixelDepth)) + ";u" + document.URL + ";" + Math.random();
-
-					/* Rambler*/
-					scr = scrTpl.cloneNode(true);
-					scr.src = '//counter.rambler.ru/top100.jcn?2890004';
-					pos.parentNode.insertBefore(scr, pos);
-
 					/* Яндекс шарилка */
-					scr = scrTpl.cloneNode(true);
+					var scr = scrTpl.cloneNode(true);
 					scr.src = '//yandex.st/share/share.js';
 					pos.parentNode.insertBefore(scr, pos);
 				}
@@ -672,18 +665,3 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		};
 	});
 })();
-
-/* Google Analytics: если оставить в блоке выше, то не пашет... */
-/*var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-17254104-1']);
-_gaq.push(['_trackPageview']);
-
-(function () {
-	var ga = document.createElement('script');
-	ga.type = 'text/javascript';
-	ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(ga, s);
-})();
-*/

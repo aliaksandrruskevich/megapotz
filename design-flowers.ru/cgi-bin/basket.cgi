@@ -100,18 +100,18 @@ sub set_request {
 
 	open SENDMAIL, "|$sendmail" or die "Cannot open $sendmail: $!";
 	print SENDMAIL $subject;
-	print SENDMAIL "From: $host\n";
+	print SENDMAIL "Reply-To: $host\n";
 	print SENDMAIL "To: $request_email\n";
 	print SENDMAIL "Content-type: text/html; charset=windows-1251\n\n";
 	print SENDMAIL $welcome.$content;
 	close(SENDMAIL);
 
 	# To manager
-	my $subject	= "Subject: Заявка с сайта : $mday.$mon.$year ($request_price руб.)\n";
+	my $subject	= "Subject: Заявка с сайта ($request_email): $mday.$mon.$year ($request_price руб.)\n";
 
 	open SENDMAIL, "|$sendmail" or die "Cannot open $sendmail: $!";
 	print SENDMAIL $subject;
-	print SENDMAIL "From: $request_email\n";
+	print SENDMAIL "Reply-To: $request_email\n";
 	print SENDMAIL "To: $host\n";
 	print SENDMAIL "Content-type: text/html; charset=windows-1251\n\n";
 	print SENDMAIL $content;

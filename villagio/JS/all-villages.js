@@ -32,6 +32,7 @@ oldKeys.forEach(function (key) {
 		newStatusList += key + "\t" + hash[key].status + '	' + hash[key].houseArea + '	' + hash[key].landArea + "\n";
 		delete hash[key];
 	} else {
+		newStatusList += key + "\tundefined";
 		console.info(key + " отсутствует в текущей нумерации посёлка")
 	}
 });

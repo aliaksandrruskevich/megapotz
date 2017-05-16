@@ -14,12 +14,11 @@ body	{ background: url('/i/bg.png') -270px 0; }
 #layout	{ min-height: 100%; padding: 100px 0; background: url('/i/uzor.png'); }
 #text	{ background-color: #fff5d5; width: 700px; padding: 30px; font: normal 14px Verdana; margin: 0 auto; -webkit-box-shadow: 5px 5px 30px #333; -moz-box-shadow: 5px 5px 30px #333; box-shadow: 5px 5px 30px #333; }
 
-#text ul, #text ol	{ margin: 0 35px 20px 35px; }
+#text>ul, #text>ol	{ margin: 0 35px 20px 35px; }
 #text ul	{ list-style: none; font: normal 14px Verdana; }
 #text li	{ margin-top: 10px; }
 #text, a	{ color: #000; }
 #text a:visited	{ color: #551a8b; }
-#text ul>li:before	{ content: '\2014\a0'; margin-left: -1.35em; }
 #text p, #text li	{ line-height: 1.5em; }
 #text p	{ margin-bottom: 15px; }
 
@@ -28,6 +27,9 @@ body	{ background: url('/i/bg.png') -270px 0; }
 
 #slogan	{ color: #febf70; font: bold 18px "Times New Roman"; /*width: 690px;*/ margin: 20px 60px 40px 0; }
 #slogan p	{ margin-bottom: 10px; }
+
+.fade	{ width: 90%; margin: 50px auto; }
+.fade img	{ height: 400px; margin: 0 auto; }
 
 }
 

@@ -2,31 +2,35 @@
 <!-- Разработка сайта: Михаил Шестаков mike.shestakov@gmail.com -->
 <html lang="ru">
 <head>
-<meta name="viewport" content="width=1024">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Проектирование системы отопления</title>
 <meta name="Keywords" content="проект, отопление, загородный дом, таунхаус"/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" media="(max-width: 640px)" href="/css/max-640px.css">
 <script type="text/javascript" src="/js/main.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </head>
 <body id="page-uslugi">
 <header class="column">
-<a href="https://www.otdelkalux.ru/" id="logo">
-<img src="/i/logo.svg" alt="Артель Сергея Петунина">
-<span>Артель Сергея Петунина</span>
-</a>
-<nav><ul>
-<li><a class="index" href="/">Ремонт и отделка</a></li>
-<li><a class="uslugi" href="/uslugi/">Услуги</a></li>
-	<li><a class="poselki" href="/poselki/">Посёлки</a></li>
-<li><a class="portfolio" href="/portfolio/">Фото</a></li>
-<li><a class="osmotr" href="/osmotr/">Осмотр объектов</a></li>
-<li><a class="price" href="/price/calculator.html">Цены</a></li>
-<li><a class="articles" href="/articles/">Статьи</a></li>
-<li><a class="contacts" href="/contacts.html">Контакты</a></li>
-</ul></nav>
+	<a itemprop="url" href="https://www.otdelkalux.ru/" id="logo">
+		<img itemprop="logo" src="/i/logo.svg" alt="Артель Сергея Петунина">
+		<span itemprop="name">Артель Сергея Петунина</span>
+	</a>
+	<nav>
+		<label for="menu-switch" class="mobile-nav icon">☰</label><input type="checkbox" id="menu-switch" checked=""><ul>
+			<li><a class="index" href="/">Главная</a></li>
+			<li><a class="uslugi" href="/uslugi/">Услуги</a></li>
+			<li><a class="poselki" href="/poselki/">Посёлки</a></li>
+			<li><a class="portfolio" href="/portfolio/">Фото</a></li>
+			<li><a class="osmotr" href="/osmotr/">Осмотр объектов</a></li>
+			<li><a class="price" href="/price/calculator.html">Цены</a></li>
+			<li><a class="articles" href="/articles/">Статьи</a></li>
+			<li><a class="contacts" href="/contacts.html">Контакты</a></li>
+		</ul>
+	</nav>
+	<a href="tel:+74959988347" class="phone icon">&#9990;</a>
 </header>
 
 <article>
@@ -80,45 +84,29 @@
 <p class="h2 center">Обсудим детали?</p>
 <div class="b_333">
 <div class="form-yellow-header">Серьёзно настроены делать ремонт, но у вас много вопросов? Давайте назначим встречу у вас на объекте!</div>
-<div class="form_bg">
-	<div class="form">
-	<form action="/novayariga.php" method="POST" target="send_estimate">
-		<input type="hidden" name="secret" value="5"/>
-		<div>
-			<label for="name">Имя:</label>
-			<input type="input" required="true" name="name" id="name">
+	<div class="form_bg">
+		<div class="form mobile-form">
+			<form action="/novayariga.php" method="POST" target="send_estimate">
+			<input type="hidden" name="secret" value="5">
+				<div>
+					<label for="name_2">Имя:</label>
+					<input type="text" required name="name" id="name_2" placeholder="Имя">
+				</div>
+				<div>
+					<label for="phone">Телефон:</label>
+					<input type="text" required name="phone" id="phone" placeholder="Телефон">
+				</div>
+				<div>
+					<label for="email_2">Email:</label>
+					<input type="email" required name="email" id="email_2" placeholder="vasha@pocha.ru">
+				</div>
+				<div class="g-recaptcha"></div>
+				<input type="submit" class="button red" value="Начать работу" style="margin-top: 30px">
+			</form>
 		</div>
-		<div>
-			<label for="phone">Телефон:</label>
-			<input type="tel" required="true" name="phone" id="phone" placeholder="+7 (495) 998-83-47">
-		</div>
-		<div>
-			<label for="email">Email:</label>
-			<input type="email" required="true" name="email" id="email">
-		</div>
-		<div>
-			<label for="date">Дата и время встречи:</label>
-			<input type="datetime-local" name="date" id="date">
-		</div>
-		<div>
-			<label for="area">Площадь дома:</label>
-			<input type="number" name="area" id="area" min="100" max="1500" step="1" required="true">
-		</div>
-		<div>
-			<label for="vil">Название посёлка:</label>
-			<input name="village" list="villages" id="vil" required="true" title="Пожалуйста, укажите название посёлка"><datalist id="villages"><option value="Monteville"></option><option value="Millennium Park"></option><option value="Madison Park"></option><option value="Park Avenue"></option><option value="Гринфилд"></option><option value="Риверсайд"></option><option value="Шервуд"></option><option value="Bosconi"></option><option value="Резиденции Бенилюкс"></option><option value="Онегино"></option><option value="Монолит"></option><option value="Agalarov Estate "></option><option value="Покровский"></option><option value="Lipki Парк"></option><option value="Crystal Istra"></option><option value="Маленькая Италия"></option><option value="Павлово"></option><option value="Никольская слобода"></option><option value="Николо-Урюпино"></option><option value="Архангельское II"></option><option value="Ильинский квартал"></option><option value="Новоархангельское"></option><option value="Sovereign (Соверен)"></option><option value="Тимошкино"></option><option value="Европа"></option><option value="Петрово-Дальнее"></option><option value="Кедры"></option><option value="Усадьба Вельяминово"></option><option value="Крона (Krona Village)"></option><option value="Старая Рига"></option><option value="Белая гора"></option><option value="Спутник"></option><option value="Величъ"></option></datalist>
-		</div>
-		<div>
-			<label for="comment">Комментарий:</label>
-			<textarea name="comment" id="comment"></textarea>
-		</div>
-		<div class="g-recaptcha"></div>
-		<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
-	</form>
-	<iframe src="about:blank" id="send_estimate" name="send_estimate" class="dn"></iframe>
 	</div>
 </div>
-</div>
+
 
 </article>
 
@@ -129,7 +117,7 @@
 <footer>
 <p class="title">Артель Сергея Петунина</p>
 <div class="info">
-<div>
+<div class="nomobile">
 <p>Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ.</p>
 <p>Наша специализация: внутренняя отделка, монтаж электрики, сантехники, отопления, а также ландшафтные работы.</p>
 </div>
@@ -137,19 +125,19 @@
 <p><b>Офис в Millennium Park</b></p>
 <p>Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 7-024</p>
 <p><a target="_blank" href="//maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
-
 </div>
 <div>
 <p><b>Связаться со мной</b></p>
-<p>+7 (495) 99-88-347</p><p>+7 (926) 709-62-18</p>
+<p>+7 495 99-88-347</p><p>+7 926 709-62-18</p>
 <p><a href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
 <br>
+<div class="nomobile">
 <p><b>Online</b></p>
 <p class="social flickr"><a target="_blank" href="//www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
 <p class="social gplus"><a target="_blank" rel="author" href="https://plus.google.com/104094916837036848285/?rel=author">Сергей Петунин на Google+</a></p>
 <p><a href="https://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
 </div>
-<div id="badge_holder"><div class="g-page" data-width="180" data-href="//plus.google.com/u/0/104572237617615451669" data-rel="publisher"></div></div>
+</div>
 </div>
 <div id="year">© <span>2006</span> «Отделка Люкс»</div>
 </footer>

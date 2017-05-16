@@ -96,8 +96,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	
 	(function () {
-		var divs=document.querySelectorAll('.summer .banner');
+		var divs=document.querySelectorAll('.spring .banner');
 		var cur=0;
+		console.info(divs.length);
 		if (divs.length) window.setInterval(change_banner,3000);
 		
 		function change_banner(){

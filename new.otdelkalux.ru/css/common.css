@@ -25,6 +25,7 @@ h1,div {max-height: 100000px;}
 body    { counter-reset: tn; font-family: Helvetica, Arial, Sans-Serif; }
 table	{ border-collapse: collapse; }
 img	{ border: 0; }
+iframe	{ overflow:hidden; border: 0; }
 
 
 .red	{ color: #ee1c24; }

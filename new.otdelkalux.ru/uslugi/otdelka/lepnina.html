@@ -13,10 +13,7 @@
 </head>
 <body id="page-uslugi">
 <header class="column">
-	<a itemprop="url" href="https://www.otdelkalux.ru/" id="logo">
-		<img itemprop="logo" src="/i/logo.svg" alt="Артель Сергея Петунина">
-		<span itemprop="name">Артель Сергея Петунина</span>
-	</a>
+	<a href="https://www.otdelkalux.ru/" id="logo"><img src="/i/logo.svg" alt="Артель Сергея Петунина"><span>Артель Сергея Петунина</span></a>
 	<nav>
 		<label for="menu-switch" class="mobile-nav icon">☰</label><input type="checkbox" id="menu-switch" checked=""><ul>
 			<li><a class="index" href="/">Главная</a></li>
@@ -55,27 +52,28 @@
 <p class="h2 center">Обсудим детали?</p>
 <div class="b_333">
 <div class="form-yellow-header">Серьёзно настроены делать ремонт, но у вас много вопросов? Давайте назначим встречу у вас на объекте!</div>
-	<div class="form_bg">
-		<div class="form mobile-form">
-			<form action="/novayariga.php" method="POST" target="send_estimate">
-			<input type="hidden" name="secret" value="5">
-				<div>
-					<label for="name_2">Имя:</label>
-					<input type="text" required name="name" id="name_2" placeholder="Имя">
-				</div>
-				<div>
-					<label for="phone">Телефон:</label>
-					<input type="text" required name="phone" id="phone" placeholder="Телефон">
-				</div>
-				<div>
-					<label for="email_2">Email:</label>
-					<input type="email" required name="email" id="email_2" placeholder="vasha@pocha.ru">
-				</div>
-				<div class="g-recaptcha"></div>
-				<input type="submit" class="button red" value="Начать работу" style="margin-top: 30px">
-			</form>
+<div class="form_bg">
+<div class="form mobile-form">
+	<form action="/novayariga.php" method="POST" target="send_estimate">
+	<input type="hidden" name="secret" value="5">
+		<div>
+			<label for="name_2">Имя:</label>
+			<input type="text" required name="name" id="name_2" placeholder="Имя">
 		</div>
-	</div>
+		<div>
+			<label for="phone">Телефон:</label>
+			<input type="text" required name="phone" id="phone" placeholder="Телефон">
+		</div>
+		<div>
+			<label for="email_2">Email:</label>
+			<input type="email" required name="email" id="email_2" placeholder="vasha@pocha.ru">
+		</div>
+		<div class="g-recaptcha"></div>
+		<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
+	</form>
+	<iframe src="about:blank" id="send_estimate" name="send_estimate" class="dn"></iframe>
+</div>
+</div>
 </div>
 
 

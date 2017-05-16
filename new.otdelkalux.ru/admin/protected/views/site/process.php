@@ -16,10 +16,7 @@
 </head>
 <body id="page-process">
 <header class="column">
-	<a itemprop="url" href="https://www.otdelkalux.ru/" id="logo">
-		<img itemprop="logo" src="/i/logo.svg" alt="Артель Сергея Петунина">
-		<span itemprop="name">Артель Сергея Петунина</span>
-	</a>
+	<a href="https://www.otdelkalux.ru/" id="logo"><img src="/i/logo.svg" alt="Артель Сергея Петунина"><span>Артель Сергея Петунина</span></a>
 	<nav>
 		<label for="menu-switch" class="mobile-nav icon">☰</label><input type="checkbox" id="menu-switch" checked=""><ul>
 			<li><a class="index" href="/">Главная</a></li>
@@ -77,12 +74,12 @@ $i=1;
 
 </section>
 
-	<div class="actioncall">
-			<p>Если у вас уже есть проект ремонта, и вы хотите узнать, сколько стоит его реализация, пишите:</p>
-			<p><a href="mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">hello@otdelkalux.ru</a></p>
-			<p class="small">Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
-			<p>Также мы можем встретиться у вас на объекте для проведения замеров:</p>
-	</div>
+<div class="actioncall">
+	<p>Если у вас уже есть проект ремонта, и вы хотите узнать, сколько стоит его реализация, пишите:</p>
+	<p><a href="mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">hello@otdelkalux.ru</a></p>
+	<p class="small">Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
+	<p>Также мы можем встретиться у вас на объекте для проведения замеров:</p>
+</div>
 <div class="form_bg">
 	<div class="form mobile-form">
 		<form action="/novayariga.php" method="POST" target="send_estimate">

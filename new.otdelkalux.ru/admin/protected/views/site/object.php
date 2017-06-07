@@ -9,11 +9,10 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
+<link href="/js/nanogallery2/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="//yastatic.net/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/nanogallery2/jquery.nanogallery2.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
-<!-- gplus gallery-->
-<script type="text/javascript" src="//yandex.st/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="/gplus/jquery.gplus.js"></script>
-<link rel="stylesheet" type="text/css" href="/gplus/gplus.css">
 <link rel="stylesheet" media="(max-width: 640px)" href="/css/max-640px.css">
 </head>
 <body id="page-portfolio">
@@ -43,10 +42,6 @@
 </div>
 <div id="GPlus"></div>
 
-<link href="/css/nanogallery.min.css" rel="stylesheet" type="text/css">
-<link href="/css/themes/clean/nanogallery_clean.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="//yandex.st/jquery/3.1.0/jquery.min.js"></script>
-<script type="text/javascript" src="/js/jquery.nanogallery.min.js"></script>
 <script type="text/javascript">
 	var albumID = '<?=$object->picasa_album_id?>';
 </script>

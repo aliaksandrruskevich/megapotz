@@ -430,7 +430,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			scrollwheel: false,
 			draggable: false,
 			center: new google.maps.LatLng(55.8, 37),
-			zoom: 13,
+			zoom: 11,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 
@@ -477,23 +477,26 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 
 	function initGPlus() {
 		var params = {
-			thumbnailWidth:'auto', thumbnailHeight:300,
-			theme: 'clean',
+			thumbnailWidth:'auto',
+			thumbnailHeight:300,
 			thumbnailGutterWidth: 8,
 			thumbnailGutterHeight: 8,
+			thumbnailBorderHorizontal: 0,
+			thumbnailBorderVertical: 0,
 			viewerToolbar: {
 				display: false,
 			},
 			photoSorting: location.pathname.search('osmotr') > 0 ? 'reversed' : 'standard',
 			locationHash: false,
+			kind: 'google2',
+			google2URL: 'https://www.otdelkalux.ru/nanogp/dist/nanogp.php',
 			userID: '104094916837036848285',
-			kind: 'picasa',
 			album: window.albumID,	// hard code in HTML
 			thumbnailL1Label:{display:false},
 		};
-		
+
 		if (window.nanoParams) {jQuery.extend(params, window.nanoParams);}	// hard code in HTML
-		jQuery("#GPlus").nanoGallery(params);
+		jQuery("#GPlus").nanogallery2(params);
 	}
 
 	document.addEventListener("DOMContentLoaded", function () {

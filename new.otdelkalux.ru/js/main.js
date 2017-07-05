@@ -428,9 +428,9 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 	function initProcessMap() {
 		var mapOptions = {
 			scrollwheel: false,
-			draggable: false,
-			center: new google.maps.LatLng(55.8, 37),
-			zoom: 11,
+			draggable: true,
+			center: new google.maps.LatLng(55.93, 37.2),
+			zoom: 10,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 

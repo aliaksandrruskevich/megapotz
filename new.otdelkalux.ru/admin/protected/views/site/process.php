@@ -53,7 +53,7 @@
 </div>
 
 <div id="map_canvas"></div>
-<section id="process">
+<section id="process" class="w950">
 <?php
 $i=1;
 ?>

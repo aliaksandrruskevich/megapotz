@@ -49,20 +49,24 @@
 <div class="form_bg">
 <div class="form mobile-form">
 	<form action="/novayariga.php" method="POST" target="send_estimate">
-	<input type="hidden" name="secret" value="5">
-		<div>
-			<label for="name_2">Имя:</label>
-			<input type="text" required name="name" id="name_2" placeholder="Имя">
-		</div>
-		<div>
-			<label for="phone">Телефон:</label>
-			<input type="text" required name="phone" id="phone" placeholder="Телефон">
-		</div>
-		<div>
-			<label for="email_2">Email:</label>
-			<input type="email" required name="email" id="email_2" placeholder="vasha@pocha.ru">
-		</div>
-		<div class="g-recaptcha"></div>
+			<input type="hidden" name="secret" value="5">
+			<div class="field">
+				<label for="name_2">Имя:</label>
+				<input type="text" required name="name" id="name_2" placeholder="Имя">
+			</div>
+			<div class="field">
+				<label for="phone">Телефон:</label>
+				<input type="text" required name="phone" id="phone" placeholder="Телефон">
+			</div>
+			<div class="field">
+				<label for="email_2">Email:</label>
+				<input type="email" required name="email" id="email_2" placeholder="vasha@pocha.ru">
+			</div>
+			<div class="policy">
+				<input type="checkbox" required name="policy" id="policy">
+				<label for="policy">Согласие на обработку <a href="/confidential.html">персональных данных</a></label>
+			</div>
+			<div class="g-recaptcha"></div>
 		<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
 	</form>
 	<iframe src="about:blank" id="send_estimate" name="send_estimate" class="dn"></iframe>

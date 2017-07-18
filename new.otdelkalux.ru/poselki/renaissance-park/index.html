@@ -76,6 +76,22 @@
 </div>
 </div>
 
+<section class="column center">
+	<p class="h1 center">Сейчас в работе!</p>
+	<div id="album_grid">
+		<div class="album">
+			<a href="/osmotr/renaissance-park-1/" class="image_stack">
+			<noscript>
+			<img alt="" src="https://lh3.googleusercontent.com/-Ch9OaOFUzLg/WTbBisodJuI/AAAAAAAAGSg/zvZuKW33Y74e2HrTh5NYhVRQRzeKXnmgACHMYBhgL/s250-c/renaissance-park-0555.JPG"/>
+			<img alt="" src="https://lh3.googleusercontent.com/-pg_SnpQvt-c/WTbBikPfMlI/AAAAAAAAGSg/xdrb0Qe7Hqcw_2GqJlPSKY0isbsBOhSrgCHMYBhgL/s250-c/renaissance-park-0559.JPG"/>
+			<img alt="" src="https://lh3.googleusercontent.com/-7KTYx_Es5ME/WTbBirlXxVI/AAAAAAAAGSg/dj5cwOeUeSAyCbXilqb3pLoPSVx90nh7gCHMYBhgL/s250-c/renaissance-park-0561.JPG"/>
+			</noscript>
+			</a>
+			<p class="link"><a href="/osmotr/renaissance-park-1/">Коттедж в Ренессанс Парке</a></p>
+			<p class="count">18 фото</p>
+		</div>
+	</div>
+</section>
 
 <section>
 	<p class="h1 center">Завершенный ремонт (в Миллениуме)</p>
@@ -85,7 +101,8 @@
 	<script type="text/javascript">
 		var albumID = '5804280091595557121';
 		var nanoParams = {
-			photoSorting: 'random21'
+			photoSorting: 'random',
+			galleryMaxItems: 21
 		};
 	</script>
 	</div>
@@ -139,18 +156,22 @@
 	<p class="h1 center">Начать сотрудничество</p>
 	<div class="form mobile-form">
 		<form action="/novayariga.php" method="POST" target="send_estimate">
-		<input type="hidden" name="secret" value="5">
-			<div>
+			<input type="hidden" name="secret" value="5">
+			<div class="field">
 				<label for="name_2">Имя:</label>
 				<input type="text" required name="name" id="name_2" placeholder="Имя">
 			</div>
-			<div>
+			<div class="field">
 				<label for="phone">Телефон:</label>
 				<input type="text" required name="phone" id="phone" placeholder="Телефон">
 			</div>
-			<div>
+			<div class="field">
 				<label for="email_2">Email:</label>
 				<input type="email" required name="email" id="email_2" placeholder="vasha@pocha.ru">
+			</div>
+			<div class="policy">
+				<input type="checkbox" required name="policy" id="policy">
+				<label for="policy">Согласие на обработку <a href="/confidential.html">персональных данных</a></label>
 			</div>
 			<div class="g-recaptcha"></div>
 			<input type="submit" class="button red" value="Начать работу" style="margin-top: 30px">

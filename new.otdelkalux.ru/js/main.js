@@ -651,8 +651,11 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			});
 		})();
 		
-		window.onloadCallback = function() {
-			grecaptcha.render(document.querySelector('.g-recaptcha'), {"sitekey": "6LevMR4TAAAAAIaY8TYcwXaSbrc5ig4d_Og2P6wL"});
-		};
+		
 	});
 })();
+
+// не переносить никуда этот код, а то он не успевает отрабатывать
+function onloadCallback() {
+	grecaptcha.render(document.querySelector('.g-recaptcha'), {"sitekey": "6LevMR4TAAAAAIaY8TYcwXaSbrc5ig4d_Og2P6wL"});
+}

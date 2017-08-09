@@ -358,9 +358,9 @@ p.big { font: bold 24px Arial; line-height: 1.4em; margin: 20px 0; text-align: c
 #map_canvas .title	{ font-size: 20px; font-weight: bold; margin: 20px 0; }
 .block-cite	{ width: 100%; border-top: 4px solid #ffe400; border-bottom: 4px solid #ffe400; background-color: #f8f8f8; margin: 100px 0;}
 .gotakealook img.petunin	{ border-radius: 75px; margin: 25px 0 0 30px; }
-.gotakealook .speech p	{ font: normal 14px Arial; line-height: 1.6em; }
+.gotakealook .speech p	{ line-height: 1.6em; }
 @media screen and (min-width:641px) {
-	.gotakealook	{ position: relative; width: 960px; margin: 40px auto; }
+	.gotakealook	{ position: relative; width: 960px; margin: 40px auto; overflow: hidden; }
 	.gotakealook img.petunin	{ float: left; }
 	.gotakealook .speech p	{ width: 470px; margin: 0 auto 20px auto; }
 	.arrange	{ float: right; margin-top: 60px; }
@@ -478,3 +478,17 @@ table.designer { border: 2px solid #333;  }
 .h3-numbered p.h3:before { content: counter(h3-counter); counter-increment: h3-counter; font-size: 6em; position: absolute; left: -100px; top: 40px; color: #ee1c24; }
 
 .photo-disclaimer	{ margin: 20px auto 50px auto; max-width: 500px; line-height: 1.4em; font-size: 14px; }
+
+.yellow-border	{ border: 4px solid #ffe400; background-color: #f8f8f8; }
+
+.yellow-border figure	{ position: relative; }
+.yellow-border img { width: 952px; }
+.yellow-border figcaption	{ position: absolute; bottom: 0; background-color: rgba(0,0,0,0.5); display: block; text-align: center; line-height: 30px; width: 100%; color: #fff; }
+.m20	{ margin: 20px; }
+.slick-prev	{ left: 25px!important; z-index: 99; }
+.slick-next	{ right: 25px!important; z-index: 99; }
+
+.bg-black	{ background-color: #333; color: #fff; }  
+.poselok-logo img	{ margin: 15px; }
+
+.big p	{ font-size: 16px; }

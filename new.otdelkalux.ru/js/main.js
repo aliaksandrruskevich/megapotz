@@ -368,7 +368,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 			'millennium': {
 				zoom: 10,
 				latlng: new google.maps.LatLng(55.778846, 37.031636),
-				addr: 'Новорижское ш.,<br/>посёлок Millennium Park,<br/>владение 7-024'
+				addr: 'Новорижское ш.,<br/>посёлок Millennium Park,<br/>владение 3-041'
 			}
 		};
 

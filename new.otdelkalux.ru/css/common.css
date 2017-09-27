@@ -459,6 +459,8 @@ table.designer { border: 2px solid #333;  }
 	.g-recaptcha	{ margin-left: 200px ! important; width: 300px; }
 	.screenwide_bg	{ background-size: cover; background-position: center; position: relative; width: 100%; box-shadow: inset 0px -300px 200px -100px rgba(0,0,0,0.6); }
 	.screenwide_bg h1	{ position: absolute; text-align: center; color: #fff; bottom: 10%; left: 50%; margin-left: -500px; width: 1000px; font-size: 48px; }
+	.screenwide_bg .promo	{ margin: 300px auto; width: 960px; background: rgba(255,255,255,0.8); box-shadow: 0 0 35px 35px rgba(255,255,255,0.8); }
+	.screenwide_bg .promo h1	{ position: relative; }
 }
 
 @media screen and (min-width:641px) {
@@ -476,6 +478,7 @@ table.designer { border: 2px solid #333;  }
 .h3-numbered div:nth-child(2n) {margin-left: 200px;}
 .h3-numbered p.h3 { position: relative; }
 .h3-numbered p.h3:before { content: counter(h3-counter); counter-increment: h3-counter; font-size: 6em; position: absolute; left: -100px; top: 40px; color: #ee1c24; }
+.bg-black .h3-numbered p.h3:before	{ color: #ffe400; }
 
 .photo-disclaimer	{ margin: 20px auto 50px auto; max-width: 500px; line-height: 1.4em; font-size: 14px; }
 
@@ -489,6 +492,28 @@ table.designer { border: 2px solid #333;  }
 .slick-next	{ right: 25px!important; z-index: 99; }
 
 .bg-black	{ background-color: #333; color: #fff; }  
-.poselok-logo img	{ margin: 15px; }
+.bg-black a	{ color: #eee; } 
+.poselok-logo	{ padding: 40px 0 80px 0; }
+.poselok-logo img	{
+	margin: 15px;
+/*	-webkit-filter: grayscale(100%);
+	-webkit-transition: .1s ease-in-out;
+	-moz-filter: grayscale(100%); 
+	-moz-transition: .1s ease-in-out;
+	-o-filter: grayscale(100%); 
+	-o-transition: .1s ease-in-out;*/
+}
+/*.poselok-logo img:hover {
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+}*/
 
 .big p	{ font-size: 16px; }
+
+/*.slick-prev:before, .slick-next:before { font-size: 60px !important; }*/
+
+
+.deal	{ border: solid 2px #f00; border-radius: 10px; margin: 50px auto; }
+.deal img	{ float: left; padding: 60px 20px; }
+.deal div	{ margin-left: 250px; }

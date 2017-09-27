@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- Разработка сайта: Михаил Шестаков (mike.shestakov@gmail.com) -->
+<html lang="ru">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Осмотр объектов</title>
+<meta name="keywords" content="осмотр объектов"/>
+<meta name="description" content="Вы можете лично приехать и осмотреть любой из объектов, на котором мы ведем работы. Все текущие проекты отмечены на карте с указанием текущего состояния ремонта."/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" media="(max-width: 640px)" href="/css/max-640px.css">
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCMahDawtiuAa1DX48AKcjiOufGdJZ8I8M"></script>
+<script type="text/javascript" src="//www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+</head>
+<body id="page-process">
+<header class="column">
+	<a href="https://www.otdelkalux.ru/" id="logo"><img src="/i/logo.svg" alt="Артель Сергея Петунина"><span>Артель Сергея Петунина</span></a>
+	<nav>
+		<label for="menu-switch" class="mobile-nav icon">☰</label><input type="checkbox" id="menu-switch" checked=""><ul>
+			<li><a class="index" href="/">Главная</a></li>
+			<li><a class="uslugi" href="/uslugi/">Услуги</a></li>
+			<li><a class="poselki" href="/poselki/">Посёлки</a></li>
+			<li><a class="portfolio" href="/portfolio/">Фото</a></li>
+			<li><a class="osmotr" href="/osmotr/">Осмотр объектов</a></li>
+			<li><a class="price" href="/price/calculator.html">Цены</a></li>
+			<li><a class="articles" href="/articles/">Статьи</a></li>
+			<li><a class="contacts" href="/contacts.html">Контакты</a></li>
+		</ul>
+	</nav>
+	<a href="tel:+74959988347" class="phone icon">&#9990;</a>
+</header>
+<div id="mouse">Прокрутите вниз, <br>чтобы увидеть карту</div>
+<div id="selector" class="right">
+<div class="current"></div>
+<a href="/portfolio/" class="left">Завершенные <sup>19</sup></a>
+<a href="/osmotr/" class="right">В работе <sup>14</sup></a>
+</div>
+<h1 class="center">Лучше один раз увидеть!</h1>
+<div class="gotakealook">
+	<img class="petunin" src="https://lh6.googleusercontent.com/-tA-Yr-ZRJqI/UEoo-61MQVI/AAAAAAAAB1E/uTM00UyxDWk/s150-c/" alt="Сергей Петунин"/>
+	<div class="arrange">
+		<p class="tel">+7 495 99-88-347</p>
+		<p class="email"><a href="mailto:hello@otdelkalux.ru?subject=Осмотр%20объекта&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон.">hello@otdelkalux.ru</a></p>
+	</div>
+	<div class="speech">
+	<p>Чтобы не ошибиться с выбором подрядчика, нужно приехать к нему на объект и посмотреть своими глазами, что там происходит.</p>
+	<p>Вы увидите весь процесс изнутри: специалистов, инвентарь, организацию работы и условия труда. За одну встречу вы поймёте, стоит с этим человеком работать или нет.</p>
+	<p>На карте отмечены объекты, на которых мы в данный момент делаем ремонт. Вы можете осмотреть любой из них.</p>
+	<p>Просто позвоните, и мы назначим встречу на одном из наших объектов!</p>
+	</div>
+</div>
+
+<div id="map_canvas"></div>
+<section id="process" class="w950">
+
+<div class="object" data-gps="55.893,37.287">
+<a href="/osmotr/aristovo/" target="_blank"><img src="https://lh3.googleusercontent.com/UChdOuAz7zKh2cdOG6hSPDIeGH8Y44_OtPLxMEVAvmyyQCOxzynGnwlW2_7rnQDBqX6zRTK4wJjKyg=s250-c" alt="Дуплекс с пристройкой в Новом Аристово"/></a>
+<p class="h">Дуплекс с пристройкой в Новом Аристово</p>
+<p>Масштабный проект в Новом Аристово. Помимо ремонта, заказчик пожелал переделать гараж внутри стен дуплекса под жилое помещение, а рядом построить новый гараж. В подвальном помещении необходимо оборудовать банный комплекс.</p>
+<p><a href="/osmotr/aristovo/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="56.104,37.6">
+<a href="/osmotr/pestovo-1/" target="_blank"><img src="https://lh3.googleusercontent.com/kHyKwPzChVmzaOHoV3z8aph0pHctLSN5sTgM1vqg-1YFrP0AiR0UOj-i8_BKFX3zYOY7h1pTfB_Fuw=s250-c" alt="Ремонт коттеджа в КП Пестово (1)"/></a>
+<p class="h">Ремонт коттеджа в КП Пестово (1)</p>
+<p>[04.2017] начало работ</p>
+<p><a href="/osmotr/pestovo-1/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.7884,36.98">
+<a href="/osmotr/park-avenue-1/" target="_blank"><img src="https://lh4.googleusercontent.com/-9ALbMw6gij0/VbD9MlnobGI/AAAAAAAAFWE/H2B2h0f3fPM/w250-c/remont-townhouse-park-avenue-0138.jpg" alt="Ремонт таунхауса в Парк Авеню (2)"/></a>
+<p class="h">Ремонт таунхауса в Парк Авеню (2)</p>
+<p>площадь 270 кв.м.</p>
+<p><a href="/osmotr/park-avenue-1/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.788312,36.979982">
+<a href="/osmotr/park-avenue-5/" target="_blank"><img src="https://lh3.googleusercontent.com/xdCrdxQhuAp_OUu0K-nDXJzminv5FVLuW5JL8lzRBlH-46Xpu7qvuPFjnI8Dr5PIfmiDfCUvNhchBQ=s250-c" alt="Таунхаус в Парк Авеню (5)"/></a>
+<p class="h">Таунхаус в Парк Авеню (5)</p>
+<p>[03.2016] начало работ</p>
+<p><a href="/osmotr/park-avenue-5/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.789548,36.981421">
+<a href="/osmotr/park-avenue-7/" target="_blank"><img src="https://lh3.googleusercontent.com/Lx4ILYuPoFndN89BITe_5vvp94nbQwEshuoJs2NeAaM0jf0kCbjzRfYTDkpKQoVsMjndBpQEo_gs-Q=s250-no" alt="Таунхаус в Парк Авеню (7)"/></a>
+<p class="h">Таунхаус в Парк Авеню (7)</p>
+<p>[07.2016] Начало работ</p>
+<p><a href="/osmotr/park-avenue-7/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.779,37.061">
+<a href="/osmotr/renaissance-park-1/" target="_blank"><img src="https://lh3.googleusercontent.com/gJ5VZFZGs5uMsFiMJZh69wdBt-9RYKQBy3WbW1F9qVsWU1IQUhCzpGnSn3-Oc6Bj0PEY8qk-24PFew=s250-c" alt="Коттедж в Ренессанс Парке"/></a>
+<p class="h">Коттедж в Ренессанс Парке</p>
+<p>Приступили к ремонту в Ренессанс Парке!</p>
+<p><a href="/osmotr/renaissance-park-1/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.78,37.02">
+<a href="/osmotr/millennium-park-2/" target="_blank"><img src="https://lh4.googleusercontent.com/-N4cfEH_9Wr4/U9q86pxmzGI/AAAAAAAAC9Y/efMZ8iOl8vc/s250-c/millennium-park-remont.jpg" alt="Отделка коттеджа в Millennium Park"/></a>
+<p class="h">Отделка коттеджа в Millennium Park</p>
+<p>Проект &quot;Богема-3&quot; + пристройка с бассейном. 800 кв.м.</p>
+<p><a href="/osmotr/millennium-park-2/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.781,37.033">
+<a href="/osmotr/millennium-park-3/" target="_blank"><img src="https://lh3.googleusercontent.com/-MLnyl5KZvKE/VYF26W_uL2I/AAAAAAAAFH0/ODfXqQYpcWQ/s250-c/" alt="Ремонт коттеджа в Миллениум Парк"/></a>
+<p class="h">Ремонт коттеджа в Миллениум Парк</p>
+<p>Проект &quot;Тициан&quot;, 1020 кв.м.</p>
+<p><a href="/osmotr/millennium-park-3/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.7837,37.0136">
+<a href="/osmotr/millennium-park-4/" target="_blank"><img src="https://lh4.googleusercontent.com/-UVejDzlDdNM/VXWWF86v0YI/AAAAAAAAE50/gxskvdZg-Sk/s250-c/1.jpg" alt="Ремонт дома в Миллениум Парк"/></a>
+<p class="h">Ремонт дома в Миллениум Парк</p>
+<p>Площадь 920 кв.м.</p>
+<p><a href="/osmotr/millennium-park-4/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.792594,37.025599">
+<a href="/osmotr/millennium-park-5/" target="_blank"><img src="https://lh3.googleusercontent.com/S1LCq4AmNZ5bakEdaKN5V4mGa9oCxMqFq1ctneK9kFCNZP_na-B66pGKGNcHJ9aS3I4mJYM7aICzRw=s250-c" alt="Дом в Миллениум Парке (5)"/></a>
+<p class="h">Дом в Миллениум Парке (5)</p>
+<p>[05.2016] Завершено возведение перегородок и штукатурка стен. Дальнейшие работы приостановлены до конца переработки дизайн-проекта (сменился дизайнер).</p>
+<p><a href="/osmotr/millennium-park-5/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="56.101,37.61">
+<a href="/osmotr/pestovo-2/" target="_blank"><img src="https://lh3.googleusercontent.com/6pVaVm_O9tSrbA4JfOeE9a6wKGFdomTZNU8s5mLut4tiE3BSfQ9oLe3SqHl-lCI8evITNKLML6SDJA=s250-c" alt="Ремонт коттеджа в КП Пестово (2)"/></a>
+<p class="h">Ремонт коттеджа в КП Пестово (2)</p>
+<p>[05.2017] начало работ</p>
+<p><a href="/osmotr/pestovo-2/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.901,37.338">
+<a href="/osmotr/novogorsk7-1/" target="_blank"><img src="https://lh3.googleusercontent.com/BDy2P-gIy6k2F2Y1oWb2TpaEvE5AQ9kg3XSKe8xfZVfOxg-LkG7BrizHJvOU1Q4xuYk1f19zkp97kw=s250-c" alt="Ремонт коттеджа в КП Новогорск-7 (1)"/></a>
+<p class="h">Ремонт коттеджа в КП Новогорск-7 (1)</p>
+<p></p>
+<p><a href="/osmotr/novogorsk7-1/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.777,36.946">
+<a href="/osmotr/madison-park-2/" target="_blank"><img src="https://lh5.googleusercontent.com/-1YZQdmUOr7o/VYF2g8dv6lI/AAAAAAAAFGk/lHYeK2eBNQk/s250-c/DSC_0177.jpg" alt="Ремонт коттеджа в Мэдисон Парк"/></a>
+<p class="h">Ремонт коттеджа в Мэдисон Парк</p>
+<p><p>Проект &quot;Лоренцо&quot; 400 кв.м. + 90 кв.м. (терраса) + отдельно стоящий гараж.</p></p>
+<p><a href="/osmotr/madison-park-2/">Посмотреть процесс ремонта</a></p>
+</div>
+
+<div class="object" data-gps="55.7843,37.0025">
+<a href="/osmotr/onegino-1/" target="_blank"><img src="https://lh3.googleusercontent.com/-sto92BgJoTI/V_JPJ_XYy4I/AAAAAAAAF5g/KHdokeCcbJAXuFHeEDfp5nxbRZ0ApX_sACHM/s250-c/DSC_0013-HDR.jpg" alt="Ремонт таунхауса в Онегино"/></a>
+<p class="h">Ремонт таунхауса в Онегино</p>
+<p><p>Полный комплекс работ в большом таунхаусе в посёлке Онегино.</p></p>
+<p><a href="/osmotr/onegino-1/">Посмотреть процесс ремонта</a></p>
+</div>
+
+</section>
+
+<div class="actioncall">
+	<p>Если у вас уже есть проект ремонта, и вы хотите узнать, сколько стоит его реализация, пишите:</p>
+	<p><a href="mailto:hello@otdelkalux.ru?subject=Запрос%20калькуляции&amp;body=Пожалуйста,%20укажите%20Ваш%20мобильный%20телефон,%20чтобы%20я%20мог%20оперативно%20уточнить%20у%20Вас%20какие-то%20вопросы.">hello@otdelkalux.ru</a></p>
+	<p class="small">Я постараюсь ответить в течение <b>двух</b> рабочих дней.</p>
+	<p>Также мы можем встретиться у вас на объекте для проведения замеров:</p>
+</div>
+<div class="form_bg">
+	<div class="form mobile-form">
+		<form action="/novayariga.php" method="POST" target="send_estimate">
+		<input type="hidden" name="secret" value="5">
+			<div>
+				<label for="name_2">Имя:</label>
+				<input type="text" required name="name" id="name_2" placeholder="Имя">
+			</div>
+			<div>
+				<label for="phone">Телефон:</label>
+				<input type="text" required name="phone" id="phone" placeholder="Телефон">
+			</div>
+			<div>
+				<label for="email_2">Email:</label>
+				<input type="email" required name="email" id="email_2" placeholder="vasha@pocha.ru">
+			</div>
+			<div class="g-recaptcha"></div>
+			<input type="submit" class="button red" value="Начать работу" style="margin-top: 30px">
+		</form>
+	</div>
+</div>
+
+
+<section class="center">
+<div style="margin: 50px auto;" class="likes yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,gplus,facebook,twitter" data-yashareTheme="counter" data-yashareType="small"></div>
+</section>
+
+<footer>
+<p class="title">Артель Сергея Петунина</p>
+<div class="info">
+<div class="nomobile">
+<p>Полный комплекс работ по элитному ремонту и внутренней отделке коттеджей, загородных домов и таунхаусов под ключ.</p>
+<p>Наша специализация: внутренняя отделка, монтаж электрики, сантехники, отопления, а также ландшафтные работы.</p>
+</div>
+<div>
+<p><b>Офис в Millennium Park</b></p>
+<p>Московская область, Новорижское ш., посёлок Миллениум Парк, вл. 3-041</p>
+<p><a target="_blank" href="//maps.yandex.ru/-/CVuAJ6O4">На карте</a></p>
+</div>
+<div>
+<p><b>Связаться со мной</b></p>
+<p>+7 495 99-88-347</p><p>+7 926 709-62-18</p>
+<p><a href="mailto:hello@otdelkalux.ru">hello@otdelkalux.ru</a></p>
+<br>
+<div class="nomobile">
+<p><b>Online</b></p>
+<p class="social flickr"><a target="_blank" href="//www.flickr.com/photos/otdelkalux/sets">Портфолио на Flickr</a></p>
+<p class="social gplus"><a target="_blank" rel="author" href="https://plus.google.com/104094916837036848285/?rel=author">Сергей Петунин на Google+</a></p>
+<p><a href="https://www.otdelkalux.ru/">www.OtdelkaLux.ru</a></p>
+</div>
+</div>
+</div>
+<div id="year">© <span>2006</span> «Отделка Люкс»</div>
+</footer>
+<!-- Yandex.Metrika counter --> <script src="https://mc.yandex.ru/metrika/tag.js" type="text/javascript"></script> <script type="text/javascript"> try { var yaCounter13794628 = new Ya.Metrika2({ id:13794628, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } </script> <noscript><div><img src="https://mc.yandex.ru/watch/13794628" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></body>
+</html>

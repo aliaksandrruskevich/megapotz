@@ -76,7 +76,18 @@ input[type=text]:hover, input[type=number]:hover, input[type=email]:hover	{ box-
 nav ul	{ list-style-type: none; }
 nav a	{ text-decoration: none; text-transform: uppercase; color: #000; }
 
-#page-index .index, #page-portfolio .portfolio, #page-process .osmotr, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts, #page-uslugi .uslugi, #poselki .poselki	{ cursor: default; color: #ee1c24; }
+
+/* Dropdown Button */
+.dropbtn { border: solid 1px transparent; padding: 10px; }
+.dropdown { position: relative; display: inline-block; }
+.dropdown-content { display: none; position: absolute; left: -50%; top: 100%; background-color: #fff; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
+.dropdown-content li	{ display: block; }
+.dropdown-content a { color: #000!important; padding: 12px 16px; text-decoration: none; display: block; line-height: 1.5em; cursor: pointer!important; border-top: dotted 1px #ccc;}
+.dropdown-content a:hover {background-color: #eee;}
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown:hover .dropbtn { border: solid 1px #f00; }
+
+#page-index a.index, #page-portfolio .portfolio, #page-process .osmotr, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts, #page-uslugi .uslugi, #poselki .poselki	{ cursor: default; color: #ee1c24; }
 
 @media screen and (min-width:641px) {
 nav input, nav label, header .phone	{ display: none; }

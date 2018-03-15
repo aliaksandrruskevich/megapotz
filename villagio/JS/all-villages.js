@@ -29,10 +29,10 @@ var oldKeys = window.prompt().split(" ");	// \r\n
 var newStatusList = '';
 oldKeys.forEach(function (key) {
 	if (hash[key]) {
-		newStatusList += key + "\t" + hash[key].status + '	' + hash[key].houseArea + '	' + hash[key].landArea + "\n";
+		newStatusList += key + "\t" + hash[key].status + '	' + hash[key].houseArea + '	' + hash[key].landArea + '	' + hash[key].project + "\n";
 		delete hash[key];
 	} else {
-		newStatusList += key + "\tundefined";
+		newStatusList += key + "\tundefined\n";
 		console.info(key + " отсутствует в текущей нумерации посёлка")
 	}
 });

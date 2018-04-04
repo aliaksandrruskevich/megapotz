@@ -411,7 +411,7 @@ if (navigator.appName == 'Microsoft Internet Explorer') {
 		});
 
 		loc['millennium'].marker = new google.maps.Marker({position: loc['millennium'].latlng, map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash == 'millennium' });
-		loc['madison'].marker = new google.maps.Marker({position: loc['madison'].latlng, map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash == 'madison' });
+		//loc['madison'].marker = new google.maps.Marker({position: loc['madison'].latlng, map: map, animation: google.maps.Animation.DROP, icon: icon, shadow: shadow, visible: hash == 'madison' });
 		window.addEventListener('hashchange', panMap, false);
 
 		function panMap() {

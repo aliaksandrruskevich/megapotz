@@ -87,7 +87,7 @@ nav a	{ text-decoration: none; text-transform: uppercase; color: #000; }
 .dropdown:hover .dropdown-content { display: block; }
 .dropdown:hover .dropbtn { border: solid 1px #f00; }
 
-#page-index a.index, #page-portfolio .portfolio, #page-process .osmotr, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts, #page-uslugi .uslugi, #poselki .poselki	{ cursor: default; color: #ee1c24; }
+#page-index a.index, #page-portfolio .portfolio, #page-process .osmotr, #page-price .price, #page-docs nav .docs, #page-warranty nav .warranty, #page-articles .articles, #page-contacts .contacts, #page-uslugi .uslugi, #poselki .poselki, #page-promo a.promo	{ cursor: default; color: #ee1c24; }
 .promo	{ color: #800; }
 
 @media screen and (min-width:641px) {

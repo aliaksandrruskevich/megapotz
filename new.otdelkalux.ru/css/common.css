@@ -308,7 +308,7 @@ article table.bg caption	{ margin: 30px 0; }
 /* WARRANTY */
 #page-warranty ol { counter-reset: item; }
 #page-warranty article li { display: block; line-height: 1.8em; }
-#page-warranty article li:before { content: "7." counter(item); counter-increment: item; margin-left: -45px; float: left; color: #919191; font-size: 16px; }
+#page-warranty article ol>li:before { content: "9." counter(item); counter-increment: item; margin-left: -45px; float: left; color: #919191; font-size: 16px; }
 #page-warranty article	{ background-color: #f4f4f4; margin: 30px auto 80px auto; }
 #page-warranty .t	{ background: #fff url('/i/curve.svg') 0 0; width: 100%; height: 5px; }
 #page-warranty .b	{ background: #fff url('/i/curve.svg') 0 -5px; width: 100%; height: 5px; }

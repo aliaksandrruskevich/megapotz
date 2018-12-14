@@ -1,0 +1,2 @@
+var arr = document.querySelectorAll('.AfVTG ._2wP_Y');
+for (var i=0; i<arr.length; i++)console.info(arr[i].textContent)

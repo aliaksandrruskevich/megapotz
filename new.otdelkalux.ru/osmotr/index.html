@@ -46,7 +46,7 @@
 <div id="selector" class="right">
 <div class="current"></div>
 <a href="/portfolio/" class="left">Завершенные <sup>19</sup></a>
-<a href="/osmotr/" class="right">В работе <sup>14</sup></a>
+<a href="/osmotr/" class="right">В работе <sup>8</sup></a>
 </div>
 <h1 class="center">Лучше один раз увидеть!</h1>
 <div class="gotakealook">
@@ -79,14 +79,14 @@
 <p>[04.2017] начало работ</p>
 <p><a href="/osmotr/pestovo-1/">Посмотреть процесс ремонта</a></p>
 </div>
-
+<!--
 <div class="object" data-gps="55.7884,36.98">
 <a href="/osmotr/park-avenue-1/" target="_blank"><img src="https://lh4.googleusercontent.com/-9ALbMw6gij0/VbD9MlnobGI/AAAAAAAAFWE/H2B2h0f3fPM/w250-c/remont-townhouse-park-avenue-0138.jpg" alt="Ремонт таунхауса в Парк Авеню (2)"/></a>
 <p class="h">Ремонт таунхауса в Парк Авеню (2)</p>
 <p>площадь 270 кв.м.</p>
 <p><a href="/osmotr/park-avenue-1/">Посмотреть процесс ремонта</a></p>
 </div>
-
+-->
 <!--
 заказчик попросил убрать
 <div class="object" data-gps="55.788312,36.979982">
@@ -117,7 +117,7 @@
 <p>Проект &quot;Богема-3&quot; + пристройка с бассейном. 800 кв.м.</p>
 <p><a href="/osmotr/millennium-park-2/">Посмотреть процесс ремонта</a></p>
 </div>
-
+<!--
 <div class="object" data-gps="55.781,37.033">
 <a href="/osmotr/millennium-park-3/" target="_blank"><img src="https://lh3.googleusercontent.com/-MLnyl5KZvKE/VYF26W_uL2I/AAAAAAAAFH0/ODfXqQYpcWQ/s250-c/" alt="Ремонт коттеджа в Миллениум Парк"/></a>
 <p class="h">Ремонт коттеджа в Миллениум Парк</p>
@@ -138,14 +138,14 @@
 <p>[05.2016] Завершено возведение перегородок и штукатурка стен. Дальнейшие работы приостановлены до конца переработки дизайн-проекта (сменился дизайнер).</p>
 <p><a href="/osmotr/millennium-park-5/">Посмотреть процесс ремонта</a></p>
 </div>
-
-<div class="object" data-gps="56.101,37.61">
+-->
+<!--<div class="object" data-gps="56.101,37.61">
 <a href="/osmotr/pestovo-2/" target="_blank"><img src="https://lh3.googleusercontent.com/6pVaVm_O9tSrbA4JfOeE9a6wKGFdomTZNU8s5mLut4tiE3BSfQ9oLe3SqHl-lCI8evITNKLML6SDJA=s250-c" alt="Ремонт коттеджа в КП Пестово (2)"/></a>
 <p class="h">Ремонт коттеджа в КП Пестово (2)</p>
 <p>[05.2017] начало работ</p>
 <p><a href="/osmotr/pestovo-2/">Посмотреть процесс ремонта</a></p>
 </div>
-
+-->
 <div class="object" data-gps="55.901,37.338">
 <a href="/osmotr/novogorsk7-1/" target="_blank"><img src="https://lh3.googleusercontent.com/BDy2P-gIy6k2F2Y1oWb2TpaEvE5AQ9kg3XSKe8xfZVfOxg-LkG7BrizHJvOU1Q4xuYk1f19zkp97kw=s250-c" alt="Ремонт коттеджа в КП Новогорск-7 (1)"/></a>
 <p class="h">Ремонт коттеджа в КП Новогорск-7 (1)</p>
@@ -178,22 +178,27 @@
 <div class="form_bg">
 	<div class="form mobile-form">
 		<form action="/novayariga.php" method="POST" target="send_estimate">
-		<input type="hidden" name="secret" value="5">
-			<div>
+			<input type="hidden" name="secret" value="5">
+			<div class="field">
 				<label for="name_2">Имя:</label>
 				<input type="text" required name="name" id="name_2" placeholder="Имя">
 			</div>
-			<div>
+			<div class="field">
 				<label for="phone">Телефон:</label>
 				<input type="text" required name="phone" id="phone" placeholder="Телефон">
 			</div>
-			<div>
+			<div class="field">
 				<label for="email_2">Email:</label>
 				<input type="email" required name="email" id="email_2" placeholder="vasha@pocha.ru">
 			</div>
+			<div class="policy">
+				<input type="checkbox" required name="policy" id="policy">
+				<label for="policy">Согласие на обработку <a href="/confidential.html">персональных данных</a></label>
+			</div>
 			<div class="g-recaptcha"></div>
-			<input type="submit" class="button red" value="Начать работу" style="margin-top: 30px">
+			<input type="submit" class="button red" value="Согласовать встречу" style="margin-top: 30px">
 		</form>
+<!--<script>var amo_forms_params = {"id":325675,"hash":"32e55f9e11a4ee20db3b500bfe771209","locale":"ru"};</script><script id="amoforms_script" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js"></script>-->
 	</div>
 </div>
 
